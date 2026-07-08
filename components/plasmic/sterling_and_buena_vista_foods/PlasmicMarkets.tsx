@@ -115,6 +115,9 @@ export const PlasmicMarkets__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicMarkets__OverridesType = {
   root?: Flex__<"div">;
+  header?: Flex__<"div">;
+  hero2?: Flex__<"div">;
+  h2?: Flex__<"h2">;
 };
 
 export interface DefaultMarketsProps {}
@@ -198,20 +201,52 @@ function PlasmicMarkets__RenderFunc(props: {
             styleTokensClassNames,
             sty.root
           )}
-        />
+        >
+          <div
+            data-plasmic-name={"header"}
+            data-plasmic-override={overrides.header}
+            className={classNames("all", sty.header)}
+          />
+
+          <div
+            data-plasmic-name={"hero2"}
+            data-plasmic-override={overrides.hero2}
+            className={classNames("all", sty.hero2)}
+          >
+            <h2
+              data-plasmic-name={"h2"}
+              data-plasmic-override={overrides.h2}
+              className={classNames(
+                "all",
+                "h2",
+                "h2__uyaK1",
+                "__wab_text",
+                sty.h2
+              )}
+            >
+              {"Markets"}
+            </h2>
+          </div>
+        </div>
       </div>
     </React.Fragment>
   ) as React.ReactElement | null;
 }
 
 const PlasmicDescendants = {
-  root: ["root"]
+  root: ["root", "header", "hero2", "h2"],
+  header: ["header"],
+  hero2: ["hero2", "h2"],
+  h2: ["h2"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  header: "div";
+  hero2: "div";
+  h2: "h2";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -276,6 +311,9 @@ export const PlasmicMarkets = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    header: makeNodeComponent("header"),
+    hero2: makeNodeComponent("hero2"),
+    h2: makeNodeComponent("h2"),
 
     // Metadata about props expected for PlasmicMarkets
     internalVariantProps: PlasmicMarkets__VariantProps,

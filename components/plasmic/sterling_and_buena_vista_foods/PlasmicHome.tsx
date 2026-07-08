@@ -70,7 +70,6 @@ import PrimaryBtn from "../../PrimaryBtn"; // plasmic-import: TiffCyYLfuDQ/compo
 import SecondaryBtn from "../../SecondaryBtn"; // plasmic-import: r3QPz6kMc0wE/component
 import { SliderWrapper } from "@plasmicpkgs/react-slick";
 import { sliderHelpers as SliderWrapper_Helpers } from "@plasmicpkgs/react-slick";
-import CtaBtn from "../../CtaBtn"; // plasmic-import: vaN8Gezs179c/component
 import Footer from "../../Footer"; // plasmic-import: RbMtVh1ii_PZ/component
 import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/projectModule
@@ -157,10 +156,23 @@ export type PlasmicHome__OverridesType = {
   frame43?: Flex__<"div">;
   frame44?: Flex__<"div">;
   sliderCarousel?: Flex__<typeof SliderWrapper>;
+  box?: Flex__<"div">;
+  child?: Flex__<"div">;
+  box2?: Flex__<"div">;
+  child2?: Flex__<"div">;
+  box3?: Flex__<"div">;
+  child3?: Flex__<"div">;
+  box4?: Flex__<"div">;
+  child4?: Flex__<"div">;
+  box5?: Flex__<"div">;
+  child5?: Flex__<"div">;
+  box6?: Flex__<"div">;
+  child6?: Flex__<"div">;
+  box7?: Flex__<"div">;
+  child7?: Flex__<"div">;
   cta?: Flex__<"div">;
   frame52?: Flex__<"div">;
   buttonContainer?: Flex__<"div">;
-  ctaBtn?: Flex__<typeof CtaBtn>;
   footer2?: Flex__<"div">;
   footer?: Flex__<typeof Footer>;
 };
@@ -1259,9 +1271,11 @@ function PlasmicHome__RenderFunc(props: {
                   autoplay: hasVariant(globalVariants, "screen", "desktop")
                     ? true
                     : false,
-                  autoplaySpeed: hasVariant(globalVariants, "screen", "desktop")
-                    ? 2000
-                    : 0,
+                  autoplaySpeed: hasVariant(globalVariants, "screen", "tablet")
+                    ? 4000
+                    : hasVariant(globalVariants, "screen", "desktop")
+                      ? 2000
+                      : 0,
                   beforeChange: async (...eventArgs: any) => {
                     generateStateOnChangePropForCodeComponents(
                       $state,
@@ -1285,6 +1299,9 @@ function PlasmicHome__RenderFunc(props: {
                     "sliderCarousel",
                     "currentSlide"
                   ]),
+                  pauseOnHover: hasVariant(globalVariants, "screen", "tablet")
+                    ? false
+                    : undefined,
                   ref: ref => {
                     $refs["sliderCarousel"] = ref;
                   },
@@ -1293,13 +1310,15 @@ function PlasmicHome__RenderFunc(props: {
                     ? 1
                     : hasVariant(globalVariants, "screen", "tablet")
                       ? 1
-                      : hasVariant(globalVariants, "screen", "laptop")
-                        ? 2
-                        : hasVariant(globalVariants, "screen", "desktop2")
+                      : hasVariant(globalVariants, "screen", "smallerLaptop")
+                        ? 1
+                        : hasVariant(globalVariants, "screen", "laptop")
                           ? 2
-                          : hasVariant(globalVariants, "screen", "desktop")
-                            ? 3
-                            : 2,
+                          : hasVariant(globalVariants, "screen", "desktop2")
+                            ? 2
+                            : hasVariant(globalVariants, "screen", "desktop")
+                              ? 3
+                              : 2,
                   speed: hasVariant(globalVariants, "screen", "desktop")
                     ? 500
                     : 2000,
@@ -1333,151 +1352,187 @@ function PlasmicHome__RenderFunc(props: {
                     data-plasmic-override={overrides.sliderCarousel}
                     {...child$Props}
                   >
-                    <div className={classNames("all", sty.freeBox__p3JeW)}>
-                      <div className={classNames("all", sty.freeBox__x2E8Z)}>
-                        <StarFilledIcon
-                          className={classNames("all", sty.svg__kCzi8)}
-                          role={"img"}
-                        />
-
-                        <StarFilledIcon
-                          className={classNames("all", sty.svg___4HuZo)}
-                          role={"img"}
-                        />
-
-                        <StarFilledIcon
-                          className={classNames("all", sty.svg__tChbW)}
-                          role={"img"}
-                        />
-
-                        <StarFilledIcon
-                          className={classNames("all", sty.svg__sYapd)}
-                          role={"img"}
-                        />
-
-                        <StarFilledIcon
-                          className={classNames("all", sty.svg__tV7Al)}
-                          role={"img"}
-                        />
-                      </div>
-                      <div className={classNames("all", sty.freeBox___8WseN)}>
+                    {(
+                      hasVariant(globalVariants, "screen", "desktop")
+                        ? true
+                        : false
+                    ) ? (
+                      <div
+                        data-plasmic-name={"box"}
+                        data-plasmic-override={overrides.box}
+                        className={classNames("all", sty.box)}
+                      >
                         <div
-                          className={classNames(
-                            "all",
-                            "__wab_text",
-                            sty.text__i3Xb
-                          )}
+                          data-plasmic-name={"child"}
+                          data-plasmic-override={overrides.child}
+                          className={classNames("all", sty.child)}
                         >
-                          {
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ullamcorper diam, eget consequat neque. Fusce est tellus, vulputate nec commodo ac, dictum non orci. Phasellus pretium, nisl consectetur vestibulum volutpat, mi mauris gravida "
-                          }
+                          <div
+                            className={classNames("all", sty.freeBox__pYbvD)}
+                          >
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg__ouhzd)}
+                              role={"img"}
+                            />
+
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg__vj58)}
+                              role={"img"}
+                            />
+
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg__kejo)}
+                              role={"img"}
+                            />
+
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg___9Hcpb)}
+                              role={"img"}
+                            />
+
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg__fhrw4)}
+                              role={"img"}
+                            />
+                          </div>
+                          <div
+                            className={classNames("all", sty.freeBox__bfTeB)}
+                          >
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text__cNudu
+                              )}
+                            >
+                              {
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ullamcorper diam, eget consequat neque. Fusce est tellus, vulputate nec commodo ac, dictum non orci. Phasellus pretium, nisl consectetur vestibulum volutpat, mi mauris gravida "
+                              }
+                            </div>
+                          </div>
+                          <div
+                            className={classNames("all", sty.freeBox__amn6D)}
+                          >
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text__gxqVn
+                              )}
+                            >
+                              {"JOHN DOE"}
+                            </div>
+                            <PlasmicImg__
+                              alt={""}
+                              className={classNames(sty.img__tiW6R)}
+                              displayHeight={"auto"}
+                              displayMaxHeight={"none"}
+                              displayMaxWidth={"100%"}
+                              displayMinHeight={"0"}
+                              displayMinWidth={"0"}
+                              displayWidth={"auto"}
+                              format={"avif"}
+                              loading={"lazy"}
+                              quality={100}
+                              src={{
+                                src: "/plasmic/sterling_and_buena_vista_foods/images/layer14Png.png",
+                                fullWidth: 54,
+                                fullHeight: 42,
+                                aspectRatio: undefined
+                              }}
+                            />
+                          </div>
                         </div>
                       </div>
-                      <div className={classNames("all", sty.freeBox__rbo8W)}>
+                    ) : null}
+                    {(
+                      hasVariant(globalVariants, "screen", "desktop")
+                        ? true
+                        : false
+                    ) ? (
+                      <div
+                        data-plasmic-name={"box2"}
+                        data-plasmic-override={overrides.box2}
+                        className={classNames("all", sty.box2)}
+                      >
                         <div
-                          className={classNames(
-                            "all",
-                            "__wab_text",
-                            sty.text__hbhzg
-                          )}
+                          data-plasmic-name={"child2"}
+                          data-plasmic-override={overrides.child2}
+                          className={classNames("all", sty.child2)}
                         >
-                          {"JOHN DOE"}
-                        </div>
-                        <PlasmicImg__
-                          alt={""}
-                          className={classNames(sty.img__lzb5V)}
-                          displayHeight={"auto"}
-                          displayMaxHeight={"none"}
-                          displayMaxWidth={"100%"}
-                          displayMinHeight={"0"}
-                          displayMinWidth={"0"}
-                          displayWidth={"auto"}
-                          format={"avif"}
-                          loading={"lazy"}
-                          quality={100}
-                          src={{
-                            src: "/plasmic/sterling_and_buena_vista_foods/images/layer14Png.png",
-                            fullWidth: 54,
-                            fullHeight: 42,
-                            aspectRatio: undefined
-                          }}
-                        />
-                      </div>
-                    </div>
-                    {(
-                      hasVariant(globalVariants, "screen", "desktop")
-                        ? true
-                        : false
-                    ) ? (
-                      <div className={classNames("all", sty.freeBox__u8IeD)}>
-                        <div className={classNames("all", sty.freeBox__pYbvD)}>
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__ouhzd)}
-                            role={"img"}
-                          />
-
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__vj58)}
-                            role={"img"}
-                          />
-
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__kejo)}
-                            role={"img"}
-                          />
-
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg___9Hcpb)}
-                            role={"img"}
-                          />
-
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__fhrw4)}
-                            role={"img"}
-                          />
-                        </div>
-                        <div className={classNames("all", sty.freeBox__bfTeB)}>
                           <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__cNudu
-                            )}
+                            className={classNames("all", sty.freeBox__eVhUp)}
                           >
-                            {
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ullamcorper diam, eget consequat neque. Fusce est tellus, vulputate nec commodo ac, dictum non orci. Phasellus pretium, nisl consectetur vestibulum volutpat, mi mauris gravida "
-                            }
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg__gej9M)}
+                              role={"img"}
+                            />
+
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg__wcZnJ)}
+                              role={"img"}
+                            />
+
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg__cJjQ3)}
+                              role={"img"}
+                            />
+
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg___1U83M)}
+                              role={"img"}
+                            />
+
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg__l4T2J)}
+                              role={"img"}
+                            />
                           </div>
-                        </div>
-                        <div className={classNames("all", sty.freeBox__amn6D)}>
                           <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__gxqVn
-                            )}
+                            className={classNames("all", sty.freeBox___6PiiP)}
                           >
-                            {"JOHN DOE"}
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text__rocAn
+                              )}
+                            >
+                              {
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ullamcorper diam, eget consequat neque. Fusce est tellus, vulputate nec commodo ac, dictum non orci. Phasellus pretium, nisl consectetur vestibulum volutpat, mi mauris gravida "
+                              }
+                            </div>
                           </div>
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img__tiW6R)}
-                            displayHeight={"auto"}
-                            displayMaxHeight={"none"}
-                            displayMaxWidth={"100%"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"auto"}
-                            format={"avif"}
-                            loading={"lazy"}
-                            quality={100}
-                            src={{
-                              src: "/plasmic/sterling_and_buena_vista_foods/images/layer14Png.png",
-                              fullWidth: 54,
-                              fullHeight: 42,
-                              aspectRatio: undefined
-                            }}
-                          />
+                          <div className={classNames("all", sty.freeBox__tb46)}>
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text___3E0Dh
+                              )}
+                            >
+                              {"JOHN DOE"}
+                            </div>
+                            <PlasmicImg__
+                              alt={""}
+                              className={classNames(sty.img__x91Qw)}
+                              displayHeight={"auto"}
+                              displayMaxHeight={"none"}
+                              displayMaxWidth={"100%"}
+                              displayMinHeight={"0"}
+                              displayMinWidth={"0"}
+                              displayWidth={"auto"}
+                              format={"avif"}
+                              loading={"lazy"}
+                              quality={100}
+                              src={{
+                                src: "/plasmic/sterling_and_buena_vista_foods/images/layer14Png.png",
+                                fullWidth: 54,
+                                fullHeight: 42,
+                                aspectRatio: undefined
+                              }}
+                            />
+                          </div>
                         </div>
                       </div>
                     ) : null}
@@ -1486,75 +1541,89 @@ function PlasmicHome__RenderFunc(props: {
                         ? true
                         : false
                     ) ? (
-                      <div className={classNames("all", sty.freeBox__eddWn)}>
-                        <div className={classNames("all", sty.freeBox__bv1F8)}>
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__iE3H)}
-                            role={"img"}
-                          />
+                      <div
+                        data-plasmic-name={"box3"}
+                        data-plasmic-override={overrides.box3}
+                        className={classNames("all", sty.box3)}
+                      >
+                        <div
+                          data-plasmic-name={"child3"}
+                          data-plasmic-override={overrides.child3}
+                          className={classNames("all", sty.child3)}
+                        >
+                          <div className={classNames("all", sty.freeBox__ukwF)}>
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg__blmU7)}
+                              role={"img"}
+                            />
 
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__hfl0H)}
-                            role={"img"}
-                          />
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg__aeg8O)}
+                              role={"img"}
+                            />
 
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__nuhfa)}
-                            role={"img"}
-                          />
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg___8S63P)}
+                              role={"img"}
+                            />
 
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__wWj4Q)}
-                            role={"img"}
-                          />
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg__topvz)}
+                              role={"img"}
+                            />
 
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__wpFt)}
-                            role={"img"}
-                          />
-                        </div>
-                        <div className={classNames("all", sty.freeBox___02F9V)}>
-                          <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__inAt
-                            )}
-                          >
-                            {
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ullamcorper diam, eget consequat neque. Fusce est tellus, vulputate nec commodo ac, dictum non orci. Phasellus pretium, nisl consectetur vestibulum volutpat, mi mauris gravida "
-                            }
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg__mafqo)}
+                              role={"img"}
+                            />
                           </div>
-                        </div>
-                        <div className={classNames("all", sty.freeBox__jbtOz)}>
                           <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__yhtO3
-                            )}
+                            className={classNames("all", sty.freeBox__eMa0D)}
                           >
-                            {"JOHN DOE"}
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text__ewmSz
+                              )}
+                            >
+                              {
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ullamcorper diam, eget consequat neque. Fusce est tellus, vulputate nec commodo ac, dictum non orci. Phasellus pretium, nisl consectetur vestibulum volutpat, mi mauris gravida "
+                              }
+                            </div>
                           </div>
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img__yhB)}
-                            displayHeight={"auto"}
-                            displayMaxHeight={"none"}
-                            displayMaxWidth={"100%"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"auto"}
-                            format={"avif"}
-                            loading={"lazy"}
-                            quality={100}
-                            src={{
-                              src: "/plasmic/sterling_and_buena_vista_foods/images/layer14Png.png",
-                              fullWidth: 54,
-                              fullHeight: 42,
-                              aspectRatio: undefined
-                            }}
-                          />
+                          <div
+                            className={classNames("all", sty.freeBox__behcQ)}
+                          >
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text__ulsu
+                              )}
+                            >
+                              {"JOHN DOE"}
+                            </div>
+                            <PlasmicImg__
+                              alt={""}
+                              className={classNames(sty.img__cvB7F)}
+                              displayHeight={"auto"}
+                              displayMaxHeight={"none"}
+                              displayMaxWidth={"100%"}
+                              displayMinHeight={"0"}
+                              displayMinWidth={"0"}
+                              displayWidth={"auto"}
+                              format={"avif"}
+                              loading={"lazy"}
+                              quality={100}
+                              src={{
+                                src: "/plasmic/sterling_and_buena_vista_foods/images/layer14Png.png",
+                                fullWidth: 54,
+                                fullHeight: 42,
+                                aspectRatio: undefined
+                              }}
+                            />
+                          </div>
                         </div>
                       </div>
                     ) : null}
@@ -1563,75 +1632,91 @@ function PlasmicHome__RenderFunc(props: {
                         ? true
                         : false
                     ) ? (
-                      <div className={classNames("all", sty.freeBox__labSb)}>
-                        <div className={classNames("all", sty.freeBox__rgCtp)}>
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__rsHOl)}
-                            role={"img"}
-                          />
-
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__jtlhM)}
-                            role={"img"}
-                          />
-
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__joBzv)}
-                            role={"img"}
-                          />
-
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg___96RYw)}
-                            role={"img"}
-                          />
-
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__hqoCf)}
-                            role={"img"}
-                          />
-                        </div>
-                        <div className={classNames("all", sty.freeBox__lE1P3)}>
+                      <div
+                        data-plasmic-name={"box4"}
+                        data-plasmic-override={overrides.box4}
+                        className={classNames("all", sty.box4)}
+                      >
+                        <div
+                          data-plasmic-name={"child4"}
+                          data-plasmic-override={overrides.child4}
+                          className={classNames("all", sty.child4)}
+                        >
                           <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__lg9YU
-                            )}
+                            className={classNames("all", sty.freeBox__ahuLc)}
                           >
-                            {
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ullamcorper diam, eget consequat neque. Fusce est tellus, vulputate nec commodo ac, dictum non orci. Phasellus pretium, nisl consectetur vestibulum volutpat, mi mauris gravida "
-                            }
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg__u0VoJ)}
+                              role={"img"}
+                            />
+
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg___4GVp)}
+                              role={"img"}
+                            />
+
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg__oHfb)}
+                              role={"img"}
+                            />
+
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg__m6Z3C)}
+                              role={"img"}
+                            />
+
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg__ysu7L)}
+                              role={"img"}
+                            />
                           </div>
-                        </div>
-                        <div className={classNames("all", sty.freeBox___2E9Kb)}>
                           <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__zLa3J
-                            )}
+                            className={classNames("all", sty.freeBox___9CrRu)}
                           >
-                            {"JOHN DOE"}
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text__mwgZw
+                              )}
+                            >
+                              {
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ullamcorper diam, eget consequat neque. Fusce est tellus, vulputate nec commodo ac, dictum non orci. Phasellus pretium, nisl consectetur vestibulum volutpat, mi mauris gravida "
+                              }
+                            </div>
                           </div>
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img___4GzOm)}
-                            displayHeight={"auto"}
-                            displayMaxHeight={"none"}
-                            displayMaxWidth={"100%"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"auto"}
-                            format={"avif"}
-                            loading={"lazy"}
-                            quality={100}
-                            src={{
-                              src: "/plasmic/sterling_and_buena_vista_foods/images/layer14Png.png",
-                              fullWidth: 54,
-                              fullHeight: 42,
-                              aspectRatio: undefined
-                            }}
-                          />
+                          <div
+                            className={classNames("all", sty.freeBox___2ZtQk)}
+                          >
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text___1AsJv
+                              )}
+                            >
+                              {"JOHN DOE"}
+                            </div>
+                            <PlasmicImg__
+                              alt={""}
+                              className={classNames(sty.img__kdxnV)}
+                              displayHeight={"auto"}
+                              displayMaxHeight={"none"}
+                              displayMaxWidth={"100%"}
+                              displayMinHeight={"0"}
+                              displayMinWidth={"0"}
+                              displayWidth={"auto"}
+                              format={"avif"}
+                              loading={"lazy"}
+                              quality={100}
+                              src={{
+                                src: "/plasmic/sterling_and_buena_vista_foods/images/layer14Png.png",
+                                fullWidth: 54,
+                                fullHeight: 42,
+                                aspectRatio: undefined
+                              }}
+                            />
+                          </div>
                         </div>
                       </div>
                     ) : null}
@@ -1640,75 +1725,91 @@ function PlasmicHome__RenderFunc(props: {
                         ? true
                         : false
                     ) ? (
-                      <div className={classNames("all", sty.freeBox__sC0Oo)}>
-                        <div className={classNames("all", sty.freeBox__uxm82)}>
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__bkpFk)}
-                            role={"img"}
-                          />
-
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__coLp)}
-                            role={"img"}
-                          />
-
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__iEziE)}
-                            role={"img"}
-                          />
-
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__efAh2)}
-                            role={"img"}
-                          />
-
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__givS)}
-                            role={"img"}
-                          />
-                        </div>
-                        <div className={classNames("all", sty.freeBox__su7Jf)}>
+                      <div
+                        data-plasmic-name={"box5"}
+                        data-plasmic-override={overrides.box5}
+                        className={classNames("all", sty.box5)}
+                      >
+                        <div
+                          data-plasmic-name={"child5"}
+                          data-plasmic-override={overrides.child5}
+                          className={classNames("all", sty.child5)}
+                        >
                           <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__lZyl1
-                            )}
+                            className={classNames("all", sty.freeBox__ccm48)}
                           >
-                            {
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ullamcorper diam, eget consequat neque. Fusce est tellus, vulputate nec commodo ac, dictum non orci. Phasellus pretium, nisl consectetur vestibulum volutpat, mi mauris gravida "
-                            }
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg__wpuqy)}
+                              role={"img"}
+                            />
+
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg__zalmi)}
+                              role={"img"}
+                            />
+
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg__ukDDr)}
+                              role={"img"}
+                            />
+
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg__gCmo0)}
+                              role={"img"}
+                            />
+
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg___71JP)}
+                              role={"img"}
+                            />
                           </div>
-                        </div>
-                        <div className={classNames("all", sty.freeBox__wN2Ur)}>
                           <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__mdm4A
-                            )}
+                            className={classNames("all", sty.freeBox__g1Iu6)}
                           >
-                            {"JOHN DOE"}
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text__eegyb
+                              )}
+                            >
+                              {
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ullamcorper diam, eget consequat neque. Fusce est tellus, vulputate nec commodo ac, dictum non orci. Phasellus pretium, nisl consectetur vestibulum volutpat, mi mauris gravida "
+                              }
+                            </div>
                           </div>
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img__my5Kn)}
-                            displayHeight={"auto"}
-                            displayMaxHeight={"none"}
-                            displayMaxWidth={"100%"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"auto"}
-                            format={"avif"}
-                            loading={"lazy"}
-                            quality={100}
-                            src={{
-                              src: "/plasmic/sterling_and_buena_vista_foods/images/layer14Png.png",
-                              fullWidth: 54,
-                              fullHeight: 42,
-                              aspectRatio: undefined
-                            }}
-                          />
+                          <div
+                            className={classNames("all", sty.freeBox__xD5DR)}
+                          >
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text__orbkw
+                              )}
+                            >
+                              {"JOHN DOE"}
+                            </div>
+                            <PlasmicImg__
+                              alt={""}
+                              className={classNames(sty.img__b6OgA)}
+                              displayHeight={"auto"}
+                              displayMaxHeight={"none"}
+                              displayMaxWidth={"100%"}
+                              displayMinHeight={"0"}
+                              displayMinWidth={"0"}
+                              displayWidth={"auto"}
+                              format={"avif"}
+                              loading={"lazy"}
+                              quality={100}
+                              src={{
+                                src: "/plasmic/sterling_and_buena_vista_foods/images/layer14Png.png",
+                                fullWidth: 54,
+                                fullHeight: 42,
+                                aspectRatio: undefined
+                              }}
+                            />
+                          </div>
                         </div>
                       </div>
                     ) : null}
@@ -1717,75 +1818,91 @@ function PlasmicHome__RenderFunc(props: {
                         ? true
                         : false
                     ) ? (
-                      <div className={classNames("all", sty.freeBox__nbCnO)}>
-                        <div className={classNames("all", sty.freeBox__jcjdg)}>
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__mtlYb)}
-                            role={"img"}
-                          />
-
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__kz8EC)}
-                            role={"img"}
-                          />
-
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__m6PRp)}
-                            role={"img"}
-                          />
-
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__su5ON)}
-                            role={"img"}
-                          />
-
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__lKdk)}
-                            role={"img"}
-                          />
-                        </div>
-                        <div className={classNames("all", sty.freeBox__aAMkQ)}>
+                      <div
+                        data-plasmic-name={"box6"}
+                        data-plasmic-override={overrides.box6}
+                        className={classNames("all", sty.box6)}
+                      >
+                        <div
+                          data-plasmic-name={"child6"}
+                          data-plasmic-override={overrides.child6}
+                          className={classNames("all", sty.child6)}
+                        >
                           <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__bqodb
-                            )}
+                            className={classNames("all", sty.freeBox___1Lcj1)}
                           >
-                            {
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ullamcorper diam, eget consequat neque. Fusce est tellus, vulputate nec commodo ac, dictum non orci. Phasellus pretium, nisl consectetur vestibulum volutpat, mi mauris gravida "
-                            }
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg__jiZo5)}
+                              role={"img"}
+                            />
+
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg__pVsSw)}
+                              role={"img"}
+                            />
+
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg__ddeLv)}
+                              role={"img"}
+                            />
+
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg__lqmXn)}
+                              role={"img"}
+                            />
+
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg__kj4Qs)}
+                              role={"img"}
+                            />
                           </div>
-                        </div>
-                        <div className={classNames("all", sty.freeBox__zhVfb)}>
                           <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text___3D8Li
-                            )}
+                            className={classNames("all", sty.freeBox__hlDa4)}
                           >
-                            {"JOHN DOE"}
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text__mGe8
+                              )}
+                            >
+                              {
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ullamcorper diam, eget consequat neque. Fusce est tellus, vulputate nec commodo ac, dictum non orci. Phasellus pretium, nisl consectetur vestibulum volutpat, mi mauris gravida "
+                              }
+                            </div>
                           </div>
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img__nkrTo)}
-                            displayHeight={"auto"}
-                            displayMaxHeight={"none"}
-                            displayMaxWidth={"100%"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"auto"}
-                            format={"avif"}
-                            loading={"lazy"}
-                            quality={100}
-                            src={{
-                              src: "/plasmic/sterling_and_buena_vista_foods/images/layer14Png.png",
-                              fullWidth: 54,
-                              fullHeight: 42,
-                              aspectRatio: undefined
-                            }}
-                          />
+                          <div
+                            className={classNames("all", sty.freeBox__bprsf)}
+                          >
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text___5JqcJ
+                              )}
+                            >
+                              {"JOHN DOE"}
+                            </div>
+                            <PlasmicImg__
+                              alt={""}
+                              className={classNames(sty.img__yYSgS)}
+                              displayHeight={"auto"}
+                              displayMaxHeight={"none"}
+                              displayMaxWidth={"100%"}
+                              displayMinHeight={"0"}
+                              displayMinWidth={"0"}
+                              displayWidth={"auto"}
+                              format={"avif"}
+                              loading={"lazy"}
+                              quality={100}
+                              src={{
+                                src: "/plasmic/sterling_and_buena_vista_foods/images/layer14Png.png",
+                                fullWidth: 54,
+                                fullHeight: 42,
+                                aspectRatio: undefined
+                              }}
+                            />
+                          </div>
                         </div>
                       </div>
                     ) : null}
@@ -1794,75 +1911,91 @@ function PlasmicHome__RenderFunc(props: {
                         ? true
                         : false
                     ) ? (
-                      <div className={classNames("all", sty.freeBox__z1HqT)}>
-                        <div className={classNames("all", sty.freeBox___3Xe0I)}>
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__khp3T)}
-                            role={"img"}
-                          />
-
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__rhaz8)}
-                            role={"img"}
-                          />
-
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__kvENb)}
-                            role={"img"}
-                          />
-
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__s4Gxu)}
-                            role={"img"}
-                          />
-
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__gE20O)}
-                            role={"img"}
-                          />
-                        </div>
-                        <div className={classNames("all", sty.freeBox__zsraz)}>
+                      <div
+                        data-plasmic-name={"box7"}
+                        data-plasmic-override={overrides.box7}
+                        className={classNames("all", sty.box7)}
+                      >
+                        <div
+                          data-plasmic-name={"child7"}
+                          data-plasmic-override={overrides.child7}
+                          className={classNames("all", sty.child7)}
+                        >
                           <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__fV5Zs
-                            )}
+                            className={classNames("all", sty.freeBox__u2MTc)}
                           >
-                            {
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ullamcorper diam, eget consequat neque. Fusce est tellus, vulputate nec commodo ac, dictum non orci. Phasellus pretium, nisl consectetur vestibulum volutpat, mi mauris gravida "
-                            }
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg__c2KsJ)}
+                              role={"img"}
+                            />
+
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg__a8Ieg)}
+                              role={"img"}
+                            />
+
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg__lG87O)}
+                              role={"img"}
+                            />
+
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg__dcrs)}
+                              role={"img"}
+                            />
+
+                            <StarFilledIcon
+                              className={classNames("all", sty.svg__wcBma)}
+                              role={"img"}
+                            />
                           </div>
-                        </div>
-                        <div className={classNames("all", sty.freeBox__sEjQq)}>
                           <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__ue5Lm
-                            )}
+                            className={classNames("all", sty.freeBox__vvfFl)}
                           >
-                            {"JOHN DOE"}
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text__f8LC
+                              )}
+                            >
+                              {
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ullamcorper diam, eget consequat neque. Fusce est tellus, vulputate nec commodo ac, dictum non orci. Phasellus pretium, nisl consectetur vestibulum volutpat, mi mauris gravida "
+                              }
+                            </div>
                           </div>
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img__iHVq8)}
-                            displayHeight={"auto"}
-                            displayMaxHeight={"none"}
-                            displayMaxWidth={"100%"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"auto"}
-                            format={"avif"}
-                            loading={"lazy"}
-                            quality={100}
-                            src={{
-                              src: "/plasmic/sterling_and_buena_vista_foods/images/layer14Png.png",
-                              fullWidth: 54,
-                              fullHeight: 42,
-                              aspectRatio: undefined
-                            }}
-                          />
+                          <div
+                            className={classNames("all", sty.freeBox___2T4MN)}
+                          >
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text___9U2XS
+                              )}
+                            >
+                              {"JOHN DOE"}
+                            </div>
+                            <PlasmicImg__
+                              alt={""}
+                              className={classNames(sty.img__edXvk)}
+                              displayHeight={"auto"}
+                              displayMaxHeight={"none"}
+                              displayMaxWidth={"100%"}
+                              displayMinHeight={"0"}
+                              displayMinWidth={"0"}
+                              displayWidth={"auto"}
+                              format={"avif"}
+                              loading={"lazy"}
+                              quality={100}
+                              src={{
+                                src: "/plasmic/sterling_and_buena_vista_foods/images/layer14Png.png",
+                                fullWidth: 54,
+                                fullHeight: 42,
+                                aspectRatio: undefined
+                              }}
+                            />
+                          </div>
                         </div>
                       </div>
                     ) : null}
@@ -1944,36 +2077,29 @@ function PlasmicHome__RenderFunc(props: {
                   data-plasmic-override={overrides.buttonContainer}
                   className={classNames("all", sty.buttonContainer)}
                 >
-                  <CtaBtn
-                    data-plasmic-name={"ctaBtn"}
-                    data-plasmic-override={overrides.ctaBtn}
-                    className={classNames("__wab_instance", sty.ctaBtn)}
+                  <PrimaryBtn
+                    className={classNames(
+                      "__wab_instance",
+                      sty.primaryBtn__yeb2D
+                    )}
                   >
-                    <div
-                      className={classNames(
-                        "all",
-                        "__wab_text",
-                        sty.text__n2UjM
-                      )}
-                    >
-                      <React.Fragment>
-                        {(() => {
-                          try {
-                            return $queries.query.data.response.data.page
-                              .pageContent.button[6].text;
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return "Start a Conversation";
-                            }
-                            throw e;
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $queries.query2.data.response.data.pageBy
+                            .pageContent.button[6].text;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "Label";
                           }
-                        })()}
-                      </React.Fragment>
-                    </div>
-                  </CtaBtn>
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
+                  </PrimaryBtn>
                 </div>
               </div>
             </div>
@@ -2022,10 +2148,23 @@ const PlasmicDescendants = {
     "frame43",
     "frame44",
     "sliderCarousel",
+    "box",
+    "child",
+    "box2",
+    "child2",
+    "box3",
+    "child3",
+    "box4",
+    "child4",
+    "box5",
+    "child5",
+    "box6",
+    "child6",
+    "box7",
+    "child7",
     "cta",
     "frame52",
     "buttonContainer",
-    "ctaBtn",
     "footer2",
     "footer"
   ],
@@ -2054,10 +2193,23 @@ const PlasmicDescendants = {
     "frame43",
     "frame44",
     "sliderCarousel",
+    "box",
+    "child",
+    "box2",
+    "child2",
+    "box3",
+    "child3",
+    "box4",
+    "child4",
+    "box5",
+    "child5",
+    "box6",
+    "child6",
+    "box7",
+    "child7",
     "cta",
     "frame52",
-    "buttonContainer",
-    "ctaBtn"
+    "buttonContainer"
   ],
   intro: ["intro", "text3", "title2"],
   text3: ["text3", "title2"],
@@ -2081,18 +2233,61 @@ const PlasmicDescendants = {
     "frame35",
     "frame43",
     "frame44",
-    "sliderCarousel"
+    "sliderCarousel",
+    "box",
+    "child",
+    "box2",
+    "child2",
+    "box3",
+    "child3",
+    "box4",
+    "child4",
+    "box5",
+    "child5",
+    "box6",
+    "child6",
+    "box7",
+    "child7"
   ],
   frame36: ["frame36", "frame34", "frame35", "frame43", "frame44"],
   frame34: ["frame34"],
   frame35: ["frame35", "frame43", "frame44"],
   frame43: ["frame43"],
   frame44: ["frame44"],
-  sliderCarousel: ["sliderCarousel"],
-  cta: ["cta", "frame52", "buttonContainer", "ctaBtn"],
+  sliderCarousel: [
+    "sliderCarousel",
+    "box",
+    "child",
+    "box2",
+    "child2",
+    "box3",
+    "child3",
+    "box4",
+    "child4",
+    "box5",
+    "child5",
+    "box6",
+    "child6",
+    "box7",
+    "child7"
+  ],
+  box: ["box", "child"],
+  child: ["child"],
+  box2: ["box2", "child2"],
+  child2: ["child2"],
+  box3: ["box3", "child3"],
+  child3: ["child3"],
+  box4: ["box4", "child4"],
+  child4: ["child4"],
+  box5: ["box5", "child5"],
+  child5: ["child5"],
+  box6: ["box6", "child6"],
+  child6: ["child6"],
+  box7: ["box7", "child7"],
+  child7: ["child7"],
+  cta: ["cta", "frame52", "buttonContainer"],
   frame52: ["frame52"],
-  buttonContainer: ["buttonContainer", "ctaBtn"],
-  ctaBtn: ["ctaBtn"],
+  buttonContainer: ["buttonContainer"],
   footer2: ["footer2", "footer"],
   footer: ["footer"]
 } as const;
@@ -2125,10 +2320,23 @@ type NodeDefaultElementType = {
   frame43: "div";
   frame44: "div";
   sliderCarousel: typeof SliderWrapper;
+  box: "div";
+  child: "div";
+  box2: "div";
+  child2: "div";
+  box3: "div";
+  child3: "div";
+  box4: "div";
+  child4: "div";
+  box5: "div";
+  child5: "div";
+  box6: "div";
+  child6: "div";
+  box7: "div";
+  child7: "div";
   cta: "div";
   frame52: "div";
   buttonContainer: "div";
-  ctaBtn: typeof CtaBtn;
   footer2: "div";
   footer: typeof Footer;
 };
@@ -2221,10 +2429,23 @@ export const PlasmicHome = Object.assign(
     frame43: makeNodeComponent("frame43"),
     frame44: makeNodeComponent("frame44"),
     sliderCarousel: makeNodeComponent("sliderCarousel"),
+    box: makeNodeComponent("box"),
+    child: makeNodeComponent("child"),
+    box2: makeNodeComponent("box2"),
+    child2: makeNodeComponent("child2"),
+    box3: makeNodeComponent("box3"),
+    child3: makeNodeComponent("child3"),
+    box4: makeNodeComponent("box4"),
+    child4: makeNodeComponent("child4"),
+    box5: makeNodeComponent("box5"),
+    child5: makeNodeComponent("child5"),
+    box6: makeNodeComponent("box6"),
+    child6: makeNodeComponent("child6"),
+    box7: makeNodeComponent("box7"),
+    child7: makeNodeComponent("child7"),
     cta: makeNodeComponent("cta"),
     frame52: makeNodeComponent("frame52"),
     buttonContainer: makeNodeComponent("buttonContainer"),
-    ctaBtn: makeNodeComponent("ctaBtn"),
     footer2: makeNodeComponent("footer2"),
     footer: makeNodeComponent("footer"),
 

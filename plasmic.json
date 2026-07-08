@@ -28301,6 +28301,11 @@
           "id": "da1Oc9R4PSkd",
           "name": "[SterlingFoods]conveyorbelt.avif",
           "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodsConveyorbeltAvif.avif"
+        },
+        {
+          "id": "aeVZUmdHU0-i",
+          "name": "market-hero.avif",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/marketHeroAvif.avif"
         }
       ],
       "indirect": false,

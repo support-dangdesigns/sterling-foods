@@ -1,0 +1,29 @@
+.root {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  text-align: center;
+  color: var(--token-Gx156sR9ht1r);
+  font-family: var(--token-MZlo_dcXZCyh);
+  font-size: 20px;
+  min-width: 0;
+  padding: 10px;
+}
+.root:hover:hover {
+  color: var(--token-VSsNRyw2VYkH);
+  text-decoration-line: none;
+  background: none;
+  outline-width: medium;
+  outline-style: solid;
+  outline-color: var(--token-VSsNRyw2VYkH);
+  outline-offset: 1px;
+}
+.root:active:active {
+  color: var(--token-kp2ey-ao0gGo);
+  outline-width: medium;
+  outline-style: solid;
+  outline-color: var(--token-lZIcjtq6huau);
+  outline-offset: 1px;
+  box-shadow: inset 0px 4px 16px 0px #0000001a;
+}

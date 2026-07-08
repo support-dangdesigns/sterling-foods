@@ -1,0 +1,62 @@
+.root:global(.__wab_instance) {
+  position: relative;
+  cursor: pointer;
+  color: var(--token-Xx7oe00aHq8H);
+  font-family: var(--token-MZlo_dcXZCyh);
+  font-size: var(--token-TQ01AK4kGGLa);
+  line-height: var(--token-xqu7e6j0VvPH);
+  outline-style: none;
+  border-radius: var(--token-N6OOSLbGhLr_);
+}
+.root[data-hovered][data-hovered]:global(.__wab_instance) {
+  background: none;
+  color: var(--token-VSsNRyw2VYkH);
+  border-radius: 0px;
+  border-bottom: 2px solid var(--token-VSsNRyw2VYkH);
+}
+.root[data-pressed][data-pressed]:global(.__wab_instance) {
+  box-shadow: inset 0px 4px 16px 0px #0000001a;
+  border-radius: 0px;
+  border-bottom: 1px solid var(--token-lZIcjtq6huau);
+}
+.freeBox__dCpyQ {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  column-gap: 2px;
+  row-gap: var(--token-LKnbPXUiL4MJ);
+  min-width: 0;
+  padding: var(--token-QOC-1xrvgWwP) var(--token-xSplwyl9ncm5);
+}
+.ariaText:global(.__wab_instance) {
+  color: var(--token-Xx7oe00aHq8H);
+  font-size: 20px;
+}
+.root[data-pressed] .ariaText:global(.__wab_instance) {
+  color: var(--token-lZIcjtq6huau);
+}
+.freeBox___6Qlkp {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  min-width: 0;
+}
+.text {
+  font-family: "Avenir LT Std";
+  font-size: 16px;
+  color: var(--token-Xx7oe00aHq8H);
+}
+@media (max-width: 1920px) {
+  .text {
+    font-size: var(--token-SeC4JQ6Nr4hA);
+    color: var(--token-455ns3DBW2hn);
+  }
+}

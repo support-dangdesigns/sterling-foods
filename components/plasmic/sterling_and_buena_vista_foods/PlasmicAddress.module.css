@@ -1,0 +1,110 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  column-gap: 0px;
+  position: relative;
+  min-width: 0;
+  padding: 0px 0px 0px 8px;
+}
+.svg {
+  object-fit: cover;
+  max-width: 100%;
+  color: #c3761e;
+  width: 24px;
+  height: 45px;
+  display: block;
+  overflow: hidden;
+  align-self: flex-start;
+  flex-shrink: 0;
+}
+@media (max-width: 1440px) {
+  .svg {
+    display: none;
+  }
+}
+.link {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  top: auto;
+  left: auto;
+  color: var(--token-455ns3DBW2hn);
+  min-width: 0;
+  padding: 8px;
+}
+.freeBox__qAxin {
+  display: flex;
+  width: 386px;
+  cursor: pointer;
+  flex-direction: row;
+}
+.slotTargetChildren {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--token-I4qaFqA_B1z8);
+  letter-spacing: 0em;
+}
+@media (max-width: 1440px) {
+  .slotTargetChildren {
+    font-family: "Avenir LT Std";
+  }
+}
+.root:active .slotTargetChildren {
+  color: var(--token-YRLs3dbZJG3Q);
+}
+.span__wn7Jx {
+  animation: none;
+}
+.span__zWw92 {
+  animation: none;
+}
+.span__qB9Tq {
+  animation: none;
+}
+.span__tiHmh {
+  animation: none;
+}
+.freeBox__obdNa {
+  display: flex;
+  flex-direction: column;
+  width: 390px;
+}
+.slotTargetSlot {
+  font-family: "Avenir LT Std";
+  font-size: 17px;
+  color: var(--token-Xx7oe00aHq8H);
+  letter-spacing: 0em;
+}
+@media (max-width: 1440px) {
+  .slotTargetSlot {
+    font-family: "Avenir LT Std";
+  }
+}
+.root:hover .slotTargetSlot {
+  color: var(--token-VSsNRyw2VYkH);
+}
+.root:active .slotTargetSlot {
+  color: var(--token-YRLs3dbZJG3Q);
+}
+.span__x1ZGu {
+  animation: none;
+}
+.span__nrway {
+  animation: none;
+}
+.span__pngUj {
+  animation: none;
+}
+.span__cuGdO {
+  animation: none;
+}

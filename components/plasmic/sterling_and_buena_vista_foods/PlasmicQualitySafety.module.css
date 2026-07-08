@@ -1,0 +1,1117 @@
+.qualitySafety {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  grid-column-start: 1 !important;
+  grid-column-end: -1 !important;
+  min-height: 0;
+}
+@media (max-width: 1920px) {
+  .qualitySafety {
+    overflow: visible;
+  }
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+}
+.header__j0CU0:global(.__wab_instance) {
+  max-width: 100%;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: url("/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodsQualityandSafetyHeroAvif.avif") top 50% left 50% / cover repeat;
+  min-width: 0;
+  flex-shrink: 0;
+}
+.h2 {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  text-align: center;
+  color: var(--token-sP5FKk2rRQuW);
+  min-width: 0;
+}
+.body {
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  display: none;
+  padding: 119px 3% 0px;
+}
+@media (max-width: 1920px) {
+  .body {
+    display: flex;
+  }
+}
+.intro {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  padding: 8px;
+}
+@media (max-width: 1920px) {
+  .intro {
+    padding: 0px;
+  }
+}
+.freeBox__fgqn {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  column-gap: 20px;
+  min-width: 0;
+  padding: 20px;
+}
+@media (max-width: 757px) {
+  .freeBox__fgqn {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0px;
+    column-gap: 0px;
+  }
+}
+.h3__l0Rl2 {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+.h3__x2Qrn {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-VSsNRyw2VYkH);
+  text-align: center;
+}
+.p___6RcTr {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  text-align: center;
+  min-width: 0;
+}
+@media (max-width: 1920px) {
+  .p___6RcTr {
+    width: 75%;
+  }
+}
+@media (max-width: 1440px) {
+  .p___6RcTr {
+    width: 80%;
+  }
+}
+.foodSafety {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  overflow: visible;
+  column-gap: 36px;
+  min-width: 0;
+  padding: 130px 0px 0px;
+}
+@media (max-width: 1440px) {
+  .foodSafety {
+    overflow: visible;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    height: 100%;
+    width: 100%;
+    row-gap: 0px;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+@media (max-width: 757px) {
+  .foodSafety {
+    display: flex;
+    flex-direction: column;
+    row-gap: 36px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    column-gap: 0px;
+  }
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 921px;
+  height: 930px;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  row-gap: 30px;
+  background: #f1f5fb;
+  flex-shrink: 0;
+  border-radius: 39px;
+  padding: 0px 55px;
+}
+@media (max-width: 1440px) {
+  .text {
+    height: 100%;
+    width: 55%;
+    min-height: 0;
+    padding: 20px;
+  }
+}
+@media (max-width: 757px) {
+  .text {
+    width: auto;
+    overflow: visible;
+    height: auto;
+    order: 2;
+    border-radius: 39px;
+    padding: 40px;
+  }
+}
+@media (max-width: 414px) {
+  .text {
+    padding: 25px;
+  }
+}
+.croissantimg {
+  display: block;
+  position: absolute;
+  width: 371px;
+  height: auto;
+  max-width: 100%;
+  background: url("/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodsCroissantAccentImageAvif.avif") top 50% left 50% / cover repeat;
+  left: 0px;
+  top: 0px;
+  z-index: 0;
+}
+@media (max-width: 1920px) {
+  .croissantimg {
+    top: auto;
+    height: 573px;
+    left: auto;
+    width: 371px;
+    right: 2%;
+    bottom: 2%;
+    flex-shrink: 0;
+  }
+}
+@media (max-width: 757px) {
+  .croissantimg {
+    width: 60%;
+    height: 70%;
+  }
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  padding: 8px;
+}
+.h3__fqAiU {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.h3__lkzyM {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-VSsNRyw2VYkH);
+  min-width: 0;
+}
+.paragraph {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 30px;
+  min-width: 0;
+  padding: 8px;
+}
+.p__ykPnl {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.p__axkZs {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 10px;
+  min-width: 0;
+  padding: 8px;
+}
+.h6__n7NsM {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-size: 35px;
+  color: var(--token-VSsNRyw2VYkH);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-width: 0;
+}
+.text__x9YRq {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.ul__iz6Ub {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+.li__o14GC {
+  padding: 0px;
+}
+.li__wzm7 {
+  padding: 0px;
+}
+.li__krHy {
+  padding: 0px;
+}
+.li__vre9J {
+  padding: 0px;
+}
+.li__swick {
+  padding: 0px;
+}
+.img__bD13E {
+  object-fit: cover;
+  max-width: 100%;
+}
+.img__bD13E > picture > img {
+  object-fit: cover;
+}
+@media (max-width: 1440px) {
+  .img__bD13E {
+    width: 40%;
+    height: 100%;
+    min-height: 0;
+    border-radius: 39px;
+  }
+}
+@media (max-width: 757px) {
+  .img__bD13E {
+    width: auto;
+    height: auto;
+  }
+}
+.qualityAssurance {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  column-gap: 40px;
+  min-width: 0;
+  padding: 75px 8px 8px;
+}
+@media (max-width: 1440px) {
+  .qualityAssurance {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    row-gap: 0px;
+  }
+}
+@media (max-width: 757px) {
+  .qualityAssurance {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    column-gap: 0px;
+  }
+}
+.img___7MYl3 {
+  object-fit: cover;
+  max-width: 100%;
+}
+.img___7MYl3 > picture > img {
+  object-fit: cover;
+}
+@media (max-width: 1440px) {
+  .img___7MYl3 {
+    width: 40%;
+    height: 100%;
+    min-height: 0;
+    border-radius: 39px;
+  }
+}
+@media (max-width: 757px) {
+  .img___7MYl3 {
+    width: auto;
+    height: auto;
+  }
+}
+.text2 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 921px;
+  height: 793px;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  row-gap: 30px;
+  background: var(--token-9ltCdO3Xj-ky);
+  flex-shrink: 0;
+  border-radius: 39px;
+  padding: 0px 50px;
+}
+@media (max-width: 1440px) {
+  .text2 {
+    width: 55%;
+    height: 100%;
+    min-height: 0;
+    padding: 40px;
+  }
+}
+@media (max-width: 757px) {
+  .text2 {
+    height: auto;
+    width: 100%;
+    min-width: 0;
+    padding: 40px;
+  }
+}
+@media (max-width: 414px) {
+  .text2 {
+    padding: 25px;
+  }
+}
+.croissantimg2 {
+  display: block;
+  position: absolute;
+  width: 410px;
+  height: 569px;
+  max-width: 100%;
+  background: url("/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodsCroissantAccentImageTanPng.avif") top 50% left 50% / cover repeat;
+  left: auto;
+  top: auto;
+  z-index: 0;
+  right: 3%;
+  bottom: 2%;
+  flex-shrink: 0;
+}
+@media (max-width: 757px) {
+  .croissantimg2 {
+    height: 80%;
+    width: 60%;
+  }
+}
+.title2 {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  column-gap: 15px;
+  min-width: 0;
+}
+@media (max-width: 1440px) {
+  .title2 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0px;
+    align-items: flex-start;
+    justify-content: flex-end;
+    column-gap: 0px;
+  }
+}
+@media (max-width: 1200px) {
+  .title2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    column-gap: 0px;
+  }
+}
+.h3__cbUxj {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+.h3___0UvNu {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-VSsNRyw2VYkH);
+}
+.p__vgKhD {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.p__oKAkr {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.list2 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+}
+.p__tOwC {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 35px;
+  color: var(--token-VSsNRyw2VYkH);
+  font-family: "Georgia";
+  min-width: 0;
+}
+.p__iXRdI {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.ul__jouav {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+.li__htNoi {
+  padding: 0px;
+}
+.li__y9Lep {
+  padding: 0px;
+}
+.li__jIf {
+  padding: 0px;
+}
+.li__fzhGv {
+  padding: 0px;
+}
+.p__t4Yp {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.improvement {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  overflow: visible;
+  column-gap: 36px;
+  min-width: 0;
+  padding: 80px 0px 45px;
+}
+@media (max-width: 1440px) {
+  .improvement {
+    overflow: visible;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    height: 100%;
+    width: 100%;
+    row-gap: 0px;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+@media (max-width: 757px) {
+  .improvement {
+    display: flex;
+    flex-direction: column;
+    row-gap: 36px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    column-gap: 0px;
+  }
+}
+.text3 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 921px;
+  height: 869px;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  row-gap: 30px;
+  background: var(--token-dvRKU9xNWE2S);
+  flex-shrink: 0;
+  border-radius: 39px;
+  padding: 0px 29px 0px 90px;
+}
+@media (max-width: 1440px) {
+  .text3 {
+    height: 100%;
+    width: 55%;
+    min-height: 0;
+    padding: 20px;
+  }
+}
+@media (max-width: 757px) {
+  .text3 {
+    width: auto;
+    overflow: visible;
+    height: auto;
+    order: 2;
+    border-radius: 39px;
+    padding: 40px;
+  }
+}
+@media (max-width: 414px) {
+  .text3 {
+    padding: 25px;
+  }
+}
+.croissantimg3 {
+  display: block;
+  position: absolute;
+  width: 371px;
+  height: auto;
+  max-width: 100%;
+  background: url("/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodsCroissantAccentImageAvif.avif") top 50% left 50% / cover repeat;
+  left: 0px;
+  top: 0px;
+  z-index: 0;
+}
+@media (max-width: 1920px) {
+  .croissantimg3 {
+    top: auto;
+    height: 588px;
+    left: auto;
+    width: 367px;
+    right: 2%;
+    bottom: 2%;
+    background: url("/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodsCroissantAccentImageOrangePng.png") top 50% left 50% / cover repeat;
+    flex-shrink: 0;
+  }
+}
+@media (max-width: 757px) {
+  .croissantimg3 {
+    width: 60%;
+    height: 70%;
+  }
+}
+.title3 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  padding: 8px;
+}
+.h3__kJqsJ {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-sP5FKk2rRQuW);
+  min-width: 0;
+}
+.h3__bD3E {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-sP5FKk2rRQuW);
+  min-width: 0;
+}
+.paragraph2 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 30px;
+  min-width: 0;
+  padding: 8px;
+}
+.p__bxzvU {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-sP5FKk2rRQuW);
+  min-width: 0;
+}
+.p___00IHk {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-sP5FKk2rRQuW);
+  min-width: 0;
+}
+.list3 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 20px;
+  min-width: 0;
+  padding: 8px;
+}
+.h6__noYne {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-size: 35px;
+  color: var(--token-jgohepLVeKvh);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-width: 0;
+}
+.text__sGwsH {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.ul__dC3Ed {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  color: var(--token-41VRhDKfihhY);
+  list-style-type: disc;
+  list-style-position: outside;
+  font-size: 21px;
+  background: none;
+}
+.li__tCb {
+  color: var(--token-sP5FKk2rRQuW);
+  padding: 0px;
+}
+.li__pCcvL {
+  padding: 0px;
+}
+.li__aE7WS {
+  padding: 0px;
+}
+.li__krFn {
+  padding: 0px;
+}
+.p__tAjIe {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-sP5FKk2rRQuW);
+  min-width: 0;
+}
+.img__hvdaQ {
+  object-fit: cover;
+  max-width: 100%;
+}
+.img__hvdaQ > picture > img {
+  object-fit: cover;
+}
+@media (max-width: 1440px) {
+  .img__hvdaQ {
+    width: 40%;
+    height: 100%;
+    min-height: 0;
+    border-radius: 39px;
+  }
+}
+@media (max-width: 757px) {
+  .img__hvdaQ {
+    width: auto;
+    height: auto;
+  }
+}
+.qualityYouCanTrust {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  padding: 8px;
+}
+@media (max-width: 1920px) {
+  .qualityYouCanTrust {
+    display: flex;
+    flex-direction: column;
+    row-gap: 95px;
+    column-gap: 0px;
+    padding: 95px 0px;
+  }
+}
+.title4 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  padding: 8px;
+}
+.freeBox__vRlny {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  column-gap: 20px;
+  min-width: 0;
+  padding: 20px;
+}
+@media (max-width: 757px) {
+  .freeBox__vRlny {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0px;
+    column-gap: 0px;
+  }
+}
+.h3__wo8Te {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+.h3___4Q0O {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-VSsNRyw2VYkH);
+  text-align: center;
+}
+.p___2YTV {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  text-align: center;
+  min-width: 0;
+}
+@media (max-width: 1920px) {
+  .p___2YTV {
+    width: 77.67%;
+  }
+}
+@media (max-width: 1440px) {
+  .p___2YTV {
+    width: 80%;
+  }
+}
+.freeBox__nmMmx {
+  display: grid;
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  grid-template-rows: auto auto;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-row-gap: 25px;
+  grid-column-gap: 25px;
+  grid-auto-rows: auto;
+  grid-auto-columns: 1fr;
+  align-self: center;
+}
+@media (max-width: 1440px) {
+  .freeBox__nmMmx {
+    flex-direction: row;
+    row-gap: 0px;
+  }
+}
+@media (max-width: 1200px) {
+  .freeBox__nmMmx {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+  }
+}
+@media (max-width: 414px) {
+  .freeBox__nmMmx {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    padding: 20px;
+  }
+}
+.img__gqcq2 {
+  object-fit: cover;
+  max-width: 100%;
+  width: 379px;
+  height: 330px;
+}
+.img__gqcq2 > picture > img {
+  object-fit: cover;
+}
+.img__sipb5 {
+  object-fit: cover;
+  max-width: 100%;
+  width: 379px;
+  height: 330px;
+}
+.img__sipb5 > picture > img {
+  object-fit: cover;
+}
+.img__e9Ph {
+  object-fit: cover;
+  max-width: 100%;
+  width: 379px;
+  height: 330px;
+}
+.img__e9Ph > picture > img {
+  object-fit: cover;
+}
+.img__nLxtW {
+  object-fit: cover;
+  max-width: 100%;
+  width: 379px;
+  height: 330px;
+}
+.img__nLxtW > picture > img {
+  object-fit: cover;
+}
+.cta {
+  animation: none;
+  background: rgba(28, 55, 87, 1);
+  height: 392px;
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  overflow: hidden;
+  width: 1920px;
+  flex-direction: column;
+  flex-shrink: 0;
+  padding: 30px;
+}
+@media (max-width: 1920px) {
+  .cta {
+    animation: none;
+    position: relative;
+    left: auto;
+    top: auto;
+    display: flex;
+    flex-direction: column;
+    width: 1920px;
+    height: 397px;
+    row-gap: 20px;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0px;
+    flex-shrink: 0;
+    padding: 30px;
+  }
+}
+@media (max-width: 1440px) {
+  .cta {
+    animation: none;
+    height: auto;
+    width: 100%;
+    left: auto;
+    top: auto;
+    min-width: 0;
+  }
+}
+@media (max-width: 757px) {
+  .cta {
+    animation: none;
+    left: auto;
+    top: auto;
+  }
+}
+@media (max-width: 414px) {
+  .cta {
+    animation: none;
+    height: auto;
+    left: auto;
+    top: auto;
+  }
+}
+@media (max-width: 375px) {
+  .cta {
+    animation: none;
+    left: auto;
+    top: auto;
+  }
+}
+.freeBox__xu6Px {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  column-gap: 20px;
+  min-width: 0;
+  padding: 8px;
+}
+.h3__dsX1 {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-sP5FKk2rRQuW);
+}
+.h1 {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-I4qaFqA_B1z8);
+}
+.h3__w4DHe {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-41VRhDKfihhY);
+}
+.h5 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-sP5FKk2rRQuW);
+  text-align: center;
+  font-size: 43px;
+  min-width: 0;
+}
+.ctaBtn:global(.__wab_instance) {
+  max-width: 100%;
+  width: 353px;
+  height: 69px;
+  flex-shrink: 0;
+}
+@media (max-width: 1920px) {
+  .ctaBtn:global(.__wab_instance) {
+    flex-shrink: 0;
+    display: none;
+  }
+}
+.footer {
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  display: none;
+  padding: 0px;
+}
+@media (max-width: 1920px) {
+  .footer {
+    display: flex;
+  }
+}
+.footer__xbCzl:global(.__wab_instance) {
+  max-width: 100%;
+  flex-shrink: 0;
+}
+@media (max-width: 1920px) {
+  .footer__xbCzl:global(.__wab_instance) {
+    flex-shrink: 0;
+  }
+}

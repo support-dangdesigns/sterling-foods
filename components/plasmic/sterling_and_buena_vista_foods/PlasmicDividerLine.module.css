@@ -1,0 +1,8 @@
+.divider {
+  object-fit: cover;
+  max-width: 100%;
+  color: var(--token-VSsNRyw2VYkH);
+  height: 30px;
+  position: relative;
+  width: 20px;
+}

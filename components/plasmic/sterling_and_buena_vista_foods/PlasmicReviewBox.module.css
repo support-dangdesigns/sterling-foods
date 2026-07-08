@@ -1,0 +1,106 @@
+.frame48 {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: inset 0px 0px 0px 1px rgba(195, 118, 30, 1);
+  width: auto;
+  height: 375px;
+  display: inline-flex;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  justify-self: flex-start;
+  row-gap: 30px;
+  border-radius: 40px;
+  padding: 0px;
+}
+@media (max-width: 1920px) {
+  .frame48 {
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+.frame49 {
+  animation: none;
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  row-gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+.svg__qrsbe {
+  animation: none;
+  object-fit: cover;
+  max-width: 100%;
+  color: #fec52c;
+  width: 152px;
+  height: 25.5px;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  column-gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+}
+.frame50 {
+  animation: none;
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  flex-direction: row;
+  column-gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  min-width: 0;
+}
+.text {
+  animation: none;
+  display: block;
+  font-size: 19px;
+  letter-spacing: 0em;
+  color: rgba(28, 55, 87, 1);
+  position: relative;
+  width: 450px;
+  font-family: "Avenir LT Std";
+  font-weight: 500;
+  padding-right: 5px;
+  padding-top: 0px;
+  line-height: 1.25;
+  flex-shrink: 0;
+}
+.frame51 {
+  animation: none;
+  width: 52px;
+  height: auto;
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  align-self: stretch;
+  left: -23px;
+  top: 297px;
+}
+.svg__nHpXo {
+  animation: none;
+  object-fit: cover;
+  max-width: 100%;
+  color: #c3761e;
+  width: 52px;
+  height: 41.005916595458984px;
+  display: block;
+  position: absolute;
+  top: auto;
+  left: auto;
+  bottom: 0;
+  right: 0;
+}

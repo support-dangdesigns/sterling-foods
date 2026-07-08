@@ -1,0 +1,32 @@
+.root {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  min-width: 0;
+  padding: 5px;
+}
+.root:hover:hover {
+  border-bottom: 1.5px solid var(--token-VSsNRyw2VYkH);
+}
+.root:active:active {
+  box-shadow: inset 0px 4px 16px 0px #0000001a;
+  border-bottom-color: var(--token-lZIcjtq6huau);
+  border-bottom-style: solid;
+  border-width: 1.5px;
+}
+.slotTargetChildren {
+  font-family: "Avenir LT Std";
+  font-size: 16px;
+  color: var(--token-Gx156sR9ht1r);
+  text-align: center;
+}
+.root:active .slotTargetChildren {
+  color: var(--token-kp2ey-ao0gGo);
+}
+.root:hover .slotTargetChildren {
+  color: var(--token-VSsNRyw2VYkH);
+}

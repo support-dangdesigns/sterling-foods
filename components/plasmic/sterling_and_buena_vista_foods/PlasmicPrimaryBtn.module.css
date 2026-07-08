@@ -1,0 +1,44 @@
+.primaryBtn {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: inset 0px 0px 0px 3px rgba(195, 118, 30, 1);
+  display: block;
+  overflow: hidden;
+  height: 71px;
+  width: 442px;
+  position: relative;
+  border-radius: 34px;
+}
+.primaryBtn:hover:hover {
+  box-shadow: none;
+  background: var(--token-VSsNRyw2VYkH);
+  cursor: pointer;
+}
+.primaryBtn:active:active {
+  background: var(--token-YRLs3dbZJG3Q);
+  box-shadow: inset 0px 4px 16px 0px #00000033;
+  color: var(--token-2G4aHgk_mSgB);
+}
+.freeBox {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+}
+.slotTargetChildren {
+  font-family: "Avenir";
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--token-I4qaFqA_B1z8);
+}
+.primaryBtn:hover .slotTargetChildren {
+  color: var(--token-2G4aHgk_mSgB);
+}
+.primaryBtn:active .slotTargetChildren {
+  color: var(--token-2G4aHgk_mSgB);
+}

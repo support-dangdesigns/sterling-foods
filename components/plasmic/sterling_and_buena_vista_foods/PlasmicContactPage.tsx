@@ -440,7 +440,7 @@ function PlasmicContactPage__RenderFunc(props: {
                     <FormItemWrapper
                       className={classNames(
                         "__wab_instance",
-                        sty.formField__zygnZ
+                        sty.formField__wjsvw
                       )}
                       label={"Name"}
                       name={"name"}
@@ -452,7 +452,7 @@ function PlasmicContactPage__RenderFunc(props: {
                     <FormItemWrapper
                       className={classNames(
                         "__wab_instance",
-                        sty.formField__wPvQ
+                        sty.formField__fHf40
                       )}
                       label={"Message"}
                       name={"message"}
@@ -470,7 +470,7 @@ function PlasmicContactPage__RenderFunc(props: {
                         className={classNames(
                           "all",
                           "__wab_text",
-                          sty.text__ouJIl
+                          sty.text__h1GGx
                         )}
                       >
                         {"Submit"}

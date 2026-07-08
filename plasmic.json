@@ -27768,6 +27768,20 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/new-page-3"
+        },
+        {
+          "id": "_Fdy6XyySvwi",
+          "name": "Markets",
+          "type": "managed",
+          "projectId": "uyaK17nhz8WhGjYZfKjMhX",
+          "renderModuleFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicMarkets.tsx",
+          "importSpec": {
+            "modulePath": "../pages/markets.tsx"
+          },
+          "cssFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicMarkets.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/markets"
         }
       ],
       "icons": [

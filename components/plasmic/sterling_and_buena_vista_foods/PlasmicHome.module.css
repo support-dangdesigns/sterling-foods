@@ -24,6 +24,12 @@
   align-items: center;
   min-width: 0;
 }
+@media (max-width: 1512px) {
+  .header {
+    width: 100%;
+    min-width: 0;
+  }
+}
 .header__o4Nex:global(.__wab_instance) {
   max-width: 100%;
 }
@@ -51,6 +57,12 @@
     justify-content: center;
     height: auto;
     padding: 100px 0px 0px;
+  }
+}
+@media (max-width: 1512px) {
+  .hero {
+    width: 100%;
+    min-width: 0;
   }
 }
 @media (max-width: 1440px) {
@@ -806,6 +818,12 @@
   column-gap: 30px;
   flex-shrink: 0;
 }
+@media (max-width: 1512px) {
+  .bakerysolutions {
+    width: 100%;
+    min-width: 0;
+  }
+}
 @media (max-width: 1440px) {
   .bakerysolutions {
     padding: 30px;
@@ -860,7 +878,7 @@
 }
 @media (max-width: 1200px) {
   .image {
-    width: 539px;
+    width: 439px;
     background: url("/plasmic/sterling_and_buena_vista_foods/images/applefritterAvif.avif") top 50% left 50% / contain no-repeat;
     flex-shrink: 0;
   }
@@ -1032,6 +1050,12 @@
   padding-left: 100px;
   flex-shrink: 0;
 }
+@media (max-width: 1512px) {
+  .foodServiceAndRetailPartners {
+    width: 100%;
+    min-width: 0;
+  }
+}
 @media (max-width: 1280px) {
   .foodServiceAndRetailPartners {
     height: auto;
@@ -1053,7 +1077,7 @@
     flex-direction: column;
     row-gap: 0px;
     column-gap: 0px;
-    padding: 50px;
+    padding: 50px 50px 0px;
   }
 }
 @media (max-width: 414px) {
@@ -1311,7 +1335,7 @@
 }
 @media (max-width: 1200px) {
   .image2 {
-    width: 690px;
+    width: 550px;
     background: url("/plasmic/sterling_and_buena_vista_foods/images/empanadasAvif.avif") 0% 0% / contain no-repeat;
     flex-shrink: 0;
     margin: 0px;
@@ -1320,7 +1344,7 @@
 @media (max-width: 1024px) {
   .image2 {
     background: url("/plasmic/sterling_and_buena_vista_foods/images/empanadasAvif.avif") top 0% right 4.88% / contain no-repeat;
-    width: 100%;
+    width: 700px;
     height: 400px;
     display: flex;
     align-self: auto;
@@ -1328,7 +1352,6 @@
     justify-content: center;
     align-items: center;
     row-gap: 0px;
-    min-width: 0;
     flex-shrink: 0;
     margin: 0px;
   }
@@ -1380,6 +1403,13 @@
 @media (max-width: 1920px) {
   .innovationResponsive {
     display: flex;
+    --plsmc-rc-col-gap: 0px;
+  }
+}
+@media (max-width: 1512px) {
+  .innovationResponsive {
+    width: 100%;
+    min-width: 0;
     --plsmc-rc-col-gap: 0px;
   }
 }
@@ -1947,7 +1977,8 @@
   .frame36 {
     justify-content: center;
     align-items: stretch;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    align-content: stretch;
     padding: 40px 20px 20px;
   }
 }

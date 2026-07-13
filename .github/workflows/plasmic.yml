@@ -33,7 +33,7 @@ jobs:
           path: ${{ github.event.client_payload.data.directory }}/node_modules
       - id: init
         name: Initializing Plasmic app...
-        uses: plasmicapp/plasmic-action@v1
+        uses: plasmicapp/plasmic-action@master
         with:
           run: init
           github_token: ${{ secrets.GITHUB_TOKEN }}

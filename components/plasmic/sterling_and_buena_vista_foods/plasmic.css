@@ -11,6 +11,10 @@
 @import "../plasmic_query/plasmic.css"; /* plasmic-import: YUiM7yqBWAqsh8KSnrdj7/projectcss */
 @import "../antd_5_hostless/plasmic.css"; /* plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss */
 @import "../plasmic_rich_components/plasmic.css"; /* plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss */
+@import "../loading_boundary/plasmic.css"; /* plasmic-import: 9Vr5YWkf3w7jj6SsTcCEta/projectcss */
+@import "../date_fns/plasmic.css"; /* plasmic-import: 77tPPMY1MAED1Fqwv1T1ig/projectcss */
+@import "../copy_to_clipboard/plasmic.css"; /* plasmic-import: aEHVN5v6mfM4eovDsL8Z7d/projectcss */
+@import "../lodash/plasmic.css"; /* plasmic-import: hsyJcmBceSfPzvvXzVTuk7/projectcss */
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata%3Aital%2Cwght%400%2C200%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C900&display=swap");
 
 .plasmic_tokens_uyaK17nhz8WhGjYZfKjMhX {
@@ -263,6 +267,44 @@
   --mixin-VJHRHtMZNGpL_white-space: pre-wrap;
 }
 
+@media (max-width: 1024px) {
+  .plasmic_default_styles {
+    --mixin-c6Kr0ZMGIvKc_font-size: 64px;
+    --mixin-c6Kr0ZMGIvKc_white-space: pre-wrap;
+    --mixin-LnfUki906bT6_font-size: 56px;
+    --mixin-LnfUki906bT6_white-space: pre-wrap;
+    --mixin-9OfmAgKsetna_font-size: 42px;
+    --mixin-9OfmAgKsetna_white-space: pre-wrap;
+    --mixin-qcmLAuQf3iea_font-size: 36px;
+    --mixin-qcmLAuQf3iea_white-space: pre-wrap;
+    --mixin-r2g_yl3_YYAn_font-size: 28px;
+    --mixin-r2g_yl3_YYAn_white-space: pre-wrap;
+    --mixin-ap4rNoZS2Kpf_font-size: 24px;
+    --mixin-ap4rNoZS2Kpf_white-space: pre-wrap;
+    --mixin--fugYukNuH2n_font-size: 18px;
+    --mixin--fugYukNuH2n_line-height: 28px;
+    --mixin--fugYukNuH2n_white-space: pre-wrap;
+    --mixin-dEAw_tV1WlNf_font-size: 18px;
+    --mixin-dEAw_tV1WlNf_line-height: 28px;
+    --mixin-dEAw_tV1WlNf_white-space: pre-wrap;
+  }
+}
+
+@media (max-width: 757px) {
+  .plasmic_default_styles {
+    --mixin-c6Kr0ZMGIvKc_font-size: 60px;
+    --mixin-c6Kr0ZMGIvKc_line-height: 1;
+    --mixin-c6Kr0ZMGIvKc_white-space: pre-wrap;
+    --mixin-LnfUki906bT6_font-size: 50px;
+    --mixin-LnfUki906bT6_white-space: pre-wrap;
+    --mixin-9OfmAgKsetna_font-size: var(--token-GYC664WLsCwo);
+    --mixin-9OfmAgKsetna_white-space: pre-wrap;
+    --mixin-ap4rNoZS2Kpf_font-size: 20px;
+    --mixin-ap4rNoZS2Kpf_line-height: 32px;
+    --mixin-ap4rNoZS2Kpf_white-space: pre-wrap;
+  }
+}
+
 @media (max-width: 414px) {
   .plasmic_default_styles {
     --mixin-c6Kr0ZMGIvKc_font-size: 45px;
@@ -314,7 +356,7 @@
 
 @media (max-width: 1440px) {
   .plasmic_default_styles {
-    --mixin-c6Kr0ZMGIvKc_font-size: 82px;
+    --mixin-c6Kr0ZMGIvKc_font-size: 5rem;
     --mixin-c6Kr0ZMGIvKc_white-space: pre-wrap;
     --mixin-LnfUki906bT6_font-size: 72px;
     --mixin-LnfUki906bT6_white-space: pre-wrap;
@@ -330,44 +372,6 @@
     --mixin-dEAw_tV1WlNf_font-size: 20px;
     --mixin-dEAw_tV1WlNf_line-height: 30px;
     --mixin-dEAw_tV1WlNf_white-space: pre-wrap;
-  }
-}
-
-@media (max-width: 1024px) {
-  .plasmic_default_styles {
-    --mixin-c6Kr0ZMGIvKc_font-size: 64px;
-    --mixin-c6Kr0ZMGIvKc_white-space: pre-wrap;
-    --mixin-LnfUki906bT6_font-size: 56px;
-    --mixin-LnfUki906bT6_white-space: pre-wrap;
-    --mixin-9OfmAgKsetna_font-size: 42px;
-    --mixin-9OfmAgKsetna_white-space: pre-wrap;
-    --mixin-qcmLAuQf3iea_font-size: 36px;
-    --mixin-qcmLAuQf3iea_white-space: pre-wrap;
-    --mixin-r2g_yl3_YYAn_font-size: 28px;
-    --mixin-r2g_yl3_YYAn_white-space: pre-wrap;
-    --mixin-ap4rNoZS2Kpf_font-size: 24px;
-    --mixin-ap4rNoZS2Kpf_white-space: pre-wrap;
-    --mixin--fugYukNuH2n_font-size: 18px;
-    --mixin--fugYukNuH2n_line-height: 28px;
-    --mixin--fugYukNuH2n_white-space: pre-wrap;
-    --mixin-dEAw_tV1WlNf_font-size: 18px;
-    --mixin-dEAw_tV1WlNf_line-height: 28px;
-    --mixin-dEAw_tV1WlNf_white-space: pre-wrap;
-  }
-}
-
-@media (max-width: 757px) {
-  .plasmic_default_styles {
-    --mixin-c6Kr0ZMGIvKc_font-size: 60px;
-    --mixin-c6Kr0ZMGIvKc_line-height: 1;
-    --mixin-c6Kr0ZMGIvKc_white-space: pre-wrap;
-    --mixin-LnfUki906bT6_font-size: 50px;
-    --mixin-LnfUki906bT6_white-space: pre-wrap;
-    --mixin-9OfmAgKsetna_font-size: 40px;
-    --mixin-9OfmAgKsetna_white-space: pre-wrap;
-    --mixin-ap4rNoZS2Kpf_font-size: 20px;
-    --mixin-ap4rNoZS2Kpf_line-height: 32px;
-    --mixin-ap4rNoZS2Kpf_white-space: pre-wrap;
   }
 }
 
@@ -396,16 +400,6 @@
   --plasmic-mixin-bullet-point_white-space: var(
     --mixin-CGm2qdXhkiS__white-space
   );
-}
-
-.plasmic_default_styles {
-  --anim-KTikcI-Pzw25: unnamedAnimation-KTikcI-Pzw25;
-  --plasmic-anim-unnamedAnimation: var(--anim-KTikcI-Pzw25);
-}
-@keyframes unnamedAnimation-KTikcI-Pzw25 {
-  0% {
-    opacity: 1;
-  }
 }
 
 :where(.all) {

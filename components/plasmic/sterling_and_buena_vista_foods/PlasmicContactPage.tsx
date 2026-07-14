@@ -440,7 +440,7 @@ function PlasmicContactPage__RenderFunc(props: {
                     <FormItemWrapper
                       className={classNames(
                         "__wab_instance",
-                        sty.formField__w4JX9
+                        sty.formField__avigM
                       )}
                       label={"Name"}
                       name={"name"}
@@ -452,7 +452,7 @@ function PlasmicContactPage__RenderFunc(props: {
                     <FormItemWrapper
                       className={classNames(
                         "__wab_instance",
-                        sty.formField__ayeVb
+                        sty.formField__tbdc7
                       )}
                       label={"Message"}
                       name={"message"}
@@ -463,6 +463,8 @@ function PlasmicContactPage__RenderFunc(props: {
                     </FormItemWrapper>
                     <AntdButton
                       className={classNames("__wab_instance", sty.button)}
+                      shape={"default"}
+                      size={"large"}
                       submitsForm={true}
                       type={"primary"}
                     >
@@ -470,7 +472,7 @@ function PlasmicContactPage__RenderFunc(props: {
                         className={classNames(
                           "all",
                           "__wab_text",
-                          sty.text__af39Z
+                          sty.text__hqMpw
                         )}
                       >
                         {"Submit"}
@@ -722,8 +724,8 @@ export const PlasmicContactPage = Object.assign(
     internalArgProps: PlasmicContactPage__ArgProps,
 
     pageMetadata: generateDynamicMetadata(wrapQueriesWithLoadingProxy({}), {
-      pageRoute: "/new-page-2",
-      pagePath: "/new-page-2",
+      pageRoute: "/contact-us",
+      pagePath: "/contact-us",
       params: {},
       query: {}
     })

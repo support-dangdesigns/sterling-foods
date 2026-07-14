@@ -11,11 +11,15 @@ export type ScreenValue =
   | "mobile"
   | "desktop"
   | "laptop"
-  | "smallerTablet"
-  | "iphone8"
-  | "smallerLaptop"
-  | "imac"
-  | "desktop2";
+  | "smallTablet"
+  | "smallMobile"
+  | "smallLaptop"
+  | "smallLaptop"
+  | "smallDesktop"
+  | "large"
+  | "largerMobile"
+  | "dualScreen"
+  | "mediumDesktop";
 export const ScreenContext = React.createContext<ScreenValue[] | undefined>(
   "PLEASE_RENDER_INSIDE_PROVIDER" as any
 );
@@ -34,11 +38,15 @@ export const useScreenVariants = createUseScreenVariants(true, {
   mobile: "(max-width:414px)",
   desktop: "(max-width:1920px)",
   laptop: "(max-width:1440px)",
-  smallerTablet: "(max-width:757px)",
-  iphone8: "(max-width:375px)",
-  smallerLaptop: "(max-width:1200px)",
-  imac: "(max-width:1280px)",
-  desktop2: "(max-width:1512px)"
+  smallTablet: "(max-width:757px)",
+  smallMobile: "(max-width:375px)",
+  smallLaptop: "(max-width:1200px)",
+  smallLaptop: "(max-width:1280px)",
+  smallDesktop: "(max-width:1512px)",
+  large: "(max-width:2000px)",
+  largerMobile: "(max-width:430px)",
+  dualScreen: "(max-width:530px)",
+  mediumDesktop: "(max-width:1700px)"
 });
 
 export default ScreenContext;

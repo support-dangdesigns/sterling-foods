@@ -27432,7 +27432,7 @@
           "projectId": "uyaK17nhz8WhGjYZfKjMhX",
           "renderModuleFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicHome.tsx",
           "importSpec": {
-            "modulePath": "../pages/home.tsx"
+            "modulePath": "../pages/index.tsx"
           },
           "cssFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicHome.module.css",
           "scheme": "blackbox",
@@ -27695,7 +27695,7 @@
           "projectId": "uyaK17nhz8WhGjYZfKjMhX",
           "renderModuleFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicContactPage.tsx",
           "importSpec": {
-            "modulePath": "../pages/new-page-2.tsx"
+            "modulePath": "../pages/contact-us.tsx"
           },
           "cssFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicContactPage.module.css",
           "scheme": "blackbox",
@@ -27756,20 +27756,6 @@
           "componentType": "component"
         },
         {
-          "id": "NZFOVidquiBV",
-          "name": "ThisIsTheHomepageCopyDelAfter",
-          "type": "managed",
-          "projectId": "uyaK17nhz8WhGjYZfKjMhX",
-          "renderModuleFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicThisIsTheHomepageCopyDelAfter.tsx",
-          "importSpec": {
-            "modulePath": "../pages/new-page-3.tsx"
-          },
-          "cssFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicThisIsTheHomepageCopyDelAfter.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/new-page-3"
-        },
-        {
           "id": "_Fdy6XyySvwi",
           "name": "Markets",
           "type": "managed",
@@ -27782,6 +27768,20 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/markets"
+        },
+        {
+          "id": "znlkUBH8Q8TT",
+          "name": "AboutUs",
+          "type": "managed",
+          "projectId": "uyaK17nhz8WhGjYZfKjMhX",
+          "renderModuleFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicAboutUs.tsx",
+          "importSpec": {
+            "modulePath": "../pages/about-us.tsx"
+          },
+          "cssFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicAboutUs.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/about-us"
         }
       ],
       "icons": [
@@ -28306,6 +28306,181 @@
           "id": "aeVZUmdHU0-i",
           "name": "market-hero.avif",
           "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/marketHeroAvif.avif"
+        },
+        {
+          "id": "86AXBn4jjYXX",
+          "name": "coffee.avif",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/coffeeAvif.avif"
+        },
+        {
+          "id": "TStr7tx10khH",
+          "name": "croissant-bkgd-element.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/croissantBkgdElementPng.png"
+        },
+        {
+          "id": "gMGllxiZ-NaI",
+          "name": "croissant_accentimg.avif",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/croissantAccentimgAvif.avif"
+        },
+        {
+          "id": "8E3CiYdZmUau",
+          "name": "hmpghero.avif 2",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/hmpgheroAvif2.avif"
+        },
+        {
+          "id": "uyF43tT3zmG3",
+          "name": "bakedgoods.avif 2",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/bakedgoodsAvif2.avif"
+        },
+        {
+          "id": "vr-9hnCOI7h6",
+          "name": "croissant_accentimg.avif 2",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/croissantAccentimgAvif2.avif"
+        },
+        {
+          "id": "Ua648EjLiR_K",
+          "name": "bkgdaccent_rightcorner.avif",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/bkgdaccentRightcornerAvif.avif"
+        },
+        {
+          "id": "i6OiQu9iB4pY",
+          "name": "bkgdaccent_small.avif",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/bkgdaccentSmallAvif.avif"
+        },
+        {
+          "id": "BlYrehRbtwd8",
+          "name": "bkgdaccent_small.avif 2",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/bkgdaccentSmallAvif2.avif"
+        },
+        {
+          "id": "n_1phmjmA0Vt",
+          "name": "HERO.png 2",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/heroPng2.png"
+        },
+        {
+          "id": "U03utbM-fnZ3",
+          "name": "Background.jpg",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/backgroundJpg.jpg"
+        },
+        {
+          "id": "7P6VPJsPwC2o",
+          "name": "croissant.jpg",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/croissantJpg.jpg"
+        },
+        {
+          "id": "d_KN6g2S3ow6",
+          "name": "croissant.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/croissantPng.png"
+        },
+        {
+          "id": "qjjciYVKppue",
+          "name": "breads.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/breadsPng.png"
+        },
+        {
+          "id": "A1uFn7qv-KLc",
+          "name": "dough.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/doughPng.png"
+        },
+        {
+          "id": "Mx-3tt9ujKHb",
+          "name": "bakery.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/bakeryPng.png"
+        },
+        {
+          "id": "10yhWC8FJ7pg",
+          "name": "pastry-bag.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/pastryBagPng.png"
+        },
+        {
+          "id": "aJ4rNjzCkeDW",
+          "name": "cookie.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/cookiePng.png"
+        },
+        {
+          "id": "rb1rLIcl2XFb",
+          "name": "Ellipse 3.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/ellipse3Png.png"
+        },
+        {
+          "id": "Y4YyNb5QvZfC",
+          "name": "Image.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/imagePng.png"
+        },
+        {
+          "id": "79dVpRETyLSC",
+          "name": "Rectangle 27.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/rectangle27Png.png"
+        },
+        {
+          "id": "OjtuZiTN2QQA",
+          "name": "Group 1.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/group1Png.png"
+        },
+        {
+          "id": "XS4G6aMVyFHI",
+          "name": "Image1.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/image1Png.png"
+        },
+        {
+          "id": "cdMn-kL0JV9I",
+          "name": "image2.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/image2Png.png"
+        },
+        {
+          "id": "5HYhBBNVMSu0",
+          "name": "image3.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/image3Png.png"
+        },
+        {
+          "id": "NfyH7HhFHl_c",
+          "name": "Group 2.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/group2Png.png"
+        },
+        {
+          "id": "SOT02PcXh7FA",
+          "name": "Image4.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/image4Png.png"
+        },
+        {
+          "id": "uaFsjLKzrj4P",
+          "name": "image6.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/image6Png.png"
+        },
+        {
+          "id": "mHAOkvD0FIpU",
+          "name": "image7.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/image7Png.png"
+        },
+        {
+          "id": "wmGdFJGnA-Wq",
+          "name": "pastries.avif",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/pastriesAvif.avif"
+        },
+        {
+          "id": "lqLh5-Wpr84-",
+          "name": "image8.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/image8Png.png"
+        },
+        {
+          "id": "oJ8ciPKXYu13",
+          "name": "cookies.avif",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/cookiesAvif.avif"
+        },
+        {
+          "id": "xADWXB-05Wlp",
+          "name": "Group 3.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/group3Png.png"
+        },
+        {
+          "id": "iE3nFcdzteDI",
+          "name": "Group 4.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/group4Png.png"
+        },
+        {
+          "id": "t2lmdGlU2Zmg",
+          "name": "image copy.avif",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/imageCopyAvif.avif"
         }
       ],
       "indirect": false,
@@ -28326,6 +28501,85 @@
           "name": "Fetcher",
           "displayName": "plasmic-data-source-fetcher",
           "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
+        }
+      ],
+      "customFunctions": []
+    },
+    {
+      "projectId": "hsyJcmBceSfPzvvXzVTuk7",
+      "projectApiToken": "a25mdMh3tcPRSuNv1E2rvIBmDBpG9JCKRYuxIkD7RITUZyuawzoUKjFwhNk2fb6znQOxWRaXBJkUCi3JMRwBQ",
+      "projectName": "lodash",
+      "version": ">0.0.0",
+      "cssFilePath": "plasmic/lodash/plasmic.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "splitsProviderFilePath": "",
+      "styleTokensProviderFilePath": "plasmic/lodash/PlasmicStyleTokensProvider.tsx",
+      "dataTokensFilePath": "",
+      "projectModuleFilePath": "plasmic/lodash/plasmic.tsx",
+      "codeComponents": [],
+      "customFunctions": []
+    },
+    {
+      "projectId": "aEHVN5v6mfM4eovDsL8Z7d",
+      "projectApiToken": "whnW133t80zLKU3zunlnszewVOEyVOxXKzwV7BG0moXtgGeWc7ggKBeDRLZRWBfP5J3nqMN96EsKaTRQYp2aw",
+      "projectName": "copy-to-clipboard",
+      "version": ">0.0.0",
+      "cssFilePath": "plasmic/copy_to_clipboard/plasmic.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "splitsProviderFilePath": "",
+      "styleTokensProviderFilePath": "plasmic/copy_to_clipboard/PlasmicStyleTokensProvider.tsx",
+      "dataTokensFilePath": "",
+      "projectModuleFilePath": "plasmic/copy_to_clipboard/plasmic.tsx",
+      "codeComponents": [],
+      "customFunctions": []
+    },
+    {
+      "projectId": "77tPPMY1MAED1Fqwv1T1ig",
+      "projectApiToken": "60MehhP6aEDwqf8XbEm9WWQKH4cyhVSsf40L3I1hLBpbRsQxim51tZKy1SvCsWN6RIz7lrBTK6c3FDyTA",
+      "projectName": "date-fns",
+      "version": ">0.0.0",
+      "cssFilePath": "plasmic/date_fns/plasmic.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "splitsProviderFilePath": "",
+      "styleTokensProviderFilePath": "plasmic/date_fns/PlasmicStyleTokensProvider.tsx",
+      "dataTokensFilePath": "",
+      "projectModuleFilePath": "plasmic/date_fns/plasmic.tsx",
+      "codeComponents": [],
+      "customFunctions": []
+    },
+    {
+      "projectId": "9Vr5YWkf3w7jj6SsTcCEta",
+      "projectApiToken": "IvzN3wRogyeRjfeLl1hqzdjIjkVBvUQXxxVMFtbbpBdxfeSyKuR8fwKkECaSQERdZAIiGsh8aXppCCjBiCYyg",
+      "projectName": "loading-boundary",
+      "version": ">0.0.0",
+      "cssFilePath": "plasmic/loading_boundary/plasmic.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "splitsProviderFilePath": "",
+      "styleTokensProviderFilePath": "plasmic/loading_boundary/PlasmicStyleTokensProvider.tsx",
+      "dataTokensFilePath": "",
+      "projectModuleFilePath": "plasmic/loading_boundary/plasmic.tsx",
+      "codeComponents": [
+        {
+          "id": "u-J0rH0B-4",
+          "name": "LoadingBoundary",
+          "displayName": "hostless-loading-boundary",
+          "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
       ],
       "customFunctions": []

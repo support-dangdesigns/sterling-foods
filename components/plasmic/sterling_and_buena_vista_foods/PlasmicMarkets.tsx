@@ -59,6 +59,9 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import Header from "../../Header"; // plasmic-import: qmNXHiKWCTTQ/component
+import PrimaryBtn from "../../PrimaryBtn"; // plasmic-import: TiffCyYLfuDQ/component
+import Footer from "../../Footer"; // plasmic-import: RbMtVh1ii_PZ/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/styleTokensProvider
 
@@ -115,9 +118,26 @@ export const PlasmicMarkets__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicMarkets__OverridesType = {
   root?: Flex__<"div">;
-  header?: Flex__<"div">;
-  hero2?: Flex__<"div">;
+  header?: Flex__<typeof Header>;
+  hero?: Flex__<"div">;
   h2?: Flex__<"h2">;
+  body?: Flex__<"div">;
+  intro?: Flex__<"div">;
+  freeBox?: Flex__<"div">;
+  foodSafety?: Flex__<"div">;
+  text?: Flex__<"div">;
+  title?: Flex__<"div">;
+  paragraph?: Flex__<"div">;
+  schoolFoodservice?: Flex__<"div">;
+  text2?: Flex__<"div">;
+  title2?: Flex__<"div">;
+  paragraph2?: Flex__<"div">;
+  primaryBtn?: Flex__<typeof PrimaryBtn>;
+  convenienceStores?: Flex__<"div">;
+  text3?: Flex__<"div">;
+  title3?: Flex__<"div">;
+  paragraph3?: Flex__<"div">;
+  footer?: Flex__<typeof Footer>;
 };
 
 export interface DefaultMarketsProps {}
@@ -161,6 +181,8 @@ function PlasmicMarkets__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
+  const globalVariants = _useGlobalVariants();
+
   const pageMetadata = generateDynamicMetadata(
     wrapQueriesWithLoadingProxy({}),
     $ctx as PageCtx
@@ -202,16 +224,16 @@ function PlasmicMarkets__RenderFunc(props: {
             sty.root
           )}
         >
-          <div
+          <Header
             data-plasmic-name={"header"}
             data-plasmic-override={overrides.header}
-            className={classNames("all", sty.header)}
+            className={classNames("__wab_instance", sty.header)}
           />
 
           <div
-            data-plasmic-name={"hero2"}
-            data-plasmic-override={overrides.hero2}
-            className={classNames("all", sty.hero2)}
+            data-plasmic-name={"hero"}
+            data-plasmic-override={overrides.hero}
+            className={classNames("all", sty.hero)}
           >
             <h2
               data-plasmic-name={"h2"}
@@ -227,6 +249,331 @@ function PlasmicMarkets__RenderFunc(props: {
               {"Markets"}
             </h2>
           </div>
+          <div
+            data-plasmic-name={"body"}
+            data-plasmic-override={overrides.body}
+            className={classNames("all", sty.body)}
+          >
+            <div
+              data-plasmic-name={"intro"}
+              data-plasmic-override={overrides.intro}
+              className={classNames("all", sty.intro)}
+            >
+              <div
+                data-plasmic-name={"freeBox"}
+                data-plasmic-override={overrides.freeBox}
+                className={classNames("all", sty.freeBox)}
+              >
+                <h3
+                  className={classNames(
+                    "all",
+                    "h3",
+                    "h3__uyaK1",
+                    "__wab_text",
+                    sty.h3__cpuet,
+                    "h3-script"
+                  )}
+                >
+                  {"Customer-first"}
+                </h3>
+                <h4
+                  className={classNames(
+                    "all",
+                    "h4",
+                    "h4__uyaK1",
+                    "__wab_text",
+                    sty.h4__fmzSc
+                  )}
+                >
+                  {"Approach"}
+                </h4>
+              </div>
+              <p
+                className={classNames(
+                  "all",
+                  "p",
+                  "p__uyaK1",
+                  "__wab_text",
+                  sty.p__ptTp3
+                )}
+              >
+                {
+                  "Sterling Foods serves a diverse range of foodservice and retail channels, delivering innovative bakery solutions tailored to the unique needs of each market. Our customer-first approach, flexible manufacturing capabilities, and commitment to quality help partners bring differentiated products to market with confidence."
+                }
+              </p>
+            </div>
+            <div
+              data-plasmic-name={"foodSafety"}
+              data-plasmic-override={overrides.foodSafety}
+              className={classNames("all", sty.foodSafety)}
+            >
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__msSnL)}
+                displayHeight={
+                  hasVariant(globalVariants, "screen", "mobile")
+                    ? "50%"
+                    : "550px"
+                }
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"auto"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/sterling_and_buena_vista_foods/images/croissantBkgdElementPng.png",
+                  fullWidth: 364,
+                  fullHeight: 550,
+                  aspectRatio: undefined
+                }}
+              />
+
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img___6NoRb)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"574px"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/sterling_and_buena_vista_foods/images/coffeeAvif.avif",
+                  fullWidth: 574,
+                  fullHeight: 488,
+                  aspectRatio: undefined
+                }}
+              />
+
+              <div
+                data-plasmic-name={"text"}
+                data-plasmic-override={overrides.text}
+                className={classNames("all", sty.text)}
+              >
+                <div
+                  data-plasmic-name={"title"}
+                  data-plasmic-override={overrides.title}
+                  className={classNames("all", sty.title)}
+                >
+                  <h3
+                    className={classNames(
+                      "all",
+                      "h3",
+                      "h3__uyaK1",
+                      "__wab_text",
+                      sty.h3__nLzWp,
+                      "h3-script"
+                    )}
+                  >
+                    {"National"}
+                  </h3>
+                  <h4
+                    className={classNames(
+                      "all",
+                      "h4",
+                      "h4__uyaK1",
+                      "__wab_text",
+                      sty.h4__m8Qr
+                    )}
+                  >
+                    {"Restaurants"}
+                  </h4>
+                </div>
+                <div
+                  data-plasmic-name={"paragraph"}
+                  data-plasmic-override={overrides.paragraph}
+                  className={classNames("all", sty.paragraph)}
+                >
+                  <p
+                    className={classNames(
+                      "all",
+                      "p",
+                      "p__uyaK1",
+                      "__wab_text",
+                      sty.p___4LkW
+                    )}
+                  >
+                    {
+                      "Sterling Foods partners with leading restaurant chains to develop proprietary bakery solutions that support menu innovation, operational consistency, and speed to market. With a focus on uniqueness and operational ease, we help brands create iconic, signature products that stand apart from the crowd."
+                    }
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              data-plasmic-name={"schoolFoodservice"}
+              data-plasmic-override={overrides.schoolFoodservice}
+              className={classNames("all", sty.schoolFoodservice)}
+            >
+              <div
+                data-plasmic-name={"text2"}
+                data-plasmic-override={overrides.text2}
+                className={classNames("all", sty.text2)}
+              >
+                <div
+                  data-plasmic-name={"title2"}
+                  data-plasmic-override={overrides.title2}
+                  className={classNames("all", sty.title2)}
+                >
+                  <h3
+                    className={classNames(
+                      "all",
+                      "h3",
+                      "h3__uyaK1",
+                      "__wab_text",
+                      sty.h3__gw5Oz,
+                      "h3-script"
+                    )}
+                  >
+                    {"School"}
+                  </h3>
+                  <h4
+                    className={classNames(
+                      "all",
+                      "h4",
+                      "h4__uyaK1",
+                      "__wab_text",
+                      sty.h4__msdny
+                    )}
+                  >
+                    {"Foodservice"}
+                  </h4>
+                </div>
+                <div
+                  data-plasmic-name={"paragraph2"}
+                  data-plasmic-override={overrides.paragraph2}
+                  className={classNames("all", sty.paragraph2)}
+                >
+                  <p
+                    className={classNames(
+                      "all",
+                      "p",
+                      "p__uyaK1",
+                      "__wab_text",
+                      sty.p___6ZfH
+                    )}
+                  >
+                    {
+                      "Through our Buena Vista Foods division, Sterling Foods has been a trusted partner to K-12 nutrition programs for decades. We develop bakery solutions that seamlessly balance great taste, nutrition, and regulatory compliance\u2014helping school districts meet evolving nutritional standards while serving products students genuinely enjoy.  From clean label formulations to thoughtfully sourced, all natural ingredients, Buena Vista continues to set the standard in school nutrition."
+                    }
+                  </p>
+                  <PrimaryBtn
+                    data-plasmic-name={"primaryBtn"}
+                    data-plasmic-override={overrides.primaryBtn}
+                    className={classNames("__wab_instance", sty.primaryBtn)}
+                  >
+                    {"Learn More About Buena Vista Foods"}
+                  </PrimaryBtn>
+                </div>
+              </div>
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__opTma)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={
+                  hasVariant(globalVariants, "screen", "smallLaptop")
+                    ? "603px"
+                    : "697px"
+                }
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/sterling_and_buena_vista_foods/images/pastriesAvif.avif",
+                  fullWidth: 697,
+                  fullHeight: 584,
+                  aspectRatio: undefined
+                }}
+              />
+            </div>
+            <div
+              data-plasmic-name={"convenienceStores"}
+              data-plasmic-override={overrides.convenienceStores}
+              className={classNames("all", sty.convenienceStores)}
+            >
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__kcvXq)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"698px"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/sterling_and_buena_vista_foods/images/cookiesAvif.avif",
+                  fullWidth: 698,
+                  fullHeight: 591,
+                  aspectRatio: undefined
+                }}
+              />
+
+              <div
+                data-plasmic-name={"text3"}
+                data-plasmic-override={overrides.text3}
+                className={classNames("all", sty.text3)}
+              >
+                <div
+                  data-plasmic-name={"title3"}
+                  data-plasmic-override={overrides.title3}
+                  className={classNames("all", sty.title3)}
+                >
+                  <h3
+                    className={classNames(
+                      "all",
+                      "h3",
+                      "h3__uyaK1",
+                      "__wab_text",
+                      sty.h3__jy3TC,
+                      "h3-script"
+                    )}
+                  >
+                    {"Convenience "}
+                  </h3>
+                  <h4
+                    className={classNames(
+                      "all",
+                      "h4",
+                      "h4__uyaK1",
+                      "__wab_text",
+                      sty.h4___3F273
+                    )}
+                  >
+                    {"Stores"}
+                  </h4>
+                </div>
+                <div
+                  data-plasmic-name={"paragraph3"}
+                  data-plasmic-override={overrides.paragraph3}
+                  className={classNames("all", sty.paragraph3)}
+                >
+                  <p
+                    className={classNames(
+                      "all",
+                      "p",
+                      "p__uyaK1",
+                      "__wab_text",
+                      sty.p__jreLi
+                    )}
+                  >
+                    {
+                      "Sterling Foods develops portable, individually wrapped bakery products and nutrition-focused snack solutions ideally suited for today's on-the-go consumer. From protein-forward snacks and nutrition bars to grab-and-go bakery offerings, our products help convenience retailers meet evolving consumer preferences."
+                    }
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <Footer
+            data-plasmic-name={"footer"}
+            data-plasmic-override={overrides.footer}
+            className={classNames("__wab_instance", sty.footer)}
+          />
         </div>
       </div>
     </React.Fragment>
@@ -234,19 +581,98 @@ function PlasmicMarkets__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "header", "hero2", "h2"],
+  root: [
+    "root",
+    "header",
+    "hero",
+    "h2",
+    "body",
+    "intro",
+    "freeBox",
+    "foodSafety",
+    "text",
+    "title",
+    "paragraph",
+    "schoolFoodservice",
+    "text2",
+    "title2",
+    "paragraph2",
+    "primaryBtn",
+    "convenienceStores",
+    "text3",
+    "title3",
+    "paragraph3",
+    "footer"
+  ],
   header: ["header"],
-  hero2: ["hero2", "h2"],
-  h2: ["h2"]
+  hero: ["hero", "h2"],
+  h2: ["h2"],
+  body: [
+    "body",
+    "intro",
+    "freeBox",
+    "foodSafety",
+    "text",
+    "title",
+    "paragraph",
+    "schoolFoodservice",
+    "text2",
+    "title2",
+    "paragraph2",
+    "primaryBtn",
+    "convenienceStores",
+    "text3",
+    "title3",
+    "paragraph3"
+  ],
+  intro: ["intro", "freeBox"],
+  freeBox: ["freeBox"],
+  foodSafety: ["foodSafety", "text", "title", "paragraph"],
+  text: ["text", "title", "paragraph"],
+  title: ["title"],
+  paragraph: ["paragraph"],
+  schoolFoodservice: [
+    "schoolFoodservice",
+    "text2",
+    "title2",
+    "paragraph2",
+    "primaryBtn"
+  ],
+  text2: ["text2", "title2", "paragraph2", "primaryBtn"],
+  title2: ["title2"],
+  paragraph2: ["paragraph2", "primaryBtn"],
+  primaryBtn: ["primaryBtn"],
+  convenienceStores: ["convenienceStores", "text3", "title3", "paragraph3"],
+  text3: ["text3", "title3", "paragraph3"],
+  title3: ["title3"],
+  paragraph3: ["paragraph3"],
+  footer: ["footer"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  header: "div";
-  hero2: "div";
+  header: typeof Header;
+  hero: "div";
   h2: "h2";
+  body: "div";
+  intro: "div";
+  freeBox: "div";
+  foodSafety: "div";
+  text: "div";
+  title: "div";
+  paragraph: "div";
+  schoolFoodservice: "div";
+  text2: "div";
+  title2: "div";
+  paragraph2: "div";
+  primaryBtn: typeof PrimaryBtn;
+  convenienceStores: "div";
+  text3: "div";
+  title3: "div";
+  paragraph3: "div";
+  footer: typeof Footer;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -312,8 +738,25 @@ export const PlasmicMarkets = Object.assign(
   {
     // Helper components rendering sub-elements
     header: makeNodeComponent("header"),
-    hero2: makeNodeComponent("hero2"),
+    hero: makeNodeComponent("hero"),
     h2: makeNodeComponent("h2"),
+    body: makeNodeComponent("body"),
+    intro: makeNodeComponent("intro"),
+    freeBox: makeNodeComponent("freeBox"),
+    foodSafety: makeNodeComponent("foodSafety"),
+    text: makeNodeComponent("text"),
+    title: makeNodeComponent("title"),
+    paragraph: makeNodeComponent("paragraph"),
+    schoolFoodservice: makeNodeComponent("schoolFoodservice"),
+    text2: makeNodeComponent("text2"),
+    title2: makeNodeComponent("title2"),
+    paragraph2: makeNodeComponent("paragraph2"),
+    primaryBtn: makeNodeComponent("primaryBtn"),
+    convenienceStores: makeNodeComponent("convenienceStores"),
+    text3: makeNodeComponent("text3"),
+    title3: makeNodeComponent("title3"),
+    paragraph3: makeNodeComponent("paragraph3"),
+    footer: makeNodeComponent("footer"),
 
     // Metadata about props expected for PlasmicMarkets
     internalVariantProps: PlasmicMarkets__VariantProps,

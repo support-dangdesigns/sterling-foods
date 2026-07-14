@@ -66,6 +66,7 @@ import {
 } from "@plasmicapp/react-web/lib/data-sources";
 
 import Header from "../../Header"; // plasmic-import: qmNXHiKWCTTQ/component
+import { Reveal } from "@plasmicpkgs/react-awesome-reveal";
 import PrimaryBtn from "../../PrimaryBtn"; // plasmic-import: TiffCyYLfuDQ/component
 import SecondaryBtn from "../../SecondaryBtn"; // plasmic-import: r3QPz6kMc0wE/component
 import { SliderWrapper } from "@plasmicpkgs/react-slick";
@@ -133,17 +134,19 @@ export const PlasmicHome__ArgProps = new Array<ArgPropType>();
 export type PlasmicHome__OverridesType = {
   homepage?: Flex__<"div">;
   header?: Flex__<"div">;
-  hero?: Flex__<"div">;
+  homeHero?: Flex__<"div">;
   title?: Flex__<"div">;
   h1?: Flex__<"h1">;
-  bkgdimage?: Flex__<"div">;
-  body?: Flex__<"div">;
+  homeBody?: Flex__<"div">;
   intro?: Flex__<"div">;
   text3?: Flex__<"div">;
   title2?: Flex__<"div">;
+  section?: Flex__<"div">;
+  section2?: Flex__<"div">;
   bakerysolutions?: Flex__<"div">;
   image?: Flex__<"div">;
   text?: Flex__<"div">;
+  section3?: Flex__<"div">;
   foodServiceAndRetailPartners?: Flex__<"div">;
   text2?: Flex__<"div">;
   image2?: Flex__<"div">;
@@ -164,16 +167,10 @@ export type PlasmicHome__OverridesType = {
   child3?: Flex__<"div">;
   box4?: Flex__<"div">;
   child4?: Flex__<"div">;
-  box5?: Flex__<"div">;
-  child5?: Flex__<"div">;
-  box6?: Flex__<"div">;
-  child6?: Flex__<"div">;
-  box7?: Flex__<"div">;
-  child7?: Flex__<"div">;
   cta?: Flex__<"div">;
   frame52?: Flex__<"div">;
   buttonContainer?: Flex__<"div">;
-  footer2?: Flex__<"div">;
+  homeFooter?: Flex__<"div">;
   footer?: Flex__<typeof Footer>;
 };
 
@@ -224,8 +221,7 @@ function PlasmicHome__RenderFunc(props: {
         path: "sliderCarousel.currentSlide",
         type: "private",
         variableType: "number",
-        initFunc: ({ $props, $state, $queries, $q, $ctx }) =>
-          hasVariant(globalVariants, "screen", "desktop") ? 1 : 0,
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => 0,
 
         refName: "sliderCarousel",
         onMutate: generateOnMutateForSpec("currentSlide", SliderWrapper_Helpers)
@@ -258,12 +254,12 @@ function PlasmicHome__RenderFunc(props: {
         roleId: null
       };
     }),
-    query2: usePlasmicDataOp(() => {
+    wpGraph: usePlasmicDataOp(() => {
       return {
         sourceId: "oysuYFSoAdb9rhuPV27pRM",
-        opId: "153119f6-7e05-4231-abca-919050b320cb",
+        opId: "e5527222-d05e-4811-818d-6e29fa6a8a6c",
         userArgs: {},
-        cacheKey: `plasmic.$.153119f6-7e05-4231-abca-919050b320cb.$.`,
+        cacheKey: `plasmic.$.e5527222-d05e-4811-818d-6e29fa6a8a6c.$.`,
         invalidatedKeys: null,
         roleId: null
       };
@@ -314,7 +310,7 @@ function PlasmicHome__RenderFunc(props: {
             "plasmic_mixins",
             styleTokensClassNames,
             sty.homepage,
-            "max-screen"
+            ""
           )}
         >
           <div
@@ -327,82 +323,81 @@ function PlasmicHome__RenderFunc(props: {
             />
           </div>
           <div
-            data-plasmic-name={"hero"}
-            data-plasmic-override={overrides.hero}
-            className={classNames("all", sty.hero)}
+            data-plasmic-name={"homeHero"}
+            data-plasmic-override={overrides.homeHero}
+            className={classNames("all", sty.homeHero)}
           >
-            <div
-              data-plasmic-name={"title"}
-              data-plasmic-override={overrides.title}
-              className={classNames("all", sty.title)}
+            <Reveal
+              className={classNames("__wab_instance", sty.reveal__qyrRe)}
+              triggerOnce={true}
             >
-              <h1
-                data-plasmic-name={"h1"}
-                data-plasmic-override={overrides.h1}
-                className={classNames(
-                  "all",
-                  "h1",
-                  "h1__uyaK1",
-                  "__wab_text",
-                  sty.h1,
-                  hasVariant(globalVariants, "screen", "desktop")
-                    ? "cambria-lineheight"
-                    : undefined
-                )}
-              >
-                <React.Fragment>
-                  {(() => {
-                    try {
-                      return $queries.query2.data.response.data.pageBy
-                        .pageContent.content[0].headline;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return "";
-                      }
-                      throw e;
-                    }
-                  })()}
-                </React.Fragment>
-              </h1>
               <div
-                className={classNames(
-                  "all",
-                  "__wab_text",
-                  sty.text___4TbN,
-                  "h1-script"
-                )}
+                data-plasmic-name={"title"}
+                data-plasmic-override={overrides.title}
+                className={classNames("all", sty.title)}
               >
-                <React.Fragment>
-                  {(() => {
-                    try {
-                      return $queries.query2.data.response.data.pageBy
-                        .pageContent.content[1].headline;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return "like no other.";
+                <h1
+                  data-plasmic-name={"h1"}
+                  data-plasmic-override={overrides.h1}
+                  className={classNames(
+                    "all",
+                    "h1",
+                    "h1__uyaK1",
+                    "__wab_text",
+                    sty.h1,
+                    hasVariant(globalVariants, "screen", "desktop")
+                      ? "cambria-lineheight"
+                      : undefined
+                  )}
+                >
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $queries.wpGraph.data.response.data.pageBy
+                          .pageContent.content[0].headline;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "";
+                        }
+                        throw e;
                       }
-                      throw e;
-                    }
-                  })()}
-                </React.Fragment>
+                    })()}
+                  </React.Fragment>
+                </h1>
+                <div
+                  className={classNames(
+                    "all",
+                    "__wab_text",
+                    sty.text___4TbN,
+                    "h1-script"
+                  )}
+                >
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $queries.wpGraph.data.response.data.pageBy
+                          .pageContent.content[1].headline;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "like no other.";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
+                </div>
               </div>
-            </div>
-            <div
-              data-plasmic-name={"bkgdimage"}
-              data-plasmic-override={overrides.bkgdimage}
-              className={classNames("all", sty.bkgdimage)}
-            />
-
-            <div className={classNames("all", sty.freeBox__pWd4K)}>
+            </Reveal>
+            <div className={classNames("all", sty.freeBox__bc7O)}>
               <PlasmicImg__
                 alt={""}
-                className={classNames(sty.img__x6QmZ)}
+                className={classNames(sty.img__ij4Ls)}
                 displayHeight={"auto"}
                 displayMaxHeight={"none"}
                 displayMaxWidth={"100%"}
@@ -411,7 +406,7 @@ function PlasmicHome__RenderFunc(props: {
                 displayWidth={"auto"}
                 loading={"lazy"}
                 src={{
-                  src: "/plasmic/sterling_and_buena_vista_foods/images/foodPng.png",
+                  src: "/plasmic/sterling_and_buena_vista_foods/images/bakedgoodsAvif2.avif",
                   fullWidth: 1154,
                   fullHeight: 740,
                   aspectRatio: undefined
@@ -420,192 +415,189 @@ function PlasmicHome__RenderFunc(props: {
             </div>
           </div>
           <div
-            data-plasmic-name={"body"}
-            data-plasmic-override={overrides.body}
-            className={classNames("all", sty.body)}
+            data-plasmic-name={"homeBody"}
+            data-plasmic-override={overrides.homeBody}
+            className={classNames("all", sty.homeBody)}
           >
-            <div
-              data-plasmic-name={"intro"}
-              data-plasmic-override={overrides.intro}
-              className={classNames(
-                "all",
-                sty.intro,
-                hasVariant(globalVariants, "screen", "desktop")
-                  ? "cambria-lineheight"
-                  : undefined
-              )}
-            >
+            <div className={classNames("all", sty.freeBox___9VvCh)}>
               <div
-                data-plasmic-name={"text3"}
-                data-plasmic-override={overrides.text3}
-                className={classNames("all", sty.text3)}
+                data-plasmic-name={"intro"}
+                data-plasmic-override={overrides.intro}
+                className={classNames(
+                  "all",
+                  sty.intro,
+                  hasVariant(globalVariants, "screen", "desktop")
+                    ? "cambria-lineheight"
+                    : undefined
+                )}
               >
-                <div
-                  data-plasmic-name={"title2"}
-                  data-plasmic-override={overrides.title2}
-                  className={classNames(
-                    "all",
-                    sty.title2,
-                    hasVariant(globalVariants, "screen", "desktop")
-                      ? "cambria-lineheight"
-                      : undefined
-                  )}
+                <Reveal
+                  className={classNames("__wab_instance", sty.reveal___5Ma6E)}
+                  triggerOnce={true}
                 >
                   <div
+                    data-plasmic-name={"text3"}
+                    data-plasmic-override={overrides.text3}
+                    className={classNames("all", sty.text3)}
+                  >
+                    <div
+                      data-plasmic-name={"title2"}
+                      data-plasmic-override={overrides.title2}
+                      className={classNames("all", sty.title2)}
+                    >
+                      <div
+                        className={classNames(
+                          "all",
+                          "__wab_text",
+                          sty.text__kyQgx,
+                          "h3-script"
+                        )}
+                      >
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return $queries.wpGraph.data.response.data.pageBy
+                                .pageContent.content[2].headline;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "Custom-crafted";
+                              }
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
+                      </div>
+                      <h3
+                        className={classNames(
+                          "all",
+                          "h3",
+                          "h3__uyaK1",
+                          "__wab_text",
+                          sty.h3__wdfVl,
+                          hasVariant(globalVariants, "screen", "desktop")
+                            ? "cambria-lineheight"
+                            : undefined
+                        )}
+                      >
+                        {"baked goods and snack solutions"}
+                      </h3>
+                    </div>
+                    <h3
+                      className={classNames(
+                        "all",
+                        "h3",
+                        "h3__uyaK1",
+                        "__wab_text",
+                        sty.h3__nYLeh,
+                        hasVariant(globalVariants, "screen", "desktop")
+                          ? "cambria-lineheight"
+                          : undefined
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "laptop") ? (
+                        <React.Fragment>
+                          <React.Fragment>{""}</React.Fragment>
+                          {
+                            <h3
+                              className={classNames(
+                                "all",
+                                "h3",
+                                "h3__uyaK1",
+                                "__wab_text",
+                                sty.h3__kuEAs
+                              )}
+                            >
+                              {hasVariant(globalVariants, "screen", "laptop")
+                                ? "made to meet the demands of today\u2019s foodservice, retail, and convenience markets."
+                                : "made to meet the demands of today\u2019s foodservice, retail, and convenience markets."}
+                            </h3>
+                          }
+                          <React.Fragment>{""}</React.Fragment>
+                        </React.Fragment>
+                      ) : hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          <React.Fragment>{""}</React.Fragment>
+                          {
+                            <h3
+                              className={classNames(
+                                "all",
+                                "h3",
+                                "h3__uyaK1",
+                                "__wab_text",
+                                sty.h3___0Sw2Y
+                              )}
+                            >
+                              {
+                                "made to meet the demands of today\u2019s foodservice, retail, and convenience markets."
+                              }
+                            </h3>
+                          }
+                          <React.Fragment>{""}</React.Fragment>
+                        </React.Fragment>
+                      ) : (
+                        "made to meet the demands of today\u2019s foodservice, retail, and convenience markets."
+                      )}
+                    </h3>
+                  </div>
+                </Reveal>
+                <div className={classNames("all", sty.freeBox__e8GY)}>
+                  <p
                     className={classNames(
                       "all",
+                      "p",
+                      "p__uyaK1",
                       "__wab_text",
-                      sty.text__kyQgx,
-                      "h3-script"
+                      sty.p__w18L
                     )}
                   >
                     <React.Fragment>
                       {(() => {
                         try {
-                          return $queries.query2.data.response.data.pageBy
-                            .pageContent.content[2].headline;
+                          return $queries.wpGraph.data.response.data.pageBy
+                            .pageContent.textArea[0].text;
                         } catch (e) {
                           if (
                             e instanceof TypeError ||
                             e?.plasmicType === "PlasmicUndefinedDataError"
                           ) {
-                            return "Custom-crafted";
+                            return "At Sterling Foods, we combine bakery expertise, innovation, and leading-edge technology to create products that perform.";
                           }
                           throw e;
                         }
                       })()}
                     </React.Fragment>
-                  </div>
-                  <h3
+                  </p>
+                  <p
                     className={classNames(
                       "all",
-                      "h3",
-                      "h3__uyaK1",
+                      "p",
+                      "p__uyaK1",
                       "__wab_text",
-                      sty.h3__wdfVl,
-                      hasVariant(globalVariants, "screen", "desktop")
-                        ? "cambria-lineheight"
-                        : undefined
+                      sty.p__jid1W
                     )}
                   >
-                    {"baked goods and snack solutions"}
-                  </h3>
-                </div>
-                <h3
-                  className={classNames(
-                    "all",
-                    "h3",
-                    "h3__uyaK1",
-                    "__wab_text",
-                    sty.h3__nYLeh,
-                    hasVariant(globalVariants, "screen", "desktop")
-                      ? "cambria-lineheight"
-                      : undefined
-                  )}
-                >
-                  {hasVariant(globalVariants, "screen", "laptop") ? (
                     <React.Fragment>
-                      <React.Fragment>{""}</React.Fragment>
-                      {
-                        <h3
-                          className={classNames(
-                            "all",
-                            "h3",
-                            "h3__uyaK1",
-                            "__wab_text",
-                            sty.h3__kuEAs
-                          )}
-                        >
-                          {hasVariant(globalVariants, "screen", "laptop")
-                            ? "made to meet the demands of today\u2019s foodservice, retail, and convenience markets."
-                            : "made to meet the demands of today\u2019s foodservice, retail, and convenience markets."}
-                        </h3>
-                      }
-                      <React.Fragment>{""}</React.Fragment>
-                    </React.Fragment>
-                  ) : hasVariant(globalVariants, "screen", "desktop") ? (
-                    <React.Fragment>
-                      <React.Fragment>{""}</React.Fragment>
-                      {
-                        <h3
-                          className={classNames(
-                            "all",
-                            "h3",
-                            "h3__uyaK1",
-                            "__wab_text",
-                            sty.h3___0Sw2Y
-                          )}
-                        >
-                          {
-                            "made to meet the demands of today\u2019s foodservice, retail, and convenience markets."
+                      {(() => {
+                        try {
+                          return $queries.wpGraph.data.response.data.pageBy
+                            .pageContent.textArea[1].text;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "From restaurants and non-commercial foodservice to convenience stores and in-store bakeries, we partner with our customers to deliver high-quality baked goods and snack products tailored to their needs.";
                           }
-                        </h3>
-                      }
-                      <React.Fragment>{""}</React.Fragment>
+                          throw e;
+                        }
+                      })()}
                     </React.Fragment>
-                  ) : (
-                    "made to meet the demands of today\u2019s foodservice, retail, and convenience markets."
-                  )}
-                </h3>
-              </div>
-              <div className={classNames("all", sty.freeBox__e8GY)}>
-                <p
-                  className={classNames(
-                    "all",
-                    "p",
-                    "p__uyaK1",
-                    "__wab_text",
-                    sty.p__w18L
-                  )}
-                >
-                  <React.Fragment>
-                    {(() => {
-                      try {
-                        return $queries.query2.data.response.data.pageBy
-                          .pageContent.textArea[0].text;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return "At Sterling Foods, we combine bakery expertise, innovation, and leading-edge technology to create products that perform.";
-                        }
-                        throw e;
-                      }
-                    })()}
-                  </React.Fragment>
-                </p>
-                <p
-                  className={classNames(
-                    "all",
-                    "p",
-                    "p__uyaK1",
-                    "__wab_text",
-                    sty.p__jid1W
-                  )}
-                >
-                  <React.Fragment>
-                    {(() => {
-                      try {
-                        return $queries.query2.data.response.data.pageBy
-                          .pageContent.textArea[1].text;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return "From restaurants and non-commercial foodservice to convenience stores and in-store bakeries, we partner with our customers to deliver high-quality baked goods and snack products tailored to their needs.";
-                        }
-                        throw e;
-                      }
-                    })()}
-                  </React.Fragment>
-                </p>
-              </div>
-              <div className={classNames("all", sty.freeBox__v56Y6)}>
-                {(
-                  hasVariant(globalVariants, "screen", "desktop") ? true : false
-                ) ? (
+                  </p>
+                </div>
+                <div className={classNames("all", sty.freeBox__v56Y6)}>
                   <PrimaryBtn
                     className={classNames(
                       "__wab_instance",
@@ -622,7 +614,7 @@ function PlasmicHome__RenderFunc(props: {
                       <React.Fragment>
                         {(() => {
                           try {
-                            return $queries.query2.data.response.data.pageBy
+                            return $queries.wpGraph.data.response.data.pageBy
                               .pageContent.button[0].text;
                           } catch (e) {
                             if (
@@ -637,10 +629,6 @@ function PlasmicHome__RenderFunc(props: {
                       </React.Fragment>
                     </div>
                   </PrimaryBtn>
-                ) : null}
-                {(
-                  hasVariant(globalVariants, "screen", "desktop") ? true : false
-                ) ? (
                   <PrimaryBtn
                     className={classNames(
                       "__wab_instance",
@@ -657,7 +645,7 @@ function PlasmicHome__RenderFunc(props: {
                       <React.Fragment>
                         {(() => {
                           try {
-                            return $queries.query2.data.response.data.pageBy
+                            return $queries.wpGraph.data.response.data.pageBy
                               .pageContent.button[1].text;
                           } catch (e) {
                             if (
@@ -672,342 +660,378 @@ function PlasmicHome__RenderFunc(props: {
                       </React.Fragment>
                     </div>
                   </PrimaryBtn>
-                ) : null}
+                </div>
               </div>
             </div>
             <div
-              data-plasmic-name={"bakerysolutions"}
-              data-plasmic-override={overrides.bakerysolutions}
-              className={classNames("all", sty.bakerysolutions)}
+              data-plasmic-name={"section"}
+              data-plasmic-override={overrides.section}
+              className={classNames("all", sty.section)}
             >
               <div
-                data-plasmic-name={"image"}
-                data-plasmic-override={overrides.image}
-                className={classNames("all", sty.image)}
-              />
+                data-plasmic-name={"section2"}
+                data-plasmic-override={overrides.section2}
+                className={classNames("all", sty.section2)}
+              >
+                <div
+                  data-plasmic-name={"bakerysolutions"}
+                  data-plasmic-override={overrides.bakerysolutions}
+                  className={classNames("all", sty.bakerysolutions)}
+                >
+                  <div
+                    data-plasmic-name={"image"}
+                    data-plasmic-override={overrides.image}
+                    className={classNames("all", sty.image)}
+                  />
 
-              <div
-                data-plasmic-name={"text"}
-                data-plasmic-override={overrides.text}
-                className={classNames("all", sty.text)}
-              >
-                <h4
-                  className={classNames(
-                    "all",
-                    "h4",
-                    "h4__uyaK1",
-                    "__wab_text",
-                    sty.h4__s33Bh,
-                    "h4-script"
-                  )}
-                >
-                  <React.Fragment>
-                    {(() => {
-                      try {
-                        return $queries.query2.data.response.data.pageBy
-                          .pageContent.content[3].headline;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return "Bakery Solutions";
-                        }
-                        throw e;
-                      }
-                    })()}
-                  </React.Fragment>
-                </h4>
-                <h4
-                  className={classNames(
-                    "all",
-                    "h4",
-                    "h4__uyaK1",
-                    "__wab_text",
-                    sty.h4___4Rj2M
-                  )}
-                >
-                  {"Built for Today\u2019s Market"}
-                </h4>
-                <p
-                  className={classNames(
-                    "all",
-                    "p",
-                    "p__uyaK1",
-                    "__wab_text",
-                    sty.p___37Rkd
-                  )}
-                >
-                  <React.Fragment>
-                    {(() => {
-                      try {
-                        return $queries.query2.data.response.data.pageBy
-                          .pageContent.textArea[2].text;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return "We understand that consumer tastes, operational needs, and market demands are always evolving. That\u2019s why we take a flexible, can-do approach to product development, production, and partnership.\nOur team works with you to create bakery solutions that are consistent, scalable, and made with quality and food safety at the forefront.";
-                        }
-                        throw e;
-                      }
-                    })()}
-                  </React.Fragment>
-                </p>
-                <PrimaryBtn
-                  className={classNames("__wab_instance", sty.primaryBtn__sB6Y)}
-                >
                   <div
-                    className={classNames("all", "__wab_text", sty.text__tzNq)}
+                    data-plasmic-name={"text"}
+                    data-plasmic-override={overrides.text}
+                    className={classNames("all", sty.text)}
                   >
-                    {"Explore Product Capabilities"}
-                  </div>
-                </PrimaryBtn>
-              </div>
-            </div>
-            <div
-              data-plasmic-name={"foodServiceAndRetailPartners"}
-              data-plasmic-override={overrides.foodServiceAndRetailPartners}
-              className={classNames("all", sty.foodServiceAndRetailPartners)}
-            >
-              <div
-                data-plasmic-name={"text2"}
-                data-plasmic-override={overrides.text2}
-                className={classNames("all", sty.text2)}
-              >
-                <h4
-                  className={classNames(
-                    "all",
-                    "h4",
-                    "h4__uyaK1",
-                    "__wab_text",
-                    sty.h4__ynMJ,
-                    "h4-script"
-                  )}
-                >
-                  <React.Fragment>
-                    {(() => {
-                      try {
-                        return $queries.query2.data.response.data.pageBy
-                          .pageContent.content[4].headline;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return "Serving a Wide Range of";
-                        }
-                        throw e;
-                      }
-                    })()}
-                  </React.Fragment>
-                </h4>
-                <h4
-                  className={classNames(
-                    "all",
-                    "h4",
-                    "h4__uyaK1",
-                    "__wab_text",
-                    sty.h4__lgHx
-                  )}
-                >
-                  {"Foodservice and Retail Partners"}
-                </h4>
-                <p
-                  className={classNames(
-                    "all",
-                    "p",
-                    "p__uyaK1",
-                    "__wab_text",
-                    sty.p__xZzR
-                  )}
-                >
-                  <React.Fragment>
-                    {(() => {
-                      try {
-                        return $queries.query2.data.response.data.pageBy
-                          .pageContent.textArea[3].text;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return "Sterling Foods proudly serves:";
-                        }
-                        throw e;
-                      }
-                    })()}
-                  </React.Fragment>
-                </p>
-                <div className={classNames("all", sty.freeBox__tCUx)}>
-                  <div
-                    className={classNames("all", "__wab_text", sty.text__hP5Xl)}
-                  >
-                    <React.Fragment>
-                      <React.Fragment>{""}</React.Fragment>
-                      {
-                        <ul
-                          className={classNames(
-                            "all",
-                            "ul",
-                            "ul__uyaK1",
-                            sty.ul__wbQ3C
-                          )}
-                        >
-                          <li
-                            className={classNames(
-                              "all",
-                              "li",
-                              "li__uyaK1",
-                              "__wab_text",
-                              sty.li__aVfbp
-                            )}
-                          >
-                            {"National Restaurants"}
-                          </li>
-                        </ul>
-                      }
-                      <React.Fragment>{""}</React.Fragment>
-                      {
-                        <ul
-                          className={classNames(
-                            "all",
-                            "ul",
-                            "ul__uyaK1",
-                            sty.ul___45Go2
-                          )}
-                        >
-                          <li
-                            className={classNames(
-                              "all",
-                              "li",
-                              "li__uyaK1",
-                              "__wab_text",
-                              sty.li__yu0Ad
-                            )}
-                          >
-                            {"Convenience Stores"}
-                          </li>
-                        </ul>
-                      }
-                      <React.Fragment>{""}</React.Fragment>
-                      {
-                        <ul
-                          className={classNames(
-                            "all",
-                            "ul",
-                            "ul__uyaK1",
-                            sty.ul___5A4Y
-                          )}
-                        >
-                          <li
-                            className={classNames(
-                              "all",
-                              "li",
-                              "li__uyaK1",
-                              "__wab_text",
-                              sty.li___4UrCd
-                            )}
-                          >
-                            {"In-Store Bakery"}
-                          </li>
-                        </ul>
-                      }
-                      <React.Fragment>{""}</React.Fragment>
-                    </React.Fragment>
-                  </div>
-                  <div
-                    className={classNames(
-                      "all",
-                      "__wab_text",
-                      sty.text___6LhDw
-                    )}
-                  >
-                    <React.Fragment>
-                      <React.Fragment>{""}</React.Fragment>
-                      {
-                        <ul
-                          className={classNames(
-                            "all",
-                            "ul",
-                            "ul__uyaK1",
-                            sty.ul___87S4A
-                          )}
-                        >
-                          <li
-                            className={classNames(
-                              "all",
-                              "li",
-                              "li__uyaK1",
-                              "__wab_text",
-                              sty.li__t9KMp
-                            )}
-                          >
-                            {"School Foodservice"}
-                          </li>
-                        </ul>
-                      }
-                      <React.Fragment>{""}</React.Fragment>
-                      {
-                        <ul
-                          className={classNames(
-                            "all",
-                            "ul",
-                            "ul__uyaK1",
-                            sty.ul__y9JOz
-                          )}
-                        >
-                          <li
-                            className={classNames(
-                              "all",
-                              "li",
-                              "li__uyaK1",
-                              "__wab_text",
-                              sty.li__vcYgl
-                            )}
-                          >
-                            {"Military"}
-                          </li>
-                        </ul>
-                      }
-                      <React.Fragment>{""}</React.Fragment>
-                    </React.Fragment>
+                    <h4
+                      className={classNames(
+                        "all",
+                        "h4",
+                        "h4__uyaK1",
+                        "__wab_text",
+                        sty.h4__s33Bh,
+                        "h4-script"
+                      )}
+                    >
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $queries.wpGraph.data.response.data.pageBy
+                              .pageContent.content[3].headline;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "Bakery Solutions";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
+                    </h4>
+                    <h4
+                      className={classNames(
+                        "all",
+                        "h4",
+                        "h4__uyaK1",
+                        "__wab_text",
+                        sty.h4___4Rj2M
+                      )}
+                    >
+                      {"Built for Today\u2019s Market"}
+                    </h4>
+                    <p
+                      className={classNames(
+                        "all",
+                        "p",
+                        "p__uyaK1",
+                        "__wab_text",
+                        sty.p___37Rkd
+                      )}
+                    >
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $queries.wpGraph.data.response.data.pageBy
+                              .pageContent.textArea[2].text;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "We understand that consumer tastes, operational needs, and market demands are always evolving. That\u2019s why we take a flexible, can-do approach to product development, production, and partnership.\nOur team works with you to create bakery solutions that are consistent, scalable, and made with quality and food safety at the forefront.";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
+                    </p>
+                    <PrimaryBtn
+                      className={classNames(
+                        "__wab_instance",
+                        sty.primaryBtn__sB6Y
+                      )}
+                    >
+                      <div
+                        className={classNames(
+                          "all",
+                          "__wab_text",
+                          sty.text__tzNq
+                        )}
+                      >
+                        {"Explore Product Capabilities"}
+                      </div>
+                    </PrimaryBtn>
                   </div>
                 </div>
-                <PrimaryBtn
+              </div>
+              <div
+                data-plasmic-name={"section3"}
+                data-plasmic-override={overrides.section3}
+                className={classNames("all", sty.section3)}
+              >
+                <div
+                  data-plasmic-name={"foodServiceAndRetailPartners"}
+                  data-plasmic-override={overrides.foodServiceAndRetailPartners}
                   className={classNames(
-                    "__wab_instance",
-                    sty.primaryBtn__gurqP
+                    "all",
+                    sty.foodServiceAndRetailPartners
                   )}
                 >
                   <div
-                    className={classNames("all", "__wab_text", sty.text__c0Kxh)}
+                    data-plasmic-name={"text2"}
+                    data-plasmic-override={overrides.text2}
+                    className={classNames("all", sty.text2)}
                   >
-                    <React.Fragment>
-                      {(() => {
-                        try {
-                          return $queries.query2.data.response.data.pageBy
-                            .pageContent.button[3].text;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return "View All Markets";
+                    <h4
+                      className={classNames(
+                        "all",
+                        "h4",
+                        "h4__uyaK1",
+                        "__wab_text",
+                        sty.h4__ynMJ,
+                        "h4-script"
+                      )}
+                    >
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $queries.wpGraph.data.response.data.pageBy
+                              .pageContent.content[4].headline;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "Serving a Wide Range of";
+                            }
+                            throw e;
                           }
-                          throw e;
-                        }
-                      })()}
-                    </React.Fragment>
+                        })()}
+                      </React.Fragment>
+                    </h4>
+                    <h4
+                      className={classNames(
+                        "all",
+                        "h4",
+                        "h4__uyaK1",
+                        "__wab_text",
+                        sty.h4__lgHx
+                      )}
+                    >
+                      {"Foodservice and Retail Partners"}
+                    </h4>
+                    <p
+                      className={classNames(
+                        "all",
+                        "p",
+                        "p__uyaK1",
+                        "__wab_text",
+                        sty.p__xZzR
+                      )}
+                    >
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $queries.wpGraph.data.response.data.pageBy
+                              .pageContent.textArea[3].text;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "Sterling Foods proudly serves:";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
+                    </p>
+                    <div className={classNames("all", sty.freeBox__tCUx)}>
+                      <div
+                        className={classNames(
+                          "all",
+                          "__wab_text",
+                          sty.text__hP5Xl
+                        )}
+                      >
+                        <React.Fragment>
+                          <React.Fragment>{""}</React.Fragment>
+                          {
+                            <ul
+                              className={classNames(
+                                "all",
+                                "ul",
+                                "ul__uyaK1",
+                                sty.ul__wbQ3C
+                              )}
+                            >
+                              <li
+                                className={classNames(
+                                  "all",
+                                  "li",
+                                  "li__uyaK1",
+                                  "__wab_text",
+                                  sty.li__aVfbp
+                                )}
+                              >
+                                {"National Restaurants"}
+                              </li>
+                            </ul>
+                          }
+                          <React.Fragment>{""}</React.Fragment>
+                          {
+                            <ul
+                              className={classNames(
+                                "all",
+                                "ul",
+                                "ul__uyaK1",
+                                sty.ul___45Go2
+                              )}
+                            >
+                              <li
+                                className={classNames(
+                                  "all",
+                                  "li",
+                                  "li__uyaK1",
+                                  "__wab_text",
+                                  sty.li__yu0Ad
+                                )}
+                              >
+                                {"Convenience Stores"}
+                              </li>
+                            </ul>
+                          }
+                          <React.Fragment>{""}</React.Fragment>
+                          {
+                            <ul
+                              className={classNames(
+                                "all",
+                                "ul",
+                                "ul__uyaK1",
+                                sty.ul___5A4Y
+                              )}
+                            >
+                              <li
+                                className={classNames(
+                                  "all",
+                                  "li",
+                                  "li__uyaK1",
+                                  "__wab_text",
+                                  sty.li___4UrCd
+                                )}
+                              >
+                                {"In-Store Bakery"}
+                              </li>
+                            </ul>
+                          }
+                          <React.Fragment>{""}</React.Fragment>
+                        </React.Fragment>
+                      </div>
+                      <div
+                        className={classNames(
+                          "all",
+                          "__wab_text",
+                          sty.text___6LhDw
+                        )}
+                      >
+                        <React.Fragment>
+                          <React.Fragment>{""}</React.Fragment>
+                          {
+                            <ul
+                              className={classNames(
+                                "all",
+                                "ul",
+                                "ul__uyaK1",
+                                sty.ul___87S4A
+                              )}
+                            >
+                              <li
+                                className={classNames(
+                                  "all",
+                                  "li",
+                                  "li__uyaK1",
+                                  "__wab_text",
+                                  sty.li__t9KMp
+                                )}
+                              >
+                                {"School Foodservice"}
+                              </li>
+                            </ul>
+                          }
+                          <React.Fragment>{""}</React.Fragment>
+                          {
+                            <ul
+                              className={classNames(
+                                "all",
+                                "ul",
+                                "ul__uyaK1",
+                                sty.ul__y9JOz
+                              )}
+                            >
+                              <li
+                                className={classNames(
+                                  "all",
+                                  "li",
+                                  "li__uyaK1",
+                                  "__wab_text",
+                                  sty.li__vcYgl
+                                )}
+                              >
+                                {"Military"}
+                              </li>
+                            </ul>
+                          }
+                          <React.Fragment>{""}</React.Fragment>
+                        </React.Fragment>
+                      </div>
+                    </div>
+                    <PrimaryBtn
+                      className={classNames(
+                        "__wab_instance",
+                        sty.primaryBtn__gurqP
+                      )}
+                    >
+                      <div
+                        className={classNames(
+                          "all",
+                          "__wab_text",
+                          sty.text__c0Kxh
+                        )}
+                      >
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return $queries.wpGraph.data.response.data.pageBy
+                                .pageContent.button[3].text;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "View All Markets";
+                              }
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
+                      </div>
+                    </PrimaryBtn>
                   </div>
-                </PrimaryBtn>
+                  <div
+                    data-plasmic-name={"image2"}
+                    data-plasmic-override={overrides.image2}
+                    className={classNames("all", sty.image2)}
+                  />
+                </div>
               </div>
-              <div
-                data-plasmic-name={"image2"}
-                data-plasmic-override={overrides.image2}
-                className={classNames("all", sty.image2)}
-              />
             </div>
             <div
               data-plasmic-name={"innovationResponsive"}
@@ -1078,7 +1102,7 @@ function PlasmicHome__RenderFunc(props: {
                         <React.Fragment>
                           {(() => {
                             try {
-                              return $queries.query2.data.response.data.pageBy
+                              return $queries.wpGraph.data.response.data.pageBy
                                 .pageContent.button[4].text;
                             } catch (e) {
                               if (
@@ -1109,7 +1133,7 @@ function PlasmicHome__RenderFunc(props: {
                         <React.Fragment>
                           {(() => {
                             try {
-                              return $queries.query2.data.response.data.pageBy
+                              return $queries.wpGraph.data.response.data.pageBy
                                 .pageContent.button[5].text;
                             } catch (e) {
                               if (
@@ -1164,7 +1188,14 @@ function PlasmicHome__RenderFunc(props: {
                           {hasVariant(globalVariants, "screen", "desktop") ? (
                             <React.Fragment>
                               {
-                                $queries.query.data.response.data.page
+                                $queries.wpGraph.data.response.data.pageBy
+                                  .pageContent.content[6].headline
+                              }
+                            </React.Fragment>
+                          ) : hasVariant(globalVariants, "screen", "large") ? (
+                            <React.Fragment>
+                              {
+                                $queries.wpGraph.data.response.data.pageBy
                                   .pageContent.content[6].headline
                               }
                             </React.Fragment>
@@ -1265,17 +1296,14 @@ function PlasmicHome__RenderFunc(props: {
               </div>
               {(() => {
                 const child$Props = {
-                  arrows: hasVariant(globalVariants, "screen", "desktop")
+                  adaptiveHeight: hasVariant(globalVariants, "screen", "large")
                     ? false
-                    : false,
-                  autoplay: hasVariant(globalVariants, "screen", "desktop")
-                    ? true
-                    : false,
+                    : true,
+                  arrows: false,
+                  autoplay: false,
                   autoplaySpeed: hasVariant(globalVariants, "screen", "tablet")
                     ? 4000
-                    : hasVariant(globalVariants, "screen", "desktop")
-                      ? 2000
-                      : 0,
+                    : 0,
                   beforeChange: async (...eventArgs: any) => {
                     generateStateOnChangePropForCodeComponents(
                       $state,
@@ -1284,12 +1312,10 @@ function PlasmicHome__RenderFunc(props: {
                       SliderWrapper_Helpers
                     ).apply(null, eventArgs);
                   },
-                  centerMode: true,
+                  centerMode: false,
                   centerPadding: hasVariant(globalVariants, "screen", "mobile")
                     ? "20px"
-                    : hasVariant(globalVariants, "screen", "desktop")
-                      ? "20px"
-                      : undefined,
+                    : "50px",
                   className: classNames("__wab_instance", sty.sliderCarousel),
                   cssEase: "linear",
                   dots: hasVariant(globalVariants, "screen", "mobile")
@@ -1305,27 +1331,56 @@ function PlasmicHome__RenderFunc(props: {
                   ref: ref => {
                     $refs["sliderCarousel"] = ref;
                   },
+                  rows: hasVariant(globalVariants, "screen", "smallLaptop")
+                    ? 1
+                    : hasVariant(globalVariants, "screen", "smallDesktop")
+                      ? 1
+                      : 1,
                   sliderScopeClassName: sty["sliderCarousel__slider"],
                   slidesPerRow: hasVariant(globalVariants, "screen", "mobile")
                     ? 1
                     : hasVariant(globalVariants, "screen", "tablet")
                       ? 1
-                      : hasVariant(globalVariants, "screen", "smallerLaptop")
+                      : hasVariant(globalVariants, "screen", "smallLaptop")
                         ? 1
                         : hasVariant(globalVariants, "screen", "laptop")
                           ? 2
-                          : hasVariant(globalVariants, "screen", "desktop2")
+                          : hasVariant(globalVariants, "screen", "smallDesktop")
                             ? 2
-                            : hasVariant(globalVariants, "screen", "desktop")
-                              ? 3
-                              : 2,
-                  speed: hasVariant(globalVariants, "screen", "desktop")
-                    ? 500
-                    : 2000,
+                            : hasVariant(
+                                  globalVariants,
+                                  "screen",
+                                  "mediumDesktop"
+                                )
+                              ? 2
+                              : hasVariant(globalVariants, "screen", "large")
+                                ? 3
+                                : 1,
+                  slidesToShow: hasVariant(
+                    globalVariants,
+                    "screen",
+                    "smallMobile"
+                  )
+                    ? 1
+                    : hasVariant(globalVariants, "screen", "mobile")
+                      ? 1
+                      : hasVariant(globalVariants, "screen", "tablet")
+                        ? 1
+                        : hasVariant(globalVariants, "screen", "smallLaptop")
+                          ? 1
+                          : hasVariant(globalVariants, "screen", "laptop")
+                            ? 1
+                            : hasVariant(
+                                  globalVariants,
+                                  "screen",
+                                  "smallDesktop"
+                                )
+                              ? 1
+                              : hasVariant(globalVariants, "screen", "large")
+                                ? 1
+                                : 3,
+                  speed: 2000,
                   swipeToSlide: true,
-                  useCSS: hasVariant(globalVariants, "screen", "desktop")
-                    ? true
-                    : undefined,
                   variableWidth: hasVariant(globalVariants, "screen", "mobile")
                     ? false
                     : undefined,
@@ -1352,103 +1407,95 @@ function PlasmicHome__RenderFunc(props: {
                     data-plasmic-override={overrides.sliderCarousel}
                     {...child$Props}
                   >
-                    {(
-                      hasVariant(globalVariants, "screen", "desktop")
-                        ? true
-                        : false
-                    ) ? (
+                    <div
+                      data-plasmic-name={"box"}
+                      data-plasmic-override={overrides.box}
+                      className={classNames("all", sty.box)}
+                    >
                       <div
-                        data-plasmic-name={"box"}
-                        data-plasmic-override={overrides.box}
-                        className={classNames("all", sty.box)}
+                        data-plasmic-name={"child"}
+                        data-plasmic-override={overrides.child}
+                        className={classNames("all", sty.child)}
                       >
-                        <div
-                          data-plasmic-name={"child"}
-                          data-plasmic-override={overrides.child}
-                          className={classNames("all", sty.child)}
-                        >
+                        <div className={classNames("all", sty.freeBox__pYbvD)}>
+                          <StarFilledIcon
+                            className={classNames("all", sty.svg__ouhzd)}
+                            role={"img"}
+                          />
+
+                          <StarFilledIcon
+                            className={classNames("all", sty.svg__vj58)}
+                            role={"img"}
+                          />
+
+                          <StarFilledIcon
+                            className={classNames("all", sty.svg__kejo)}
+                            role={"img"}
+                          />
+
+                          <StarFilledIcon
+                            className={classNames("all", sty.svg___9Hcpb)}
+                            role={"img"}
+                          />
+
+                          <StarFilledIcon
+                            className={classNames("all", sty.svg__fhrw4)}
+                            role={"img"}
+                          />
+                        </div>
+                        <div className={classNames("all", sty.freeBox__bfTeB)}>
                           <div
-                            className={classNames("all", sty.freeBox__pYbvD)}
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__cNudu
+                            )}
                           >
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg__ouhzd)}
-                              role={"img"}
-                            />
-
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg__vj58)}
-                              role={"img"}
-                            />
-
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg__kejo)}
-                              role={"img"}
-                            />
-
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg___9Hcpb)}
-                              role={"img"}
-                            />
-
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg__fhrw4)}
-                              role={"img"}
-                            />
-                          </div>
-                          <div
-                            className={classNames("all", sty.freeBox__bfTeB)}
-                          >
-                            <div
-                              className={classNames(
-                                "all",
-                                "__wab_text",
-                                sty.text__cNudu
-                              )}
-                            >
-                              {
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ullamcorper diam, eget consequat neque. Fusce est tellus, vulputate nec commodo ac, dictum non orci. Phasellus pretium, nisl consectetur vestibulum volutpat, mi mauris gravida "
-                              }
-                            </div>
-                          </div>
-                          <div
-                            className={classNames("all", sty.freeBox__amn6D)}
-                          >
-                            <div
-                              className={classNames(
-                                "all",
-                                "__wab_text",
-                                sty.text__gxqVn
-                              )}
-                            >
-                              {"JOHN DOE"}
-                            </div>
-                            <PlasmicImg__
-                              alt={""}
-                              className={classNames(sty.img__tiW6R)}
-                              displayHeight={"auto"}
-                              displayMaxHeight={"none"}
-                              displayMaxWidth={"100%"}
-                              displayMinHeight={"0"}
-                              displayMinWidth={"0"}
-                              displayWidth={"auto"}
-                              format={"avif"}
-                              loading={"lazy"}
-                              quality={100}
-                              src={{
-                                src: "/plasmic/sterling_and_buena_vista_foods/images/layer14Png.png",
-                                fullWidth: 54,
-                                fullHeight: 42,
-                                aspectRatio: undefined
-                              }}
-                            />
+                            {
+                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ullamcorper diam, eget consequat neque. Fusce est tellus, vulputate nec commodo ac, dictum non orci. Phasellus pretium, nisl consectetur vestibulum volutpat, mi mauris gravida "
+                            }
                           </div>
                         </div>
+                        <div className={classNames("all", sty.freeBox__amn6D)}>
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__gxqVn
+                            )}
+                          >
+                            {"JOHN DOE"}
+                          </div>
+                          <PlasmicImg__
+                            alt={""}
+                            className={classNames(sty.img__tiW6R)}
+                            displayHeight={"auto"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={"100%"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={"auto"}
+                            format={"avif"}
+                            loading={"lazy"}
+                            quality={100}
+                            src={{
+                              src: "/plasmic/sterling_and_buena_vista_foods/images/layer14Png.png",
+                              fullWidth: 54,
+                              fullHeight: 42,
+                              aspectRatio: undefined
+                            }}
+                          />
+                        </div>
                       </div>
-                    ) : null}
+                    </div>
                     {(
-                      hasVariant(globalVariants, "screen", "desktop")
+                      hasVariant(globalVariants, "screen", "smallDesktop")
                         ? true
-                        : false
+                        : hasVariant(globalVariants, "screen", "desktop")
+                          ? true
+                          : hasVariant(globalVariants, "screen", "large")
+                            ? true
+                            : false
                     ) ? (
                       <div
                         data-plasmic-name={"box2"}
@@ -1461,41 +1508,41 @@ function PlasmicHome__RenderFunc(props: {
                           className={classNames("all", sty.child2)}
                         >
                           <div
-                            className={classNames("all", sty.freeBox__eVhUp)}
+                            className={classNames("all", sty.freeBox__bbrPb)}
                           >
                             <StarFilledIcon
-                              className={classNames("all", sty.svg__gej9M)}
+                              className={classNames("all", sty.svg__hg2P3)}
                               role={"img"}
                             />
 
                             <StarFilledIcon
-                              className={classNames("all", sty.svg__wcZnJ)}
+                              className={classNames("all", sty.svg__wWSe4)}
                               role={"img"}
                             />
 
                             <StarFilledIcon
-                              className={classNames("all", sty.svg__cJjQ3)}
+                              className={classNames("all", sty.svg__vHg07)}
                               role={"img"}
                             />
 
                             <StarFilledIcon
-                              className={classNames("all", sty.svg___1U83M)}
+                              className={classNames("all", sty.svg__dd0Y)}
                               role={"img"}
                             />
 
                             <StarFilledIcon
-                              className={classNames("all", sty.svg__l4T2J)}
+                              className={classNames("all", sty.svg__tMael)}
                               role={"img"}
                             />
                           </div>
                           <div
-                            className={classNames("all", sty.freeBox___6PiiP)}
+                            className={classNames("all", sty.freeBox__nVgjj)}
                           >
                             <div
                               className={classNames(
                                 "all",
                                 "__wab_text",
-                                sty.text__rocAn
+                                sty.text__doP7X
                               )}
                             >
                               {
@@ -1503,19 +1550,21 @@ function PlasmicHome__RenderFunc(props: {
                               }
                             </div>
                           </div>
-                          <div className={classNames("all", sty.freeBox__tb46)}>
+                          <div
+                            className={classNames("all", sty.freeBox___3KLw3)}
+                          >
                             <div
                               className={classNames(
                                 "all",
                                 "__wab_text",
-                                sty.text___3E0Dh
+                                sty.text__fSgfk
                               )}
                             >
                               {"JOHN DOE"}
                             </div>
                             <PlasmicImg__
                               alt={""}
-                              className={classNames(sty.img__x91Qw)}
+                              className={classNames(sty.img___4Knc)}
                               displayHeight={"auto"}
                               displayMaxHeight={"none"}
                               displayMaxWidth={"100%"}
@@ -1537,9 +1586,13 @@ function PlasmicHome__RenderFunc(props: {
                       </div>
                     ) : null}
                     {(
-                      hasVariant(globalVariants, "screen", "desktop")
+                      hasVariant(globalVariants, "screen", "smallDesktop")
                         ? true
-                        : false
+                        : hasVariant(globalVariants, "screen", "desktop")
+                          ? true
+                          : hasVariant(globalVariants, "screen", "large")
+                            ? true
+                            : false
                     ) ? (
                       <div
                         data-plasmic-name={"box3"}
@@ -1551,40 +1604,40 @@ function PlasmicHome__RenderFunc(props: {
                           data-plasmic-override={overrides.child3}
                           className={classNames("all", sty.child3)}
                         >
-                          <div className={classNames("all", sty.freeBox__ukwF)}>
+                          <div
+                            className={classNames("all", sty.freeBox__bmB5P)}
+                          >
                             <StarFilledIcon
-                              className={classNames("all", sty.svg__blmU7)}
+                              className={classNames("all", sty.svg__aKjoU)}
                               role={"img"}
                             />
 
                             <StarFilledIcon
-                              className={classNames("all", sty.svg__aeg8O)}
+                              className={classNames("all", sty.svg___1BOaP)}
                               role={"img"}
                             />
 
                             <StarFilledIcon
-                              className={classNames("all", sty.svg___8S63P)}
+                              className={classNames("all", sty.svg__qy22H)}
                               role={"img"}
                             />
 
                             <StarFilledIcon
-                              className={classNames("all", sty.svg__topvz)}
+                              className={classNames("all", sty.svg___8E8HB)}
                               role={"img"}
                             />
 
                             <StarFilledIcon
-                              className={classNames("all", sty.svg__mafqo)}
+                              className={classNames("all", sty.svg__b1Xkq)}
                               role={"img"}
                             />
                           </div>
-                          <div
-                            className={classNames("all", sty.freeBox__eMa0D)}
-                          >
+                          <div className={classNames("all", sty.freeBox__gAkm)}>
                             <div
                               className={classNames(
                                 "all",
                                 "__wab_text",
-                                sty.text__ewmSz
+                                sty.text___1CI5Y
                               )}
                             >
                               {
@@ -1593,20 +1646,20 @@ function PlasmicHome__RenderFunc(props: {
                             </div>
                           </div>
                           <div
-                            className={classNames("all", sty.freeBox__behcQ)}
+                            className={classNames("all", sty.freeBox__bYxJp)}
                           >
                             <div
                               className={classNames(
                                 "all",
                                 "__wab_text",
-                                sty.text__ulsu
+                                sty.text__hqd1
                               )}
                             >
                               {"JOHN DOE"}
                             </div>
                             <PlasmicImg__
                               alt={""}
-                              className={classNames(sty.img__cvB7F)}
+                              className={classNames(sty.img___6OO0G)}
                               displayHeight={"auto"}
                               displayMaxHeight={"none"}
                               displayMaxWidth={"100%"}
@@ -1628,9 +1681,13 @@ function PlasmicHome__RenderFunc(props: {
                       </div>
                     ) : null}
                     {(
-                      hasVariant(globalVariants, "screen", "desktop")
+                      hasVariant(globalVariants, "screen", "smallDesktop")
                         ? true
-                        : false
+                        : hasVariant(globalVariants, "screen", "desktop")
+                          ? true
+                          : hasVariant(globalVariants, "screen", "large")
+                            ? true
+                            : false
                     ) ? (
                       <div
                         data-plasmic-name={"box4"}
@@ -1642,42 +1699,40 @@ function PlasmicHome__RenderFunc(props: {
                           data-plasmic-override={overrides.child4}
                           className={classNames("all", sty.child4)}
                         >
-                          <div
-                            className={classNames("all", sty.freeBox__ahuLc)}
-                          >
+                          <div className={classNames("all", sty.freeBox__mnIz)}>
                             <StarFilledIcon
-                              className={classNames("all", sty.svg__u0VoJ)}
+                              className={classNames("all", sty.svg__ueqlD)}
                               role={"img"}
                             />
 
                             <StarFilledIcon
-                              className={classNames("all", sty.svg___4GVp)}
+                              className={classNames("all", sty.svg__bTdr)}
                               role={"img"}
                             />
 
                             <StarFilledIcon
-                              className={classNames("all", sty.svg__oHfb)}
+                              className={classNames("all", sty.svg___0Ix1X)}
                               role={"img"}
                             />
 
                             <StarFilledIcon
-                              className={classNames("all", sty.svg__m6Z3C)}
+                              className={classNames("all", sty.svg__wnSyj)}
                               role={"img"}
                             />
 
                             <StarFilledIcon
-                              className={classNames("all", sty.svg__ysu7L)}
+                              className={classNames("all", sty.svg__kwhh9)}
                               role={"img"}
                             />
                           </div>
                           <div
-                            className={classNames("all", sty.freeBox___9CrRu)}
+                            className={classNames("all", sty.freeBox__nWgsZ)}
                           >
                             <div
                               className={classNames(
                                 "all",
                                 "__wab_text",
-                                sty.text__mwgZw
+                                sty.text__ps6Md
                               )}
                             >
                               {
@@ -1686,299 +1741,20 @@ function PlasmicHome__RenderFunc(props: {
                             </div>
                           </div>
                           <div
-                            className={classNames("all", sty.freeBox___2ZtQk)}
+                            className={classNames("all", sty.freeBox__bjsfD)}
                           >
                             <div
                               className={classNames(
                                 "all",
                                 "__wab_text",
-                                sty.text___1AsJv
+                                sty.text__nqCp4
                               )}
                             >
                               {"JOHN DOE"}
                             </div>
                             <PlasmicImg__
                               alt={""}
-                              className={classNames(sty.img__kdxnV)}
-                              displayHeight={"auto"}
-                              displayMaxHeight={"none"}
-                              displayMaxWidth={"100%"}
-                              displayMinHeight={"0"}
-                              displayMinWidth={"0"}
-                              displayWidth={"auto"}
-                              format={"avif"}
-                              loading={"lazy"}
-                              quality={100}
-                              src={{
-                                src: "/plasmic/sterling_and_buena_vista_foods/images/layer14Png.png",
-                                fullWidth: 54,
-                                fullHeight: 42,
-                                aspectRatio: undefined
-                              }}
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    ) : null}
-                    {(
-                      hasVariant(globalVariants, "screen", "desktop")
-                        ? true
-                        : false
-                    ) ? (
-                      <div
-                        data-plasmic-name={"box5"}
-                        data-plasmic-override={overrides.box5}
-                        className={classNames("all", sty.box5)}
-                      >
-                        <div
-                          data-plasmic-name={"child5"}
-                          data-plasmic-override={overrides.child5}
-                          className={classNames("all", sty.child5)}
-                        >
-                          <div
-                            className={classNames("all", sty.freeBox__ccm48)}
-                          >
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg__wpuqy)}
-                              role={"img"}
-                            />
-
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg__zalmi)}
-                              role={"img"}
-                            />
-
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg__ukDDr)}
-                              role={"img"}
-                            />
-
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg__gCmo0)}
-                              role={"img"}
-                            />
-
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg___71JP)}
-                              role={"img"}
-                            />
-                          </div>
-                          <div
-                            className={classNames("all", sty.freeBox__g1Iu6)}
-                          >
-                            <div
-                              className={classNames(
-                                "all",
-                                "__wab_text",
-                                sty.text__eegyb
-                              )}
-                            >
-                              {
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ullamcorper diam, eget consequat neque. Fusce est tellus, vulputate nec commodo ac, dictum non orci. Phasellus pretium, nisl consectetur vestibulum volutpat, mi mauris gravida "
-                              }
-                            </div>
-                          </div>
-                          <div
-                            className={classNames("all", sty.freeBox__xD5DR)}
-                          >
-                            <div
-                              className={classNames(
-                                "all",
-                                "__wab_text",
-                                sty.text__orbkw
-                              )}
-                            >
-                              {"JOHN DOE"}
-                            </div>
-                            <PlasmicImg__
-                              alt={""}
-                              className={classNames(sty.img__b6OgA)}
-                              displayHeight={"auto"}
-                              displayMaxHeight={"none"}
-                              displayMaxWidth={"100%"}
-                              displayMinHeight={"0"}
-                              displayMinWidth={"0"}
-                              displayWidth={"auto"}
-                              format={"avif"}
-                              loading={"lazy"}
-                              quality={100}
-                              src={{
-                                src: "/plasmic/sterling_and_buena_vista_foods/images/layer14Png.png",
-                                fullWidth: 54,
-                                fullHeight: 42,
-                                aspectRatio: undefined
-                              }}
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    ) : null}
-                    {(
-                      hasVariant(globalVariants, "screen", "desktop")
-                        ? true
-                        : false
-                    ) ? (
-                      <div
-                        data-plasmic-name={"box6"}
-                        data-plasmic-override={overrides.box6}
-                        className={classNames("all", sty.box6)}
-                      >
-                        <div
-                          data-plasmic-name={"child6"}
-                          data-plasmic-override={overrides.child6}
-                          className={classNames("all", sty.child6)}
-                        >
-                          <div
-                            className={classNames("all", sty.freeBox___1Lcj1)}
-                          >
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg__jiZo5)}
-                              role={"img"}
-                            />
-
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg__pVsSw)}
-                              role={"img"}
-                            />
-
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg__ddeLv)}
-                              role={"img"}
-                            />
-
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg__lqmXn)}
-                              role={"img"}
-                            />
-
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg__kj4Qs)}
-                              role={"img"}
-                            />
-                          </div>
-                          <div
-                            className={classNames("all", sty.freeBox__hlDa4)}
-                          >
-                            <div
-                              className={classNames(
-                                "all",
-                                "__wab_text",
-                                sty.text__mGe8
-                              )}
-                            >
-                              {
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ullamcorper diam, eget consequat neque. Fusce est tellus, vulputate nec commodo ac, dictum non orci. Phasellus pretium, nisl consectetur vestibulum volutpat, mi mauris gravida "
-                              }
-                            </div>
-                          </div>
-                          <div
-                            className={classNames("all", sty.freeBox__bprsf)}
-                          >
-                            <div
-                              className={classNames(
-                                "all",
-                                "__wab_text",
-                                sty.text___5JqcJ
-                              )}
-                            >
-                              {"JOHN DOE"}
-                            </div>
-                            <PlasmicImg__
-                              alt={""}
-                              className={classNames(sty.img__yYSgS)}
-                              displayHeight={"auto"}
-                              displayMaxHeight={"none"}
-                              displayMaxWidth={"100%"}
-                              displayMinHeight={"0"}
-                              displayMinWidth={"0"}
-                              displayWidth={"auto"}
-                              format={"avif"}
-                              loading={"lazy"}
-                              quality={100}
-                              src={{
-                                src: "/plasmic/sterling_and_buena_vista_foods/images/layer14Png.png",
-                                fullWidth: 54,
-                                fullHeight: 42,
-                                aspectRatio: undefined
-                              }}
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    ) : null}
-                    {(
-                      hasVariant(globalVariants, "screen", "desktop")
-                        ? true
-                        : false
-                    ) ? (
-                      <div
-                        data-plasmic-name={"box7"}
-                        data-plasmic-override={overrides.box7}
-                        className={classNames("all", sty.box7)}
-                      >
-                        <div
-                          data-plasmic-name={"child7"}
-                          data-plasmic-override={overrides.child7}
-                          className={classNames("all", sty.child7)}
-                        >
-                          <div
-                            className={classNames("all", sty.freeBox__u2MTc)}
-                          >
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg__c2KsJ)}
-                              role={"img"}
-                            />
-
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg__a8Ieg)}
-                              role={"img"}
-                            />
-
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg__lG87O)}
-                              role={"img"}
-                            />
-
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg__dcrs)}
-                              role={"img"}
-                            />
-
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg__wcBma)}
-                              role={"img"}
-                            />
-                          </div>
-                          <div
-                            className={classNames("all", sty.freeBox__vvfFl)}
-                          >
-                            <div
-                              className={classNames(
-                                "all",
-                                "__wab_text",
-                                sty.text__f8LC
-                              )}
-                            >
-                              {
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ullamcorper diam, eget consequat neque. Fusce est tellus, vulputate nec commodo ac, dictum non orci. Phasellus pretium, nisl consectetur vestibulum volutpat, mi mauris gravida "
-                              }
-                            </div>
-                          </div>
-                          <div
-                            className={classNames("all", sty.freeBox___2T4MN)}
-                          >
-                            <div
-                              className={classNames(
-                                "all",
-                                "__wab_text",
-                                sty.text___9U2XS
-                              )}
-                            >
-                              {"JOHN DOE"}
-                            </div>
-                            <PlasmicImg__
-                              alt={""}
-                              className={classNames(sty.img__edXvk)}
+                              className={classNames(sty.img__nQyBb)}
                               displayHeight={"auto"}
                               displayMaxHeight={"none"}
                               displayMaxWidth={"100%"}
@@ -2033,7 +1809,14 @@ function PlasmicHome__RenderFunc(props: {
                           {hasVariant(globalVariants, "screen", "desktop") ? (
                             <React.Fragment>
                               {
-                                $queries.query.data.response.data.page
+                                $queries.wpGraph.data.response.data.pageBy
+                                  .pageContent.content[7].headline
+                              }
+                            </React.Fragment>
+                          ) : hasVariant(globalVariants, "screen", "large") ? (
+                            <React.Fragment>
+                              {
+                                $queries.wpGraph.data.response.data.pageBy
                                   .pageContent.content[7].headline
                               }
                             </React.Fragment>
@@ -2059,7 +1842,14 @@ function PlasmicHome__RenderFunc(props: {
                   {hasVariant(globalVariants, "screen", "desktop") ? (
                     <React.Fragment>
                       {
-                        $queries.query.data.response.data.page.pageContent
+                        $queries.wpGraph.data.response.data.pageBy.pageContent
+                          .textArea[5].text
+                      }
+                    </React.Fragment>
+                  ) : hasVariant(globalVariants, "screen", "large") ? (
+                    <React.Fragment>
+                      {
+                        $queries.wpGraph.data.response.data.pageBy.pageContent
                           .textArea[5].text
                       }
                     </React.Fragment>
@@ -2086,7 +1876,7 @@ function PlasmicHome__RenderFunc(props: {
                     <React.Fragment>
                       {(() => {
                         try {
-                          return $queries.query2.data.response.data.pageBy
+                          return $queries.wpGraph.data.response.data.pageBy
                             .pageContent.button[6].text;
                         } catch (e) {
                           if (
@@ -2105,9 +1895,9 @@ function PlasmicHome__RenderFunc(props: {
             </div>
           </div>
           <div
-            data-plasmic-name={"footer2"}
-            data-plasmic-override={overrides.footer2}
-            className={classNames("all", sty.footer2)}
+            data-plasmic-name={"homeFooter"}
+            data-plasmic-override={overrides.homeFooter}
+            className={classNames("all", sty.homeFooter)}
           >
             <Footer
               data-plasmic-name={"footer"}
@@ -2125,17 +1915,19 @@ const PlasmicDescendants = {
   homepage: [
     "homepage",
     "header",
-    "hero",
+    "homeHero",
     "title",
     "h1",
-    "bkgdimage",
-    "body",
+    "homeBody",
     "intro",
     "text3",
     "title2",
+    "section",
+    "section2",
     "bakerysolutions",
     "image",
     "text",
+    "section3",
     "foodServiceAndRetailPartners",
     "text2",
     "image2",
@@ -2156,31 +1948,27 @@ const PlasmicDescendants = {
     "child3",
     "box4",
     "child4",
-    "box5",
-    "child5",
-    "box6",
-    "child6",
-    "box7",
-    "child7",
     "cta",
     "frame52",
     "buttonContainer",
-    "footer2",
+    "homeFooter",
     "footer"
   ],
   header: ["header"],
-  hero: ["hero", "title", "h1", "bkgdimage"],
+  homeHero: ["homeHero", "title", "h1"],
   title: ["title", "h1"],
   h1: ["h1"],
-  bkgdimage: ["bkgdimage"],
-  body: [
-    "body",
+  homeBody: [
+    "homeBody",
     "intro",
     "text3",
     "title2",
+    "section",
+    "section2",
     "bakerysolutions",
     "image",
     "text",
+    "section3",
     "foodServiceAndRetailPartners",
     "text2",
     "image2",
@@ -2201,12 +1989,6 @@ const PlasmicDescendants = {
     "child3",
     "box4",
     "child4",
-    "box5",
-    "child5",
-    "box6",
-    "child6",
-    "box7",
-    "child7",
     "cta",
     "frame52",
     "buttonContainer"
@@ -2214,9 +1996,22 @@ const PlasmicDescendants = {
   intro: ["intro", "text3", "title2"],
   text3: ["text3", "title2"],
   title2: ["title2"],
+  section: [
+    "section",
+    "section2",
+    "bakerysolutions",
+    "image",
+    "text",
+    "section3",
+    "foodServiceAndRetailPartners",
+    "text2",
+    "image2"
+  ],
+  section2: ["section2", "bakerysolutions", "image", "text"],
   bakerysolutions: ["bakerysolutions", "image", "text"],
   image: ["image"],
   text: ["text"],
+  section3: ["section3", "foodServiceAndRetailPartners", "text2", "image2"],
   foodServiceAndRetailPartners: [
     "foodServiceAndRetailPartners",
     "text2",
@@ -2241,13 +2036,7 @@ const PlasmicDescendants = {
     "box3",
     "child3",
     "box4",
-    "child4",
-    "box5",
-    "child5",
-    "box6",
-    "child6",
-    "box7",
-    "child7"
+    "child4"
   ],
   frame36: ["frame36", "frame34", "frame35", "frame43", "frame44"],
   frame34: ["frame34"],
@@ -2263,13 +2052,7 @@ const PlasmicDescendants = {
     "box3",
     "child3",
     "box4",
-    "child4",
-    "box5",
-    "child5",
-    "box6",
-    "child6",
-    "box7",
-    "child7"
+    "child4"
   ],
   box: ["box", "child"],
   child: ["child"],
@@ -2279,16 +2062,10 @@ const PlasmicDescendants = {
   child3: ["child3"],
   box4: ["box4", "child4"],
   child4: ["child4"],
-  box5: ["box5", "child5"],
-  child5: ["child5"],
-  box6: ["box6", "child6"],
-  child6: ["child6"],
-  box7: ["box7", "child7"],
-  child7: ["child7"],
   cta: ["cta", "frame52", "buttonContainer"],
   frame52: ["frame52"],
   buttonContainer: ["buttonContainer"],
-  footer2: ["footer2", "footer"],
+  homeFooter: ["homeFooter", "footer"],
   footer: ["footer"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -2297,17 +2074,19 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   homepage: "div";
   header: "div";
-  hero: "div";
+  homeHero: "div";
   title: "div";
   h1: "h1";
-  bkgdimage: "div";
-  body: "div";
+  homeBody: "div";
   intro: "div";
   text3: "div";
   title2: "div";
+  section: "div";
+  section2: "div";
   bakerysolutions: "div";
   image: "div";
   text: "div";
+  section3: "div";
   foodServiceAndRetailPartners: "div";
   text2: "div";
   image2: "div";
@@ -2328,16 +2107,10 @@ type NodeDefaultElementType = {
   child3: "div";
   box4: "div";
   child4: "div";
-  box5: "div";
-  child5: "div";
-  box6: "div";
-  child6: "div";
-  box7: "div";
-  child7: "div";
   cta: "div";
   frame52: "div";
   buttonContainer: "div";
-  footer2: "div";
+  homeFooter: "div";
   footer: typeof Footer;
 };
 
@@ -2404,17 +2177,19 @@ export const PlasmicHome = Object.assign(
   {
     // Helper components rendering sub-elements
     header: makeNodeComponent("header"),
-    hero: makeNodeComponent("hero"),
+    homeHero: makeNodeComponent("homeHero"),
     title: makeNodeComponent("title"),
     h1: makeNodeComponent("h1"),
-    bkgdimage: makeNodeComponent("bkgdimage"),
-    body: makeNodeComponent("body"),
+    homeBody: makeNodeComponent("homeBody"),
     intro: makeNodeComponent("intro"),
     text3: makeNodeComponent("text3"),
     title2: makeNodeComponent("title2"),
+    section: makeNodeComponent("section"),
+    section2: makeNodeComponent("section2"),
     bakerysolutions: makeNodeComponent("bakerysolutions"),
     image: makeNodeComponent("image"),
     text: makeNodeComponent("text"),
+    section3: makeNodeComponent("section3"),
     foodServiceAndRetailPartners: makeNodeComponent(
       "foodServiceAndRetailPartners"
     ),
@@ -2437,16 +2212,10 @@ export const PlasmicHome = Object.assign(
     child3: makeNodeComponent("child3"),
     box4: makeNodeComponent("box4"),
     child4: makeNodeComponent("child4"),
-    box5: makeNodeComponent("box5"),
-    child5: makeNodeComponent("child5"),
-    box6: makeNodeComponent("box6"),
-    child6: makeNodeComponent("child6"),
-    box7: makeNodeComponent("box7"),
-    child7: makeNodeComponent("child7"),
     cta: makeNodeComponent("cta"),
     frame52: makeNodeComponent("frame52"),
     buttonContainer: makeNodeComponent("buttonContainer"),
-    footer2: makeNodeComponent("footer2"),
+    homeFooter: makeNodeComponent("homeFooter"),
     footer: makeNodeComponent("footer"),
 
     // Metadata about props expected for PlasmicHome
@@ -2454,8 +2223,8 @@ export const PlasmicHome = Object.assign(
     internalArgProps: PlasmicHome__ArgProps,
 
     pageMetadata: generateDynamicMetadata(wrapQueriesWithLoadingProxy({}), {
-      pageRoute: "/home",
-      pagePath: "/home",
+      pageRoute: "/",
+      pagePath: "/",
       params: {},
       query: {}
     })

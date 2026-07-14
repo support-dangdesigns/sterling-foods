@@ -128,13 +128,12 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 100%;
+  width: 1000px;
   height: auto;
   max-width: 100%;
   justify-content: flex-start;
   align-items: center;
-  min-width: 0;
-  padding: 8px;
+  padding: 0px;
 }
 .form2:global(.__wab_instance) {
   display: flex;
@@ -149,7 +148,7 @@
   min-width: 0;
   padding: 8px;
 }
-.formField__w4JX9:global(.__wab_instance) {
+.formField__avigM:global(.__wab_instance) {
   width: 100%;
   margin-bottom: 24px;
   min-width: 0;
@@ -158,7 +157,7 @@
   max-width: 100%;
   object-fit: cover;
 }
-.formField__ayeVb:global(.__wab_instance) {
+.formField__tbdc7:global(.__wab_instance) {
   width: 100%;
   margin-bottom: 24px;
   min-width: 0;
@@ -170,12 +169,15 @@
 .button:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
+  text-align: center;
+  align-self: center;
 }
-.text__af39Z {
+.text__hqMpw {
   position: relative;
   width: 100%;
   height: auto;
   max-width: 100%;
+  text-align: center;
   min-width: 0;
 }
 .info {

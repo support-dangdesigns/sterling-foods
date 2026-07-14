@@ -60,7 +60,7 @@ import {
 } from "@plasmicapp/react-web/lib/host";
 
 import Header from "../../Header"; // plasmic-import: qmNXHiKWCTTQ/component
-import CtaBtn from "../../CtaBtn"; // plasmic-import: vaN8Gezs179c/component
+import PrimaryBtn from "../../PrimaryBtn"; // plasmic-import: TiffCyYLfuDQ/component
 import Footer from "../../Footer"; // plasmic-import: RbMtVh1ii_PZ/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/styleTokensProvider
@@ -140,7 +140,8 @@ export type PlasmicQualitySafety__OverridesType = {
   cta?: Flex__<"div">;
   h1?: Flex__<"h1">;
   h5?: Flex__<"h5">;
-  ctaBtn?: Flex__<typeof CtaBtn>;
+  buttonContainer?: Flex__<"div">;
+  primaryBtn?: Flex__<typeof PrimaryBtn>;
   footer?: Flex__<"div">;
 };
 
@@ -476,22 +477,26 @@ function PlasmicQualitySafety__RenderFunc(props: {
                 alt={""}
                 className={classNames(sty.img__bD13E)}
                 displayHeight={
-                  hasVariant(globalVariants, "screen", "smallerTablet")
+                  hasVariant(globalVariants, "screen", "smallTablet")
                     ? "auto"
                     : hasVariant(globalVariants, "screen", "laptop")
                       ? "100%"
-                      : "auto"
+                      : hasVariant(globalVariants, "screen", "smallDesktop")
+                        ? "100%"
+                        : "auto"
                 }
                 displayMaxHeight={"none"}
                 displayMaxWidth={"100%"}
                 displayMinHeight={"0"}
                 displayMinWidth={"0"}
                 displayWidth={
-                  hasVariant(globalVariants, "screen", "smallerTablet")
+                  hasVariant(globalVariants, "screen", "smallTablet")
                     ? "auto"
                     : hasVariant(globalVariants, "screen", "laptop")
                       ? "40%"
-                      : "auto"
+                      : hasVariant(globalVariants, "screen", "smallDesktop")
+                        ? "40%"
+                        : "auto"
                 }
                 loading={"lazy"}
                 src={{
@@ -511,22 +516,26 @@ function PlasmicQualitySafety__RenderFunc(props: {
                 alt={""}
                 className={classNames(sty.img___7MYl3)}
                 displayHeight={
-                  hasVariant(globalVariants, "screen", "smallerTablet")
+                  hasVariant(globalVariants, "screen", "smallTablet")
                     ? "auto"
                     : hasVariant(globalVariants, "screen", "laptop")
                       ? "100%"
-                      : "auto"
+                      : hasVariant(globalVariants, "screen", "smallDesktop")
+                        ? "100%"
+                        : "auto"
                 }
                 displayMaxHeight={"none"}
                 displayMaxWidth={"100%"}
                 displayMinHeight={"0"}
                 displayMinWidth={"0"}
                 displayWidth={
-                  hasVariant(globalVariants, "screen", "smallerTablet")
+                  hasVariant(globalVariants, "screen", "smallTablet")
                     ? "auto"
                     : hasVariant(globalVariants, "screen", "laptop")
                       ? "40%"
-                      : "auto"
+                      : hasVariant(globalVariants, "screen", "smallDesktop")
+                        ? "40%"
+                        : "auto"
                 }
                 loading={"lazy"}
                 src={{
@@ -926,22 +935,26 @@ function PlasmicQualitySafety__RenderFunc(props: {
                 alt={""}
                 className={classNames(sty.img__hvdaQ)}
                 displayHeight={
-                  hasVariant(globalVariants, "screen", "smallerTablet")
+                  hasVariant(globalVariants, "screen", "smallTablet")
                     ? "auto"
                     : hasVariant(globalVariants, "screen", "laptop")
                       ? "100%"
-                      : "auto"
+                      : hasVariant(globalVariants, "screen", "smallDesktop")
+                        ? "100%"
+                        : "auto"
                 }
                 displayMaxHeight={"none"}
                 displayMaxWidth={"100%"}
                 displayMinHeight={"0"}
                 displayMinWidth={"0"}
                 displayWidth={
-                  hasVariant(globalVariants, "screen", "smallerTablet")
+                  hasVariant(globalVariants, "screen", "smallTablet")
                     ? "auto"
                     : hasVariant(globalVariants, "screen", "laptop")
                       ? "40%"
-                      : "auto"
+                      : hasVariant(globalVariants, "screen", "smallDesktop")
+                        ? "40%"
+                        : "auto"
                 }
                 loading={"lazy"}
                 src={{
@@ -998,7 +1011,7 @@ function PlasmicQualitySafety__RenderFunc(props: {
                 >
                   {hasVariant(globalVariants, "screen", "desktop")
                     ? "Whether developing a new product or scaling an existing program, Sterling Foods is committed to delivering solutions supported by robust food safety systems, disciplined quality practices, and a culture focused on continuous improvement."
-                    : "Sterling Foods serves a diverse range of foodservice and retail channels, delivering innovative bakery solutions tailored to the unique needs of each market. Our customer-first approach, flexible manufacturing capabilities, and commitment to quality help partners bring differentiated products to market with confidence."}
+                    : "Whether developing a new product or scaling an existing program, Sterling Foods is committed to delivering solutions supported by robust food safety systems, disciplined quality practices, and a culture focused on continuous improvement."}
                 </p>
               </div>
               <div className={classNames("all", sty.freeBox__nmMmx)}>
@@ -1132,11 +1145,23 @@ function PlasmicQualitySafety__RenderFunc(props: {
             >
               {"Let\u2019s create something exceptional together."}
             </h5>
-            <CtaBtn
-              data-plasmic-name={"ctaBtn"}
-              data-plasmic-override={overrides.ctaBtn}
-              className={classNames("__wab_instance", sty.ctaBtn)}
-            />
+            <div
+              data-plasmic-name={"buttonContainer"}
+              data-plasmic-override={overrides.buttonContainer}
+              className={classNames("all", sty.buttonContainer)}
+            >
+              <PrimaryBtn
+                data-plasmic-name={"primaryBtn"}
+                data-plasmic-override={overrides.primaryBtn}
+                className={classNames("__wab_instance", sty.primaryBtn)}
+              >
+                <div
+                  className={classNames("all", "__wab_text", sty.text__rnOn9)}
+                >
+                  {"Start a Conversation"}
+                </div>
+              </PrimaryBtn>
+            </div>
           </div>
           <div
             data-plasmic-name={"footer"}
@@ -1183,7 +1208,8 @@ const PlasmicDescendants = {
     "cta",
     "h1",
     "h5",
-    "ctaBtn",
+    "buttonContainer",
+    "primaryBtn",
     "footer"
   ],
   header: ["header"],
@@ -1252,10 +1278,11 @@ const PlasmicDescendants = {
   list3: ["list3"],
   qualityYouCanTrust: ["qualityYouCanTrust", "title4"],
   title4: ["title4"],
-  cta: ["cta", "h1", "h5", "ctaBtn"],
+  cta: ["cta", "h1", "h5", "buttonContainer", "primaryBtn"],
   h1: ["h1"],
   h5: ["h5"],
-  ctaBtn: ["ctaBtn"],
+  buttonContainer: ["buttonContainer", "primaryBtn"],
+  primaryBtn: ["primaryBtn"],
   footer: ["footer"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -1290,7 +1317,8 @@ type NodeDefaultElementType = {
   cta: "div";
   h1: "h1";
   h5: "h5";
-  ctaBtn: typeof CtaBtn;
+  buttonContainer: "div";
+  primaryBtn: typeof PrimaryBtn;
   footer: "div";
 };
 
@@ -1383,7 +1411,8 @@ export const PlasmicQualitySafety = Object.assign(
     cta: makeNodeComponent("cta"),
     h1: makeNodeComponent("h1"),
     h5: makeNodeComponent("h5"),
-    ctaBtn: makeNodeComponent("ctaBtn"),
+    buttonContainer: makeNodeComponent("buttonContainer"),
+    primaryBtn: makeNodeComponent("primaryBtn"),
     footer: makeNodeComponent("footer"),
 
     // Metadata about props expected for PlasmicQualitySafety

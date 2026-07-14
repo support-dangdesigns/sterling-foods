@@ -59,15 +59,8 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
-import {
-  executePlasmicDataOp,
-  usePlasmicDataOp,
-  usePlasmicInvalidate
-} from "@plasmicapp/react-web/lib/data-sources";
-
 import Button from "../../Button"; // plasmic-import: IWAsz3YfYlWO/component
 import IsopenNav from "../../IsopenNav"; // plasmic-import: gGkWrZU4DY6g/component
-import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/styleTokensProvider
 
@@ -161,34 +154,13 @@ function PlasmicHeader__RenderFunc(props: {
 
   const globalVariants = _useGlobalVariants();
 
-  let [$queries, setDollarQueries] = React.useState<
-    Record<string, ReturnType<typeof usePlasmicDataOp>>
-  >({});
   const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
-    $queries: $queries,
+    $queries: {},
     $q: {},
     $refs
   });
-
-  const new$Queries: Record<string, ReturnType<typeof usePlasmicDataOp>> = {
-    query: usePlasmicDataOp(() => {
-      return {
-        sourceId: "oysuYFSoAdb9rhuPV27pRM",
-        opId: "e0266245-c9ac-4703-83a2-146418cf57c2",
-        userArgs: {},
-        cacheKey: `plasmic.$.e0266245-c9ac-4703-83a2-146418cf57c2.$.`,
-        invalidatedKeys: null,
-        roleId: null
-      };
-    })
-  };
-  if (Object.keys(new$Queries).some(k => new$Queries[k] !== $queries[k])) {
-    setDollarQueries(new$Queries);
-
-    $queries = new$Queries;
-  }
 
   const styleTokensClassNames = _useStyleTokens();
 
@@ -304,19 +276,37 @@ function PlasmicHeader__RenderFunc(props: {
           </div>
         </div>
       ) : null}
-      {(() => {
-        try {
-          return $state.expanded;
-        } catch (e) {
-          if (
-            e instanceof TypeError ||
-            e?.plasmicType === "PlasmicUndefinedDataError"
-          ) {
-            return false;
-          }
-          throw e;
-        }
-      })() ? (
+      {(
+        hasVariant(globalVariants, "screen", "smallTablet")
+          ? (() => {
+              try {
+                return $state.expanded;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return true;
+                }
+                throw e;
+              }
+            })()
+          : hasVariant(globalVariants, "screen", "large")
+            ? (() => {
+                try {
+                  return $state.expanded;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })()
+            : true
+      ) ? (
         <div
           data-plasmic-name={"expandMenu"}
           data-plasmic-override={overrides.expandMenu}

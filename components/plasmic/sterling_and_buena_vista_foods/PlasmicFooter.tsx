@@ -61,7 +61,6 @@ import {
 
 import SocialBtns from "../../SocialBtns"; // plasmic-import: 5db6kxlVpzXq/component
 import MenuList from "../../MenuList"; // plasmic-import: -6leV5wneOe9/component
-import Address from "../../Address"; // plasmic-import: UaqZuY9dmASC/component
 import FooterLinks from "../../FooterLinks"; // plasmic-import: oZjw7jibmivD/component
 import DividerLine from "../../DividerLine"; // plasmic-import: 4JeLlkbzO3aD/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/projectModule
@@ -70,6 +69,8 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import sty from "./PlasmicFooter.module.css"; // plasmic-import: RbMtVh1ii_PZ/css
+
+import MapPinFilledIcon from "../library_tabler_3_2_icons/icons/PlasmicIcon__MapPinFilled"; // plasmic-import: zXkaTx8ISMNO/icon
 
 createPlasmicElementProxy;
 
@@ -90,6 +91,9 @@ export type PlasmicFooter__OverridesType = {
   locations2?: Flex__<"div">;
   menuList?: Flex__<typeof MenuList>;
   locations?: Flex__<"div">;
+  address?: Flex__<"div">;
+  address2?: Flex__<"div">;
+  address3?: Flex__<"div">;
   footerMenu?: Flex__<"div">;
   clientLogin?: Flex__<"div">;
   clientLogin2?: Flex__<"div">;
@@ -161,201 +165,224 @@ function PlasmicFooter__RenderFunc(props: {
         sty.footer
       )}
     >
-      <div className={classNames("all", sty.freeBox__wGTlk)}>
-        <div className={classNames("all", sty.freeBox__cBvFy)}>
-          <div
-            data-plasmic-name={"logo"}
-            data-plasmic-override={overrides.logo}
-            className={classNames("all", sty.logo)}
-          />
+      <div className={classNames("all", sty.freeBox__pNiq)}>
+        <div className={classNames("all", sty.freeBox__wGTlk)}>
+          <div className={classNames("all", sty.freeBox__cBvFy)}>
+            <div
+              data-plasmic-name={"logo"}
+              data-plasmic-override={overrides.logo}
+              className={classNames("all", sty.logo)}
+            />
 
-          <div
-            data-plasmic-name={"text"}
-            data-plasmic-override={overrides.text}
-            className={classNames("all", "__wab_text", sty.text)}
-          >
-            {hasVariant(globalVariants, "screen", "smallerTablet")
-              ? "From restaurants and non-commercial foodservice to convenience stores and in-store bakeries, we partner\r with our customers to deliver high-quality baked goods\rand snack products tailored to their needs."
-              : "From restaurants and non-commercial foodservice to convenience stores and in-store bakeries, we partner\r\nwith our customers to deliver high-quality baked goods\rand snack products tailored to their needs."}
-          </div>
-          <SocialBtns
-            data-plasmic-name={"socialBtns"}
-            data-plasmic-override={overrides.socialBtns}
-            className={classNames("__wab_instance", sty.socialBtns)}
-          />
-        </div>
-        <div className={classNames("all", sty.freeBox__g31S3)}>
-          <div
-            data-plasmic-name={"locations2"}
-            data-plasmic-override={overrides.locations2}
-            className={classNames("all", sty.locations2)}
-          >
-            <div className={classNames("all", "__wab_text", sty.text__eeOut)}>
-              {hasVariant(globalVariants, "screen", "desktop")
-                ? "Quick Links"
-                : "Quick Links"}
+            <div
+              data-plasmic-name={"text"}
+              data-plasmic-override={overrides.text}
+              className={classNames("all", "__wab_text", sty.text)}
+            >
+              {hasVariant(globalVariants, "screen", "smallTablet")
+                ? "From restaurants and non-commercial foodservice to convenience stores and in-store bakeries, we partner\r with our customers to deliver high-quality baked goods\rand snack products tailored to their needs."
+                : "From restaurants and non-commercial foodservice to convenience stores and in-store bakeries, we partner\r\nwith our customers to deliver high-quality baked goods\rand snack products tailored to their needs."}
             </div>
-            <MenuList
-              data-plasmic-name={"menuList"}
-              data-plasmic-override={overrides.menuList}
-              className={classNames("__wab_instance", sty.menuList)}
+            <SocialBtns
+              data-plasmic-name={"socialBtns"}
+              data-plasmic-override={overrides.socialBtns}
+              className={classNames("__wab_instance", sty.socialBtns)}
             />
           </div>
-          <div
-            data-plasmic-name={"locations"}
-            data-plasmic-override={overrides.locations}
-            className={classNames("all", sty.locations)}
-          >
-            <div className={classNames("all", "__wab_text", sty.text__brMmd)}>
-              {"Locations"}
-            </div>
-            <Address
-              className={classNames("__wab_instance", sty.address__j3Si2)}
-              slot={
-                <div
-                  className={classNames("all", "__wab_text", sty.text__dqpy3)}
-                >
-                  {
-                    "1075 Arion Parkway\nSan Antonio, TX 78216\r\n210-490-1669\r"
-                  }
-                </div>
-              }
+          <div className={classNames("all", sty.freeBox__g31S3)}>
+            <div
+              data-plasmic-name={"locations2"}
+              data-plasmic-override={overrides.locations2}
+              className={classNames("all", sty.locations2)}
             >
-              <div className={classNames("all", "__wab_text", sty.text__ehFzL)}>
-                {"San Antonio, Texas (Headquarters)\r"}
-              </div>
-            </Address>
-            <Address
-              className={classNames("__wab_instance", sty.address__fvT06)}
-              slot={
-                <div
-                  className={classNames("all", "__wab_text", sty.text__fpJru)}
-                >
-                  {
-                    "1075 Arion Parkway\nSan Antonio, TX 78216\r\n210-490-1669\r"
-                  }
-                </div>
-              }
-            >
-              <div className={classNames("all", "__wab_text", sty.text__be4X)}>
+              <div className={classNames("all", "__wab_text", sty.text__eeOut)}>
                 {hasVariant(globalVariants, "screen", "desktop")
-                  ? "Azusa, California"
-                  : "San Antonio, Texas (Headquarters)\r"}
+                  ? "Quick Links"
+                  : "Quick Links"}
               </div>
-            </Address>
-            <Address
-              className={classNames("__wab_instance", sty.address__pv9Si)}
-              slot={
+              <MenuList
+                data-plasmic-name={"menuList"}
+                data-plasmic-override={overrides.menuList}
+                className={classNames("__wab_instance", sty.menuList)}
+              />
+            </div>
+            <div
+              data-plasmic-name={"locations"}
+              data-plasmic-override={overrides.locations}
+              className={classNames("all", sty.locations)}
+            >
+              <div className={classNames("all", "__wab_text", sty.text__brMmd)}>
+                {"Locations"}
+              </div>
+              <div
+                data-plasmic-name={"address"}
+                data-plasmic-override={overrides.address}
+                className={classNames("all", sty.address)}
+              >
+                <div className={classNames("all", sty.freeBox__sgOsE)}>
+                  <MapPinFilledIcon
+                    className={classNames("all", sty.svg___20G5D)}
+                    role={"img"}
+                  />
+
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__uDprX)}
+                  >
+                    {"San Antonio, Texas (Headquarters)\r"}
+                  </div>
+                </div>
                 <div
-                  className={classNames("all", "__wab_text", sty.text__qsnQo)}
+                  className={classNames("all", "__wab_text", sty.text__qkd0N)}
                 >
                   {
                     "1075 Arion Parkway\nSan Antonio, TX 78216\r\n210-490-1669\r"
                   }
                 </div>
-              }
-            >
-              <div className={classNames("all", "__wab_text", sty.text__r3KQy)}>
-                {hasVariant(globalVariants, "screen", "laptop")
-                  ? "Union City, California"
-                  : "San Antonio, Texas (Headquarters)\r"}
               </div>
-            </Address>
+              <div
+                data-plasmic-name={"address2"}
+                data-plasmic-override={overrides.address2}
+                className={classNames("all", sty.address2)}
+              >
+                <div className={classNames("all", sty.freeBox__kjgJi)}>
+                  <MapPinFilledIcon
+                    className={classNames("all", sty.svg___1LNbj)}
+                    role={"img"}
+                  />
+
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__jOnC3)}
+                  >
+                    {"Azusa, California"}
+                  </div>
+                </div>
+                <div
+                  className={classNames("all", "__wab_text", sty.text__qNiIg)}
+                >
+                  {
+                    "1075 Arion Parkway\nSan Antonio, TX 78216\r\n210-490-1669\r"
+                  }
+                </div>
+              </div>
+              <div
+                data-plasmic-name={"address3"}
+                data-plasmic-override={overrides.address3}
+                className={classNames("all", sty.address3)}
+              >
+                <div className={classNames("all", sty.freeBox__gquwb)}>
+                  <MapPinFilledIcon
+                    className={classNames("all", sty.svg__x5Ov2)}
+                    role={"img"}
+                  />
+
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__k2Rb6)}
+                  >
+                    {"Union City, California"}
+                  </div>
+                </div>
+                <div className={classNames("all", "__wab_text", sty.text__pAi)}>
+                  {
+                    "Union City, California\n33300 Western Ave\nUnion City CA, 94587\n510-487-2600"
+                  }
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div className={classNames("all", sty.freeBox___9KFeZ)}>
-        <div
-          data-plasmic-name={"footerMenu"}
-          data-plasmic-override={overrides.footerMenu}
-          className={classNames("all", sty.footerMenu)}
-        >
-          <FooterLinks
-            className={classNames("__wab_instance", sty.footerLinks__mnfMc)}
+        <div className={classNames("all", sty.freeBox___9KFeZ)}>
+          <div
+            data-plasmic-name={"footerMenu"}
+            data-plasmic-override={overrides.footerMenu}
+            className={classNames("all", sty.footerMenu)}
           >
-            <div
-              data-plasmic-name={"clientLogin"}
-              data-plasmic-override={overrides.clientLogin}
-              className={classNames("all", "__wab_text", sty.clientLogin)}
+            <FooterLinks
+              className={classNames("__wab_instance", sty.footerLinks__mnfMc)}
             >
-              {"Client Login"}
-            </div>
-          </FooterLinks>
-          <DividerLine
-            className={classNames("__wab_instance", sty.dividerLine___2Km7Z)}
-          />
+              <div
+                data-plasmic-name={"clientLogin"}
+                data-plasmic-override={overrides.clientLogin}
+                className={classNames("all", "__wab_text", sty.clientLogin)}
+              >
+                {"Client Login"}
+              </div>
+            </FooterLinks>
+            <DividerLine
+              className={classNames("__wab_instance", sty.dividerLine___2Km7Z)}
+            />
 
-          <FooterLinks
-            className={classNames("__wab_instance", sty.footerLinks__yryc)}
-          >
-            <div
-              data-plasmic-name={"clientLogin2"}
-              data-plasmic-override={overrides.clientLogin2}
-              className={classNames("all", "__wab_text", sty.clientLogin2)}
+            <FooterLinks
+              className={classNames("__wab_instance", sty.footerLinks__yryc)}
             >
-              {"Privacy Policy"}
-            </div>
-          </FooterLinks>
-          <DividerLine
-            className={classNames("__wab_instance", sty.dividerLine__hkj9I)}
-          />
+              <div
+                data-plasmic-name={"clientLogin2"}
+                data-plasmic-override={overrides.clientLogin2}
+                className={classNames("all", "__wab_text", sty.clientLogin2)}
+              >
+                {"Privacy Policy"}
+              </div>
+            </FooterLinks>
+            <DividerLine
+              className={classNames("__wab_instance", sty.dividerLine__hkj9I)}
+            />
 
-          <FooterLinks
-            className={classNames("__wab_instance", sty.footerLinks___1Pm4C)}
-          >
-            <div
-              data-plasmic-name={"clientLogin3"}
-              data-plasmic-override={overrides.clientLogin3}
-              className={classNames("all", "__wab_text", sty.clientLogin3)}
+            <FooterLinks
+              className={classNames("__wab_instance", sty.footerLinks___1Pm4C)}
             >
-              {"Disclosure"}
-            </div>
-          </FooterLinks>
-          <DividerLine
-            className={classNames("__wab_instance", sty.dividerLine___0Jplz)}
-          />
+              <div
+                data-plasmic-name={"clientLogin3"}
+                data-plasmic-override={overrides.clientLogin3}
+                className={classNames("all", "__wab_text", sty.clientLogin3)}
+              >
+                {"Disclosure"}
+              </div>
+            </FooterLinks>
+            <DividerLine
+              className={classNames("__wab_instance", sty.dividerLine___0Jplz)}
+            />
 
-          <FooterLinks
-            data-plasmic-name={"terms"}
-            data-plasmic-override={overrides.terms}
-            className={classNames("__wab_instance", sty.terms)}
-          >
-            <PlasmicLink__
-              data-plasmic-name={"termsAndConditions"}
-              data-plasmic-override={overrides.termsAndConditions}
-              className={classNames(
-                "all",
-                "a",
-                "a__uyaK1",
-                "__wab_text",
-                sty.termsAndConditions
-              )}
-              component={Link}
-              href={"https://www.plasmic.app/"}
-              legacyBehavior={false}
-              platform={"nextjs"}
+            <FooterLinks
+              data-plasmic-name={"terms"}
+              data-plasmic-override={overrides.terms}
+              className={classNames("__wab_instance", sty.terms)}
             >
-              {"Terms of Use"}
-            </PlasmicLink__>
-          </FooterLinks>
-          <DividerLine
-            className={classNames("__wab_instance", sty.dividerLine__cx0Jy)}
-          />
+              <PlasmicLink__
+                data-plasmic-name={"termsAndConditions"}
+                data-plasmic-override={overrides.termsAndConditions}
+                className={classNames(
+                  "all",
+                  "a",
+                  "a__uyaK1",
+                  "__wab_text",
+                  sty.termsAndConditions
+                )}
+                component={Link}
+                href={"https://www.plasmic.app/"}
+                legacyBehavior={false}
+                platform={"nextjs"}
+              >
+                {"Terms of Use"}
+              </PlasmicLink__>
+            </FooterLinks>
+            <DividerLine
+              className={classNames("__wab_instance", sty.dividerLine__cx0Jy)}
+            />
 
-          <FooterLinks
-            className={classNames("__wab_instance", sty.footerLinks__o5CAc)}
-          >
-            <div
-              data-plasmic-name={"clientLogin5"}
-              data-plasmic-override={overrides.clientLogin5}
-              className={classNames("all", "__wab_text", sty.clientLogin5)}
+            <FooterLinks
+              className={classNames("__wab_instance", sty.footerLinks__o5CAc)}
             >
-              {"Accessibility"}
-            </div>
-          </FooterLinks>
-        </div>
-        <div className={classNames("all", "__wab_text", sty.text__nL8Zp)}>
-          {"\u00a9 Sterling Foods, Inc. All Rights Reserved"}
+              <div
+                data-plasmic-name={"clientLogin5"}
+                data-plasmic-override={overrides.clientLogin5}
+                className={classNames("all", "__wab_text", sty.clientLogin5)}
+              >
+                {"Accessibility"}
+              </div>
+            </FooterLinks>
+          </div>
+          <div className={classNames("all", "__wab_text", sty.text__nL8Zp)}>
+            {"\u00a9 Sterling Foods, Inc. All Rights Reserved"}
+          </div>
         </div>
       </div>
       <div className={classNames("all", sty.freeBox__pcGC)} />
@@ -372,6 +399,9 @@ const PlasmicDescendants = {
     "locations2",
     "menuList",
     "locations",
+    "address",
+    "address2",
+    "address3",
     "footerMenu",
     "clientLogin",
     "clientLogin2",
@@ -385,7 +415,10 @@ const PlasmicDescendants = {
   socialBtns: ["socialBtns"],
   locations2: ["locations2", "menuList"],
   menuList: ["menuList"],
-  locations: ["locations"],
+  locations: ["locations", "address", "address2", "address3"],
+  address: ["address"],
+  address2: ["address2"],
+  address3: ["address3"],
   footerMenu: [
     "footerMenu",
     "clientLogin",
@@ -413,6 +446,9 @@ type NodeDefaultElementType = {
   locations2: "div";
   menuList: typeof MenuList;
   locations: "div";
+  address: "div";
+  address2: "div";
+  address3: "div";
   footerMenu: "div";
   clientLogin: "div";
   clientLogin2: "div";
@@ -490,6 +526,9 @@ export const PlasmicFooter = Object.assign(
     locations2: makeNodeComponent("locations2"),
     menuList: makeNodeComponent("menuList"),
     locations: makeNodeComponent("locations"),
+    address: makeNodeComponent("address"),
+    address2: makeNodeComponent("address2"),
+    address3: makeNodeComponent("address3"),
     footerMenu: makeNodeComponent("footerMenu"),
     clientLogin: makeNodeComponent("clientLogin"),
     clientLogin2: makeNodeComponent("clientLogin2"),

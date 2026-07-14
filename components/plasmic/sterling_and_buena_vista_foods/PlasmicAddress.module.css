@@ -11,6 +11,15 @@
   min-width: 0;
   padding: 0px 0px 0px 8px;
 }
+@media (max-width: 530px) {
+  .root {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    justify-self: flex-start;
+    min-width: 0;
+  }
+}
 .svg {
   object-fit: cover;
   max-width: 100%;

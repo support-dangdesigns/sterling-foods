@@ -1,0 +1,1866 @@
+.root {
+  display: grid;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  align-content: flex-start;
+  justify-items: center;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  min-height: 0;
+  grid-template-columns:
+    var(--plsmc-viewport-gap) 1fr minmax(0, var(--plsmc-wide-chunk))
+    min(
+      var(--plsmc-standard-width),
+      calc(100% - var(--plsmc-viewport-gap) - var(--plsmc-viewport-gap))
+    )
+    minmax(0, var(--plsmc-wide-chunk)) 1fr var(--plsmc-viewport-gap);
+}
+.root > * {
+  grid-column: 4;
+}
+@media (max-width: 2000px) {
+  .root > * {
+    grid-column: 4;
+  }
+}
+@media (max-width: 1280px) {
+  .root > * {
+    grid-column: 4;
+  }
+}
+@media (max-width: 1200px) {
+  .root > * {
+    grid-column: 4;
+  }
+}
+@media (max-width: 1024px) {
+  .root > * {
+    grid-column: 4;
+  }
+}
+.header:global(.__wab_instance) {
+  max-width: 100%;
+  width: 100%;
+  grid-column-start: 1 !important;
+  grid-column-end: -1 !important;
+  display: none;
+}
+@media (max-width: 2000px) {
+  .header:global(.__wab_instance) {
+    display: flex;
+  }
+}
+.aboutUsHero {
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: url("/plasmic/sterling_and_buena_vista_foods/images/heroPng2.png") top 50% left 50% / cover no-repeat;
+  grid-column-start: 1 !important;
+  grid-column-end: -1 !important;
+  display: none;
+  padding: 0px;
+}
+@media (max-width: 2000px) {
+  .aboutUsHero {
+    display: flex;
+  }
+}
+@media (max-width: 1024px) {
+  .aboutUsHero {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+.text___3Kaf6 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  z-index: 1;
+  font-size: var(--token-TQ01AK4kGGLa);
+  color: var(--token-sP5FKk2rRQuW);
+  align-self: center;
+  text-align: center;
+  min-width: 0;
+}
+.aboutUsSection {
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 830px;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  row-gap: 40px;
+  justify-self: flex-start;
+  grid-column-start: 3 !important;
+  grid-column-end: -3 !important;
+  display: none;
+  padding: 0px;
+}
+@media (max-width: 2000px) {
+  .aboutUsSection {
+    display: flex;
+  }
+}
+@media (max-width: 1280px) {
+  .aboutUsSection {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+@media (max-width: 1200px) {
+  .aboutUsSection {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .aboutUsSection {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    column-gap: 0px;
+    min-height: 0;
+    padding: 50px 30px;
+  }
+}
+@media (max-width: 414px) {
+  .aboutUsSection {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+.heading {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  column-gap: 20px;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  min-width: 0;
+  padding: 0px;
+}
+.text__lcSl {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-Gx156sR9ht1r);
+  text-align: center;
+  font-family: var(--token-3FFZ7xNHqr9C);
+  font-size: 85px;
+}
+.text__c1BdB {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  font-size: var(--token-KiAZW0gIrhlw);
+  color: var(--token-I4qaFqA_B1z8);
+  text-align: center;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 20px;
+  min-width: 0;
+  padding: 0px;
+}
+.text__o4JiD {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  text-align: center;
+  font-family: "Avenir LT Std";
+  line-height: 36px;
+  min-width: 0;
+}
+.text__lyDF {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  text-align: center;
+  font-family: "Avenir LT Std";
+  line-height: 36px;
+  min-width: 0;
+}
+.text2 {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  min-width: 0;
+  padding: 0px;
+}
+@media (max-width: 1024px) {
+  .text2 {
+    flex-wrap: wrap;
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    row-gap: 10px;
+    column-gap: 10px;
+  }
+}
+.text__rBfOg {
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-I4qaFqA_B1z8);
+  font-size: 28px;
+  line-height: 32px;
+}
+@media (max-width: 1024px) {
+  .text__rBfOg {
+    text-align: center;
+  }
+}
+.svg__pTs9D {
+  object-fit: cover;
+  max-width: 100%;
+  height: 28px;
+}
+.text__yoGdU {
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-I4qaFqA_B1z8);
+  font-size: 28px;
+  text-align: center;
+  line-height: 32px;
+}
+@media (max-width: 1024px) {
+  .text__yoGdU {
+    text-align: center;
+  }
+}
+.svg__zHk7I {
+  object-fit: cover;
+  max-width: 100%;
+  height: 28px;
+}
+.text__mdrFf {
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-I4qaFqA_B1z8);
+  font-size: 28px;
+  line-height: 32px;
+}
+@media (max-width: 1024px) {
+  .text__mdrFf {
+    text-align: center;
+  }
+}
+.text3 {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0px;
+}
+@media (max-width: 1024px) {
+  .text3 {
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 20px;
+  min-width: 0;
+  padding: 0px;
+}
+@media (max-width: 1024px) {
+  .box {
+    padding: 10px;
+  }
+}
+.h1__rNcon {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-I4qaFqA_B1z8);
+  text-align: center;
+  font-size: 88px;
+  min-width: 0;
+}
+.text__jRnIg {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-size: 28px;
+  font-family: "Avenir LT Std";
+  text-align: center;
+  line-height: 32px;
+  min-width: 0;
+}
+.box2 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 20px;
+  min-width: 0;
+  padding: 0px;
+}
+@media (max-width: 1024px) {
+  .box2 {
+    padding: 10px;
+  }
+}
+.h1__ha1KI {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-I4qaFqA_B1z8);
+  text-align: center;
+  font-size: 88px;
+  min-width: 0;
+}
+.text__tKMx {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-size: 28px;
+  font-family: "Avenir LT Std";
+  text-align: center;
+  line-height: 32px;
+  min-width: 0;
+}
+.box3 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 20px;
+  min-width: 0;
+  padding: 0px;
+}
+@media (max-width: 1024px) {
+  .box3 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    column-gap: 0px;
+    padding: 10px;
+  }
+}
+.h1__ygZqR {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-I4qaFqA_B1z8);
+  text-align: center;
+  font-size: 88px;
+  min-width: 0;
+}
+.text__isCca {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-size: 28px;
+  font-family: "Avenir LT Std";
+  text-align: center;
+  line-height: 32px;
+  min-width: 0;
+}
+.aboutUsSection2 {
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 1045px;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  background:
+    url("/plasmic/sterling_and_buena_vista_foods/images/backgroundJpg.jpg") top 50% left 50% / cover repeat,
+    #f5e9d4;
+  row-gap: 90px;
+  grid-column-start: 1 !important;
+  grid-column-end: -1 !important;
+  display: none;
+  padding: 0px;
+}
+@media (max-width: 2000px) {
+  .aboutUsSection2 {
+    display: flex;
+  }
+}
+@media (max-width: 1280px) {
+  .aboutUsSection2 {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+@media (max-width: 1200px) {
+  .aboutUsSection2 {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .aboutUsSection2 {
+    height: 100%;
+    min-height: 0;
+    padding: 50px 30px;
+  }
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 40px;
+  padding: 0px;
+}
+@media (max-width: 1024px) {
+  .wrapper {
+    height: auto;
+  }
+}
+.heading2 {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  column-gap: 20px;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  min-width: 0;
+  padding: 0px;
+}
+@media (max-width: 1024px) {
+  .heading2 {
+    height: auto;
+    width: 100%;
+    min-width: 0;
+  }
+}
+.text__ixm9 {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-Gx156sR9ht1r);
+  text-align: center;
+  font-family: var(--token-3FFZ7xNHqr9C);
+  font-size: 85px;
+  align-self: center;
+}
+.text__d5SCr {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  font-size: var(--token-KiAZW0gIrhlw);
+  color: var(--token-I4qaFqA_B1z8);
+  text-align: center;
+  line-height: 50px;
+}
+.text4 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 20px;
+  min-width: 0;
+  padding: 0px;
+}
+.text__gpIyH {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  text-align: center;
+  font-family: "Avenir LT Std";
+  line-height: 32px;
+  min-width: 0;
+}
+.group {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 1335px;
+  height: auto;
+  max-width: 100%;
+  column-gap: 30px;
+  padding: 0px;
+}
+@media (max-width: 1024px) {
+  .group {
+    justify-content: center;
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    height: auto;
+    column-gap: 0px;
+  }
+}
+.boxes {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  row-gap: 20px;
+  min-width: 0;
+  min-height: 0;
+  padding: 0px;
+}
+@media (max-width: 1024px) {
+  .boxes {
+    height: auto;
+  }
+}
+.item {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: var(--token-sP5FKk2rRQuW);
+  column-gap: 20px;
+  min-width: 0;
+  border-radius: 27px;
+  padding: 25px;
+}
+.icon {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 20%;
+  min-width: 0;
+  padding: 0px;
+}
+@media (max-width: 1024px) {
+  .icon {
+    max-width: 10%;
+  }
+}
+.img___8UqN {
+  object-fit: cover;
+  max-width: 100%;
+}
+.img___8UqN > picture > img {
+  object-fit: cover;
+}
+.text5 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 70%;
+  row-gap: 15px;
+  min-width: 0;
+  padding: 0px;
+}
+@media (max-width: 1024px) {
+  .text5 {
+    max-width: 90%;
+  }
+}
+.text__m9HKz {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-size: 24px;
+  color: var(--token-I4qaFqA_B1z8);
+  line-height: 26px;
+  min-width: 0;
+}
+.text__xClBx {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-size: 16px;
+  color: var(--token-Gx156sR9ht1r);
+  line-height: 20px;
+  font-family: "Avenir LT Std";
+  min-width: 0;
+}
+@media (max-width: 1024px) {
+  .text__xClBx {
+    line-height: 20px;
+  }
+}
+.item2 {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: var(--token-sP5FKk2rRQuW);
+  column-gap: 20px;
+  min-width: 0;
+  border-radius: 27px;
+  padding: 25px;
+}
+.icon2 {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 20%;
+  min-width: 0;
+  padding: 0px;
+}
+@media (max-width: 1024px) {
+  .icon2 {
+    max-width: 10%;
+  }
+}
+.img__px2Xw {
+  object-fit: cover;
+  max-width: 100%;
+}
+.img__px2Xw > picture > img {
+  object-fit: cover;
+}
+.text6 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 70%;
+  row-gap: 15px;
+  min-width: 0;
+  padding: 0px;
+}
+@media (max-width: 1024px) {
+  .text6 {
+    max-width: 90%;
+  }
+}
+.text__rdBfl {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-size: 24px;
+  color: var(--token-I4qaFqA_B1z8);
+  line-height: 26px;
+  min-width: 0;
+}
+.text__q8AI {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-size: 16px;
+  color: var(--token-Gx156sR9ht1r);
+  line-height: 20px;
+  font-family: "Avenir LT Std";
+  min-width: 0;
+}
+@media (max-width: 1024px) {
+  .text__q8AI {
+    line-height: 20px;
+  }
+}
+.item3 {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: var(--token-sP5FKk2rRQuW);
+  column-gap: 20px;
+  min-width: 0;
+  border-radius: 27px;
+  padding: 25px;
+}
+.icon3 {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 20%;
+  min-width: 0;
+  padding: 0px;
+}
+@media (max-width: 1024px) {
+  .icon3 {
+    max-width: 10%;
+  }
+}
+.img__dIgdX {
+  object-fit: cover;
+  max-width: 100%;
+}
+.img__dIgdX > picture > img {
+  object-fit: cover;
+}
+.text7 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 70%;
+  row-gap: 15px;
+  min-width: 0;
+  padding: 0px;
+}
+@media (max-width: 1024px) {
+  .text7 {
+    max-width: 90%;
+  }
+}
+.text__lt6Tc {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-size: 24px;
+  color: var(--token-I4qaFqA_B1z8);
+  line-height: 26px;
+  min-width: 0;
+}
+.text___193Le {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-size: 16px;
+  color: var(--token-Gx156sR9ht1r);
+  line-height: 20px;
+  font-family: "Avenir LT Std";
+  min-width: 0;
+}
+@media (max-width: 1024px) {
+  .text___193Le {
+    line-height: 20px;
+  }
+}
+.image {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  background:
+    url("/plasmic/sterling_and_buena_vista_foods/images/imagePng.png") top 50% left 50% / contain no-repeat,
+    url("/plasmic/sterling_and_buena_vista_foods/images/ellipse3Png.png") top 50% left 50% / contain no-repeat;
+  min-width: 0;
+  padding: 0px;
+}
+@media (max-width: 1024px) {
+  .image {
+    align-items: stretch;
+    height: 300px;
+    width: auto;
+    flex-shrink: 0;
+  }
+}
+.boxes3 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  row-gap: 20px;
+  min-width: 0;
+  min-height: 0;
+  padding: 0px;
+}
+@media (max-width: 1200px) {
+  .boxes3 {
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 1024px) {
+  .boxes3 {
+    height: auto;
+  }
+}
+.item9 {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: var(--token-sP5FKk2rRQuW);
+  column-gap: 20px;
+  min-width: 0;
+  border-radius: 27px;
+  padding: 25px;
+}
+.icon7 {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 20%;
+  min-width: 0;
+  padding: 0px;
+}
+@media (max-width: 1024px) {
+  .icon7 {
+    max-width: 10%;
+  }
+}
+.img___51GcL {
+  object-fit: cover;
+  max-width: 100%;
+}
+.img___51GcL > picture > img {
+  object-fit: cover;
+}
+.text11 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 70%;
+  row-gap: 15px;
+  min-width: 0;
+  padding: 0px;
+}
+@media (max-width: 1024px) {
+  .text11 {
+    max-width: 90%;
+  }
+}
+.text__jNrh9 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-size: 24px;
+  color: var(--token-I4qaFqA_B1z8);
+  line-height: 26px;
+  min-width: 0;
+}
+.text___2WnOh {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-size: 16px;
+  color: var(--token-Gx156sR9ht1r);
+  line-height: 20px;
+  font-family: "Avenir LT Std";
+  min-width: 0;
+}
+@media (max-width: 1024px) {
+  .text___2WnOh {
+    line-height: 20px;
+  }
+}
+.item10 {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: var(--token-sP5FKk2rRQuW);
+  column-gap: 20px;
+  min-width: 0;
+  border-radius: 27px;
+  padding: 25px;
+}
+.icon8 {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 20%;
+  min-width: 0;
+  padding: 0px;
+}
+@media (max-width: 1024px) {
+  .icon8 {
+    max-width: 10%;
+  }
+}
+.img__q29OC {
+  object-fit: cover;
+  max-width: 100%;
+}
+.img__q29OC > picture > img {
+  object-fit: cover;
+}
+.text12 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 70%;
+  row-gap: 15px;
+  min-width: 0;
+  padding: 0px;
+}
+@media (max-width: 1024px) {
+  .text12 {
+    max-width: 90%;
+  }
+}
+.text__eaqho {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-size: 24px;
+  color: var(--token-I4qaFqA_B1z8);
+  line-height: 26px;
+  min-width: 0;
+}
+.text__uYVeW {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-size: 16px;
+  color: var(--token-Gx156sR9ht1r);
+  line-height: 20px;
+  font-family: "Avenir LT Std";
+  min-width: 0;
+}
+@media (max-width: 1024px) {
+  .text__uYVeW {
+    line-height: 20px;
+  }
+}
+.item11 {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: var(--token-sP5FKk2rRQuW);
+  column-gap: 20px;
+  min-width: 0;
+  border-radius: 27px;
+  padding: 25px;
+}
+.icon9 {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 20%;
+  min-width: 0;
+  padding: 0px;
+}
+@media (max-width: 1024px) {
+  .icon9 {
+    max-width: 10%;
+  }
+}
+.img__abEtg {
+  object-fit: cover;
+  max-width: 100%;
+}
+.img__abEtg > picture > img {
+  object-fit: cover;
+}
+.text13 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 70%;
+  row-gap: 15px;
+  min-width: 0;
+  padding: 0px;
+}
+@media (max-width: 1024px) {
+  .text13 {
+    max-width: 90%;
+  }
+}
+.text__taK2W {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-size: 24px;
+  color: var(--token-I4qaFqA_B1z8);
+  line-height: 26px;
+  min-width: 0;
+}
+.text__nZ0Qt {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-size: 16px;
+  color: var(--token-Gx156sR9ht1r);
+  line-height: 20px;
+  font-family: "Avenir LT Std";
+  min-width: 0;
+}
+@media (max-width: 1024px) {
+  .text__nZ0Qt {
+    line-height: 20px;
+  }
+}
+.aboutUsSection3 {
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 970px;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  background:
+    url("/plasmic/sterling_and_buena_vista_foods/images/group1Png.png") top 50% left 50% / cover repeat,
+    #d37456;
+  grid-column-start: 1 !important;
+  grid-column-end: -1 !important;
+  display: none;
+  padding: 0px 20px;
+}
+@media (max-width: 2000px) {
+  .aboutUsSection3 {
+    display: flex;
+  }
+}
+@media (max-width: 1700px) {
+  .aboutUsSection3 {
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 1280px) {
+  .aboutUsSection3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+@media (max-width: 1200px) {
+  .aboutUsSection3 {
+    height: auto;
+    padding: 50px 30px;
+  }
+}
+.wrapper2 {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 1430px;
+  height: auto;
+  max-width: 100%;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  column-gap: 40px;
+  padding: 0px;
+}
+@media (max-width: 1200px) {
+  .wrapper2 {
+    flex-wrap: wrap;
+    align-items: stretch;
+    row-gap: 40px;
+  }
+}
+.texts {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  row-gap: 50px;
+  min-width: 0;
+  padding: 0px;
+}
+.text___35Tun {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-GGYj13plNx6v);
+  font-family: "Georgia";
+  font-size: var(--token-EBGyLHrpfttb);
+  line-height: 60px;
+  min-width: 0;
+}
+.text__fgSL {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--token-GGYj13plNx6v);
+  font-family: "Avenir LT Std";
+  font-weight: 200;
+  min-width: 0;
+}
+.text__pS7J4 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-GGYj13plNx6v);
+  font-size: 24px;
+  font-family: "Avenir LT Std";
+  line-height: 45px;
+  user-select: text;
+  min-width: 0;
+}
+.images {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  row-gap: 20px;
+  min-width: 0;
+  padding: 0px;
+}
+.item7 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0px;
+}
+.img__uE9Le {
+  object-fit: cover;
+  max-width: 100%;
+}
+.img__uE9Le > picture > img {
+  object-fit: cover;
+}
+.item8 {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+  padding: 0px;
+}
+@media (max-width: 757px) {
+  .item8 {
+    flex-wrap: wrap;
+    align-items: stretch;
+    row-gap: 20px;
+  }
+}
+.img__tGkaT {
+  object-fit: cover;
+  max-width: 100%;
+}
+.img__tGkaT > picture > img {
+  object-fit: cover;
+}
+.img__vnq1I {
+  object-fit: cover;
+  max-width: 100%;
+}
+.img__vnq1I > picture > img {
+  object-fit: cover;
+}
+.aboutUsSection5 {
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 1515px;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  justify-self: flex-start;
+  background:
+    url("/plasmic/sterling_and_buena_vista_foods/images/group2Png.png") top 50% left 50% / cover repeat,
+    #ffffff;
+  grid-column-start: 1 !important;
+  grid-column-end: -1 !important;
+  display: none;
+  padding: 0px;
+}
+@media (max-width: 2000px) {
+  .aboutUsSection5 {
+    display: flex;
+  }
+}
+@media (max-width: 1700px) {
+  .aboutUsSection5 {
+    height: auto;
+    padding-bottom: 165px;
+  }
+}
+@media (max-width: 1200px) {
+  .aboutUsSection5 {
+    display: flex;
+  }
+}
+.rectangle {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 1460px;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  background: #f1f5fb;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  row-gap: 32px;
+  padding: 120px 100px 90px;
+}
+@media (max-width: 1700px) {
+  .rectangle {
+    width: 1400px;
+  }
+}
+@media (max-width: 1440px) {
+  .rectangle {
+    width: auto;
+  }
+}
+@media (max-width: 757px) {
+  .rectangle {
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 50px;
+  }
+}
+.heading3 {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  column-gap: 20px;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  min-width: 0;
+  padding: 0px;
+}
+@media (max-width: 1024px) {
+  .heading3 {
+    height: auto;
+    width: 100%;
+    min-width: 0;
+  }
+}
+.text__cIteS {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-Gx156sR9ht1r);
+  text-align: center;
+  font-family: var(--token-3FFZ7xNHqr9C);
+  font-size: 85px;
+  align-self: center;
+  line-height: 85px;
+}
+.text__xZRcQ {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  font-size: var(--token-KiAZW0gIrhlw);
+  color: var(--token-I4qaFqA_B1z8);
+  text-align: center;
+  align-self: center;
+}
+@media (max-width: 430px) {
+  .text__xZRcQ {
+    line-height: 60px;
+  }
+}
+.text__cie5 {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  text-align: left;
+  font-family: "Avenir LT Std";
+  line-height: 36px;
+  min-width: 0;
+}
+.text__lNigi {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  text-align: left;
+  font-family: "Avenir LT Std";
+  line-height: 36px;
+  min-width: 0;
+}
+.section {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  column-gap: 45px;
+  min-width: 0;
+  padding: 0px;
+}
+@media (max-width: 757px) {
+  .section {
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+}
+@media (max-width: 430px) {
+  .section {
+    flex-wrap: wrap;
+    align-items: stretch;
+    row-gap: 25px;
+  }
+}
+@media (max-width: 414px) {
+  .section {
+    flex-wrap: wrap;
+    align-items: stretch;
+    row-gap: 25px;
+  }
+}
+.img__ypwQh {
+  object-fit: cover;
+  max-width: 100%;
+}
+.img__ypwQh > picture > img {
+  object-fit: cover;
+}
+.text8 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  row-gap: 0px;
+  min-width: 0;
+  padding: 0px;
+}
+.h1__iJl7G {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-VSsNRyw2VYkH);
+  font-size: 35px;
+  line-height: 70px;
+  min-width: 0;
+}
+@media (max-width: 430px) {
+  .h1__iJl7G {
+    line-height: 40px;
+  }
+}
+.text__td0Lu {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  text-align: left;
+  font-family: "Avenir LT Std";
+  line-height: 36px;
+  min-width: 0;
+}
+.section2 {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  column-gap: 45px;
+  min-width: 0;
+  padding: 0px;
+}
+@media (max-width: 757px) {
+  .section2 {
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+}
+@media (max-width: 430px) {
+  .section2 {
+    flex-wrap: wrap;
+    align-items: stretch;
+    row-gap: 25px;
+  }
+}
+@media (max-width: 414px) {
+  .section2 {
+    flex-wrap: wrap;
+    align-items: stretch;
+    row-gap: 25px;
+  }
+}
+.img__tMwd {
+  object-fit: cover;
+  max-width: 100%;
+}
+.img__tMwd > picture > img {
+  object-fit: cover;
+}
+.text9 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  row-gap: 0px;
+  min-width: 0;
+  padding: 0px;
+}
+.h1__je9Us {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-VSsNRyw2VYkH);
+  font-size: 35px;
+  line-height: 70px;
+  min-width: 0;
+}
+@media (max-width: 430px) {
+  .h1__je9Us {
+    line-height: 40px;
+  }
+}
+.text___11O {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  text-align: left;
+  font-family: "Avenir LT Std";
+  line-height: 36px;
+  min-width: 0;
+}
+.section3 {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  column-gap: 45px;
+  min-width: 0;
+  padding: 0px;
+}
+@media (max-width: 757px) {
+  .section3 {
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+}
+@media (max-width: 430px) {
+  .section3 {
+    flex-wrap: wrap;
+    align-items: stretch;
+    row-gap: 25px;
+  }
+}
+@media (max-width: 414px) {
+  .section3 {
+    flex-wrap: wrap;
+    align-items: stretch;
+    row-gap: 25px;
+  }
+}
+.img__sDqTh {
+  object-fit: cover;
+  max-width: 100%;
+}
+.img__sDqTh > picture > img {
+  object-fit: cover;
+}
+.text10 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  row-gap: 0px;
+  min-width: 0;
+  padding: 0px;
+}
+.h1__buMCa {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-VSsNRyw2VYkH);
+  font-size: 35px;
+  line-height: 70px;
+  min-width: 0;
+}
+@media (max-width: 430px) {
+  .h1__buMCa {
+    line-height: 40px;
+  }
+}
+.text___2FRgU {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  text-align: left;
+  font-family: "Avenir LT Std";
+  line-height: 36px;
+  min-width: 0;
+}
+.aboutUsSection4 {
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  background: #f5e9d4;
+  grid-column-start: 1 !important;
+  grid-column-end: -1 !important;
+  min-height: 0;
+  display: none;
+  padding: 0px;
+}
+@media (max-width: 2000px) {
+  .aboutUsSection4 {
+    display: flex;
+  }
+}
+@media (max-width: 1700px) {
+  .aboutUsSection4 {
+    padding-left: 100px;
+    height: 100%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    min-height: 0;
+  }
+}
+@media (max-width: 1512px) {
+  .aboutUsSection4 {
+    height: 100%;
+    padding-left: 100px;
+    min-height: 0;
+  }
+}
+@media (max-width: 1200px) {
+  .aboutUsSection4 {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    row-gap: 0px;
+  }
+}
+@media (max-width: 1024px) {
+  .aboutUsSection4 {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    align-content: stretch;
+    row-gap: 0px;
+    min-height: 0;
+  }
+}
+@media (max-width: 757px) {
+  .aboutUsSection4 {
+    padding-left: 0px;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    align-content: stretch;
+  }
+}
+.wrapper3 {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 1645px;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 20px;
+  flex-shrink: 0;
+  padding: 0px;
+}
+@media (max-width: 757px) {
+  .wrapper3 {
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+}
+.freeBox__iFRqM {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  row-gap: 40px;
+  min-width: 0;
+  padding: 0px;
+}
+@media (max-width: 1280px) {
+  .freeBox__iFRqM {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+@media (max-width: 1200px) {
+  .freeBox__iFRqM {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    column-gap: 0px;
+    padding: 0px;
+  }
+}
+@media (max-width: 1024px) {
+  .freeBox__iFRqM {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    column-gap: 0px;
+  }
+}
+.text__ccudt {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-Gx156sR9ht1r);
+  text-align: center;
+  font-family: var(--token-3FFZ7xNHqr9C);
+  font-size: 85px;
+  align-self: flex-start;
+  line-height: 85px;
+}
+@media (max-width: 757px) {
+  .text__ccudt {
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+}
+.text__a1UKq {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  font-size: var(--token-KiAZW0gIrhlw);
+  color: var(--token-I4qaFqA_B1z8);
+  text-align: center;
+  align-self: flex-start;
+}
+@media (max-width: 1024px) {
+  .text__a1UKq {
+    text-align: left;
+    line-height: 60px;
+  }
+}
+@media (max-width: 757px) {
+  .text__a1UKq {
+    padding-left: 20px;
+  }
+}
+.text__aLer5 {
+  width: 700px;
+  height: auto;
+  max-width: 100%;
+  text-align: left;
+  font-family: "Avenir LT Std";
+  line-height: 36px;
+  padding: 0px;
+}
+@media (max-width: 1700px) {
+  .text__aLer5 {
+    width: auto;
+  }
+}
+@media (max-width: 757px) {
+  .text__aLer5 {
+    padding: 0px 20px 20px;
+  }
+}
+.freeBox__lYw9D {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  background: none;
+  min-width: 0;
+  padding: 0px;
+}
+.img___6Stb7 {
+  object-fit: cover;
+  max-width: 100%;
+}
+.img___6Stb7 > picture > img {
+  object-fit: cover;
+}
+@media (max-width: 1024px) {
+  .img___6Stb7 {
+    object-fit: cover;
+  }
+}
+@media (max-width: 1024px) {
+  .img___6Stb7 > picture > img {
+    object-fit: cover;
+  }
+}

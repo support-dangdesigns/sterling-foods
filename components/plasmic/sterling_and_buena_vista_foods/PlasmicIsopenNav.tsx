@@ -143,6 +143,8 @@ function PlasmicIsopenNav__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
+  const globalVariants = _useGlobalVariants();
+
   let [$queries, setDollarQueries] = React.useState<
     Record<string, ReturnType<typeof usePlasmicDataOp>>
   >({});
@@ -193,7 +195,11 @@ function PlasmicIsopenNav__RenderFunc(props: {
           displayMaxWidth={"100%"}
           displayMinHeight={"0"}
           displayMinWidth={"0"}
-          displayWidth={"auto"}
+          displayWidth={
+            hasVariant(globalVariants, "screen", "smallTablet")
+              ? "350px"
+              : "auto"
+          }
           loading={"lazy"}
           src={{
             src: "/plasmic/sterling_and_buena_vista_foods/images/applepiePng.png",

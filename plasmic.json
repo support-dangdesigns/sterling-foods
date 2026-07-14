@@ -27681,7 +27681,7 @@
           "projectId": "uyaK17nhz8WhGjYZfKjMhX",
           "renderModuleFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicFontTesting.tsx",
           "importSpec": {
-            "modulePath": "../pages/new-page.tsx"
+            "modulePath": "../pages/font-testing.tsx"
           },
           "cssFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicFontTesting.module.css",
           "scheme": "blackbox",
@@ -27793,6 +27793,19 @@
             "modulePath": "CtaBottom.tsx"
           },
           "cssFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicCtaBottom.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "2xRY6WOypZh7",
+          "name": "TopHero",
+          "type": "managed",
+          "projectId": "uyaK17nhz8WhGjYZfKjMhX",
+          "renderModuleFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicTopHero.tsx",
+          "importSpec": {
+            "modulePath": "TopHero.tsx"
+          },
+          "cssFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicTopHero.module.css",
           "scheme": "blackbox",
           "componentType": "component"
         }
@@ -28539,6 +28552,11 @@
           "id": "2Rl8JgjYnRuI",
           "name": "Summer.png",
           "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/summerPng.png"
+        },
+        {
+          "id": "MzqaCmiAdrZU",
+          "name": "Group 10.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/group10Png.png"
         }
       ],
       "indirect": false,
@@ -28638,6 +28656,87 @@
           "name": "LoadingBoundary",
           "displayName": "hostless-loading-boundary",
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
+        }
+      ],
+      "customFunctions": []
+    },
+    {
+      "projectId": "5v1p2i7GvsoMJk4KqrA6F3",
+      "projectApiToken": "3tpUfxQvphO2cHJi05AuO753aYZNx8rBT7az6UNI7jXbmOJk2XXkoH4WvRjeGXTNuoqaBAC6S3boxyriSGZRA",
+      "projectName": "rive",
+      "version": ">0.0.0",
+      "cssFilePath": "plasmic/rive/plasmic.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "splitsProviderFilePath": "",
+      "styleTokensProviderFilePath": "plasmic/rive/PlasmicStyleTokensProvider.tsx",
+      "dataTokensFilePath": "",
+      "projectModuleFilePath": "plasmic/rive/plasmic.tsx",
+      "codeComponents": [
+        {
+          "id": "GP6Z9NbsKBEd",
+          "name": "RivePlayer",
+          "displayName": "rive",
+          "componentImportPath": "@plasmicpkgs/rive"
+        }
+      ],
+      "customFunctions": []
+    },
+    {
+      "projectId": "szjgMQpPpxhmkjnaBvZQJG",
+      "projectApiToken": "xBIsrWHdWZ9kVgFEGUt29LOZPWfm0XidYqRHqPhQXsEjDHevjIbp44nEYMIZ46YOoxrN8anfXjreTkDtFjTA",
+      "projectName": "react-parallax-tilt",
+      "version": ">0.0.0",
+      "cssFilePath": "plasmic/react_parallax_tilt/plasmic.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "splitsProviderFilePath": "",
+      "styleTokensProviderFilePath": "plasmic/react_parallax_tilt/PlasmicStyleTokensProvider.tsx",
+      "dataTokensFilePath": "",
+      "projectModuleFilePath": "plasmic/react_parallax_tilt/plasmic.tsx",
+      "codeComponents": [
+        {
+          "id": "PfY466VIuq",
+          "name": "Tilt",
+          "displayName": "hostless-parallax-tilt",
+          "componentImportPath": "@plasmicpkgs/react-parallax-tilt"
+        }
+      ],
+      "customFunctions": []
+    },
+    {
+      "projectId": "84wxoth5npGrp6RRXPL88z",
+      "projectApiToken": "hOzXksPB8gkTrKnfJeV9VDS8m8dnIXQn1xxDQZ5MHxv9orQY6JNgwmk6aDMZPLkocV2KtD9gNJXv5JwIbbzIQ",
+      "projectName": "react-scroll-parallax-global",
+      "version": ">0.0.0",
+      "cssFilePath": "plasmic/react_scroll_parallax_global/plasmic.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "plasmic/react_scroll_parallax_global/PlasmicGlobalContextsProvider.tsx",
+      "splitsProviderFilePath": "",
+      "styleTokensProviderFilePath": "plasmic/react_scroll_parallax_global/PlasmicStyleTokensProvider.tsx",
+      "dataTokensFilePath": "",
+      "projectModuleFilePath": "plasmic/react_scroll_parallax_global/plasmic.tsx",
+      "codeComponents": [
+        {
+          "id": "bozP4lLlAZ",
+          "name": "ParallaxWrapper",
+          "displayName": "hostless-scroll-parallax",
+          "componentImportPath": "@plasmicpkgs/react-scroll-parallax"
+        },
+        {
+          "id": "L6MfauX2Cw",
+          "name": "ParallaxProviderWrapper",
+          "displayName": "global-parallax-provider",
+          "componentImportPath": "@plasmicpkgs/react-scroll-parallax"
         }
       ],
       "customFunctions": []

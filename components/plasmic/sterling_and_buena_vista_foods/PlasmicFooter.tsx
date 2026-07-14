@@ -71,6 +71,7 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import sty from "./PlasmicFooter.module.css"; // plasmic-import: RbMtVh1ii_PZ/css
 
 import MapPinFilledIcon from "../library_tabler_3_2_icons/icons/PlasmicIcon__MapPinFilled"; // plasmic-import: zXkaTx8ISMNO/icon
+import ArrowNarrowUpIcon from "../library_tabler_3_2_icons/icons/PlasmicIcon__ArrowNarrowUp"; // plasmic-import: uqJlQ6IPOM_y/icon
 
 createPlasmicElementProxy;
 
@@ -79,9 +80,11 @@ export type PlasmicFooter__VariantsArgs = {};
 type VariantPropType = keyof PlasmicFooter__VariantsArgs;
 export const PlasmicFooter__VariantProps = new Array<VariantPropType>();
 
-export type PlasmicFooter__ArgsType = {};
+export type PlasmicFooter__ArgsType = { headerDestination?: string };
 type ArgPropType = keyof PlasmicFooter__ArgsType;
-export const PlasmicFooter__ArgProps = new Array<ArgPropType>();
+export const PlasmicFooter__ArgProps = new Array<ArgPropType>(
+  "headerDestination"
+);
 
 export type PlasmicFooter__OverridesType = {
   footer?: Flex__<"div">;
@@ -101,9 +104,11 @@ export type PlasmicFooter__OverridesType = {
   terms?: Flex__<typeof FooterLinks>;
   termsAndConditions?: Flex__<"a"> & Partial<LinkProps>;
   clientLogin5?: Flex__<"div">;
+  link?: Flex__<"a"> & Partial<LinkProps>;
 };
 
 export interface DefaultFooterProps {
+  headerDestination?: string;
   className?: string;
 }
 
@@ -127,7 +132,9 @@ function PlasmicFooter__RenderFunc(props: {
   const args = React.useMemo(
     () =>
       Object.assign(
-        {},
+        {
+          headerDestination: "#top-header"
+        },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
         )
@@ -384,6 +391,50 @@ function PlasmicFooter__RenderFunc(props: {
             {"\u00a9 Sterling Foods, Inc. All Rights Reserved"}
           </div>
         </div>
+        <div className={classNames("all", sty.freeBox__cSkrB)}>
+          <PlasmicLink__
+            data-plasmic-name={"link"}
+            data-plasmic-override={overrides.link}
+            className={classNames("all", "a", "a__uyaK1", sty.link)}
+            component={Link}
+            href={args.headerDestination}
+            legacyBehavior={false}
+            onClick={async event => {
+              const $steps = {};
+
+              $steps["goToTopHeader"] = true
+                ? (() => {
+                    const actionArgs = { destination: "#top-header" };
+                    return (({ destination }) => {
+                      if (
+                        typeof destination === "string" &&
+                        destination.startsWith("#")
+                      ) {
+                        document
+                          .getElementById(destination.substr(1))
+                          .scrollIntoView({ behavior: "smooth" });
+                      } else {
+                        __nextRouter?.push(destination);
+                      }
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["goToTopHeader"] != null &&
+                typeof $steps["goToTopHeader"] === "object" &&
+                typeof $steps["goToTopHeader"].then === "function"
+              ) {
+                $steps["goToTopHeader"] = await $steps["goToTopHeader"];
+              }
+            }}
+            platform={"nextjs"}
+          >
+            <ArrowNarrowUpIcon
+              className={classNames("all", sty.svg___9MhDf)}
+              role={"img"}
+            />
+          </PlasmicLink__>
+        </div>
       </div>
       <div className={classNames("all", sty.freeBox__pcGC)} />
     </div>
@@ -408,7 +459,8 @@ const PlasmicDescendants = {
     "clientLogin3",
     "terms",
     "termsAndConditions",
-    "clientLogin5"
+    "clientLogin5",
+    "link"
   ],
   logo: ["logo"],
   text: ["text"],
@@ -433,7 +485,8 @@ const PlasmicDescendants = {
   clientLogin3: ["clientLogin3"],
   terms: ["terms", "termsAndConditions"],
   termsAndConditions: ["termsAndConditions"],
-  clientLogin5: ["clientLogin5"]
+  clientLogin5: ["clientLogin5"],
+  link: ["link"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -456,6 +509,7 @@ type NodeDefaultElementType = {
   terms: typeof FooterLinks;
   termsAndConditions: "a";
   clientLogin5: "div";
+  link: "a";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -536,6 +590,7 @@ export const PlasmicFooter = Object.assign(
     terms: makeNodeComponent("terms"),
     termsAndConditions: makeNodeComponent("termsAndConditions"),
     clientLogin5: makeNodeComponent("clientLogin5"),
+    link: makeNodeComponent("link"),
 
     // Metadata about props expected for PlasmicFooter
     internalVariantProps: PlasmicFooter__VariantProps,

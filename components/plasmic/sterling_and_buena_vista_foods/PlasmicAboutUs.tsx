@@ -60,6 +60,8 @@ import {
 } from "@plasmicapp/react-web/lib/host";
 
 import Header from "../../Header"; // plasmic-import: qmNXHiKWCTTQ/component
+import TopHero from "../../TopHero"; // plasmic-import: 2xRY6WOypZh7/component
+import { ParallaxWrapper } from "@plasmicpkgs/react-scroll-parallax";
 import { SliderWrapper } from "@plasmicpkgs/react-slick";
 import { sliderHelpers as SliderWrapper_Helpers } from "@plasmicpkgs/react-slick";
 import CtaBottom from "../../CtaBottom"; // plasmic-import: UmfSTsW6wMCz/component
@@ -118,7 +120,7 @@ export const PlasmicAboutUs__ArgProps = new Array<ArgPropType>();
 export type PlasmicAboutUs__OverridesType = {
   root?: Flex__<"div">;
   header?: Flex__<typeof Header>;
-  aboutUsHero?: Flex__<"div">;
+  topHero?: Flex__<typeof TopHero>;
   aboutUsSection?: Flex__<"div">;
   heading?: Flex__<"div">;
   text?: Flex__<"div">;
@@ -142,6 +144,7 @@ export type PlasmicAboutUs__OverridesType = {
   item3?: Flex__<"div">;
   icon3?: Flex__<"div">;
   text7?: Flex__<"div">;
+  scrollParallax?: Flex__<typeof ParallaxWrapper>;
   image?: Flex__<"div">;
   boxes3?: Flex__<"div">;
   item9?: Flex__<"div">;
@@ -328,15 +331,12 @@ function PlasmicAboutUs__RenderFunc(props: {
             className={classNames("__wab_instance", sty.header)}
           />
 
-          <div
-            data-plasmic-name={"aboutUsHero"}
-            data-plasmic-override={overrides.aboutUsHero}
-            className={classNames("all", sty.aboutUsHero)}
-          >
-            <div className={classNames("all", "__wab_text", sty.text___3Kaf6)}>
-              {"About us"}
-            </div>
-          </div>
+          <TopHero
+            data-plasmic-name={"topHero"}
+            data-plasmic-override={overrides.topHero}
+            className={classNames("__wab_instance", sty.topHero)}
+          />
+
           <div
             data-plasmic-name={"aboutUsSection"}
             data-plasmic-override={overrides.aboutUsSection}
@@ -684,12 +684,26 @@ function PlasmicAboutUs__RenderFunc(props: {
                   </div>
                 </div>
               </div>
-              <div
-                data-plasmic-name={"image"}
-                data-plasmic-override={overrides.image}
-                className={classNames("all", sty.image)}
-              />
-
+              <ParallaxWrapper
+                data-plasmic-name={"scrollParallax"}
+                data-plasmic-override={overrides.scrollParallax}
+                className={classNames("__wab_instance", sty.scrollParallax)}
+                disabled={
+                  hasVariant(globalVariants, "screen", "tablet")
+                    ? false
+                    : undefined
+                }
+                previewInEditor={
+                  hasVariant(globalVariants, "screen", "tablet") ? false : false
+                }
+                speed={hasVariant(globalVariants, "screen", "tablet") ? 0 : 20}
+              >
+                <div
+                  data-plasmic-name={"image"}
+                  data-plasmic-override={overrides.image}
+                  className={classNames("all", sty.image)}
+                />
+              </ParallaxWrapper>
               <div
                 data-plasmic-name={"boxes3"}
                 data-plasmic-override={overrides.boxes3}
@@ -2291,7 +2305,7 @@ const PlasmicDescendants = {
   root: [
     "root",
     "header",
-    "aboutUsHero",
+    "topHero",
     "aboutUsSection",
     "heading",
     "text",
@@ -2315,6 +2329,7 @@ const PlasmicDescendants = {
     "item3",
     "icon3",
     "text7",
+    "scrollParallax",
     "image",
     "boxes3",
     "item9",
@@ -2397,7 +2412,7 @@ const PlasmicDescendants = {
     "footer"
   ],
   header: ["header"],
-  aboutUsHero: ["aboutUsHero"],
+  topHero: ["topHero"],
   aboutUsSection: [
     "aboutUsSection",
     "heading",
@@ -2431,6 +2446,7 @@ const PlasmicDescendants = {
     "item3",
     "icon3",
     "text7",
+    "scrollParallax",
     "image",
     "boxes3",
     "item9",
@@ -2458,6 +2474,7 @@ const PlasmicDescendants = {
     "item3",
     "icon3",
     "text7",
+    "scrollParallax",
     "image",
     "boxes3",
     "item9",
@@ -2491,6 +2508,7 @@ const PlasmicDescendants = {
   item3: ["item3", "icon3", "text7"],
   icon3: ["icon3"],
   text7: ["text7"],
+  scrollParallax: ["scrollParallax", "image"],
   image: ["image"],
   boxes3: [
     "boxes3",
@@ -2758,7 +2776,7 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   header: typeof Header;
-  aboutUsHero: "div";
+  topHero: typeof TopHero;
   aboutUsSection: "div";
   heading: "div";
   text: "div";
@@ -2782,6 +2800,7 @@ type NodeDefaultElementType = {
   item3: "div";
   icon3: "div";
   text7: "div";
+  scrollParallax: typeof ParallaxWrapper;
   image: "div";
   boxes3: "div";
   item9: "div";
@@ -2927,7 +2946,7 @@ export const PlasmicAboutUs = Object.assign(
   {
     // Helper components rendering sub-elements
     header: makeNodeComponent("header"),
-    aboutUsHero: makeNodeComponent("aboutUsHero"),
+    topHero: makeNodeComponent("topHero"),
     aboutUsSection: makeNodeComponent("aboutUsSection"),
     heading: makeNodeComponent("heading"),
     text: makeNodeComponent("text"),
@@ -2951,6 +2970,7 @@ export const PlasmicAboutUs = Object.assign(
     item3: makeNodeComponent("item3"),
     icon3: makeNodeComponent("icon3"),
     text7: makeNodeComponent("text7"),
+    scrollParallax: makeNodeComponent("scrollParallax"),
     image: makeNodeComponent("image"),
     boxes3: makeNodeComponent("boxes3"),
     item9: makeNodeComponent("item9"),

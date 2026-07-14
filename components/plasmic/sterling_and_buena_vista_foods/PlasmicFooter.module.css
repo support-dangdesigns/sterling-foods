@@ -15,6 +15,10 @@
 }
 @media (max-width: 2000px) {
   .footer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0px;
+    column-gap: 0px;
     padding: 0px;
   }
 }
@@ -86,10 +90,20 @@
   min-width: 0;
   padding: 8px;
 }
+@media (max-width: 2000px) {
+  .freeBox__pNiq {
+    display: flex;
+    flex-direction: column;
+    left: auto;
+    top: auto;
+    column-gap: 0px;
+    padding: 50px 55px 0px 240px;
+  }
+}
 @media (max-width: 1920px) {
   .freeBox__pNiq {
     height: auto;
-    padding: 50px 285px 0px 300px;
+    padding: 50px 55px 0px 300px;
     margin: 0px;
   }
 }
@@ -149,6 +163,13 @@
   flex-direction: row;
   min-width: 0;
   padding: 50px 50px 50px 240px;
+}
+@media (max-width: 2000px) {
+  .freeBox__wGTlk {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+  }
 }
 @media (max-width: 1920px) {
   .freeBox__wGTlk {
@@ -1009,6 +1030,11 @@
   font-weight: 400;
   min-width: 0;
 }
+@media (max-width: 1920px) {
+  .text__qkd0N {
+    line-height: 27px;
+  }
+}
 @media (max-width: 530px) {
   .text__qkd0N {
     text-align: left;
@@ -1093,6 +1119,11 @@
   font-family: "Avenir LT Std";
   min-width: 0;
 }
+@media (max-width: 1920px) {
+  .text__qNiIg {
+    line-height: 27px;
+  }
+}
 @media (max-width: 430px) {
   .text__qNiIg {
     padding: 0px;
@@ -1167,6 +1198,11 @@
   font-family: "Avenir LT Std";
   min-width: 0;
 }
+@media (max-width: 1920px) {
+  .text__pAi {
+    line-height: 27px;
+  }
+}
 @media (max-width: 430px) {
   .text__pAi {
     padding: 0px;
@@ -1185,6 +1221,14 @@
   left: auto;
   align-self: flex-start;
   padding: 0px 300px;
+}
+@media (max-width: 2000px) {
+  .freeBox___9KFeZ {
+    padding-left: 0px;
+    padding-right: 0px;
+    left: auto;
+    top: auto;
+  }
 }
 @media (max-width: 1920px) {
   .freeBox___9KFeZ {
@@ -1364,6 +1408,11 @@
   bottom: auto;
   padding-left: 20px;
 }
+@media (max-width: 2000px) {
+  .text__nL8Zp {
+    padding-left: 0px;
+  }
+}
 @media (max-width: 1200px) {
   .text__nL8Zp {
     left: auto;
@@ -1395,6 +1444,64 @@
     text-align: left;
     font-size: 14px;
   }
+}
+.freeBox__cSkrB {
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  display: none;
+  padding: 0px 0px 30px;
+}
+@media (max-width: 2000px) {
+  .freeBox__cSkrB {
+    display: flex;
+  }
+}
+.link {
+  display: flex;
+  position: fixed;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  background: var(--token-I4qaFqA_B1z8);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  left: auto;
+  top: auto;
+  z-index: 1;
+  bottom: 220px;
+  right: 55px;
+  border-radius: 4px;
+  padding: 8px;
+}
+@media (max-width: 1920px) {
+  .link {
+    bottom: 120px;
+  }
+}
+@media (max-width: 430px) {
+  .link {
+    right: 25px;
+    bottom: 70px;
+  }
+}
+@media (max-width: 375px) {
+  .link {
+    bottom: 50px;
+  }
+}
+.svg___9MhDf {
+  object-fit: cover;
+  max-width: 100%;
+  color: var(--token-sP5FKk2rRQuW);
+  height: 1em;
+  flex-shrink: 0;
 }
 .freeBox__pcGC {
   display: flex;

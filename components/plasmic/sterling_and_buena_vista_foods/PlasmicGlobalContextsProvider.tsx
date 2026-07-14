@@ -11,19 +11,21 @@ import { _useGlobalVariants } from "./plasmic"; // plasmic-import: uyaK17nhz8WhG
 import { EmbedCss } from "@plasmicpkgs/plasmic-embed-css";
 import { WordpressProvider } from "@plasmicpkgs/plasmic-wordpress-graphql";
 import { AntdConfigProvider } from "@plasmicpkgs/antd5/skinny/registerConfigProvider";
+import { ParallaxProviderWrapper } from "@plasmicpkgs/react-scroll-parallax";
 
 export interface GlobalContextsProviderProps {
   children?: React.ReactElement;
   embedCssProps?: Partial<
     Omit<React.ComponentProps<typeof EmbedCss>, "children">
   >;
-
   wordpressProviderProps?: Partial<
     Omit<React.ComponentProps<typeof WordpressProvider>, "children">
   >;
-
   antdConfigProviderProps?: Partial<
     Omit<React.ComponentProps<typeof AntdConfigProvider>, "children">
+  >;
+  parallaxProviderWrapperProps?: Partial<
+    Omit<React.ComponentProps<typeof ParallaxProviderWrapper>, "children">
   >;
 }
 
@@ -34,7 +36,8 @@ export default function GlobalContextsProvider(
     children,
     embedCssProps,
     wordpressProviderProps,
-    antdConfigProviderProps
+    antdConfigProviderProps,
+    parallaxProviderWrapperProps
   } = props;
 
   return (
@@ -148,7 +151,17 @@ export default function GlobalContextsProvider(
               : false
           }
         >
-          {children}
+          <ParallaxProviderWrapper
+            {...parallaxProviderWrapperProps}
+            scrollAxis={
+              parallaxProviderWrapperProps &&
+              "scrollAxis" in parallaxProviderWrapperProps
+                ? parallaxProviderWrapperProps.scrollAxis!
+                : undefined
+            }
+          >
+            {children}
+          </ParallaxProviderWrapper>
         </AntdConfigProvider>
       </WordpressProvider>
     </EmbedCss>

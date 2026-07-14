@@ -53,7 +53,7 @@
     min-width: 0;
   }
 }
-.freeBox__zSqlj {
+.header {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -70,12 +70,12 @@
   padding: 0px;
 }
 @media (max-width: 1920px) {
-  .freeBox__zSqlj {
+  .header {
     width: 1920px;
   }
 }
 @media (max-width: 757px) {
-  .freeBox__zSqlj {
+  .header {
     align-self: center;
     margin: auto;
   }

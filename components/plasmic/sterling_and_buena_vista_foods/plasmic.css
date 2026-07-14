@@ -15,6 +15,9 @@
 @import "../date_fns/plasmic.css"; /* plasmic-import: 77tPPMY1MAED1Fqwv1T1ig/projectcss */
 @import "../copy_to_clipboard/plasmic.css"; /* plasmic-import: aEHVN5v6mfM4eovDsL8Z7d/projectcss */
 @import "../lodash/plasmic.css"; /* plasmic-import: hsyJcmBceSfPzvvXzVTuk7/projectcss */
+@import "../react_scroll_parallax_global/plasmic.css"; /* plasmic-import: 84wxoth5npGrp6RRXPL88z/projectcss */
+@import "../react_parallax_tilt/plasmic.css"; /* plasmic-import: szjgMQpPpxhmkjnaBvZQJG/projectcss */
+@import "../rive/plasmic.css"; /* plasmic-import: 5v1p2i7GvsoMJk4KqrA6F3/projectcss */
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata%3Aital%2Cwght%400%2C200%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C900&display=swap");
 
 .plasmic_tokens_uyaK17nhz8WhGjYZfKjMhX {

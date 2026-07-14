@@ -13,11 +13,11 @@
   justify-content: flex-start;
   align-items: center;
   color: var(--token-Gx156sR9ht1r);
-  background: none;
+  background: #ffffff;
   min-width: 0;
   border-radius: 30px;
   padding: 8px;
-  border: 2px solid var(--token-zy6xhYnWF8Y7);
+  border: 2px solid var(--token-VSsNRyw2VYkH);
 }
 @media (max-width: 1920px) {
   .wrapper {
@@ -35,7 +35,7 @@
   animation: none;
   object-fit: cover;
   height: 25px;
-  color: var(--token-zy6xhYnWF8Y7);
+  color: var(--token-VSsNRyw2VYkH);
   width: 60px;
   align-self: center;
   max-width: 100%;

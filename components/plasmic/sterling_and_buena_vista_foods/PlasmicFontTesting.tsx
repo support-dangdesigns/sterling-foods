@@ -468,8 +468,8 @@ export const PlasmicFontTesting = Object.assign(
     internalArgProps: PlasmicFontTesting__ArgProps,
 
     pageMetadata: generateDynamicMetadata(wrapQueriesWithLoadingProxy({}), {
-      pageRoute: "/new-page",
-      pagePath: "/new-page",
+      pageRoute: "/font-testing",
+      pagePath: "/font-testing",
       params: {},
       query: {}
     })

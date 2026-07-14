@@ -149,6 +149,16 @@
     column-gap: 0px;
   }
 }
+@media (max-width: 530px) {
+  .freeBox {
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    column-gap: 0px;
+    min-height: 0;
+  }
+}
 @media (max-width: 414px) {
   .freeBox {
     padding: 20px 0px;
@@ -190,6 +200,24 @@
     padding: 0px;
   }
 }
+@media (max-width: 757px) {
+  .frame52 {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+@media (max-width: 530px) {
+  .frame52 {
+    display: flex;
+    flex-direction: row;
+    row-gap: 0px;
+  }
+}
+@media (max-width: 430px) {
+  .frame52 {
+    padding: 0px 10px;
+  }
+}
 @media (max-width: 414px) {
   .frame52 {
     padding: 0px;
@@ -203,7 +231,7 @@
   position: relative;
   color: var(--token-2G4aHgk_mSgB);
   height: auto;
-  font-family: var(--token-MZlo_dcXZCyh);
+  font-family: "Georgia";
   font-size: var(--token-KiAZW0gIrhlw);
   font-weight: 400;
   font-style: normal;
@@ -218,16 +246,50 @@
   .text__n2Use {
     animation: none;
     height: auto;
+    font-family: "Georgia";
+  }
+}
+@media (max-width: 1700px) {
+  .text__n2Use {
+    font-family: "Georgia";
+  }
+}
+@media (max-width: 1512px) {
+  .text__n2Use {
+    font-family: "Georgia";
+  }
+}
+@media (max-width: 1440px) {
+  .text__n2Use {
+    font-family: "Georgia";
+  }
+}
+@media (max-width: 1280px) {
+  .text__n2Use {
+    font-family: "Georgia";
   }
 }
 @media (max-width: 1200px) {
   .text__n2Use {
     text-align: center;
+    font-family: "Georgia";
+  }
+}
+@media (max-width: 1024px) {
+  .text__n2Use {
+    font-size: var(--token-UXPBeNJ4rrVx);
+    font-family: "Georgia";
+  }
+}
+@media (max-width: 757px) {
+  .text__n2Use {
+    font-family: "Georgia";
   }
 }
 @media (max-width: 530px) {
   .text__n2Use {
     font-size: var(--token-UXPBeNJ4rrVx);
+    font-family: "Georgia";
   }
 }
 @media (max-width: 430px) {
@@ -266,7 +328,7 @@
 }
 @media (max-width: 1024px) {
   .span {
-    font-size: var(--token-2PDYAFnsh1xM);
+    font-size: var(--token-KiAZW0gIrhlw);
   }
 }
 @media (max-width: 530px) {
@@ -350,12 +412,15 @@
     align-self: center;
     left: auto;
     top: auto;
+    font-size: 35px;
     padding: 0px;
   }
 }
 @media (max-width: 530px) {
   .text___4Fzef {
     font-size: 35px;
+    left: auto;
+    top: auto;
   }
 }
 @media (max-width: 430px) {
@@ -409,6 +474,12 @@
   }
 }
 @media (max-width: 1024px) {
+  .buttonContainer {
+    left: auto;
+    top: auto;
+  }
+}
+@media (max-width: 530px) {
   .buttonContainer {
     left: auto;
     top: auto;

@@ -87,6 +87,7 @@ export const PlasmicHeader__ArgProps = new Array<ArgPropType>();
 export type PlasmicHeader__OverridesType = {
   root?: Flex__<"div">;
   colorbar?: Flex__<"div">;
+  header?: Flex__<"div">;
   menu?: Flex__<"div">;
   logo?: Flex__<"a"> & Partial<LinkProps>;
   convoBtn?: Flex__<typeof Button>;
@@ -198,7 +199,16 @@ function PlasmicHeader__RenderFunc(props: {
           throw e;
         }
       })() ? (
-        <div className={classNames("all", sty.freeBox__zSqlj)}>
+        <div
+          data-plasmic-name={"header"}
+          data-plasmic-override={overrides.header}
+          className={classNames("all", sty.header)}
+          id={
+            hasVariant(globalVariants, "screen", "large")
+              ? "top-header"
+              : undefined
+          }
+        >
           <div
             data-plasmic-name={"menu"}
             data-plasmic-override={overrides.menu}
@@ -403,6 +413,7 @@ const PlasmicDescendants = {
   root: [
     "root",
     "colorbar",
+    "header",
     "menu",
     "logo",
     "convoBtn",
@@ -413,6 +424,7 @@ const PlasmicDescendants = {
     "isopenNav"
   ],
   colorbar: ["colorbar"],
+  header: ["header", "menu", "logo", "convoBtn"],
   menu: ["menu", "logo", "convoBtn"],
   logo: ["logo"],
   convoBtn: ["convoBtn"],
@@ -428,6 +440,7 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   colorbar: "div";
+  header: "div";
   menu: "div";
   logo: "a";
   convoBtn: typeof Button;
@@ -501,6 +514,7 @@ export const PlasmicHeader = Object.assign(
   {
     // Helper components rendering sub-elements
     colorbar: makeNodeComponent("colorbar"),
+    header: makeNodeComponent("header"),
     menu: makeNodeComponent("menu"),
     logo: makeNodeComponent("logo"),
     convoBtn: makeNodeComponent("convoBtn"),

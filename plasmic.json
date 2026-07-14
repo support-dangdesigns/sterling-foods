@@ -27782,6 +27782,19 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/about-us"
+        },
+        {
+          "id": "UmfSTsW6wMCz",
+          "name": "CtaBottom",
+          "type": "managed",
+          "projectId": "uyaK17nhz8WhGjYZfKjMhX",
+          "renderModuleFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicCtaBottom.tsx",
+          "importSpec": {
+            "modulePath": "CtaBottom.tsx"
+          },
+          "cssFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicCtaBottom.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -28481,6 +28494,51 @@
           "id": "t2lmdGlU2Zmg",
           "name": "image copy.avif",
           "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/imageCopyAvif.avif"
+        },
+        {
+          "id": "syDx9bsYjPhn",
+          "name": "Kelly Crouse.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/kellyCrousePng.png"
+        },
+        {
+          "id": "gsPNnlKBaZmp",
+          "name": "JIm.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/jImPng.png"
+        },
+        {
+          "id": "VciJkQNmh9FT",
+          "name": "Dan.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/danPng.png"
+        },
+        {
+          "id": "RuktAF3dbbMD",
+          "name": "Elva.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/elvaPng.png"
+        },
+        {
+          "id": "6gGZhJdeG_0f",
+          "name": "Laura.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/lauraPng.png"
+        },
+        {
+          "id": "j4zXY5OnGTGH",
+          "name": "Liz.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/lizPng.png"
+        },
+        {
+          "id": "Ze-wkR6cDDHh",
+          "name": "Dan2.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/dan2Png.png"
+        },
+        {
+          "id": "S64kC5YCNbyf",
+          "name": "Eric.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/ericPng.png"
+        },
+        {
+          "id": "2Rl8JgjYnRuI",
+          "name": "Summer.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/summerPng.png"
         }
       ],
       "indirect": false,

@@ -71,6 +71,7 @@ import PrimaryBtn from "../../PrimaryBtn"; // plasmic-import: TiffCyYLfuDQ/compo
 import SecondaryBtn from "../../SecondaryBtn"; // plasmic-import: r3QPz6kMc0wE/component
 import { SliderWrapper } from "@plasmicpkgs/react-slick";
 import { sliderHelpers as SliderWrapper_Helpers } from "@plasmicpkgs/react-slick";
+import CtaBottom from "../../CtaBottom"; // plasmic-import: UmfSTsW6wMCz/component
 import Footer from "../../Footer"; // plasmic-import: RbMtVh1ii_PZ/component
 import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/projectModule
@@ -155,6 +156,7 @@ export type PlasmicHome__OverridesType = {
   reviews?: Flex__<"div">;
   frame36?: Flex__<"div">;
   frame34?: Flex__<"div">;
+  span?: Flex__<"span">;
   frame35?: Flex__<"div">;
   frame43?: Flex__<"div">;
   frame44?: Flex__<"div">;
@@ -167,9 +169,7 @@ export type PlasmicHome__OverridesType = {
   child3?: Flex__<"div">;
   box4?: Flex__<"div">;
   child4?: Flex__<"div">;
-  cta?: Flex__<"div">;
-  frame52?: Flex__<"div">;
-  buttonContainer?: Flex__<"div">;
+  ctaBottom?: Flex__<typeof CtaBottom>;
   homeFooter?: Flex__<"div">;
   footer?: Flex__<typeof Footer>;
 };
@@ -1176,13 +1176,15 @@ function PlasmicHome__RenderFunc(props: {
                       </React.Fragment>
                       {
                         <span
+                          data-plasmic-name={"span"}
+                          data-plasmic-override={overrides.span}
                           className={classNames(
                             "all",
                             "span",
                             "span__uyaK1",
                             "__wab_text",
                             "plasmic_default__inline",
-                            sty.span__tUu4S
+                            sty.span
                           )}
                         >
                           {hasVariant(globalVariants, "screen", "desktop") ? (
@@ -1779,120 +1781,12 @@ function PlasmicHome__RenderFunc(props: {
                 );
               })()}
             </div>
-            <div
-              data-plasmic-name={"cta"}
-              data-plasmic-override={overrides.cta}
-              className={classNames("all", sty.cta)}
-            >
-              <div className={classNames("all", sty.freeBox__w8Buh)}>
-                <div
-                  data-plasmic-name={"frame52"}
-                  data-plasmic-override={overrides.frame52}
-                  className={classNames("all", sty.frame52)}
-                >
-                  <div
-                    className={classNames("all", "__wab_text", sty.text__cQznQ)}
-                  >
-                    <React.Fragment>
-                      <React.Fragment>{"Looking for a "}</React.Fragment>
-                      {
-                        <span
-                          className={classNames(
-                            "all",
-                            "span",
-                            "span__uyaK1",
-                            "__wab_text",
-                            "plasmic_default__inline",
-                            sty.span__yZLq
-                          )}
-                        >
-                          {hasVariant(globalVariants, "screen", "desktop") ? (
-                            <React.Fragment>
-                              {
-                                $queries.wpGraph.data.response.data.pageBy
-                                  .pageContent.content[7].headline
-                              }
-                            </React.Fragment>
-                          ) : hasVariant(globalVariants, "screen", "large") ? (
-                            <React.Fragment>
-                              {
-                                $queries.wpGraph.data.response.data.pageBy
-                                  .pageContent.content[7].headline
-                              }
-                            </React.Fragment>
-                          ) : (
-                            <React.Fragment>
-                              {
-                                $queries.query.data.response.data.page
-                                  .pageContent.content[7].headline
-                              }
-                            </React.Fragment>
-                          )}
-                        </span>
-                      }
-                      <React.Fragment>
-                        {" that can grow with you?"}
-                      </React.Fragment>
-                    </React.Fragment>
-                  </div>
-                </div>
-                <div
-                  className={classNames("all", "__wab_text", sty.text__uHfOj)}
-                >
-                  {hasVariant(globalVariants, "screen", "desktop") ? (
-                    <React.Fragment>
-                      {
-                        $queries.wpGraph.data.response.data.pageBy.pageContent
-                          .textArea[5].text
-                      }
-                    </React.Fragment>
-                  ) : hasVariant(globalVariants, "screen", "large") ? (
-                    <React.Fragment>
-                      {
-                        $queries.wpGraph.data.response.data.pageBy.pageContent
-                          .textArea[5].text
-                      }
-                    </React.Fragment>
-                  ) : (
-                    <React.Fragment>
-                      {
-                        $queries.query.data.response.data.page.pageContent
-                          .textArea[5].text
-                      }
-                    </React.Fragment>
-                  )}
-                </div>
-                <div
-                  data-plasmic-name={"buttonContainer"}
-                  data-plasmic-override={overrides.buttonContainer}
-                  className={classNames("all", sty.buttonContainer)}
-                >
-                  <PrimaryBtn
-                    className={classNames(
-                      "__wab_instance",
-                      sty.primaryBtn__yeb2D
-                    )}
-                  >
-                    <React.Fragment>
-                      {(() => {
-                        try {
-                          return $queries.wpGraph.data.response.data.pageBy
-                            .pageContent.button[6].text;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return "Label";
-                          }
-                          throw e;
-                        }
-                      })()}
-                    </React.Fragment>
-                  </PrimaryBtn>
-                </div>
-              </div>
-            </div>
+            <CtaBottom
+              data-plasmic-name={"ctaBottom"}
+              data-plasmic-override={overrides.ctaBottom}
+              className={classNames("__wab_instance", sty.ctaBottom)}
+              wpGraph={$queries.wpGraph}
+            />
           </div>
           <div
             data-plasmic-name={"homeFooter"}
@@ -1936,6 +1830,7 @@ const PlasmicDescendants = {
     "reviews",
     "frame36",
     "frame34",
+    "span",
     "frame35",
     "frame43",
     "frame44",
@@ -1948,9 +1843,7 @@ const PlasmicDescendants = {
     "child3",
     "box4",
     "child4",
-    "cta",
-    "frame52",
-    "buttonContainer",
+    "ctaBottom",
     "homeFooter",
     "footer"
   ],
@@ -1977,6 +1870,7 @@ const PlasmicDescendants = {
     "reviews",
     "frame36",
     "frame34",
+    "span",
     "frame35",
     "frame43",
     "frame44",
@@ -1989,9 +1883,7 @@ const PlasmicDescendants = {
     "child3",
     "box4",
     "child4",
-    "cta",
-    "frame52",
-    "buttonContainer"
+    "ctaBottom"
   ],
   intro: ["intro", "text3", "title2"],
   text3: ["text3", "title2"],
@@ -2025,6 +1917,7 @@ const PlasmicDescendants = {
     "reviews",
     "frame36",
     "frame34",
+    "span",
     "frame35",
     "frame43",
     "frame44",
@@ -2038,8 +1931,9 @@ const PlasmicDescendants = {
     "box4",
     "child4"
   ],
-  frame36: ["frame36", "frame34", "frame35", "frame43", "frame44"],
-  frame34: ["frame34"],
+  frame36: ["frame36", "frame34", "span", "frame35", "frame43", "frame44"],
+  frame34: ["frame34", "span"],
+  span: ["span"],
   frame35: ["frame35", "frame43", "frame44"],
   frame43: ["frame43"],
   frame44: ["frame44"],
@@ -2062,9 +1956,7 @@ const PlasmicDescendants = {
   child3: ["child3"],
   box4: ["box4", "child4"],
   child4: ["child4"],
-  cta: ["cta", "frame52", "buttonContainer"],
-  frame52: ["frame52"],
-  buttonContainer: ["buttonContainer"],
+  ctaBottom: ["ctaBottom"],
   homeFooter: ["homeFooter", "footer"],
   footer: ["footer"]
 } as const;
@@ -2095,6 +1987,7 @@ type NodeDefaultElementType = {
   reviews: "div";
   frame36: "div";
   frame34: "div";
+  span: "span";
   frame35: "div";
   frame43: "div";
   frame44: "div";
@@ -2107,9 +2000,7 @@ type NodeDefaultElementType = {
   child3: "div";
   box4: "div";
   child4: "div";
-  cta: "div";
-  frame52: "div";
-  buttonContainer: "div";
+  ctaBottom: typeof CtaBottom;
   homeFooter: "div";
   footer: typeof Footer;
 };
@@ -2200,6 +2091,7 @@ export const PlasmicHome = Object.assign(
     reviews: makeNodeComponent("reviews"),
     frame36: makeNodeComponent("frame36"),
     frame34: makeNodeComponent("frame34"),
+    span: makeNodeComponent("span"),
     frame35: makeNodeComponent("frame35"),
     frame43: makeNodeComponent("frame43"),
     frame44: makeNodeComponent("frame44"),
@@ -2212,9 +2104,7 @@ export const PlasmicHome = Object.assign(
     child3: makeNodeComponent("child3"),
     box4: makeNodeComponent("box4"),
     child4: makeNodeComponent("child4"),
-    cta: makeNodeComponent("cta"),
-    frame52: makeNodeComponent("frame52"),
-    buttonContainer: makeNodeComponent("buttonContainer"),
+    ctaBottom: makeNodeComponent("ctaBottom"),
     homeFooter: makeNodeComponent("homeFooter"),
     footer: makeNodeComponent("footer"),
 

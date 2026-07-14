@@ -60,6 +60,10 @@ import {
 } from "@plasmicapp/react-web/lib/host";
 
 import Header from "../../Header"; // plasmic-import: qmNXHiKWCTTQ/component
+import { SliderWrapper } from "@plasmicpkgs/react-slick";
+import { sliderHelpers as SliderWrapper_Helpers } from "@plasmicpkgs/react-slick";
+import CtaBottom from "../../CtaBottom"; // plasmic-import: UmfSTsW6wMCz/component
+import Footer from "../../Footer"; // plasmic-import: RbMtVh1ii_PZ/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/styleTokensProvider
 
@@ -167,6 +171,57 @@ export type PlasmicAboutUs__OverridesType = {
   text10?: Flex__<"div">;
   aboutUsSection4?: Flex__<"div">;
   wrapper3?: Flex__<"div">;
+  aboutUsSection6?: Flex__<"div">;
+  heading4?: Flex__<"div">;
+  row?: Flex__<"div">;
+  profile?: Flex__<"div">;
+  text14?: Flex__<"div">;
+  profile2?: Flex__<"div">;
+  text15?: Flex__<"div">;
+  profile3?: Flex__<"div">;
+  text16?: Flex__<"div">;
+  row2?: Flex__<"div">;
+  profile4?: Flex__<"div">;
+  text17?: Flex__<"div">;
+  profile5?: Flex__<"div">;
+  text18?: Flex__<"div">;
+  profile6?: Flex__<"div">;
+  text19?: Flex__<"div">;
+  row3?: Flex__<"div">;
+  profile7?: Flex__<"div">;
+  text20?: Flex__<"div">;
+  profile8?: Flex__<"div">;
+  text21?: Flex__<"div">;
+  profile9?: Flex__<"div">;
+  text22?: Flex__<"div">;
+  sliderCarousel?: Flex__<typeof SliderWrapper>;
+  slide?: Flex__<"div">;
+  row4?: Flex__<"div">;
+  profile10?: Flex__<"div">;
+  text23?: Flex__<"div">;
+  profile11?: Flex__<"div">;
+  text24?: Flex__<"div">;
+  profile12?: Flex__<"div">;
+  text25?: Flex__<"div">;
+  slide2?: Flex__<"div">;
+  row5?: Flex__<"div">;
+  profile13?: Flex__<"div">;
+  text26?: Flex__<"div">;
+  profile14?: Flex__<"div">;
+  text27?: Flex__<"div">;
+  profile15?: Flex__<"div">;
+  text28?: Flex__<"div">;
+  slide3?: Flex__<"div">;
+  row6?: Flex__<"div">;
+  profile16?: Flex__<"div">;
+  text29?: Flex__<"div">;
+  profile17?: Flex__<"div">;
+  text30?: Flex__<"div">;
+  profile18?: Flex__<"div">;
+  text31?: Flex__<"div">;
+  aboutUsCta?: Flex__<"div">;
+  ctaBottom?: Flex__<typeof CtaBottom>;
+  footer?: Flex__<typeof Footer>;
 };
 
 export interface DefaultAboutUsProps {}
@@ -210,7 +265,30 @@ function PlasmicAboutUs__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
+  const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
+    () => [
+      {
+        path: "sliderCarousel.currentSlide",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => 0,
+
+        refName: "sliderCarousel",
+        onMutate: generateOnMutateForSpec("currentSlide", SliderWrapper_Helpers)
+      }
+    ],
+    [$props, $ctx, $refs]
+  );
+
   const globalVariants = _useGlobalVariants();
+
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: {},
+    $q: {},
+    $refs
+  });
 
   const pageMetadata = generateDynamicMetadata(
     wrapQueriesWithLoadingProxy({}),
@@ -1029,7 +1107,11 @@ function PlasmicAboutUs__RenderFunc(props: {
                   alt={"Sterling Food"}
                   className={classNames(sty.img__ypwQh)}
                   displayHeight={"auto"}
-                  displayMaxHeight={"none"}
+                  displayMaxHeight={
+                    hasVariant(globalVariants, "screen", "tablet")
+                      ? "300px"
+                      : "none"
+                  }
                   displayMaxWidth={"100%"}
                   displayMinHeight={"0"}
                   displayMinWidth={"0"}
@@ -1077,7 +1159,11 @@ function PlasmicAboutUs__RenderFunc(props: {
                   alt={"Sterling Food"}
                   className={classNames(sty.img__tMwd)}
                   displayHeight={"auto"}
-                  displayMaxHeight={"none"}
+                  displayMaxHeight={
+                    hasVariant(globalVariants, "screen", "tablet")
+                      ? "300px"
+                      : "none"
+                  }
                   displayMaxWidth={"100%"}
                   displayMinHeight={"0"}
                   displayMinWidth={"0"}
@@ -1125,7 +1211,11 @@ function PlasmicAboutUs__RenderFunc(props: {
                   alt={"Sterling Food"}
                   className={classNames(sty.img__sDqTh)}
                   displayHeight={"auto"}
-                  displayMaxHeight={"none"}
+                  displayMaxHeight={
+                    hasVariant(globalVariants, "screen", "tablet")
+                      ? "300px"
+                      : "none"
+                  }
                   displayMaxWidth={"100%"}
                   displayMinHeight={"0"}
                   displayMinWidth={"0"}
@@ -1220,6 +1310,977 @@ function PlasmicAboutUs__RenderFunc(props: {
               </div>
             </div>
           </div>
+          <div
+            data-plasmic-name={"aboutUsSection6"}
+            data-plasmic-override={overrides.aboutUsSection6}
+            className={classNames("all", sty.aboutUsSection6)}
+          >
+            <div
+              data-plasmic-name={"heading4"}
+              data-plasmic-override={overrides.heading4}
+              className={classNames("all", sty.heading4)}
+            >
+              <div className={classNames("all", "__wab_text", sty.text__uUDw)}>
+                {"Meet Our"}
+              </div>
+              <div className={classNames("all", "__wab_text", sty.text__t8J0T)}>
+                {"Leadership"}
+              </div>
+              <div className={classNames("all", "__wab_text", sty.text__bnCbi)}>
+                {"Team"}
+              </div>
+              <div className={classNames("all", "__wab_text", sty.text__zwfc5)}>
+                {
+                  "Behind Sterling Foods is a team committed to innovation, long-term growth, and building strong customer partnerships."
+                }
+              </div>
+            </div>
+            <div
+              data-plasmic-name={"row"}
+              data-plasmic-override={overrides.row}
+              className={classNames("all", sty.row)}
+            >
+              <div
+                data-plasmic-name={"profile"}
+                data-plasmic-override={overrides.profile}
+                className={classNames("all", sty.profile)}
+              >
+                <PlasmicImg__
+                  alt={"Kelly Crouse CEO"}
+                  className={classNames(sty.img__javmH)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/sterling_and_buena_vista_foods/images/kellyCrousePng.png",
+                    fullWidth: 266,
+                    fullHeight: 329,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <div
+                  data-plasmic-name={"text14"}
+                  data-plasmic-override={overrides.text14}
+                  className={classNames("all", sty.text14)}
+                >
+                  <div
+                    className={classNames("all", "__wab_text", sty.text___3WHr)}
+                  >
+                    {"Kelly Crouse"}
+                  </div>
+                  <div
+                    className={classNames(
+                      "all",
+                      "__wab_text",
+                      sty.text___6Rclh
+                    )}
+                  >
+                    {"Chief Executive Officer"}
+                  </div>
+                </div>
+              </div>
+              <div
+                data-plasmic-name={"profile2"}
+                data-plasmic-override={overrides.profile2}
+                className={classNames("all", sty.profile2)}
+              >
+                <PlasmicImg__
+                  alt={"Chad Sim COO"}
+                  className={classNames(sty.img__lw9VY)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/sterling_and_buena_vista_foods/images/jImPng.png",
+                    fullWidth: 266,
+                    fullHeight: 329,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <div
+                  data-plasmic-name={"text15"}
+                  data-plasmic-override={overrides.text15}
+                  className={classNames("all", sty.text15)}
+                >
+                  <div
+                    className={classNames(
+                      "all",
+                      "__wab_text",
+                      sty.text___8Bwyc
+                    )}
+                  >
+                    {"Chad Sim"}
+                  </div>
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__wdtz1)}
+                  >
+                    {"Chief Operating Officer"}
+                  </div>
+                </div>
+              </div>
+              <div
+                data-plasmic-name={"profile3"}
+                data-plasmic-override={overrides.profile3}
+                className={classNames("all", sty.profile3)}
+              >
+                <PlasmicImg__
+                  alt={"Jim Nattier CFO"}
+                  className={classNames(sty.img___1FOvp)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/sterling_and_buena_vista_foods/images/danPng.png",
+                    fullWidth: 266,
+                    fullHeight: 329,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <div
+                  data-plasmic-name={"text16"}
+                  data-plasmic-override={overrides.text16}
+                  className={classNames("all", sty.text16)}
+                >
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__jfSaQ)}
+                  >
+                    {"Jim Nattier"}
+                  </div>
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__nihjw)}
+                  >
+                    {"Chief Financial Officer"}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              data-plasmic-name={"row2"}
+              data-plasmic-override={overrides.row2}
+              className={classNames("all", sty.row2)}
+            >
+              <div
+                data-plasmic-name={"profile4"}
+                data-plasmic-override={overrides.profile4}
+                className={classNames("all", sty.profile4)}
+              >
+                <PlasmicImg__
+                  alt={"Kelly Crouse CEO"}
+                  className={classNames(sty.img___2T2O)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/sterling_and_buena_vista_foods/images/elvaPng.png",
+                    fullWidth: 266,
+                    fullHeight: 329,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <div
+                  data-plasmic-name={"text17"}
+                  data-plasmic-override={overrides.text17}
+                  className={classNames("all", sty.text17)}
+                >
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__m2Iew)}
+                  >
+                    {"Elva Charles"}
+                  </div>
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__rjjK2)}
+                  >
+                    {
+                      "Sr. Vice President of Procurement,\r Quality, Government, and Specialty Channels"
+                    }
+                  </div>
+                </div>
+              </div>
+              <div
+                data-plasmic-name={"profile5"}
+                data-plasmic-override={overrides.profile5}
+                className={classNames("all", sty.profile5)}
+              >
+                <PlasmicImg__
+                  alt={"Chad Sim COO"}
+                  className={classNames(sty.img___6P0P0)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/sterling_and_buena_vista_foods/images/lauraPng.png",
+                    fullWidth: 266,
+                    fullHeight: 329,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <div
+                  data-plasmic-name={"text18"}
+                  data-plasmic-override={overrides.text18}
+                  className={classNames("all", sty.text18)}
+                >
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__rYkaE)}
+                  >
+                    {"Laura Bruno"}
+                  </div>
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__xhdrO)}
+                  >
+                    {"President, Buena Vista Foods Division"}
+                  </div>
+                </div>
+              </div>
+              <div
+                data-plasmic-name={"profile6"}
+                data-plasmic-override={overrides.profile6}
+                className={classNames("all", sty.profile6)}
+              >
+                <PlasmicImg__
+                  alt={"Jim Nattier CFO"}
+                  className={classNames(sty.img__mPQr0)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/sterling_and_buena_vista_foods/images/lizPng.png",
+                    fullWidth: 266,
+                    fullHeight: 329,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <div
+                  data-plasmic-name={"text19"}
+                  data-plasmic-override={overrides.text19}
+                  className={classNames("all", sty.text19)}
+                >
+                  <div
+                    className={classNames(
+                      "all",
+                      "__wab_text",
+                      sty.text___91Mu2
+                    )}
+                  >
+                    {"Liz Thomas"}
+                  </div>
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__iZlJu)}
+                  >
+                    {"Executive Vice President, National Restaurants Division"}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              data-plasmic-name={"row3"}
+              data-plasmic-override={overrides.row3}
+              className={classNames("all", sty.row3)}
+            >
+              <div
+                data-plasmic-name={"profile7"}
+                data-plasmic-override={overrides.profile7}
+                className={classNames("all", sty.profile7)}
+              >
+                <PlasmicImg__
+                  alt={"Kelly Crouse CEO"}
+                  className={classNames(sty.img__hFqMs)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/sterling_and_buena_vista_foods/images/dan2Png.png",
+                    fullWidth: 266,
+                    fullHeight: 329,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <div
+                  data-plasmic-name={"text20"}
+                  data-plasmic-override={overrides.text20}
+                  className={classNames("all", sty.text20)}
+                >
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__ccVvY)}
+                  >
+                    {"Dan Seale"}
+                  </div>
+                  <div
+                    className={classNames("all", "__wab_text", sty.text___1Sb2)}
+                  >
+                    {
+                      "Sr. Vice President of Human Resources and Process Improvement"
+                    }
+                  </div>
+                </div>
+              </div>
+              <div
+                data-plasmic-name={"profile8"}
+                data-plasmic-override={overrides.profile8}
+                className={classNames("all", sty.profile8)}
+              >
+                <PlasmicImg__
+                  alt={"Chad Sim COO"}
+                  className={classNames(sty.img__byInH)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/sterling_and_buena_vista_foods/images/ericPng.png",
+                    fullWidth: 266,
+                    fullHeight: 329,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <div
+                  data-plasmic-name={"text21"}
+                  data-plasmic-override={overrides.text21}
+                  className={classNames("all", sty.text21)}
+                >
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__yEuQp)}
+                  >
+                    {"Eric Newman"}
+                  </div>
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__l4Gst)}
+                  >
+                    {"Vice President of Corporate Food Safety"}
+                  </div>
+                </div>
+              </div>
+              <div
+                data-plasmic-name={"profile9"}
+                data-plasmic-override={overrides.profile9}
+                className={classNames("all", sty.profile9)}
+              >
+                <PlasmicImg__
+                  alt={"Jim Nattier CFO"}
+                  className={classNames(sty.img__gzTk)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/sterling_and_buena_vista_foods/images/summerPng.png",
+                    fullWidth: 266,
+                    fullHeight: 329,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <div
+                  data-plasmic-name={"text22"}
+                  data-plasmic-override={overrides.text22}
+                  className={classNames("all", sty.text22)}
+                >
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__jaZ0F)}
+                  >
+                    {"Summer Dedick"}
+                  </div>
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__rnfKl)}
+                  >
+                    {
+                      "Vice President of Product Development & Commercialization"
+                    }
+                  </div>
+                </div>
+              </div>
+            </div>
+            {(() => {
+              const child$Props = {
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 0,
+                beforeChange: async (...eventArgs: any) => {
+                  generateStateOnChangePropForCodeComponents(
+                    $state,
+                    "currentSlide",
+                    ["sliderCarousel", "currentSlide"],
+                    SliderWrapper_Helpers
+                  ).apply(null, eventArgs);
+                },
+                centerMode: true,
+                centerPadding: hasVariant(
+                  globalVariants,
+                  "screen",
+                  "smallMobile"
+                )
+                  ? "0-px"
+                  : hasVariant(globalVariants, "screen", "largerMobile")
+                    ? "20px"
+                    : "30px",
+                className: classNames("__wab_instance", sty.sliderCarousel),
+                cssEase: "linear",
+                initialSlide: generateStateValueProp($state, [
+                  "sliderCarousel",
+                  "currentSlide"
+                ]),
+                ref: ref => {
+                  $refs["sliderCarousel"] = ref;
+                },
+                sliderScopeClassName: sty["sliderCarousel__slider"],
+                speed: 5000
+              };
+              initializeCodeComponentStates(
+                $state,
+                [
+                  {
+                    name: "currentSlide",
+                    plasmicStateName: "sliderCarousel.currentSlide"
+                  }
+                ],
+                [],
+                SliderWrapper_Helpers ?? {},
+                child$Props
+              );
+
+              return (
+                <SliderWrapper
+                  data-plasmic-name={"sliderCarousel"}
+                  data-plasmic-override={overrides.sliderCarousel}
+                  {...child$Props}
+                >
+                  <div
+                    data-plasmic-name={"slide"}
+                    data-plasmic-override={overrides.slide}
+                    className={classNames("all", sty.slide)}
+                  >
+                    <div
+                      data-plasmic-name={"row4"}
+                      data-plasmic-override={overrides.row4}
+                      className={classNames("all", sty.row4)}
+                    >
+                      <div
+                        data-plasmic-name={"profile10"}
+                        data-plasmic-override={overrides.profile10}
+                        className={classNames("all", sty.profile10)}
+                      >
+                        <PlasmicImg__
+                          alt={"Kelly Crouse CEO"}
+                          className={classNames(sty.img__td6Ko)}
+                          displayHeight={"auto"}
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"100%"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"auto"}
+                          loading={"lazy"}
+                          src={{
+                            src: "/plasmic/sterling_and_buena_vista_foods/images/kellyCrousePng.png",
+                            fullWidth: 266,
+                            fullHeight: 329,
+                            aspectRatio: undefined
+                          }}
+                        />
+
+                        <div
+                          data-plasmic-name={"text23"}
+                          data-plasmic-override={overrides.text23}
+                          className={classNames("all", sty.text23)}
+                        >
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__pX1Df
+                            )}
+                          >
+                            {"Kelly Crouse"}
+                          </div>
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__xjX3
+                            )}
+                          >
+                            {"Chief Executive Officer"}
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        data-plasmic-name={"profile11"}
+                        data-plasmic-override={overrides.profile11}
+                        className={classNames("all", sty.profile11)}
+                      >
+                        <PlasmicImg__
+                          alt={"Chad Sim COO"}
+                          className={classNames(sty.img__hlHta)}
+                          displayHeight={"auto"}
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"100%"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"auto"}
+                          loading={"lazy"}
+                          src={{
+                            src: "/plasmic/sterling_and_buena_vista_foods/images/jImPng.png",
+                            fullWidth: 266,
+                            fullHeight: 329,
+                            aspectRatio: undefined
+                          }}
+                        />
+
+                        <div
+                          data-plasmic-name={"text24"}
+                          data-plasmic-override={overrides.text24}
+                          className={classNames("all", sty.text24)}
+                        >
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__a9Jf4
+                            )}
+                          >
+                            {"Chad Sim"}
+                          </div>
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__nWxd
+                            )}
+                          >
+                            {"Chief Operating Officer"}
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        data-plasmic-name={"profile12"}
+                        data-plasmic-override={overrides.profile12}
+                        className={classNames("all", sty.profile12)}
+                      >
+                        <PlasmicImg__
+                          alt={"Jim Nattier CFO"}
+                          className={classNames(sty.img__e5SoW)}
+                          displayHeight={"auto"}
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"100%"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"auto"}
+                          loading={"lazy"}
+                          src={{
+                            src: "/plasmic/sterling_and_buena_vista_foods/images/danPng.png",
+                            fullWidth: 266,
+                            fullHeight: 329,
+                            aspectRatio: undefined
+                          }}
+                        />
+
+                        <div
+                          data-plasmic-name={"text25"}
+                          data-plasmic-override={overrides.text25}
+                          className={classNames("all", sty.text25)}
+                        >
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__knBvZ
+                            )}
+                          >
+                            {"Jim Nattier"}
+                          </div>
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__uBuum
+                            )}
+                          >
+                            {"Chief Financial Officer"}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-plasmic-name={"slide2"}
+                    data-plasmic-override={overrides.slide2}
+                    className={classNames("all", sty.slide2)}
+                  >
+                    <div
+                      data-plasmic-name={"row5"}
+                      data-plasmic-override={overrides.row5}
+                      className={classNames("all", sty.row5)}
+                    >
+                      <div
+                        data-plasmic-name={"profile13"}
+                        data-plasmic-override={overrides.profile13}
+                        className={classNames("all", sty.profile13)}
+                      >
+                        <PlasmicImg__
+                          alt={"Kelly Crouse CEO"}
+                          className={classNames(sty.img__e1Ey)}
+                          displayHeight={"auto"}
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"100%"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"auto"}
+                          loading={"lazy"}
+                          src={{
+                            src: "/plasmic/sterling_and_buena_vista_foods/images/elvaPng.png",
+                            fullWidth: 266,
+                            fullHeight: 329,
+                            aspectRatio: undefined
+                          }}
+                        />
+
+                        <div
+                          data-plasmic-name={"text26"}
+                          data-plasmic-override={overrides.text26}
+                          className={classNames("all", sty.text26)}
+                        >
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__xk0Tc
+                            )}
+                          >
+                            {"Elva Charles"}
+                          </div>
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__qL8Cd
+                            )}
+                          >
+                            {
+                              "Sr. Vice President of Procurement,\r Quality, Government, and Specialty Channels"
+                            }
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        data-plasmic-name={"profile14"}
+                        data-plasmic-override={overrides.profile14}
+                        className={classNames("all", sty.profile14)}
+                      >
+                        <PlasmicImg__
+                          alt={"Chad Sim COO"}
+                          className={classNames(sty.img__ewIi8)}
+                          displayHeight={"auto"}
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"100%"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"auto"}
+                          loading={"lazy"}
+                          src={{
+                            src: "/plasmic/sterling_and_buena_vista_foods/images/lauraPng.png",
+                            fullWidth: 266,
+                            fullHeight: 329,
+                            aspectRatio: undefined
+                          }}
+                        />
+
+                        <div
+                          data-plasmic-name={"text27"}
+                          data-plasmic-override={overrides.text27}
+                          className={classNames("all", sty.text27)}
+                        >
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__iTbgQ
+                            )}
+                          >
+                            {"Laura Bruno"}
+                          </div>
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text___9QBsF
+                            )}
+                          >
+                            {"President, Buena Vista Foods Division"}
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        data-plasmic-name={"profile15"}
+                        data-plasmic-override={overrides.profile15}
+                        className={classNames("all", sty.profile15)}
+                      >
+                        <PlasmicImg__
+                          alt={"Jim Nattier CFO"}
+                          className={classNames(sty.img__uEkof)}
+                          displayHeight={"auto"}
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"100%"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"auto"}
+                          loading={"lazy"}
+                          src={{
+                            src: "/plasmic/sterling_and_buena_vista_foods/images/lizPng.png",
+                            fullWidth: 266,
+                            fullHeight: 329,
+                            aspectRatio: undefined
+                          }}
+                        />
+
+                        <div
+                          data-plasmic-name={"text28"}
+                          data-plasmic-override={overrides.text28}
+                          className={classNames("all", sty.text28)}
+                        >
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__v7Lq7
+                            )}
+                          >
+                            {"Liz Thomas"}
+                          </div>
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__hUx4
+                            )}
+                          >
+                            {
+                              "Executive Vice President, National Restaurants Division"
+                            }
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-plasmic-name={"slide3"}
+                    data-plasmic-override={overrides.slide3}
+                    className={classNames("all", sty.slide3)}
+                  >
+                    <div
+                      data-plasmic-name={"row6"}
+                      data-plasmic-override={overrides.row6}
+                      className={classNames("all", sty.row6)}
+                    >
+                      <div
+                        data-plasmic-name={"profile16"}
+                        data-plasmic-override={overrides.profile16}
+                        className={classNames("all", sty.profile16)}
+                      >
+                        <PlasmicImg__
+                          alt={"Kelly Crouse CEO"}
+                          className={classNames(sty.img__bv1N)}
+                          displayHeight={"auto"}
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"100%"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"auto"}
+                          loading={"lazy"}
+                          src={{
+                            src: "/plasmic/sterling_and_buena_vista_foods/images/dan2Png.png",
+                            fullWidth: 266,
+                            fullHeight: 329,
+                            aspectRatio: undefined
+                          }}
+                        />
+
+                        <div
+                          data-plasmic-name={"text29"}
+                          data-plasmic-override={overrides.text29}
+                          className={classNames("all", sty.text29)}
+                        >
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__fS6H
+                            )}
+                          >
+                            {"Dan Seale"}
+                          </div>
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__eYdJj
+                            )}
+                          >
+                            {
+                              "Sr. Vice President of Human Resources and Process Improvement"
+                            }
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        data-plasmic-name={"profile17"}
+                        data-plasmic-override={overrides.profile17}
+                        className={classNames("all", sty.profile17)}
+                      >
+                        <PlasmicImg__
+                          alt={"Chad Sim COO"}
+                          className={classNames(sty.img__cs940)}
+                          displayHeight={"auto"}
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"100%"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"auto"}
+                          loading={"lazy"}
+                          src={{
+                            src: "/plasmic/sterling_and_buena_vista_foods/images/ericPng.png",
+                            fullWidth: 266,
+                            fullHeight: 329,
+                            aspectRatio: undefined
+                          }}
+                        />
+
+                        <div
+                          data-plasmic-name={"text30"}
+                          data-plasmic-override={overrides.text30}
+                          className={classNames("all", sty.text30)}
+                        >
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__odcWr
+                            )}
+                          >
+                            {"Eric Newman"}
+                          </div>
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__sQ3Zz
+                            )}
+                          >
+                            {"Vice President of Corporate Food Safety"}
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        data-plasmic-name={"profile18"}
+                        data-plasmic-override={overrides.profile18}
+                        className={classNames("all", sty.profile18)}
+                      >
+                        <PlasmicImg__
+                          alt={"Jim Nattier CFO"}
+                          className={classNames(sty.img__d3Goi)}
+                          displayHeight={"auto"}
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"100%"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"auto"}
+                          loading={"lazy"}
+                          src={{
+                            src: "/plasmic/sterling_and_buena_vista_foods/images/summerPng.png",
+                            fullWidth: 266,
+                            fullHeight: 329,
+                            aspectRatio: undefined
+                          }}
+                        />
+
+                        <div
+                          data-plasmic-name={"text31"}
+                          data-plasmic-override={overrides.text31}
+                          className={classNames("all", sty.text31)}
+                        >
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__bQXs
+                            )}
+                          >
+                            {"Summer Dedick"}
+                          </div>
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__tyDm9
+                            )}
+                          >
+                            {
+                              "Vice President of Product Development & Commercialization"
+                            }
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </SliderWrapper>
+              );
+            })()}
+          </div>
+          <div
+            data-plasmic-name={"aboutUsCta"}
+            data-plasmic-override={overrides.aboutUsCta}
+            className={classNames("all", sty.aboutUsCta)}
+          >
+            <CtaBottom
+              data-plasmic-name={"ctaBottom"}
+              data-plasmic-override={overrides.ctaBottom}
+              className={classNames("__wab_instance", sty.ctaBottom)}
+            />
+          </div>
+          <Footer
+            data-plasmic-name={"footer"}
+            data-plasmic-override={overrides.footer}
+            className={classNames("__wab_instance", sty.footer)}
+          />
         </div>
       </div>
     </React.Fragment>
@@ -1282,7 +2343,58 @@ const PlasmicDescendants = {
     "section3",
     "text10",
     "aboutUsSection4",
-    "wrapper3"
+    "wrapper3",
+    "aboutUsSection6",
+    "heading4",
+    "row",
+    "profile",
+    "text14",
+    "profile2",
+    "text15",
+    "profile3",
+    "text16",
+    "row2",
+    "profile4",
+    "text17",
+    "profile5",
+    "text18",
+    "profile6",
+    "text19",
+    "row3",
+    "profile7",
+    "text20",
+    "profile8",
+    "text21",
+    "profile9",
+    "text22",
+    "sliderCarousel",
+    "slide",
+    "row4",
+    "profile10",
+    "text23",
+    "profile11",
+    "text24",
+    "profile12",
+    "text25",
+    "slide2",
+    "row5",
+    "profile13",
+    "text26",
+    "profile14",
+    "text27",
+    "profile15",
+    "text28",
+    "slide3",
+    "row6",
+    "profile16",
+    "text29",
+    "profile17",
+    "text30",
+    "profile18",
+    "text31",
+    "aboutUsCta",
+    "ctaBottom",
+    "footer"
   ],
   header: ["header"],
   aboutUsHero: ["aboutUsHero"],
@@ -1445,7 +2557,200 @@ const PlasmicDescendants = {
   section3: ["section3", "text10"],
   text10: ["text10"],
   aboutUsSection4: ["aboutUsSection4", "wrapper3"],
-  wrapper3: ["wrapper3"]
+  wrapper3: ["wrapper3"],
+  aboutUsSection6: [
+    "aboutUsSection6",
+    "heading4",
+    "row",
+    "profile",
+    "text14",
+    "profile2",
+    "text15",
+    "profile3",
+    "text16",
+    "row2",
+    "profile4",
+    "text17",
+    "profile5",
+    "text18",
+    "profile6",
+    "text19",
+    "row3",
+    "profile7",
+    "text20",
+    "profile8",
+    "text21",
+    "profile9",
+    "text22",
+    "sliderCarousel",
+    "slide",
+    "row4",
+    "profile10",
+    "text23",
+    "profile11",
+    "text24",
+    "profile12",
+    "text25",
+    "slide2",
+    "row5",
+    "profile13",
+    "text26",
+    "profile14",
+    "text27",
+    "profile15",
+    "text28",
+    "slide3",
+    "row6",
+    "profile16",
+    "text29",
+    "profile17",
+    "text30",
+    "profile18",
+    "text31"
+  ],
+  heading4: ["heading4"],
+  row: ["row", "profile", "text14", "profile2", "text15", "profile3", "text16"],
+  profile: ["profile", "text14"],
+  text14: ["text14"],
+  profile2: ["profile2", "text15"],
+  text15: ["text15"],
+  profile3: ["profile3", "text16"],
+  text16: ["text16"],
+  row2: [
+    "row2",
+    "profile4",
+    "text17",
+    "profile5",
+    "text18",
+    "profile6",
+    "text19"
+  ],
+  profile4: ["profile4", "text17"],
+  text17: ["text17"],
+  profile5: ["profile5", "text18"],
+  text18: ["text18"],
+  profile6: ["profile6", "text19"],
+  text19: ["text19"],
+  row3: [
+    "row3",
+    "profile7",
+    "text20",
+    "profile8",
+    "text21",
+    "profile9",
+    "text22"
+  ],
+  profile7: ["profile7", "text20"],
+  text20: ["text20"],
+  profile8: ["profile8", "text21"],
+  text21: ["text21"],
+  profile9: ["profile9", "text22"],
+  text22: ["text22"],
+  sliderCarousel: [
+    "sliderCarousel",
+    "slide",
+    "row4",
+    "profile10",
+    "text23",
+    "profile11",
+    "text24",
+    "profile12",
+    "text25",
+    "slide2",
+    "row5",
+    "profile13",
+    "text26",
+    "profile14",
+    "text27",
+    "profile15",
+    "text28",
+    "slide3",
+    "row6",
+    "profile16",
+    "text29",
+    "profile17",
+    "text30",
+    "profile18",
+    "text31"
+  ],
+  slide: [
+    "slide",
+    "row4",
+    "profile10",
+    "text23",
+    "profile11",
+    "text24",
+    "profile12",
+    "text25"
+  ],
+  row4: [
+    "row4",
+    "profile10",
+    "text23",
+    "profile11",
+    "text24",
+    "profile12",
+    "text25"
+  ],
+  profile10: ["profile10", "text23"],
+  text23: ["text23"],
+  profile11: ["profile11", "text24"],
+  text24: ["text24"],
+  profile12: ["profile12", "text25"],
+  text25: ["text25"],
+  slide2: [
+    "slide2",
+    "row5",
+    "profile13",
+    "text26",
+    "profile14",
+    "text27",
+    "profile15",
+    "text28"
+  ],
+  row5: [
+    "row5",
+    "profile13",
+    "text26",
+    "profile14",
+    "text27",
+    "profile15",
+    "text28"
+  ],
+  profile13: ["profile13", "text26"],
+  text26: ["text26"],
+  profile14: ["profile14", "text27"],
+  text27: ["text27"],
+  profile15: ["profile15", "text28"],
+  text28: ["text28"],
+  slide3: [
+    "slide3",
+    "row6",
+    "profile16",
+    "text29",
+    "profile17",
+    "text30",
+    "profile18",
+    "text31"
+  ],
+  row6: [
+    "row6",
+    "profile16",
+    "text29",
+    "profile17",
+    "text30",
+    "profile18",
+    "text31"
+  ],
+  profile16: ["profile16", "text29"],
+  text29: ["text29"],
+  profile17: ["profile17", "text30"],
+  text30: ["text30"],
+  profile18: ["profile18", "text31"],
+  text31: ["text31"],
+  aboutUsCta: ["aboutUsCta", "ctaBottom"],
+  ctaBottom: ["ctaBottom"],
+  footer: ["footer"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -1506,6 +2811,57 @@ type NodeDefaultElementType = {
   text10: "div";
   aboutUsSection4: "div";
   wrapper3: "div";
+  aboutUsSection6: "div";
+  heading4: "div";
+  row: "div";
+  profile: "div";
+  text14: "div";
+  profile2: "div";
+  text15: "div";
+  profile3: "div";
+  text16: "div";
+  row2: "div";
+  profile4: "div";
+  text17: "div";
+  profile5: "div";
+  text18: "div";
+  profile6: "div";
+  text19: "div";
+  row3: "div";
+  profile7: "div";
+  text20: "div";
+  profile8: "div";
+  text21: "div";
+  profile9: "div";
+  text22: "div";
+  sliderCarousel: typeof SliderWrapper;
+  slide: "div";
+  row4: "div";
+  profile10: "div";
+  text23: "div";
+  profile11: "div";
+  text24: "div";
+  profile12: "div";
+  text25: "div";
+  slide2: "div";
+  row5: "div";
+  profile13: "div";
+  text26: "div";
+  profile14: "div";
+  text27: "div";
+  profile15: "div";
+  text28: "div";
+  slide3: "div";
+  row6: "div";
+  profile16: "div";
+  text29: "div";
+  profile17: "div";
+  text30: "div";
+  profile18: "div";
+  text31: "div";
+  aboutUsCta: "div";
+  ctaBottom: typeof CtaBottom;
+  footer: typeof Footer;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -1624,6 +2980,57 @@ export const PlasmicAboutUs = Object.assign(
     text10: makeNodeComponent("text10"),
     aboutUsSection4: makeNodeComponent("aboutUsSection4"),
     wrapper3: makeNodeComponent("wrapper3"),
+    aboutUsSection6: makeNodeComponent("aboutUsSection6"),
+    heading4: makeNodeComponent("heading4"),
+    row: makeNodeComponent("row"),
+    profile: makeNodeComponent("profile"),
+    text14: makeNodeComponent("text14"),
+    profile2: makeNodeComponent("profile2"),
+    text15: makeNodeComponent("text15"),
+    profile3: makeNodeComponent("profile3"),
+    text16: makeNodeComponent("text16"),
+    row2: makeNodeComponent("row2"),
+    profile4: makeNodeComponent("profile4"),
+    text17: makeNodeComponent("text17"),
+    profile5: makeNodeComponent("profile5"),
+    text18: makeNodeComponent("text18"),
+    profile6: makeNodeComponent("profile6"),
+    text19: makeNodeComponent("text19"),
+    row3: makeNodeComponent("row3"),
+    profile7: makeNodeComponent("profile7"),
+    text20: makeNodeComponent("text20"),
+    profile8: makeNodeComponent("profile8"),
+    text21: makeNodeComponent("text21"),
+    profile9: makeNodeComponent("profile9"),
+    text22: makeNodeComponent("text22"),
+    sliderCarousel: makeNodeComponent("sliderCarousel"),
+    slide: makeNodeComponent("slide"),
+    row4: makeNodeComponent("row4"),
+    profile10: makeNodeComponent("profile10"),
+    text23: makeNodeComponent("text23"),
+    profile11: makeNodeComponent("profile11"),
+    text24: makeNodeComponent("text24"),
+    profile12: makeNodeComponent("profile12"),
+    text25: makeNodeComponent("text25"),
+    slide2: makeNodeComponent("slide2"),
+    row5: makeNodeComponent("row5"),
+    profile13: makeNodeComponent("profile13"),
+    text26: makeNodeComponent("text26"),
+    profile14: makeNodeComponent("profile14"),
+    text27: makeNodeComponent("text27"),
+    profile15: makeNodeComponent("profile15"),
+    text28: makeNodeComponent("text28"),
+    slide3: makeNodeComponent("slide3"),
+    row6: makeNodeComponent("row6"),
+    profile16: makeNodeComponent("profile16"),
+    text29: makeNodeComponent("text29"),
+    profile17: makeNodeComponent("profile17"),
+    text30: makeNodeComponent("text30"),
+    profile18: makeNodeComponent("profile18"),
+    text31: makeNodeComponent("text31"),
+    aboutUsCta: makeNodeComponent("aboutUsCta"),
+    ctaBottom: makeNodeComponent("ctaBottom"),
+    footer: makeNodeComponent("footer"),
 
     // Metadata about props expected for PlasmicAboutUs
     internalVariantProps: PlasmicAboutUs__VariantProps,

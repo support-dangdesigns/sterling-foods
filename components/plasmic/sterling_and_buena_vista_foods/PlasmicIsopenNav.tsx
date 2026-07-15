@@ -216,6 +216,7 @@ function PlasmicIsopenNav__RenderFunc(props: {
             data-plasmic-override={overrides._1}
             className={classNames("all", "a", "a__uyaK1", sty._1)}
             component={Link}
+            href={`/about-us`}
             legacyBehavior={false}
             platform={"nextjs"}
           >
@@ -286,6 +287,7 @@ function PlasmicIsopenNav__RenderFunc(props: {
             data-plasmic-override={overrides._3}
             className={classNames("all", "a", "a__uyaK1", sty._3)}
             component={Link}
+            href={`/markets`}
             legacyBehavior={false}
             platform={"nextjs"}
           >
@@ -356,6 +358,7 @@ function PlasmicIsopenNav__RenderFunc(props: {
             data-plasmic-override={overrides._5}
             className={classNames("all", "a", "a__uyaK1", sty._5)}
             component={Link}
+            href={`/quality-safety`}
             legacyBehavior={false}
             platform={"nextjs"}
           >
@@ -426,7 +429,11 @@ function PlasmicIsopenNav__RenderFunc(props: {
             data-plasmic-override={overrides._7}
             className={classNames("all", "a", "a__uyaK1", sty._7)}
             component={Link}
+            href={`/contact-us`}
             legacyBehavior={false}
+            onClick={async event => {
+              const $steps = {};
+            }}
             platform={"nextjs"}
           >
             <h3

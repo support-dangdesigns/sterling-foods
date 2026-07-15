@@ -992,3 +992,9 @@
   max-width: 100%;
   flex-shrink: 0;
 }
+@media (max-width: 1024px) {
+  .footer:global(.__wab_instance) {
+    width: 100%;
+    min-width: 0;
+  }
+}

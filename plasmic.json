@@ -27975,6 +27975,11 @@
           "id": "QmvyYi5qQaXv",
           "name": "StarFilledIcon",
           "moduleFilePath": "plasmic/sterling_and_buena_vista_foods/icons/PlasmicIcon__StarFilled.tsx"
+        },
+        {
+          "id": "0b4C3zRQLVvH",
+          "name": "Arrow2SvgIcon",
+          "moduleFilePath": "plasmic/sterling_and_buena_vista_foods/icons/PlasmicIcon__Arrow2Svg.tsx"
         }
       ],
       "images": [
@@ -28557,6 +28562,11 @@
           "id": "MzqaCmiAdrZU",
           "name": "Group 10.png",
           "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/group10Png.png"
+        },
+        {
+          "id": "f_Ql9I6zrXRi",
+          "name": "Arrow2.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/arrow2Png.png"
         }
       ],
       "indirect": false,

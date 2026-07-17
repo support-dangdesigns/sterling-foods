@@ -169,8 +169,6 @@ export type PlasmicHome__OverridesType = {
   child2?: Flex__<"div">;
   box3?: Flex__<"div">;
   child3?: Flex__<"div">;
-  box4?: Flex__<"div">;
-  child4?: Flex__<"div">;
   ctaBottom?: Flex__<typeof CtaBottom>;
   homeFooter?: Flex__<"div">;
   footer?: Flex__<typeof Footer>;
@@ -1521,13 +1519,11 @@ function PlasmicHome__RenderFunc(props: {
                       </div>
                     </div>
                     {(
-                      hasVariant(globalVariants, "screen", "smallDesktop")
+                      hasVariant(globalVariants, "screen", "tablet")
                         ? true
                         : hasVariant(globalVariants, "screen", "desktop")
                           ? true
-                          : hasVariant(globalVariants, "screen", "large")
-                            ? true
-                            : false
+                          : false
                     ) ? (
                       <div
                         data-plasmic-name={"box2"}
@@ -1540,41 +1536,39 @@ function PlasmicHome__RenderFunc(props: {
                           className={classNames("all", sty.child2)}
                         >
                           <div
-                            className={classNames("all", sty.freeBox__bbrPb)}
+                            className={classNames("all", sty.freeBox___5M83K)}
                           >
                             <StarFilledIcon
-                              className={classNames("all", sty.svg__hg2P3)}
+                              className={classNames("all", sty.svg__d7Md)}
                               role={"img"}
                             />
 
                             <StarFilledIcon
-                              className={classNames("all", sty.svg__wWSe4)}
+                              className={classNames("all", sty.svg__goanB)}
                               role={"img"}
                             />
 
                             <StarFilledIcon
-                              className={classNames("all", sty.svg__vHg07)}
+                              className={classNames("all", sty.svg__baEQ)}
                               role={"img"}
                             />
 
                             <StarFilledIcon
-                              className={classNames("all", sty.svg__dd0Y)}
+                              className={classNames("all", sty.svg__vQ8F3)}
                               role={"img"}
                             />
 
                             <StarFilledIcon
-                              className={classNames("all", sty.svg__tMael)}
+                              className={classNames("all", sty.svg__f3Wga)}
                               role={"img"}
                             />
                           </div>
-                          <div
-                            className={classNames("all", sty.freeBox__nVgjj)}
-                          >
+                          <div className={classNames("all", sty.freeBox__qTyI)}>
                             <div
                               className={classNames(
                                 "all",
                                 "__wab_text",
-                                sty.text__doP7X
+                                sty.text__z5WNr
                               )}
                             >
                               {
@@ -1583,20 +1577,20 @@ function PlasmicHome__RenderFunc(props: {
                             </div>
                           </div>
                           <div
-                            className={classNames("all", sty.freeBox___3KLw3)}
+                            className={classNames("all", sty.freeBox__iOqGc)}
                           >
                             <div
                               className={classNames(
                                 "all",
                                 "__wab_text",
-                                sty.text__fSgfk
+                                sty.text__hnmZm
                               )}
                             >
                               {"JOHN DOE"}
                             </div>
                             <PlasmicImg__
                               alt={""}
-                              className={classNames(sty.img___4Knc)}
+                              className={classNames(sty.img__uWraq)}
                               displayHeight={"auto"}
                               displayMaxHeight={"none"}
                               displayMaxWidth={"100%"}
@@ -1618,13 +1612,11 @@ function PlasmicHome__RenderFunc(props: {
                       </div>
                     ) : null}
                     {(
-                      hasVariant(globalVariants, "screen", "smallDesktop")
+                      hasVariant(globalVariants, "screen", "tablet")
                         ? true
                         : hasVariant(globalVariants, "screen", "desktop")
                           ? true
-                          : hasVariant(globalVariants, "screen", "large")
-                            ? true
-                            : false
+                          : false
                     ) ? (
                       <div
                         data-plasmic-name={"box3"}
@@ -1637,39 +1629,41 @@ function PlasmicHome__RenderFunc(props: {
                           className={classNames("all", sty.child3)}
                         >
                           <div
-                            className={classNames("all", sty.freeBox__bmB5P)}
+                            className={classNames("all", sty.freeBox___9WsNo)}
                           >
                             <StarFilledIcon
-                              className={classNames("all", sty.svg__aKjoU)}
+                              className={classNames("all", sty.svg__a2NE)}
                               role={"img"}
                             />
 
                             <StarFilledIcon
-                              className={classNames("all", sty.svg___1BOaP)}
+                              className={classNames("all", sty.svg__koQk)}
                               role={"img"}
                             />
 
                             <StarFilledIcon
-                              className={classNames("all", sty.svg__qy22H)}
+                              className={classNames("all", sty.svg__lSDrn)}
                               role={"img"}
                             />
 
                             <StarFilledIcon
-                              className={classNames("all", sty.svg___8E8HB)}
+                              className={classNames("all", sty.svg___5Z5Sz)}
                               role={"img"}
                             />
 
                             <StarFilledIcon
-                              className={classNames("all", sty.svg__b1Xkq)}
+                              className={classNames("all", sty.svg__gcuaQ)}
                               role={"img"}
                             />
                           </div>
-                          <div className={classNames("all", sty.freeBox__gAkm)}>
+                          <div
+                            className={classNames("all", sty.freeBox__uQe6K)}
+                          >
                             <div
                               className={classNames(
                                 "all",
                                 "__wab_text",
-                                sty.text___1CI5Y
+                                sty.text__guliA
                               )}
                             >
                               {
@@ -1678,115 +1672,20 @@ function PlasmicHome__RenderFunc(props: {
                             </div>
                           </div>
                           <div
-                            className={classNames("all", sty.freeBox__bYxJp)}
+                            className={classNames("all", sty.freeBox__zlW0F)}
                           >
                             <div
                               className={classNames(
                                 "all",
                                 "__wab_text",
-                                sty.text__hqd1
+                                sty.text__z2Yr
                               )}
                             >
                               {"JOHN DOE"}
                             </div>
                             <PlasmicImg__
                               alt={""}
-                              className={classNames(sty.img___6OO0G)}
-                              displayHeight={"auto"}
-                              displayMaxHeight={"none"}
-                              displayMaxWidth={"100%"}
-                              displayMinHeight={"0"}
-                              displayMinWidth={"0"}
-                              displayWidth={"auto"}
-                              format={"avif"}
-                              loading={"lazy"}
-                              quality={100}
-                              src={{
-                                src: "/plasmic/sterling_and_buena_vista_foods/images/layer14Png.png",
-                                fullWidth: 54,
-                                fullHeight: 42,
-                                aspectRatio: undefined
-                              }}
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    ) : null}
-                    {(
-                      hasVariant(globalVariants, "screen", "smallDesktop")
-                        ? true
-                        : hasVariant(globalVariants, "screen", "desktop")
-                          ? true
-                          : hasVariant(globalVariants, "screen", "large")
-                            ? true
-                            : false
-                    ) ? (
-                      <div
-                        data-plasmic-name={"box4"}
-                        data-plasmic-override={overrides.box4}
-                        className={classNames("all", sty.box4)}
-                      >
-                        <div
-                          data-plasmic-name={"child4"}
-                          data-plasmic-override={overrides.child4}
-                          className={classNames("all", sty.child4)}
-                        >
-                          <div className={classNames("all", sty.freeBox__mnIz)}>
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg__ueqlD)}
-                              role={"img"}
-                            />
-
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg__bTdr)}
-                              role={"img"}
-                            />
-
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg___0Ix1X)}
-                              role={"img"}
-                            />
-
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg__wnSyj)}
-                              role={"img"}
-                            />
-
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg__kwhh9)}
-                              role={"img"}
-                            />
-                          </div>
-                          <div
-                            className={classNames("all", sty.freeBox__nWgsZ)}
-                          >
-                            <div
-                              className={classNames(
-                                "all",
-                                "__wab_text",
-                                sty.text__ps6Md
-                              )}
-                            >
-                              {
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ullamcorper diam, eget consequat neque. Fusce est tellus, vulputate nec commodo ac, dictum non orci. Phasellus pretium, nisl consectetur vestibulum volutpat, mi mauris gravida "
-                              }
-                            </div>
-                          </div>
-                          <div
-                            className={classNames("all", sty.freeBox__bjsfD)}
-                          >
-                            <div
-                              className={classNames(
-                                "all",
-                                "__wab_text",
-                                sty.text__nqCp4
-                              )}
-                            >
-                              {"JOHN DOE"}
-                            </div>
-                            <PlasmicImg__
-                              alt={""}
-                              className={classNames(sty.img__nQyBb)}
+                              className={classNames(sty.img__jgg8W)}
                               displayHeight={"auto"}
                               displayMaxHeight={"none"}
                               displayMaxWidth={"100%"}
@@ -1872,8 +1771,6 @@ const PlasmicDescendants = {
     "child2",
     "box3",
     "child3",
-    "box4",
-    "child4",
     "ctaBottom",
     "homeFooter",
     "footer"
@@ -1913,8 +1810,6 @@ const PlasmicDescendants = {
     "child2",
     "box3",
     "child3",
-    "box4",
-    "child4",
     "ctaBottom"
   ],
   intro: ["intro", "text3", "title2"],
@@ -1961,9 +1856,7 @@ const PlasmicDescendants = {
     "box2",
     "child2",
     "box3",
-    "child3",
-    "box4",
-    "child4"
+    "child3"
   ],
   frame36: ["frame36", "frame34", "span", "frame35", "frame43", "frame44"],
   frame34: ["frame34", "span"],
@@ -1978,9 +1871,7 @@ const PlasmicDescendants = {
     "box2",
     "child2",
     "box3",
-    "child3",
-    "box4",
-    "child4"
+    "child3"
   ],
   box: ["box", "child"],
   child: ["child"],
@@ -1988,8 +1879,6 @@ const PlasmicDescendants = {
   child2: ["child2"],
   box3: ["box3", "child3"],
   child3: ["child3"],
-  box4: ["box4", "child4"],
-  child4: ["child4"],
   ctaBottom: ["ctaBottom"],
   homeFooter: ["homeFooter", "footer"],
   footer: ["footer"]
@@ -2033,8 +1922,6 @@ type NodeDefaultElementType = {
   child2: "div";
   box3: "div";
   child3: "div";
-  box4: "div";
-  child4: "div";
   ctaBottom: typeof CtaBottom;
   homeFooter: "div";
   footer: typeof Footer;
@@ -2138,8 +2025,6 @@ export const PlasmicHome = Object.assign(
     child2: makeNodeComponent("child2"),
     box3: makeNodeComponent("box3"),
     child3: makeNodeComponent("child3"),
-    box4: makeNodeComponent("box4"),
-    child4: makeNodeComponent("child4"),
     ctaBottom: makeNodeComponent("ctaBottom"),
     homeFooter: makeNodeComponent("homeFooter"),
     footer: makeNodeComponent("footer"),

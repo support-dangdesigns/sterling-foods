@@ -27675,20 +27675,6 @@
           "path": "/terms-and-conditions"
         },
         {
-          "id": "-XWL7Wymdg10",
-          "name": "FontTesting",
-          "type": "managed",
-          "projectId": "uyaK17nhz8WhGjYZfKjMhX",
-          "renderModuleFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicFontTesting.tsx",
-          "importSpec": {
-            "modulePath": "../pages/font-testing.tsx"
-          },
-          "cssFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicFontTesting.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/new-page"
-        },
-        {
           "id": "41tTNUFYIJMy",
           "name": "ContactPage",
           "type": "managed",
@@ -27808,6 +27794,34 @@
           "cssFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicTopHero.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "fgbXC_G_QREF",
+          "name": "OurFacilities",
+          "type": "managed",
+          "projectId": "uyaK17nhz8WhGjYZfKjMhX",
+          "renderModuleFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicOurFacilities.tsx",
+          "importSpec": {
+            "modulePath": "../pages/our-facilities.tsx"
+          },
+          "cssFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicOurFacilities.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/our-facilities"
+        },
+        {
+          "id": "qfJvQkefwMy7",
+          "name": "Careers",
+          "type": "managed",
+          "projectId": "uyaK17nhz8WhGjYZfKjMhX",
+          "renderModuleFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicCareers.tsx",
+          "importSpec": {
+            "modulePath": "../pages/careers.tsx"
+          },
+          "cssFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicCareers.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/careers"
         }
       ],
       "icons": [

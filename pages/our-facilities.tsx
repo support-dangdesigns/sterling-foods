@@ -4,24 +4,24 @@ import * as React from "react";
 import { PageParamsProvider as PageParamsProvider__ } from "@plasmicapp/react-web/lib/host";
 import GlobalContextsProvider from "../components/plasmic/sterling_and_buena_vista_foods/PlasmicGlobalContextsProvider";
 
-import { PlasmicFontTesting } from "../components/plasmic/sterling_and_buena_vista_foods/PlasmicFontTesting";
+import { PlasmicOurFacilities } from "../components/plasmic/sterling_and_buena_vista_foods/PlasmicOurFacilities";
 import { useRouter } from "next/router";
 import { PlasmicQueryDataProvider } from "@plasmicapp/react-web/lib/query";
 
-function FontTesting() {
-  // Use PlasmicFontTesting to render this component as it was
+function OurFacilities() {
+  // Use PlasmicOurFacilities to render this component as it was
   // designed in Plasmic, by activating the appropriate variants,
   // attaching the appropriate event handlers, etc.  You
   // can also install whatever React hooks you need here to manage state or
   // fetch data.
   //
-  // Props you can pass into PlasmicFontTesting are:
+  // Props you can pass into PlasmicOurFacilities are:
   // 1. Variants you want to activate,
   // 2. Contents for slots you want to fill,
   // 3. Overrides for any named node in the component to attach behavior and data,
   // 4. Props to set on the root node.
   //
-  // By default, PlasmicFontTesting is wrapped by your project's global
+  // By default, PlasmicOurFacilities is wrapped by your project's global
   // variant context providers. These wrappers may be moved to
   // Next.js Custom App component
   // (https://nextjs.org/docs/advanced-features/custom-app).
@@ -34,11 +34,11 @@ function FontTesting() {
           params={useRouter()?.query}
           query={useRouter()?.query}
         >
-          <PlasmicFontTesting />
+          <PlasmicOurFacilities />
         </PageParamsProvider__>
       </PlasmicQueryDataProvider>
     </GlobalContextsProvider>
   );
 }
 
-export default FontTesting;
+export default OurFacilities;

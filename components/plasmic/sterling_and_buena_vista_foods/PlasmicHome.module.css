@@ -61,14 +61,14 @@
     padding-top: 150px;
     background:
       url("/plasmic/sterling_and_buena_vista_foods/images/hmpgheroAvif2.avif") top 100% left 50% / contain no-repeat,
-      var(--token-Gx156sR9ht1r);
+      var(--token-WxvvgatuPYoJ);
   }
 }
 @media (max-width: 1920px) {
   .homeHero {
     background:
       url("/plasmic/sterling_and_buena_vista_foods/images/hmpgheroAvif.avif") top 100% left 50% / contain no-repeat,
-      var(--token-Gx156sR9ht1r);
+      var(--token-RvPI6LyeIPmd);
     align-items: center;
     justify-content: center;
     height: auto;
@@ -1012,6 +1012,11 @@
     column-gap: 0px;
   }
 }
+@media (max-width: 1440px) {
+  .section {
+    height: auto;
+  }
+}
 .section2 {
   display: flex;
   flex-direction: column;
@@ -1357,6 +1362,8 @@
 @media (max-width: 2000px) {
   .section3 {
     background: url("/plasmic/sterling_and_buena_vista_foods/images/bkgdaccentRightcornerAvif.avif") top 100% left 100% / contain no-repeat;
+    width: 100%;
+    min-width: 0;
     padding: 0px;
   }
 }
@@ -1398,6 +1405,7 @@
 @media (max-width: 1440px) {
   .foodServiceAndRetailPartners {
     height: auto;
+    padding-bottom: 100px;
   }
 }
 @media (max-width: 1280px) {
@@ -1796,7 +1804,7 @@
 @media (max-width: 1440px) {
   .innovationResponsive {
     padding-top: 0px;
-    margin-top: 80px;
+    margin-top: 0px;
     --plsmc-rc-col-gap: 0px;
   }
 }
@@ -2447,7 +2455,7 @@
 }
 @media (max-width: 1024px) {
   .frame36 {
-    justify-content: space-between;
+    justify-content: center;
     align-items: stretch;
     flex-wrap: wrap;
     align-content: center;
@@ -2468,7 +2476,7 @@
     column-gap: 10px;
     flex-wrap: wrap;
     align-items: stretch;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 45px;
     padding-top: 40px;
     align-content: center;
@@ -2698,6 +2706,7 @@
     height: 100%;
     width: auto;
     min-height: 0;
+    display: none;
   }
 }
 @media (max-width: 757px) {
@@ -3130,6 +3139,11 @@
   padding: 30px;
   border: 1.5px solid var(--token-VSsNRyw2VYkH);
 }
+@media (max-width: 2000px) {
+  .box2 {
+    display: flex;
+  }
+}
 @media (max-width: 1920px) {
   .box2 {
     display: none;
@@ -3361,6 +3375,11 @@
   border-radius: 22px;
   padding: 30px;
   border: 1.5px solid var(--token-VSsNRyw2VYkH);
+}
+@media (max-width: 2000px) {
+  .box3 {
+    display: flex;
+  }
 }
 @media (max-width: 1920px) {
   .box3 {

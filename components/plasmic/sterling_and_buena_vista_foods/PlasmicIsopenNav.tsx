@@ -79,10 +79,16 @@ import Linkedin161SvgrepoCom2SvgIcon from "./icons/PlasmicIcon__Linkedin161Svgre
 
 createPlasmicElementProxy;
 
-export type PlasmicIsopenNav__VariantMembers = {};
-export type PlasmicIsopenNav__VariantsArgs = {};
+export type PlasmicIsopenNav__VariantMembers = {
+  animateImage: "animateImage";
+};
+export type PlasmicIsopenNav__VariantsArgs = {
+  animateImage?: SingleBooleanChoiceArg<"animateImage">;
+};
 type VariantPropType = keyof PlasmicIsopenNav__VariantsArgs;
-export const PlasmicIsopenNav__VariantProps = new Array<VariantPropType>();
+export const PlasmicIsopenNav__VariantProps = new Array<VariantPropType>(
+  "animateImage"
+);
 
 export type PlasmicIsopenNav__ArgsType = {};
 type ArgPropType = keyof PlasmicIsopenNav__ArgsType;
@@ -92,15 +98,16 @@ export type PlasmicIsopenNav__OverridesType = {
   isopenNav?: Flex__<"div">;
   img?: Flex__<typeof PlasmicImg__>;
   _1?: Flex__<"a"> & Partial<LinkProps>;
-  _2?: Flex__<"a"> & Partial<LinkProps>;
-  _3?: Flex__<"a"> & Partial<LinkProps>;
-  _4?: Flex__<"a"> & Partial<LinkProps>;
-  _5?: Flex__<"a"> & Partial<LinkProps>;
-  _6?: Flex__<"a"> & Partial<LinkProps>;
-  _7?: Flex__<"a"> & Partial<LinkProps>;
+  _8?: Flex__<"a"> & Partial<LinkProps>;
+  _9?: Flex__<"a"> & Partial<LinkProps>;
+  _10?: Flex__<"a"> & Partial<LinkProps>;
+  _11?: Flex__<"a"> & Partial<LinkProps>;
+  _12?: Flex__<"a"> & Partial<LinkProps>;
+  _13?: Flex__<"a"> & Partial<LinkProps>;
 };
 
 export interface DefaultIsopenNavProps {
+  animateImage?: SingleBooleanChoiceArg<"animateImage">;
   className?: string;
 }
 
@@ -143,19 +150,65 @@ function PlasmicIsopenNav__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
+  const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
+    () => [
+      {
+        path: "hoverImage",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) =>
+          (() => {
+            try {
+              return $queries.headerComponent.data.response.data.component
+                .components.image.node.mediaItemUrl;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return undefined;
+              }
+              throw e;
+            }
+          })()
+      },
+      {
+        path: "isHovering",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => false
+      },
+      {
+        path: "animateImage",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) =>
+          $props.animateImage
+      }
+    ],
+    [$props, $ctx, $refs]
+  );
+
   const globalVariants = _useGlobalVariants();
 
   let [$queries, setDollarQueries] = React.useState<
     Record<string, ReturnType<typeof usePlasmicDataOp>>
   >({});
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: $queries,
+    $q: {},
+    $refs
+  });
 
   const new$Queries: Record<string, ReturnType<typeof usePlasmicDataOp>> = {
-    query: usePlasmicDataOp(() => {
+    headerComponent: usePlasmicDataOp(() => {
       return {
         sourceId: "oysuYFSoAdb9rhuPV27pRM",
-        opId: "3d1cce75-a611-4b61-b7fa-98a7ea2a3059",
+        opId: "1e3e083e-48b7-4106-9227-c37010d548b7",
         userArgs: {},
-        cacheKey: `plasmic.$.3d1cce75-a611-4b61-b7fa-98a7ea2a3059.$.`,
+        cacheKey: `plasmic.$.1e3e083e-48b7-4106-9227-c37010d548b7.$.`,
         invalidatedKeys: null,
         roleId: null
       };
@@ -181,10 +234,25 @@ function PlasmicIsopenNav__RenderFunc(props: {
         "plasmic_default_styles",
         "plasmic_mixins",
         styleTokensClassNames,
-        sty.isopenNav
+        sty.isopenNav,
+        {
+          [sty.isopenNavanimateImage]: hasVariant(
+            $state,
+            "animateImage",
+            "animateImage"
+          )
+        }
       )}
     >
-      <div className={classNames("all", sty.freeBox__n5Xy)}>
+      <div
+        className={classNames("all", sty.freeBox__n5Xy, {
+          [sty.freeBoxanimateImage__n5XySrhyo]: hasVariant(
+            $state,
+            "animateImage",
+            "animateImage"
+          )
+        })}
+      >
         <PlasmicImg__
           data-plasmic-name={"img"}
           data-plasmic-override={overrides.img}
@@ -201,12 +269,24 @@ function PlasmicIsopenNav__RenderFunc(props: {
               : "auto"
           }
           loading={"lazy"}
-          src={{
-            src: "/plasmic/sterling_and_buena_vista_foods/images/applepiePng.png",
-            fullWidth: 700,
-            fullHeight: 483,
-            aspectRatio: undefined
-          }}
+          src={(() => {
+            try {
+              return $state.hoverImage;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return {
+                  src: "/plasmic/sterling_and_buena_vista_foods/images/applepiePng.png",
+                  fullWidth: 700,
+                  fullHeight: 483,
+                  aspectRatio: undefined
+                };
+              }
+              throw e;
+            }
+          })()}
         />
       </div>
       <div className={classNames("all", sty.freeBox__cek1N)}>
@@ -218,6 +298,100 @@ function PlasmicIsopenNav__RenderFunc(props: {
             component={Link}
             href={`/about-us`}
             legacyBehavior={false}
+            onMouseEnter={async event => {
+              const $steps = {};
+
+              $steps["updateHoverImage"] = true
+                ? (() => {
+                    const actionArgs = {
+                      variable: {
+                        objRoot: $state,
+                        variablePath: ["hoverImage"]
+                      },
+                      operation: 0,
+                      value:
+                        $queries.headerComponent.data.response.data.component
+                          .components.menu[0].image.node.mediaItemUrl
+                    };
+                    return (({ variable, value, startIndex, deleteCount }) => {
+                      if (!variable) {
+                        return;
+                      }
+                      const { objRoot, variablePath } = variable;
+
+                      $stateSet(objRoot, variablePath, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateHoverImage"] != null &&
+                typeof $steps["updateHoverImage"] === "object" &&
+                typeof $steps["updateHoverImage"].then === "function"
+              ) {
+                $steps["updateHoverImage"] = await $steps["updateHoverImage"];
+              }
+
+              $steps["updateHoverImage2"] = true
+                ? (() => {
+                    const actionArgs = {
+                      vgroup: "animateImage",
+                      operation: 2,
+                      value: "animateImage"
+                    };
+                    return (({ vgroup, value }) => {
+                      if (typeof value === "string") {
+                        value = [value];
+                      }
+
+                      const oldValue = $stateGet($state, vgroup);
+                      $stateSet($state, vgroup, !oldValue);
+                      return !oldValue;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateHoverImage2"] != null &&
+                typeof $steps["updateHoverImage2"] === "object" &&
+                typeof $steps["updateHoverImage2"].then === "function"
+              ) {
+                $steps["updateHoverImage2"] = await $steps["updateHoverImage2"];
+              }
+            }}
+            onMouseLeave={async event => {
+              const $steps = {};
+
+              $steps["updateHoverImage"] = true
+                ? (() => {
+                    const actionArgs = {
+                      variable: {
+                        objRoot: $state,
+                        variablePath: ["hoverImage"]
+                      },
+                      operation: 0,
+                      value:
+                        $queries.headerComponent.data.response.data.component
+                          .components.image.node.mediaItemUrl
+                    };
+                    return (({ variable, value, startIndex, deleteCount }) => {
+                      if (!variable) {
+                        return;
+                      }
+                      const { objRoot, variablePath } = variable;
+
+                      $stateSet(objRoot, variablePath, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateHoverImage"] != null &&
+                typeof $steps["updateHoverImage"] === "object" &&
+                typeof $steps["updateHoverImage"].then === "function"
+              ) {
+                $steps["updateHoverImage"] = await $steps["updateHoverImage"];
+              }
+            }}
             platform={"nextjs"}
           >
             <h3
@@ -228,11 +402,33 @@ function PlasmicIsopenNav__RenderFunc(props: {
                 "__wab_text",
                 sty.h3__ftqeH
               )}
+              onMouseEnter={async event => {
+                const $steps = {};
+
+                $steps["updateVariant"] = true
+                  ? (() => {
+                      const actionArgs = {};
+                      return (({ vgroup, value }) => {
+                        if (typeof value === "string") {
+                          value = [value];
+                        }
+                        undefined;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateVariant"] != null &&
+                  typeof $steps["updateVariant"] === "object" &&
+                  typeof $steps["updateVariant"].then === "function"
+                ) {
+                  $steps["updateVariant"] = await $steps["updateVariant"];
+                }
+              }}
             >
               <React.Fragment>
                 {(() => {
                   try {
-                    return $queries.query.data.response.data.component
+                    return $queries.headerComponent.data.response.data.component
                       .components.menu[0].menuitem;
                   } catch (e) {
                     if (
@@ -248,11 +444,106 @@ function PlasmicIsopenNav__RenderFunc(props: {
             </h3>
           </PlasmicLink__>
           <PlasmicLink__
-            data-plasmic-name={"_2"}
-            data-plasmic-override={overrides._2}
-            className={classNames("all", "a", "a__uyaK1", sty._2)}
+            data-plasmic-name={"_8"}
+            data-plasmic-override={overrides._8}
+            className={classNames("all", "a", "a__uyaK1", sty._8)}
             component={Link}
+            href={`/about-us`}
             legacyBehavior={false}
+            onMouseEnter={async event => {
+              const $steps = {};
+
+              $steps["updateHoverImage"] = true
+                ? (() => {
+                    const actionArgs = {
+                      variable: {
+                        objRoot: $state,
+                        variablePath: ["hoverImage"]
+                      },
+                      operation: 0,
+                      value:
+                        $queries.headerComponent.data.response.data.component
+                          .components.menu[0].image.node.mediaItemUrl
+                    };
+                    return (({ variable, value, startIndex, deleteCount }) => {
+                      if (!variable) {
+                        return;
+                      }
+                      const { objRoot, variablePath } = variable;
+
+                      $stateSet(objRoot, variablePath, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateHoverImage"] != null &&
+                typeof $steps["updateHoverImage"] === "object" &&
+                typeof $steps["updateHoverImage"].then === "function"
+              ) {
+                $steps["updateHoverImage"] = await $steps["updateHoverImage"];
+              }
+
+              $steps["updateHoverImage2"] = true
+                ? (() => {
+                    const actionArgs = {
+                      vgroup: "animateImage",
+                      operation: 2,
+                      value: "animateImage"
+                    };
+                    return (({ vgroup, value }) => {
+                      if (typeof value === "string") {
+                        value = [value];
+                      }
+
+                      const oldValue = $stateGet($state, vgroup);
+                      $stateSet($state, vgroup, !oldValue);
+                      return !oldValue;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateHoverImage2"] != null &&
+                typeof $steps["updateHoverImage2"] === "object" &&
+                typeof $steps["updateHoverImage2"].then === "function"
+              ) {
+                $steps["updateHoverImage2"] = await $steps["updateHoverImage2"];
+              }
+            }}
+            onMouseLeave={async event => {
+              const $steps = {};
+
+              $steps["updateHoverImage"] = true
+                ? (() => {
+                    const actionArgs = {
+                      variable: {
+                        objRoot: $state,
+                        variablePath: ["hoverImage"]
+                      },
+                      operation: 0,
+                      value:
+                        $queries.headerComponent.data.response.data.component
+                          .components.image.node.mediaItemUrl
+                    };
+                    return (({ variable, value, startIndex, deleteCount }) => {
+                      if (!variable) {
+                        return;
+                      }
+                      const { objRoot, variablePath } = variable;
+
+                      $stateSet(objRoot, variablePath, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateHoverImage"] != null &&
+                typeof $steps["updateHoverImage"] === "object" &&
+                typeof $steps["updateHoverImage"].then === "function"
+              ) {
+                $steps["updateHoverImage"] = await $steps["updateHoverImage"];
+              }
+            }}
             platform={"nextjs"}
           >
             <h3
@@ -267,7 +558,7 @@ function PlasmicIsopenNav__RenderFunc(props: {
               <React.Fragment>
                 {(() => {
                   try {
-                    return $queries.query.data.response.data.component
+                    return $queries.headerComponent.data.response.data.component
                       .components.menu[1].menuitem;
                   } catch (e) {
                     if (
@@ -283,12 +574,106 @@ function PlasmicIsopenNav__RenderFunc(props: {
             </h3>
           </PlasmicLink__>
           <PlasmicLink__
-            data-plasmic-name={"_3"}
-            data-plasmic-override={overrides._3}
-            className={classNames("all", "a", "a__uyaK1", sty._3)}
+            data-plasmic-name={"_9"}
+            data-plasmic-override={overrides._9}
+            className={classNames("all", "a", "a__uyaK1", sty._9)}
             component={Link}
-            href={`/markets`}
+            href={`/about-us`}
             legacyBehavior={false}
+            onMouseEnter={async event => {
+              const $steps = {};
+
+              $steps["updateHoverImage"] = true
+                ? (() => {
+                    const actionArgs = {
+                      variable: {
+                        objRoot: $state,
+                        variablePath: ["hoverImage"]
+                      },
+                      operation: 0,
+                      value:
+                        $queries.headerComponent.data.response.data.component
+                          .components.menu[0].image.node.mediaItemUrl
+                    };
+                    return (({ variable, value, startIndex, deleteCount }) => {
+                      if (!variable) {
+                        return;
+                      }
+                      const { objRoot, variablePath } = variable;
+
+                      $stateSet(objRoot, variablePath, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateHoverImage"] != null &&
+                typeof $steps["updateHoverImage"] === "object" &&
+                typeof $steps["updateHoverImage"].then === "function"
+              ) {
+                $steps["updateHoverImage"] = await $steps["updateHoverImage"];
+              }
+
+              $steps["updateHoverImage2"] = true
+                ? (() => {
+                    const actionArgs = {
+                      vgroup: "animateImage",
+                      operation: 2,
+                      value: "animateImage"
+                    };
+                    return (({ vgroup, value }) => {
+                      if (typeof value === "string") {
+                        value = [value];
+                      }
+
+                      const oldValue = $stateGet($state, vgroup);
+                      $stateSet($state, vgroup, !oldValue);
+                      return !oldValue;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateHoverImage2"] != null &&
+                typeof $steps["updateHoverImage2"] === "object" &&
+                typeof $steps["updateHoverImage2"].then === "function"
+              ) {
+                $steps["updateHoverImage2"] = await $steps["updateHoverImage2"];
+              }
+            }}
+            onMouseLeave={async event => {
+              const $steps = {};
+
+              $steps["updateHoverImage"] = true
+                ? (() => {
+                    const actionArgs = {
+                      variable: {
+                        objRoot: $state,
+                        variablePath: ["hoverImage"]
+                      },
+                      operation: 0,
+                      value:
+                        $queries.headerComponent.data.response.data.component
+                          .components.image.node.mediaItemUrl
+                    };
+                    return (({ variable, value, startIndex, deleteCount }) => {
+                      if (!variable) {
+                        return;
+                      }
+                      const { objRoot, variablePath } = variable;
+
+                      $stateSet(objRoot, variablePath, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateHoverImage"] != null &&
+                typeof $steps["updateHoverImage"] === "object" &&
+                typeof $steps["updateHoverImage"].then === "function"
+              ) {
+                $steps["updateHoverImage"] = await $steps["updateHoverImage"];
+              }
+            }}
             platform={"nextjs"}
           >
             <h3
@@ -303,7 +688,7 @@ function PlasmicIsopenNav__RenderFunc(props: {
               <React.Fragment>
                 {(() => {
                   try {
-                    return $queries.query.data.response.data.component
+                    return $queries.headerComponent.data.response.data.component
                       .components.menu[2].menuitem;
                   } catch (e) {
                     if (
@@ -319,11 +704,106 @@ function PlasmicIsopenNav__RenderFunc(props: {
             </h3>
           </PlasmicLink__>
           <PlasmicLink__
-            data-plasmic-name={"_4"}
-            data-plasmic-override={overrides._4}
-            className={classNames("all", "a", "a__uyaK1", sty._4)}
+            data-plasmic-name={"_10"}
+            data-plasmic-override={overrides._10}
+            className={classNames("all", "a", "a__uyaK1", sty._10)}
             component={Link}
+            href={`/about-us`}
             legacyBehavior={false}
+            onMouseEnter={async event => {
+              const $steps = {};
+
+              $steps["updateHoverImage"] = true
+                ? (() => {
+                    const actionArgs = {
+                      variable: {
+                        objRoot: $state,
+                        variablePath: ["hoverImage"]
+                      },
+                      operation: 0,
+                      value:
+                        $queries.headerComponent.data.response.data.component
+                          .components.menu[0].image.node.mediaItemUrl
+                    };
+                    return (({ variable, value, startIndex, deleteCount }) => {
+                      if (!variable) {
+                        return;
+                      }
+                      const { objRoot, variablePath } = variable;
+
+                      $stateSet(objRoot, variablePath, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateHoverImage"] != null &&
+                typeof $steps["updateHoverImage"] === "object" &&
+                typeof $steps["updateHoverImage"].then === "function"
+              ) {
+                $steps["updateHoverImage"] = await $steps["updateHoverImage"];
+              }
+
+              $steps["updateHoverImage2"] = true
+                ? (() => {
+                    const actionArgs = {
+                      vgroup: "animateImage",
+                      operation: 2,
+                      value: "animateImage"
+                    };
+                    return (({ vgroup, value }) => {
+                      if (typeof value === "string") {
+                        value = [value];
+                      }
+
+                      const oldValue = $stateGet($state, vgroup);
+                      $stateSet($state, vgroup, !oldValue);
+                      return !oldValue;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateHoverImage2"] != null &&
+                typeof $steps["updateHoverImage2"] === "object" &&
+                typeof $steps["updateHoverImage2"].then === "function"
+              ) {
+                $steps["updateHoverImage2"] = await $steps["updateHoverImage2"];
+              }
+            }}
+            onMouseLeave={async event => {
+              const $steps = {};
+
+              $steps["updateHoverImage"] = true
+                ? (() => {
+                    const actionArgs = {
+                      variable: {
+                        objRoot: $state,
+                        variablePath: ["hoverImage"]
+                      },
+                      operation: 0,
+                      value:
+                        $queries.headerComponent.data.response.data.component
+                          .components.image.node.mediaItemUrl
+                    };
+                    return (({ variable, value, startIndex, deleteCount }) => {
+                      if (!variable) {
+                        return;
+                      }
+                      const { objRoot, variablePath } = variable;
+
+                      $stateSet(objRoot, variablePath, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateHoverImage"] != null &&
+                typeof $steps["updateHoverImage"] === "object" &&
+                typeof $steps["updateHoverImage"].then === "function"
+              ) {
+                $steps["updateHoverImage"] = await $steps["updateHoverImage"];
+              }
+            }}
             platform={"nextjs"}
           >
             <h3
@@ -338,7 +818,7 @@ function PlasmicIsopenNav__RenderFunc(props: {
               <React.Fragment>
                 {(() => {
                   try {
-                    return $queries.query.data.response.data.component
+                    return $queries.headerComponent.data.response.data.component
                       .components.menu[3].menuitem;
                   } catch (e) {
                     if (
@@ -354,12 +834,106 @@ function PlasmicIsopenNav__RenderFunc(props: {
             </h3>
           </PlasmicLink__>
           <PlasmicLink__
-            data-plasmic-name={"_5"}
-            data-plasmic-override={overrides._5}
-            className={classNames("all", "a", "a__uyaK1", sty._5)}
+            data-plasmic-name={"_11"}
+            data-plasmic-override={overrides._11}
+            className={classNames("all", "a", "a__uyaK1", sty._11)}
             component={Link}
-            href={`/quality-safety`}
+            href={`/about-us`}
             legacyBehavior={false}
+            onMouseEnter={async event => {
+              const $steps = {};
+
+              $steps["updateHoverImage"] = true
+                ? (() => {
+                    const actionArgs = {
+                      variable: {
+                        objRoot: $state,
+                        variablePath: ["hoverImage"]
+                      },
+                      operation: 0,
+                      value:
+                        $queries.headerComponent.data.response.data.component
+                          .components.menu[0].image.node.mediaItemUrl
+                    };
+                    return (({ variable, value, startIndex, deleteCount }) => {
+                      if (!variable) {
+                        return;
+                      }
+                      const { objRoot, variablePath } = variable;
+
+                      $stateSet(objRoot, variablePath, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateHoverImage"] != null &&
+                typeof $steps["updateHoverImage"] === "object" &&
+                typeof $steps["updateHoverImage"].then === "function"
+              ) {
+                $steps["updateHoverImage"] = await $steps["updateHoverImage"];
+              }
+
+              $steps["updateHoverImage2"] = true
+                ? (() => {
+                    const actionArgs = {
+                      vgroup: "animateImage",
+                      operation: 2,
+                      value: "animateImage"
+                    };
+                    return (({ vgroup, value }) => {
+                      if (typeof value === "string") {
+                        value = [value];
+                      }
+
+                      const oldValue = $stateGet($state, vgroup);
+                      $stateSet($state, vgroup, !oldValue);
+                      return !oldValue;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateHoverImage2"] != null &&
+                typeof $steps["updateHoverImage2"] === "object" &&
+                typeof $steps["updateHoverImage2"].then === "function"
+              ) {
+                $steps["updateHoverImage2"] = await $steps["updateHoverImage2"];
+              }
+            }}
+            onMouseLeave={async event => {
+              const $steps = {};
+
+              $steps["updateHoverImage"] = true
+                ? (() => {
+                    const actionArgs = {
+                      variable: {
+                        objRoot: $state,
+                        variablePath: ["hoverImage"]
+                      },
+                      operation: 0,
+                      value:
+                        $queries.headerComponent.data.response.data.component
+                          .components.image.node.mediaItemUrl
+                    };
+                    return (({ variable, value, startIndex, deleteCount }) => {
+                      if (!variable) {
+                        return;
+                      }
+                      const { objRoot, variablePath } = variable;
+
+                      $stateSet(objRoot, variablePath, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateHoverImage"] != null &&
+                typeof $steps["updateHoverImage"] === "object" &&
+                typeof $steps["updateHoverImage"].then === "function"
+              ) {
+                $steps["updateHoverImage"] = await $steps["updateHoverImage"];
+              }
+            }}
             platform={"nextjs"}
           >
             <h3
@@ -374,7 +948,7 @@ function PlasmicIsopenNav__RenderFunc(props: {
               <React.Fragment>
                 {(() => {
                   try {
-                    return $queries.query.data.response.data.component
+                    return $queries.headerComponent.data.response.data.component
                       .components.menu[4].menuitem;
                   } catch (e) {
                     if (
@@ -390,11 +964,106 @@ function PlasmicIsopenNav__RenderFunc(props: {
             </h3>
           </PlasmicLink__>
           <PlasmicLink__
-            data-plasmic-name={"_6"}
-            data-plasmic-override={overrides._6}
-            className={classNames("all", "a", "a__uyaK1", sty._6)}
+            data-plasmic-name={"_12"}
+            data-plasmic-override={overrides._12}
+            className={classNames("all", "a", "a__uyaK1", sty._12)}
             component={Link}
+            href={`/about-us`}
             legacyBehavior={false}
+            onMouseEnter={async event => {
+              const $steps = {};
+
+              $steps["updateHoverImage"] = true
+                ? (() => {
+                    const actionArgs = {
+                      variable: {
+                        objRoot: $state,
+                        variablePath: ["hoverImage"]
+                      },
+                      operation: 0,
+                      value:
+                        $queries.headerComponent.data.response.data.component
+                          .components.menu[0].image.node.mediaItemUrl
+                    };
+                    return (({ variable, value, startIndex, deleteCount }) => {
+                      if (!variable) {
+                        return;
+                      }
+                      const { objRoot, variablePath } = variable;
+
+                      $stateSet(objRoot, variablePath, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateHoverImage"] != null &&
+                typeof $steps["updateHoverImage"] === "object" &&
+                typeof $steps["updateHoverImage"].then === "function"
+              ) {
+                $steps["updateHoverImage"] = await $steps["updateHoverImage"];
+              }
+
+              $steps["updateHoverImage2"] = true
+                ? (() => {
+                    const actionArgs = {
+                      vgroup: "animateImage",
+                      operation: 2,
+                      value: "animateImage"
+                    };
+                    return (({ vgroup, value }) => {
+                      if (typeof value === "string") {
+                        value = [value];
+                      }
+
+                      const oldValue = $stateGet($state, vgroup);
+                      $stateSet($state, vgroup, !oldValue);
+                      return !oldValue;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateHoverImage2"] != null &&
+                typeof $steps["updateHoverImage2"] === "object" &&
+                typeof $steps["updateHoverImage2"].then === "function"
+              ) {
+                $steps["updateHoverImage2"] = await $steps["updateHoverImage2"];
+              }
+            }}
+            onMouseLeave={async event => {
+              const $steps = {};
+
+              $steps["updateHoverImage"] = true
+                ? (() => {
+                    const actionArgs = {
+                      variable: {
+                        objRoot: $state,
+                        variablePath: ["hoverImage"]
+                      },
+                      operation: 0,
+                      value:
+                        $queries.headerComponent.data.response.data.component
+                          .components.image.node.mediaItemUrl
+                    };
+                    return (({ variable, value, startIndex, deleteCount }) => {
+                      if (!variable) {
+                        return;
+                      }
+                      const { objRoot, variablePath } = variable;
+
+                      $stateSet(objRoot, variablePath, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateHoverImage"] != null &&
+                typeof $steps["updateHoverImage"] === "object" &&
+                typeof $steps["updateHoverImage"].then === "function"
+              ) {
+                $steps["updateHoverImage"] = await $steps["updateHoverImage"];
+              }
+            }}
             platform={"nextjs"}
           >
             <h3
@@ -409,7 +1078,7 @@ function PlasmicIsopenNav__RenderFunc(props: {
               <React.Fragment>
                 {(() => {
                   try {
-                    return $queries.query.data.response.data.component
+                    return $queries.headerComponent.data.response.data.component
                       .components.menu[5].menuitem;
                   } catch (e) {
                     if (
@@ -425,14 +1094,105 @@ function PlasmicIsopenNav__RenderFunc(props: {
             </h3>
           </PlasmicLink__>
           <PlasmicLink__
-            data-plasmic-name={"_7"}
-            data-plasmic-override={overrides._7}
-            className={classNames("all", "a", "a__uyaK1", sty._7)}
+            data-plasmic-name={"_13"}
+            data-plasmic-override={overrides._13}
+            className={classNames("all", "a", "a__uyaK1", sty._13)}
             component={Link}
-            href={`/contact-us`}
+            href={`/about-us`}
             legacyBehavior={false}
-            onClick={async event => {
+            onMouseEnter={async event => {
               const $steps = {};
+
+              $steps["updateHoverImage"] = true
+                ? (() => {
+                    const actionArgs = {
+                      variable: {
+                        objRoot: $state,
+                        variablePath: ["hoverImage"]
+                      },
+                      operation: 0,
+                      value:
+                        $queries.headerComponent.data.response.data.component
+                          .components.menu[0].image.node.mediaItemUrl
+                    };
+                    return (({ variable, value, startIndex, deleteCount }) => {
+                      if (!variable) {
+                        return;
+                      }
+                      const { objRoot, variablePath } = variable;
+
+                      $stateSet(objRoot, variablePath, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateHoverImage"] != null &&
+                typeof $steps["updateHoverImage"] === "object" &&
+                typeof $steps["updateHoverImage"].then === "function"
+              ) {
+                $steps["updateHoverImage"] = await $steps["updateHoverImage"];
+              }
+
+              $steps["updateHoverImage2"] = true
+                ? (() => {
+                    const actionArgs = {
+                      vgroup: "animateImage",
+                      operation: 2,
+                      value: "animateImage"
+                    };
+                    return (({ vgroup, value }) => {
+                      if (typeof value === "string") {
+                        value = [value];
+                      }
+
+                      const oldValue = $stateGet($state, vgroup);
+                      $stateSet($state, vgroup, !oldValue);
+                      return !oldValue;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateHoverImage2"] != null &&
+                typeof $steps["updateHoverImage2"] === "object" &&
+                typeof $steps["updateHoverImage2"].then === "function"
+              ) {
+                $steps["updateHoverImage2"] = await $steps["updateHoverImage2"];
+              }
+            }}
+            onMouseLeave={async event => {
+              const $steps = {};
+
+              $steps["updateHoverImage"] = true
+                ? (() => {
+                    const actionArgs = {
+                      variable: {
+                        objRoot: $state,
+                        variablePath: ["hoverImage"]
+                      },
+                      operation: 0,
+                      value:
+                        $queries.headerComponent.data.response.data.component
+                          .components.image.node.mediaItemUrl
+                    };
+                    return (({ variable, value, startIndex, deleteCount }) => {
+                      if (!variable) {
+                        return;
+                      }
+                      const { objRoot, variablePath } = variable;
+
+                      $stateSet(objRoot, variablePath, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateHoverImage"] != null &&
+                typeof $steps["updateHoverImage"] === "object" &&
+                typeof $steps["updateHoverImage"].then === "function"
+              ) {
+                $steps["updateHoverImage"] = await $steps["updateHoverImage"];
+              }
             }}
             platform={"nextjs"}
           >
@@ -448,7 +1208,7 @@ function PlasmicIsopenNav__RenderFunc(props: {
               <React.Fragment>
                 {(() => {
                   try {
-                    return $queries.query.data.response.data.component
+                    return $queries.headerComponent.data.response.data.component
                       .components.menu[6].menuitem;
                   } catch (e) {
                     if (
@@ -469,7 +1229,7 @@ function PlasmicIsopenNav__RenderFunc(props: {
             className={classNames("all", "a", "a__uyaK1", sty.link___04GZ)}
             component={Link}
             href={
-              $queries.query.data.response.data.component.components
+              $queries.headerComponent.data.response.data.component.components
                 .socialMedia[0].urlSocial
             }
             legacyBehavior={false}
@@ -484,7 +1244,7 @@ function PlasmicIsopenNav__RenderFunc(props: {
             className={classNames("all", "a", "a__uyaK1", sty.link__cjEy)}
             component={Link}
             href={
-              $queries.query.data.response.data.component.components
+              $queries.headerComponent.data.response.data.component.components
                 .socialMedia[1].urlSocial
             }
             legacyBehavior={false}
@@ -499,7 +1259,7 @@ function PlasmicIsopenNav__RenderFunc(props: {
             className={classNames("all", "a", "a__uyaK1", sty.link__pUfms)}
             component={Link}
             href={
-              $queries.query.data.response.data.component.components
+              $queries.headerComponent.data.response.data.component.components
                 .socialMedia[2].urlSocial
             }
             legacyBehavior={false}
@@ -517,15 +1277,15 @@ function PlasmicIsopenNav__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  isopenNav: ["isopenNav", "img", "_1", "_2", "_3", "_4", "_5", "_6", "_7"],
+  isopenNav: ["isopenNav", "img", "_1", "_8", "_9", "_10", "_11", "_12", "_13"],
   img: ["img"],
   _1: ["_1"],
-  _2: ["_2"],
-  _3: ["_3"],
-  _4: ["_4"],
-  _5: ["_5"],
-  _6: ["_6"],
-  _7: ["_7"]
+  _8: ["_8"],
+  _9: ["_9"],
+  _10: ["_10"],
+  _11: ["_11"],
+  _12: ["_12"],
+  _13: ["_13"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -534,12 +1294,12 @@ type NodeDefaultElementType = {
   isopenNav: "div";
   img: typeof PlasmicImg__;
   _1: "a";
-  _2: "a";
-  _3: "a";
-  _4: "a";
-  _5: "a";
-  _6: "a";
-  _7: "a";
+  _8: "a";
+  _9: "a";
+  _10: "a";
+  _11: "a";
+  _12: "a";
+  _13: "a";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -606,12 +1366,12 @@ export const PlasmicIsopenNav = Object.assign(
     // Helper components rendering sub-elements
     img: makeNodeComponent("img"),
     _1: makeNodeComponent("_1"),
-    _2: makeNodeComponent("_2"),
-    _3: makeNodeComponent("_3"),
-    _4: makeNodeComponent("_4"),
-    _5: makeNodeComponent("_5"),
-    _6: makeNodeComponent("_6"),
-    _7: makeNodeComponent("_7"),
+    _8: makeNodeComponent("_8"),
+    _9: makeNodeComponent("_9"),
+    _10: makeNodeComponent("_10"),
+    _11: makeNodeComponent("_11"),
+    _12: makeNodeComponent("_12"),
+    _13: makeNodeComponent("_13"),
 
     // Metadata about props expected for PlasmicIsopenNav
     internalVariantProps: PlasmicIsopenNav__VariantProps,

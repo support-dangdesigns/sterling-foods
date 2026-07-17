@@ -22,6 +22,7 @@
   }
 }
 .freeBox__n5Xy {
+  animation: none;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -31,15 +32,26 @@
   justify-content: flex-start;
   align-items: center;
   align-self: center;
+  transform: none;
+  transition-property: opacity;
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
   min-width: 0;
+  -webkit-transition-property: opacity;
+  -webkit-transition-timing-function: ease-in;
+  -webkit-transition-duration: 1s;
   padding: 0px;
 }
+.freeBoxanimateImage__n5XySrhyo {
+  animation: none;
+}
 .img {
-  object-fit: cover;
+  animation: none;
+  object-fit: contain;
   max-width: 100%;
 }
 .img > picture > img {
-  object-fit: cover;
+  object-fit: contain;
 }
 @media (max-width: 757px) {
   .img {
@@ -108,7 +120,7 @@
   line-height: 45px;
   font-family: "Georgia";
   font-size: 45px;
-  color: var(--token-GGYj13plNx6v);
+  color: var(--token-sP5FKk2rRQuW);
   min-width: 0;
 }
 @media (max-width: 757px) {
@@ -118,7 +130,7 @@
     line-height: 40px;
   }
 }
-._2 {
+._8 {
   display: flex;
   flex-direction: row;
   position: relative;
@@ -151,7 +163,7 @@
     line-height: 40px;
   }
 }
-._3 {
+._9 {
   display: flex;
   flex-direction: row;
   position: relative;
@@ -184,7 +196,7 @@
     line-height: 40px;
   }
 }
-._4 {
+._10 {
   display: flex;
   flex-direction: row;
   position: relative;
@@ -195,6 +207,7 @@
   max-width: 100%;
   color: var(--token-Gx156sR9ht1r);
   font-size: var(--token-SeC4JQ6Nr4hA);
+  cursor: pointer;
   min-width: 0;
   padding: 0px;
 }
@@ -216,7 +229,7 @@
     line-height: 40px;
   }
 }
-._5 {
+._11 {
   display: flex;
   flex-direction: row;
   position: relative;
@@ -249,7 +262,7 @@
     line-height: 40px;
   }
 }
-._6 {
+._12 {
   display: flex;
   flex-direction: row;
   position: relative;
@@ -260,12 +273,8 @@
   max-width: 100%;
   color: var(--token-Gx156sR9ht1r);
   font-size: var(--token-SeC4JQ6Nr4hA);
-  transition-property: all;
-  transition-duration: 1s;
   cursor: pointer;
   min-width: 0;
-  -webkit-transition-property: all;
-  -webkit-transition-duration: 1s;
   padding: 0px;
 }
 .h3___8F302 {
@@ -286,7 +295,7 @@
     line-height: 40px;
   }
 }
-._7 {
+._13 {
   display: flex;
   flex-direction: row;
   position: relative;

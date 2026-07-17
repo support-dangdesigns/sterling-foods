@@ -67,7 +67,6 @@ import { AntdInput } from "@plasmicpkgs/antd5/skinny/registerInput";
 import { inputHelpers as AntdInput_Helpers } from "@plasmicpkgs/antd5/skinny/registerInput";
 import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton";
 import Footer from "../../Footer"; // plasmic-import: RbMtVh1ii_PZ/component
-import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/styleTokensProvider
 
@@ -117,10 +116,14 @@ export type PlasmicContactPage__VariantsArgs = {};
 type VariantPropType = keyof PlasmicContactPage__VariantsArgs;
 export const PlasmicContactPage__VariantProps = new Array<VariantPropType>();
 
-export type PlasmicContactPage__ArgsType = { destination?: string };
+export type PlasmicContactPage__ArgsType = {
+  destination?: string;
+  size?: "small" | "medium" | "large";
+};
 type ArgPropType = keyof PlasmicContactPage__ArgsType;
 export const PlasmicContactPage__ArgProps = new Array<ArgPropType>(
-  "destination"
+  "destination",
+  "size"
 );
 
 export type PlasmicContactPage__OverridesType = {
@@ -136,9 +139,10 @@ export type PlasmicContactPage__OverridesType = {
   form?: Flex__<typeof FormWrapper>;
   input2?: Flex__<typeof AntdInput>;
   input3?: Flex__<typeof AntdInput>;
+  input6?: Flex__<typeof AntdInput>;
   input4?: Flex__<typeof AntdInput>;
   input5?: Flex__<typeof AntdInput>;
-  input6?: Flex__<typeof AntdInput>;
+  input7?: Flex__<typeof AntdInput>;
   button?: Flex__<typeof AntdButton>;
   contactInfo?: Flex__<"div">;
   text2?: Flex__<"div">;
@@ -240,6 +244,14 @@ function PlasmicContactPage__RenderFunc(props: {
       },
       {
         path: "input6.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => undefined,
+
+        onMutate: generateOnMutateForSpec("value", AntdInput_Helpers)
+      },
+      {
+        path: "input7.value",
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $q, $ctx }) => undefined,
@@ -429,7 +441,6 @@ function PlasmicContactPage__RenderFunc(props: {
                             sty.formField__dS2Ax
                           )}
                           hidden={false}
-                          initialValue={""}
                           label={
                             <div
                               className={classNames(
@@ -438,17 +449,19 @@ function PlasmicContactPage__RenderFunc(props: {
                                 sty.text__w6LnZ
                               )}
                             >
-                              {""}
+                              {"label"}
                             </div>
                           }
+                          name={"first_name_field"}
                           noLabel={true}
-                          valuePropName={""}
+                          rules={[{ ruleType: "required" }]}
+                          valuePropName={"First Name"}
                         >
                           {(() => {
                             const child$Props = {
                               allowClear: false,
                               autoFocus: false,
-                              bordered: true,
+                              bordered: false,
                               className: classNames(
                                 "__wab_instance",
                                 sty.input2
@@ -463,8 +476,9 @@ function PlasmicContactPage__RenderFunc(props: {
                                 ).apply(null, eventArgs);
                               },
                               placeholder: "First Name *",
+                              prefix: null,
                               readOnly: false,
-                              size: "small",
+                              size: "middle",
                               type: "text",
                               value: generateStateValueProp($state, [
                                 "input2",
@@ -496,7 +510,7 @@ function PlasmicContactPage__RenderFunc(props: {
                         <FormItemWrapper
                           className={classNames(
                             "__wab_instance",
-                            sty.formField__wXDts
+                            sty.formField___7AcDw
                           )}
                           hidden={false}
                           initialValue={""}
@@ -505,20 +519,22 @@ function PlasmicContactPage__RenderFunc(props: {
                               className={classNames(
                                 "all",
                                 "__wab_text",
-                                sty.text__oL77J
+                                sty.text__n8Ack
                               )}
                             >
                               {""}
                             </div>
                           }
+                          name={"last_name_field"}
                           noLabel={true}
+                          rules={[{ ruleType: "required" }]}
                           valuePropName={""}
                         >
                           {(() => {
                             const child$Props = {
                               allowClear: false,
                               autoFocus: false,
-                              bordered: true,
+                              bordered: false,
                               className: classNames(
                                 "__wab_instance",
                                 sty.input3
@@ -532,7 +548,7 @@ function PlasmicContactPage__RenderFunc(props: {
                                   AntdInput_Helpers
                                 ).apply(null, eventArgs);
                               },
-                              placeholder: "First Name *",
+                              placeholder: "Last Name *",
                               readOnly: false,
                               size: "small",
                               type: "text",
@@ -567,7 +583,7 @@ function PlasmicContactPage__RenderFunc(props: {
                       <FormItemWrapper
                         className={classNames(
                           "__wab_instance",
-                          sty.formField__vQ1Qk
+                          sty.formField__njLUd
                         )}
                         hidden={false}
                         initialValue={""}
@@ -576,12 +592,13 @@ function PlasmicContactPage__RenderFunc(props: {
                             className={classNames(
                               "all",
                               "__wab_text",
-                              sty.text__kf1JK
+                              sty.text__r7YZx
                             )}
                           >
                             {""}
                           </div>
                         }
+                        name={"organization_field"}
                         noLabel={true}
                         valuePropName={""}
                       >
@@ -589,23 +606,23 @@ function PlasmicContactPage__RenderFunc(props: {
                           const child$Props = {
                             allowClear: false,
                             autoFocus: false,
-                            bordered: true,
-                            className: classNames("__wab_instance", sty.input4),
+                            bordered: false,
+                            className: classNames("__wab_instance", sty.input6),
                             disabled: false,
                             onChange: async (...eventArgs: any) => {
                               generateStateOnChangePropForCodeComponents(
                                 $state,
                                 "value",
-                                ["input4", "value"],
+                                ["input6", "value"],
                                 AntdInput_Helpers
                               ).apply(null, eventArgs);
                             },
-                            placeholder: "First Name *",
+                            placeholder: "Organization",
                             readOnly: false,
                             size: "small",
                             type: "text",
                             value: generateStateValueProp($state, [
-                              "input4",
+                              "input6",
                               "value"
                             ])
                           };
@@ -614,7 +631,7 @@ function PlasmicContactPage__RenderFunc(props: {
                             [
                               {
                                 name: "value",
-                                plasmicStateName: "input4.value"
+                                plasmicStateName: "input6.value"
                               }
                             ],
                             [],
@@ -624,18 +641,18 @@ function PlasmicContactPage__RenderFunc(props: {
 
                           return (
                             <AntdInput
-                              data-plasmic-name={"input4"}
-                              data-plasmic-override={overrides.input4}
+                              data-plasmic-name={"input6"}
+                              data-plasmic-override={overrides.input6}
                               {...child$Props}
                             />
                           );
                         })()}
                       </FormItemWrapper>
-                      <div className={classNames("all", sty.freeBox__yg3JS)}>
+                      <div className={classNames("all", sty.freeBox__lrNq)}>
                         <FormItemWrapper
                           className={classNames(
                             "__wab_instance",
-                            sty.formField__qdHPo
+                            sty.formField__oMpvA
                           )}
                           hidden={false}
                           initialValue={""}
@@ -644,12 +661,13 @@ function PlasmicContactPage__RenderFunc(props: {
                               className={classNames(
                                 "all",
                                 "__wab_text",
-                                sty.text__eqSum
+                                sty.text__bP8GU
                               )}
                             >
                               {""}
                             </div>
                           }
+                          name={"phone_field"}
                           noLabel={true}
                           valuePropName={""}
                         >
@@ -657,7 +675,79 @@ function PlasmicContactPage__RenderFunc(props: {
                             const child$Props = {
                               allowClear: false,
                               autoFocus: false,
-                              bordered: true,
+                              bordered: false,
+                              className: classNames(
+                                "__wab_instance",
+                                sty.input4
+                              ),
+                              disabled: false,
+                              onChange: async (...eventArgs: any) => {
+                                generateStateOnChangePropForCodeComponents(
+                                  $state,
+                                  "value",
+                                  ["input4", "value"],
+                                  AntdInput_Helpers
+                                ).apply(null, eventArgs);
+                              },
+                              placeholder: "Phone",
+                              readOnly: false,
+                              size: "small",
+                              type: "tel",
+                              value: generateStateValueProp($state, [
+                                "input4",
+                                "value"
+                              ])
+                            };
+                            initializeCodeComponentStates(
+                              $state,
+                              [
+                                {
+                                  name: "value",
+                                  plasmicStateName: "input4.value"
+                                }
+                              ],
+                              [],
+                              AntdInput_Helpers ?? {},
+                              child$Props
+                            );
+
+                            return (
+                              <AntdInput
+                                data-plasmic-name={"input4"}
+                                data-plasmic-override={overrides.input4}
+                                {...child$Props}
+                              />
+                            );
+                          })()}
+                        </FormItemWrapper>
+                        <FormItemWrapper
+                          className={classNames(
+                            "__wab_instance",
+                            sty.formField__gHhVz
+                          )}
+                          hidden={false}
+                          initialValue={""}
+                          label={
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text__udrsf
+                              )}
+                            >
+                              {""}
+                            </div>
+                          }
+                          name={"email_field"}
+                          noLabel={true}
+                          rules={[{ ruleType: "required" }]}
+                          valuePropName={""}
+                        >
+                          {(() => {
+                            const child$Props = {
+                              allowClear: false,
+                              autoFocus: false,
+                              bordered: false,
                               className: classNames(
                                 "__wab_instance",
                                 sty.input5
@@ -671,10 +761,10 @@ function PlasmicContactPage__RenderFunc(props: {
                                   AntdInput_Helpers
                                 ).apply(null, eventArgs);
                               },
-                              placeholder: "First Name *",
+                              placeholder: "Email *",
                               readOnly: false,
                               size: "small",
-                              type: "text",
+                              type: "email",
                               value: generateStateValueProp($state, [
                                 "input5",
                                 "value"
@@ -702,83 +792,83 @@ function PlasmicContactPage__RenderFunc(props: {
                             );
                           })()}
                         </FormItemWrapper>
-                        <FormItemWrapper
-                          className={classNames(
-                            "__wab_instance",
-                            sty.formField__bqJu
-                          )}
-                          hidden={false}
-                          initialValue={""}
-                          label={
-                            <div
-                              className={classNames(
-                                "all",
-                                "__wab_text",
-                                sty.text__tJPaw
-                              )}
-                            >
-                              {""}
-                            </div>
-                          }
-                          noLabel={true}
-                          valuePropName={""}
-                        >
-                          {(() => {
-                            const child$Props = {
-                              allowClear: false,
-                              autoFocus: false,
-                              bordered: true,
-                              className: classNames(
-                                "__wab_instance",
-                                sty.input6
-                              ),
-                              disabled: false,
-                              onChange: async (...eventArgs: any) => {
-                                generateStateOnChangePropForCodeComponents(
-                                  $state,
-                                  "value",
-                                  ["input6", "value"],
-                                  AntdInput_Helpers
-                                ).apply(null, eventArgs);
-                              },
-                              placeholder: "First Name *",
-                              readOnly: false,
-                              size: "small",
-                              type: "text",
-                              value: generateStateValueProp($state, [
-                                "input6",
-                                "value"
-                              ])
-                            };
-                            initializeCodeComponentStates(
-                              $state,
-                              [
-                                {
-                                  name: "value",
-                                  plasmicStateName: "input6.value"
-                                }
-                              ],
-                              [],
-                              AntdInput_Helpers ?? {},
-                              child$Props
-                            );
-
-                            return (
-                              <AntdInput
-                                data-plasmic-name={"input6"}
-                                data-plasmic-override={overrides.input6}
-                                {...child$Props}
-                              />
-                            );
-                          })()}
-                        </FormItemWrapper>
                       </div>
+                      <FormItemWrapper
+                        className={classNames(
+                          "__wab_instance",
+                          sty.formField___2LuM6
+                        )}
+                        hidden={false}
+                        initialValue={""}
+                        label={
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__kiuAd
+                            )}
+                          >
+                            {""}
+                          </div>
+                        }
+                        name={"message_field"}
+                        noLabel={true}
+                        rules={[{ ruleType: "required" }]}
+                        valuePropName={""}
+                      >
+                        {(() => {
+                          const child$Props = {
+                            allowClear: false,
+                            autoFocus: false,
+                            bordered: false,
+                            className: classNames("__wab_instance", sty.input7),
+                            disabled: false,
+                            onChange: async (...eventArgs: any) => {
+                              generateStateOnChangePropForCodeComponents(
+                                $state,
+                                "value",
+                                ["input7", "value"],
+                                AntdInput_Helpers
+                              ).apply(null, eventArgs);
+                            },
+                            placeholder: "Message *",
+                            readOnly: false,
+                            size: "small",
+                            type: "text",
+                            value: generateStateValueProp($state, [
+                              "input7",
+                              "value"
+                            ])
+                          };
+                          initializeCodeComponentStates(
+                            $state,
+                            [
+                              {
+                                name: "value",
+                                plasmicStateName: "input7.value"
+                              }
+                            ],
+                            [],
+                            AntdInput_Helpers ?? {},
+                            child$Props
+                          );
+
+                          return (
+                            <AntdInput
+                              data-plasmic-name={"input7"}
+                              data-plasmic-override={overrides.input7}
+                              {...child$Props}
+                            />
+                          );
+                        })()}
+                      </FormItemWrapper>
                       <AntdButton
                         data-plasmic-name={"button"}
                         data-plasmic-override={overrides.button}
                         className={classNames("__wab_instance", sty.button)}
+                        shape={"default"}
                         submitsForm={true}
-                        type={"primary"}
+                        type={"text"}
                       >
                         <div
                           className={classNames(
@@ -787,7 +877,7 @@ function PlasmicContactPage__RenderFunc(props: {
                             sty.text__b3MVc
                           )}
                         >
-                          {"Submit"}
+                          {"Send"}
                         </div>
                       </AntdButton>
                     </FormWrapper>
@@ -870,9 +960,10 @@ const PlasmicDescendants = {
     "form",
     "input2",
     "input3",
+    "input6",
     "input4",
     "input5",
-    "input6",
+    "input7",
     "button",
     "contactInfo",
     "text2",
@@ -890,9 +981,10 @@ const PlasmicDescendants = {
     "form",
     "input2",
     "input3",
+    "input6",
     "input4",
     "input5",
-    "input6",
+    "input7",
     "button",
     "contactInfo",
     "text2"
@@ -904,9 +996,10 @@ const PlasmicDescendants = {
     "form",
     "input2",
     "input3",
+    "input6",
     "input4",
     "input5",
-    "input6",
+    "input7",
     "button"
   ],
   heading: ["heading"],
@@ -915,17 +1008,28 @@ const PlasmicDescendants = {
     "form",
     "input2",
     "input3",
+    "input6",
     "input4",
     "input5",
-    "input6",
+    "input7",
     "button"
   ],
-  form: ["form", "input2", "input3", "input4", "input5", "input6", "button"],
+  form: [
+    "form",
+    "input2",
+    "input3",
+    "input6",
+    "input4",
+    "input5",
+    "input7",
+    "button"
+  ],
   input2: ["input2"],
   input3: ["input3"],
+  input6: ["input6"],
   input4: ["input4"],
   input5: ["input5"],
-  input6: ["input6"],
+  input7: ["input7"],
   button: ["button"],
   contactInfo: ["contactInfo", "text2"],
   text2: ["text2"],
@@ -947,9 +1051,10 @@ type NodeDefaultElementType = {
   form: typeof FormWrapper;
   input2: typeof AntdInput;
   input3: typeof AntdInput;
+  input6: typeof AntdInput;
   input4: typeof AntdInput;
   input5: typeof AntdInput;
-  input6: typeof AntdInput;
+  input7: typeof AntdInput;
   button: typeof AntdButton;
   contactInfo: "div";
   text2: "div";
@@ -1029,9 +1134,10 @@ export const PlasmicContactPage = Object.assign(
     form: makeNodeComponent("form"),
     input2: makeNodeComponent("input2"),
     input3: makeNodeComponent("input3"),
+    input6: makeNodeComponent("input6"),
     input4: makeNodeComponent("input4"),
     input5: makeNodeComponent("input5"),
-    input6: makeNodeComponent("input6"),
+    input7: makeNodeComponent("input7"),
     button: makeNodeComponent("button"),
     contactInfo: makeNodeComponent("contactInfo"),
     text2: makeNodeComponent("text2"),

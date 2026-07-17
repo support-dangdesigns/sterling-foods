@@ -11,3 +11,5 @@ export const initialValue: any = (() => {
     return undefined;
   }
 })();
+
+export const size = 10;

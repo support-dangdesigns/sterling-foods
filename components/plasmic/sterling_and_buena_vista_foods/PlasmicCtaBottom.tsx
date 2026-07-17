@@ -69,10 +69,16 @@ import sty from "./PlasmicCtaBottom.module.css"; // plasmic-import: UmfSTsW6wMCz
 
 createPlasmicElementProxy;
 
-export type PlasmicCtaBottom__VariantMembers = {};
-export type PlasmicCtaBottom__VariantsArgs = {};
+export type PlasmicCtaBottom__VariantMembers = {
+  marketsPage: "base2";
+};
+export type PlasmicCtaBottom__VariantsArgs = {
+  marketsPage?: SingleChoiceArg<"base2">;
+};
 type VariantPropType = keyof PlasmicCtaBottom__VariantsArgs;
-export const PlasmicCtaBottom__VariantProps = new Array<VariantPropType>();
+export const PlasmicCtaBottom__VariantProps = new Array<VariantPropType>(
+  "marketsPage"
+);
 
 export type PlasmicCtaBottom__ArgsType = { wpGraph?: any };
 type ArgPropType = keyof PlasmicCtaBottom__ArgsType;
@@ -89,6 +95,7 @@ export type PlasmicCtaBottom__OverridesType = {
 
 export interface DefaultCtaBottomProps {
   wpGraph?: any;
+  marketsPage?: SingleChoiceArg<"base2">;
   className?: string;
 }
 
@@ -131,7 +138,27 @@ function PlasmicCtaBottom__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
+  const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
+    () => [
+      {
+        path: "marketsPage",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => $props.marketsPage
+      }
+    ],
+    [$props, $ctx, $refs]
+  );
+
   const globalVariants = _useGlobalVariants();
+
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: {},
+    $q: {},
+    $refs
+  });
 
   const styleTokensClassNames = _useStyleTokens();
 
@@ -147,13 +174,22 @@ function PlasmicCtaBottom__RenderFunc(props: {
         "plasmic_default_styles",
         "plasmic_mixins",
         styleTokensClassNames,
-        sty.cta
+        sty.cta,
+        {
+          [sty.ctamarketsPage_base2]: hasVariant($state, "marketsPage", "base2")
+        }
       )}
     >
       <div
         data-plasmic-name={"freeBox"}
         data-plasmic-override={overrides.freeBox}
-        className={classNames("all", sty.freeBox)}
+        className={classNames("all", sty.freeBox, {
+          [sty.freeBoxmarketsPage_base2]: hasVariant(
+            $state,
+            "marketsPage",
+            "base2"
+          )
+        })}
       >
         <div
           data-plasmic-name={"frame52"}
@@ -187,17 +223,50 @@ function PlasmicCtaBottom__RenderFunc(props: {
             </React.Fragment>
           </div>
         </div>
-        <div className={classNames("all", "__wab_text", sty.text___4Fzef)}>
-          {hasVariant(globalVariants, "screen", "desktop")
-            ? "Let\u2019s create something exceptional together."
-            : hasVariant(globalVariants, "screen", "large")
+        <div
+          className={classNames("all", "__wab_text", sty.text___9CO6F, {
+            [sty.textmarketsPage_base2___9CO6Feh6Eg]: hasVariant(
+              $state,
+              "marketsPage",
+              "base2"
+            )
+          })}
+        >
+          {hasVariant($state, "marketsPage", "base2")
+            ? "For more than 50 years, Sterling Foods has partnered with customers across \nfoodservice, retail, military, healthcare, and institutional markets, helping bring innovative \nbakery solutions to consumers nationwide."
+            : hasVariant(globalVariants, "screen", "desktop")
               ? "Let\u2019s create something exceptional together."
-              : "Let\u2019s create something exceptional together."}
+              : hasVariant(globalVariants, "screen", "large")
+                ? "Let\u2019s create something exceptional together."
+                : "Let\u2019s create something exceptional together."}
         </div>
+        {(hasVariant($state, "marketsPage", "base2") ? true : false) ? (
+          <div
+            className={classNames("all", "__wab_text", sty.text___2EPm, {
+              [sty.textmarketsPage_base2___2EPmEh6Eg]: hasVariant(
+                $state,
+                "marketsPage",
+                "base2"
+              )
+            })}
+          >
+            {hasVariant(globalVariants, "screen", "desktop")
+              ? "Let\u2019s create something exceptional together."
+              : hasVariant(globalVariants, "screen", "large")
+                ? "Let\u2019s create something exceptional together."
+                : "Let\u2019s create something exceptional together."}
+          </div>
+        ) : null}
         <div
           data-plasmic-name={"buttonContainer"}
           data-plasmic-override={overrides.buttonContainer}
-          className={classNames("all", sty.buttonContainer)}
+          className={classNames("all", sty.buttonContainer, {
+            [sty.buttonContainermarketsPage_base2]: hasVariant(
+              $state,
+              "marketsPage",
+              "base2"
+            )
+          })}
         >
           <PrimaryBtn
             data-plasmic-name={"primaryBtn"}

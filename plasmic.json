@@ -28581,6 +28581,36 @@
           "id": "f_Ql9I6zrXRi",
           "name": "Arrow2.png",
           "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/arrow2Png.png"
+        },
+        {
+          "id": "7701VGBGuIP6",
+          "name": "image 3",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/image3.png"
+        },
+        {
+          "id": "kT2qr02lKHFc",
+          "name": "background-forfloating-img.avif",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/backgroundForfloatingImgAvif.avif"
+        },
+        {
+          "id": "28hsMhoeTR3w",
+          "name": "baked-goods2.avif",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/bakedGoods2Avif.avif"
+        },
+        {
+          "id": "49oMmfO_XoGC",
+          "name": "baked-goods2.avif 2",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/bakedGoods2Avif2.avif"
+        },
+        {
+          "id": "vltJL7Ga_fvy",
+          "name": "[sterlingfoods]military-section.jpg.avif",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingfoodsMilitarySectionJpgAvif.avif"
+        },
+        {
+          "id": "0P0X6oS40xbR",
+          "name": "[sterlingfoods]market-section.jpg.avif",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingfoodsMarketSectionJpgAvif.avif"
         }
       ],
       "indirect": false,
@@ -28764,6 +28794,37 @@
         }
       ],
       "customFunctions": []
+    },
+    {
+      "projectId": "axVArpcqgHCPMKB2yUGsW3",
+      "projectApiToken": "d8UPLYphoxWJyIkfjww0UtNZijnhGYEzblzwwvbZ4inmZVmHBcolZVTPYtNkh6wsPfnQSAoYq5zuj13NQdUA",
+      "projectName": "[PlasmicKit] Animations",
+      "version": ">0.0.0",
+      "cssFilePath": "plasmic/plasmic_kit_animations/plasmic.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "splitsProviderFilePath": "",
+      "styleTokensProviderFilePath": "plasmic/plasmic_kit_animations/PlasmicStyleTokensProvider.tsx",
+      "dataTokensFilePath": "",
+      "projectModuleFilePath": "plasmic/plasmic_kit_animations/plasmic.tsx",
+      "codeComponents": [
+        {
+          "id": "QG4_OGucsyMZ",
+          "name": "PlasmicHead",
+          "displayName": "hostless-plasmic-head",
+          "componentImportPath": "@plasmicapp/react-web"
+        },
+        {
+          "id": "GKuemYaPBvo9",
+          "name": "Fetcher",
+          "displayName": "plasmic-data-source-fetcher",
+          "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
+        }
+      ],
+      "customFunctions": []
     }
   ],
   "globalVariants": {
@@ -28791,6 +28852,12 @@
         "name": "Screen",
         "projectId": "uyaK17nhz8WhGjYZfKjMhX",
         "contextFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicGlobalVariant__Screen.tsx"
+      },
+      {
+        "id": "aTL61Gk1GKw5",
+        "name": "Screen",
+        "projectId": "axVArpcqgHCPMKB2yUGsW3",
+        "contextFilePath": "plasmic/plasmic_kit_animations/PlasmicGlobalVariant__Screen.tsx"
       }
     ]
   },

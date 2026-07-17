@@ -1047,7 +1047,8 @@
 }
 @media (max-width: 414px) {
   .text__qkd0N {
-    align-self: auto;
+    align-self: flex-start;
+    width: auto;
   }
 }
 .address2 {
@@ -1129,6 +1130,12 @@
     padding: 0px;
   }
 }
+@media (max-width: 414px) {
+  .text__qNiIg {
+    width: auto;
+    align-self: flex-start;
+  }
+}
 .address3 {
   display: flex;
   flex-direction: column;
@@ -1206,6 +1213,12 @@
 @media (max-width: 430px) {
   .text__pAi {
     padding: 0px;
+  }
+}
+@media (max-width: 414px) {
+  .text__pAi {
+    width: auto;
+    align-self: flex-start;
   }
 }
 .freeBox___9KFeZ {

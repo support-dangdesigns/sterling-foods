@@ -18,6 +18,7 @@
 @import "../react_scroll_parallax_global/plasmic.css"; /* plasmic-import: 84wxoth5npGrp6RRXPL88z/projectcss */
 @import "../react_parallax_tilt/plasmic.css"; /* plasmic-import: szjgMQpPpxhmkjnaBvZQJG/projectcss */
 @import "../rive/plasmic.css"; /* plasmic-import: 5v1p2i7GvsoMJk4KqrA6F3/projectcss */
+@import "../plasmic_kit_animations/plasmic.css"; /* plasmic-import: axVArpcqgHCPMKB2yUGsW3/projectcss */
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata%3Aital%2Cwght%400%2C200%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C900&display=swap");
 
 .plasmic_tokens_uyaK17nhz8WhGjYZfKjMhX {
@@ -49,7 +50,7 @@
   --plasmic-token-size-12: var(--token-oFMBMezZplj-);
   --token-I4qaFqA_B1z8: #c3761e;
   --plasmic-token-second: var(--token-I4qaFqA_B1z8);
-  --token-Gx156sR9ht1r: #1c3757;
+  --token-Gx156sR9ht1r: var(--token-sP5FKk2rRQuW);
   --plasmic-token-primary: var(--token-Gx156sR9ht1r);
   --token-sP5FKk2rRQuW: var(--token-2G4aHgk_mSgB);
   --plasmic-token-background-accent: var(--token-sP5FKk2rRQuW);
@@ -117,6 +118,24 @@
   .plasmic_tokens_uyaK17nhz8WhGjYZfKjMhX {
     --token-C_lSLyf4SmUX: var(--token-ydFxpT_711xB);
     --token-6b9ouEWkpNnV: 45px;
+  }
+}
+
+@media (max-width: 2000px) {
+  .plasmic_tokens_uyaK17nhz8WhGjYZfKjMhX {
+    --token-Gx156sR9ht1r: var(--token-Xx7oe00aHq8H);
+  }
+}
+
+.plasmic_tokens_override_uyaK17nhz8WhGjYZfKjMhX.plasmic_tokens_override_uyaK17nhz8WhGjYZfKjMhX {
+  --token-RvPI6LyeIPmd: var(--token-Xx7oe00aHq8H);
+  --token-WxvvgatuPYoJ: var(--antd-colorBgSpotlight);
+}
+
+@media (max-width: 2000px) {
+  .plasmic_tokens_override_uyaK17nhz8WhGjYZfKjMhX.plasmic_tokens_override_uyaK17nhz8WhGjYZfKjMhX {
+    --token-RvPI6LyeIPmd: #1c3757;
+    --token-WxvvgatuPYoJ: #1c3757;
   }
 }
 
@@ -402,6 +421,10 @@
   --mixin-CGm2qdXhkiS__white-space: pre-wrap;
   --plasmic-mixin-bullet-point_white-space: var(
     --mixin-CGm2qdXhkiS__white-space
+  );
+  --mixin-gHsSVEdHtXRu_white-space: pre-wrap;
+  --plasmic-mixin-input-field_white-space: var(
+    --mixin-gHsSVEdHtXRu_white-space
   );
 }
 

@@ -1523,7 +1523,9 @@ function PlasmicHome__RenderFunc(props: {
                         ? true
                         : hasVariant(globalVariants, "screen", "desktop")
                           ? true
-                          : false
+                          : hasVariant(globalVariants, "screen", "large")
+                            ? true
+                            : false
                     ) ? (
                       <div
                         data-plasmic-name={"box2"}
@@ -1616,7 +1618,9 @@ function PlasmicHome__RenderFunc(props: {
                         ? true
                         : hasVariant(globalVariants, "screen", "desktop")
                           ? true
-                          : false
+                          : hasVariant(globalVariants, "screen", "large")
+                            ? true
+                            : false
                     ) ? (
                       <div
                         data-plasmic-name={"box3"}

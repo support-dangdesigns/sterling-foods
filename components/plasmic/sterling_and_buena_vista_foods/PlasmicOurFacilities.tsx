@@ -59,6 +59,10 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import Header from "../../Header"; // plasmic-import: qmNXHiKWCTTQ/component
+import TopHero from "../../TopHero"; // plasmic-import: 2xRY6WOypZh7/component
+import PrimaryBtn from "../../PrimaryBtn"; // plasmic-import: TiffCyYLfuDQ/component
+import Footer from "../../Footer"; // plasmic-import: RbMtVh1ii_PZ/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/styleTokensProvider
 
@@ -110,6 +114,17 @@ export const PlasmicOurFacilities__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicOurFacilities__OverridesType = {
   root?: Flex__<"div">;
+  header?: Flex__<typeof Header>;
+  topHero?: Flex__<typeof TopHero>;
+  body?: Flex__<"section">;
+  intro?: Flex__<"div">;
+  cta?: Flex__<"div">;
+  h1?: Flex__<"h1">;
+  buttonContainer?: Flex__<"div">;
+  contactUs?: Flex__<"a"> & Partial<LinkProps>;
+  primaryBtn?: Flex__<typeof PrimaryBtn>;
+  text?: Flex__<"div">;
+  footer?: Flex__<typeof Footer>;
 };
 
 export interface DefaultOurFacilitiesProps {}
@@ -153,6 +168,8 @@ function PlasmicOurFacilities__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
+  const globalVariants = _useGlobalVariants();
+
   const pageMetadata = generateDynamicMetadata(
     wrapQueriesWithLoadingProxy({}),
     $ctx as PageCtx
@@ -184,20 +201,668 @@ function PlasmicOurFacilities__RenderFunc(props: {
             styleTokensClassNames,
             sty.root
           )}
-        />
+        >
+          <Header
+            data-plasmic-name={"header"}
+            data-plasmic-override={overrides.header}
+            className={classNames("__wab_instance", sty.header)}
+          />
+
+          <TopHero
+            data-plasmic-name={"topHero"}
+            data-plasmic-override={overrides.topHero}
+            className={classNames("__wab_instance", sty.topHero)}
+            pages={"facilities"}
+          />
+
+          <section
+            data-plasmic-name={"body"}
+            data-plasmic-override={overrides.body}
+            className={classNames("all", sty.body)}
+          >
+            <div
+              data-plasmic-name={"intro"}
+              data-plasmic-override={overrides.intro}
+              className={classNames("all", sty.intro)}
+            >
+              <h4
+                className={classNames(
+                  "all",
+                  "h4",
+                  "h4__uyaK1",
+                  "__wab_text",
+                  sty.h4___026Tg,
+                  hasVariant(globalVariants, "screen", "dualScreen")
+                    ? "fave-script"
+                    : "h4-script"
+                )}
+              >
+                {"A Manufacturing Network"}
+              </h4>
+              <h4
+                className={classNames(
+                  "all",
+                  "h4",
+                  "h4__uyaK1",
+                  "__wab_text",
+                  sty.h4__lKpNh
+                )}
+              >
+                {"Built for Flexibility and Growth"}
+              </h4>
+              <p
+                className={classNames(
+                  "all",
+                  "p",
+                  "p__uyaK1",
+                  "__wab_text",
+                  sty.p__r5BPx
+                )}
+              >
+                {
+                  "Sterling Foods' network of six complementary facilities provides the flexibility, capacity, and specialized capabilities needed to support customers across multiple markets and product categories.\n\nFrom artisan bakery production to highly automated manufacturing processes, our facilities are equipped with advanced technologies and operate under the highest food safety and quality standards, with all facilities GFSI-SQF certified and FDA registered. \nAdditionally, we have kosher and vegan certified as well as designated peanut/tree nut free plants. Two of our facilities are also certified to export poultry and meat to Canada.\n\nThis comprehensive manufacturing network delivers the reliability, consistency, capabilities, and scalability our customers depend on."
+                }
+              </p>
+            </div>
+            <PlasmicImg__
+              alt={""}
+              className={classNames(sty.img__hZzo9)}
+              displayHeight={"auto"}
+              displayMaxHeight={"none"}
+              displayMaxWidth={"none"}
+              displayMinHeight={"0"}
+              displayMinWidth={"0"}
+              displayWidth={
+                hasVariant(globalVariants, "screen", "smallDesktop")
+                  ? "100%"
+                  : "auto"
+              }
+              loading={"lazy"}
+              quality={
+                hasVariant(globalVariants, "screen", "smallDesktop")
+                  ? 40
+                  : undefined
+              }
+              src={{
+                src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodCorporateMapAvif.avif",
+                fullWidth: 1260,
+                fullHeight: 802,
+                aspectRatio: undefined
+              }}
+            />
+
+            <div className={classNames("all", sty.freeBox___8RfRu)}>
+              <div className={classNames("all", sty.freeBox___1QoxV)}>
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__mx8E)}
+                  displayHeight={"226px"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"306px"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={
+                    hasVariant(globalVariants, "screen", "smallDesktop")
+                      ? "auto"
+                      : "306px"
+                  }
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodSanAntonio1050Avif.avif",
+                    fullWidth: 306,
+                    fullHeight: 226,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <div className={classNames("all", sty.freeBox__amtrj)}>
+                  <h5
+                    className={classNames(
+                      "all",
+                      "h5",
+                      "h5__uyaK1",
+                      "__wab_text",
+                      sty.h5___92Een
+                    )}
+                  >
+                    {"San Antonio 1075/1080"}
+                  </h5>
+                  <h6
+                    className={classNames(
+                      "all",
+                      "h6",
+                      "h6__uyaK1",
+                      "__wab_text",
+                      sty.h6___4QorZ
+                    )}
+                  >
+                    {"1075/1080 Arion Parkway | San Antonio, Texas"}
+                  </h6>
+                  <h6
+                    className={classNames(
+                      "all",
+                      "h6",
+                      "h6__uyaK1",
+                      "__wab_text",
+                      sty.h6___2Zsg
+                    )}
+                  >
+                    {"FDA, USDA AMS, Kosher"}
+                  </h6>
+                  <p
+                    className={classNames(
+                      "all",
+                      "p",
+                      "p__uyaK1",
+                      "__wab_text",
+                      sty.p__fJih
+                    )}
+                  >
+                    {
+                      "As the home of Sterling Foods, our San Antonio headquarters serves as the center of our operations and a key manufacturing facility. This location supports a wide range of bakery production capabilities while providing the leadership, innovation, and customer support that drive our business forward."
+                    }
+                  </p>
+                </div>
+              </div>
+              <div className={classNames("all", sty.freeBox__lieGa)}>
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__gPzQc)}
+                  displayHeight={"226px"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"306px"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={
+                    hasVariant(globalVariants, "screen", "smallDesktop")
+                      ? "auto"
+                      : "306px"
+                  }
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodSanAntonio1050Avif.avif",
+                    fullWidth: 306,
+                    fullHeight: 226,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <div className={classNames("all", sty.freeBox__vuJo7)}>
+                  <h5
+                    className={classNames(
+                      "all",
+                      "h5",
+                      "h5__uyaK1",
+                      "__wab_text",
+                      sty.h5__v5Ge1
+                    )}
+                  >
+                    {"San Antonio 1050"}
+                  </h5>
+                  <h6
+                    className={classNames(
+                      "all",
+                      "h6",
+                      "h6__uyaK1",
+                      "__wab_text",
+                      sty.h6__kexQl
+                    )}
+                  >
+                    {"1050 Arion Parkway | San Antonio, Texas"}
+                  </h6>
+                  <h6
+                    className={classNames(
+                      "all",
+                      "h6",
+                      "h6__uyaK1",
+                      "__wab_text",
+                      sty.h6__q1XNp
+                    )}
+                  >
+                    {"FDA, USDA FSIS"}
+                  </h6>
+                  <p
+                    className={classNames(
+                      "all",
+                      "p",
+                      "p__uyaK1",
+                      "__wab_text",
+                      sty.p__yriHs
+                    )}
+                  >
+                    {
+                      "This USDA-FSIS certified facility specializes in signature croissants and pastries with an emphasis on customized protein-filled offerings in high demand by today's consumers. Equipped with advanced automated production lines, the facility delivers flexibility, consistency, and scalability while maintaining the highest quality standards."
+                    }
+                  </p>
+                </div>
+              </div>
+              <div className={classNames("all", sty.freeBox__gzp0)}>
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__zCk5K)}
+                  displayHeight={"226px"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"306px"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={
+                    hasVariant(globalVariants, "screen", "smallDesktop")
+                      ? "auto"
+                      : "306px"
+                  }
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodSanAntonioInterparkPng.png",
+                    fullWidth: 306,
+                    fullHeight: 226,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <div className={classNames("all", sty.freeBox__oHuM)}>
+                  <h5
+                    className={classNames(
+                      "all",
+                      "h5",
+                      "h5__uyaK1",
+                      "__wab_text",
+                      sty.h5__do3Rc
+                    )}
+                  >
+                    {"Interpark"}
+                  </h5>
+                  <h6
+                    className={classNames(
+                      "all",
+                      "h6",
+                      "h6__uyaK1",
+                      "__wab_text",
+                      sty.h6___915Vk
+                    )}
+                  >
+                    {"San Antonio, Texas"}
+                  </h6>
+                  <h6
+                    className={classNames(
+                      "all",
+                      "h6",
+                      "h6__uyaK1",
+                      "__wab_text",
+                      sty.h6__en0Ui
+                    )}
+                  >
+                    {"FDA, USDA FSIS"}
+                  </h6>
+                  <p
+                    className={classNames(
+                      "all",
+                      "p",
+                      "p__uyaK1",
+                      "__wab_text",
+                      sty.p__gxpK9
+                    )}
+                  >
+                    {
+                      "Scheduled to open in Fall 2026, the Interpark facility represents Sterling Foods' continued investment in growth and innovation. Designed to support the production of gourmet filled pastries and specialty bakery products, this state-of-the-art facility will expand manufacturing capacity while providing the flexibility needed to meet evolving customer demands."
+                    }
+                  </p>
+                </div>
+              </div>
+              <div className={classNames("all", sty.freeBox__qVfwq)}>
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img___2FpG)}
+                  displayHeight={"226px"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"306px"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={
+                    hasVariant(globalVariants, "screen", "smallDesktop")
+                      ? "auto"
+                      : "306px"
+                  }
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodAzusaPng.png",
+                    fullWidth: 302,
+                    fullHeight: 226,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <div className={classNames("all", sty.freeBox__udnb9)}>
+                  <h5
+                    className={classNames(
+                      "all",
+                      "h5",
+                      "h5__uyaK1",
+                      "__wab_text",
+                      sty.h5__rpbH9
+                    )}
+                  >
+                    {"Azusa"}
+                  </h5>
+                  <h6
+                    className={classNames(
+                      "all",
+                      "h6",
+                      "h6__uyaK1",
+                      "__wab_text",
+                      sty.h6__xGq3E
+                    )}
+                  >
+                    {"823 W 8th St | Azusa, California"}
+                  </h6>
+                  <h6
+                    className={classNames(
+                      "all",
+                      "h6",
+                      "h6__uyaK1",
+                      "__wab_text",
+                      sty.h6__sVhDw
+                    )}
+                  >
+                    {"FDA, Peanut / Nut-Free"}
+                  </h6>
+                  <p
+                    className={classNames(
+                      "all",
+                      "p",
+                      "p__uyaK1",
+                      "__wab_text",
+                      sty.p__o34Zx
+                    )}
+                  >
+                    {
+                      "Located in Southern California, our Azusa facility specializes in serving the K-12 market through our Buena Vista Foods brand, with products designed to meet the evolving needs of schools and students. Through quality ingredients, nutritional expertise, and dependable manufacturing, the facility is a leading supplier to school nutrition programs across the country."
+                    }
+                  </p>
+                </div>
+              </div>
+              <div className={classNames("all", sty.freeBox__bXbg)}>
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__fr7I4)}
+                  displayHeight={"226px"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"306px"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={
+                    hasVariant(globalVariants, "screen", "smallDesktop")
+                      ? "auto"
+                      : "306px"
+                  }
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodUnionCityAvif.avif",
+                    fullWidth: 306,
+                    fullHeight: 225,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <div className={classNames("all", sty.freeBox__tWzcN)}>
+                  <h5
+                    className={classNames(
+                      "all",
+                      "h5",
+                      "h5__uyaK1",
+                      "__wab_text",
+                      sty.h5__yGwBu
+                    )}
+                  >
+                    {"Union City (1)"}
+                  </h5>
+                  <h6
+                    className={classNames(
+                      "all",
+                      "h6",
+                      "h6__uyaK1",
+                      "__wab_text",
+                      sty.h6__mHvdR
+                    )}
+                  >
+                    {"33300 Western Avenue | Union City, California"}
+                  </h6>
+                  <h6
+                    className={classNames(
+                      "all",
+                      "h6",
+                      "h6__uyaK1",
+                      "__wab_text",
+                      sty.h6__uv4W6
+                    )}
+                  >
+                    {"FDA, USDA FSIS"}
+                  </h6>
+                  <p
+                    className={classNames(
+                      "all",
+                      "p",
+                      "p__uyaK1",
+                      "__wab_text",
+                      sty.p__j3Il
+                    )}
+                  >
+                    {
+                      "Serving national restaurant, foodservice, and retail customers, this USDA-certified facility specializes in a broad range of protein-filled bakery products, croissants, pastries, and custom food solutions. Its diverse capabilities help customers bring innovative products to market with confidence."
+                    }
+                  </p>
+                </div>
+              </div>
+              <div className={classNames("all", sty.freeBox__yTsb7)}>
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__ioBQo)}
+                  displayHeight={"226px"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"306px"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={
+                    hasVariant(globalVariants, "screen", "smallDesktop")
+                      ? "auto"
+                      : "306px"
+                  }
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodSanAntonio1050Avif.avif",
+                    fullWidth: 306,
+                    fullHeight: 226,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <div className={classNames("all", sty.freeBox__mvelN)}>
+                  <h5
+                    className={classNames(
+                      "all",
+                      "h5",
+                      "h5__uyaK1",
+                      "__wab_text",
+                      sty.h5__fdUE
+                    )}
+                  >
+                    {"Union City (2)"}
+                  </h5>
+                  <h6
+                    className={classNames(
+                      "all",
+                      "h6",
+                      "h6__uyaK1",
+                      "__wab_text",
+                      sty.h6__o0OKx
+                    )}
+                  >
+                    {"33333 Western Avenue | Union City, California"}
+                  </h6>
+                  <h6
+                    className={classNames(
+                      "all",
+                      "h6",
+                      "h6__uyaK1",
+                      "__wab_text",
+                      sty.h6___7FiHb
+                    )}
+                  >
+                    {"FDA, OU Kosher"}
+                  </h6>
+                  <p
+                    className={classNames(
+                      "all",
+                      "p",
+                      "p__uyaK1",
+                      "__wab_text",
+                      sty.p___0Tpef
+                    )}
+                  >
+                    {
+                      "Focused on artisan-style bakery production, this facility specializes in producing authentic New York-style bagels. Combining traditional methods with efficient production processes, it supports customers seeking distinctive, high-quality offerings."
+                    }
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div
+            data-plasmic-name={"cta"}
+            data-plasmic-override={overrides.cta}
+            className={classNames("all", sty.cta)}
+          >
+            <div className={classNames("all", sty.freeBox__hIHzJ)}>
+              <h3
+                className={classNames(
+                  "all",
+                  "h3",
+                  "h3__uyaK1",
+                  "__wab_text",
+                  sty.h3__o4UDf
+                )}
+              >
+                {"Looking for a"}
+              </h3>
+              <h1
+                data-plasmic-name={"h1"}
+                data-plasmic-override={overrides.h1}
+                className={classNames(
+                  "all",
+                  "h1",
+                  "h1__uyaK1",
+                  "__wab_text",
+                  sty.h1,
+                  "h3-script"
+                )}
+              >
+                {"bakery partner"}
+              </h1>
+              <h3
+                className={classNames(
+                  "all",
+                  "h3",
+                  "h3__uyaK1",
+                  "__wab_text",
+                  sty.h3__wJf82
+                )}
+              >
+                {"that can grow with you?"}
+              </h3>
+            </div>
+            <h5
+              className={classNames(
+                "all",
+                "h5",
+                "h5__uyaK1",
+                "__wab_text",
+                sty.h5__wjtkq
+              )}
+            >
+              {"Let\u2019s create something exceptional together."}
+            </h5>
+            <div
+              data-plasmic-name={"buttonContainer"}
+              data-plasmic-override={overrides.buttonContainer}
+              className={classNames("all", sty.buttonContainer)}
+            >
+              <PlasmicLink__
+                data-plasmic-name={"contactUs"}
+                data-plasmic-override={overrides.contactUs}
+                className={classNames("all", "a", "a__uyaK1", sty.contactUs)}
+                component={Link}
+                legacyBehavior={false}
+                platform={"nextjs"}
+              >
+                <PrimaryBtn
+                  data-plasmic-name={"primaryBtn"}
+                  data-plasmic-override={overrides.primaryBtn}
+                  className={classNames("__wab_instance", sty.primaryBtn)}
+                >
+                  <div
+                    data-plasmic-name={"text"}
+                    data-plasmic-override={overrides.text}
+                    className={classNames("all", "__wab_text", sty.text)}
+                  >
+                    {"Start a Conversation"}
+                  </div>
+                </PrimaryBtn>
+              </PlasmicLink__>
+            </div>
+          </div>
+          <Footer
+            data-plasmic-name={"footer"}
+            data-plasmic-override={overrides.footer}
+            className={classNames("__wab_instance", sty.footer)}
+          />
+        </div>
       </div>
     </React.Fragment>
   ) as React.ReactElement | null;
 }
 
 const PlasmicDescendants = {
-  root: ["root"]
+  root: [
+    "root",
+    "header",
+    "topHero",
+    "body",
+    "intro",
+    "cta",
+    "h1",
+    "buttonContainer",
+    "contactUs",
+    "primaryBtn",
+    "text",
+    "footer"
+  ],
+  header: ["header"],
+  topHero: ["topHero"],
+  body: ["body", "intro"],
+  intro: ["intro"],
+  cta: ["cta", "h1", "buttonContainer", "contactUs", "primaryBtn", "text"],
+  h1: ["h1"],
+  buttonContainer: ["buttonContainer", "contactUs", "primaryBtn", "text"],
+  contactUs: ["contactUs", "primaryBtn", "text"],
+  primaryBtn: ["primaryBtn", "text"],
+  text: ["text"],
+  footer: ["footer"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  header: typeof Header;
+  topHero: typeof TopHero;
+  body: "section";
+  intro: "div";
+  cta: "div";
+  h1: "h1";
+  buttonContainer: "div";
+  contactUs: "a";
+  primaryBtn: typeof PrimaryBtn;
+  text: "div";
+  footer: typeof Footer;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -262,6 +927,17 @@ export const PlasmicOurFacilities = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    header: makeNodeComponent("header"),
+    topHero: makeNodeComponent("topHero"),
+    body: makeNodeComponent("body"),
+    intro: makeNodeComponent("intro"),
+    cta: makeNodeComponent("cta"),
+    h1: makeNodeComponent("h1"),
+    buttonContainer: makeNodeComponent("buttonContainer"),
+    contactUs: makeNodeComponent("contactUs"),
+    primaryBtn: makeNodeComponent("primaryBtn"),
+    text: makeNodeComponent("text"),
+    footer: makeNodeComponent("footer"),
 
     // Metadata about props expected for PlasmicOurFacilities
     internalVariantProps: PlasmicOurFacilities__VariantProps,

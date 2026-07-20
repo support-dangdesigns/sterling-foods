@@ -30,26 +30,9 @@
 .header__j0CU0:global(.__wab_instance) {
   max-width: 100%;
 }
-.hero {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-  height: 400px;
+.topHero:global(.__wab_instance) {
   max-width: 100%;
-  justify-content: center;
-  align-items: center;
-  background: url("/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodsQualityandSafetyHeroAvif.avif") top 50% left 50% / cover repeat;
-  min-width: 0;
   flex-shrink: 0;
-}
-.h2 {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  text-align: center;
-  color: var(--token-sP5FKk2rRQuW);
-  min-width: 0;
 }
 .body {
   display: flex;
@@ -1045,148 +1028,9 @@
 .img__nLxtW > picture > img {
   object-fit: cover;
 }
-.cta {
-  animation: none;
-  background: rgba(28, 55, 87, 1);
-  height: 397px;
-  display: flex;
-  position: relative;
-  top: auto;
-  left: auto;
-  overflow: hidden;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  row-gap: 20px;
-  min-width: 0;
-  flex-shrink: 0;
-  padding: 30px;
-}
-@media (max-width: 1920px) {
-  .cta {
-    animation: none;
-    position: relative;
-    left: auto;
-    top: auto;
-    display: flex;
-    flex-direction: column;
-    width: 1920px;
-    height: 397px;
-    row-gap: 20px;
-    align-items: center;
-    justify-content: center;
-    column-gap: 0px;
-    flex-shrink: 0;
-    padding: 30px;
-  }
-}
-@media (max-width: 1440px) {
-  .cta {
-    animation: none;
-    height: auto;
-    width: 100%;
-    left: auto;
-    top: auto;
-    min-width: 0;
-  }
-}
-@media (max-width: 757px) {
-  .cta {
-    animation: none;
-    left: auto;
-    top: auto;
-  }
-}
-@media (max-width: 414px) {
-  .cta {
-    animation: none;
-    height: auto;
-    left: auto;
-    top: auto;
-  }
-}
-@media (max-width: 375px) {
-  .cta {
-    animation: none;
-    left: auto;
-    top: auto;
-  }
-}
-.freeBox__xu6Px {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  column-gap: 20px;
-  min-width: 0;
-  padding: 8px;
-}
-.h3__dsX1 {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  color: var(--token-sP5FKk2rRQuW);
-}
-.h1 {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  color: var(--token-I4qaFqA_B1z8);
-}
-.h3__w4DHe {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  color: var(--token-41VRhDKfihhY);
-}
-.h5 {
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  color: var(--token-sP5FKk2rRQuW);
-  text-align: center;
-  font-size: 43px;
-  min-width: 0;
-}
-.buttonContainer {
-  animation: none;
-  width: 452px;
-  height: 69px;
-  display: flex;
-  position: relative;
-  top: auto;
-  left: auto;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-left: 5px;
-  padding-right: 5px;
-  flex-shrink: 0;
-  margin: 20px;
-}
-@media (max-width: 2000px) {
-  .buttonContainer {
-    animation: none;
-    position: relative;
-    left: auto;
-    top: auto;
-    align-items: center;
-    justify-content: center;
-    margin: 20px;
-  }
-}
-.primaryBtn:global(.__wab_instance) {
+.ctaBottom:global(.__wab_instance) {
   max-width: 100%;
   flex-shrink: 0;
-}
-.text__rnOn9 {
-  padding-right: 0px;
 }
 .footer {
   display: flex;

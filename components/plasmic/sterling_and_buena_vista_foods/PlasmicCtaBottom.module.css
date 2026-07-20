@@ -28,7 +28,7 @@
     flex-direction: column;
     width: 1920px;
     column-gap: 0px;
-    padding: 0px;
+    padding: 20px 0px;
   }
 }
 @media (max-width: 1512px) {
@@ -121,6 +121,12 @@
     margin: 0px;
   }
 }
+@media (max-width: 1512px) {
+  .freeBox {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
 @media (max-width: 1440px) {
   .freeBox {
     height: auto;
@@ -137,9 +143,9 @@
   .freeBox {
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 10px;
     column-gap: 0px;
-    padding: 0px;
+    padding: 30px 0px;
   }
 }
 @media (max-width: 1024px) {
@@ -153,6 +159,12 @@
     column-gap: 0px;
   }
 }
+@media (max-width: 757px) {
+  .freeBox {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
 @media (max-width: 530px) {
   .freeBox {
     width: auto;
@@ -161,6 +173,14 @@
     flex-direction: column;
     column-gap: 0px;
     min-height: 0;
+  }
+}
+@media (max-width: 430px) {
+  .freeBox {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    column-gap: 0px;
   }
 }
 @media (max-width: 414px) {
@@ -206,8 +226,8 @@
 }
 @media (max-width: 757px) {
   .frame52 {
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 0px;
+    padding-left: 0px;
   }
 }
 @media (max-width: 530px) {
@@ -219,7 +239,7 @@
 }
 @media (max-width: 430px) {
   .frame52 {
-    padding: 0px 10px;
+    padding: 0px;
   }
 }
 @media (max-width: 414px) {
@@ -271,39 +291,45 @@
 @media (max-width: 1280px) {
   .text__n2Use {
     font-family: "Georgia";
+    text-align: center;
   }
 }
 @media (max-width: 1200px) {
   .text__n2Use {
     text-align: center;
     font-family: "Georgia";
+    font-size: var(--token-KlrAoGIT1za7);
+    align-self: center;
   }
 }
 @media (max-width: 1024px) {
   .text__n2Use {
-    font-size: var(--token-UXPBeNJ4rrVx);
+    font-size: var(--token-B10hUni6jzpI);
     font-family: "Georgia";
   }
 }
 @media (max-width: 757px) {
   .text__n2Use {
     font-family: "Georgia";
+    font-size: var(--token-hCgNygAysIbb);
   }
 }
 @media (max-width: 530px) {
   .text__n2Use {
-    font-size: var(--token-UXPBeNJ4rrVx);
+    font-size: var(--token-hCgNygAysIbb);
     font-family: "Georgia";
   }
 }
 @media (max-width: 430px) {
   .text__n2Use {
-    font-size: var(--token-UXPBeNJ4rrVx);
+    align-self: auto;
+    font-size: var(--token-LM4KfHPZ4AUG);
+    padding-bottom: 5px;
   }
 }
 @media (max-width: 414px) {
   .text__n2Use {
-    font-size: var(--token-C_lSLyf4SmUX);
+    font-size: var(--token-LM4KfHPZ4AUG);
     height: auto;
   }
 }
@@ -330,6 +356,11 @@
     height: auto;
   }
 }
+@media (max-width: 1200px) {
+  .span {
+    font-size: 65px;
+  }
+}
 @media (max-width: 1024px) {
   .span {
     font-size: var(--token-KiAZW0gIrhlw);
@@ -342,12 +373,13 @@
 }
 @media (max-width: 430px) {
   .span {
-    font-size: var(--token-KiAZW0gIrhlw);
+    font-size: var(--token-B10hUni6jzpI);
+    line-height: 1em;
   }
 }
 @media (max-width: 414px) {
   .span {
-    font-size: var(--token-6b9ouEWkpNnV);
+    font-size: var(--token-16_cC9w3e0Nk);
   }
 }
 .text___9CO6F {
@@ -392,6 +424,7 @@
     text-align: center;
     left: auto;
     top: auto;
+    font-size: var(--token-UXPBeNJ4rrVx);
   }
 }
 @media (max-width: 1440px) {
@@ -401,6 +434,7 @@
     text-align: center;
     left: auto;
     top: auto;
+    font-size: var(--token-UXPBeNJ4rrVx);
   }
 }
 @media (max-width: 1280px) {
@@ -415,6 +449,7 @@
     left: auto;
     top: auto;
     text-align: center;
+    font-size: var(--token-UXPBeNJ4rrVx);
   }
 }
 @media (max-width: 1024px) {
@@ -422,7 +457,7 @@
     align-self: center;
     left: auto;
     top: auto;
-    font-size: 35px;
+    font-size: 30px;
     padding: 0px;
   }
 }
@@ -430,25 +465,26 @@
   .text___9CO6F {
     left: auto;
     top: auto;
+    font-size: 28px;
   }
 }
 @media (max-width: 530px) {
   .text___9CO6F {
-    font-size: 35px;
+    font-size: 28px;
     left: auto;
     top: auto;
   }
 }
 @media (max-width: 430px) {
   .text___9CO6F {
-    font-size: 35px;
+    font-size: var(--token-LM4KfHPZ4AUG);
     left: auto;
     top: auto;
   }
 }
 @media (max-width: 414px) {
   .text___9CO6F {
-    font-size: var(--token-C_lSLyf4SmUX);
+    font-size: var(--token-LM4KfHPZ4AUG);
     left: auto;
     top: auto;
     padding: 0px;
@@ -553,6 +589,7 @@
     font-size: 35px;
     left: auto;
     top: auto;
+    display: none;
   }
 }
 @media (max-width: 414px) {
@@ -617,6 +654,12 @@
   }
 }
 @media (max-width: 530px) {
+  .buttonContainer {
+    left: auto;
+    top: auto;
+  }
+}
+@media (max-width: 430px) {
   .buttonContainer {
     left: auto;
     top: auto;

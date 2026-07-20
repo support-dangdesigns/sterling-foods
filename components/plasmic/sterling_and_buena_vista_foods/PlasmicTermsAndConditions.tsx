@@ -60,6 +60,7 @@ import {
 } from "@plasmicapp/react-web/lib/host";
 
 import Header from "../../Header"; // plasmic-import: qmNXHiKWCTTQ/component
+import TopHero from "../../TopHero"; // plasmic-import: 2xRY6WOypZh7/component
 import CtaBottom from "../../CtaBottom"; // plasmic-import: UmfSTsW6wMCz/component
 import Footer from "../../Footer"; // plasmic-import: RbMtVh1ii_PZ/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/projectModule
@@ -116,9 +117,7 @@ export type PlasmicTermsAndConditions__OverridesType = {
   termsConditions?: Flex__<"div">;
   header?: Flex__<"div">;
   header2?: Flex__<typeof Header>;
-  hero?: Flex__<"div">;
-  h1?: Flex__<"h1">;
-  h2?: Flex__<"h2">;
+  topHero?: Flex__<typeof TopHero>;
   body?: Flex__<"div">;
   sitesCovered?: Flex__<"div">;
   verticalStack?: Flex__<"div">;
@@ -212,43 +211,13 @@ function PlasmicTermsAndConditions__RenderFunc(props: {
             className={classNames("__wab_instance", sty.header2)}
           />
         </div>
-        <div
-          data-plasmic-name={"hero"}
-          data-plasmic-override={overrides.hero}
-          className={classNames("all", sty.hero)}
-        >
-          <h1
-            data-plasmic-name={"h1"}
-            data-plasmic-override={overrides.h1}
-            className={classNames(
-              "all",
-              "h1",
-              "h1__uyaK1",
-              "__wab_text",
-              sty.h1
-            )}
-          >
-            <React.Fragment>
-              <React.Fragment>{""}</React.Fragment>
-              {
-                <h2
-                  data-plasmic-name={"h2"}
-                  data-plasmic-override={overrides.h2}
-                  className={classNames(
-                    "all",
-                    "h2",
-                    "h2__uyaK1",
-                    "__wab_text",
-                    sty.h2
-                  )}
-                >
-                  {"Terms of Use &\nPrivacy Policy."}
-                </h2>
-              }
-              <React.Fragment>{""}</React.Fragment>
-            </React.Fragment>
-          </h1>
-        </div>
+        <TopHero
+          data-plasmic-name={"topHero"}
+          data-plasmic-override={overrides.topHero}
+          className={classNames("__wab_instance", sty.topHero)}
+          pages={"terms"}
+        />
+
         <div
           data-plasmic-name={"body"}
           data-plasmic-override={overrides.body}
@@ -470,9 +439,7 @@ const PlasmicDescendants = {
     "termsConditions",
     "header",
     "header2",
-    "hero",
-    "h1",
-    "h2",
+    "topHero",
     "body",
     "sitesCovered",
     "verticalStack",
@@ -483,9 +450,7 @@ const PlasmicDescendants = {
   ],
   header: ["header", "header2"],
   header2: ["header2"],
-  hero: ["hero", "h1", "h2"],
-  h1: ["h1", "h2"],
-  h2: ["h2"],
+  topHero: ["topHero"],
   body: ["body", "sitesCovered", "verticalStack", "useRetention", "ul"],
   sitesCovered: ["sitesCovered"],
   verticalStack: ["verticalStack"],
@@ -501,9 +466,7 @@ type NodeDefaultElementType = {
   termsConditions: "div";
   header: "div";
   header2: typeof Header;
-  hero: "div";
-  h1: "h1";
-  h2: "h2";
+  topHero: typeof TopHero;
   body: "div";
   sitesCovered: "div";
   verticalStack: "div";
@@ -577,9 +540,7 @@ export const PlasmicTermsAndConditions = Object.assign(
     // Helper components rendering sub-elements
     header: makeNodeComponent("header"),
     header2: makeNodeComponent("header2"),
-    hero: makeNodeComponent("hero"),
-    h1: makeNodeComponent("h1"),
-    h2: makeNodeComponent("h2"),
+    topHero: makeNodeComponent("topHero"),
     body: makeNodeComponent("body"),
     sitesCovered: makeNodeComponent("sitesCovered"),
     verticalStack: makeNodeComponent("verticalStack"),

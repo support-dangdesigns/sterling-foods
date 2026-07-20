@@ -14,49 +14,9 @@
 .header:global(.__wab_instance) {
   max-width: 100%;
 }
-.hero {
-  animation: none;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-  height: 400px;
+.topHero:global(.__wab_instance) {
   max-width: 100%;
-  justify-content: center;
-  align-items: center;
-  background: url("/plasmic/sterling_and_buena_vista_foods/images/marketHeroAvif.avif") top 50% left 50% / cover repeat;
-  min-width: 0;
   flex-shrink: 0;
-}
-@media (max-width: 1512px) {
-  .hero {
-    animation: none;
-  }
-}
-.h2 {
-  animation: none;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  text-align: center;
-  color: var(--token-sP5FKk2rRQuW);
-  font-family: "Georgia";
-  font-size: 90px;
-  font-weight: 400;
-  font-style: normal;
-  text-transform: none;
-  line-height: 1;
-  letter-spacing: -0.5px;
-  white-space: pre-wrap;
-  user-select: text;
-  text-decoration-line: none;
-  text-overflow: clip;
-  min-width: 0;
-}
-@media (max-width: 1512px) {
-  .h2 {
-    animation: none;
-  }
 }
 .body {
   animation: none;
@@ -440,6 +400,11 @@
     width: 35%;
   }
 }
+@media (max-width: 757px) {
+  .img___6NoRb {
+    width: 50%;
+  }
+}
 @media (max-width: 530px) {
   .img___6NoRb {
     width: 63.25%;
@@ -448,6 +413,8 @@
 @media (max-width: 414px) {
   .img___6NoRb {
     margin-right: 0px;
+    width: 100%;
+    min-width: 0;
   }
 }
 .text {
@@ -961,6 +928,11 @@
     width: 50%;
   }
 }
+@media (max-width: 757px) {
+  .img__opTma {
+    width: 50%;
+  }
+}
 @media (max-width: 530px) {
   .img__opTma {
     width: 79.32%;
@@ -969,6 +941,8 @@
 @media (max-width: 414px) {
   .img__opTma {
     margin-right: 0px;
+    width: 100%;
+    min-width: 0;
   }
 }
 .convenienceStores {
@@ -1063,6 +1037,11 @@
     width: 47.46%;
   }
 }
+@media (max-width: 757px) {
+  .img__kcvXq {
+    width: 50%;
+  }
+}
 @media (max-width: 530px) {
   .img__kcvXq {
     width: 85.94%;
@@ -1071,6 +1050,8 @@
 @media (max-width: 414px) {
   .img__kcvXq {
     margin-right: 0px;
+    width: 100%;
+    min-width: 0;
   }
 }
 .text3 {
@@ -1391,7 +1372,8 @@
     display: flex;
     flex-direction: row;
     column-gap: 36px;
-    row-gap: 0px;
+    flex-wrap: wrap;
+    align-items: stretch;
   }
 }
 @media (max-width: 757px) {
@@ -1434,7 +1416,7 @@
 }
 @media (max-width: 1024px) {
   .img___3FxH {
-    width: 40%;
+    width: auto;
   }
 }
 @media (max-width: 757px) {
@@ -1729,7 +1711,10 @@
     flex-direction: row;
     padding-top: 0px;
     column-gap: 36px;
-    row-gap: 0px;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: stretch;
+    min-width: 0;
   }
 }
 @media (max-width: 757px) {
@@ -1946,6 +1931,12 @@
     width: 40%;
   }
 }
+@media (max-width: 1024px) {
+  .img__a4LP2 {
+    height: auto;
+    width: auto;
+  }
+}
 @media (max-width: 757px) {
   .img__a4LP2 {
     width: auto;
@@ -1965,6 +1956,18 @@
 .ctaBottom:global(.__wab_instance) {
   max-width: 100%;
   flex-shrink: 0;
+}
+@media (max-width: 1200px) {
+  .ctaBottom:global(.__wab_instance) {
+    flex-shrink: 0;
+  }
+}
+@media (max-width: 530px) {
+  .ctaBottom:global(.__wab_instance) {
+    height: auto;
+    width: 100%;
+    min-width: 0;
+  }
 }
 .footer:global(.__wab_instance) {
   max-width: 100%;

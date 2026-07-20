@@ -240,7 +240,13 @@ function PlasmicCtaBottom__RenderFunc(props: {
                 ? "Let\u2019s create something exceptional together."
                 : "Let\u2019s create something exceptional together."}
         </div>
-        {(hasVariant($state, "marketsPage", "base2") ? true : false) ? (
+        {(
+          hasVariant($state, "marketsPage", "base2")
+            ? true
+            : hasVariant(globalVariants, "screen", "largerMobile")
+              ? true
+              : false
+        ) ? (
           <div
             className={classNames("all", "__wab_text", sty.text___2EPm, {
               [sty.textmarketsPage_base2___2EPmEh6Eg]: hasVariant(

@@ -68,21 +68,55 @@ import sty from "./PlasmicTopHero.module.css"; // plasmic-import: 2xRY6WOypZh7/c
 
 createPlasmicElementProxy;
 
-export type PlasmicTopHero__VariantMembers = {};
-export type PlasmicTopHero__VariantsArgs = {};
+export type PlasmicTopHero__VariantMembers = {
+  pages:
+    | "aboutUs"
+    | "innovation"
+    | "markets"
+    | "capabilities"
+    | "careers"
+    | "contactUs"
+    | "terms"
+    | "facilities"
+    | "qualitySafety";
+};
+export type PlasmicTopHero__VariantsArgs = {
+  pages?: SingleChoiceArg<
+    | "aboutUs"
+    | "innovation"
+    | "markets"
+    | "capabilities"
+    | "careers"
+    | "contactUs"
+    | "terms"
+    | "facilities"
+    | "qualitySafety"
+  >;
+};
 type VariantPropType = keyof PlasmicTopHero__VariantsArgs;
-export const PlasmicTopHero__VariantProps = new Array<VariantPropType>();
+export const PlasmicTopHero__VariantProps = new Array<VariantPropType>("pages");
 
 export type PlasmicTopHero__ArgsType = {};
 type ArgPropType = keyof PlasmicTopHero__ArgsType;
 export const PlasmicTopHero__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicTopHero__OverridesType = {
-  aboutUsHero?: Flex__<"div">;
+  hero?: Flex__<"div">;
   text?: Flex__<"div">;
 };
 
 export interface DefaultTopHeroProps {
+  pages?: SingleChoiceArg<
+    | "aboutUs"
+    | "innovation"
+    | "markets"
+    | "capabilities"
+    | "careers"
+    | "contactUs"
+    | "terms"
+    | "facilities"
+    | "qualitySafety"
+  >;
   className?: string;
 }
 
@@ -125,14 +159,34 @@ function PlasmicTopHero__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
+  const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
+    () => [
+      {
+        path: "pages",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => $props.pages
+      }
+    ],
+    [$props, $ctx, $refs]
+  );
+
   const globalVariants = _useGlobalVariants();
+
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: {},
+    $q: {},
+    $refs
+  });
 
   const styleTokensClassNames = _useStyleTokens();
 
   return (
     <div
-      data-plasmic-name={"aboutUsHero"}
-      data-plasmic-override={overrides.aboutUsHero}
+      data-plasmic-name={"hero"}
+      data-plasmic-override={overrides.hero}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       className={classNames(
@@ -141,29 +195,81 @@ function PlasmicTopHero__RenderFunc(props: {
         "plasmic_default_styles",
         "plasmic_mixins",
         styleTokensClassNames,
-        sty.aboutUsHero
+        sty.hero,
+        {
+          [sty.heropages_aboutUs]: hasVariant($state, "pages", "aboutUs"),
+          [sty.heropages_capabilities]: hasVariant(
+            $state,
+            "pages",
+            "capabilities"
+          ),
+          [sty.heropages_careers]: hasVariant($state, "pages", "careers"),
+          [sty.heropages_contactUs]: hasVariant($state, "pages", "contactUs"),
+          [sty.heropages_facilities]: hasVariant($state, "pages", "facilities"),
+          [sty.heropages_innovation]: hasVariant($state, "pages", "innovation"),
+          [sty.heropages_markets]: hasVariant($state, "pages", "markets"),
+          [sty.heropages_qualitySafety]: hasVariant(
+            $state,
+            "pages",
+            "qualitySafety"
+          ),
+          [sty.heropages_terms]: hasVariant($state, "pages", "terms")
+        }
       )}
     >
       <div
         data-plasmic-name={"text"}
         data-plasmic-override={overrides.text}
-        className={classNames("all", "__wab_text", sty.text)}
+        className={classNames("all", "__wab_text", sty.text, {
+          [sty.textpages_capabilities]: hasVariant(
+            $state,
+            "pages",
+            "capabilities"
+          ),
+          [sty.textpages_careers]: hasVariant($state, "pages", "careers"),
+          [sty.textpages_contactUs]: hasVariant($state, "pages", "contactUs"),
+          [sty.textpages_facilities]: hasVariant($state, "pages", "facilities"),
+          [sty.textpages_innovation]: hasVariant($state, "pages", "innovation"),
+          [sty.textpages_markets]: hasVariant($state, "pages", "markets"),
+          [sty.textpages_qualitySafety]: hasVariant(
+            $state,
+            "pages",
+            "qualitySafety"
+          ),
+          [sty.textpages_terms]: hasVariant($state, "pages", "terms")
+        })}
       >
-        {"About us"}
+        {hasVariant($state, "pages", "qualitySafety")
+          ? "Quality & Safety"
+          : hasVariant($state, "pages", "facilities")
+            ? "Facilities"
+            : hasVariant($state, "pages", "terms")
+              ? "Terms of Use &\nPrivacy Policy"
+              : hasVariant($state, "pages", "contactUs")
+                ? "Contact Us"
+                : hasVariant($state, "pages", "careers")
+                  ? "Careers"
+                  : hasVariant($state, "pages", "capabilities")
+                    ? "Capabilities"
+                    : hasVariant($state, "pages", "markets")
+                      ? "Markets"
+                      : hasVariant($state, "pages", "innovation")
+                        ? "Innovation"
+                        : "About us"}
       </div>
     </div>
   ) as React.ReactElement | null;
 }
 
 const PlasmicDescendants = {
-  aboutUsHero: ["aboutUsHero", "text"],
+  hero: ["hero", "text"],
   text: ["text"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
-  aboutUsHero: "div";
+  hero: "div";
   text: "div";
 };
 
@@ -216,7 +322,7 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "aboutUsHero") {
+  if (nodeName === "hero") {
     func.displayName = "PlasmicTopHero";
   } else {
     func.displayName = `PlasmicTopHero.${nodeName}`;
@@ -226,7 +332,7 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
 
 export const PlasmicTopHero = Object.assign(
   // Top-level PlasmicTopHero renders the root element
-  makeNodeComponent("aboutUsHero"),
+  makeNodeComponent("hero"),
   {
     // Helper components rendering sub-elements
     text: makeNodeComponent("text"),

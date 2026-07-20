@@ -1,4 +1,5 @@
-.aboutUsHero {
+.hero {
+  display: flex;
   flex-direction: column;
   width: 100%;
   height: 400px;
@@ -9,19 +10,40 @@
   position: relative;
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
-  display: none;
   padding: 0px;
 }
-@media (max-width: 2000px) {
-  .aboutUsHero {
-    display: flex;
-  }
-}
 @media (max-width: 1024px) {
-  .aboutUsHero {
+  .hero {
     padding-right: 20px;
     padding-left: 20px;
   }
+}
+.heropages_innovation {
+  background: url("/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodHeroImagePng.png") 0% 0% / cover no-repeat;
+  height: 400px;
+}
+.heropages_markets {
+  background: url("/plasmic/sterling_and_buena_vista_foods/images/marketHeroJpg.jpg") top 50% left 50% / cover repeat;
+}
+.heropages_capabilities {
+  background: url("/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodCapbilitiesHeroPng.png") top 50% left 50% / cover repeat;
+}
+.heropages_careers {
+  background:
+    url("/plasmic/sterling_and_buena_vista_foods/images/heroPng3.png") top 50% left 50% / cover repeat,
+    #56270a;
+}
+.heropages_contactUs {
+  background: url("/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodContactHeroAvif2.avif") top 50% left 50% / cover no-repeat;
+}
+.heropages_terms {
+  background: url("/plasmic/sterling_and_buena_vista_foods/images/termsHeroPng.png") top 50% left 50% / cover no-repeat;
+}
+.heropages_facilities {
+  background: url("/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodHeroImagePng2.png") top 50% left 50% / cover no-repeat;
+}
+.heropages_qualitySafety {
+  background: url("/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodsQualityandSafetyHeroJpg.jpg") top 50% left 50% / cover no-repeat;
 }
 .text {
   position: relative;
@@ -33,10 +55,43 @@
   color: var(--token-sP5FKk2rRQuW);
   align-self: center;
   text-align: center;
+  margin-bottom: 0px;
   min-width: 0;
+}
+@media (max-width: 757px) {
+  .text {
+    font-size: var(--token-lvb_uNtWfpc4);
+  }
+}
+@media (max-width: 530px) {
+  .text {
+    font-size: var(--token-bucIARGmMoc6);
+  }
+}
+@media (max-width: 430px) {
+  .text {
+    font-size: var(--token-bucIARGmMoc6);
+  }
+}
+@media (max-width: 414px) {
+  .text {
+    font-size: var(--token-bucIARGmMoc6);
+  }
 }
 @media (max-width: 375px) {
   .text {
     line-height: 60px;
+    font-size: var(--token-KlrAoGIT1za7);
   }
+}
+.textpages_contactUs {
+  color: var(--token-I4qaFqA_B1z8);
+}
+.textpages_terms {
+  text-decoration-line: none;
+  line-height: 1.2em;
+  color: var(--token-I4qaFqA_B1z8);
+}
+.textpages_facilities {
+  margin-bottom: 0px;
 }

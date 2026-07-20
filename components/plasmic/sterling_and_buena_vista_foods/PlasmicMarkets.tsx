@@ -60,6 +60,7 @@ import {
 } from "@plasmicapp/react-web/lib/host";
 
 import Header from "../../Header"; // plasmic-import: qmNXHiKWCTTQ/component
+import TopHero from "../../TopHero"; // plasmic-import: 2xRY6WOypZh7/component
 import PrimaryBtn from "../../PrimaryBtn"; // plasmic-import: TiffCyYLfuDQ/component
 import CtaBottom from "../../CtaBottom"; // plasmic-import: UmfSTsW6wMCz/component
 import Footer from "../../Footer"; // plasmic-import: RbMtVh1ii_PZ/component
@@ -120,8 +121,7 @@ export const PlasmicMarkets__ArgProps = new Array<ArgPropType>();
 export type PlasmicMarkets__OverridesType = {
   root?: Flex__<"div">;
   header?: Flex__<typeof Header>;
-  hero?: Flex__<"div">;
-  h2?: Flex__<"h2">;
+  topHero?: Flex__<typeof TopHero>;
   body?: Flex__<"div">;
   intro?: Flex__<"div">;
   freeBox?: Flex__<"div">;
@@ -243,25 +243,13 @@ function PlasmicMarkets__RenderFunc(props: {
             className={classNames("__wab_instance", sty.header)}
           />
 
-          <div
-            data-plasmic-name={"hero"}
-            data-plasmic-override={overrides.hero}
-            className={classNames("all", sty.hero)}
-          >
-            <h2
-              data-plasmic-name={"h2"}
-              data-plasmic-override={overrides.h2}
-              className={classNames(
-                "all",
-                "h2",
-                "h2__uyaK1",
-                "__wab_text",
-                sty.h2
-              )}
-            >
-              {"Markets"}
-            </h2>
-          </div>
+          <TopHero
+            data-plasmic-name={"topHero"}
+            data-plasmic-override={overrides.topHero}
+            className={classNames("__wab_instance", sty.topHero)}
+            pages={"markets"}
+          />
+
           <div
             data-plasmic-name={"body"}
             data-plasmic-override={overrides.body}
@@ -353,13 +341,17 @@ function PlasmicMarkets__RenderFunc(props: {
                 displayMinHeight={"0"}
                 displayMinWidth={"0"}
                 displayWidth={
-                  hasVariant(globalVariants, "screen", "dualScreen")
-                    ? "63.25%"
-                    : hasVariant(globalVariants, "screen", "laptop")
-                      ? "35%"
-                      : hasVariant(globalVariants, "screen", "smallDesktop")
-                        ? "472px"
-                        : "574px"
+                  hasVariant(globalVariants, "screen", "mobile")
+                    ? "100%"
+                    : hasVariant(globalVariants, "screen", "dualScreen")
+                      ? "63.25%"
+                      : hasVariant(globalVariants, "screen", "smallTablet")
+                        ? "50%"
+                        : hasVariant(globalVariants, "screen", "laptop")
+                          ? "35%"
+                          : hasVariant(globalVariants, "screen", "smallDesktop")
+                            ? "472px"
+                            : "574px"
                 }
                 loading={"lazy"}
                 src={{
@@ -517,17 +509,25 @@ function PlasmicMarkets__RenderFunc(props: {
                 displayMinHeight={"0"}
                 displayMinWidth={"0"}
                 displayWidth={
-                  hasVariant(globalVariants, "screen", "dualScreen")
-                    ? "79.32%"
-                    : hasVariant(globalVariants, "screen", "tablet")
-                      ? "50%"
-                      : hasVariant(globalVariants, "screen", "smallLaptop")
-                        ? "40%"
-                        : hasVariant(globalVariants, "screen", "laptop")
-                          ? "40%"
-                          : hasVariant(globalVariants, "screen", "smallDesktop")
-                            ? "590px"
-                            : "697px"
+                  hasVariant(globalVariants, "screen", "mobile")
+                    ? "100%"
+                    : hasVariant(globalVariants, "screen", "dualScreen")
+                      ? "79.32%"
+                      : hasVariant(globalVariants, "screen", "smallTablet")
+                        ? "50%"
+                        : hasVariant(globalVariants, "screen", "tablet")
+                          ? "50%"
+                          : hasVariant(globalVariants, "screen", "smallLaptop")
+                            ? "40%"
+                            : hasVariant(globalVariants, "screen", "laptop")
+                              ? "40%"
+                              : hasVariant(
+                                    globalVariants,
+                                    "screen",
+                                    "smallDesktop"
+                                  )
+                                ? "590px"
+                                : "697px"
                 }
                 loading={"lazy"}
                 src={{
@@ -556,13 +556,17 @@ function PlasmicMarkets__RenderFunc(props: {
                 displayMinHeight={"0"}
                 displayMinWidth={"0"}
                 displayWidth={
-                  hasVariant(globalVariants, "screen", "dualScreen")
-                    ? "85.94%"
-                    : hasVariant(globalVariants, "screen", "tablet")
-                      ? "47.46%"
-                      : hasVariant(globalVariants, "screen", "laptop")
-                        ? "40%"
-                        : "698px"
+                  hasVariant(globalVariants, "screen", "mobile")
+                    ? "100%"
+                    : hasVariant(globalVariants, "screen", "dualScreen")
+                      ? "85.94%"
+                      : hasVariant(globalVariants, "screen", "smallTablet")
+                        ? "50%"
+                        : hasVariant(globalVariants, "screen", "tablet")
+                          ? "47.46%"
+                          : hasVariant(globalVariants, "screen", "laptop")
+                            ? "40%"
+                            : "698px"
                 }
                 loading={"lazy"}
                 src={{
@@ -682,7 +686,7 @@ function PlasmicMarkets__RenderFunc(props: {
                     : hasVariant(globalVariants, "screen", "smallTablet")
                       ? "100%"
                       : hasVariant(globalVariants, "screen", "tablet")
-                        ? "40%"
+                        ? "auto"
                         : hasVariant(globalVariants, "screen", "laptop")
                           ? "45%"
                           : "710px"
@@ -813,7 +817,11 @@ function PlasmicMarkets__RenderFunc(props: {
               <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__a4LP2)}
-                displayHeight={"auto"}
+                displayHeight={
+                  hasVariant(globalVariants, "screen", "tablet")
+                    ? "auto"
+                    : "auto"
+                }
                 displayMaxHeight={"none"}
                 displayMaxWidth={"100%"}
                 displayMinHeight={"0"}
@@ -823,11 +831,13 @@ function PlasmicMarkets__RenderFunc(props: {
                     ? "100%"
                     : hasVariant(globalVariants, "screen", "smallTablet")
                       ? "auto"
-                      : hasVariant(globalVariants, "screen", "smallLaptop")
-                        ? "40%"
-                        : hasVariant(globalVariants, "screen", "laptop")
-                          ? "45%"
-                          : "698px"
+                      : hasVariant(globalVariants, "screen", "tablet")
+                        ? "auto"
+                        : hasVariant(globalVariants, "screen", "smallLaptop")
+                          ? "40%"
+                          : hasVariant(globalVariants, "screen", "laptop")
+                            ? "45%"
+                            : "698px"
                 }
                 loading={"lazy"}
                 src={{
@@ -861,8 +871,7 @@ const PlasmicDescendants = {
   root: [
     "root",
     "header",
-    "hero",
-    "h2",
+    "topHero",
     "body",
     "intro",
     "freeBox",
@@ -894,8 +903,7 @@ const PlasmicDescendants = {
     "footer"
   ],
   header: ["header"],
-  hero: ["hero", "h2"],
-  h2: ["h2"],
+  topHero: ["topHero"],
   body: [
     "body",
     "intro",
@@ -967,8 +975,7 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   header: typeof Header;
-  hero: "div";
-  h2: "h2";
+  topHero: typeof TopHero;
   body: "div";
   intro: "div";
   freeBox: "div";
@@ -1063,8 +1070,7 @@ export const PlasmicMarkets = Object.assign(
   {
     // Helper components rendering sub-elements
     header: makeNodeComponent("header"),
-    hero: makeNodeComponent("hero"),
-    h2: makeNodeComponent("h2"),
+    topHero: makeNodeComponent("topHero"),
     body: makeNodeComponent("body"),
     intro: makeNodeComponent("intro"),
     freeBox: makeNodeComponent("freeBox"),

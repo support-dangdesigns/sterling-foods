@@ -337,6 +337,11 @@ function PlasmicAboutUs__RenderFunc(props: {
             data-plasmic-name={"topHero"}
             data-plasmic-override={overrides.topHero}
             className={classNames("__wab_instance", sty.topHero)}
+            pages={
+              hasVariant(globalVariants, "screen", "large")
+                ? "aboutUs"
+                : "aboutUs"
+            }
           />
 
           <div

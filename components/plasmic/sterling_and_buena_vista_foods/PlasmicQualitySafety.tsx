@@ -60,7 +60,8 @@ import {
 } from "@plasmicapp/react-web/lib/host";
 
 import Header from "../../Header"; // plasmic-import: qmNXHiKWCTTQ/component
-import PrimaryBtn from "../../PrimaryBtn"; // plasmic-import: TiffCyYLfuDQ/component
+import TopHero from "../../TopHero"; // plasmic-import: 2xRY6WOypZh7/component
+import CtaBottom from "../../CtaBottom"; // plasmic-import: UmfSTsW6wMCz/component
 import Footer from "../../Footer"; // plasmic-import: RbMtVh1ii_PZ/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/styleTokensProvider
@@ -114,8 +115,7 @@ export const PlasmicQualitySafety__ArgProps = new Array<ArgPropType>();
 export type PlasmicQualitySafety__OverridesType = {
   qualitySafety?: Flex__<"div">;
   header?: Flex__<"div">;
-  hero?: Flex__<"div">;
-  h2?: Flex__<"h2">;
+  topHero?: Flex__<typeof TopHero>;
   body?: Flex__<"div">;
   intro?: Flex__<"div">;
   foodSafety?: Flex__<"div">;
@@ -137,11 +137,7 @@ export type PlasmicQualitySafety__OverridesType = {
   list3?: Flex__<"div">;
   qualityYouCanTrust?: Flex__<"div">;
   title4?: Flex__<"div">;
-  cta?: Flex__<"div">;
-  h1?: Flex__<"h1">;
-  h5?: Flex__<"h5">;
-  buttonContainer?: Flex__<"div">;
-  primaryBtn?: Flex__<typeof PrimaryBtn>;
+  ctaBottom?: Flex__<typeof CtaBottom>;
   footer?: Flex__<"div">;
 };
 
@@ -232,25 +228,13 @@ function PlasmicQualitySafety__RenderFunc(props: {
               className={classNames("__wab_instance", sty.header__j0CU0)}
             />
           </div>
-          <div
-            data-plasmic-name={"hero"}
-            data-plasmic-override={overrides.hero}
-            className={classNames("all", sty.hero)}
-          >
-            <h2
-              data-plasmic-name={"h2"}
-              data-plasmic-override={overrides.h2}
-              className={classNames(
-                "all",
-                "h2",
-                "h2__uyaK1",
-                "__wab_text",
-                sty.h2
-              )}
-            >
-              {"Quality & Safety"}
-            </h2>
-          </div>
+          <TopHero
+            data-plasmic-name={"topHero"}
+            data-plasmic-override={overrides.topHero}
+            className={classNames("__wab_instance", sty.topHero)}
+            pages={"qualitySafety"}
+          />
+
           <div
             data-plasmic-name={"body"}
             data-plasmic-override={overrides.body}
@@ -1089,80 +1073,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
               </div>
             </div>
           </div>
-          <div
-            data-plasmic-name={"cta"}
-            data-plasmic-override={overrides.cta}
-            className={classNames("all", sty.cta)}
-          >
-            <div className={classNames("all", sty.freeBox__xu6Px)}>
-              <h3
-                className={classNames(
-                  "all",
-                  "h3",
-                  "h3__uyaK1",
-                  "__wab_text",
-                  sty.h3__dsX1
-                )}
-              >
-                {"Looking for a"}
-              </h3>
-              <h1
-                data-plasmic-name={"h1"}
-                data-plasmic-override={overrides.h1}
-                className={classNames(
-                  "all",
-                  "h1",
-                  "h1__uyaK1",
-                  "__wab_text",
-                  sty.h1,
-                  "h3-script"
-                )}
-              >
-                {"bakery partner"}
-              </h1>
-              <h3
-                className={classNames(
-                  "all",
-                  "h3",
-                  "h3__uyaK1",
-                  "__wab_text",
-                  sty.h3__w4DHe
-                )}
-              >
-                {"that can grow with you?"}
-              </h3>
-            </div>
-            <h5
-              data-plasmic-name={"h5"}
-              data-plasmic-override={overrides.h5}
-              className={classNames(
-                "all",
-                "h5",
-                "h5__uyaK1",
-                "__wab_text",
-                sty.h5
-              )}
-            >
-              {"Let\u2019s create something exceptional together."}
-            </h5>
-            <div
-              data-plasmic-name={"buttonContainer"}
-              data-plasmic-override={overrides.buttonContainer}
-              className={classNames("all", sty.buttonContainer)}
-            >
-              <PrimaryBtn
-                data-plasmic-name={"primaryBtn"}
-                data-plasmic-override={overrides.primaryBtn}
-                className={classNames("__wab_instance", sty.primaryBtn)}
-              >
-                <div
-                  className={classNames("all", "__wab_text", sty.text__rnOn9)}
-                >
-                  {"Start a Conversation"}
-                </div>
-              </PrimaryBtn>
-            </div>
-          </div>
+          <CtaBottom
+            data-plasmic-name={"ctaBottom"}
+            data-plasmic-override={overrides.ctaBottom}
+            className={classNames("__wab_instance", sty.ctaBottom)}
+          />
+
           <div
             data-plasmic-name={"footer"}
             data-plasmic-override={overrides.footer}
@@ -1182,8 +1098,7 @@ const PlasmicDescendants = {
   qualitySafety: [
     "qualitySafety",
     "header",
-    "hero",
-    "h2",
+    "topHero",
     "body",
     "intro",
     "foodSafety",
@@ -1205,16 +1120,11 @@ const PlasmicDescendants = {
     "list3",
     "qualityYouCanTrust",
     "title4",
-    "cta",
-    "h1",
-    "h5",
-    "buttonContainer",
-    "primaryBtn",
+    "ctaBottom",
     "footer"
   ],
   header: ["header"],
-  hero: ["hero", "h2"],
-  h2: ["h2"],
+  topHero: ["topHero"],
   body: [
     "body",
     "intro",
@@ -1278,11 +1188,7 @@ const PlasmicDescendants = {
   list3: ["list3"],
   qualityYouCanTrust: ["qualityYouCanTrust", "title4"],
   title4: ["title4"],
-  cta: ["cta", "h1", "h5", "buttonContainer", "primaryBtn"],
-  h1: ["h1"],
-  h5: ["h5"],
-  buttonContainer: ["buttonContainer", "primaryBtn"],
-  primaryBtn: ["primaryBtn"],
+  ctaBottom: ["ctaBottom"],
   footer: ["footer"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -1291,8 +1197,7 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   qualitySafety: "div";
   header: "div";
-  hero: "div";
-  h2: "h2";
+  topHero: typeof TopHero;
   body: "div";
   intro: "div";
   foodSafety: "div";
@@ -1314,11 +1219,7 @@ type NodeDefaultElementType = {
   list3: "div";
   qualityYouCanTrust: "div";
   title4: "div";
-  cta: "div";
-  h1: "h1";
-  h5: "h5";
-  buttonContainer: "div";
-  primaryBtn: typeof PrimaryBtn;
+  ctaBottom: typeof CtaBottom;
   footer: "div";
 };
 
@@ -1385,8 +1286,7 @@ export const PlasmicQualitySafety = Object.assign(
   {
     // Helper components rendering sub-elements
     header: makeNodeComponent("header"),
-    hero: makeNodeComponent("hero"),
-    h2: makeNodeComponent("h2"),
+    topHero: makeNodeComponent("topHero"),
     body: makeNodeComponent("body"),
     intro: makeNodeComponent("intro"),
     foodSafety: makeNodeComponent("foodSafety"),
@@ -1408,11 +1308,7 @@ export const PlasmicQualitySafety = Object.assign(
     list3: makeNodeComponent("list3"),
     qualityYouCanTrust: makeNodeComponent("qualityYouCanTrust"),
     title4: makeNodeComponent("title4"),
-    cta: makeNodeComponent("cta"),
-    h1: makeNodeComponent("h1"),
-    h5: makeNodeComponent("h5"),
-    buttonContainer: makeNodeComponent("buttonContainer"),
-    primaryBtn: makeNodeComponent("primaryBtn"),
+    ctaBottom: makeNodeComponent("ctaBottom"),
     footer: makeNodeComponent("footer"),
 
     // Metadata about props expected for PlasmicQualitySafety

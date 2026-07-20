@@ -27822,6 +27822,33 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/careers"
+        },
+        {
+          "id": "QjfQfEfd1CGs",
+          "name": "Reviews",
+          "type": "managed",
+          "projectId": "uyaK17nhz8WhGjYZfKjMhX",
+          "renderModuleFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicReviews.tsx",
+          "importSpec": {
+            "modulePath": "Reviews.tsx"
+          },
+          "cssFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicReviews.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "PbDWXAtQEPDX",
+          "name": "Capabilities",
+          "type": "managed",
+          "projectId": "uyaK17nhz8WhGjYZfKjMhX",
+          "renderModuleFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicCapabilities.tsx",
+          "importSpec": {
+            "modulePath": "../pages/capabilities.tsx"
+          },
+          "cssFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicCapabilities.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/capabilities"
         }
       ],
       "icons": [
@@ -28611,6 +28638,96 @@
           "id": "0P0X6oS40xbR",
           "name": "[sterlingfoods]market-section.jpg.avif",
           "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingfoodsMarketSectionJpgAvif.avif"
+        },
+        {
+          "id": "e50R4Q6mySuv",
+          "name": "[SterlingFood]hero-image.avif",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodHeroImageAvif.avif"
+        },
+        {
+          "id": "aZxL0u-0pOGq",
+          "name": "[SterlingFood]Corporate-map.avif",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodCorporateMapAvif.avif"
+        },
+        {
+          "id": "yf3qcA5FcQMX",
+          "name": "[SterlingFood]Corporate-map.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodCorporateMapPng.png"
+        },
+        {
+          "id": "8_Huh2fOKfCC",
+          "name": "[SterlingFood]san-antonio-1050.avif",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodSanAntonio1050Avif.avif"
+        },
+        {
+          "id": "Cd3HOsdx1ZGu",
+          "name": "[SterlingFood]san-antonio-interpark.avif",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodSanAntonioInterparkAvif.avif"
+        },
+        {
+          "id": "UrR4nRv9Xxga",
+          "name": "[SterlingFood]Azusa.avif",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodAzusaAvif.avif"
+        },
+        {
+          "id": "HpKz6f9890BU",
+          "name": "[SterlingFood]union-city.avif",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodUnionCityAvif.avif"
+        },
+        {
+          "id": "0txJxP-5M1XX",
+          "name": "[SterlingFood]san-antonio-interpark.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodSanAntonioInterparkPng.png"
+        },
+        {
+          "id": "-3Kmm7na7ODO",
+          "name": "[SterlingFood]Azusa.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodAzusaPng.png"
+        },
+        {
+          "id": "7Oca2k9yVRAN",
+          "name": "[SterlingFood]hero-image.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodHeroImagePng.png"
+        },
+        {
+          "id": "2PMwZtXIYccj",
+          "name": "market-hero.jpg",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/marketHeroJpg.jpg"
+        },
+        {
+          "id": "AUeyVvApXx4C",
+          "name": "[SterlingFood]Capbilities-Hero.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodCapbilitiesHeroPng.png"
+        },
+        {
+          "id": "6NEOq_gbK9e-",
+          "name": "HERO.png 3",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/heroPng3.png"
+        },
+        {
+          "id": "Plw7lgvI3LrH",
+          "name": "Group 1.png 2",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/group1Png2.png"
+        },
+        {
+          "id": "n5P_zT7Y3PSH",
+          "name": "[SterlingFood]contact_hero.avif 2",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodContactHeroAvif2.avif"
+        },
+        {
+          "id": "CWZAQ5a9Xj5b",
+          "name": "terms-hero.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/termsHeroPng.png"
+        },
+        {
+          "id": "_rLXOZznaZyY",
+          "name": "[SterlingFood]hero-image.png 2",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodHeroImagePng2.png"
+        },
+        {
+          "id": "wLQzG-UYRmGE",
+          "name": "[SterlingFoods]QualityandSafetyHero.jpg",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodsQualityandSafetyHeroJpg.jpg"
         }
       ],
       "indirect": false,
@@ -28825,6 +28942,127 @@
         }
       ],
       "customFunctions": []
+    },
+    {
+      "projectId": "gLnoj82AzKVVT7qXiqAbHD",
+      "projectApiToken": "30Q6Vm3wLmLUouXUphjiHN1eerUuQNmjcIHNiu6sFoeK8pIoi3LRDH2gMh9txlrZGCbOh9s0VaoZHqtvs3hQ",
+      "projectName": "plasmic-tabs",
+      "version": ">0.0.0",
+      "cssFilePath": "plasmic/plasmic_tabs/plasmic.css",
+      "components": [
+        {
+          "id": "lBHNzts6tFyj",
+          "name": "Button",
+          "type": "managed",
+          "projectId": "gLnoj82AzKVVT7qXiqAbHD",
+          "renderModuleFilePath": "plasmic/plasmic_tabs/PlasmicButton.tsx",
+          "importSpec": {
+            "modulePath": "Button.tsx"
+          },
+          "cssFilePath": "plasmic/plasmic_tabs/PlasmicButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component",
+          "plumeType": "button"
+        }
+      ],
+      "icons": [
+        {
+          "id": "zq2s7N0xWucT",
+          "name": "CheckSvgIcon",
+          "moduleFilePath": "plasmic/plasmic_tabs/icons/PlasmicIcon__CheckSvg.tsx"
+        },
+        {
+          "id": "8K40faRNhuCj",
+          "name": "IconIcon",
+          "moduleFilePath": "plasmic/plasmic_tabs/icons/PlasmicIcon__Icon.tsx"
+        }
+      ],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "splitsProviderFilePath": "",
+      "styleTokensProviderFilePath": "plasmic/plasmic_tabs/PlasmicStyleTokensProvider.tsx",
+      "dataTokensFilePath": "",
+      "projectModuleFilePath": "plasmic/plasmic_tabs/plasmic.tsx",
+      "codeComponents": [
+        {
+          "id": "qT-BBamUwNg",
+          "name": "TabsContainer",
+          "displayName": "hostless-tabs-container",
+          "componentImportPath": "@plasmicpkgs/plasmic-tabs"
+        },
+        {
+          "id": "7uvxnLIBlo3",
+          "name": "TabUnderline",
+          "displayName": "hostless-tab-underline",
+          "componentImportPath": "@plasmicpkgs/plasmic-tabs"
+        },
+        {
+          "id": "5jaBI7A4_ak",
+          "name": "TabButton",
+          "displayName": "hostless-tab-button",
+          "componentImportPath": "@plasmicpkgs/plasmic-tabs"
+        },
+        {
+          "id": "KyRr6GQ_tPI",
+          "name": "TabContent",
+          "displayName": "hostless-tab-content",
+          "componentImportPath": "@plasmicpkgs/plasmic-tabs"
+        }
+      ],
+      "customFunctions": []
+    },
+    {
+      "projectId": "fDWv2E51KMppM4Ticmmxiy",
+      "projectApiToken": "JVKY4l5fYzRnIknlhk9gdO4iB6TyugIb7ExjkVlpu16NtinzglNwDuCvh1oOvZ3cLb6ewtgmIgp1qzByrg",
+      "projectName": "graphql",
+      "version": ">0.0.0",
+      "cssFilePath": "plasmic/graphql/plasmic.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "splitsProviderFilePath": "",
+      "styleTokensProviderFilePath": "plasmic/graphql/PlasmicStyleTokensProvider.tsx",
+      "dataTokensFilePath": "",
+      "projectModuleFilePath": "plasmic/graphql/plasmic.tsx",
+      "codeComponents": [],
+      "customFunctions": [
+        {
+          "defaultExport": false,
+          "id": "fetchGraphQL",
+          "importPath": "@plasmicpkgs/graphql",
+          "name": "fetchGraphQL",
+          "namespace": null
+        }
+      ]
+    },
+    {
+      "projectId": "rCsbC8Ged7jTiS4yA9erQR",
+      "projectApiToken": "Bm9yA052tufOHse3oCICU9ZhI3hKDENMVTVjpXnS8jLAAAit98E4jT2Yzl52SYGspl577tZLsdhxpQ3SKw",
+      "projectName": "wordpress",
+      "version": ">0.0.0",
+      "cssFilePath": "plasmic/wordpress/plasmic.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "splitsProviderFilePath": "",
+      "styleTokensProviderFilePath": "plasmic/wordpress/PlasmicStyleTokensProvider.tsx",
+      "dataTokensFilePath": "",
+      "projectModuleFilePath": "plasmic/wordpress/plasmic.tsx",
+      "codeComponents": [],
+      "customFunctions": [
+        {
+          "defaultExport": false,
+          "id": "queryWordpress",
+          "importPath": "@plasmicpkgs/wordpress",
+          "name": "queryWordpress",
+          "namespace": null
+        }
+      ]
     }
   ],
   "globalVariants": {

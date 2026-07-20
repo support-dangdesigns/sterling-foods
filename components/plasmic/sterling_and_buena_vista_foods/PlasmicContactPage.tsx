@@ -59,7 +59,17 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import { useMutablePlasmicQueryData } from "@plasmicapp/query";
+
+import { usePlasmicQueries } from "@plasmicapp/react-web/lib/data-sources";
+import type {
+  PlasmicQuery,
+  PlasmicQueryResult
+} from "@plasmicapp/react-web/lib/data-sources";
+import type { QueryComponentNode } from "@plasmicapp/react-web/lib/data-sources";
+
 import Header from "../../Header"; // plasmic-import: qmNXHiKWCTTQ/component
+import TopHero from "../../TopHero"; // plasmic-import: 2xRY6WOypZh7/component
 import { FormWrapper } from "@plasmicpkgs/antd5/skinny/Form";
 import { formHelpers as FormWrapper_Helpers } from "@plasmicpkgs/antd5/skinny/Form";
 import { FormItemWrapper } from "@plasmicpkgs/antd5/skinny/FormItem";
@@ -77,6 +87,8 @@ import sty from "./PlasmicContactPage.module.css"; // plasmic-import: 41tTNUFYIJ
 import PhoneSvgrepoComSvg2Icon from "./icons/PlasmicIcon__PhoneSvgrepoComSvg2"; // plasmic-import: 2D3_Ax2dMAR0/icon
 import DividerVerticalSvgrepoComSvgIcon from "./icons/PlasmicIcon__DividerVerticalSvgrepoComSvg"; // plasmic-import: -SY6-q3210eN/icon
 import EnvelopeSvgrepoComSvgIcon from "./icons/PlasmicIcon__EnvelopeSvgrepoComSvg"; // plasmic-import: QsKijqNwVXNS/icon
+
+import { fetchGraphQL as __fn_fetchGraphQL } from "@plasmicpkgs/graphql";
 
 const emptyProxy: any = new Proxy(() => "", {
   get(_, prop) {
@@ -130,8 +142,7 @@ export type PlasmicContactPage__OverridesType = {
   page?: Flex__<"div">;
   header?: Flex__<"div">;
   header2?: Flex__<typeof Header>;
-  hero?: Flex__<"div">;
-  title?: Flex__<"h2">;
+  topHero?: Flex__<typeof TopHero>;
   contactUsSection?: Flex__<"div">;
   text?: Flex__<"div">;
   heading?: Flex__<"div">;
@@ -151,7 +162,88 @@ export type PlasmicContactPage__OverridesType = {
 
 export interface DefaultContactPageProps {}
 
-const $$ = {};
+const $$ = {
+  fetchGraphQL: __fn_fetchGraphQL
+};
+
+export const serverQueryTree: QueryComponentNode = {
+  type: "component",
+  queries: {
+    form: {
+      id: "fetchGraphQL",
+      fn: $$.fetchGraphQL,
+      args: ({ $q, $props, $ctx, $state }) => [
+        (() => {
+          const __composite = { method: null, url: null, request: null };
+          __composite["method"] = "POST";
+          __composite["url"] = "https://edit-sterling.dangstaging.org/graphql";
+          __composite["request"] = {
+            query:
+              'query MyQuery {\n  gfForm(id: "1", idType: DATABASE_ID) {\n    formFields(first: 100) {\n      nodes {\n        type\n        databaseId\n      }\n    }\n  }\n}',
+            variables: {}
+          };
+          return __composite;
+        })()
+      ]
+    }
+  },
+  propsContext: {},
+  stateSpecs: [
+    {
+      path: "form.value",
+      type: "private",
+      variableType: "object",
+      initFunc: ({ $props, $state, $queries, $q, $ctx }) => undefined,
+
+      refName: "form"
+    },
+    {
+      path: "form.isSubmitting",
+      type: "private",
+      variableType: "boolean",
+      initFunc: ({ $props, $state, $queries, $q, $ctx }) => false,
+
+      refName: "form"
+    },
+    {
+      path: "input2.value",
+      type: "private",
+      variableType: "text",
+      initFunc: ({ $props, $state, $queries, $q, $ctx }) => undefined
+    },
+    {
+      path: "input3.value",
+      type: "private",
+      variableType: "text",
+      initFunc: ({ $props, $state, $queries, $q, $ctx }) => undefined
+    },
+    {
+      path: "input4.value",
+      type: "private",
+      variableType: "text",
+      initFunc: ({ $props, $state, $queries, $q, $ctx }) => undefined
+    },
+    {
+      path: "input5.value",
+      type: "private",
+      variableType: "text",
+      initFunc: ({ $props, $state, $queries, $q, $ctx }) => undefined
+    },
+    {
+      path: "input6.value",
+      type: "private",
+      variableType: "text",
+      initFunc: ({ $props, $state, $queries, $q, $ctx }) => undefined
+    },
+    {
+      path: "input7.value",
+      type: "private",
+      variableType: "text",
+      initFunc: ({ $props, $state, $queries, $q, $ctx }) => undefined
+    }
+  ],
+  children: []
+};
 
 function useNextRouter() {
   try {
@@ -261,6 +353,12 @@ function PlasmicContactPage__RenderFunc(props: {
     ],
     [$props, $ctx, $refs]
   );
+  const $stateRef = React.useRef<Record<string, unknown> | null>(null);
+  const $q = usePlasmicQueries(serverQueryTree, {
+    $ctx,
+    $props,
+    $state: $stateRef.current
+  });
 
   const globalVariants = _useGlobalVariants();
 
@@ -268,12 +366,13 @@ function PlasmicContactPage__RenderFunc(props: {
     $props,
     $ctx,
     $queries: {},
-    $q: {},
+    $q: $q,
     $refs
   });
+  $stateRef.current = $state;
 
   const pageMetadata = generateDynamicMetadata(
-    wrapQueriesWithLoadingProxy({}),
+    wrapQueriesWithLoadingProxy($q),
     $ctx as PageCtx
   );
 
@@ -315,25 +414,13 @@ function PlasmicContactPage__RenderFunc(props: {
               className={classNames("__wab_instance", sty.header2)}
             />
           </div>
-          <div
-            data-plasmic-name={"hero"}
-            data-plasmic-override={overrides.hero}
-            className={classNames("all", sty.hero)}
-          >
-            <h2
-              data-plasmic-name={"title"}
-              data-plasmic-override={overrides.title}
-              className={classNames(
-                "all",
-                "h2",
-                "h2__uyaK1",
-                "__wab_text",
-                sty.title
-              )}
-            >
-              {"Contact Us"}
-            </h2>
-          </div>
+          <TopHero
+            data-plasmic-name={"topHero"}
+            data-plasmic-override={overrides.topHero}
+            className={classNames("__wab_instance", sty.topHero)}
+            pages={"contactUs"}
+          />
+
           <div
             data-plasmic-name={"contactUsSection"}
             data-plasmic-override={overrides.contactUsSection}
@@ -455,7 +542,19 @@ function PlasmicContactPage__RenderFunc(props: {
                           name={"first_name_field"}
                           noLabel={true}
                           rules={[{ ruleType: "required" }]}
-                          valuePropName={"First Name"}
+                          valuePropName={(() => {
+                            try {
+                              return undefined;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return undefined;
+                              }
+                              throw e;
+                            }
+                          })()}
                         >
                           {(() => {
                             const child$Props = {
@@ -951,8 +1050,7 @@ const PlasmicDescendants = {
     "page",
     "header",
     "header2",
-    "hero",
-    "title",
+    "topHero",
     "contactUsSection",
     "text",
     "heading",
@@ -971,8 +1069,7 @@ const PlasmicDescendants = {
   ],
   header: ["header", "header2"],
   header2: ["header2"],
-  hero: ["hero", "title"],
-  title: ["title"],
+  topHero: ["topHero"],
   contactUsSection: [
     "contactUsSection",
     "text",
@@ -1042,8 +1139,7 @@ type NodeDefaultElementType = {
   page: "div";
   header: "div";
   header2: typeof Header;
-  hero: "div";
-  title: "h2";
+  topHero: typeof TopHero;
   contactUsSection: "div";
   text: "div";
   heading: "div";
@@ -1125,8 +1221,7 @@ export const PlasmicContactPage = Object.assign(
     // Helper components rendering sub-elements
     header: makeNodeComponent("header"),
     header2: makeNodeComponent("header2"),
-    hero: makeNodeComponent("hero"),
-    title: makeNodeComponent("title"),
+    topHero: makeNodeComponent("topHero"),
     contactUsSection: makeNodeComponent("contactUsSection"),
     text: makeNodeComponent("text"),
     heading: makeNodeComponent("heading"),

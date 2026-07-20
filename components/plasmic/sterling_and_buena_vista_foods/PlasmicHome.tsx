@@ -70,8 +70,7 @@ import { Reveal } from "@plasmicpkgs/react-awesome-reveal";
 import PrimaryBtn from "../../PrimaryBtn"; // plasmic-import: TiffCyYLfuDQ/component
 import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 import SecondaryBtn from "../../SecondaryBtn"; // plasmic-import: r3QPz6kMc0wE/component
-import { SliderWrapper } from "@plasmicpkgs/react-slick";
-import { sliderHelpers as SliderWrapper_Helpers } from "@plasmicpkgs/react-slick";
+import Reviews from "../../Reviews"; // plasmic-import: QjfQfEfd1CGs/component
 import CtaBottom from "../../CtaBottom"; // plasmic-import: UmfSTsW6wMCz/component
 import Footer from "../../Footer"; // plasmic-import: RbMtVh1ii_PZ/component
 import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
@@ -81,10 +80,6 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import sty from "./PlasmicHome.module.css"; // plasmic-import: 5hAHrj7TAU1C/css
-
-import CaretLeftSmSvgrepoComSvgIcon from "./icons/PlasmicIcon__CaretLeftSmSvgrepoComSvg"; // plasmic-import: Fos_YVXKTavi/icon
-import CaretRightSmSvgrepoComSvgIcon from "./icons/PlasmicIcon__CaretRightSmSvgrepoComSvg"; // plasmic-import: 9p31HanEpOae/icon
-import StarFilledIcon from "./icons/PlasmicIcon__StarFilled"; // plasmic-import: QmvyYi5qQaXv/icon
 
 const emptyProxy: any = new Proxy(() => "", {
   get(_, prop) {
@@ -155,20 +150,7 @@ export type PlasmicHome__OverridesType = {
   image2?: Flex__<"div">;
   innovationResponsive?: Flex__<"div">;
   buttons?: Flex__<"div">;
-  reviews?: Flex__<"div">;
-  frame36?: Flex__<"div">;
-  frame34?: Flex__<"div">;
-  span?: Flex__<"span">;
-  frame35?: Flex__<"div">;
-  frame43?: Flex__<"div">;
-  frame44?: Flex__<"div">;
-  sliderCarousel?: Flex__<typeof SliderWrapper>;
-  box?: Flex__<"div">;
-  child?: Flex__<"div">;
-  box2?: Flex__<"div">;
-  child2?: Flex__<"div">;
-  box3?: Flex__<"div">;
-  child3?: Flex__<"div">;
+  reviews?: Flex__<typeof Reviews>;
   ctaBottom?: Flex__<typeof CtaBottom>;
   homeFooter?: Flex__<"div">;
   footer?: Flex__<typeof Footer>;
@@ -215,33 +197,11 @@ function PlasmicHome__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
-    () => [
-      {
-        path: "sliderCarousel.currentSlide",
-        type: "private",
-        variableType: "number",
-        initFunc: ({ $props, $state, $queries, $q, $ctx }) => 0,
-
-        refName: "sliderCarousel",
-        onMutate: generateOnMutateForSpec("currentSlide", SliderWrapper_Helpers)
-      }
-    ],
-    [$props, $ctx, $refs]
-  );
-
   const globalVariants = _useGlobalVariants();
 
   let [$queries, setDollarQueries] = React.useState<
     Record<string, ReturnType<typeof usePlasmicDataOp>>
   >({});
-  const $state = useDollarState(stateSpecs, {
-    $props,
-    $ctx,
-    $queries: $queries,
-    $q: {},
-    $refs
-  });
 
   const new$Queries: Record<string, ReturnType<typeof usePlasmicDataOp>> = {
     query: usePlasmicDataOp(() => {
@@ -796,7 +756,7 @@ function PlasmicHome__RenderFunc(props: {
                   data-plasmic-override={overrides.embedHtml}
                   className={classNames("__wab_instance", sty.embedHtml)}
                   code={
-                    '<div\r\n  class="scroll-draw-arrow scroll-draw-arrow-3"\r\n  data-scroll-draw-arrow\r\n  style="\r\n    --arrow-color: #c3761e;\r\n    --arrow-width: 147px;\r\n  "\r\n>\r\n  <svg\r\n    class="scroll-draw-arrow__svg"\r\n    viewBox="0 0 147 237"\r\n    xmlns="http://www.w3.org/2000/svg"\r\n    role="img"\r\n    aria-label="Animated curved arrow"\r\n  >\r\n    <!-- Main curved shaft and loop -->\r\n    <path\r\n      data-draw\r\n      data-start="0"\r\n      data-end="0.9"\r\n      d="\r\n        M 143 3\r\n\r\n        C 141 3.5, 136.2 4.5, 131 6\r\n        C 125.8 7.5, 119.5 11.3, 112 15\r\n        C 104.5 18.7, 93.8 27.7, 86 34\r\n        C 78.2 40.3, 69.7 54.8, 65 59\r\n        C 60.3 63.2, 59.2 72.8, 58 77\r\n        C 56.8 81.2, 56.5 83.2, 58 84\r\n\r\n        C 59.5 84.8, 62.7 83.2, 67 83\r\n        C 71.3 82.8, 78.2 81.7, 84 83\r\n        C 89.8 84.3, 98.3 89, 102 91\r\n        C 105.7 93, 104.7 93.3, 106 95\r\n        C 107.3 96.7, 110 103, 110 107\r\n        C 110 111, 108.8 115, 106 119\r\n        C 103.2 123, 97.5 128.2, 93 130\r\n        C 88.5 131.8, 83.3 131.2, 79 130\r\n        C 74.7 128.8, 75.8 129.5, 73 127\r\n        C 70.2 124.5, 64.7 119.2, 62 115\r\n        C 59.3 110.8, 57.8 105.2, 57 102\r\n        C 56.2 98.8, 56.8 98.2, 57 96\r\n        C 57.2 93.8, 57.5 90.2, 56 89\r\n\r\n        C 54.5 87.8, 51.7 89, 48 90\r\n        C 44.3 91, 40.8 94.8, 37 97\r\n        C 33.2 99.2, 29.3 104.2, 25 108\r\n        C 20.7 111.8, 13.5 121.5, 11 128\r\n        C 8.5 134.5, 5.2 141.8, 4 147\r\n        C 2.8 152.2, 3.3 163, 4 171\r\n        C 4.7 179, 6.3 179.3, 8 183\r\n        C 9.7 186.7, 11.2 190.5, 14 193\r\n        C 16.8 195.5, 25.8 205.3, 31 209\r\n        C 36.2 212.7, 41.3 214.8, 45 215\r\n        C 48.7 215.2, 47.8 215.8, 53 216\r\n        C 58.2 216.2, 79.7 214.3, 85 214\r\n      "\r\n    />\r\n\r\n    <!-- Upper arrowhead -->\r\n    <path\r\n      data-draw\r\n      data-start="0.9"\r\n      data-end="1"\r\n      d="\r\n        M 85 214\r\n        C 80 214, 74 204, 67 200\r\n      "\r\n    />\r\n\r\n    <!-- Lower arrowhead -->\r\n    <path\r\n      data-draw\r\n      data-start="0.9"\r\n      data-end="1"\r\n      d="\r\n        M 85 214\r\n        C 80 214, 75 224, 66 232\r\n      "\r\n    />\r\n  </svg>\r\n</div>\r\n\r\n<style>\r\n  .scroll-draw-arrow {\r\n    position: relative;\r\n    width: var(--arrow-width, 147px);\r\n    max-width: 100%;\r\n  }\r\n\r\n  .scroll-draw-arrow__svg {\r\n    display: block;\r\n    width: 100%;\r\n    height: auto;\r\n    overflow: visible;\r\n  }\r\n\r\n  .scroll-draw-arrow [data-draw] {\r\n    fill: none;\r\n    stroke: var(--arrow-color, #c3761e);\r\n    stroke-width: 7;\r\n    stroke-linecap: round;\r\n    stroke-linejoin: round;\r\n    vector-effect: non-scaling-stroke;\r\n    will-change: stroke-dashoffset;\r\n  }\r\n\r\n  @media (prefers-reduced-motion: reduce) {\r\n    .scroll-draw-arrow [data-draw] {\r\n      stroke-dasharray: none !important;\r\n      stroke-dashoffset: 0 !important;\r\n    }\r\n  }\r\n</style>\r\n\r\n<script>\r\n  (() => {\r\n    const clamp = (value, minimum, maximum) =>\r\n      Math.min(Math.max(value, minimum), maximum);\r\n\r\n    function initializeArrow(root) {\r\n      if (root.dataset.arrowInitialized === "true") {\r\n        return;\r\n      }\r\n\r\n      root.dataset.arrowInitialized = "true";\r\n\r\n      const paths = Array.from(\r\n        root.querySelectorAll("[data-draw]")\r\n      );\r\n\r\n      const reducedMotion = window.matchMedia(\r\n        "(prefers-reduced-motion: reduce)"\r\n      );\r\n\r\n      let frameId = null;\r\n\r\n      const pathData = paths.map((path) => {\r\n        const length = path.getTotalLength();\r\n\r\n        path.style.strokeDasharray = `${length} ${length}`;\r\n        path.style.strokeDashoffset = `${length}`;\r\n\r\n        return {\r\n          path,\r\n          length,\r\n          start: Number.parseFloat(\r\n            path.dataset.start || "0"\r\n          ),\r\n          end: Number.parseFloat(\r\n            path.dataset.end || "1"\r\n          )\r\n        };\r\n      });\r\n\r\n      function getScrollProgress() {\r\n        const rect = root.getBoundingClientRect();\r\n        const viewportHeight =\r\n          window.innerHeight ||\r\n          document.documentElement.clientHeight;\r\n\r\n        /*\r\n         * Drawing begins when the arrow reaches\r\n         * approximately 88% down the viewport.\r\n         */\r\n        const startPosition = viewportHeight * 0.88;\r\n\r\n        /*\r\n         * Drawing finishes when the arrow reaches\r\n         * approximately 18% down the viewport.\r\n         */\r\n        const endPosition = viewportHeight * 0.18;\r\n\r\n        return clamp(\r\n          (startPosition - rect.top) /\r\n            (startPosition - endPosition),\r\n          0,\r\n          1\r\n        );\r\n      }\r\n\r\n      function render() {\r\n        frameId = null;\r\n\r\n        const progress = reducedMotion.matches\r\n          ? 1\r\n          : getScrollProgress();\r\n\r\n        pathData.forEach(\r\n          ({ path, length, start, end }) => {\r\n            const pathDuration = Math.max(\r\n              end - start,\r\n              0.0001\r\n            );\r\n\r\n            const pathProgress = clamp(\r\n              (progress - start) / pathDuration,\r\n              0,\r\n              1\r\n            );\r\n\r\n            path.style.strokeDashoffset = `${\r\n              length * (1 - pathProgress)\r\n            }`;\r\n          }\r\n        );\r\n      }\r\n\r\n      function requestRender() {\r\n        if (frameId !== null) {\r\n          return;\r\n        }\r\n\r\n        frameId = window.requestAnimationFrame(render);\r\n      }\r\n\r\n      window.addEventListener("scroll", requestRender, {\r\n        passive: true\r\n      });\r\n\r\n      window.addEventListener("resize", requestRender);\r\n\r\n      if (\r\n        typeof reducedMotion.addEventListener === "function"\r\n      ) {\r\n        reducedMotion.addEventListener(\r\n          "change",\r\n          requestRender\r\n        );\r\n      } else {\r\n        reducedMotion.addListener(requestRender);\r\n      }\r\n\r\n      requestRender();\r\n    }\r\n\r\n    document\r\n      .querySelectorAll(\r\n        "[data-scroll-draw-arrow]:not([data-arrow-initialized])"\r\n      )\r\n      .forEach(initializeArrow);\r\n  })();\r\n</script>'
+                    '<div\r\n  class="scroll-draw-arrow scroll-draw-arrow-3"\r\n  data-scroll-draw-arrow\r\n  style="\r\n    --arrow-color: #c3761e;\r\n    --arrow-width: 147px;\r\n  "\r\n>\r\n  <svg\r\n    class="scroll-draw-arrow__svg"\r\n    viewBox="0 0 147 237"\r\n    xmlns="http://www.w3.org/2000/svg"\r\n    role="img"\r\n    aria-label="Animated curved arrow"\r\n  >\r\n    <!-- Main curved shaft and loop -->\r\n    <path\r\n      data-draw\r\n      data-start="0"\r\n      data-end="0.9"\r\n      d="\r\n        M 143 3\r\n\r\n        C 141 3.5, 136.2 4.5, 131 6\r\n        C 125.8 7.5, 119.5 11.3, 112 15\r\n        C 104.5 18.7, 93.8 27.7, 86 34\r\n        C 78.2 40.3, 69.7 54.8, 65 59\r\n        C 60.3 63.2, 59.2 72.8, 58 77\r\n        C 56.8 81.2, 56.5 83.2, 58 84\r\n\r\n        C 59.5 84.8, 62.7 83.2, 67 83\r\n        C 71.3 82.8, 78.2 81.7, 84 83\r\n        C 89.8 84.3, 98.3 89, 102 91\r\n        C 105.7 93, 104.7 93.3, 106 95\r\n        C 107.3 96.7, 110 103, 110 107\r\n        C 110 111, 108.8 115, 106 119\r\n        C 103.2 123, 97.5 128.2, 93 130\r\n        C 88.5 131.8, 83.3 131.2, 79 130\r\n        C 74.7 128.8, 75.8 129.5, 73 127\r\n        C 70.2 124.5, 64.7 119.2, 62 115\r\n        C 59.3 110.8, 57.8 105.2, 57 102\r\n        C 56.2 98.8, 56.8 98.2, 57 96\r\n        C 57.2 93.8, 57.5 90.2, 56 89\r\n\r\n        C 54.5 87.8, 51.7 89, 48 90\r\n        C 44.3 91, 40.8 94.8, 37 97\r\n        C 33.2 99.2, 29.3 104.2, 25 108\r\n        C 20.7 111.8, 13.5 121.5, 11 128\r\n        C 8.5 134.5, 5.2 141.8, 4 147\r\n        C 2.8 152.2, 3.3 163, 4 171\r\n        C 4.7 179, 6.3 179.3, 8 183\r\n        C 9.7 186.7, 11.2 190.5, 14 193\r\n        C 16.8 195.5, 25.8 205.3, 31 209\r\n        C 36.2 212.7, 41.3 214.8, 45 215\r\n        C 48.7 215.2, 47.8 215.8, 53 216\r\n        C 58.2 216.2, 79.7 214.3, 85 214\r\n      "\r\n    />\r\n\r\n    <!-- Upper arrowhead -->\r\n    <path\r\n      data-draw\r\n      data-start="0.9"\r\n      data-end="1"\r\n      d="\r\n        M 85 214\r\n        C 80 214, 74 204, 67 200\r\n      "\r\n    />\r\n\r\n    <!-- Lower arrowhead -->\r\n    <path\r\n      data-draw\r\n      data-start="0.9"\r\n      data-end="1"\r\n      d="\r\n        M 85 214\r\n        C 80 214, 75 224, 66 232\r\n      "\r\n    />\r\n  </svg>\r\n</div>\r\n\r\n<style>\r\n  .scroll-draw-arrow {\r\n    position: relative;\r\n    width: var(--arrow-width, 147px);\r\n    max-width: 100%;\r\n  }\r\n\r\n  .scroll-draw-arrow__svg {\r\n    display: block;\r\n    width: 100%;\r\n    height: auto;\r\n    overflow: visible;\r\n  }\r\n\r\n  .scroll-draw-arrow [data-draw] {\r\n    fill: none;\r\n    stroke: var(--arrow-color, #c3761e);\r\n    stroke-width: 7;\r\n    stroke-linecap: round;\r\n    stroke-linejoin: round;\r\n    vector-effect: non-scaling-stroke;\r\n    will-change: stroke-dashoffset;\r\n  }\r\n\r\n  @media (prefers-reduced-motion: reduce) {\r\n    .scroll-draw-arrow [data-draw] {\r\n      stroke-dasharray: none !important;\r\n      stroke-dashoffset: 0 !important;\r\n    }\r\n  }\r\n</style>\r\n\r\n<script>\r\n  (() => {\r\n    const clamp = (value, minimum, maximum) =>\r\n      Math.min(Math.max(value, minimum), maximum);\r\n\r\n    function initializeArrow(root) {\r\n      if (root.dataset.arrowInitialized === "true") {\r\n        return;\r\n      }\r\n\r\n      root.dataset.arrowInitialized = "true";\r\n\r\n      const paths = Array.from(\r\n        root.querySelectorAll("[data-draw]")\r\n      );\r\n\r\n      const reducedMotion = window.matchMedia(\r\n        "(prefers-reduced-motion: reduce)"\r\n      );\r\n\r\n      let frameId = null;\r\n\r\n      const pathData = paths.map((path) => {\r\n        const length = path.getTotalLength();\r\n\r\n        path.style.strokeDasharray = `${length} ${length}`;\r\n        path.style.strokeDashoffset = `${length}`;\r\n\r\n        return {\r\n          path,\r\n          length,\r\n          start: Number.parseFloat(\r\n            path.dataset.start || "0"\r\n          ),\r\n          end: Number.parseFloat(\r\n            path.dataset.end || "1"\r\n          )\r\n        };\r\n      });\r\n\r\n      function getScrollProgress() {\r\n        const rect = root.getBoundingClientRect();\r\n        const viewportHeight =\r\n          window.innerHeight ||\r\n          document.documentElement.clientHeight;\r\n\r\n        /*\r\n         * Drawing begins when the arrow reaches\r\n         * approximately 88% down the viewport.\r\n         */\r\n        const startPosition = viewportHeight * 1;\r\n        /*\r\n         * Drawing finishes when the arrow reaches\r\n         * approximately 18% down the viewport.\r\n         */\r\n        const endPosition = viewportHeight * 0.5;\r\n\r\n        return clamp(\r\n          (startPosition - rect.top) /\r\n            (startPosition - endPosition),\r\n          0,\r\n          1\r\n        );\r\n      }\r\n\r\n      function render() {\r\n        frameId = null;\r\n\r\n        const progress = reducedMotion.matches\r\n          ? 1\r\n          : getScrollProgress();\r\n\r\n        pathData.forEach(\r\n          ({ path, length, start, end }) => {\r\n            const pathDuration = Math.max(\r\n              end - start,\r\n              0.0001\r\n            );\r\n\r\n            const pathProgress = clamp(\r\n              (progress - start) / pathDuration,\r\n              0,\r\n              1\r\n            );\r\n\r\n            path.style.strokeDashoffset = `${\r\n              length * (1 - pathProgress)\r\n            }`;\r\n          }\r\n        );\r\n      }\r\n\r\n      function requestRender() {\r\n        if (frameId !== null) {\r\n          return;\r\n        }\r\n\r\n        frameId = window.requestAnimationFrame(render);\r\n      }\r\n\r\n      window.addEventListener("scroll", requestRender, {\r\n        passive: true\r\n      });\r\n\r\n      window.addEventListener("resize", requestRender);\r\n\r\n      if (\r\n        typeof reducedMotion.addEventListener === "function"\r\n      ) {\r\n        reducedMotion.addEventListener(\r\n          "change",\r\n          requestRender\r\n        );\r\n      } else {\r\n        reducedMotion.addListener(requestRender);\r\n      }\r\n\r\n      requestRender();\r\n    }\r\n\r\n    document\r\n      .querySelectorAll(\r\n        "[data-scroll-draw-arrow]:not([data-arrow-initialized])"\r\n      )\r\n      .forEach(initializeArrow);\r\n  })();\r\n</script>'
                   }
                 />
               </div>
@@ -1180,540 +1140,14 @@ function PlasmicHome__RenderFunc(props: {
                 </div>
               </div>
             </div>
-            <div
+            <Reviews
               data-plasmic-name={"reviews"}
               data-plasmic-override={overrides.reviews}
-              className={classNames("all", sty.reviews)}
-            >
-              <div
-                data-plasmic-name={"frame36"}
-                data-plasmic-override={overrides.frame36}
-                className={classNames("all", sty.frame36)}
-              >
-                <div
-                  data-plasmic-name={"frame34"}
-                  data-plasmic-override={overrides.frame34}
-                  className={classNames("all", sty.frame34)}
-                >
-                  <div
-                    className={classNames("all", "__wab_text", sty.text__absOp)}
-                  >
-                    <React.Fragment>
-                      <React.Fragment>
-                        {"Fresh Out of the Oven "}
-                      </React.Fragment>
-                      {
-                        <span
-                          data-plasmic-name={"span"}
-                          data-plasmic-override={overrides.span}
-                          className={classNames(
-                            "all",
-                            "span",
-                            "span__uyaK1",
-                            "__wab_text",
-                            "plasmic_default__inline",
-                            sty.span
-                          )}
-                        >
-                          {hasVariant(globalVariants, "screen", "desktop") ? (
-                            <React.Fragment>
-                              {
-                                $queries.wpGraph.data.response.data.pageBy
-                                  .pageContent.content[6].headline
-                              }
-                            </React.Fragment>
-                          ) : hasVariant(globalVariants, "screen", "large") ? (
-                            <React.Fragment>
-                              {
-                                $queries.wpGraph.data.response.data.pageBy
-                                  .pageContent.content[6].headline
-                              }
-                            </React.Fragment>
-                          ) : (
-                            <React.Fragment>
-                              {
-                                $queries.query.data.response.data.page
-                                  .pageContent.content[6].headline
-                              }
-                            </React.Fragment>
-                          )}
-                        </span>
-                      }
-                      <React.Fragment>{""}</React.Fragment>
-                    </React.Fragment>
-                  </div>
-                </div>
-                <div
-                  data-plasmic-name={"frame35"}
-                  data-plasmic-override={overrides.frame35}
-                  className={classNames("all", sty.frame35)}
-                >
-                  <div
-                    data-plasmic-name={"frame43"}
-                    data-plasmic-override={overrides.frame43}
-                    className={classNames("all", sty.frame43)}
-                  >
-                    <CaretLeftSmSvgrepoComSvgIcon
-                      className={classNames("all", sty.svg__rnGj)}
-                      onClick={async event => {
-                        const $steps = {};
+              className={classNames("__wab_instance", sty.reviews)}
+              query={$queries.query}
+              wpGraph={$queries.wpGraph}
+            />
 
-                        $steps["runActionOnSliderCarousel"] = true
-                          ? (() => {
-                              const actionArgs = {
-                                tplRef: "sliderCarousel",
-                                action: "slickPrev"
-                              };
-                              return (({ tplRef, action, args }) => {
-                                return $refs?.[tplRef]?.[action]?.(
-                                  ...(args ?? [])
-                                );
-                              })?.apply(null, [actionArgs]);
-                            })()
-                          : undefined;
-                        if (
-                          $steps["runActionOnSliderCarousel"] != null &&
-                          typeof $steps["runActionOnSliderCarousel"] ===
-                            "object" &&
-                          typeof $steps["runActionOnSliderCarousel"].then ===
-                            "function"
-                        ) {
-                          $steps["runActionOnSliderCarousel"] =
-                            await $steps["runActionOnSliderCarousel"];
-                        }
-                      }}
-                      role={"img"}
-                    />
-                  </div>
-                  <div
-                    data-plasmic-name={"frame44"}
-                    data-plasmic-override={overrides.frame44}
-                    className={classNames("all", sty.frame44)}
-                  >
-                    <CaretRightSmSvgrepoComSvgIcon
-                      className={classNames("all", sty.svg__eZaTs)}
-                      onClick={async event => {
-                        const $steps = {};
-
-                        $steps["runActionOnSliderCarousel"] = true
-                          ? (() => {
-                              const actionArgs = {
-                                tplRef: "sliderCarousel",
-                                action: "slickNext"
-                              };
-                              return (({ tplRef, action, args }) => {
-                                return $refs?.[tplRef]?.[action]?.(
-                                  ...(args ?? [])
-                                );
-                              })?.apply(null, [actionArgs]);
-                            })()
-                          : undefined;
-                        if (
-                          $steps["runActionOnSliderCarousel"] != null &&
-                          typeof $steps["runActionOnSliderCarousel"] ===
-                            "object" &&
-                          typeof $steps["runActionOnSliderCarousel"].then ===
-                            "function"
-                        ) {
-                          $steps["runActionOnSliderCarousel"] =
-                            await $steps["runActionOnSliderCarousel"];
-                        }
-                      }}
-                      role={"img"}
-                    />
-                  </div>
-                </div>
-              </div>
-              {(() => {
-                const child$Props = {
-                  adaptiveHeight: hasVariant(globalVariants, "screen", "large")
-                    ? false
-                    : true,
-                  arrows: false,
-                  autoplay: false,
-                  autoplaySpeed: hasVariant(globalVariants, "screen", "tablet")
-                    ? 4000
-                    : 0,
-                  beforeChange: async (...eventArgs: any) => {
-                    generateStateOnChangePropForCodeComponents(
-                      $state,
-                      "currentSlide",
-                      ["sliderCarousel", "currentSlide"],
-                      SliderWrapper_Helpers
-                    ).apply(null, eventArgs);
-                  },
-                  centerMode: false,
-                  centerPadding: hasVariant(globalVariants, "screen", "mobile")
-                    ? "20px"
-                    : "50px",
-                  className: classNames("__wab_instance", sty.sliderCarousel),
-                  cssEase: "linear",
-                  dots: hasVariant(globalVariants, "screen", "mobile")
-                    ? false
-                    : undefined,
-                  initialSlide: generateStateValueProp($state, [
-                    "sliderCarousel",
-                    "currentSlide"
-                  ]),
-                  pauseOnHover: hasVariant(globalVariants, "screen", "tablet")
-                    ? false
-                    : undefined,
-                  ref: ref => {
-                    $refs["sliderCarousel"] = ref;
-                  },
-                  rows: hasVariant(globalVariants, "screen", "smallLaptop")
-                    ? 1
-                    : hasVariant(globalVariants, "screen", "smallDesktop")
-                      ? 1
-                      : 1,
-                  sliderScopeClassName: sty["sliderCarousel__slider"],
-                  slidesPerRow: hasVariant(globalVariants, "screen", "mobile")
-                    ? 1
-                    : hasVariant(globalVariants, "screen", "tablet")
-                      ? 1
-                      : hasVariant(globalVariants, "screen", "smallLaptop")
-                        ? 1
-                        : hasVariant(globalVariants, "screen", "laptop")
-                          ? 2
-                          : hasVariant(globalVariants, "screen", "smallDesktop")
-                            ? 2
-                            : hasVariant(
-                                  globalVariants,
-                                  "screen",
-                                  "mediumDesktop"
-                                )
-                              ? 2
-                              : hasVariant(globalVariants, "screen", "large")
-                                ? 3
-                                : 1,
-                  slidesToShow: hasVariant(
-                    globalVariants,
-                    "screen",
-                    "smallMobile"
-                  )
-                    ? 1
-                    : hasVariant(globalVariants, "screen", "mobile")
-                      ? 1
-                      : hasVariant(globalVariants, "screen", "tablet")
-                        ? 1
-                        : hasVariant(globalVariants, "screen", "smallLaptop")
-                          ? 1
-                          : hasVariant(globalVariants, "screen", "laptop")
-                            ? 1
-                            : hasVariant(
-                                  globalVariants,
-                                  "screen",
-                                  "smallDesktop"
-                                )
-                              ? 1
-                              : hasVariant(globalVariants, "screen", "large")
-                                ? 1
-                                : 3,
-                  speed: 2000,
-                  swipeToSlide: true,
-                  variableWidth: hasVariant(globalVariants, "screen", "mobile")
-                    ? false
-                    : undefined,
-                  vertical: hasVariant(globalVariants, "screen", "mobile")
-                    ? false
-                    : undefined
-                };
-                initializeCodeComponentStates(
-                  $state,
-                  [
-                    {
-                      name: "currentSlide",
-                      plasmicStateName: "sliderCarousel.currentSlide"
-                    }
-                  ],
-                  [],
-                  SliderWrapper_Helpers ?? {},
-                  child$Props
-                );
-
-                return (
-                  <SliderWrapper
-                    data-plasmic-name={"sliderCarousel"}
-                    data-plasmic-override={overrides.sliderCarousel}
-                    {...child$Props}
-                  >
-                    <div
-                      data-plasmic-name={"box"}
-                      data-plasmic-override={overrides.box}
-                      className={classNames("all", sty.box)}
-                    >
-                      <div
-                        data-plasmic-name={"child"}
-                        data-plasmic-override={overrides.child}
-                        className={classNames("all", sty.child)}
-                      >
-                        <div className={classNames("all", sty.freeBox__pYbvD)}>
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__ouhzd)}
-                            role={"img"}
-                          />
-
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__vj58)}
-                            role={"img"}
-                          />
-
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__kejo)}
-                            role={"img"}
-                          />
-
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg___9Hcpb)}
-                            role={"img"}
-                          />
-
-                          <StarFilledIcon
-                            className={classNames("all", sty.svg__fhrw4)}
-                            role={"img"}
-                          />
-                        </div>
-                        <div className={classNames("all", sty.freeBox__bfTeB)}>
-                          <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__cNudu
-                            )}
-                          >
-                            {
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ullamcorper diam, eget consequat neque. Fusce est tellus, vulputate nec commodo ac, dictum non orci. Phasellus pretium, nisl consectetur vestibulum volutpat, mi mauris gravida "
-                            }
-                          </div>
-                        </div>
-                        <div className={classNames("all", sty.freeBox__amn6D)}>
-                          <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__gxqVn
-                            )}
-                          >
-                            {"JOHN DOE"}
-                          </div>
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img__tiW6R)}
-                            displayHeight={"auto"}
-                            displayMaxHeight={"none"}
-                            displayMaxWidth={"100%"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"auto"}
-                            format={"avif"}
-                            loading={"lazy"}
-                            quality={100}
-                            src={{
-                              src: "/plasmic/sterling_and_buena_vista_foods/images/layer14Png.png",
-                              fullWidth: 54,
-                              fullHeight: 42,
-                              aspectRatio: undefined
-                            }}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    {(
-                      hasVariant(globalVariants, "screen", "tablet")
-                        ? true
-                        : hasVariant(globalVariants, "screen", "desktop")
-                          ? true
-                          : hasVariant(globalVariants, "screen", "large")
-                            ? true
-                            : false
-                    ) ? (
-                      <div
-                        data-plasmic-name={"box2"}
-                        data-plasmic-override={overrides.box2}
-                        className={classNames("all", sty.box2)}
-                      >
-                        <div
-                          data-plasmic-name={"child2"}
-                          data-plasmic-override={overrides.child2}
-                          className={classNames("all", sty.child2)}
-                        >
-                          <div
-                            className={classNames("all", sty.freeBox___5M83K)}
-                          >
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg__d7Md)}
-                              role={"img"}
-                            />
-
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg__goanB)}
-                              role={"img"}
-                            />
-
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg__baEQ)}
-                              role={"img"}
-                            />
-
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg__vQ8F3)}
-                              role={"img"}
-                            />
-
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg__f3Wga)}
-                              role={"img"}
-                            />
-                          </div>
-                          <div className={classNames("all", sty.freeBox__qTyI)}>
-                            <div
-                              className={classNames(
-                                "all",
-                                "__wab_text",
-                                sty.text__z5WNr
-                              )}
-                            >
-                              {
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ullamcorper diam, eget consequat neque. Fusce est tellus, vulputate nec commodo ac, dictum non orci. Phasellus pretium, nisl consectetur vestibulum volutpat, mi mauris gravida "
-                              }
-                            </div>
-                          </div>
-                          <div
-                            className={classNames("all", sty.freeBox__iOqGc)}
-                          >
-                            <div
-                              className={classNames(
-                                "all",
-                                "__wab_text",
-                                sty.text__hnmZm
-                              )}
-                            >
-                              {"JOHN DOE"}
-                            </div>
-                            <PlasmicImg__
-                              alt={""}
-                              className={classNames(sty.img__uWraq)}
-                              displayHeight={"auto"}
-                              displayMaxHeight={"none"}
-                              displayMaxWidth={"100%"}
-                              displayMinHeight={"0"}
-                              displayMinWidth={"0"}
-                              displayWidth={"auto"}
-                              format={"avif"}
-                              loading={"lazy"}
-                              quality={100}
-                              src={{
-                                src: "/plasmic/sterling_and_buena_vista_foods/images/layer14Png.png",
-                                fullWidth: 54,
-                                fullHeight: 42,
-                                aspectRatio: undefined
-                              }}
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    ) : null}
-                    {(
-                      hasVariant(globalVariants, "screen", "tablet")
-                        ? true
-                        : hasVariant(globalVariants, "screen", "desktop")
-                          ? true
-                          : hasVariant(globalVariants, "screen", "large")
-                            ? true
-                            : false
-                    ) ? (
-                      <div
-                        data-plasmic-name={"box3"}
-                        data-plasmic-override={overrides.box3}
-                        className={classNames("all", sty.box3)}
-                      >
-                        <div
-                          data-plasmic-name={"child3"}
-                          data-plasmic-override={overrides.child3}
-                          className={classNames("all", sty.child3)}
-                        >
-                          <div
-                            className={classNames("all", sty.freeBox___9WsNo)}
-                          >
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg__a2NE)}
-                              role={"img"}
-                            />
-
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg__koQk)}
-                              role={"img"}
-                            />
-
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg__lSDrn)}
-                              role={"img"}
-                            />
-
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg___5Z5Sz)}
-                              role={"img"}
-                            />
-
-                            <StarFilledIcon
-                              className={classNames("all", sty.svg__gcuaQ)}
-                              role={"img"}
-                            />
-                          </div>
-                          <div
-                            className={classNames("all", sty.freeBox__uQe6K)}
-                          >
-                            <div
-                              className={classNames(
-                                "all",
-                                "__wab_text",
-                                sty.text__guliA
-                              )}
-                            >
-                              {
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ullamcorper diam, eget consequat neque. Fusce est tellus, vulputate nec commodo ac, dictum non orci. Phasellus pretium, nisl consectetur vestibulum volutpat, mi mauris gravida "
-                              }
-                            </div>
-                          </div>
-                          <div
-                            className={classNames("all", sty.freeBox__zlW0F)}
-                          >
-                            <div
-                              className={classNames(
-                                "all",
-                                "__wab_text",
-                                sty.text__z2Yr
-                              )}
-                            >
-                              {"JOHN DOE"}
-                            </div>
-                            <PlasmicImg__
-                              alt={""}
-                              className={classNames(sty.img__jgg8W)}
-                              displayHeight={"auto"}
-                              displayMaxHeight={"none"}
-                              displayMaxWidth={"100%"}
-                              displayMinHeight={"0"}
-                              displayMinWidth={"0"}
-                              displayWidth={"auto"}
-                              format={"avif"}
-                              loading={"lazy"}
-                              quality={100}
-                              src={{
-                                src: "/plasmic/sterling_and_buena_vista_foods/images/layer14Png.png",
-                                fullWidth: 54,
-                                fullHeight: 42,
-                                aspectRatio: undefined
-                              }}
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    ) : null}
-                  </SliderWrapper>
-                );
-              })()}
-            </div>
             <CtaBottom
               data-plasmic-name={"ctaBottom"}
               data-plasmic-override={overrides.ctaBottom}
@@ -1762,19 +1196,6 @@ const PlasmicDescendants = {
     "innovationResponsive",
     "buttons",
     "reviews",
-    "frame36",
-    "frame34",
-    "span",
-    "frame35",
-    "frame43",
-    "frame44",
-    "sliderCarousel",
-    "box",
-    "child",
-    "box2",
-    "child2",
-    "box3",
-    "child3",
     "ctaBottom",
     "homeFooter",
     "footer"
@@ -1801,19 +1222,6 @@ const PlasmicDescendants = {
     "innovationResponsive",
     "buttons",
     "reviews",
-    "frame36",
-    "frame34",
-    "span",
-    "frame35",
-    "frame43",
-    "frame44",
-    "sliderCarousel",
-    "box",
-    "child",
-    "box2",
-    "child2",
-    "box3",
-    "child3",
     "ctaBottom"
   ],
   intro: ["intro", "text3", "title2"],
@@ -1846,43 +1254,7 @@ const PlasmicDescendants = {
   image2: ["image2"],
   innovationResponsive: ["innovationResponsive", "buttons"],
   buttons: ["buttons"],
-  reviews: [
-    "reviews",
-    "frame36",
-    "frame34",
-    "span",
-    "frame35",
-    "frame43",
-    "frame44",
-    "sliderCarousel",
-    "box",
-    "child",
-    "box2",
-    "child2",
-    "box3",
-    "child3"
-  ],
-  frame36: ["frame36", "frame34", "span", "frame35", "frame43", "frame44"],
-  frame34: ["frame34", "span"],
-  span: ["span"],
-  frame35: ["frame35", "frame43", "frame44"],
-  frame43: ["frame43"],
-  frame44: ["frame44"],
-  sliderCarousel: [
-    "sliderCarousel",
-    "box",
-    "child",
-    "box2",
-    "child2",
-    "box3",
-    "child3"
-  ],
-  box: ["box", "child"],
-  child: ["child"],
-  box2: ["box2", "child2"],
-  child2: ["child2"],
-  box3: ["box3", "child3"],
-  child3: ["child3"],
+  reviews: ["reviews"],
   ctaBottom: ["ctaBottom"],
   homeFooter: ["homeFooter", "footer"],
   footer: ["footer"]
@@ -1912,20 +1284,7 @@ type NodeDefaultElementType = {
   image2: "div";
   innovationResponsive: "div";
   buttons: "div";
-  reviews: "div";
-  frame36: "div";
-  frame34: "div";
-  span: "span";
-  frame35: "div";
-  frame43: "div";
-  frame44: "div";
-  sliderCarousel: typeof SliderWrapper;
-  box: "div";
-  child: "div";
-  box2: "div";
-  child2: "div";
-  box3: "div";
-  child3: "div";
+  reviews: typeof Reviews;
   ctaBottom: typeof CtaBottom;
   homeFooter: "div";
   footer: typeof Footer;
@@ -2016,19 +1375,6 @@ export const PlasmicHome = Object.assign(
     innovationResponsive: makeNodeComponent("innovationResponsive"),
     buttons: makeNodeComponent("buttons"),
     reviews: makeNodeComponent("reviews"),
-    frame36: makeNodeComponent("frame36"),
-    frame34: makeNodeComponent("frame34"),
-    span: makeNodeComponent("span"),
-    frame35: makeNodeComponent("frame35"),
-    frame43: makeNodeComponent("frame43"),
-    frame44: makeNodeComponent("frame44"),
-    sliderCarousel: makeNodeComponent("sliderCarousel"),
-    box: makeNodeComponent("box"),
-    child: makeNodeComponent("child"),
-    box2: makeNodeComponent("box2"),
-    child2: makeNodeComponent("child2"),
-    box3: makeNodeComponent("box3"),
-    child3: makeNodeComponent("child3"),
     ctaBottom: makeNodeComponent("ctaBottom"),
     homeFooter: makeNodeComponent("homeFooter"),
     footer: makeNodeComponent("footer"),

@@ -26,35 +26,9 @@
 .header2:global(.__wab_instance) {
   max-width: 100%;
 }
-.hero {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-  height: 400px;
+.topHero:global(.__wab_instance) {
   max-width: 100%;
-  justify-content: center;
-  align-items: center;
-  background: url("/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodContactHeroAvif.avif") top 50% left 50% / cover repeat;
-  align-self: center;
-  min-width: 0;
   flex-shrink: 0;
-  padding: 8px;
-}
-@media (max-width: 1440px) {
-  .hero {
-    background: url("/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodContactHeroAvif.avif") top 50% left 25% / cover no-repeat;
-  }
-}
-.title {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  color: var(--token-VSsNRyw2VYkH);
-  text-align: center;
-  align-self: auto;
-  font-size: var(--token-TQ01AK4kGGLa);
-  min-width: 0;
 }
 .contactUsSection {
   display: flex;

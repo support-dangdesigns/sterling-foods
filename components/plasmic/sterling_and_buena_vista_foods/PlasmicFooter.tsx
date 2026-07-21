@@ -109,7 +109,7 @@ export type PlasmicFooter__OverridesType = {
   address9?: Flex__<"div">;
   footerMenu?: Flex__<"div">;
   clientLogin?: Flex__<"div">;
-  clientLogin2?: Flex__<"div">;
+  clientLogin2?: Flex__<"a"> & Partial<LinkProps>;
   clientLogin3?: Flex__<"div">;
   terms?: Flex__<typeof FooterLinks>;
   termsAndConditions?: Flex__<"a"> & Partial<LinkProps>;
@@ -615,13 +615,22 @@ function PlasmicFooter__RenderFunc(props: {
             <FooterLinks
               className={classNames("__wab_instance", sty.footerLinks__yryc)}
             >
-              <div
+              <PlasmicLink__
                 data-plasmic-name={"clientLogin2"}
                 data-plasmic-override={overrides.clientLogin2}
-                className={classNames("all", "__wab_text", sty.clientLogin2)}
+                className={classNames(
+                  "all",
+                  "a",
+                  "a__uyaK1",
+                  "__wab_text",
+                  sty.clientLogin2
+                )}
+                component={Link}
+                legacyBehavior={false}
+                platform={"nextjs"}
               >
                 {"Privacy Policy"}
-              </div>
+              </PlasmicLink__>
             </FooterLinks>
             <DividerLine
               className={classNames("__wab_instance", sty.dividerLine__hkj9I)}
@@ -658,7 +667,11 @@ function PlasmicFooter__RenderFunc(props: {
                   sty.termsAndConditions
                 )}
                 component={Link}
-                href={"https://www.plasmic.app/"}
+                href={
+                  hasVariant(globalVariants, "screen", "large")
+                    ? `/terms-and-conditions`
+                    : "https://www.plasmic.app/"
+                }
                 legacyBehavior={false}
                 platform={"nextjs"}
               >
@@ -862,7 +875,7 @@ type NodeDefaultElementType = {
   address9: "div";
   footerMenu: "div";
   clientLogin: "div";
-  clientLogin2: "div";
+  clientLogin2: "a";
   clientLogin3: "div";
   terms: typeof FooterLinks;
   termsAndConditions: "a";

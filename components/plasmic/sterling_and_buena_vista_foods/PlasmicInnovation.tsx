@@ -756,7 +756,7 @@ function PlasmicInnovation__RenderFunc(props: {
                       : hasVariant(globalVariants, "screen", "dualScreen")
                         ? "63.25%"
                         : hasVariant(globalVariants, "screen", "smallTablet")
-                          ? "50%"
+                          ? "60%"
                           : hasVariant(globalVariants, "screen", "laptop")
                             ? "35%"
                             : hasVariant(
@@ -1013,7 +1013,7 @@ function PlasmicInnovation__RenderFunc(props: {
                       : hasVariant(globalVariants, "screen", "dualScreen")
                         ? "79.32%"
                         : hasVariant(globalVariants, "screen", "smallTablet")
-                          ? "50%"
+                          ? "60%"
                           : hasVariant(globalVariants, "screen", "tablet")
                             ? "50%"
                             : hasVariant(
@@ -1075,11 +1075,11 @@ function PlasmicInnovation__RenderFunc(props: {
                   displayMinWidth={"0"}
                   displayWidth={
                     hasVariant(globalVariants, "screen", "mobile")
-                      ? "100%"
+                      ? "auto"
                       : hasVariant(globalVariants, "screen", "dualScreen")
                         ? "85.94%"
                         : hasVariant(globalVariants, "screen", "smallTablet")
-                          ? "50%"
+                          ? "auto"
                           : hasVariant(globalVariants, "screen", "tablet")
                             ? "47.46%"
                             : hasVariant(globalVariants, "screen", "laptop")

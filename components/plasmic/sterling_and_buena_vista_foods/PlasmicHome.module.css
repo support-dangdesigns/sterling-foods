@@ -702,83 +702,20 @@
     width: 352px;
   }
 }
-.h3__nYLeh {
-  animation: none;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
+.h3___0Sw2Y {
   text-align: center;
-  color: var(--token-VSsNRyw2VYkH);
-  font-family: var(--token-MZlo_dcXZCyh);
-  font-weight: 400;
-  font-style: normal;
-  text-transform: none;
-  line-height: 68px;
-  letter-spacing: normal;
-  white-space: pre-wrap;
-  user-select: text;
-  text-decoration-line: none;
-  text-overflow: clip;
+  color: var(--token-Q67gH6ouJM2i);
   font-size: 55px;
-  min-width: 0;
-}
-@media (max-width: 1920px) {
-  .h3__nYLeh {
-    width: auto;
-    font-size: 55px;
-  }
-}
-@media (max-width: 1440px) {
-  .h3__nYLeh {
-    font-size: var(--token-2PDYAFnsh1xM);
-    line-height: 2px;
-  }
-}
-@media (max-width: 1024px) {
-  .h3__nYLeh {
-    line-height: 45px;
-    font-size: var(--token-KiAZW0gIrhlw);
-  }
-}
-@media (max-width: 414px) {
-  .h3__nYLeh {
-    line-height: 35px;
-  }
 }
 @media (max-width: 1920px) {
   .h3___0Sw2Y {
-    font-size: var(--token-KiAZW0gIrhlw);
-  }
-}
-@media (max-width: 1440px) {
-  .h3__kuEAs {
-    height: auto;
-    font-size: var(--token-KiAZW0gIrhlw);
-  }
-}
-@media (max-width: 1200px) {
-  .h3__kuEAs {
-    font-size: var(--token-KiAZW0gIrhlw);
-  }
-}
-@media (max-width: 1024px) {
-  .h3__kuEAs {
-    font-size: var(--token-KiAZW0gIrhlw);
-    line-height: 100%;
+    text-align: center;
+    color: var(--token-Q67gH6ouJM2i);
   }
 }
 @media (max-width: 757px) {
-  .h3__kuEAs {
-    line-height: 100%;
-    font-size: var(--token-UXPBeNJ4rrVx);
-    width: 533px;
-  }
-}
-@media (max-width: 414px) {
-  .h3__kuEAs {
-    line-height: 100%;
-    width: 100%;
-    min-width: 0;
+  .h3___0Sw2Y {
+    font-size: var(--token-16_cC9w3e0Nk);
   }
 }
 .freeBox__e8GY {
@@ -2265,6 +2202,11 @@
 .secondaryBtn__pKcaL:global(.__wab_instance) {
   max-width: 100%;
   flex-shrink: 0;
+}
+@media (max-width: 2000px) {
+  .secondaryBtn__pKcaL:global(.__wab_instance) {
+    flex-shrink: 0;
+  }
 }
 @media (max-width: 1920px) {
   .secondaryBtn__pKcaL:global(.__wab_instance) {

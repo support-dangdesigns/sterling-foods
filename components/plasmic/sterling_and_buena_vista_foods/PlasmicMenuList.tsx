@@ -146,6 +146,11 @@ function PlasmicMenuList__RenderFunc(props: {
       <PlasmicLink__
         className={classNames("all", "a", "a__uyaK1", sty.link___3RaYy)}
         component={Link}
+        href={
+          hasVariant(globalVariants, "screen", "large")
+            ? `/about-us`
+            : undefined
+        }
         legacyBehavior={false}
         platform={"nextjs"}
       >
@@ -156,6 +161,11 @@ function PlasmicMenuList__RenderFunc(props: {
       <PlasmicLink__
         className={classNames("all", "a", "a__uyaK1", sty.link__hUnhB)}
         component={Link}
+        href={
+          hasVariant(globalVariants, "screen", "large")
+            ? `/capabilities`
+            : undefined
+        }
         legacyBehavior={false}
         platform={"nextjs"}
       >
@@ -175,6 +185,9 @@ function PlasmicMenuList__RenderFunc(props: {
       <PlasmicLink__
         className={classNames("all", "a", "a__uyaK1", sty.link__nl7P)}
         component={Link}
+        href={
+          hasVariant(globalVariants, "screen", "large") ? `/markets` : undefined
+        }
         legacyBehavior={false}
         platform={"nextjs"}
       >
@@ -185,6 +198,11 @@ function PlasmicMenuList__RenderFunc(props: {
       <PlasmicLink__
         className={classNames("all", "a", "a__uyaK1", sty.link__djjcq)}
         component={Link}
+        href={
+          hasVariant(globalVariants, "screen", "large")
+            ? `/our-facilities`
+            : undefined
+        }
         legacyBehavior={false}
         platform={"nextjs"}
       >
@@ -195,6 +213,11 @@ function PlasmicMenuList__RenderFunc(props: {
       <PlasmicLink__
         className={classNames("all", "a", "a__uyaK1", sty.link__n0Rjz)}
         component={Link}
+        href={
+          hasVariant(globalVariants, "screen", "large")
+            ? `/quality-safety`
+            : undefined
+        }
         legacyBehavior={false}
         platform={"nextjs"}
       >
@@ -205,6 +228,9 @@ function PlasmicMenuList__RenderFunc(props: {
       <PlasmicLink__
         className={classNames("all", "a", "a__uyaK1", sty.link___5USgH)}
         component={Link}
+        href={
+          hasVariant(globalVariants, "screen", "large") ? `/careers` : undefined
+        }
         legacyBehavior={false}
         platform={"nextjs"}
       >

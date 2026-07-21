@@ -294,7 +294,13 @@ function PlasmicIsopenNav__RenderFunc(props: {
           <PlasmicLink__
             data-plasmic-name={"_1"}
             data-plasmic-override={overrides._1}
-            className={classNames("all", "a", "a__uyaK1", sty._1)}
+            className={classNames("all", "a", "a__uyaK1", sty._1, {
+              [sty._1animateImage]: hasVariant(
+                $state,
+                "animateImage",
+                "animateImage"
+              )
+            })}
             component={Link}
             href={`/about-us`}
             legacyBehavior={false}
@@ -463,7 +469,7 @@ function PlasmicIsopenNav__RenderFunc(props: {
                       operation: 0,
                       value:
                         $queries.headerComponent.data.response.data.component
-                          .components.menu[0].image.node.mediaItemUrl
+                          .components.menu[1].image.node.mediaItemUrl
                     };
                     return (({ variable, value, startIndex, deleteCount }) => {
                       if (!variable) {
@@ -552,7 +558,14 @@ function PlasmicIsopenNav__RenderFunc(props: {
                 "h3",
                 "h3__uyaK1",
                 "__wab_text",
-                sty.h3__bb2I
+                sty.h3__bb2I,
+                {
+                  [sty.h3animateImage__bb2Isrhyo]: hasVariant(
+                    $state,
+                    "animateImage",
+                    "animateImage"
+                  )
+                }
               )}
             >
               <React.Fragment>
@@ -565,7 +578,7 @@ function PlasmicIsopenNav__RenderFunc(props: {
                       e instanceof TypeError ||
                       e?.plasmicType === "PlasmicUndefinedDataError"
                     ) {
-                      return "About  Us";
+                      return "Capabilities";
                     }
                     throw e;
                   }
@@ -593,7 +606,7 @@ function PlasmicIsopenNav__RenderFunc(props: {
                       operation: 0,
                       value:
                         $queries.headerComponent.data.response.data.component
-                          .components.menu[0].image.node.mediaItemUrl
+                          .components.menu[2].image.node.mediaItemUrl
                     };
                     return (({ variable, value, startIndex, deleteCount }) => {
                       if (!variable) {
@@ -695,7 +708,7 @@ function PlasmicIsopenNav__RenderFunc(props: {
                       e instanceof TypeError ||
                       e?.plasmicType === "PlasmicUndefinedDataError"
                     ) {
-                      return "About  Us";
+                      return "Markets";
                     }
                     throw e;
                   }
@@ -723,7 +736,7 @@ function PlasmicIsopenNav__RenderFunc(props: {
                       operation: 0,
                       value:
                         $queries.headerComponent.data.response.data.component
-                          .components.menu[0].image.node.mediaItemUrl
+                          .components.menu[3].image.node.mediaItemUrl
                     };
                     return (({ variable, value, startIndex, deleteCount }) => {
                       if (!variable) {
@@ -825,7 +838,7 @@ function PlasmicIsopenNav__RenderFunc(props: {
                       e instanceof TypeError ||
                       e?.plasmicType === "PlasmicUndefinedDataError"
                     ) {
-                      return "About  Us";
+                      return "Our Facilities";
                     }
                     throw e;
                   }
@@ -853,7 +866,7 @@ function PlasmicIsopenNav__RenderFunc(props: {
                       operation: 0,
                       value:
                         $queries.headerComponent.data.response.data.component
-                          .components.menu[0].image.node.mediaItemUrl
+                          .components.image.node.mediaItemUrl
                     };
                     return (({ variable, value, startIndex, deleteCount }) => {
                       if (!variable) {
@@ -955,7 +968,7 @@ function PlasmicIsopenNav__RenderFunc(props: {
                       e instanceof TypeError ||
                       e?.plasmicType === "PlasmicUndefinedDataError"
                     ) {
-                      return "About  Us";
+                      return "About us";
                     }
                     throw e;
                   }
@@ -983,7 +996,7 @@ function PlasmicIsopenNav__RenderFunc(props: {
                       operation: 0,
                       value:
                         $queries.headerComponent.data.response.data.component
-                          .components.menu[0].image.node.mediaItemUrl
+                          .components.image.node
                     };
                     return (({ variable, value, startIndex, deleteCount }) => {
                       if (!variable) {
@@ -1085,7 +1098,7 @@ function PlasmicIsopenNav__RenderFunc(props: {
                       e instanceof TypeError ||
                       e?.plasmicType === "PlasmicUndefinedDataError"
                     ) {
-                      return "About  Us";
+                      return "Careers";
                     }
                     throw e;
                   }
@@ -1113,7 +1126,7 @@ function PlasmicIsopenNav__RenderFunc(props: {
                       operation: 0,
                       value:
                         $queries.headerComponent.data.response.data.component
-                          .components.menu[0].image.node.mediaItemUrl
+                          .components.image.node.mediaItemUrl
                     };
                     return (({ variable, value, startIndex, deleteCount }) => {
                       if (!variable) {
@@ -1215,7 +1228,7 @@ function PlasmicIsopenNav__RenderFunc(props: {
                       e instanceof TypeError ||
                       e?.plasmicType === "PlasmicUndefinedDataError"
                     ) {
-                      return "About  Us";
+                      return "Contact";
                     }
                     throw e;
                   }

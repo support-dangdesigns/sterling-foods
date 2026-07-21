@@ -1960,6 +1960,22 @@
   max-width: 100%;
   flex-shrink: 0;
 }
+@media (max-width: 1920px) {
+  .ctaBottom:global(.__wab_instance) {
+    height: 656px;
+    flex-shrink: 0;
+  }
+}
+@media (max-width: 1700px) {
+  .ctaBottom:global(.__wab_instance) {
+    flex-shrink: 0;
+  }
+}
+@media (max-width: 1512px) {
+  .ctaBottom:global(.__wab_instance) {
+    flex-shrink: 0;
+  }
+}
 @media (max-width: 1200px) {
   .ctaBottom:global(.__wab_instance) {
     flex-shrink: 0;

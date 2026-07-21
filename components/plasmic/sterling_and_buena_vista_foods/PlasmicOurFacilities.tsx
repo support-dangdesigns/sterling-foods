@@ -308,7 +308,7 @@ function PlasmicOurFacilities__RenderFunc(props: {
                   }
                   loading={"lazy"}
                   src={{
-                    src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodSanAntonio1050Avif.avif",
+                    src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodSanAntonio1075Avif.avif",
                     fullWidth: 306,
                     fullHeight: 226,
                     aspectRatio: undefined
@@ -380,7 +380,7 @@ function PlasmicOurFacilities__RenderFunc(props: {
                   }
                   loading={"lazy"}
                   src={{
-                    src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodSanAntonio1050Avif.avif",
+                    src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodSanAntonio1050Avif2.avif",
                     fullWidth: 306,
                     fullHeight: 226,
                     aspectRatio: undefined
@@ -452,7 +452,7 @@ function PlasmicOurFacilities__RenderFunc(props: {
                   }
                   loading={"lazy"}
                   src={{
-                    src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodSanAntonioInterparkPng.png",
+                    src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodSanAntonioInterparkAvif2.avif",
                     fullWidth: 306,
                     fullHeight: 226,
                     aspectRatio: undefined
@@ -524,7 +524,7 @@ function PlasmicOurFacilities__RenderFunc(props: {
                   }
                   loading={"lazy"}
                   src={{
-                    src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodAzusaPng.png",
+                    src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodAzusaAvif2.avif",
                     fullWidth: 302,
                     fullHeight: 226,
                     aspectRatio: undefined
@@ -596,7 +596,7 @@ function PlasmicOurFacilities__RenderFunc(props: {
                   }
                   loading={"lazy"}
                   src={{
-                    src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodUnionCityAvif.avif",
+                    src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodUnionCityAvif2.avif",
                     fullWidth: 306,
                     fullHeight: 225,
                     aspectRatio: undefined
@@ -668,7 +668,7 @@ function PlasmicOurFacilities__RenderFunc(props: {
                   }
                   loading={"lazy"}
                   src={{
-                    src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodSanAntonio1050Avif.avif",
+                    src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodUnionCity2Avif.avif",
                     fullWidth: 306,
                     fullHeight: 226,
                     aspectRatio: undefined

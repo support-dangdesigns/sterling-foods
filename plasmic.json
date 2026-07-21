@@ -27432,7 +27432,7 @@
           "projectId": "uyaK17nhz8WhGjYZfKjMhX",
           "renderModuleFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicHome.tsx",
           "importSpec": {
-            "modulePath": "../pages/index.tsx"
+            "modulePath": "../pages/home.tsx"
           },
           "cssFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicHome.module.css",
           "scheme": "blackbox",
@@ -28900,6 +28900,41 @@
           "id": "8HQb4AawTlIi",
           "name": "[SterlingFood]Manufacturing-excellence.png",
           "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodManufacturingExcellencePng.png"
+        },
+        {
+          "id": "fxYv4w11of5w",
+          "name": "[SterlingFood]san-antonio-1075.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodSanAntonio1075Png.png"
+        },
+        {
+          "id": "B0ssdcl8wRUQ",
+          "name": "[SterlingFood]san-antonio-1050.avif 2",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodSanAntonio1050Avif2.avif"
+        },
+        {
+          "id": "0P9iTwzU29JP",
+          "name": "[SterlingFood]san-antonio-1075.avif",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodSanAntonio1075Avif.avif"
+        },
+        {
+          "id": "d6XP_m-1iD1m",
+          "name": "[SterlingFood]san-antonio-interpark.avif 2",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodSanAntonioInterparkAvif2.avif"
+        },
+        {
+          "id": "4ka6Wd2uC19w",
+          "name": "[SterlingFood]Azusa.avif 2",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodAzusaAvif2.avif"
+        },
+        {
+          "id": "9yiYaCSD8J6l",
+          "name": "[SterlingFood]union-city.avif 2",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodUnionCityAvif2.avif"
+        },
+        {
+          "id": "wLhdMJ_UyBl2",
+          "name": "[SterlingFood]Union-City-2.avif",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodUnionCity2Avif.avif"
         }
       ],
       "indirect": false,

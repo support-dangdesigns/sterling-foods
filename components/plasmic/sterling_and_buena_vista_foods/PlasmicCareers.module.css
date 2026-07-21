@@ -2404,6 +2404,8 @@
 @media (max-width: 2000px) {
   .h4__fwB6N {
     animation: none;
+    line-height: 1em;
+    align-self: center;
   }
 }
 @media (max-width: 1280px) {

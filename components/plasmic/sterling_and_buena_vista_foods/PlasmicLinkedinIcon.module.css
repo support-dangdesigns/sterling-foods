@@ -17,21 +17,21 @@
   min-width: 0;
   border-radius: 30px;
   padding: 8px;
-  border: 2px solid var(--token-I4qaFqA_B1z8);
+  border: 2px solid var(--token-Xx7oe00aHq8H);
 }
 .social:hover .wrapper {
   border-color: var(--token-Gx156sR9ht1r);
 }
 .social:active .wrapper {
   box-shadow: inset 0px 4px 16px 0px #0000001a;
-  border-color: var(--token-455ns3DBW2hn);
+  border-color: var(--token-Xx7oe00aHq8H);
 }
 .icon {
   animation: none;
   object-fit: cover;
   max-width: 100%;
   height: 22px;
-  color: var(--token-I4qaFqA_B1z8);
+  color: var(--token-Xx7oe00aHq8H);
   width: 42px;
   align-self: center;
   flex-shrink: 0;
@@ -41,5 +41,5 @@
   color: var(--token-Gx156sR9ht1r);
 }
 .social:active .icon {
-  color: var(--token-455ns3DBW2hn);
+  color: var(--token-Xx7oe00aHq8H);
 }

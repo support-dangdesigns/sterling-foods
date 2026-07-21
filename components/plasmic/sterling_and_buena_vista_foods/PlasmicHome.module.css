@@ -1212,6 +1212,11 @@
   max-width: 100%;
   min-width: 0;
 }
+@media (max-width: 2000px) {
+  .h4__s33Bh {
+    color: var(--token-Xx7oe00aHq8H);
+  }
+}
 @media (max-width: 1440px) {
   .h4__s33Bh {
     font-size: var(--token-2PDYAFnsh1xM);

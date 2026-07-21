@@ -384,6 +384,12 @@ function PlasmicModal__RenderFunc(props: {
                           await $steps["updateAriaDialogTriggerIsOpen"];
                       }
                     }}
+                    start={
+                      <CircleIcon
+                        className={classNames("all", sty.svg__jdRvj)}
+                        role={"img"}
+                      />
+                    }
                     type={"soft"}
                   />
                 </div>
@@ -403,7 +409,17 @@ function PlasmicModal__RenderFunc(props: {
       trigger={
         (hasVariant($state, "noTrigger", "noTrigger") ? false : true)
           ? renderPlasmicSlot({
-              defaultContents: <Button label={"Open Modal"} />,
+              defaultContents: (
+                <Button
+                  label={"Open Modal"}
+                  start={
+                    <CircleIcon
+                      className={classNames("all", sty.svg__p9R9)}
+                      role={"img"}
+                    />
+                  }
+                />
+              ),
 
               value: args.trigger
             })

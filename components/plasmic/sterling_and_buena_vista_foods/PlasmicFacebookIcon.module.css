@@ -21,7 +21,7 @@
 }
 @media (max-width: 1920px) {
   .wrapper {
-    border-color: var(--token-I4qaFqA_B1z8);
+    border-color: var(--token-Xx7oe00aHq8H);
   }
 }
 .social:hover .wrapper {
@@ -29,7 +29,7 @@
 }
 .social:active .wrapper {
   box-shadow: inset 0px 4px 16px 0px #0000001a;
-  border-color: var(--token-455ns3DBW2hn);
+  border-color: var(--token-Xx7oe00aHq8H);
 }
 .icon {
   animation: none;
@@ -51,5 +51,5 @@
   color: var(--token-Gx156sR9ht1r);
 }
 .social:active .icon {
-  color: var(--token-455ns3DBW2hn);
+  color: var(--token-Xx7oe00aHq8H);
 }

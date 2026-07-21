@@ -5,7 +5,7 @@
   display: block;
   overflow: hidden;
   position: relative;
-  color: var(--token-I4qaFqA_B1z8);
+  color: var(--token-Xx7oe00aHq8H);
   font-family: "Avenir";
   font-size: var(--token-SeC4JQ6Nr4hA);
   text-align: center;
@@ -25,7 +25,7 @@
   -webkit-backdrop-filter: none;
 }
 .frame65:active:active {
-  background: var(--token-YRLs3dbZJG3Q);
+  background: #b76e1b;
   box-shadow: inset 0px 4px 16px 0px rgba(0, 0, 0, 0.2);
 }
 .text {

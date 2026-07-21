@@ -335,7 +335,7 @@
 }
 .span {
   animation: none;
-  color: var(--token-I4qaFqA_B1z8);
+  color: var(--token-VSsNRyw2VYkH);
   height: auto;
   font-family: var(--token-3FFZ7xNHqr9C);
   font-size: 85px;
@@ -680,4 +680,7 @@
   .primaryBtn:global(.__wab_instance) {
     flex-shrink: 0;
   }
+}
+.text__wxI53 {
+  color: var(--token-VSsNRyw2VYkH);
 }

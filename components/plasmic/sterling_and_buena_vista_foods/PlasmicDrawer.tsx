@@ -383,6 +383,12 @@ function PlasmicDrawer__RenderFunc(props: {
                               await $steps["updateAriaDialogTriggerIsOpen"];
                           }
                         }}
+                        start={
+                          <CircleIcon
+                            className={classNames("all", sty.svg__xzp1I)}
+                            role={"img"}
+                          />
+                        }
                         type={"soft"}
                       />
                     </div>
@@ -418,6 +424,12 @@ function PlasmicDrawer__RenderFunc(props: {
                     >
                       {"Open Drawer"}
                     </div>
+                  }
+                  start={
+                    <CircleIcon
+                      className={classNames("all", sty.svg__eUmEl)}
+                      role={"img"}
+                    />
                   }
                 />
               ),

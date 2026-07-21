@@ -1,0 +1,28 @@
+.root:global(.__wab_instance) {
+  width: auto;
+  max-width: 100%;
+  object-fit: cover;
+  position: relative;
+}
+.text {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-Xx7oe00aHq8H);
+  text-decoration-line: none !important;
+  font-family: "Avenir LT Std";
+  min-width: 0;
+}
+.svg__bGc8Z {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.svg__l9JfV {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}

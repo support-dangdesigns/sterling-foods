@@ -27863,6 +27863,19 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/innovation"
+        },
+        {
+          "id": "0MwgVi3jTCIV",
+          "name": "TabSterling",
+          "type": "managed",
+          "projectId": "uyaK17nhz8WhGjYZfKjMhX",
+          "renderModuleFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicTabSterling.tsx",
+          "importSpec": {
+            "modulePath": "TabSterling.tsx"
+          },
+          "cssFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicTabSterling.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -28852,6 +28865,11 @@
           "id": "1dyBWaSYHbJE",
           "name": "Elements.png",
           "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/elementsPng.png"
+        },
+        {
+          "id": "lAI5mTCDGabf",
+          "name": "[SterlingFood]Muffins.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodMuffinsPng.png"
         }
       ],
       "indirect": false,

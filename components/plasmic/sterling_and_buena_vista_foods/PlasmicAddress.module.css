@@ -47,7 +47,7 @@
   align-items: flex-start;
   top: auto;
   left: auto;
-  color: var(--token-455ns3DBW2hn);
+  color: var(--token-Xx7oe00aHq8H);
   min-width: 0;
   padding: 8px;
 }
@@ -60,7 +60,7 @@
 .slotTargetChildren {
   font-size: 20px;
   font-weight: 600;
-  color: var(--token-I4qaFqA_B1z8);
+  color: var(--token-Xx7oe00aHq8H);
   letter-spacing: 0em;
 }
 @media (max-width: 1440px) {
@@ -69,7 +69,7 @@
   }
 }
 .root:active .slotTargetChildren {
-  color: var(--token-YRLs3dbZJG3Q);
+  color: #b76e1b;
 }
 .span__wn7Jx {
   animation: none;
@@ -103,7 +103,7 @@
   color: var(--token-VSsNRyw2VYkH);
 }
 .root:active .slotTargetSlot {
-  color: var(--token-YRLs3dbZJG3Q);
+  color: #b76e1b;
 }
 .span__x1ZGu {
   animation: none;

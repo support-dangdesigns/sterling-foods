@@ -63,6 +63,8 @@ import Header from "../../Header"; // plasmic-import: qmNXHiKWCTTQ/component
 import TopHero from "../../TopHero"; // plasmic-import: 2xRY6WOypZh7/component
 import { AntdTabs } from "@plasmicpkgs/antd5/skinny/registerTabs";
 import { AntdTabItem } from "@plasmicpkgs/antd5/skinny/registerTabs";
+import { SliderWrapper } from "@plasmicpkgs/react-slick";
+import { sliderHelpers as SliderWrapper_Helpers } from "@plasmicpkgs/react-slick";
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/styleTokensProvider
 
@@ -71,6 +73,7 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import sty from "./PlasmicCapabilities.module.css"; // plasmic-import: PbDWXAtQEPDX/css
 
 import CheckSvgIcon from "./icons/PlasmicIcon__CheckSvg"; // plasmic-import: XJ7-EwyAPgh7/icon
+import VectorList01Icon from "./icons/PlasmicIcon__VectorList01"; // plasmic-import: pw6woELC72Qg/icon
 
 const emptyProxy: any = new Proxy(() => "", {
   get(_, prop) {
@@ -137,7 +140,76 @@ export type PlasmicCapabilities__OverridesType = {
   capabilitiesSection?: Flex__<"div">;
   tabs?: Flex__<"div">;
   tabs2?: Flex__<typeof AntdTabs>;
-  tabItem?: Flex__<typeof AntdTabItem>;
+  child?: Flex__<"div">;
+  title3?: Flex__<"div">;
+  p2?: Flex__<"div">;
+  ul?: Flex__<"div">;
+  bulletPoint8?: Flex__<"div">;
+  bulletPoint9?: Flex__<"div">;
+  bulletPoint10?: Flex__<"div">;
+  bulletPoint11?: Flex__<"div">;
+  bulletPoint12?: Flex__<"div">;
+  bulletPoint13?: Flex__<"div">;
+  bulletPoint14?: Flex__<"div">;
+  bulletPoint15?: Flex__<"div">;
+  child2?: Flex__<"div">;
+  sliderCarousel?: Flex__<typeof SliderWrapper>;
+  child3?: Flex__<"div">;
+  title4?: Flex__<"div">;
+  p3?: Flex__<"div">;
+  ul2?: Flex__<"div">;
+  bulletPoint16?: Flex__<"div">;
+  bulletPoint17?: Flex__<"div">;
+  bulletPoint18?: Flex__<"div">;
+  bulletPoint19?: Flex__<"div">;
+  bulletPoint20?: Flex__<"div">;
+  bulletPoint21?: Flex__<"div">;
+  bulletPoint22?: Flex__<"div">;
+  bulletPoint23?: Flex__<"div">;
+  child4?: Flex__<"div">;
+  sliderCarousel2?: Flex__<typeof SliderWrapper>;
+  child5?: Flex__<"div">;
+  title5?: Flex__<"div">;
+  p4?: Flex__<"div">;
+  ul3?: Flex__<"div">;
+  bulletPoint24?: Flex__<"div">;
+  bulletPoint25?: Flex__<"div">;
+  bulletPoint26?: Flex__<"div">;
+  bulletPoint27?: Flex__<"div">;
+  bulletPoint28?: Flex__<"div">;
+  bulletPoint29?: Flex__<"div">;
+  bulletPoint30?: Flex__<"div">;
+  bulletPoint31?: Flex__<"div">;
+  child6?: Flex__<"div">;
+  sliderCarousel3?: Flex__<typeof SliderWrapper>;
+  child7?: Flex__<"div">;
+  title6?: Flex__<"div">;
+  p5?: Flex__<"div">;
+  ul4?: Flex__<"div">;
+  bulletPoint32?: Flex__<"div">;
+  bulletPoint33?: Flex__<"div">;
+  bulletPoint34?: Flex__<"div">;
+  bulletPoint35?: Flex__<"div">;
+  bulletPoint36?: Flex__<"div">;
+  bulletPoint37?: Flex__<"div">;
+  bulletPoint38?: Flex__<"div">;
+  bulletPoint39?: Flex__<"div">;
+  child8?: Flex__<"div">;
+  sliderCarousel4?: Flex__<typeof SliderWrapper>;
+  child9?: Flex__<"div">;
+  title7?: Flex__<"div">;
+  p6?: Flex__<"div">;
+  ul5?: Flex__<"div">;
+  bulletPoint40?: Flex__<"div">;
+  bulletPoint41?: Flex__<"div">;
+  bulletPoint42?: Flex__<"div">;
+  bulletPoint43?: Flex__<"div">;
+  bulletPoint44?: Flex__<"div">;
+  bulletPoint45?: Flex__<"div">;
+  bulletPoint46?: Flex__<"div">;
+  bulletPoint47?: Flex__<"div">;
+  child10?: Flex__<"div">;
+  sliderCarousel5?: Flex__<typeof SliderWrapper>;
 };
 
 export interface DefaultCapabilitiesProps {}
@@ -187,7 +259,52 @@ function PlasmicCapabilities__RenderFunc(props: {
         path: "tabs2.activeKey",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $q, $ctx }) => undefined
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => "2"
+      },
+      {
+        path: "sliderCarousel.currentSlide",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => 0,
+
+        refName: "sliderCarousel",
+        onMutate: generateOnMutateForSpec("currentSlide", SliderWrapper_Helpers)
+      },
+      {
+        path: "sliderCarousel2.currentSlide",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => 0,
+
+        refName: "sliderCarousel2",
+        onMutate: generateOnMutateForSpec("currentSlide", SliderWrapper_Helpers)
+      },
+      {
+        path: "sliderCarousel3.currentSlide",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => 0,
+
+        refName: "sliderCarousel3",
+        onMutate: generateOnMutateForSpec("currentSlide", SliderWrapper_Helpers)
+      },
+      {
+        path: "sliderCarousel4.currentSlide",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => 0,
+
+        refName: "sliderCarousel4",
+        onMutate: generateOnMutateForSpec("currentSlide", SliderWrapper_Helpers)
+      },
+      {
+        path: "sliderCarousel5.currentSlide",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => 0,
+
+        refName: "sliderCarousel5",
+        onMutate: generateOnMutateForSpec("currentSlide", SliderWrapper_Helpers)
       }
     ],
     [$props, $ctx, $refs]
@@ -939,35 +1056,2380 @@ function PlasmicCapabilities__RenderFunc(props: {
                 animateTabBar={true}
                 animateTabContent={false}
                 animated={true}
+                centered={true}
                 className={classNames("__wab_instance", sty.tabs2)}
+                defaultActiveKey={"2"}
                 items={
-                  <AntdTabItem
-                    data-plasmic-name={"tabItem"}
-                    data-plasmic-override={overrides.tabItem}
-                    className={classNames("__wab_instance", sty.tabItem)}
-                    key={"1"}
-                    label={
-                      <div
-                        className={classNames(
-                          "all",
-                          "__wab_text",
-                          sty.text___0ARzN
-                        )}
-                      >
-                        {"Artisan Bakery Items"}
-                      </div>
-                    }
-                  >
-                    <div
+                  <React.Fragment>
+                    <AntdTabItem
                       className={classNames(
-                        "all",
-                        "__wab_text",
-                        sty.text__vhF0N
+                        "__wab_instance",
+                        sty.tabItem__vrpo0
                       )}
+                      key={"1"}
+                      label={
+                        <div
+                          className={classNames(
+                            "all",
+                            "__wab_text",
+                            sty.text__gJuj8
+                          )}
+                        >
+                          {"Artisan Bakery Items"}
+                        </div>
+                      }
                     >
-                      {"First Children"}
-                    </div>
-                  </AntdTabItem>
+                      <div className={classNames("all", sty.freeBox__hgKKi)}>
+                        <div
+                          data-plasmic-name={"child"}
+                          data-plasmic-override={overrides.child}
+                          className={classNames("all", sty.child)}
+                        >
+                          <div
+                            data-plasmic-name={"title3"}
+                            data-plasmic-override={overrides.title3}
+                            className={classNames("all", sty.title3)}
+                          >
+                            <h4
+                              className={classNames(
+                                "all",
+                                "h4",
+                                "h4__uyaK1",
+                                "__wab_text",
+                                sty.h4___4LIeu
+                              )}
+                            >
+                              {hasVariant(globalVariants, "screen", "large")
+                                ? "Artisan Bakery"
+                                : "Across Our Organization"}
+                            </h4>
+                            <h3
+                              className={classNames(
+                                "all",
+                                "h3",
+                                "h3__uyaK1",
+                                "__wab_text",
+                                sty.h3__uBtAa,
+                                "h3-script"
+                              )}
+                            >
+                              {hasVariant(globalVariants, "screen", "large")
+                                ? "Items"
+                                : "Oppoertunities"}
+                            </h3>
+                          </div>
+                          <div
+                            data-plasmic-name={"p2"}
+                            data-plasmic-override={overrides.p2}
+                            className={classNames("all", sty.p2)}
+                          >
+                            {(
+                              hasVariant(globalVariants, "screen", "large")
+                                ? true
+                                : false
+                            ) ? (
+                              <p
+                                className={classNames(
+                                  "all",
+                                  "p",
+                                  "p__uyaK1",
+                                  "__wab_text",
+                                  sty.p___8XlBu
+                                )}
+                              >
+                                {hasVariant(globalVariants, "screen", "large")
+                                  ? "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                                  : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                              </p>
+                            ) : null}
+                          </div>
+                          <div
+                            data-plasmic-name={"ul"}
+                            data-plasmic-override={overrides.ul}
+                            className={classNames("all", sty.ul)}
+                          >
+                            {(
+                              hasVariant(globalVariants, "screen", "large")
+                                ? true
+                                : false
+                            ) ? (
+                              <div
+                                data-plasmic-name={"bulletPoint8"}
+                                data-plasmic-override={overrides.bulletPoint8}
+                                className={classNames("all", sty.bulletPoint8)}
+                              >
+                                <VectorList01Icon
+                                  className={classNames("all", sty.svg__ap2RE)}
+                                  role={"img"}
+                                />
+
+                                {(
+                                  hasVariant(globalVariants, "screen", "large")
+                                    ? true
+                                    : false
+                                ) ? (
+                                  <p
+                                    className={classNames(
+                                      "all",
+                                      "p",
+                                      "p__uyaK1",
+                                      "__wab_text",
+                                      sty.p__n6VtJ
+                                    )}
+                                  >
+                                    {hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "large"
+                                    )
+                                      ? "Pull-Apart Breads"
+                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                  </p>
+                                ) : null}
+                              </div>
+                            ) : null}
+                            <div
+                              data-plasmic-name={"bulletPoint9"}
+                              data-plasmic-override={overrides.bulletPoint9}
+                              className={classNames("all", sty.bulletPoint9)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__jcJvt)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__aQvqB
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Biscuits"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                            <div
+                              data-plasmic-name={"bulletPoint10"}
+                              data-plasmic-override={overrides.bulletPoint10}
+                              className={classNames("all", sty.bulletPoint10)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__w25Wb)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__g7IDl
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Authentic New York style Bagels"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                            <div
+                              data-plasmic-name={"bulletPoint11"}
+                              data-plasmic-override={overrides.bulletPoint11}
+                              className={classNames("all", sty.bulletPoint11)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__qxXzN)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__k4VHk
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Cinnamon Rolls"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                            <div
+                              data-plasmic-name={"bulletPoint12"}
+                              data-plasmic-override={overrides.bulletPoint12}
+                              className={classNames("all", sty.bulletPoint12)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__z1T8Q)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__fvP2D
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Muffins"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                            <div
+                              data-plasmic-name={"bulletPoint13"}
+                              data-plasmic-override={overrides.bulletPoint13}
+                              className={classNames("all", sty.bulletPoint13)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__ovhQx)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__hfsEa
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Coffee Cakes"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                            <div
+                              data-plasmic-name={"bulletPoint14"}
+                              data-plasmic-override={overrides.bulletPoint14}
+                              className={classNames("all", sty.bulletPoint14)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__eaTbx)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__mzFen
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Gourmet Danish"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                            <div
+                              data-plasmic-name={"bulletPoint15"}
+                              data-plasmic-override={overrides.bulletPoint15}
+                              className={classNames("all", sty.bulletPoint15)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__kc51D)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__hPmXk
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Cornbread"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          data-plasmic-name={"child2"}
+                          data-plasmic-override={overrides.child2}
+                          className={classNames("all", sty.child2)}
+                        >
+                          {(() => {
+                            const child$Props = {
+                              arrowColor: true ? "#C37620" : undefined,
+                              arrows: false,
+                              autoplay: true,
+                              autoplaySpeed: 0,
+                              beforeChange: async (...eventArgs: any) => {
+                                generateStateOnChangePropForCodeComponents(
+                                  $state,
+                                  "currentSlide",
+                                  ["sliderCarousel", "currentSlide"],
+                                  SliderWrapper_Helpers
+                                ).apply(null, eventArgs);
+                              },
+                              centerMode: true,
+                              className: classNames(
+                                "__wab_instance",
+                                sty.sliderCarousel
+                              ),
+                              cssEase: "linear",
+                              dots: true,
+                              initialSlide: generateStateValueProp($state, [
+                                "sliderCarousel",
+                                "currentSlide"
+                              ]),
+                              ref: ref => {
+                                $refs["sliderCarousel"] = ref;
+                              },
+                              sliderScopeClassName:
+                                sty["sliderCarousel__slider"],
+                              speed: 5000,
+                              swipeToSlide: true
+                            };
+                            initializeCodeComponentStates(
+                              $state,
+                              [
+                                {
+                                  name: "currentSlide",
+                                  plasmicStateName:
+                                    "sliderCarousel.currentSlide"
+                                }
+                              ],
+                              [],
+                              SliderWrapper_Helpers ?? {},
+                              child$Props
+                            );
+
+                            return (
+                              <SliderWrapper
+                                data-plasmic-name={"sliderCarousel"}
+                                data-plasmic-override={overrides.sliderCarousel}
+                                {...child$Props}
+                              >
+                                <div
+                                  className={classNames(
+                                    "all",
+                                    sty.freeBox__i111W
+                                  )}
+                                >
+                                  <PlasmicImg__
+                                    alt={""}
+                                    className={classNames(sty.img__o3Rf9)}
+                                    displayHeight={"auto"}
+                                    displayMaxHeight={"none"}
+                                    displayMaxWidth={"100%"}
+                                    displayMinHeight={"0"}
+                                    displayMinWidth={"0"}
+                                    displayWidth={"auto"}
+                                    src={{
+                                      src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodMuffinsPng.png",
+                                      fullWidth: 848,
+                                      fullHeight: 693,
+                                      aspectRatio: undefined
+                                    }}
+                                  />
+                                </div>
+                                <div
+                                  className={classNames(
+                                    "all",
+                                    sty.freeBox__nzUjy
+                                  )}
+                                >
+                                  <PlasmicImg__
+                                    alt={""}
+                                    className={classNames(sty.img__j1KfS)}
+                                    displayHeight={"auto"}
+                                    displayMaxHeight={"none"}
+                                    displayMaxWidth={"100%"}
+                                    displayMinHeight={"0"}
+                                    displayMinWidth={"0"}
+                                    displayWidth={"auto"}
+                                    src={{
+                                      src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodMuffinsPng.png",
+                                      fullWidth: 848,
+                                      fullHeight: 693,
+                                      aspectRatio: undefined
+                                    }}
+                                  />
+                                </div>
+                                <div
+                                  className={classNames(
+                                    "all",
+                                    sty.freeBox___9Sk4P
+                                  )}
+                                >
+                                  <PlasmicImg__
+                                    alt={""}
+                                    className={classNames(sty.img__znqp1)}
+                                    displayHeight={"auto"}
+                                    displayMaxHeight={"none"}
+                                    displayMaxWidth={"100%"}
+                                    displayMinHeight={"0"}
+                                    displayMinWidth={"0"}
+                                    displayWidth={"auto"}
+                                    src={{
+                                      src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodMuffinsPng.png",
+                                      fullWidth: 848,
+                                      fullHeight: 693,
+                                      aspectRatio: undefined
+                                    }}
+                                  />
+                                </div>
+                              </SliderWrapper>
+                            );
+                          })()}
+                        </div>
+                      </div>
+                    </AntdTabItem>
+                    <AntdTabItem
+                      className={classNames(
+                        "__wab_instance",
+                        sty.tabItem__u8LWd
+                      )}
+                      key={"2"}
+                      label={
+                        <div
+                          className={classNames(
+                            "all",
+                            "__wab_text",
+                            sty.text__fDrr
+                          )}
+                        >
+                          {"Handheld Treats"}
+                        </div>
+                      }
+                    >
+                      <div className={classNames("all", sty.freeBox__yhLn6)}>
+                        <div
+                          data-plasmic-name={"child3"}
+                          data-plasmic-override={overrides.child3}
+                          className={classNames("all", sty.child3)}
+                        >
+                          <div
+                            data-plasmic-name={"title4"}
+                            data-plasmic-override={overrides.title4}
+                            className={classNames("all", sty.title4)}
+                          >
+                            <h4
+                              className={classNames(
+                                "all",
+                                "h4",
+                                "h4__uyaK1",
+                                "__wab_text",
+                                sty.h4__auqW9
+                              )}
+                            >
+                              {hasVariant(globalVariants, "screen", "large")
+                                ? "Artisan Bakery"
+                                : "Across Our Organization"}
+                            </h4>
+                            <h3
+                              className={classNames(
+                                "all",
+                                "h3",
+                                "h3__uyaK1",
+                                "__wab_text",
+                                sty.h3__zGu5D,
+                                "h3-script"
+                              )}
+                            >
+                              {hasVariant(globalVariants, "screen", "large")
+                                ? "Items"
+                                : "Oppoertunities"}
+                            </h3>
+                          </div>
+                          <div
+                            data-plasmic-name={"p3"}
+                            data-plasmic-override={overrides.p3}
+                            className={classNames("all", sty.p3)}
+                          >
+                            {(
+                              hasVariant(globalVariants, "screen", "large")
+                                ? true
+                                : false
+                            ) ? (
+                              <p
+                                className={classNames(
+                                  "all",
+                                  "p",
+                                  "p__uyaK1",
+                                  "__wab_text",
+                                  sty.p__gdIn1
+                                )}
+                              >
+                                {hasVariant(globalVariants, "screen", "large")
+                                  ? "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                                  : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                              </p>
+                            ) : null}
+                          </div>
+                          <div
+                            data-plasmic-name={"ul2"}
+                            data-plasmic-override={overrides.ul2}
+                            className={classNames("all", sty.ul2)}
+                          >
+                            {(
+                              hasVariant(globalVariants, "screen", "large")
+                                ? true
+                                : false
+                            ) ? (
+                              <div
+                                data-plasmic-name={"bulletPoint16"}
+                                data-plasmic-override={overrides.bulletPoint16}
+                                className={classNames("all", sty.bulletPoint16)}
+                              >
+                                <VectorList01Icon
+                                  className={classNames("all", sty.svg__kESl)}
+                                  role={"img"}
+                                />
+
+                                {(
+                                  hasVariant(globalVariants, "screen", "large")
+                                    ? true
+                                    : false
+                                ) ? (
+                                  <p
+                                    className={classNames(
+                                      "all",
+                                      "p",
+                                      "p__uyaK1",
+                                      "__wab_text",
+                                      sty.p__seUjs
+                                    )}
+                                  >
+                                    {hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "large"
+                                    )
+                                      ? "Pull-Apart Breads"
+                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                  </p>
+                                ) : null}
+                              </div>
+                            ) : null}
+                            <div
+                              data-plasmic-name={"bulletPoint17"}
+                              data-plasmic-override={overrides.bulletPoint17}
+                              className={classNames("all", sty.bulletPoint17)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__yR96K)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__maKmF
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Biscuits"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                            <div
+                              data-plasmic-name={"bulletPoint18"}
+                              data-plasmic-override={overrides.bulletPoint18}
+                              className={classNames("all", sty.bulletPoint18)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__u8PLr)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__mSjQc
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Authentic New York style Bagels"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                            <div
+                              data-plasmic-name={"bulletPoint19"}
+                              data-plasmic-override={overrides.bulletPoint19}
+                              className={classNames("all", sty.bulletPoint19)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__zJmwH)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__g4Tem
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Cinnamon Rolls"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                            <div
+                              data-plasmic-name={"bulletPoint20"}
+                              data-plasmic-override={overrides.bulletPoint20}
+                              className={classNames("all", sty.bulletPoint20)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg___7BTOy)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__muCp6
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Muffins"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                            <div
+                              data-plasmic-name={"bulletPoint21"}
+                              data-plasmic-override={overrides.bulletPoint21}
+                              className={classNames("all", sty.bulletPoint21)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__hSn7)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__feG9G
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Coffee Cakes"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                            <div
+                              data-plasmic-name={"bulletPoint22"}
+                              data-plasmic-override={overrides.bulletPoint22}
+                              className={classNames("all", sty.bulletPoint22)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__jpntE)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__j6Y0S
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Gourmet Danish"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                            <div
+                              data-plasmic-name={"bulletPoint23"}
+                              data-plasmic-override={overrides.bulletPoint23}
+                              className={classNames("all", sty.bulletPoint23)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__cRnfI)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__pZehl
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Cornbread"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          data-plasmic-name={"child4"}
+                          data-plasmic-override={overrides.child4}
+                          className={classNames("all", sty.child4)}
+                        >
+                          {(() => {
+                            const child$Props = {
+                              arrowColor: true ? "#C37620" : undefined,
+                              arrows: false,
+                              autoplay: true,
+                              autoplaySpeed: 0,
+                              beforeChange: async (...eventArgs: any) => {
+                                generateStateOnChangePropForCodeComponents(
+                                  $state,
+                                  "currentSlide",
+                                  ["sliderCarousel2", "currentSlide"],
+                                  SliderWrapper_Helpers
+                                ).apply(null, eventArgs);
+                              },
+                              centerMode: true,
+                              className: classNames(
+                                "__wab_instance",
+                                sty.sliderCarousel2
+                              ),
+                              cssEase: "linear",
+                              dots: true,
+                              initialSlide: generateStateValueProp($state, [
+                                "sliderCarousel2",
+                                "currentSlide"
+                              ]),
+                              ref: ref => {
+                                $refs["sliderCarousel2"] = ref;
+                              },
+                              sliderScopeClassName:
+                                sty["sliderCarousel2__slider"],
+                              speed: 5000,
+                              swipeToSlide: true
+                            };
+                            initializeCodeComponentStates(
+                              $state,
+                              [
+                                {
+                                  name: "currentSlide",
+                                  plasmicStateName:
+                                    "sliderCarousel2.currentSlide"
+                                }
+                              ],
+                              [],
+                              SliderWrapper_Helpers ?? {},
+                              child$Props
+                            );
+
+                            return (
+                              <SliderWrapper
+                                data-plasmic-name={"sliderCarousel2"}
+                                data-plasmic-override={
+                                  overrides.sliderCarousel2
+                                }
+                                {...child$Props}
+                              >
+                                <div
+                                  className={classNames(
+                                    "all",
+                                    sty.freeBox__rYIgH
+                                  )}
+                                >
+                                  <PlasmicImg__
+                                    alt={""}
+                                    className={classNames(sty.img___8HyM8)}
+                                    displayHeight={"auto"}
+                                    displayMaxHeight={"none"}
+                                    displayMaxWidth={"100%"}
+                                    displayMinHeight={"0"}
+                                    displayMinWidth={"0"}
+                                    displayWidth={"auto"}
+                                    src={{
+                                      src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodMuffinsPng.png",
+                                      fullWidth: 848,
+                                      fullHeight: 693,
+                                      aspectRatio: undefined
+                                    }}
+                                  />
+                                </div>
+                                <div
+                                  className={classNames(
+                                    "all",
+                                    sty.freeBox__f3YoZ
+                                  )}
+                                >
+                                  <PlasmicImg__
+                                    alt={""}
+                                    className={classNames(sty.img__xa90I)}
+                                    displayHeight={"auto"}
+                                    displayMaxHeight={"none"}
+                                    displayMaxWidth={"100%"}
+                                    displayMinHeight={"0"}
+                                    displayMinWidth={"0"}
+                                    displayWidth={"auto"}
+                                    src={{
+                                      src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodMuffinsPng.png",
+                                      fullWidth: 848,
+                                      fullHeight: 693,
+                                      aspectRatio: undefined
+                                    }}
+                                  />
+                                </div>
+                                <div
+                                  className={classNames(
+                                    "all",
+                                    sty.freeBox__bzQhY
+                                  )}
+                                >
+                                  <PlasmicImg__
+                                    alt={""}
+                                    className={classNames(sty.img___6J7SW)}
+                                    displayHeight={"auto"}
+                                    displayMaxHeight={"none"}
+                                    displayMaxWidth={"100%"}
+                                    displayMinHeight={"0"}
+                                    displayMinWidth={"0"}
+                                    displayWidth={"auto"}
+                                    src={{
+                                      src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodMuffinsPng.png",
+                                      fullWidth: 848,
+                                      fullHeight: 693,
+                                      aspectRatio: undefined
+                                    }}
+                                  />
+                                </div>
+                              </SliderWrapper>
+                            );
+                          })()}
+                        </div>
+                      </div>
+                    </AntdTabItem>
+                    <AntdTabItem
+                      className={classNames(
+                        "__wab_instance",
+                        sty.tabItem__xZ87
+                      )}
+                      key={"3"}
+                      label={
+                        <div
+                          className={classNames(
+                            "all",
+                            "__wab_text",
+                            sty.text__jLeO
+                          )}
+                        >
+                          {"Cakes"}
+                        </div>
+                      }
+                    >
+                      <div className={classNames("all", sty.freeBox__fxzYj)}>
+                        <div
+                          data-plasmic-name={"child5"}
+                          data-plasmic-override={overrides.child5}
+                          className={classNames("all", sty.child5)}
+                        >
+                          <div
+                            data-plasmic-name={"title5"}
+                            data-plasmic-override={overrides.title5}
+                            className={classNames("all", sty.title5)}
+                          >
+                            <h4
+                              className={classNames(
+                                "all",
+                                "h4",
+                                "h4__uyaK1",
+                                "__wab_text",
+                                sty.h4__tbLp
+                              )}
+                            >
+                              {hasVariant(globalVariants, "screen", "large")
+                                ? "Artisan Bakery"
+                                : "Across Our Organization"}
+                            </h4>
+                            <h3
+                              className={classNames(
+                                "all",
+                                "h3",
+                                "h3__uyaK1",
+                                "__wab_text",
+                                sty.h3___6GvIl,
+                                "h3-script"
+                              )}
+                            >
+                              {hasVariant(globalVariants, "screen", "large")
+                                ? "Items"
+                                : "Oppoertunities"}
+                            </h3>
+                          </div>
+                          <div
+                            data-plasmic-name={"p4"}
+                            data-plasmic-override={overrides.p4}
+                            className={classNames("all", sty.p4)}
+                          >
+                            {(
+                              hasVariant(globalVariants, "screen", "large")
+                                ? true
+                                : false
+                            ) ? (
+                              <p
+                                className={classNames(
+                                  "all",
+                                  "p",
+                                  "p__uyaK1",
+                                  "__wab_text",
+                                  sty.p__m2Fcn
+                                )}
+                              >
+                                {hasVariant(globalVariants, "screen", "large")
+                                  ? "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                                  : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                              </p>
+                            ) : null}
+                          </div>
+                          <div
+                            data-plasmic-name={"ul3"}
+                            data-plasmic-override={overrides.ul3}
+                            className={classNames("all", sty.ul3)}
+                          >
+                            {(
+                              hasVariant(globalVariants, "screen", "large")
+                                ? true
+                                : false
+                            ) ? (
+                              <div
+                                data-plasmic-name={"bulletPoint24"}
+                                data-plasmic-override={overrides.bulletPoint24}
+                                className={classNames("all", sty.bulletPoint24)}
+                              >
+                                <VectorList01Icon
+                                  className={classNames("all", sty.svg__n3X35)}
+                                  role={"img"}
+                                />
+
+                                {(
+                                  hasVariant(globalVariants, "screen", "large")
+                                    ? true
+                                    : false
+                                ) ? (
+                                  <p
+                                    className={classNames(
+                                      "all",
+                                      "p",
+                                      "p__uyaK1",
+                                      "__wab_text",
+                                      sty.p__yk3G5
+                                    )}
+                                  >
+                                    {hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "large"
+                                    )
+                                      ? "Pull-Apart Breads"
+                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                  </p>
+                                ) : null}
+                              </div>
+                            ) : null}
+                            <div
+                              data-plasmic-name={"bulletPoint25"}
+                              data-plasmic-override={overrides.bulletPoint25}
+                              className={classNames("all", sty.bulletPoint25)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__jwaTc)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__tKlWp
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Biscuits"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                            <div
+                              data-plasmic-name={"bulletPoint26"}
+                              data-plasmic-override={overrides.bulletPoint26}
+                              className={classNames("all", sty.bulletPoint26)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__i8I82)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p___3Bmt4
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Authentic New York style Bagels"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                            <div
+                              data-plasmic-name={"bulletPoint27"}
+                              data-plasmic-override={overrides.bulletPoint27}
+                              className={classNames("all", sty.bulletPoint27)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__aaVS)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__vya3T
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Cinnamon Rolls"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                            <div
+                              data-plasmic-name={"bulletPoint28"}
+                              data-plasmic-override={overrides.bulletPoint28}
+                              className={classNames("all", sty.bulletPoint28)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__hKo0S)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__kxPjn
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Muffins"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                            <div
+                              data-plasmic-name={"bulletPoint29"}
+                              data-plasmic-override={overrides.bulletPoint29}
+                              className={classNames("all", sty.bulletPoint29)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__yPyjR)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__rxWgl
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Coffee Cakes"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                            <div
+                              data-plasmic-name={"bulletPoint30"}
+                              data-plasmic-override={overrides.bulletPoint30}
+                              className={classNames("all", sty.bulletPoint30)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__sifI9)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__ulBz2
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Gourmet Danish"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                            <div
+                              data-plasmic-name={"bulletPoint31"}
+                              data-plasmic-override={overrides.bulletPoint31}
+                              className={classNames("all", sty.bulletPoint31)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__toc9J)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__sIYws
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Cornbread"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          data-plasmic-name={"child6"}
+                          data-plasmic-override={overrides.child6}
+                          className={classNames("all", sty.child6)}
+                        >
+                          {(() => {
+                            const child$Props = {
+                              arrowColor: true ? "#C37620" : undefined,
+                              arrows: false,
+                              autoplay: true,
+                              autoplaySpeed: 0,
+                              beforeChange: async (...eventArgs: any) => {
+                                generateStateOnChangePropForCodeComponents(
+                                  $state,
+                                  "currentSlide",
+                                  ["sliderCarousel3", "currentSlide"],
+                                  SliderWrapper_Helpers
+                                ).apply(null, eventArgs);
+                              },
+                              centerMode: true,
+                              className: classNames(
+                                "__wab_instance",
+                                sty.sliderCarousel3
+                              ),
+                              cssEase: "linear",
+                              dots: true,
+                              initialSlide: generateStateValueProp($state, [
+                                "sliderCarousel3",
+                                "currentSlide"
+                              ]),
+                              ref: ref => {
+                                $refs["sliderCarousel3"] = ref;
+                              },
+                              sliderScopeClassName:
+                                sty["sliderCarousel3__slider"],
+                              speed: 5000,
+                              swipeToSlide: true
+                            };
+                            initializeCodeComponentStates(
+                              $state,
+                              [
+                                {
+                                  name: "currentSlide",
+                                  plasmicStateName:
+                                    "sliderCarousel3.currentSlide"
+                                }
+                              ],
+                              [],
+                              SliderWrapper_Helpers ?? {},
+                              child$Props
+                            );
+
+                            return (
+                              <SliderWrapper
+                                data-plasmic-name={"sliderCarousel3"}
+                                data-plasmic-override={
+                                  overrides.sliderCarousel3
+                                }
+                                {...child$Props}
+                              >
+                                <div
+                                  className={classNames(
+                                    "all",
+                                    sty.freeBox__yqAA
+                                  )}
+                                >
+                                  <PlasmicImg__
+                                    alt={""}
+                                    className={classNames(sty.img__pz8UF)}
+                                    displayHeight={"auto"}
+                                    displayMaxHeight={"none"}
+                                    displayMaxWidth={"100%"}
+                                    displayMinHeight={"0"}
+                                    displayMinWidth={"0"}
+                                    displayWidth={"auto"}
+                                    src={{
+                                      src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodMuffinsPng.png",
+                                      fullWidth: 848,
+                                      fullHeight: 693,
+                                      aspectRatio: undefined
+                                    }}
+                                  />
+                                </div>
+                                <div
+                                  className={classNames(
+                                    "all",
+                                    sty.freeBox___4Vm4Y
+                                  )}
+                                >
+                                  <PlasmicImg__
+                                    alt={""}
+                                    className={classNames(sty.img__svxxQ)}
+                                    displayHeight={"auto"}
+                                    displayMaxHeight={"none"}
+                                    displayMaxWidth={"100%"}
+                                    displayMinHeight={"0"}
+                                    displayMinWidth={"0"}
+                                    displayWidth={"auto"}
+                                    src={{
+                                      src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodMuffinsPng.png",
+                                      fullWidth: 848,
+                                      fullHeight: 693,
+                                      aspectRatio: undefined
+                                    }}
+                                  />
+                                </div>
+                                <div
+                                  className={classNames(
+                                    "all",
+                                    sty.freeBox__i2Bot
+                                  )}
+                                >
+                                  <PlasmicImg__
+                                    alt={""}
+                                    className={classNames(sty.img__lvrqq)}
+                                    displayHeight={"auto"}
+                                    displayMaxHeight={"none"}
+                                    displayMaxWidth={"100%"}
+                                    displayMinHeight={"0"}
+                                    displayMinWidth={"0"}
+                                    displayWidth={"auto"}
+                                    src={{
+                                      src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodMuffinsPng.png",
+                                      fullWidth: 848,
+                                      fullHeight: 693,
+                                      aspectRatio: undefined
+                                    }}
+                                  />
+                                </div>
+                              </SliderWrapper>
+                            );
+                          })()}
+                        </div>
+                      </div>
+                    </AntdTabItem>
+                    <AntdTabItem
+                      className={classNames(
+                        "__wab_instance",
+                        sty.tabItem___5JKe
+                      )}
+                      key={"4"}
+                      label={
+                        <div
+                          className={classNames(
+                            "all",
+                            "__wab_text",
+                            sty.text__jIimb
+                          )}
+                        >
+                          {"Cookies, Brownies & Bars"}
+                        </div>
+                      }
+                    >
+                      <div className={classNames("all", sty.freeBox__dvsqG)}>
+                        <div
+                          data-plasmic-name={"child7"}
+                          data-plasmic-override={overrides.child7}
+                          className={classNames("all", sty.child7)}
+                        >
+                          <div
+                            data-plasmic-name={"title6"}
+                            data-plasmic-override={overrides.title6}
+                            className={classNames("all", sty.title6)}
+                          >
+                            <h4
+                              className={classNames(
+                                "all",
+                                "h4",
+                                "h4__uyaK1",
+                                "__wab_text",
+                                sty.h4__et9Oa
+                              )}
+                            >
+                              {hasVariant(globalVariants, "screen", "large")
+                                ? "Artisan Bakery"
+                                : "Across Our Organization"}
+                            </h4>
+                            <h3
+                              className={classNames(
+                                "all",
+                                "h3",
+                                "h3__uyaK1",
+                                "__wab_text",
+                                sty.h3__bMjxs,
+                                "h3-script"
+                              )}
+                            >
+                              {hasVariant(globalVariants, "screen", "large")
+                                ? "Items"
+                                : "Oppoertunities"}
+                            </h3>
+                          </div>
+                          <div
+                            data-plasmic-name={"p5"}
+                            data-plasmic-override={overrides.p5}
+                            className={classNames("all", sty.p5)}
+                          >
+                            {(
+                              hasVariant(globalVariants, "screen", "large")
+                                ? true
+                                : false
+                            ) ? (
+                              <p
+                                className={classNames(
+                                  "all",
+                                  "p",
+                                  "p__uyaK1",
+                                  "__wab_text",
+                                  sty.p__hq17K
+                                )}
+                              >
+                                {hasVariant(globalVariants, "screen", "large")
+                                  ? "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                                  : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                              </p>
+                            ) : null}
+                          </div>
+                          <div
+                            data-plasmic-name={"ul4"}
+                            data-plasmic-override={overrides.ul4}
+                            className={classNames("all", sty.ul4)}
+                          >
+                            {(
+                              hasVariant(globalVariants, "screen", "large")
+                                ? true
+                                : false
+                            ) ? (
+                              <div
+                                data-plasmic-name={"bulletPoint32"}
+                                data-plasmic-override={overrides.bulletPoint32}
+                                className={classNames("all", sty.bulletPoint32)}
+                              >
+                                <VectorList01Icon
+                                  className={classNames("all", sty.svg__sxpra)}
+                                  role={"img"}
+                                />
+
+                                {(
+                                  hasVariant(globalVariants, "screen", "large")
+                                    ? true
+                                    : false
+                                ) ? (
+                                  <p
+                                    className={classNames(
+                                      "all",
+                                      "p",
+                                      "p__uyaK1",
+                                      "__wab_text",
+                                      sty.p__hkRql
+                                    )}
+                                  >
+                                    {hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "large"
+                                    )
+                                      ? "Pull-Apart Breads"
+                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                  </p>
+                                ) : null}
+                              </div>
+                            ) : null}
+                            <div
+                              data-plasmic-name={"bulletPoint33"}
+                              data-plasmic-override={overrides.bulletPoint33}
+                              className={classNames("all", sty.bulletPoint33)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__kAqC)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__q8WwU
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Biscuits"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                            <div
+                              data-plasmic-name={"bulletPoint34"}
+                              data-plasmic-override={overrides.bulletPoint34}
+                              className={classNames("all", sty.bulletPoint34)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__rHqE)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__mMe3J
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Authentic New York style Bagels"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                            <div
+                              data-plasmic-name={"bulletPoint35"}
+                              data-plasmic-override={overrides.bulletPoint35}
+                              className={classNames("all", sty.bulletPoint35)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__u4Hd1)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p___7SZVe
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Cinnamon Rolls"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                            <div
+                              data-plasmic-name={"bulletPoint36"}
+                              data-plasmic-override={overrides.bulletPoint36}
+                              className={classNames("all", sty.bulletPoint36)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__ehing)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__t37Hd
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Muffins"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                            <div
+                              data-plasmic-name={"bulletPoint37"}
+                              data-plasmic-override={overrides.bulletPoint37}
+                              className={classNames("all", sty.bulletPoint37)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__mAHyG)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__rAscJ
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Coffee Cakes"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                            <div
+                              data-plasmic-name={"bulletPoint38"}
+                              data-plasmic-override={overrides.bulletPoint38}
+                              className={classNames("all", sty.bulletPoint38)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__xsV33)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__kwMrl
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Gourmet Danish"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                            <div
+                              data-plasmic-name={"bulletPoint39"}
+                              data-plasmic-override={overrides.bulletPoint39}
+                              className={classNames("all", sty.bulletPoint39)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__ohp4Z)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p___5El3C
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Cornbread"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          data-plasmic-name={"child8"}
+                          data-plasmic-override={overrides.child8}
+                          className={classNames("all", sty.child8)}
+                        >
+                          {(() => {
+                            const child$Props = {
+                              arrowColor: true ? "#C37620" : undefined,
+                              arrows: false,
+                              autoplay: true,
+                              autoplaySpeed: 0,
+                              beforeChange: async (...eventArgs: any) => {
+                                generateStateOnChangePropForCodeComponents(
+                                  $state,
+                                  "currentSlide",
+                                  ["sliderCarousel4", "currentSlide"],
+                                  SliderWrapper_Helpers
+                                ).apply(null, eventArgs);
+                              },
+                              centerMode: true,
+                              className: classNames(
+                                "__wab_instance",
+                                sty.sliderCarousel4
+                              ),
+                              cssEase: "linear",
+                              dots: true,
+                              initialSlide: generateStateValueProp($state, [
+                                "sliderCarousel4",
+                                "currentSlide"
+                              ]),
+                              ref: ref => {
+                                $refs["sliderCarousel4"] = ref;
+                              },
+                              sliderScopeClassName:
+                                sty["sliderCarousel4__slider"],
+                              speed: 5000,
+                              swipeToSlide: true
+                            };
+                            initializeCodeComponentStates(
+                              $state,
+                              [
+                                {
+                                  name: "currentSlide",
+                                  plasmicStateName:
+                                    "sliderCarousel4.currentSlide"
+                                }
+                              ],
+                              [],
+                              SliderWrapper_Helpers ?? {},
+                              child$Props
+                            );
+
+                            return (
+                              <SliderWrapper
+                                data-plasmic-name={"sliderCarousel4"}
+                                data-plasmic-override={
+                                  overrides.sliderCarousel4
+                                }
+                                {...child$Props}
+                              >
+                                <div
+                                  className={classNames(
+                                    "all",
+                                    sty.freeBox__npYIw
+                                  )}
+                                >
+                                  <PlasmicImg__
+                                    alt={""}
+                                    className={classNames(sty.img__urFc)}
+                                    displayHeight={"auto"}
+                                    displayMaxHeight={"none"}
+                                    displayMaxWidth={"100%"}
+                                    displayMinHeight={"0"}
+                                    displayMinWidth={"0"}
+                                    displayWidth={"auto"}
+                                    src={{
+                                      src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodMuffinsPng.png",
+                                      fullWidth: 848,
+                                      fullHeight: 693,
+                                      aspectRatio: undefined
+                                    }}
+                                  />
+                                </div>
+                                <div
+                                  className={classNames(
+                                    "all",
+                                    sty.freeBox__pf9Gs
+                                  )}
+                                >
+                                  <PlasmicImg__
+                                    alt={""}
+                                    className={classNames(sty.img__i5BIc)}
+                                    displayHeight={"auto"}
+                                    displayMaxHeight={"none"}
+                                    displayMaxWidth={"100%"}
+                                    displayMinHeight={"0"}
+                                    displayMinWidth={"0"}
+                                    displayWidth={"auto"}
+                                    src={{
+                                      src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodMuffinsPng.png",
+                                      fullWidth: 848,
+                                      fullHeight: 693,
+                                      aspectRatio: undefined
+                                    }}
+                                  />
+                                </div>
+                                <div
+                                  className={classNames(
+                                    "all",
+                                    sty.freeBox__xnpWv
+                                  )}
+                                >
+                                  <PlasmicImg__
+                                    alt={""}
+                                    className={classNames(sty.img__ubVqC)}
+                                    displayHeight={"auto"}
+                                    displayMaxHeight={"none"}
+                                    displayMaxWidth={"100%"}
+                                    displayMinHeight={"0"}
+                                    displayMinWidth={"0"}
+                                    displayWidth={"auto"}
+                                    src={{
+                                      src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodMuffinsPng.png",
+                                      fullWidth: 848,
+                                      fullHeight: 693,
+                                      aspectRatio: undefined
+                                    }}
+                                  />
+                                </div>
+                              </SliderWrapper>
+                            );
+                          })()}
+                        </div>
+                      </div>
+                    </AntdTabItem>
+                    <AntdTabItem
+                      className={classNames(
+                        "__wab_instance",
+                        sty.tabItem__zoJsH
+                      )}
+                      key={"4"}
+                      label={
+                        <div
+                          className={classNames(
+                            "all",
+                            "__wab_text",
+                            sty.text__u0FOd
+                          )}
+                        >
+                          {"Snack Items"}
+                        </div>
+                      }
+                    >
+                      <div className={classNames("all", sty.freeBox__k98Z)}>
+                        <div
+                          data-plasmic-name={"child9"}
+                          data-plasmic-override={overrides.child9}
+                          className={classNames("all", sty.child9)}
+                        >
+                          <div
+                            data-plasmic-name={"title7"}
+                            data-plasmic-override={overrides.title7}
+                            className={classNames("all", sty.title7)}
+                          >
+                            <h4
+                              className={classNames(
+                                "all",
+                                "h4",
+                                "h4__uyaK1",
+                                "__wab_text",
+                                sty.h4___4Az96
+                              )}
+                            >
+                              {hasVariant(globalVariants, "screen", "large")
+                                ? "Artisan Bakery"
+                                : "Across Our Organization"}
+                            </h4>
+                            <h3
+                              className={classNames(
+                                "all",
+                                "h3",
+                                "h3__uyaK1",
+                                "__wab_text",
+                                sty.h3__eXqR,
+                                "h3-script"
+                              )}
+                            >
+                              {hasVariant(globalVariants, "screen", "large")
+                                ? "Items"
+                                : "Oppoertunities"}
+                            </h3>
+                          </div>
+                          <div
+                            data-plasmic-name={"p6"}
+                            data-plasmic-override={overrides.p6}
+                            className={classNames("all", sty.p6)}
+                          >
+                            {(
+                              hasVariant(globalVariants, "screen", "large")
+                                ? true
+                                : false
+                            ) ? (
+                              <p
+                                className={classNames(
+                                  "all",
+                                  "p",
+                                  "p__uyaK1",
+                                  "__wab_text",
+                                  sty.p___9Eke2
+                                )}
+                              >
+                                {hasVariant(globalVariants, "screen", "large")
+                                  ? "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                                  : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                              </p>
+                            ) : null}
+                          </div>
+                          <div
+                            data-plasmic-name={"ul5"}
+                            data-plasmic-override={overrides.ul5}
+                            className={classNames("all", sty.ul5)}
+                          >
+                            {(
+                              hasVariant(globalVariants, "screen", "large")
+                                ? true
+                                : false
+                            ) ? (
+                              <div
+                                data-plasmic-name={"bulletPoint40"}
+                                data-plasmic-override={overrides.bulletPoint40}
+                                className={classNames("all", sty.bulletPoint40)}
+                              >
+                                <VectorList01Icon
+                                  className={classNames("all", sty.svg__jThV)}
+                                  role={"img"}
+                                />
+
+                                {(
+                                  hasVariant(globalVariants, "screen", "large")
+                                    ? true
+                                    : false
+                                ) ? (
+                                  <p
+                                    className={classNames(
+                                      "all",
+                                      "p",
+                                      "p__uyaK1",
+                                      "__wab_text",
+                                      sty.p__uQEmy
+                                    )}
+                                  >
+                                    {hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "large"
+                                    )
+                                      ? "Pull-Apart Breads"
+                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                  </p>
+                                ) : null}
+                              </div>
+                            ) : null}
+                            <div
+                              data-plasmic-name={"bulletPoint41"}
+                              data-plasmic-override={overrides.bulletPoint41}
+                              className={classNames("all", sty.bulletPoint41)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__grLt4)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__oCTbp
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Biscuits"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                            <div
+                              data-plasmic-name={"bulletPoint42"}
+                              data-plasmic-override={overrides.bulletPoint42}
+                              className={classNames("all", sty.bulletPoint42)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__d3Gnk)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__yyIf5
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Authentic New York style Bagels"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                            <div
+                              data-plasmic-name={"bulletPoint43"}
+                              data-plasmic-override={overrides.bulletPoint43}
+                              className={classNames("all", sty.bulletPoint43)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__mJhU)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__nb2MK
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Cinnamon Rolls"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                            <div
+                              data-plasmic-name={"bulletPoint44"}
+                              data-plasmic-override={overrides.bulletPoint44}
+                              className={classNames("all", sty.bulletPoint44)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg___4LPyB)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__ljQVo
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Muffins"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                            <div
+                              data-plasmic-name={"bulletPoint45"}
+                              data-plasmic-override={overrides.bulletPoint45}
+                              className={classNames("all", sty.bulletPoint45)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__n9AaH)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__pSvd2
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Coffee Cakes"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                            <div
+                              data-plasmic-name={"bulletPoint46"}
+                              data-plasmic-override={overrides.bulletPoint46}
+                              className={classNames("all", sty.bulletPoint46)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg__okgq4)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p___735N
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Gourmet Danish"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                            <div
+                              data-plasmic-name={"bulletPoint47"}
+                              data-plasmic-override={overrides.bulletPoint47}
+                              className={classNames("all", sty.bulletPoint47)}
+                            >
+                              <VectorList01Icon
+                                className={classNames("all", sty.svg___2Omp6)}
+                                role={"img"}
+                              />
+
+                              {(
+                                hasVariant(globalVariants, "screen", "large")
+                                  ? true
+                                  : false
+                              ) ? (
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__huMi6
+                                  )}
+                                >
+                                  {hasVariant(globalVariants, "screen", "large")
+                                    ? "Cornbread"
+                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                </p>
+                              ) : null}
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          data-plasmic-name={"child10"}
+                          data-plasmic-override={overrides.child10}
+                          className={classNames("all", sty.child10)}
+                        >
+                          {(() => {
+                            const child$Props = {
+                              arrowColor: true ? "#C37620" : undefined,
+                              arrows: false,
+                              autoplay: true,
+                              autoplaySpeed: 0,
+                              beforeChange: async (...eventArgs: any) => {
+                                generateStateOnChangePropForCodeComponents(
+                                  $state,
+                                  "currentSlide",
+                                  ["sliderCarousel5", "currentSlide"],
+                                  SliderWrapper_Helpers
+                                ).apply(null, eventArgs);
+                              },
+                              centerMode: true,
+                              className: classNames(
+                                "__wab_instance",
+                                sty.sliderCarousel5
+                              ),
+                              cssEase: "linear",
+                              dots: true,
+                              initialSlide: generateStateValueProp($state, [
+                                "sliderCarousel5",
+                                "currentSlide"
+                              ]),
+                              ref: ref => {
+                                $refs["sliderCarousel5"] = ref;
+                              },
+                              sliderScopeClassName:
+                                sty["sliderCarousel5__slider"],
+                              speed: 5000,
+                              swipeToSlide: true
+                            };
+                            initializeCodeComponentStates(
+                              $state,
+                              [
+                                {
+                                  name: "currentSlide",
+                                  plasmicStateName:
+                                    "sliderCarousel5.currentSlide"
+                                }
+                              ],
+                              [],
+                              SliderWrapper_Helpers ?? {},
+                              child$Props
+                            );
+
+                            return (
+                              <SliderWrapper
+                                data-plasmic-name={"sliderCarousel5"}
+                                data-plasmic-override={
+                                  overrides.sliderCarousel5
+                                }
+                                {...child$Props}
+                              >
+                                <div
+                                  className={classNames(
+                                    "all",
+                                    sty.freeBox__nGh0K
+                                  )}
+                                >
+                                  <PlasmicImg__
+                                    alt={""}
+                                    className={classNames(sty.img__c9LbZ)}
+                                    displayHeight={"auto"}
+                                    displayMaxHeight={"none"}
+                                    displayMaxWidth={"100%"}
+                                    displayMinHeight={"0"}
+                                    displayMinWidth={"0"}
+                                    displayWidth={"auto"}
+                                    src={{
+                                      src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodMuffinsPng.png",
+                                      fullWidth: 848,
+                                      fullHeight: 693,
+                                      aspectRatio: undefined
+                                    }}
+                                  />
+                                </div>
+                                <div
+                                  className={classNames(
+                                    "all",
+                                    sty.freeBox__nm8Fa
+                                  )}
+                                >
+                                  <PlasmicImg__
+                                    alt={""}
+                                    className={classNames(sty.img__aBmdH)}
+                                    displayHeight={"auto"}
+                                    displayMaxHeight={"none"}
+                                    displayMaxWidth={"100%"}
+                                    displayMinHeight={"0"}
+                                    displayMinWidth={"0"}
+                                    displayWidth={"auto"}
+                                    src={{
+                                      src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodMuffinsPng.png",
+                                      fullWidth: 848,
+                                      fullHeight: 693,
+                                      aspectRatio: undefined
+                                    }}
+                                  />
+                                </div>
+                                <div
+                                  className={classNames(
+                                    "all",
+                                    sty.freeBox__hfjF
+                                  )}
+                                >
+                                  <PlasmicImg__
+                                    alt={""}
+                                    className={classNames(sty.img__eeWd8)}
+                                    displayHeight={"auto"}
+                                    displayMaxHeight={"none"}
+                                    displayMaxWidth={"100%"}
+                                    displayMinHeight={"0"}
+                                    displayMinWidth={"0"}
+                                    displayWidth={"auto"}
+                                    src={{
+                                      src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodMuffinsPng.png",
+                                      fullWidth: 848,
+                                      fullHeight: 693,
+                                      aspectRatio: undefined
+                                    }}
+                                  />
+                                </div>
+                              </SliderWrapper>
+                            );
+                          })()}
+                        </div>
+                      </div>
+                    </AntdTabItem>
+                  </React.Fragment>
                 }
                 onChange={async (...eventArgs: any) => {
                   generateStateOnChangeProp($state, [
@@ -1012,7 +3474,76 @@ const PlasmicDescendants = {
     "capabilitiesSection",
     "tabs",
     "tabs2",
-    "tabItem"
+    "child",
+    "title3",
+    "p2",
+    "ul",
+    "bulletPoint8",
+    "bulletPoint9",
+    "bulletPoint10",
+    "bulletPoint11",
+    "bulletPoint12",
+    "bulletPoint13",
+    "bulletPoint14",
+    "bulletPoint15",
+    "child2",
+    "sliderCarousel",
+    "child3",
+    "title4",
+    "p3",
+    "ul2",
+    "bulletPoint16",
+    "bulletPoint17",
+    "bulletPoint18",
+    "bulletPoint19",
+    "bulletPoint20",
+    "bulletPoint21",
+    "bulletPoint22",
+    "bulletPoint23",
+    "child4",
+    "sliderCarousel2",
+    "child5",
+    "title5",
+    "p4",
+    "ul3",
+    "bulletPoint24",
+    "bulletPoint25",
+    "bulletPoint26",
+    "bulletPoint27",
+    "bulletPoint28",
+    "bulletPoint29",
+    "bulletPoint30",
+    "bulletPoint31",
+    "child6",
+    "sliderCarousel3",
+    "child7",
+    "title6",
+    "p5",
+    "ul4",
+    "bulletPoint32",
+    "bulletPoint33",
+    "bulletPoint34",
+    "bulletPoint35",
+    "bulletPoint36",
+    "bulletPoint37",
+    "bulletPoint38",
+    "bulletPoint39",
+    "child8",
+    "sliderCarousel4",
+    "child9",
+    "title7",
+    "p6",
+    "ul5",
+    "bulletPoint40",
+    "bulletPoint41",
+    "bulletPoint42",
+    "bulletPoint43",
+    "bulletPoint44",
+    "bulletPoint45",
+    "bulletPoint46",
+    "bulletPoint47",
+    "child10",
+    "sliderCarousel5"
   ],
   header: ["header"],
   topHero: ["topHero"],
@@ -1070,10 +3601,413 @@ const PlasmicDescendants = {
   text2: ["text2", "title2", "p"],
   title2: ["title2"],
   p: ["p"],
-  capabilitiesSection: ["capabilitiesSection", "tabs", "tabs2", "tabItem"],
-  tabs: ["tabs", "tabs2", "tabItem"],
-  tabs2: ["tabs2", "tabItem"],
-  tabItem: ["tabItem"]
+  capabilitiesSection: [
+    "capabilitiesSection",
+    "tabs",
+    "tabs2",
+    "child",
+    "title3",
+    "p2",
+    "ul",
+    "bulletPoint8",
+    "bulletPoint9",
+    "bulletPoint10",
+    "bulletPoint11",
+    "bulletPoint12",
+    "bulletPoint13",
+    "bulletPoint14",
+    "bulletPoint15",
+    "child2",
+    "sliderCarousel",
+    "child3",
+    "title4",
+    "p3",
+    "ul2",
+    "bulletPoint16",
+    "bulletPoint17",
+    "bulletPoint18",
+    "bulletPoint19",
+    "bulletPoint20",
+    "bulletPoint21",
+    "bulletPoint22",
+    "bulletPoint23",
+    "child4",
+    "sliderCarousel2",
+    "child5",
+    "title5",
+    "p4",
+    "ul3",
+    "bulletPoint24",
+    "bulletPoint25",
+    "bulletPoint26",
+    "bulletPoint27",
+    "bulletPoint28",
+    "bulletPoint29",
+    "bulletPoint30",
+    "bulletPoint31",
+    "child6",
+    "sliderCarousel3",
+    "child7",
+    "title6",
+    "p5",
+    "ul4",
+    "bulletPoint32",
+    "bulletPoint33",
+    "bulletPoint34",
+    "bulletPoint35",
+    "bulletPoint36",
+    "bulletPoint37",
+    "bulletPoint38",
+    "bulletPoint39",
+    "child8",
+    "sliderCarousel4",
+    "child9",
+    "title7",
+    "p6",
+    "ul5",
+    "bulletPoint40",
+    "bulletPoint41",
+    "bulletPoint42",
+    "bulletPoint43",
+    "bulletPoint44",
+    "bulletPoint45",
+    "bulletPoint46",
+    "bulletPoint47",
+    "child10",
+    "sliderCarousel5"
+  ],
+  tabs: [
+    "tabs",
+    "tabs2",
+    "child",
+    "title3",
+    "p2",
+    "ul",
+    "bulletPoint8",
+    "bulletPoint9",
+    "bulletPoint10",
+    "bulletPoint11",
+    "bulletPoint12",
+    "bulletPoint13",
+    "bulletPoint14",
+    "bulletPoint15",
+    "child2",
+    "sliderCarousel",
+    "child3",
+    "title4",
+    "p3",
+    "ul2",
+    "bulletPoint16",
+    "bulletPoint17",
+    "bulletPoint18",
+    "bulletPoint19",
+    "bulletPoint20",
+    "bulletPoint21",
+    "bulletPoint22",
+    "bulletPoint23",
+    "child4",
+    "sliderCarousel2",
+    "child5",
+    "title5",
+    "p4",
+    "ul3",
+    "bulletPoint24",
+    "bulletPoint25",
+    "bulletPoint26",
+    "bulletPoint27",
+    "bulletPoint28",
+    "bulletPoint29",
+    "bulletPoint30",
+    "bulletPoint31",
+    "child6",
+    "sliderCarousel3",
+    "child7",
+    "title6",
+    "p5",
+    "ul4",
+    "bulletPoint32",
+    "bulletPoint33",
+    "bulletPoint34",
+    "bulletPoint35",
+    "bulletPoint36",
+    "bulletPoint37",
+    "bulletPoint38",
+    "bulletPoint39",
+    "child8",
+    "sliderCarousel4",
+    "child9",
+    "title7",
+    "p6",
+    "ul5",
+    "bulletPoint40",
+    "bulletPoint41",
+    "bulletPoint42",
+    "bulletPoint43",
+    "bulletPoint44",
+    "bulletPoint45",
+    "bulletPoint46",
+    "bulletPoint47",
+    "child10",
+    "sliderCarousel5"
+  ],
+  tabs2: [
+    "tabs2",
+    "child",
+    "title3",
+    "p2",
+    "ul",
+    "bulletPoint8",
+    "bulletPoint9",
+    "bulletPoint10",
+    "bulletPoint11",
+    "bulletPoint12",
+    "bulletPoint13",
+    "bulletPoint14",
+    "bulletPoint15",
+    "child2",
+    "sliderCarousel",
+    "child3",
+    "title4",
+    "p3",
+    "ul2",
+    "bulletPoint16",
+    "bulletPoint17",
+    "bulletPoint18",
+    "bulletPoint19",
+    "bulletPoint20",
+    "bulletPoint21",
+    "bulletPoint22",
+    "bulletPoint23",
+    "child4",
+    "sliderCarousel2",
+    "child5",
+    "title5",
+    "p4",
+    "ul3",
+    "bulletPoint24",
+    "bulletPoint25",
+    "bulletPoint26",
+    "bulletPoint27",
+    "bulletPoint28",
+    "bulletPoint29",
+    "bulletPoint30",
+    "bulletPoint31",
+    "child6",
+    "sliderCarousel3",
+    "child7",
+    "title6",
+    "p5",
+    "ul4",
+    "bulletPoint32",
+    "bulletPoint33",
+    "bulletPoint34",
+    "bulletPoint35",
+    "bulletPoint36",
+    "bulletPoint37",
+    "bulletPoint38",
+    "bulletPoint39",
+    "child8",
+    "sliderCarousel4",
+    "child9",
+    "title7",
+    "p6",
+    "ul5",
+    "bulletPoint40",
+    "bulletPoint41",
+    "bulletPoint42",
+    "bulletPoint43",
+    "bulletPoint44",
+    "bulletPoint45",
+    "bulletPoint46",
+    "bulletPoint47",
+    "child10",
+    "sliderCarousel5"
+  ],
+  child: [
+    "child",
+    "title3",
+    "p2",
+    "ul",
+    "bulletPoint8",
+    "bulletPoint9",
+    "bulletPoint10",
+    "bulletPoint11",
+    "bulletPoint12",
+    "bulletPoint13",
+    "bulletPoint14",
+    "bulletPoint15"
+  ],
+  title3: ["title3"],
+  p2: ["p2"],
+  ul: [
+    "ul",
+    "bulletPoint8",
+    "bulletPoint9",
+    "bulletPoint10",
+    "bulletPoint11",
+    "bulletPoint12",
+    "bulletPoint13",
+    "bulletPoint14",
+    "bulletPoint15"
+  ],
+  bulletPoint8: ["bulletPoint8"],
+  bulletPoint9: ["bulletPoint9"],
+  bulletPoint10: ["bulletPoint10"],
+  bulletPoint11: ["bulletPoint11"],
+  bulletPoint12: ["bulletPoint12"],
+  bulletPoint13: ["bulletPoint13"],
+  bulletPoint14: ["bulletPoint14"],
+  bulletPoint15: ["bulletPoint15"],
+  child2: ["child2", "sliderCarousel"],
+  sliderCarousel: ["sliderCarousel"],
+  child3: [
+    "child3",
+    "title4",
+    "p3",
+    "ul2",
+    "bulletPoint16",
+    "bulletPoint17",
+    "bulletPoint18",
+    "bulletPoint19",
+    "bulletPoint20",
+    "bulletPoint21",
+    "bulletPoint22",
+    "bulletPoint23"
+  ],
+  title4: ["title4"],
+  p3: ["p3"],
+  ul2: [
+    "ul2",
+    "bulletPoint16",
+    "bulletPoint17",
+    "bulletPoint18",
+    "bulletPoint19",
+    "bulletPoint20",
+    "bulletPoint21",
+    "bulletPoint22",
+    "bulletPoint23"
+  ],
+  bulletPoint16: ["bulletPoint16"],
+  bulletPoint17: ["bulletPoint17"],
+  bulletPoint18: ["bulletPoint18"],
+  bulletPoint19: ["bulletPoint19"],
+  bulletPoint20: ["bulletPoint20"],
+  bulletPoint21: ["bulletPoint21"],
+  bulletPoint22: ["bulletPoint22"],
+  bulletPoint23: ["bulletPoint23"],
+  child4: ["child4", "sliderCarousel2"],
+  sliderCarousel2: ["sliderCarousel2"],
+  child5: [
+    "child5",
+    "title5",
+    "p4",
+    "ul3",
+    "bulletPoint24",
+    "bulletPoint25",
+    "bulletPoint26",
+    "bulletPoint27",
+    "bulletPoint28",
+    "bulletPoint29",
+    "bulletPoint30",
+    "bulletPoint31"
+  ],
+  title5: ["title5"],
+  p4: ["p4"],
+  ul3: [
+    "ul3",
+    "bulletPoint24",
+    "bulletPoint25",
+    "bulletPoint26",
+    "bulletPoint27",
+    "bulletPoint28",
+    "bulletPoint29",
+    "bulletPoint30",
+    "bulletPoint31"
+  ],
+  bulletPoint24: ["bulletPoint24"],
+  bulletPoint25: ["bulletPoint25"],
+  bulletPoint26: ["bulletPoint26"],
+  bulletPoint27: ["bulletPoint27"],
+  bulletPoint28: ["bulletPoint28"],
+  bulletPoint29: ["bulletPoint29"],
+  bulletPoint30: ["bulletPoint30"],
+  bulletPoint31: ["bulletPoint31"],
+  child6: ["child6", "sliderCarousel3"],
+  sliderCarousel3: ["sliderCarousel3"],
+  child7: [
+    "child7",
+    "title6",
+    "p5",
+    "ul4",
+    "bulletPoint32",
+    "bulletPoint33",
+    "bulletPoint34",
+    "bulletPoint35",
+    "bulletPoint36",
+    "bulletPoint37",
+    "bulletPoint38",
+    "bulletPoint39"
+  ],
+  title6: ["title6"],
+  p5: ["p5"],
+  ul4: [
+    "ul4",
+    "bulletPoint32",
+    "bulletPoint33",
+    "bulletPoint34",
+    "bulletPoint35",
+    "bulletPoint36",
+    "bulletPoint37",
+    "bulletPoint38",
+    "bulletPoint39"
+  ],
+  bulletPoint32: ["bulletPoint32"],
+  bulletPoint33: ["bulletPoint33"],
+  bulletPoint34: ["bulletPoint34"],
+  bulletPoint35: ["bulletPoint35"],
+  bulletPoint36: ["bulletPoint36"],
+  bulletPoint37: ["bulletPoint37"],
+  bulletPoint38: ["bulletPoint38"],
+  bulletPoint39: ["bulletPoint39"],
+  child8: ["child8", "sliderCarousel4"],
+  sliderCarousel4: ["sliderCarousel4"],
+  child9: [
+    "child9",
+    "title7",
+    "p6",
+    "ul5",
+    "bulletPoint40",
+    "bulletPoint41",
+    "bulletPoint42",
+    "bulletPoint43",
+    "bulletPoint44",
+    "bulletPoint45",
+    "bulletPoint46",
+    "bulletPoint47"
+  ],
+  title7: ["title7"],
+  p6: ["p6"],
+  ul5: [
+    "ul5",
+    "bulletPoint40",
+    "bulletPoint41",
+    "bulletPoint42",
+    "bulletPoint43",
+    "bulletPoint44",
+    "bulletPoint45",
+    "bulletPoint46",
+    "bulletPoint47"
+  ],
+  bulletPoint40: ["bulletPoint40"],
+  bulletPoint41: ["bulletPoint41"],
+  bulletPoint42: ["bulletPoint42"],
+  bulletPoint43: ["bulletPoint43"],
+  bulletPoint44: ["bulletPoint44"],
+  bulletPoint45: ["bulletPoint45"],
+  bulletPoint46: ["bulletPoint46"],
+  bulletPoint47: ["bulletPoint47"],
+  child10: ["child10", "sliderCarousel5"],
+  sliderCarousel5: ["sliderCarousel5"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -1101,7 +4035,76 @@ type NodeDefaultElementType = {
   capabilitiesSection: "div";
   tabs: "div";
   tabs2: typeof AntdTabs;
-  tabItem: typeof AntdTabItem;
+  child: "div";
+  title3: "div";
+  p2: "div";
+  ul: "div";
+  bulletPoint8: "div";
+  bulletPoint9: "div";
+  bulletPoint10: "div";
+  bulletPoint11: "div";
+  bulletPoint12: "div";
+  bulletPoint13: "div";
+  bulletPoint14: "div";
+  bulletPoint15: "div";
+  child2: "div";
+  sliderCarousel: typeof SliderWrapper;
+  child3: "div";
+  title4: "div";
+  p3: "div";
+  ul2: "div";
+  bulletPoint16: "div";
+  bulletPoint17: "div";
+  bulletPoint18: "div";
+  bulletPoint19: "div";
+  bulletPoint20: "div";
+  bulletPoint21: "div";
+  bulletPoint22: "div";
+  bulletPoint23: "div";
+  child4: "div";
+  sliderCarousel2: typeof SliderWrapper;
+  child5: "div";
+  title5: "div";
+  p4: "div";
+  ul3: "div";
+  bulletPoint24: "div";
+  bulletPoint25: "div";
+  bulletPoint26: "div";
+  bulletPoint27: "div";
+  bulletPoint28: "div";
+  bulletPoint29: "div";
+  bulletPoint30: "div";
+  bulletPoint31: "div";
+  child6: "div";
+  sliderCarousel3: typeof SliderWrapper;
+  child7: "div";
+  title6: "div";
+  p5: "div";
+  ul4: "div";
+  bulletPoint32: "div";
+  bulletPoint33: "div";
+  bulletPoint34: "div";
+  bulletPoint35: "div";
+  bulletPoint36: "div";
+  bulletPoint37: "div";
+  bulletPoint38: "div";
+  bulletPoint39: "div";
+  child8: "div";
+  sliderCarousel4: typeof SliderWrapper;
+  child9: "div";
+  title7: "div";
+  p6: "div";
+  ul5: "div";
+  bulletPoint40: "div";
+  bulletPoint41: "div";
+  bulletPoint42: "div";
+  bulletPoint43: "div";
+  bulletPoint44: "div";
+  bulletPoint45: "div";
+  bulletPoint46: "div";
+  bulletPoint47: "div";
+  child10: "div";
+  sliderCarousel5: typeof SliderWrapper;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -1187,7 +4190,76 @@ export const PlasmicCapabilities = Object.assign(
     capabilitiesSection: makeNodeComponent("capabilitiesSection"),
     tabs: makeNodeComponent("tabs"),
     tabs2: makeNodeComponent("tabs2"),
-    tabItem: makeNodeComponent("tabItem"),
+    child: makeNodeComponent("child"),
+    title3: makeNodeComponent("title3"),
+    p2: makeNodeComponent("p2"),
+    ul: makeNodeComponent("ul"),
+    bulletPoint8: makeNodeComponent("bulletPoint8"),
+    bulletPoint9: makeNodeComponent("bulletPoint9"),
+    bulletPoint10: makeNodeComponent("bulletPoint10"),
+    bulletPoint11: makeNodeComponent("bulletPoint11"),
+    bulletPoint12: makeNodeComponent("bulletPoint12"),
+    bulletPoint13: makeNodeComponent("bulletPoint13"),
+    bulletPoint14: makeNodeComponent("bulletPoint14"),
+    bulletPoint15: makeNodeComponent("bulletPoint15"),
+    child2: makeNodeComponent("child2"),
+    sliderCarousel: makeNodeComponent("sliderCarousel"),
+    child3: makeNodeComponent("child3"),
+    title4: makeNodeComponent("title4"),
+    p3: makeNodeComponent("p3"),
+    ul2: makeNodeComponent("ul2"),
+    bulletPoint16: makeNodeComponent("bulletPoint16"),
+    bulletPoint17: makeNodeComponent("bulletPoint17"),
+    bulletPoint18: makeNodeComponent("bulletPoint18"),
+    bulletPoint19: makeNodeComponent("bulletPoint19"),
+    bulletPoint20: makeNodeComponent("bulletPoint20"),
+    bulletPoint21: makeNodeComponent("bulletPoint21"),
+    bulletPoint22: makeNodeComponent("bulletPoint22"),
+    bulletPoint23: makeNodeComponent("bulletPoint23"),
+    child4: makeNodeComponent("child4"),
+    sliderCarousel2: makeNodeComponent("sliderCarousel2"),
+    child5: makeNodeComponent("child5"),
+    title5: makeNodeComponent("title5"),
+    p4: makeNodeComponent("p4"),
+    ul3: makeNodeComponent("ul3"),
+    bulletPoint24: makeNodeComponent("bulletPoint24"),
+    bulletPoint25: makeNodeComponent("bulletPoint25"),
+    bulletPoint26: makeNodeComponent("bulletPoint26"),
+    bulletPoint27: makeNodeComponent("bulletPoint27"),
+    bulletPoint28: makeNodeComponent("bulletPoint28"),
+    bulletPoint29: makeNodeComponent("bulletPoint29"),
+    bulletPoint30: makeNodeComponent("bulletPoint30"),
+    bulletPoint31: makeNodeComponent("bulletPoint31"),
+    child6: makeNodeComponent("child6"),
+    sliderCarousel3: makeNodeComponent("sliderCarousel3"),
+    child7: makeNodeComponent("child7"),
+    title6: makeNodeComponent("title6"),
+    p5: makeNodeComponent("p5"),
+    ul4: makeNodeComponent("ul4"),
+    bulletPoint32: makeNodeComponent("bulletPoint32"),
+    bulletPoint33: makeNodeComponent("bulletPoint33"),
+    bulletPoint34: makeNodeComponent("bulletPoint34"),
+    bulletPoint35: makeNodeComponent("bulletPoint35"),
+    bulletPoint36: makeNodeComponent("bulletPoint36"),
+    bulletPoint37: makeNodeComponent("bulletPoint37"),
+    bulletPoint38: makeNodeComponent("bulletPoint38"),
+    bulletPoint39: makeNodeComponent("bulletPoint39"),
+    child8: makeNodeComponent("child8"),
+    sliderCarousel4: makeNodeComponent("sliderCarousel4"),
+    child9: makeNodeComponent("child9"),
+    title7: makeNodeComponent("title7"),
+    p6: makeNodeComponent("p6"),
+    ul5: makeNodeComponent("ul5"),
+    bulletPoint40: makeNodeComponent("bulletPoint40"),
+    bulletPoint41: makeNodeComponent("bulletPoint41"),
+    bulletPoint42: makeNodeComponent("bulletPoint42"),
+    bulletPoint43: makeNodeComponent("bulletPoint43"),
+    bulletPoint44: makeNodeComponent("bulletPoint44"),
+    bulletPoint45: makeNodeComponent("bulletPoint45"),
+    bulletPoint46: makeNodeComponent("bulletPoint46"),
+    bulletPoint47: makeNodeComponent("bulletPoint47"),
+    child10: makeNodeComponent("child10"),
+    sliderCarousel5: makeNodeComponent("sliderCarousel5"),
 
     // Metadata about props expected for PlasmicCapabilities
     internalVariantProps: PlasmicCapabilities__VariantProps,

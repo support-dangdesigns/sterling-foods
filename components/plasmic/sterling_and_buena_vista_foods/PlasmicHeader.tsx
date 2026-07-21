@@ -235,6 +235,12 @@ function PlasmicHeader__RenderFunc(props: {
                     {"Start a Conversation"}
                   </div>
                 }
+                start={
+                  <CircleIcon
+                    className={classNames("all", sty.svg__c54JB)}
+                    role={"img"}
+                  />
+                }
               />
 
               <div
@@ -347,6 +353,12 @@ function PlasmicHeader__RenderFunc(props: {
                   >
                     {"Start a Conversation"}
                   </div>
+                }
+                start={
+                  <CircleIcon
+                    className={classNames("all", sty.svg__craRy)}
+                    role={"img"}
+                  />
                 }
               />
 

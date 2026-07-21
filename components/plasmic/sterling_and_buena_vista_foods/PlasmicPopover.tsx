@@ -270,6 +270,12 @@ function PlasmicPopover__RenderFunc(props: {
           <Button
             className={classNames("__wab_instance", sty.button__r9UTy)}
             label={"Open Popover"}
+            start={
+              <CircleIcon
+                className={classNames("all", sty.svg___4LsXj)}
+                role={"img"}
+              />
+            }
           />
         ),
 

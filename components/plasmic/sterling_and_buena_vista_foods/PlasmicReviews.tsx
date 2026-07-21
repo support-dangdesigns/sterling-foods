@@ -216,11 +216,9 @@ function PlasmicReviews__RenderFunc(props: {
                     sty.span
                   )}
                 >
-                  {hasVariant(globalVariants, "screen", "desktop")
-                    ? ""
-                    : hasVariant(globalVariants, "screen", "large")
-                      ? ""
-                      : ""}
+                  {hasVariant(globalVariants, "screen", "large")
+                    ? "Reviews"
+                    : ""}
                 </span>
               }
               <React.Fragment>{""}</React.Fragment>

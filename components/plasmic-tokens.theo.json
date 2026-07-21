@@ -531,16 +531,6 @@
       }
     },
     {
-      "name": "Second",
-      "type": "color",
-      "value": "#C3761E",
-      "category": "color",
-      "meta": {
-        "projectId": "uyaK17nhz8WhGjYZfKjMhX",
-        "id": "I4qaFqA_B1z8"
-      }
-    },
-    {
       "name": "Size-10",
       "type": "spacing",
       "value": "0.625rem",
@@ -2717,27 +2707,7 @@
       "category": "color",
       "meta": {
         "projectId": "uyaK17nhz8WhGjYZfKjMhX",
-        "id": "455ns3DBW2hn"
-      }
-    },
-    {
-      "name": "Unnamed Style Token 3",
-      "type": "color",
-      "value": "#B76E1B",
-      "category": "color",
-      "meta": {
-        "projectId": "uyaK17nhz8WhGjYZfKjMhX",
-        "id": "YRLs3dbZJG3Q"
-      }
-    },
-    {
-      "name": "Unnamed Style Token 4",
-      "type": "color",
-      "value": "#FFFFFF",
-      "category": "color",
-      "meta": {
-        "projectId": "uyaK17nhz8WhGjYZfKjMhX",
-        "id": "kuHCOakvjM__"
+        "id": "7vUadY5nXPox"
       }
     },
     {

@@ -38,7 +38,7 @@ function TopHero_(props: TopHeroProps, ref: HTMLElementRefOf<"div">) {
   // By default, we are just piping all TopHeroProps here, but feel free
   // to do whatever works for you.
 
-  return <PlasmicTopHero aboutUsHero={{ ref }} {...props} />;
+  return <PlasmicTopHero hero={{ ref }} {...props} />;
 }
 
 const TopHero = React.forwardRef(TopHero_);

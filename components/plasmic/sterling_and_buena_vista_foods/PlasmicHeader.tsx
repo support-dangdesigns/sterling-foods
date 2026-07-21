@@ -321,7 +321,19 @@ function PlasmicHeader__RenderFunc(props: {
                   throw e;
                 }
               })()
-            : true
+            : (() => {
+                try {
+                  return $state.expanded;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })()
       ) ? (
         <div
           data-plasmic-name={"expandMenu"}

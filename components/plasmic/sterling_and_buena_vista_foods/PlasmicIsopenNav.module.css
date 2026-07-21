@@ -48,7 +48,7 @@
 .img {
   animation: none;
   object-fit: contain;
-  max-width: 100%;
+  max-width: 710px;
 }
 .img > picture > img {
   object-fit: contain;

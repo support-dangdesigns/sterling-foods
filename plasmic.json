@@ -27432,7 +27432,7 @@
           "projectId": "uyaK17nhz8WhGjYZfKjMhX",
           "renderModuleFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicHome.tsx",
           "importSpec": {
-            "modulePath": "../pages/home.tsx"
+            "modulePath": "../pages/index.tsx"
           },
           "cssFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicHome.module.css",
           "scheme": "blackbox",

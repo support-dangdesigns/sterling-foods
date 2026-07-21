@@ -205,10 +205,10 @@ function PlasmicIsopenNav__RenderFunc(props: {
   const new$Queries: Record<string, ReturnType<typeof usePlasmicDataOp>> = {
     headerComponent: usePlasmicDataOp(() => {
       return {
-        sourceId: "oysuYFSoAdb9rhuPV27pRM",
-        opId: "1e3e083e-48b7-4106-9227-c37010d548b7",
+        sourceId: "9jcy7uWSctPjPwBiwjaShM",
+        opId: "cc4bb718-fb14-439a-91d9-ba3b468facbb",
         userArgs: {},
-        cacheKey: `plasmic.$.1e3e083e-48b7-4106-9227-c37010d548b7.$.`,
+        cacheKey: `plasmic.$.cc4bb718-fb14-439a-91d9-ba3b468facbb.$.`,
         invalidatedKeys: null,
         roleId: null
       };
@@ -260,7 +260,7 @@ function PlasmicIsopenNav__RenderFunc(props: {
           className={classNames(sty.img)}
           displayHeight={"auto"}
           displayMaxHeight={"none"}
-          displayMaxWidth={"100%"}
+          displayMaxWidth={"710px"}
           displayMinHeight={"0"}
           displayMinWidth={"0"}
           displayWidth={
@@ -996,7 +996,7 @@ function PlasmicIsopenNav__RenderFunc(props: {
                       operation: 0,
                       value:
                         $queries.headerComponent.data.response.data.component
-                          .components.image.node
+                          .components.image.node.mediaItemUrl
                     };
                     return (({ variable, value, startIndex, deleteCount }) => {
                       if (!variable) {

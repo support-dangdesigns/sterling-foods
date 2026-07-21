@@ -395,6 +395,7 @@
 }
 .expandMenu {
   animation: none;
+  display: flex;
   flex-direction: column;
   position: relative;
   width: 100vw;
@@ -413,7 +414,6 @@
   transition-duration: 1s;
   transition-timing-function: ease-in;
   flex-shrink: 0;
-  display: none;
   -webkit-transition-property: transform;
   -webkit-transition-timing-function: ease-in;
   -webkit-transition-duration: 1s;
@@ -665,7 +665,7 @@
 }
 .text__anc5O {
   white-space: pre;
-  color: var(--token-Xx7oe00aHq8H);
+  color: var(--token-Q67gH6ouJM2i);
   font-size: 21px;
   font-weight: 600;
   font-family: "Avenir Heavy";
@@ -698,7 +698,7 @@
   width: 67px;
   height: 67px;
   max-width: 100%;
-  background: var(--token-Xx7oe00aHq8H);
+  background: var(--token-Q67gH6ouJM2i);
   transform: none;
   cursor: pointer;
   flex-shrink: 0;

@@ -115,14 +115,9 @@ export type PageCtx = {
 
 export function generateDynamicMetadata($q: any, $ctx: PageCtx) {
   return {
-    title: "sterling-foods-homepage",
-
-    openGraph: {
-      title: "sterling-foods-homepage"
-    },
+    openGraph: {},
     twitter: {
-      card: "summary" as const,
-      title: "sterling-foods-homepage"
+      card: "summary" as const
     }
   };
 }
@@ -255,10 +250,10 @@ function PlasmicHome__RenderFunc(props: {
     }),
     wpGraph: usePlasmicDataOp(() => {
       return {
-        sourceId: "oysuYFSoAdb9rhuPV27pRM",
-        opId: "e9415e90-4a0e-4524-a0c3-5402dbe53dba",
+        sourceId: "9jcy7uWSctPjPwBiwjaShM",
+        opId: "bcc4b2e1-5d14-42ff-be62-ec9a5a62df2c",
         userArgs: {},
-        cacheKey: `plasmic.$.e9415e90-4a0e-4524-a0c3-5402dbe53dba.$.`,
+        cacheKey: `plasmic.$.bcc4b2e1-5d14-42ff-be62-ec9a5a62df2c.$.`,
         invalidatedKeys: null,
         roleId: null
       };
@@ -279,16 +274,7 @@ function PlasmicHome__RenderFunc(props: {
 
   return (
     <React.Fragment>
-      <Head>
-        <meta name="twitter:card" content="summary" />
-        <title key="title">{pageMetadata.title}</title>
-        <meta key="og:title" property="og:title" content={pageMetadata.title} />
-        <meta
-          key="twitter:title"
-          property="twitter:title"
-          content={pageMetadata.title}
-        />
-      </Head>
+      <Head></Head>
 
       <style>{`
         body {
@@ -1802,8 +1788,8 @@ export const PlasmicHome = Object.assign(
     internalArgProps: PlasmicHome__ArgProps,
 
     pageMetadata: generateDynamicMetadata(wrapQueriesWithLoadingProxy({}), {
-      pageRoute: "/home",
-      pagePath: "/home",
+      pageRoute: "/",
+      pagePath: "/",
       params: {},
       query: {}
     })

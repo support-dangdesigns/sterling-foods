@@ -8671,3 +8671,21 @@
     animation: none;
   }
 }
+.ctaBottom:global(.__wab_instance) {
+  max-width: 100%;
+  display: none;
+}
+@media (max-width: 2000px) {
+  .ctaBottom:global(.__wab_instance) {
+    display: flex;
+  }
+}
+.footer:global(.__wab_instance) {
+  max-width: 100%;
+  display: none;
+}
+@media (max-width: 2000px) {
+  .footer:global(.__wab_instance) {
+    display: flex;
+  }
+}

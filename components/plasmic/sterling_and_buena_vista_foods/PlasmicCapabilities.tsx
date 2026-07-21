@@ -66,6 +66,8 @@ import { AntdTabItem } from "@plasmicpkgs/antd5/skinny/registerTabs";
 import { SliderWrapper } from "@plasmicpkgs/react-slick";
 import { sliderHelpers as SliderWrapper_Helpers } from "@plasmicpkgs/react-slick";
 import PrimaryBtn from "../../PrimaryBtn"; // plasmic-import: TiffCyYLfuDQ/component
+import CtaBottom from "../../CtaBottom"; // plasmic-import: UmfSTsW6wMCz/component
+import Footer from "../../Footer"; // plasmic-import: RbMtVh1ii_PZ/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/styleTokensProvider
 
@@ -221,6 +223,8 @@ export type PlasmicCapabilities__OverridesType = {
   text4?: Flex__<"div">;
   title9?: Flex__<"div">;
   p7?: Flex__<"div">;
+  ctaBottom?: Flex__<typeof CtaBottom>;
+  footer?: Flex__<typeof Footer>;
 };
 
 export interface DefaultCapabilitiesProps {}
@@ -1065,7 +1069,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                   "activeKey"
                 ])}
                 animateTabBar={true}
-                animateTabContent={false}
+                animateTabContent={true}
                 animated={true}
                 centered={true}
                 className={classNames("__wab_instance", sty.tabs2)}
@@ -1893,7 +1897,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                               arrowColor: true ? "#C37620" : undefined,
                               arrows: false,
                               autoplay: true,
-                              autoplaySpeed: 0,
+                              autoplaySpeed: 1500,
                               beforeChange: async (...eventArgs: any) => {
                                 generateStateOnChangePropForCodeComponents(
                                   $state,
@@ -1909,16 +1913,18 @@ function PlasmicCapabilities__RenderFunc(props: {
                               ),
                               cssEase: "linear",
                               dots: true,
+                              fade: false,
                               initialSlide: generateStateValueProp($state, [
                                 "sliderCarousel2",
                                 "currentSlide"
                               ]),
+                              pauseOnFocus: true,
                               ref: ref => {
                                 $refs["sliderCarousel2"] = ref;
                               },
                               sliderScopeClassName:
                                 sty["sliderCarousel2__slider"],
-                              speed: 5000,
+                              speed: 1000,
                               swipeToSlide: true
                             };
                             initializeCodeComponentStates(
@@ -3736,6 +3742,17 @@ function PlasmicCapabilities__RenderFunc(props: {
               ) : null}
             </div>
           ) : null}
+          <CtaBottom
+            data-plasmic-name={"ctaBottom"}
+            data-plasmic-override={overrides.ctaBottom}
+            className={classNames("__wab_instance", sty.ctaBottom)}
+          />
+
+          <Footer
+            data-plasmic-name={"footer"}
+            data-plasmic-override={overrides.footer}
+            className={classNames("__wab_instance", sty.footer)}
+          />
         </div>
       </div>
     </React.Fragment>
@@ -3845,7 +3862,9 @@ const PlasmicDescendants = {
     "foodSafety4",
     "text4",
     "title9",
-    "p7"
+    "p7",
+    "ctaBottom",
+    "footer"
   ],
   header: ["header"],
   topHero: ["topHero"],
@@ -4330,7 +4349,9 @@ const PlasmicDescendants = {
   foodSafety4: ["foodSafety4", "text4", "title9", "p7"],
   text4: ["text4", "title9", "p7"],
   title9: ["title9"],
-  p7: ["p7"]
+  p7: ["p7"],
+  ctaBottom: ["ctaBottom"],
+  footer: ["footer"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -4438,6 +4459,8 @@ type NodeDefaultElementType = {
   text4: "div";
   title9: "div";
   p7: "div";
+  ctaBottom: typeof CtaBottom;
+  footer: typeof Footer;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -4603,6 +4626,8 @@ export const PlasmicCapabilities = Object.assign(
     text4: makeNodeComponent("text4"),
     title9: makeNodeComponent("title9"),
     p7: makeNodeComponent("p7"),
+    ctaBottom: makeNodeComponent("ctaBottom"),
+    footer: makeNodeComponent("footer"),
 
     // Metadata about props expected for PlasmicCapabilities
     internalVariantProps: PlasmicCapabilities__VariantProps,

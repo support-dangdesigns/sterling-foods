@@ -250,7 +250,7 @@ function PlasmicFooter__RenderFunc(props: {
                     ? true
                     : hasVariant(globalVariants, "screen", "tablet")
                       ? true
-                      : hasVariant(globalVariants, "screen", "smallLaptop")
+                      : hasVariant(globalVariants, "screen", "smallLaptop2")
                         ? true
                         : hasVariant(globalVariants, "screen", "smallLaptop")
                           ? true
@@ -456,15 +456,6 @@ function PlasmicFooter__RenderFunc(props: {
                     data-plasmic-override={overrides.locations5}
                     className={classNames("all", sty.locations5)}
                   >
-                    <div
-                      className={classNames(
-                        "all",
-                        "__wab_text",
-                        sty.text__x2HWc
-                      )}
-                    >
-                      {"Locations"}
-                    </div>
                     <div
                       data-plasmic-name={"address7"}
                       data-plasmic-override={overrides.address7}

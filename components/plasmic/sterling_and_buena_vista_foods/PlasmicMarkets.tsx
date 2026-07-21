@@ -122,7 +122,7 @@ export type PlasmicMarkets__OverridesType = {
   root?: Flex__<"div">;
   header?: Flex__<typeof Header>;
   topHero?: Flex__<typeof TopHero>;
-  body?: Flex__<"div">;
+  marketsBody?: Flex__<"div">;
   intro?: Flex__<"div">;
   freeBox?: Flex__<"div">;
   foodSafety?: Flex__<"div">;
@@ -251,9 +251,9 @@ function PlasmicMarkets__RenderFunc(props: {
           />
 
           <div
-            data-plasmic-name={"body"}
-            data-plasmic-override={overrides.body}
-            className={classNames("all", sty.body)}
+            data-plasmic-name={"marketsBody"}
+            data-plasmic-override={overrides.marketsBody}
+            className={classNames("all", sty.marketsBody)}
           >
             <div
               data-plasmic-name={"intro"}
@@ -872,7 +872,7 @@ const PlasmicDescendants = {
     "root",
     "header",
     "topHero",
-    "body",
+    "marketsBody",
     "intro",
     "freeBox",
     "foodSafety",
@@ -904,8 +904,8 @@ const PlasmicDescendants = {
   ],
   header: ["header"],
   topHero: ["topHero"],
-  body: [
-    "body",
+  marketsBody: [
+    "marketsBody",
     "intro",
     "freeBox",
     "foodSafety",
@@ -976,7 +976,7 @@ type NodeDefaultElementType = {
   root: "div";
   header: typeof Header;
   topHero: typeof TopHero;
-  body: "div";
+  marketsBody: "div";
   intro: "div";
   freeBox: "div";
   foodSafety: "div";
@@ -1071,7 +1071,7 @@ export const PlasmicMarkets = Object.assign(
     // Helper components rendering sub-elements
     header: makeNodeComponent("header"),
     topHero: makeNodeComponent("topHero"),
-    body: makeNodeComponent("body"),
+    marketsBody: makeNodeComponent("marketsBody"),
     intro: makeNodeComponent("intro"),
     freeBox: makeNodeComponent("freeBox"),
     foodSafety: makeNodeComponent("foodSafety"),

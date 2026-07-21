@@ -1296,6 +1296,11 @@
   align-self: flex-start;
   flex-shrink: 0;
 }
+@media (max-width: 2000px) {
+  .primaryBtn__sB6Y:global(.__wab_instance) {
+    flex-shrink: 0;
+  }
+}
 @media (max-width: 1920px) {
   .primaryBtn__sB6Y:global(.__wab_instance) {
     flex-shrink: 0;

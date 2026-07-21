@@ -337,7 +337,7 @@ function PlasmicReviews__RenderFunc(props: {
           ref: ref => {
             $refs["sliderCarousel"] = ref;
           },
-          rows: hasVariant(globalVariants, "screen", "smallLaptop")
+          rows: hasVariant(globalVariants, "screen", "smallLaptop2")
             ? 1
             : hasVariant(globalVariants, "screen", "smallDesktop")
               ? 1
@@ -347,7 +347,7 @@ function PlasmicReviews__RenderFunc(props: {
             ? 1
             : hasVariant(globalVariants, "screen", "tablet")
               ? 1
-              : hasVariant(globalVariants, "screen", "smallLaptop")
+              : hasVariant(globalVariants, "screen", "smallLaptop2")
                 ? 1
                 : hasVariant(globalVariants, "screen", "laptop")
                   ? 2
@@ -364,7 +364,7 @@ function PlasmicReviews__RenderFunc(props: {
               ? 1
               : hasVariant(globalVariants, "screen", "tablet")
                 ? 1
-                : hasVariant(globalVariants, "screen", "smallLaptop")
+                : hasVariant(globalVariants, "screen", "smallLaptop2")
                   ? 1
                   : hasVariant(globalVariants, "screen", "laptop")
                     ? 1

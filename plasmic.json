@@ -27849,6 +27849,20 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/capabilities"
+        },
+        {
+          "id": "E0oqoOVOXwfb",
+          "name": "Innovation",
+          "type": "managed",
+          "projectId": "uyaK17nhz8WhGjYZfKjMhX",
+          "renderModuleFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicInnovation.tsx",
+          "importSpec": {
+            "modulePath": "../pages/innovation.tsx"
+          },
+          "cssFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicInnovation.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/innovation"
         }
       ],
       "icons": [
@@ -28021,6 +28035,11 @@
           "id": "0b4C3zRQLVvH",
           "name": "Arrow2SvgIcon",
           "moduleFilePath": "plasmic/sterling_and_buena_vista_foods/icons/PlasmicIcon__Arrow2Svg.tsx"
+        },
+        {
+          "id": "XJ7-EwyAPgh7",
+          "name": "CheckSvgIcon",
+          "moduleFilePath": "plasmic/sterling_and_buena_vista_foods/icons/PlasmicIcon__CheckSvg.tsx"
         }
       ],
       "images": [
@@ -28728,6 +28747,111 @@
           "id": "wLQzG-UYRmGE",
           "name": "[SterlingFoods]QualityandSafetyHero.jpg",
           "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodsQualityandSafetyHeroJpg.jpg"
+        },
+        {
+          "id": "zr5o1svnhROg",
+          "name": "Image.png 2",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/imagePng2.png"
+        },
+        {
+          "id": "Ehv0aAOOrBgJ",
+          "name": "Background.png 2",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/backgroundPng2.png"
+        },
+        {
+          "id": "-Oh9JcLqExBN",
+          "name": "Rectangle 35.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/rectangle35Png.png"
+        },
+        {
+          "id": "M8Mh9638klUI",
+          "name": "Group 1.png 3",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/group1Png3.png"
+        },
+        {
+          "id": "yObA3TQrhZf9",
+          "name": "Image2.png 2",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/image2Png2.png"
+        },
+        {
+          "id": "Q2IrdwUmDLDB",
+          "name": "Image3.png 2",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/image3Png2.png"
+        },
+        {
+          "id": "s08Kh3Q1FrCM",
+          "name": "Image4.png 2",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/image4Png2.png"
+        },
+        {
+          "id": "ulT96OLRkcgI",
+          "name": "[SterlingFood]Ice-cream-apple-dessert.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodIceCreamAppleDessertPng.png"
+        },
+        {
+          "id": "6sXuBb6XZDxZ",
+          "name": "[SterlingFood]Ham-cheese-croissant.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodHamCheeseCroissantPng.png"
+        },
+        {
+          "id": "zK1m04hCSgCr",
+          "name": "[SterlingFood]Chocolate-lava-cake.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodChocolateLavaCakePng.png"
+        },
+        {
+          "id": "ao1v5SwgRIu6",
+          "name": "[SterlingFood]mini-quiche.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodMiniQuichePng.png"
+        },
+        {
+          "id": "xw4ut3_NTplR",
+          "name": "[SterlingFood]puff-pastries.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodPuffPastriesPng.png"
+        },
+        {
+          "id": "DjWWuwEKqcqB",
+          "name": "[SterlingFood]orange-background.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodOrangeBackgroundPng.png"
+        },
+        {
+          "id": "W7n6sUpQ_wYJ",
+          "name": "[SterlingFood]dessert-with-filling.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodDessertWithFillingPng.png"
+        },
+        {
+          "id": "VVEDksX7J6XD",
+          "name": "Background.png 3",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/backgroundPng3.png"
+        },
+        {
+          "id": "L4-x42MMPfo-",
+          "name": "Image.png 3",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/imagePng3.png"
+        },
+        {
+          "id": "3TNgvme1dACo",
+          "name": "[SterlingFood]Empanadas.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodEmpanadasPng.png"
+        },
+        {
+          "id": "qHjn-yJGD9J9",
+          "name": "[SterlingFood]Weighing-flour.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodWeighingFlourPng.png"
+        },
+        {
+          "id": "gOowj5_10PNl",
+          "name": "[SterlingFood]orange-background-accent-image.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodOrangeBackgroundAccentImagePng.png"
+        },
+        {
+          "id": "oMvZjfFF70b7",
+          "name": "Rectangle 34.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/rectangle34Png.png"
+        },
+        {
+          "id": "1dyBWaSYHbJE",
+          "name": "Elements.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/elementsPng.png"
         }
       ],
       "indirect": false,

@@ -256,9 +256,9 @@ function PlasmicHome__RenderFunc(props: {
     wpGraph: usePlasmicDataOp(() => {
       return {
         sourceId: "oysuYFSoAdb9rhuPV27pRM",
-        opId: "e5527222-d05e-4811-818d-6e29fa6a8a6c",
+        opId: "e9415e90-4a0e-4524-a0c3-5402dbe53dba",
         userArgs: {},
-        cacheKey: `plasmic.$.e5527222-d05e-4811-818d-6e29fa6a8a6c.$.`,
+        cacheKey: `plasmic.$.e9415e90-4a0e-4524-a0c3-5402dbe53dba.$.`,
         invalidatedKeys: null,
         roleId: null
       };
@@ -530,27 +530,23 @@ function PlasmicHome__RenderFunc(props: {
                         sty.h3___0Sw2Y
                       )}
                     >
-                      {hasVariant(globalVariants, "screen", "desktop") ? (
-                        "made to meet the demands of today\u2019s \nfoodservice, retail, and convenience markets."
-                      ) : (
-                        <React.Fragment>
-                          {(() => {
-                            try {
-                              return $q.homePage.data.body.data.pageBy
-                                .pageContent.headlineParent[1].headlinechild[1]
-                                .headlinenormal;
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return "made to meet the demands of today\u2019s foodservice, retail, and convenience markets.";
-                              }
-                              throw e;
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.homePage.data.body.data.pageBy.pageContent
+                              .headlineParent[1].headlinechild[1]
+                              .headlinenormal;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "made to meet the demands of today\u2019s foodservice, retail, and convenience markets.";
                             }
-                          })()}
-                        </React.Fragment>
-                      )}
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </h3>
                   </div>
                 </Reveal>
@@ -620,7 +616,7 @@ function PlasmicHome__RenderFunc(props: {
                               e instanceof TypeError ||
                               e?.plasmicType === "PlasmicUndefinedDataError"
                             ) {
-                              return "From restaurants and non-commercial foodservice to convenience stores and in-store bakeries, we partner with our customers to deliver high-quality baked goods and snack products tailored to their needs.";
+                              return "";
                             }
                             throw e;
                           }
@@ -1088,10 +1084,21 @@ function PlasmicHome__RenderFunc(props: {
                                   "large"
                                 ) ? (
                                   <React.Fragment>
-                                    {
-                                      $q.homePage.data.body.data.pageBy
-                                        .pageContent.textArea[6].text
-                                    }
+                                    {(() => {
+                                      try {
+                                        return $q.homePage.data.body.data.pageBy
+                                          .pageContent.textArea[5].text;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return "";
+                                        }
+                                        throw e;
+                                      }
+                                    })()}
                                   </React.Fragment>
                                 ) : (
                                   "National Restaurants"
@@ -1124,10 +1131,21 @@ function PlasmicHome__RenderFunc(props: {
                                   "large"
                                 ) ? (
                                   <React.Fragment>
-                                    {
-                                      $q.homePage.data.body.data.pageBy
-                                        .pageContent.textArea[7].text
-                                    }
+                                    {(() => {
+                                      try {
+                                        return $q.homePage.data.body.data.pageBy
+                                          .pageContent.textArea[6].text;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return "";
+                                        }
+                                        throw e;
+                                      }
+                                    })()}
                                   </React.Fragment>
                                 ) : (
                                   "Convenience Stores"
@@ -1160,10 +1178,21 @@ function PlasmicHome__RenderFunc(props: {
                                   "large"
                                 ) ? (
                                   <React.Fragment>
-                                    {
-                                      $q.homePage.data.body.data.pageBy
-                                        .pageContent.textArea[8].text
-                                    }
+                                    {(() => {
+                                      try {
+                                        return $q.homePage.data.body.data.pageBy
+                                          .pageContent.textArea[7].text;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return "";
+                                        }
+                                        throw e;
+                                      }
+                                    })()}
                                   </React.Fragment>
                                 ) : (
                                   "In-Store Bakery"
@@ -1207,10 +1236,21 @@ function PlasmicHome__RenderFunc(props: {
                                   "large"
                                 ) ? (
                                   <React.Fragment>
-                                    {
-                                      $q.homePage.data.body.data.pageBy
-                                        .pageContent.textArea[9].text
-                                    }
+                                    {(() => {
+                                      try {
+                                        return $q.homePage.data.body.data.pageBy
+                                          .pageContent.textArea[8].text;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return "";
+                                        }
+                                        throw e;
+                                      }
+                                    })()}
                                   </React.Fragment>
                                 ) : (
                                   "School Foodservice"
@@ -1243,10 +1283,21 @@ function PlasmicHome__RenderFunc(props: {
                                   "large"
                                 ) ? (
                                   <React.Fragment>
-                                    {
-                                      $q.homePage.data.body.data.pageBy
-                                        .pageContent.textArea[10].text
-                                    }
+                                    {(() => {
+                                      try {
+                                        return $q.homePage.data.body.data.pageBy
+                                          .pageContent.textArea[9].text;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return "";
+                                        }
+                                        throw e;
+                                      }
+                                    })()}
                                   </React.Fragment>
                                 ) : (
                                   "Military"
@@ -1503,8 +1554,16 @@ function PlasmicHome__RenderFunc(props: {
               data-plasmic-name={"reviews"}
               data-plasmic-override={overrides.reviews}
               className={classNames("__wab_instance", sty.reviews)}
-              query={$queries.test}
-              wpGraph={$queries.wpGraph}
+              query={
+                hasVariant(globalVariants, "screen", "large")
+                  ? $q.homePage.data
+                  : $queries.test
+              }
+              wpGraph={
+                hasVariant(globalVariants, "screen", "large")
+                  ? $q.homePage.data
+                  : $queries.wpGraph
+              }
             />
 
             <CtaBottom

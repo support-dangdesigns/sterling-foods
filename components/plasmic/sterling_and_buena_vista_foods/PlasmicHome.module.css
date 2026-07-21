@@ -902,6 +902,11 @@
     flex-shrink: 0;
   }
 }
+@media (max-width: 1700px) {
+  .primaryBtn__bH4Ix:global(.__wab_instance) {
+    flex-shrink: 0;
+  }
+}
 @media (max-width: 1024px) {
   .primaryBtn__bH4Ix:global(.__wab_instance) {
     align-self: center;
@@ -1614,6 +1619,11 @@
     flex-shrink: 0;
   }
 }
+@media (max-width: 757px) {
+  .primaryBtn__gurqP:global(.__wab_instance) {
+    flex-shrink: 0;
+  }
+}
 .text__c0Kxh {
   height: auto;
 }
@@ -2231,6 +2241,11 @@
   }
 }
 @media (max-width: 1024px) {
+  .secondaryBtn__pKcaL:global(.__wab_instance) {
+    flex-shrink: 0;
+  }
+}
+@media (max-width: 757px) {
   .secondaryBtn__pKcaL:global(.__wab_instance) {
     flex-shrink: 0;
   }

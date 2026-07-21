@@ -2,6 +2,7 @@
   display: flex;
   transform: translate3d(0px, 0px, 0px);
   position: relative;
+  justify-content: center;
 }
 .wrapper {
   display: flex;
@@ -10,14 +11,14 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   color: var(--token-Gx156sR9ht1r);
   background: var(--token-2G4aHgk_mSgB);
   min-width: 0;
   border-radius: 30px;
-  padding: 8px;
-  border: 2px solid var(--token-Xx7oe00aHq8H);
+  padding: 0px;
+  border: 1px solid var(--token-Q67gH6ouJM2i);
 }
 .social:hover .wrapper {
   border-color: var(--token-Gx156sR9ht1r);
@@ -30,12 +31,12 @@
   animation: none;
   object-fit: cover;
   max-width: 100%;
-  height: 22px;
-  color: var(--token-Xx7oe00aHq8H);
-  width: 50px;
+  height: 35px;
+  color: var(--token-Q67gH6ouJM2i);
+  width: 35px;
   align-self: center;
   flex-shrink: 0;
-  border-radius: 30px;
+  border-radius: 0px;
 }
 .social:hover .icon {
   color: var(--token-Gx156sR9ht1r);

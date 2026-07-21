@@ -401,6 +401,16 @@
       }
     },
     {
+      "name": "Darker-Secondary",
+      "type": "color",
+      "value": "#C1751E",
+      "category": "color",
+      "meta": {
+        "projectId": "uyaK17nhz8WhGjYZfKjMhX",
+        "id": "Q67gH6ouJM2i"
+      }
+    },
+    {
       "name": "Fave-Script",
       "type": "fontfamily",
       "value": "Fave Script Pro",
@@ -2708,6 +2718,16 @@
       "meta": {
         "projectId": "uyaK17nhz8WhGjYZfKjMhX",
         "id": "7vUadY5nXPox"
+      }
+    },
+    {
+      "name": "Unnamed Style Token 3",
+      "type": "color",
+      "value": "#C37620",
+      "category": "color",
+      "meta": {
+        "projectId": "uyaK17nhz8WhGjYZfKjMhX",
+        "id": "z1rs6kJeTV4H"
       }
     },
     {

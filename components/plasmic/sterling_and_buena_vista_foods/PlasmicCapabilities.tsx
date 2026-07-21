@@ -65,6 +65,7 @@ import { AntdTabs } from "@plasmicpkgs/antd5/skinny/registerTabs";
 import { AntdTabItem } from "@plasmicpkgs/antd5/skinny/registerTabs";
 import { SliderWrapper } from "@plasmicpkgs/react-slick";
 import { sliderHelpers as SliderWrapper_Helpers } from "@plasmicpkgs/react-slick";
+import PrimaryBtn from "../../PrimaryBtn"; // plasmic-import: TiffCyYLfuDQ/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/styleTokensProvider
 
@@ -210,6 +211,16 @@ export type PlasmicCapabilities__OverridesType = {
   bulletPoint47?: Flex__<"div">;
   child10?: Flex__<"div">;
   sliderCarousel5?: Flex__<typeof SliderWrapper>;
+  capabilitiesSection2?: Flex__<"div">;
+  foodSafety3?: Flex__<"div">;
+  text3?: Flex__<"div">;
+  title8?: Flex__<"div">;
+  p8?: Flex__<"div">;
+  primaryBtn?: Flex__<typeof PrimaryBtn>;
+  foodSafety4?: Flex__<"div">;
+  text4?: Flex__<"div">;
+  title9?: Flex__<"div">;
+  p7?: Flex__<"div">;
 };
 
 export interface DefaultCapabilitiesProps {}
@@ -2960,7 +2971,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                         "__wab_instance",
                         sty.tabItem__zoJsH
                       )}
-                      key={"4"}
+                      key={"5"}
                       label={
                         <div
                           className={classNames(
@@ -3444,6 +3455,287 @@ function PlasmicCapabilities__RenderFunc(props: {
               />
             </div>
           </div>
+          {(hasVariant(globalVariants, "screen", "large") ? true : false) ? (
+            <div
+              data-plasmic-name={"capabilitiesSection2"}
+              data-plasmic-override={overrides.capabilitiesSection2}
+              className={classNames("all", sty.capabilitiesSection2)}
+            >
+              <div
+                data-plasmic-name={"foodSafety3"}
+                data-plasmic-override={overrides.foodSafety3}
+                className={classNames("all", sty.foodSafety3)}
+              >
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__xg7Rd)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={
+                    hasVariant(globalVariants, "screen", "mobile")
+                      ? "100%"
+                      : hasVariant(globalVariants, "screen", "largerMobile")
+                        ? "auto"
+                        : hasVariant(globalVariants, "screen", "dualScreen")
+                          ? "auto"
+                          : hasVariant(globalVariants, "screen", "smallTablet")
+                            ? "70%"
+                            : hasVariant(globalVariants, "screen", "laptop")
+                              ? "35%"
+                              : hasVariant(
+                                    globalVariants,
+                                    "screen",
+                                    "smallDesktop"
+                                  )
+                                ? "472px"
+                                : hasVariant(globalVariants, "screen", "large")
+                                  ? "640px"
+                                  : "640px"
+                  }
+                  loading={"lazy"}
+                  src={
+                    hasVariant(globalVariants, "screen", "large")
+                      ? {
+                          src: "/plasmic/sterling_and_buena_vista_foods/images/group1Png4.png",
+                          fullWidth: 698,
+                          fullHeight: 591,
+                          aspectRatio: undefined
+                        }
+                      : {
+                          src: "/plasmic/sterling_and_buena_vista_foods/images/imagePng2.png",
+                          fullWidth: 639,
+                          fullHeight: 610,
+                          aspectRatio: undefined
+                        }
+                  }
+                />
+
+                <div
+                  data-plasmic-name={"text3"}
+                  data-plasmic-override={overrides.text3}
+                  className={classNames("all", sty.text3)}
+                >
+                  <div
+                    data-plasmic-name={"title8"}
+                    data-plasmic-override={overrides.title8}
+                    className={classNames("all", sty.title8)}
+                  >
+                    <h4
+                      className={classNames(
+                        "all",
+                        "h4",
+                        "h4__uyaK1",
+                        "__wab_text",
+                        sty.h4__nwgZ6
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "large")
+                        ? "Quality & Food"
+                        : "Across Our Organization"}
+                    </h4>
+                    <h3
+                      className={classNames(
+                        "all",
+                        "h3",
+                        "h3__uyaK1",
+                        "__wab_text",
+                        sty.h3__sb7BC,
+                        "h3-script"
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "large")
+                        ? "Safety"
+                        : "Oppoertunities"}
+                    </h3>
+                  </div>
+                  <div
+                    data-plasmic-name={"p8"}
+                    data-plasmic-override={overrides.p8}
+                    className={classNames("all", sty.p8)}
+                  >
+                    {(
+                      hasVariant(globalVariants, "screen", "large")
+                        ? true
+                        : false
+                    ) ? (
+                      <p
+                        className={classNames(
+                          "all",
+                          "p",
+                          "p__uyaK1",
+                          "__wab_text",
+                          sty.p___37EN
+                        )}
+                      >
+                        {hasVariant(globalVariants, "screen", "large")
+                          ? "Quality and food safety are embedded in everything we do. Through rigorous standards, continuous improvement initiatives, and a culture of accountability, we deliver products our customers can trust."
+                          : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                      </p>
+                    ) : null}
+                  </div>
+                  <PrimaryBtn
+                    data-plasmic-name={"primaryBtn"}
+                    data-plasmic-override={overrides.primaryBtn}
+                    className={classNames("__wab_instance", sty.primaryBtn)}
+                  >
+                    <div
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text__rner1
+                      )}
+                    >
+                      {"See Quality in Action"}
+                    </div>
+                  </PrimaryBtn>
+                </div>
+              </div>
+              {(
+                hasVariant(globalVariants, "screen", "large") ? true : false
+              ) ? (
+                <div
+                  data-plasmic-name={"foodSafety4"}
+                  data-plasmic-override={overrides.foodSafety4}
+                  className={classNames("all", sty.foodSafety4)}
+                >
+                  <div
+                    data-plasmic-name={"text4"}
+                    data-plasmic-override={overrides.text4}
+                    className={classNames("all", sty.text4)}
+                  >
+                    <div
+                      data-plasmic-name={"title9"}
+                      data-plasmic-override={overrides.title9}
+                      className={classNames("all", sty.title9)}
+                    >
+                      <h3
+                        className={classNames(
+                          "all",
+                          "h3",
+                          "h3__uyaK1",
+                          "__wab_text",
+                          sty.h3__mqVYk,
+                          "h3-script"
+                        )}
+                      >
+                        {hasVariant(globalVariants, "screen", "large")
+                          ? "Custom"
+                          : "Oppoertunities"}
+                      </h3>
+                      <h4
+                        className={classNames(
+                          "all",
+                          "h4",
+                          "h4__uyaK1",
+                          "__wab_text",
+                          sty.h4__jvoqm
+                        )}
+                      >
+                        {hasVariant(globalVariants, "screen", "large")
+                          ? "Manufacturing"
+                          : "Across Our Organization"}
+                      </h4>
+                    </div>
+                    <div
+                      data-plasmic-name={"p7"}
+                      data-plasmic-override={overrides.p7}
+                      className={classNames("all", sty.p7)}
+                    >
+                      {(
+                        hasVariant(globalVariants, "screen", "large")
+                          ? true
+                          : false
+                      ) ? (
+                        <p
+                          className={classNames(
+                            "all",
+                            "p",
+                            "p__uyaK1",
+                            "__wab_text",
+                            sty.p__jjt8
+                          )}
+                        >
+                          {hasVariant(globalVariants, "screen", "large")
+                            ? "Want to see where innovation comes to life?"
+                            : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                        </p>
+                      ) : null}
+                      <p
+                        className={classNames(
+                          "all",
+                          "p",
+                          "p__uyaK1",
+                          "__wab_text",
+                          sty.p___6TOet
+                        )}
+                      >
+                        {hasVariant(globalVariants, "screen", "large")
+                          ? "Explore our network of six manufacturing facilities designed to support quality, flexibility, and scale."
+                          : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                      </p>
+                    </div>
+                  </div>
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__cAa9O)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "mobile")
+                        ? "100%"
+                        : hasVariant(globalVariants, "screen", "largerMobile")
+                          ? "auto"
+                          : hasVariant(globalVariants, "screen", "dualScreen")
+                            ? "auto"
+                            : hasVariant(
+                                  globalVariants,
+                                  "screen",
+                                  "smallTablet"
+                                )
+                              ? "70%"
+                              : hasVariant(globalVariants, "screen", "laptop")
+                                ? "35%"
+                                : hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "smallDesktop"
+                                    )
+                                  ? "472px"
+                                  : hasVariant(
+                                        globalVariants,
+                                        "screen",
+                                        "large"
+                                      )
+                                    ? "640px"
+                                    : "640px"
+                    }
+                    loading={"lazy"}
+                    src={
+                      hasVariant(globalVariants, "screen", "large")
+                        ? {
+                            src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodManufacturingExcellencePng.png",
+                            fullWidth: 680,
+                            fullHeight: 553,
+                            aspectRatio: undefined
+                          }
+                        : {
+                            src: "/plasmic/sterling_and_buena_vista_foods/images/imagePng2.png",
+                            fullWidth: 639,
+                            fullHeight: 610,
+                            aspectRatio: undefined
+                          }
+                    }
+                  />
+                </div>
+              ) : null}
+            </div>
+          ) : null}
         </div>
       </div>
     </React.Fragment>
@@ -3543,7 +3835,17 @@ const PlasmicDescendants = {
     "bulletPoint46",
     "bulletPoint47",
     "child10",
-    "sliderCarousel5"
+    "sliderCarousel5",
+    "capabilitiesSection2",
+    "foodSafety3",
+    "text3",
+    "title8",
+    "p8",
+    "primaryBtn",
+    "foodSafety4",
+    "text4",
+    "title9",
+    "p7"
   ],
   header: ["header"],
   topHero: ["topHero"],
@@ -4007,7 +4309,28 @@ const PlasmicDescendants = {
   bulletPoint46: ["bulletPoint46"],
   bulletPoint47: ["bulletPoint47"],
   child10: ["child10", "sliderCarousel5"],
-  sliderCarousel5: ["sliderCarousel5"]
+  sliderCarousel5: ["sliderCarousel5"],
+  capabilitiesSection2: [
+    "capabilitiesSection2",
+    "foodSafety3",
+    "text3",
+    "title8",
+    "p8",
+    "primaryBtn",
+    "foodSafety4",
+    "text4",
+    "title9",
+    "p7"
+  ],
+  foodSafety3: ["foodSafety3", "text3", "title8", "p8", "primaryBtn"],
+  text3: ["text3", "title8", "p8", "primaryBtn"],
+  title8: ["title8"],
+  p8: ["p8"],
+  primaryBtn: ["primaryBtn"],
+  foodSafety4: ["foodSafety4", "text4", "title9", "p7"],
+  text4: ["text4", "title9", "p7"],
+  title9: ["title9"],
+  p7: ["p7"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -4105,6 +4428,16 @@ type NodeDefaultElementType = {
   bulletPoint47: "div";
   child10: "div";
   sliderCarousel5: typeof SliderWrapper;
+  capabilitiesSection2: "div";
+  foodSafety3: "div";
+  text3: "div";
+  title8: "div";
+  p8: "div";
+  primaryBtn: typeof PrimaryBtn;
+  foodSafety4: "div";
+  text4: "div";
+  title9: "div";
+  p7: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -4260,6 +4593,16 @@ export const PlasmicCapabilities = Object.assign(
     bulletPoint47: makeNodeComponent("bulletPoint47"),
     child10: makeNodeComponent("child10"),
     sliderCarousel5: makeNodeComponent("sliderCarousel5"),
+    capabilitiesSection2: makeNodeComponent("capabilitiesSection2"),
+    foodSafety3: makeNodeComponent("foodSafety3"),
+    text3: makeNodeComponent("text3"),
+    title8: makeNodeComponent("title8"),
+    p8: makeNodeComponent("p8"),
+    primaryBtn: makeNodeComponent("primaryBtn"),
+    foodSafety4: makeNodeComponent("foodSafety4"),
+    text4: makeNodeComponent("text4"),
+    title9: makeNodeComponent("title9"),
+    p7: makeNodeComponent("p7"),
 
     // Metadata about props expected for PlasmicCapabilities
     internalVariantProps: PlasmicCapabilities__VariantProps,

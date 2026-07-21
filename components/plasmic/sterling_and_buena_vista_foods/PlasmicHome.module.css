@@ -1352,6 +1352,16 @@
     bottom: -150px;
   }
 }
+@media (max-width: 1200px) {
+  .embedHtml:global(.__wab_instance) {
+    bottom: -110px;
+  }
+}
+@media (max-width: 1024px) {
+  .embedHtml:global(.__wab_instance) {
+    bottom: -110px;
+  }
+}
 @media (max-width: 757px) {
   .embedHtml:global(.__wab_instance) {
     display: none;

@@ -109,6 +109,10 @@
   --plasmic-token-fun-phone-title: var(--token-6b9ouEWkpNnV);
   --token-7vUadY5nXPox: var(--token-Xx7oe00aHq8H);
   --plasmic-token-unnamed-style-token-2: var(--token-7vUadY5nXPox);
+  --token-Q67gH6ouJM2i: #c1751e;
+  --plasmic-token-darker-secondary: var(--token-Q67gH6ouJM2i);
+  --token-z1rs6kJeTV4H: #c37620;
+  --plasmic-token-unnamed-style-token-3: var(--token-z1rs6kJeTV4H);
 }
 
 @media (max-width: 414px) {

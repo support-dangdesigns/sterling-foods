@@ -284,7 +284,7 @@
 @media (max-width: 1024px) {
   .convoBtn:global(.__wab_instance):global(.__wab_instance) {
     width: 215px;
-    height: 67px;
+    height: 50px;
     flex-shrink: 0;
   }
 }
@@ -309,7 +309,7 @@
 }
 .text__tpd2 {
   white-space: pre;
-  color: var(--token-Xx7oe00aHq8H);
+  color: var(--token-VSsNRyw2VYkH);
   font-size: 21px;
   font-weight: 600;
   font-family: "Avenir Heavy";
@@ -342,7 +342,7 @@
   width: 67px;
   height: 67px;
   max-width: 100%;
-  background: var(--token-Xx7oe00aHq8H);
+  background: var(--token-VSsNRyw2VYkH);
   transform: none;
   cursor: pointer;
   flex-shrink: 0;

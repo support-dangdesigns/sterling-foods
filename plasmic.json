@@ -28053,6 +28053,26 @@
           "id": "XJ7-EwyAPgh7",
           "name": "CheckSvgIcon",
           "moduleFilePath": "plasmic/sterling_and_buena_vista_foods/icons/PlasmicIcon__CheckSvg.tsx"
+        },
+        {
+          "id": "V4S0S2RM9ARx",
+          "name": "CaretRightSvgIcon",
+          "moduleFilePath": "plasmic/sterling_and_buena_vista_foods/icons/PlasmicIcon__CaretRightSvg.tsx"
+        },
+        {
+          "id": "hDp_poHft2x6",
+          "name": "CaretLeftSvgIcon",
+          "moduleFilePath": "plasmic/sterling_and_buena_vista_foods/icons/PlasmicIcon__CaretLeftSvg.tsx"
+        },
+        {
+          "id": "6ZAfQoit46_8",
+          "name": "AngleRightSolidFullSvgIcon",
+          "moduleFilePath": "plasmic/sterling_and_buena_vista_foods/icons/PlasmicIcon__AngleRightSolidFullSvg.tsx"
+        },
+        {
+          "id": "wGKh3C7DCjX9",
+          "name": "AngleLeftSolidFullSvgIcon",
+          "moduleFilePath": "plasmic/sterling_and_buena_vista_foods/icons/PlasmicIcon__AngleLeftSolidFullSvg.tsx"
         }
       ],
       "images": [
@@ -28870,6 +28890,16 @@
           "id": "lAI5mTCDGabf",
           "name": "[SterlingFood]Muffins.png",
           "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodMuffinsPng.png"
+        },
+        {
+          "id": "KMlhKQ_j0vVj",
+          "name": "Group 1.png 4",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/group1Png4.png"
+        },
+        {
+          "id": "8HQb4AawTlIi",
+          "name": "[SterlingFood]Manufacturing-excellence.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodManufacturingExcellencePng.png"
         }
       ],
       "indirect": false,

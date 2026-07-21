@@ -63,6 +63,7 @@ import Header from "../../Header"; // plasmic-import: qmNXHiKWCTTQ/component
 import TopHero from "../../TopHero"; // plasmic-import: 2xRY6WOypZh7/component
 import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 import { ParallaxWrapper } from "@plasmicpkgs/react-scroll-parallax";
+import PrimaryBtn from "../../PrimaryBtn"; // plasmic-import: TiffCyYLfuDQ/component
 import { SliderWrapper } from "@plasmicpkgs/react-slick";
 import { sliderHelpers as SliderWrapper_Helpers } from "@plasmicpkgs/react-slick";
 import CtaBottom from "../../CtaBottom"; // plasmic-import: UmfSTsW6wMCz/component
@@ -176,6 +177,7 @@ export type PlasmicAboutUs__OverridesType = {
   text10?: Flex__<"div">;
   aboutUsSection4?: Flex__<"div">;
   wrapper3?: Flex__<"div">;
+  primaryBtn?: Flex__<typeof PrimaryBtn>;
   aboutUsSection6?: Flex__<"div">;
   heading4?: Flex__<"div">;
   row?: Flex__<"div">;
@@ -1226,7 +1228,7 @@ function PlasmicAboutUs__RenderFunc(props: {
                     className={classNames("all", "__wab_text", sty.text___11O)}
                   >
                     {
-                      "We believe strong companies help build strong communities and meaningful connections. As such, our associates actively engage with and support a variety\u0003of charitable causes within the local communities where we operate."
+                      "We believe strong companies help build strong communities and meaningful connections. As such, our associates actively engage with and support a variety of charitable causes within the local communities where we operate."
                     }
                   </div>
                 </div>
@@ -1303,12 +1305,12 @@ function PlasmicAboutUs__RenderFunc(props: {
                 <div
                   className={classNames("all", "__wab_text", sty.text__ccudt)}
                 >
-                  {"Creating Impact"}
+                  {"Delivering Excellence"}
                 </div>
                 <div
                   className={classNames("all", "__wab_text", sty.text__a1UKq)}
                 >
-                  {"Beyond the Bakery"}
+                  {"Across Every Facility"}
                 </div>
                 <div
                   className={classNames("all", "__wab_text", sty.text__aLer5)}
@@ -1317,26 +1319,15 @@ function PlasmicAboutUs__RenderFunc(props: {
                     "Our vast network of facilities features redundant capabilities, providing customers with the added comfort of assured supply.  Every Sterling Foods facility is strongly committed to quality, food safety, innovation, and customer partnership. Collectively, our network provides the manufacturing bandwidth and operational flexibility to support our customers\u2019 growth."
                   }
                 </div>
+                <PrimaryBtn
+                  data-plasmic-name={"primaryBtn"}
+                  data-plasmic-override={overrides.primaryBtn}
+                  className={classNames("__wab_instance", sty.primaryBtn)}
+                >
+                  {"Explore Our Facilities"}
+                </PrimaryBtn>
               </div>
-              <div className={classNames("all", sty.freeBox__lYw9D)}>
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img___6Stb7)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/sterling_and_buena_vista_foods/images/imageCopyAvif.avif",
-                    fullWidth: 833,
-                    fullHeight: 656,
-                    aspectRatio: undefined
-                  }}
-                />
-              </div>
+              <div className={classNames("all", sty.freeBox__lYw9D)} />
             </div>
           </div>
           <div
@@ -1764,7 +1755,13 @@ function PlasmicAboutUs__RenderFunc(props: {
               const child$Props = {
                 arrows: false,
                 autoplay: true,
-                autoplaySpeed: 0,
+                autoplaySpeed: hasVariant(
+                  globalVariants,
+                  "screen",
+                  "largerMobile"
+                )
+                  ? 5000
+                  : 0,
                 beforeChange: async (...eventArgs: any) => {
                   generateStateOnChangePropForCodeComponents(
                     $state,
@@ -1793,7 +1790,16 @@ function PlasmicAboutUs__RenderFunc(props: {
                   $refs["sliderCarousel"] = ref;
                 },
                 sliderScopeClassName: sty["sliderCarousel__slider"],
-                speed: 5000
+                speed: hasVariant(globalVariants, "screen", "largerMobile")
+                  ? 2500
+                  : 5000,
+                swipeToSlide: hasVariant(
+                  globalVariants,
+                  "screen",
+                  "largerMobile"
+                )
+                  ? true
+                  : undefined
               };
               initializeCodeComponentStates(
                 $state,
@@ -2375,6 +2381,7 @@ const PlasmicDescendants = {
     "text10",
     "aboutUsSection4",
     "wrapper3",
+    "primaryBtn",
     "aboutUsSection6",
     "heading4",
     "row",
@@ -2592,8 +2599,9 @@ const PlasmicDescendants = {
   text9: ["text9"],
   section3: ["section3", "text10"],
   text10: ["text10"],
-  aboutUsSection4: ["aboutUsSection4", "wrapper3"],
-  wrapper3: ["wrapper3"],
+  aboutUsSection4: ["aboutUsSection4", "wrapper3", "primaryBtn"],
+  wrapper3: ["wrapper3", "primaryBtn"],
+  primaryBtn: ["primaryBtn"],
   aboutUsSection6: [
     "aboutUsSection6",
     "heading4",
@@ -2849,6 +2857,7 @@ type NodeDefaultElementType = {
   text10: "div";
   aboutUsSection4: "div";
   wrapper3: "div";
+  primaryBtn: typeof PrimaryBtn;
   aboutUsSection6: "div";
   heading4: "div";
   row: "div";
@@ -3020,6 +3029,7 @@ export const PlasmicAboutUs = Object.assign(
     text10: makeNodeComponent("text10"),
     aboutUsSection4: makeNodeComponent("aboutUsSection4"),
     wrapper3: makeNodeComponent("wrapper3"),
+    primaryBtn: makeNodeComponent("primaryBtn"),
     aboutUsSection6: makeNodeComponent("aboutUsSection6"),
     heading4: makeNodeComponent("heading4"),
     row: makeNodeComponent("row"),

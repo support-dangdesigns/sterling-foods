@@ -22,7 +22,7 @@ import { HTMLElementRefOf } from "@plasmicapp/react-web";
 // total control over the props for your component.
 export interface FooterLinksProps extends DefaultFooterLinksProps {}
 
-function FooterLinks_(props: FooterLinksProps, ref: HTMLElementRefOf<"div">) {
+function FooterLinks_(props: FooterLinksProps, ref: HTMLElementRefOf<"a">) {
   // Use PlasmicFooterLinks to render this component as it was
   // designed in Plasmic, by activating the appropriate variants,
   // attaching the appropriate event handlers, etc.  You

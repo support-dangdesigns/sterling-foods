@@ -276,6 +276,11 @@ function PlasmicHeader__RenderFunc(props: {
                     {"Start a Conversation"}
                   </div>
                 }
+                linkTo={
+                  hasVariant(globalVariants, "screen", "mediumDesktop")
+                    ? `/contact-us`
+                    : undefined
+                }
                 start={
                   <CircleIcon
                     className={classNames("all", sty.svg__c54JB)}

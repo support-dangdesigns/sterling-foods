@@ -751,7 +751,22 @@ function PlasmicAboutUs__RenderFunc(props: {
                         sty.text__m9HKz
                       )}
                     >
-                      {"Personalized Product Development"}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.aboutUs.data.body.data.pageBy.pageContent
+                              .headlineParent[2].headlinechild[0].headlinefav;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "Personalized Product Development";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </div>
                     <div
                       className={classNames(
@@ -760,9 +775,23 @@ function PlasmicAboutUs__RenderFunc(props: {
                         sty.text__xClBx
                       )}
                     >
-                      {
-                        "Custom-crafted solutions tailored to your vision and operational needs."
-                      }
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.aboutUs.data.body.data.pageBy.pageContent
+                              .headlineParent[2].headlinechild[0]
+                              .headlinenormal;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "Custom-crafted solutions tailored to your vision and operational needs.";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </div>
                   </div>
                 </div>
@@ -806,7 +835,22 @@ function PlasmicAboutUs__RenderFunc(props: {
                         sty.text__rdBfl
                       )}
                     >
-                      {"Flexible, Large-Scale Capabilities"}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.aboutUs.data.body.data.pageBy.pageContent
+                              .headlineParent[2].headlinechild[1].headlinefav;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "Flexible, Large-Scale Capabilities";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </div>
                     <div
                       className={classNames(
@@ -815,9 +859,23 @@ function PlasmicAboutUs__RenderFunc(props: {
                         sty.text__q8AI
                       )}
                     >
-                      {
-                        "Six manufacturing facilities built to support growth, flexibility and scalability."
-                      }
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.aboutUs.data.body.data.pageBy.pageContent
+                              .headlineParent[2].headlinechild[1]
+                              .headlinenormal;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "Six manufacturing facilities built to support growth, flexibility and scalability.";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </div>
                   </div>
                 </div>
@@ -861,7 +919,22 @@ function PlasmicAboutUs__RenderFunc(props: {
                         sty.text__lt6Tc
                       )}
                     >
-                      {"Leading Edge Technologies"}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.aboutUs.data.body.data.pageBy.pageContent
+                              .headlineParent[2].headlinechild[2].headlinefav;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "Leading Edge Technologies";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </div>
                     <div
                       className={classNames(
@@ -870,9 +943,23 @@ function PlasmicAboutUs__RenderFunc(props: {
                         sty.text___193Le
                       )}
                     >
-                      {
-                        "State-of-the-art technical and nutritional expertise to craft unique, trend-forward innovations."
-                      }
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.aboutUs.data.body.data.pageBy.pageContent
+                              .headlineParent[2].headlinechild[2]
+                              .headlinenormal;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "State-of-the-art technical and nutritional expertise to craft unique, trend-forward innovations.";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </div>
                   </div>
                 </div>
@@ -942,7 +1029,22 @@ function PlasmicAboutUs__RenderFunc(props: {
                         sty.text__jNrh9
                       )}
                     >
-                      {"Effective & Efficient Scale-Up"}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.aboutUs.data.body.data.pageBy.pageContent
+                              .headlineParent[3].headlinechild[0].headlinefav;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "Effective & Efficient Scale-Up";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </div>
                     <div
                       className={classNames(
@@ -951,9 +1053,23 @@ function PlasmicAboutUs__RenderFunc(props: {
                         sty.text___2WnOh
                       )}
                     >
-                      {
-                        "From concept development to commercialization, we bring ideas to life seamlessly."
-                      }
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.aboutUs.data.body.data.pageBy.pageContent
+                              .headlineParent[3].headlinechild[0]
+                              .headlinenormal;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "From concept development to commercialization, we bring ideas to life seamlessly.";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </div>
                   </div>
                 </div>
@@ -997,7 +1113,22 @@ function PlasmicAboutUs__RenderFunc(props: {
                         sty.text__eaqho
                       )}
                     >
-                      {"Quality & Food\nSafety First"}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.aboutUs.data.body.data.pageBy.pageContent
+                              .headlineParent[3].headlinechild[1].headlinefav;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "Quality & Food\nSafety First";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </div>
                     <div
                       className={classNames(
@@ -1006,9 +1137,23 @@ function PlasmicAboutUs__RenderFunc(props: {
                         sty.text__uYVeW
                       )}
                     >
-                      {
-                        "Rigorous standards and a deeply embedded culture of accountability."
-                      }
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.aboutUs.data.body.data.pageBy.pageContent
+                              .headlineParent[3].headlinechild[1]
+                              .headlinenormal;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "Rigorous standards and a deeply embedded culture of accountability.";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </div>
                   </div>
                 </div>
@@ -1052,7 +1197,22 @@ function PlasmicAboutUs__RenderFunc(props: {
                         sty.text__taK2W
                       )}
                     >
-                      {"Collaborative \nPartnership"}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.aboutUs.data.body.data.pageBy.pageContent
+                              .headlineParent[3].headlinechild[2].headlinefav;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "Collaborative \nPartnership";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </div>
                     <div
                       className={classNames(
@@ -1061,9 +1221,23 @@ function PlasmicAboutUs__RenderFunc(props: {
                         sty.text__nZ0Qt
                       )}
                     >
-                      {
-                        "The agility and responsiveness of a smaller company backed by extensive capabilities."
-                      }
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.aboutUs.data.body.data.pageBy.pageContent
+                              .headlineParent[3].headlinechild[2]
+                              .headlinenormal;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "The agility and responsiveness of a smaller company backed by extensive capabilities.";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </div>
                   </div>
                 </div>
@@ -1088,14 +1262,42 @@ function PlasmicAboutUs__RenderFunc(props: {
                 <div
                   className={classNames("all", "__wab_text", sty.text___35Tun)}
                 >
-                  {"Mission & Values"}
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $q.aboutUs.data.body.data.pageBy.pageContent
+                          .textArea[5].text;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "Mission & Values";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
                 </div>
                 <div
                   className={classNames("all", "__wab_text", sty.text__fgSL)}
                 >
-                  {
-                    "At Sterling Foods, our mission goes beyond delivering great products.  We are passionate about building trusted partnerships with our customers through exceptional service, collaboration, and support, with a steadfast commitment to quality, safety, consistency, and technical innovation."
-                  }
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $q.aboutUs.data.body.data.pageBy.pageContent
+                          .textArea[6].text;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "At Sterling Foods, our mission goes beyond delivering great products.  We are passionate about building trusted partnerships with our customers through exceptional service, collaboration, and support, with a steadfast commitment to quality, safety, consistency, and technical innovation.";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
                 </div>
                 <div
                   className={classNames("all", "__wab_text", sty.text__pS7J4)}
@@ -1287,23 +1489,79 @@ function PlasmicAboutUs__RenderFunc(props: {
                 <div
                   className={classNames("all", "__wab_text", sty.text__cIteS)}
                 >
-                  {"Creating Impact"}
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $q.aboutUs.data.body.data.pageBy.pageContent
+                          .headlineParent[4].headlinechild[0].headlinenormal;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "Creating Impact";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
                 </div>
                 <div
                   className={classNames("all", "__wab_text", sty.text__xZRcQ)}
                 >
-                  {"Beyond the Bakery"}
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $q.aboutUs.data.body.data.pageBy.pageContent
+                          .headlineParent[4].headlinechild[0].headlinefav;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "Beyond the Bakery";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
                 </div>
               </div>
               <div className={classNames("all", "__wab_text", sty.text__cie5)}>
-                {
-                  "Sterling Foods is committed to doing what\u2019s right for our employees, customers, communities, and the environment \u2013 acting as thoughtful stewards of all we impact."
-                }
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return $q.aboutUs.data.body.data.pageBy.pageContent
+                        .textArea[7].text;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "Sterling Foods is committed to doing what\u2019s right for our employees, customers, communities, and the environment \u2013 acting as thoughtful stewards of all we impact.";
+                      }
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
               </div>
               <div className={classNames("all", "__wab_text", sty.text__lNigi)}>
-                {
-                  "As a purpose-driven organization, we believe business success is about more than products. Through responsible growth, strong partnerships, and meaningful investments in people and communities, we strive to create lasting impact both inside and outside our organization."
-                }
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return $q.aboutUs.data.body.data.pageBy.pageContent
+                        .textArea[8].text;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "As a purpose-driven organization, we believe business success is about more than products. Through responsible growth, strong partnerships, and meaningful investments in people and communities, we strive to create lasting impact both inside and outside our organization.";
+                      }
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
               </div>
               <div
                 data-plasmic-name={"section"}
@@ -1346,14 +1604,42 @@ function PlasmicAboutUs__RenderFunc(props: {
                       sty.h1__iJl7G
                     )}
                   >
-                    {"Sustainability"}
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $q.aboutUs.data.body.data.pageBy.pageContent
+                            .headlineParent[5].headlinechild[0].headlinefav;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "Sustainability";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
                   </h1>
                   <div
                     className={classNames("all", "__wab_text", sty.text__td0Lu)}
                   >
-                    {
-                      "We continually seek opportunities to support responsible business practices,\nimprove operational efficiency, and leverage our supplier network to source ingredients responsibly."
-                    }
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $q.aboutUs.data.body.data.pageBy.pageContent
+                            .textArea[9].text;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "We continually seek opportunities to support responsible business practices,\nimprove operational efficiency, and leverage our supplier network to source ingredients responsibly.";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
                   </div>
                 </div>
               </div>
@@ -1398,14 +1684,42 @@ function PlasmicAboutUs__RenderFunc(props: {
                       sty.h1__je9Us
                     )}
                   >
-                    {"Community Engagement"}
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $q.aboutUs.data.body.data.pageBy.pageContent
+                            .headlineParent[5].headlinechild[1].headlinefav;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "Community Engagement";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
                   </h1>
                   <div
                     className={classNames("all", "__wab_text", sty.text___11O)}
                   >
-                    {
-                      "We believe strong companies help build strong communities and meaningful connections. As such, our associates actively engage with and support a variety of charitable causes within the local communities where we operate."
-                    }
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $q.aboutUs.data.body.data.pageBy.pageContent
+                            .textArea[10].text;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "We believe strong companies help build strong communities and meaningful connections. As such, our associates actively engage with and support a variety of charitable causes within the local communities where we operate.";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
                   </div>
                 </div>
               </div>
@@ -1450,7 +1764,22 @@ function PlasmicAboutUs__RenderFunc(props: {
                       sty.h1__buMCa
                     )}
                   >
-                    {"Partnerships & Giving Back"}
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $q.aboutUs.data.body.data.pageBy.pageContent
+                            .headlineParent[5].headlinechild[2].headlinefav;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "Partnerships & Giving Back";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
                   </h1>
                   <div
                     className={classNames(
@@ -1459,9 +1788,22 @@ function PlasmicAboutUs__RenderFunc(props: {
                       sty.text___2FRgU
                     )}
                   >
-                    {
-                      "We\u2019re committed to building relationships that create positive impact beyond our business. Through trusted partnerships with suppliers, enrichment programs for our associates, and support for the communities we serve, we foster a culture of collaboration, integrity, and shared success."
-                    }
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $q.aboutUs.data.body.data.pageBy.pageContent
+                            .textArea[11].text;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "We\u2019re committed to building relationships that create positive impact beyond our business. Through trusted partnerships with suppliers, enrichment programs for our associates, and support for the communities we serve, we foster a culture of collaboration, integrity, and shared success.";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
                   </div>
                 </div>
               </div>
@@ -1481,19 +1823,62 @@ function PlasmicAboutUs__RenderFunc(props: {
                 <div
                   className={classNames("all", "__wab_text", sty.text__ccudt)}
                 >
-                  {"Delivering Excellence"}
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $q.aboutUs.data.body.data.pageBy.pageContent
+                          .headlineParent[6].headlinechild[0].headlinenormal;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "Delivering Excellence";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
                 </div>
                 <div
                   className={classNames("all", "__wab_text", sty.text__a1UKq)}
                 >
-                  {"Across Every Facility"}
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $q.aboutUs.data.body.data.pageBy.pageContent
+                          .headlineParent[6].headlinechild[0].headlinefav;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "Across Every Facility";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
                 </div>
                 <div
                   className={classNames("all", "__wab_text", sty.text__aLer5)}
                 >
-                  {
-                    "Our vast network of facilities features redundant capabilities, providing customers with the added comfort of assured supply.  Every Sterling Foods facility is strongly committed to quality, food safety, innovation, and customer partnership. Collectively, our network provides the manufacturing bandwidth and operational flexibility to support our customers\u2019 growth."
-                  }
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $q.aboutUs.data.body.data.pageBy.pageContent
+                          .textArea[12].text;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "Our vast network of facilities features redundant capabilities, providing customers with the added comfort of assured supply.  Every Sterling Foods facility is strongly committed to quality, food safety, innovation, and customer partnership. Collectively, our network provides the manufacturing bandwidth and operational flexibility to support our customers\u2019 growth.";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
                 </div>
                 <PrimaryBtn
                   data-plasmic-name={"primaryBtn"}
@@ -1517,18 +1902,76 @@ function PlasmicAboutUs__RenderFunc(props: {
               className={classNames("all", sty.heading4)}
             >
               <div className={classNames("all", "__wab_text", sty.text__uUDw)}>
-                {"Meet Our"}
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return $q.aboutUs.data.body.data.pageBy.pageContent
+                        .headlineParent[7].headlinechild[0].headlinefav;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "Meet Our";
+                      }
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
               </div>
               <div className={classNames("all", "__wab_text", sty.text__t8J0T)}>
-                {"Leadership"}
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return $q.aboutUs.data.body.data.pageBy.pageContent
+                        .headlineParent[7].headlinechild[0].headlinenormal;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "Leadership";
+                      }
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
               </div>
               <div className={classNames("all", "__wab_text", sty.text__bnCbi)}>
-                {"Team"}
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return $q.aboutUs.data.body.data.pageBy.pageContent
+                        .headlineParent[7].headlinechild[1].headlinefav;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "Team";
+                      }
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
               </div>
               <div className={classNames("all", "__wab_text", sty.text__zwfc5)}>
-                {
-                  "Behind Sterling Foods is a team committed to innovation, long-term growth, and building strong customer partnerships."
-                }
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return $q.aboutUs.data.body.data.pageBy.pageContent
+                        .textArea[13].text;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "Behind Sterling Foods is a team committed to innovation, long-term growth, and building strong customer partnerships.";
+                      }
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
               </div>
             </div>
             <div

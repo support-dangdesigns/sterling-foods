@@ -14,9 +14,6 @@
   min-height: 0;
   padding: 0px;
 }
-.header:global(.__wab_instance) {
-  max-width: 100%;
-}
 .pageContainer {
   display: flex;
   flex-direction: column;
@@ -29,20 +26,25 @@
   overflow: visible;
   min-width: 0;
 }
+.header:global(.__wab_instance) {
+  max-width: 100%;
+}
 .homeHero {
   display: flex;
   flex-direction: column;
   position: relative;
   width: 100%;
-  height: 975px;
-  justify-content: flex-end;
+  height: auto;
+  justify-content: center;
   align-items: center;
   row-gap: 10px;
-  background: linear-gradient(#1c3757, #1c3757), var(--token-RvPI6LyeIPmd);
+  background:
+    url("/plasmic/sterling_and_buena_vista_foods/images/hmpgheroAvif2.avif") top 100% left 50% / contain no-repeat,
+    var(--token-WxvvgatuPYoJ);
   max-width: 100%;
   align-self: flex-start;
+  padding-top: 150px;
   min-width: 0;
-  flex-shrink: 0;
 }
 @media (max-width: 2000px) {
   .homeHero {
@@ -115,8 +117,8 @@
   align-items: stretch;
   align-self: center;
   position: relative;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   flex-wrap: nowrap;
   align-content: center;
 }
@@ -308,6 +310,7 @@
   max-width: 100%;
   justify-content: flex-start;
   align-items: center;
+  background: var(--token-sP5FKk2rRQuW);
   min-width: 0;
   min-height: 0;
   padding: 0px;
@@ -344,15 +347,15 @@
   flex-direction: column;
   position: relative;
   width: 100%;
-  height: 900px;
+  height: auto;
   max-width: 100%;
   justify-content: flex-start;
   align-items: center;
-  background: url("https://studio.plasmic.app/static/img/placeholder.png") top
-    50% left 50% / cover repeat;
+  overflow: visible;
+  background: url("/plasmic/sterling_and_buena_vista_foods/images/croissantAccentimgAvif2.avif") top 100% right 100% no-repeat;
+  align-self: auto;
   min-width: 0;
-  flex-shrink: 0;
-  padding: 0px 8px 8px;
+  padding: 0px 0px 180px;
 }
 @media (max-width: 2000px) {
   .freeBox___9VvCh {
@@ -401,7 +404,7 @@
   border-bottom-left-radius: 30px;
   row-gap: 20px;
   min-height: 0;
-  padding: 120px 75px 75px;
+  padding: 250px 75px 75px;
 }
 @media (max-width: 2000px) {
   .intro {
@@ -923,8 +926,9 @@
   max-width: 100%;
   justify-content: flex-start;
   align-items: center;
+  background: none;
   min-width: 0;
-  padding: 8px;
+  padding: 0px;
 }
 @media (max-width: 2000px) {
   .section {
@@ -952,10 +956,11 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+  background: url("/plasmic/sterling_and_buena_vista_foods/images/bkgdaccentSmallAvif2.avif") left 90% top 100% no-repeat;
   min-width: 0;
-  padding: 8px;
+  padding: 0px;
 }
 @media (max-width: 2000px) {
   .section2 {
@@ -975,7 +980,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 1455px;
+  width: 1700px;
   height: 707px;
   max-width: 100%;
   column-gap: 30px;
@@ -1138,6 +1143,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
+  color: var(--token-Xx7oe00aHq8H);
   min-width: 0;
 }
 @media (max-width: 2000px) {
@@ -1269,7 +1275,6 @@
   left: 30px;
   top: auto;
   bottom: 10px;
-  display: none;
 }
 @media (max-width: 2000px) {
   .embedHtml:global(.__wab_instance) {
@@ -1311,8 +1316,9 @@
   max-width: 100%;
   justify-content: flex-start;
   align-items: center;
+  background: url("/plasmic/sterling_and_buena_vista_foods/images/bkgdaccentRightcornerAvif.avif") top 100% left 100% / contain no-repeat;
   min-width: 0;
-  padding: 8px;
+  padding: 0px;
 }
 @media (max-width: 2000px) {
   .section3 {
@@ -1336,7 +1342,7 @@
   height: 707px;
   max-width: 100%;
   column-gap: 0px;
-  padding-left: 100px;
+  padding-left: 0px;
   flex-shrink: 0;
 }
 @media (max-width: 2000px) {
@@ -1879,6 +1885,7 @@
   flex-shrink: 0;
   -webkit-transition-property: all;
   -webkit-transition-duration: 1s;
+  margin: -80px;
 }
 @media (max-width: 2000px) {
   .freeBox__r7Arz {

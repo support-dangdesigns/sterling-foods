@@ -27876,6 +27876,32 @@
           "cssFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicTabSterling.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "L8mbdjsNn4ed",
+          "name": "SterlingFooterLink",
+          "type": "managed",
+          "projectId": "uyaK17nhz8WhGjYZfKjMhX",
+          "renderModuleFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicSterlingFooterLink.tsx",
+          "importSpec": {
+            "modulePath": "SterlingFooterLink.tsx"
+          },
+          "cssFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicSterlingFooterLink.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "8lz1SsMcaVrX",
+          "name": "Footertestlink",
+          "type": "managed",
+          "projectId": "uyaK17nhz8WhGjYZfKjMhX",
+          "renderModuleFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicFootertestlink.tsx",
+          "importSpec": {
+            "modulePath": "Footertestlink.tsx"
+          },
+          "cssFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicFootertestlink.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [

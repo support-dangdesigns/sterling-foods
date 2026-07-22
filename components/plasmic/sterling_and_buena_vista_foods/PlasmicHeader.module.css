@@ -5,19 +5,15 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  justify-content: center;
-  align-items: stretch;
+  justify-content: flex-start;
+  align-items: center;
   justify-self: flex-start;
+  max-height: 185px;
+  color: var(--token-RvPI6LyeIPmd);
   min-width: 0;
   padding: 0px;
 }
 @media (max-width: 1920px) {
-  .root {
-    width: 100%;
-    min-width: 0;
-  }
-}
-@media (max-width: 757px) {
   .root {
     width: 100%;
     min-width: 0;
@@ -46,13 +42,6 @@
     min-width: 0;
   }
 }
-@media (max-width: 1440px) {
-  .colorbar {
-    width: 100%;
-    overflow: hidden;
-    min-width: 0;
-  }
-}
 .header {
   display: flex;
   flex-direction: column;
@@ -72,12 +61,6 @@
 @media (max-width: 1920px) {
   .header {
     width: 1920px;
-  }
-}
-@media (max-width: 757px) {
-  .header {
-    align-self: center;
-    margin: auto;
   }
 }
 .menu {
@@ -124,6 +107,11 @@
     padding: 10px;
   }
 }
+@media (max-width: 530px) {
+  .menu {
+    padding-right: 20px;
+  }
+}
 @media (max-width: 414px) {
   .menu {
     height: auto;
@@ -140,7 +128,7 @@
     min-width: 0;
   }
 }
-.link {
+.returnHome {
   background: url("/plasmic/sterling_and_buena_vista_foods/images/frame68.png") center center / cover no-repeat;
   width: 392px;
   height: 106px;
@@ -154,7 +142,7 @@
   flex-shrink: 0;
 }
 @media (max-width: 1440px) {
-  .link {
+  .returnHome {
     text-align: left;
     left: 40px;
     right: auto;
@@ -165,14 +153,14 @@
   }
 }
 @media (max-width: 1024px) {
-  .link {
+  .returnHome {
     width: 300px;
     height: 80px;
     flex-shrink: 0;
   }
 }
 @media (max-width: 757px) {
-  .link {
+  .returnHome {
     width: 200px;
     display: flex;
     flex-direction: row;
@@ -189,7 +177,7 @@
   }
 }
 @media (max-width: 414px) {
-  .link {
+  .returnHome {
     left: auto;
     top: auto;
     align-self: baseline;

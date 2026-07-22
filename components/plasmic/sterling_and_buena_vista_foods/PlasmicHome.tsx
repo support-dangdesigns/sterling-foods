@@ -135,7 +135,7 @@ export const PlasmicHome__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHome__OverridesType = {
   homepage?: Flex__<"div">;
-  header?: Flex__<"div">;
+  header?: Flex__<typeof Header>;
   homeHero?: Flex__<"div">;
   title?: Flex__<"div">;
   h1?: Flex__<"h1">;
@@ -298,12 +298,10 @@ function PlasmicHome__RenderFunc(props: {
             ""
           )}
         >
-          <Header className={classNames("__wab_instance", sty.header__o4Nex)} />
-
-          <div
+          <Header
             data-plasmic-name={"header"}
             data-plasmic-override={overrides.header}
-            className={classNames("all", sty.header)}
+            className={classNames("__wab_instance", sty.header)}
           />
 
           <div
@@ -1667,7 +1665,7 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   homepage: "div";
-  header: "div";
+  header: typeof Header;
   homeHero: "div";
   title: "div";
   h1: "h1";

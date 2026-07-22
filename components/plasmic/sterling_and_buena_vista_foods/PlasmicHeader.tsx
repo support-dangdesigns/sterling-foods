@@ -89,7 +89,7 @@ export type PlasmicHeader__OverridesType = {
   colorbar?: Flex__<"div">;
   header?: Flex__<"div">;
   menu?: Flex__<"div">;
-  link?: Flex__<"a"> & Partial<LinkProps>;
+  returnHome?: Flex__<"a"> & Partial<LinkProps>;
   convoBtn?: Flex__<typeof Button>;
   expandMenu?: Flex__<"div">;
   menu2?: Flex__<"div">;
@@ -215,17 +215,11 @@ function PlasmicHeader__RenderFunc(props: {
             className={classNames("all", sty.menu)}
           >
             <PlasmicLink__
-              data-plasmic-name={"link"}
-              data-plasmic-override={overrides.link}
-              className={classNames("all", "a", "a__uyaK1", sty.link)}
+              data-plasmic-name={"returnHome"}
+              data-plasmic-override={overrides.returnHome}
+              className={classNames("all", "a", "a__uyaK1", sty.returnHome)}
               component={Link}
-              href={
-                hasVariant(globalVariants, "screen", "mediumDesktop")
-                  ? `/`
-                  : hasVariant(globalVariants, "screen", "large")
-                    ? `/`
-                    : `/`
-              }
+              href={hasVariant(globalVariants, "screen", "large") ? `/` : `/`}
               legacyBehavior={false}
               onClick={async event => {
                 const $steps = {};
@@ -487,7 +481,7 @@ const PlasmicDescendants = {
     "colorbar",
     "header",
     "menu",
-    "link",
+    "returnHome",
     "convoBtn",
     "expandMenu",
     "menu2",
@@ -496,9 +490,9 @@ const PlasmicDescendants = {
     "isopenNav"
   ],
   colorbar: ["colorbar"],
-  header: ["header", "menu", "link", "convoBtn"],
-  menu: ["menu", "link", "convoBtn"],
-  link: ["link"],
+  header: ["header", "menu", "returnHome", "convoBtn"],
+  menu: ["menu", "returnHome", "convoBtn"],
+  returnHome: ["returnHome"],
   convoBtn: ["convoBtn"],
   expandMenu: ["expandMenu", "menu2", "logo2", "convoBtn2", "isopenNav"],
   menu2: ["menu2", "logo2", "convoBtn2"],
@@ -514,7 +508,7 @@ type NodeDefaultElementType = {
   colorbar: "div";
   header: "div";
   menu: "div";
-  link: "a";
+  returnHome: "a";
   convoBtn: typeof Button;
   expandMenu: "div";
   menu2: "div";
@@ -588,7 +582,7 @@ export const PlasmicHeader = Object.assign(
     colorbar: makeNodeComponent("colorbar"),
     header: makeNodeComponent("header"),
     menu: makeNodeComponent("menu"),
-    link: makeNodeComponent("link"),
+    returnHome: makeNodeComponent("returnHome"),
     convoBtn: makeNodeComponent("convoBtn"),
     expandMenu: makeNodeComponent("expandMenu"),
     menu2: makeNodeComponent("menu2"),

@@ -185,7 +185,6 @@
 }
 .footer___5Rkag:global(.__wab_instance) {
   max-width: 100%;
-  flex-shrink: 0;
 }
 @media (max-width: 1024px) {
   .footer___5Rkag:global(.__wab_instance) {

@@ -93,7 +93,7 @@ export type PlasmicFooter__OverridesType = {
   footer?: Flex__<"div">;
   parent?: Flex__<"div">;
   topChild?: Flex__<"div">;
-  logo?: Flex__<"div">;
+  logo?: Flex__<"a"> & Partial<LinkProps>;
   text?: Flex__<"div">;
   socialBtns?: Flex__<typeof SocialBtns>;
   menus?: Flex__<"div">;
@@ -109,12 +109,10 @@ export type PlasmicFooter__OverridesType = {
   address9?: Flex__<"div">;
   footerMenu?: Flex__<"div">;
   clientLogin?: Flex__<"div">;
-  clientLogin2?: Flex__<"a"> & Partial<LinkProps>;
   clientLogin3?: Flex__<"div">;
   terms?: Flex__<typeof FooterLinks>;
-  termsAndConditions?: Flex__<"a"> & Partial<LinkProps>;
   clientLogin5?: Flex__<"div">;
-  link?: Flex__<"a"> & Partial<LinkProps>;
+  colorBar?: Flex__<"div">;
 };
 
 export interface DefaultFooterProps {
@@ -218,10 +216,14 @@ function PlasmicFooter__RenderFunc(props: {
           className={classNames("all", sty.topChild)}
         >
           <div className={classNames("all", sty.freeBox__cBvFy)}>
-            <div
+            <PlasmicLink__
               data-plasmic-name={"logo"}
               data-plasmic-override={overrides.logo}
-              className={classNames("all", sty.logo)}
+              className={classNames("all", "a", "a__uyaK1", sty.logo)}
+              component={Link}
+              href={`/`}
+              legacyBehavior={false}
+              platform={"nextjs"}
             />
 
             <div
@@ -239,156 +241,110 @@ function PlasmicFooter__RenderFunc(props: {
               className={classNames("__wab_instance", sty.socialBtns)}
             />
           </div>
-          {(
-            hasVariant(globalVariants, "screen", "mobile")
-              ? true
-              : hasVariant(globalVariants, "screen", "largerMobile")
-                ? true
-                : hasVariant(globalVariants, "screen", "dualScreen")
-                  ? true
-                  : hasVariant(globalVariants, "screen", "smallTablet")
-                    ? true
-                    : hasVariant(globalVariants, "screen", "tablet")
-                      ? true
-                      : hasVariant(globalVariants, "screen", "smallLaptop2")
-                        ? true
-                        : hasVariant(globalVariants, "screen", "smallLaptop")
-                          ? true
-                          : hasVariant(globalVariants, "screen", "smallDesktop")
-                            ? true
-                            : hasVariant(
-                                  globalVariants,
-                                  "screen",
-                                  "mediumDesktop"
-                                )
-                              ? true
-                              : hasVariant(globalVariants, "screen", "desktop")
-                                ? true
-                                : hasVariant(globalVariants, "screen", "large")
-                                  ? true
-                                  : false
-          ) ? (
+          <div
+            data-plasmic-name={"menus"}
+            data-plasmic-override={overrides.menus}
+            className={classNames("all", sty.menus)}
+          >
             <div
-              data-plasmic-name={"menus"}
-              data-plasmic-override={overrides.menus}
-              className={classNames("all", sty.menus)}
+              data-plasmic-name={"locations3"}
+              data-plasmic-override={overrides.locations3}
+              className={classNames("all", sty.locations3)}
             >
-              <div
-                data-plasmic-name={"locations3"}
-                data-plasmic-override={overrides.locations3}
-                className={classNames("all", sty.locations3)}
-              >
-                <div
-                  className={classNames("all", "__wab_text", sty.text__aJh09)}
-                >
-                  {hasVariant(globalVariants, "screen", "desktop")
-                    ? "Quick Links"
-                    : "Quick Links"}
-                </div>
-                <MenuList
-                  className={classNames("__wab_instance", sty.menuList__xhVKa)}
-                />
+              <div className={classNames("all", "__wab_text", sty.text__aJh09)}>
+                {hasVariant(globalVariants, "screen", "desktop")
+                  ? "Quick Links"
+                  : "Quick Links"}
+              </div>
+              <MenuList
+                className={classNames("__wab_instance", sty.menuList__xhVKa)}
+              />
+            </div>
+            <div
+              data-plasmic-name={"locations4"}
+              data-plasmic-override={overrides.locations4}
+              className={classNames("all", sty.locations4)}
+            >
+              <div className={classNames("all", "__wab_text", sty.text__tZTvp)}>
+                {"Locations"}
               </div>
               <div
-                data-plasmic-name={"locations4"}
-                data-plasmic-override={overrides.locations4}
-                className={classNames("all", sty.locations4)}
+                data-plasmic-name={"address4"}
+                data-plasmic-override={overrides.address4}
+                className={classNames("all", sty.address4)}
               >
-                <div
-                  className={classNames("all", "__wab_text", sty.text__tZTvp)}
-                >
-                  {"Locations"}
-                </div>
-                <div
-                  data-plasmic-name={"address4"}
-                  data-plasmic-override={overrides.address4}
-                  className={classNames("all", sty.address4)}
-                >
-                  <div className={classNames("all", sty.freeBox__nwfJx)}>
-                    <MapPinFilledIcon
-                      className={classNames("all", sty.svg__mYnG2)}
-                      role={"img"}
-                    />
+                <div className={classNames("all", sty.freeBox__nwfJx)}>
+                  <MapPinFilledIcon
+                    className={classNames("all", sty.svg__mYnG2)}
+                    role={"img"}
+                  />
 
-                    <div
-                      className={classNames(
-                        "all",
-                        "__wab_text",
-                        sty.text__sVeea
-                      )}
-                    >
-                      {"San Antonio, Texas (Headquarters)\r"}
-                    </div>
-                  </div>
                   <div
-                    className={classNames("all", "__wab_text", sty.text__k3FMk)}
+                    className={classNames("all", "__wab_text", sty.text__sVeea)}
                   >
-                    {
-                      "1075 Arion Parkway\nSan Antonio, TX 78216\r \n210-490-1669\r"
-                    }
+                    {"San Antonio, Texas (Headquarters)\r"}
                   </div>
                 </div>
                 <div
-                  data-plasmic-name={"address5"}
-                  data-plasmic-override={overrides.address5}
-                  className={classNames("all", sty.address5)}
+                  className={classNames("all", "__wab_text", sty.text__k3FMk)}
                 >
-                  <div className={classNames("all", sty.freeBox__c8X)}>
-                    <MapPinFilledIcon
-                      className={classNames("all", sty.svg__qPf4C)}
-                      role={"img"}
-                    />
+                  {
+                    "1075 Arion Parkway\nSan Antonio, TX 78216\r \n210-490-1669\r"
+                  }
+                </div>
+              </div>
+              <div
+                data-plasmic-name={"address5"}
+                data-plasmic-override={overrides.address5}
+                className={classNames("all", sty.address5)}
+              >
+                <div className={classNames("all", sty.freeBox__c8X)}>
+                  <MapPinFilledIcon
+                    className={classNames("all", sty.svg__qPf4C)}
+                    role={"img"}
+                  />
 
-                    <div
-                      className={classNames(
-                        "all",
-                        "__wab_text",
-                        sty.text__m3JKj
-                      )}
-                    >
-                      {"Azusa, California"}
-                    </div>
-                  </div>
                   <div
-                    className={classNames("all", "__wab_text", sty.text__joQX)}
+                    className={classNames("all", "__wab_text", sty.text__m3JKj)}
                   >
-                    {
-                      "1075 Arion Parkway\nSan Antonio, TX 78216\r\n210-490-1669\r"
-                    }
+                    {"Azusa, California"}
                   </div>
                 </div>
                 <div
-                  data-plasmic-name={"address6"}
-                  data-plasmic-override={overrides.address6}
-                  className={classNames("all", sty.address6)}
+                  className={classNames("all", "__wab_text", sty.text__joQX)}
                 >
-                  <div className={classNames("all", sty.freeBox__ro2So)}>
-                    <MapPinFilledIcon
-                      className={classNames("all", sty.svg__kmtS)}
-                      role={"img"}
-                    />
+                  {
+                    "1075 Arion Parkway\nSan Antonio, TX 78216\r\n210-490-1669\r"
+                  }
+                </div>
+              </div>
+              <div
+                data-plasmic-name={"address6"}
+                data-plasmic-override={overrides.address6}
+                className={classNames("all", sty.address6)}
+              >
+                <div className={classNames("all", sty.freeBox__ro2So)}>
+                  <MapPinFilledIcon
+                    className={classNames("all", sty.svg__kmtS)}
+                    role={"img"}
+                  />
 
-                    <div
-                      className={classNames(
-                        "all",
-                        "__wab_text",
-                        sty.text__ygswT
-                      )}
-                    >
-                      {"Union City, California"}
-                    </div>
-                  </div>
                   <div
-                    className={classNames("all", "__wab_text", sty.text__sUzzh)}
+                    className={classNames("all", "__wab_text", sty.text__ygswT)}
                   >
-                    {
-                      "Union City, California\n33300 Western Ave\nUnion City CA, 94587\n510-487-2600"
-                    }
+                    {"Union City, California"}
                   </div>
+                </div>
+                <div
+                  className={classNames("all", "__wab_text", sty.text__sUzzh)}
+                >
+                  {
+                    "Union City, California\n33300 Western Ave\nUnion City CA, 94587\n510-487-2600"
+                  }
                 </div>
               </div>
             </div>
-          ) : null}
+          </div>
         </div>
         {(() => {
           const child$Props = {
@@ -615,22 +571,9 @@ function PlasmicFooter__RenderFunc(props: {
             <FooterLinks
               className={classNames("__wab_instance", sty.footerLinks__yryc)}
             >
-              <PlasmicLink__
-                data-plasmic-name={"clientLogin2"}
-                data-plasmic-override={overrides.clientLogin2}
-                className={classNames(
-                  "all",
-                  "a",
-                  "a__uyaK1",
-                  "__wab_text",
-                  sty.clientLogin2
-                )}
-                component={Link}
-                legacyBehavior={false}
-                platform={"nextjs"}
-              >
+              <div className={classNames("all", "__wab_text", sty.text__zzEq3)}>
                 {"Privacy Policy"}
-              </PlasmicLink__>
+              </div>
             </FooterLinks>
             <DividerLine
               className={classNames("__wab_instance", sty.dividerLine__hkj9I)}
@@ -651,33 +594,63 @@ function PlasmicFooter__RenderFunc(props: {
               className={classNames("__wab_instance", sty.dividerLine___0Jplz)}
             />
 
-            <FooterLinks
-              data-plasmic-name={"terms"}
-              data-plasmic-override={overrides.terms}
-              className={classNames("__wab_instance", sty.terms)}
-            >
-              <PlasmicLink__
-                data-plasmic-name={"termsAndConditions"}
-                data-plasmic-override={overrides.termsAndConditions}
-                className={classNames(
-                  "all",
-                  "a",
-                  "a__uyaK1",
-                  "__wab_text",
-                  sty.termsAndConditions
-                )}
-                component={Link}
-                href={
-                  hasVariant(globalVariants, "screen", "large")
-                    ? `/terms-and-conditions`
-                    : "https://www.plasmic.app/"
+            <PlasmicLink__
+              className={classNames("all", "a", "a__uyaK1", sty.link__i6V8B)}
+              component={Link}
+              href={`/terms-and-conditions`}
+              legacyBehavior={false}
+              onClick={async event => {
+                const $steps = {};
+
+                $steps["updateAccordionActivePanelId"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        variable: {
+                          objRoot: $state,
+                          variablePath: ["accordion", "activePanelId"]
+                        },
+                        operation: 0
+                      };
+                      return (({
+                        variable,
+                        value,
+                        startIndex,
+                        deleteCount
+                      }) => {
+                        if (!variable) {
+                          return;
+                        }
+                        const { objRoot, variablePath } = variable;
+
+                        $stateSet(objRoot, variablePath, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateAccordionActivePanelId"] != null &&
+                  typeof $steps["updateAccordionActivePanelId"] === "object" &&
+                  typeof $steps["updateAccordionActivePanelId"].then ===
+                    "function"
+                ) {
+                  $steps["updateAccordionActivePanelId"] =
+                    await $steps["updateAccordionActivePanelId"];
                 }
-                legacyBehavior={false}
-                platform={"nextjs"}
+              }}
+              platform={"nextjs"}
+            >
+              <FooterLinks
+                data-plasmic-name={"terms"}
+                data-plasmic-override={overrides.terms}
+                className={classNames("__wab_instance", sty.terms)}
               >
-                {"Terms of Use"}
-              </PlasmicLink__>
-            </FooterLinks>
+                <div
+                  className={classNames("all", "__wab_text", sty.text__hYKe)}
+                >
+                  {"Terms of Use"}
+                </div>
+              </FooterLinks>
+            </PlasmicLink__>
             <DividerLine
               className={classNames("__wab_instance", sty.dividerLine__cx0Jy)}
             />
@@ -700,9 +673,7 @@ function PlasmicFooter__RenderFunc(props: {
         </div>
         <div className={classNames("all", sty.freeBox__cSkrB)}>
           <PlasmicLink__
-            data-plasmic-name={"link"}
-            data-plasmic-override={overrides.link}
-            className={classNames("all", "a", "a__uyaK1", sty.link)}
+            className={classNames("all", "a", "a__uyaK1", sty.link___9GYH)}
             component={Link}
             href={args.headerDestination}
             legacyBehavior={false}
@@ -743,7 +714,11 @@ function PlasmicFooter__RenderFunc(props: {
           </PlasmicLink__>
         </div>
       </div>
-      <div className={classNames("all", sty.freeBox__pcGC)} />
+      <div
+        data-plasmic-name={"colorBar"}
+        data-plasmic-override={overrides.colorBar}
+        className={classNames("all", sty.colorBar)}
+      />
     </div>
   ) as React.ReactElement | null;
 }
@@ -769,12 +744,10 @@ const PlasmicDescendants = {
     "address9",
     "footerMenu",
     "clientLogin",
-    "clientLogin2",
     "clientLogin3",
     "terms",
-    "termsAndConditions",
     "clientLogin5",
-    "link"
+    "colorBar"
   ],
   parent: [
     "parent",
@@ -795,12 +768,9 @@ const PlasmicDescendants = {
     "address9",
     "footerMenu",
     "clientLogin",
-    "clientLogin2",
     "clientLogin3",
     "terms",
-    "termsAndConditions",
-    "clientLogin5",
-    "link"
+    "clientLogin5"
   ],
   topChild: [
     "topChild",
@@ -838,19 +808,15 @@ const PlasmicDescendants = {
   footerMenu: [
     "footerMenu",
     "clientLogin",
-    "clientLogin2",
     "clientLogin3",
     "terms",
-    "termsAndConditions",
     "clientLogin5"
   ],
   clientLogin: ["clientLogin"],
-  clientLogin2: ["clientLogin2"],
   clientLogin3: ["clientLogin3"],
-  terms: ["terms", "termsAndConditions"],
-  termsAndConditions: ["termsAndConditions"],
+  terms: ["terms"],
   clientLogin5: ["clientLogin5"],
-  link: ["link"]
+  colorBar: ["colorBar"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -859,7 +825,7 @@ type NodeDefaultElementType = {
   footer: "div";
   parent: "div";
   topChild: "div";
-  logo: "div";
+  logo: "a";
   text: "div";
   socialBtns: typeof SocialBtns;
   menus: "div";
@@ -875,12 +841,10 @@ type NodeDefaultElementType = {
   address9: "div";
   footerMenu: "div";
   clientLogin: "div";
-  clientLogin2: "a";
   clientLogin3: "div";
   terms: typeof FooterLinks;
-  termsAndConditions: "a";
   clientLogin5: "div";
-  link: "a";
+  colorBar: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -963,12 +927,10 @@ export const PlasmicFooter = Object.assign(
     address9: makeNodeComponent("address9"),
     footerMenu: makeNodeComponent("footerMenu"),
     clientLogin: makeNodeComponent("clientLogin"),
-    clientLogin2: makeNodeComponent("clientLogin2"),
     clientLogin3: makeNodeComponent("clientLogin3"),
     terms: makeNodeComponent("terms"),
-    termsAndConditions: makeNodeComponent("termsAndConditions"),
     clientLogin5: makeNodeComponent("clientLogin5"),
-    link: makeNodeComponent("link"),
+    colorBar: makeNodeComponent("colorBar"),
 
     // Metadata about props expected for PlasmicFooter
     internalVariantProps: PlasmicFooter__VariantProps,

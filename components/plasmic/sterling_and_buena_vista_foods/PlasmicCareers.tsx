@@ -140,6 +140,7 @@ export type PlasmicCareers__OverridesType = {
   paragraph6?: Flex__<"div">;
   ctaBottom?: Flex__<typeof CtaBottom>;
   footer?: Flex__<typeof Footer>;
+  pageContainer?: Flex__<"div">;
 };
 
 export interface DefaultCareersProps {}
@@ -1032,6 +1033,14 @@ function PlasmicCareers__RenderFunc(props: {
             data-plasmic-override={overrides.footer}
             className={classNames("__wab_instance", sty.footer)}
           />
+
+          {(hasVariant(globalVariants, "screen", "desktop") ? true : false) ? (
+            <div
+              data-plasmic-name={"pageContainer"}
+              data-plasmic-override={overrides.pageContainer}
+              className={classNames("all", sty.pageContainer)}
+            />
+          ) : null}
         </div>
       </div>
     </React.Fragment>
@@ -1065,7 +1074,8 @@ const PlasmicDescendants = {
     "title6",
     "paragraph6",
     "ctaBottom",
-    "footer"
+    "footer",
+    "pageContainer"
   ],
   header: ["header"],
   topHero: ["topHero"],
@@ -1112,7 +1122,8 @@ const PlasmicDescendants = {
   title6: ["title6"],
   paragraph6: ["paragraph6"],
   ctaBottom: ["ctaBottom"],
-  footer: ["footer"]
+  footer: ["footer"],
+  pageContainer: ["pageContainer"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -1144,6 +1155,7 @@ type NodeDefaultElementType = {
   paragraph6: "div";
   ctaBottom: typeof CtaBottom;
   footer: typeof Footer;
+  pageContainer: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -1233,6 +1245,7 @@ export const PlasmicCareers = Object.assign(
     paragraph6: makeNodeComponent("paragraph6"),
     ctaBottom: makeNodeComponent("ctaBottom"),
     footer: makeNodeComponent("footer"),
+    pageContainer: makeNodeComponent("pageContainer"),
 
     // Metadata about props expected for PlasmicCareers
     internalVariantProps: PlasmicCareers__VariantProps,

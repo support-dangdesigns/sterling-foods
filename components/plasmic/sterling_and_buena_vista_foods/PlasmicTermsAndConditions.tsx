@@ -115,7 +115,7 @@ export const PlasmicTermsAndConditions__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicTermsAndConditions__OverridesType = {
   termsConditions?: Flex__<"div">;
-  header?: Flex__<"div">;
+  pageContainer?: Flex__<"div">;
   header2?: Flex__<typeof Header>;
   topHero?: Flex__<typeof TopHero>;
   body?: Flex__<"div">;
@@ -201,233 +201,234 @@ function PlasmicTermsAndConditions__RenderFunc(props: {
         )}
       >
         <div
-          data-plasmic-name={"header"}
-          data-plasmic-override={overrides.header}
-          className={classNames("all", sty.header)}
+          data-plasmic-name={"pageContainer"}
+          data-plasmic-override={overrides.pageContainer}
+          className={classNames("all", sty.pageContainer)}
         >
           <Header
             data-plasmic-name={"header2"}
             data-plasmic-override={overrides.header2}
             className={classNames("__wab_instance", sty.header2)}
           />
-        </div>
-        <TopHero
-          data-plasmic-name={"topHero"}
-          data-plasmic-override={overrides.topHero}
-          className={classNames("__wab_instance", sty.topHero)}
-          pages={"terms"}
-        />
 
-        <div
-          data-plasmic-name={"body"}
-          data-plasmic-override={overrides.body}
-          className={classNames("all", sty.body)}
-        >
-          <div
-            data-plasmic-name={"sitesCovered"}
-            data-plasmic-override={overrides.sitesCovered}
-            className={classNames("all", sty.sitesCovered)}
-          >
-            <h5
-              className={classNames(
-                "all",
-                "h5",
-                "h5__uyaK1",
-                "__wab_text",
-                sty.h5__ymiyb
-              )}
-            >
-              {"Sites Covered"}
-            </h5>
-            <p
-              className={classNames(
-                "all",
-                "p",
-                "p__uyaK1",
-                "__wab_text",
-                sty.p__w2PgG
-              )}
-            >
-              <React.Fragment>
-                <React.Fragment>
-                  {"This Privacy Policy applies to this site, "}
-                </React.Fragment>
-                {
-                  <PlasmicLink__
-                    className={classNames(
-                      "all",
-                      "a",
-                      "a__uyaK1",
-                      "__wab_text",
-                      "plasmic_default__inline",
-                      sty.link__k8YNz
-                    )}
-                    component={Link}
-                    href={"www.sterling-fd.com "}
-                    legacyBehavior={false}
-                    platform={"nextjs"}
-                  >
-                    {"www.sterling-fd.com"}
-                  </PlasmicLink__>
-                }
-                <React.Fragment>{" and "}</React.Fragment>
-                {
-                  <PlasmicLink__
-                    className={classNames(
-                      "all",
-                      "a",
-                      "a__uyaK1",
-                      "__wab_text",
-                      "plasmic_default__inline",
-                      sty.link__neRLw
-                    )}
-                    component={Link}
-                    href={"www.sterlingfoodsusa.com"}
-                    legacyBehavior={false}
-                    platform={"nextjs"}
-                  >
-                    {"www.sterlingfoodsusa.com"}
-                  </PlasmicLink__>
-                }
-                <React.Fragment>
-                  {
-                    ". By viewing or using our Site, you are agreeing to the terms set forth in this Privacy Policy."
-                  }
-                </React.Fragment>
-              </React.Fragment>
-            </p>
-          </div>
-          <div
-            data-plasmic-name={"verticalStack"}
-            data-plasmic-override={overrides.verticalStack}
-            className={classNames("all", sty.verticalStack)}
-          >
-            <h5
-              className={classNames(
-                "all",
-                "h5",
-                "h5__uyaK1",
-                "__wab_text",
-                sty.h5__sCyRs
-              )}
-            >
-              {"Personal Information Collected"}
-            </h5>
-            <p
-              className={classNames(
-                "all",
-                "p",
-                "p__uyaK1",
-                "__wab_text",
-                sty.p___09WwY
-              )}
-            >
-              {
-                "For purposes of this Privacy Policy, \u201cpersonal information\u201d means any information by which you can be personally identified, and includes your name, address, telephone number, e-mail address, account number and similar information. Sterling BV, Inc. (Sterling Foods) generally collects personal information only when you voluntarily submit such personal information to us, for example by submitting a comment or inquiry or completing a registration form."
-              }
-            </p>
-          </div>
-          <div
-            data-plasmic-name={"useRetention"}
-            data-plasmic-override={overrides.useRetention}
-            className={classNames("all", sty.useRetention)}
-          >
-            <h5
-              className={classNames(
-                "all",
-                "h5",
-                "h5__uyaK1",
-                "__wab_text",
-                sty.h5__en7Mz
-              )}
-            >
-              {"Use and Retention of Personal Information"}
-            </h5>
-            <p
-              className={classNames(
-                "all",
-                "p",
-                "p__uyaK1",
-                "__wab_text",
-                sty.p__aGUyG
-              )}
-            >
-              <React.Fragment>
-                <React.Fragment>
-                  {
-                    "It is Sterling Foods\u2019 policy to maintain all personal information as confidential, regardless of the purpose for which it is submitted, and to use such personal information only for the following purposes:\r\n\n"
-                  }
-                </React.Fragment>
-                {
-                  <ul
-                    data-plasmic-name={"ul"}
-                    data-plasmic-override={overrides.ul}
-                    className={classNames("all", "ul", "ul__uyaK1", sty.ul)}
-                  >
-                    <li
-                      className={classNames(
-                        "all",
-                        "li",
-                        "li__uyaK1",
-                        "__wab_text",
-                        sty.li__wSnp
-                      )}
-                    >
-                      {
-                        "For the specific purpose for which it was volunteered (for example to submit a comment, receive account information, purchase products, apply for employment, etc.);\n"
-                      }
-                    </li>
-                    <li
-                      className={classNames(
-                        "all",
-                        "li",
-                        "li__uyaK1",
-                        "__wab_text",
-                        sty.li__kur2H
-                      )}
-                    >
-                      {
-                        "To track our visitors\u2019 use of the Sites for internal market research; and"
-                      }
-                    </li>
-                    <li
-                      className={classNames(
-                        "all",
-                        "li",
-                        "li__uyaK1",
-                        "__wab_text",
-                        sty.li__gCc5T
-                      )}
-                    >
-                      {
-                        "To notify our visitors of updates to the Sites or promotional product opportunities."
-                      }
-                    </li>
-                  </ul>
-                }
-                <React.Fragment>
-                  {
-                    "\n\rFrom time to time we may use the information we collect to notify you about other services we think you will find valuable and interesting such as updates to the Site. However, if you do not want to receive this information, you can let us know when you register by using the tick box provided.\r\n\nIt is Sterling Foods\u2019 policy to keep personal information only for so long as needed for such purposes. Sterling Foods does not sell, rent or otherwise distribute to third parties personal information about visitors to the Sites, except as needed for Sterling Foods to provide the services for which such information was volunteered. However, the Sites contain links to sites controlled by, and pages maintained by, independent third parties. Sterling Foods does not control use of information provided to such third parties. If you access other sites using the links provided, the operators of these sites may collect information from you which will then be used by them in accordance with their privacy policy, which may differ from ours.\r\n\nAuthorized third parties may need access to some of your personal information to provide the services for which you provided such information. For example, if you purchase a product, we would use third party shippers to deliver the order to you and we would need to provide the shipper with your name and address. It is Sterling Foods\u2019 policy to provide to third parties only that amount of personal information that they require to complete the requested service or transaction.\r\n\nGiven the global nature of both the Internet and Sterling Foods, using the Internet to collect and process Personal Data usually involves the transmission of data on an international basis. By browsing the Site and communicating electronically with us, you agree that we may export Personal Data to one or more of our offices in other countries and process it there in accordance with this policy. Although data may be held in countries that do not have strict data privacy laws, we do take steps to maintain the privacy and security of your Personal Data."
-                  }
-                </React.Fragment>
-              </React.Fragment>
-            </p>
-          </div>
-        </div>
-        <CtaBottom
-          data-plasmic-name={"ctaBottom"}
-          data-plasmic-override={overrides.ctaBottom}
-          className={classNames("__wab_instance", sty.ctaBottom)}
-        />
-
-        <div
-          data-plasmic-name={"footer"}
-          data-plasmic-override={overrides.footer}
-          className={classNames("all", sty.footer)}
-        >
-          <Footer
-            className={classNames("__wab_instance", sty.footer___5Rkag)}
+          <TopHero
+            data-plasmic-name={"topHero"}
+            data-plasmic-override={overrides.topHero}
+            className={classNames("__wab_instance", sty.topHero)}
+            pages={"terms"}
           />
+
+          <div
+            data-plasmic-name={"body"}
+            data-plasmic-override={overrides.body}
+            className={classNames("all", sty.body)}
+          >
+            <div
+              data-plasmic-name={"sitesCovered"}
+              data-plasmic-override={overrides.sitesCovered}
+              className={classNames("all", sty.sitesCovered)}
+            >
+              <h5
+                className={classNames(
+                  "all",
+                  "h5",
+                  "h5__uyaK1",
+                  "__wab_text",
+                  sty.h5__ymiyb
+                )}
+              >
+                {"Sites Covered"}
+              </h5>
+              <p
+                className={classNames(
+                  "all",
+                  "p",
+                  "p__uyaK1",
+                  "__wab_text",
+                  sty.p__w2PgG
+                )}
+              >
+                <React.Fragment>
+                  <React.Fragment>
+                    {"This Privacy Policy applies to this site, "}
+                  </React.Fragment>
+                  {
+                    <PlasmicLink__
+                      className={classNames(
+                        "all",
+                        "a",
+                        "a__uyaK1",
+                        "__wab_text",
+                        "plasmic_default__inline",
+                        sty.link__k8YNz
+                      )}
+                      component={Link}
+                      href={"www.sterling-fd.com "}
+                      legacyBehavior={false}
+                      platform={"nextjs"}
+                    >
+                      {"www.sterling-fd.com"}
+                    </PlasmicLink__>
+                  }
+                  <React.Fragment>{" and "}</React.Fragment>
+                  {
+                    <PlasmicLink__
+                      className={classNames(
+                        "all",
+                        "a",
+                        "a__uyaK1",
+                        "__wab_text",
+                        "plasmic_default__inline",
+                        sty.link__neRLw
+                      )}
+                      component={Link}
+                      href={"www.sterlingfoodsusa.com"}
+                      legacyBehavior={false}
+                      platform={"nextjs"}
+                    >
+                      {"www.sterlingfoodsusa.com"}
+                    </PlasmicLink__>
+                  }
+                  <React.Fragment>
+                    {
+                      ". By viewing or using our Site, you are agreeing to the terms set forth in this Privacy Policy."
+                    }
+                  </React.Fragment>
+                </React.Fragment>
+              </p>
+            </div>
+            <div
+              data-plasmic-name={"verticalStack"}
+              data-plasmic-override={overrides.verticalStack}
+              className={classNames("all", sty.verticalStack)}
+            >
+              <h5
+                className={classNames(
+                  "all",
+                  "h5",
+                  "h5__uyaK1",
+                  "__wab_text",
+                  sty.h5__sCyRs
+                )}
+              >
+                {"Personal Information Collected"}
+              </h5>
+              <p
+                className={classNames(
+                  "all",
+                  "p",
+                  "p__uyaK1",
+                  "__wab_text",
+                  sty.p___09WwY
+                )}
+              >
+                {
+                  "For purposes of this Privacy Policy, \u201cpersonal information\u201d means any information by which you can be personally identified, and includes your name, address, telephone number, e-mail address, account number and similar information. Sterling BV, Inc. (Sterling Foods) generally collects personal information only when you voluntarily submit such personal information to us, for example by submitting a comment or inquiry or completing a registration form."
+                }
+              </p>
+            </div>
+            <div
+              data-plasmic-name={"useRetention"}
+              data-plasmic-override={overrides.useRetention}
+              className={classNames("all", sty.useRetention)}
+            >
+              <h5
+                className={classNames(
+                  "all",
+                  "h5",
+                  "h5__uyaK1",
+                  "__wab_text",
+                  sty.h5__en7Mz
+                )}
+              >
+                {"Use and Retention of Personal Information"}
+              </h5>
+              <p
+                className={classNames(
+                  "all",
+                  "p",
+                  "p__uyaK1",
+                  "__wab_text",
+                  sty.p__aGUyG
+                )}
+              >
+                <React.Fragment>
+                  <React.Fragment>
+                    {
+                      "It is Sterling Foods\u2019 policy to maintain all personal information as confidential, regardless of the purpose for which it is submitted, and to use such personal information only for the following purposes:\r\n\n"
+                    }
+                  </React.Fragment>
+                  {
+                    <ul
+                      data-plasmic-name={"ul"}
+                      data-plasmic-override={overrides.ul}
+                      className={classNames("all", "ul", "ul__uyaK1", sty.ul)}
+                    >
+                      <li
+                        className={classNames(
+                          "all",
+                          "li",
+                          "li__uyaK1",
+                          "__wab_text",
+                          sty.li__wSnp
+                        )}
+                      >
+                        {
+                          "For the specific purpose for which it was volunteered (for example to submit a comment, receive account information, purchase products, apply for employment, etc.);\n"
+                        }
+                      </li>
+                      <li
+                        className={classNames(
+                          "all",
+                          "li",
+                          "li__uyaK1",
+                          "__wab_text",
+                          sty.li__kur2H
+                        )}
+                      >
+                        {
+                          "To track our visitors\u2019 use of the Sites for internal market research; and"
+                        }
+                      </li>
+                      <li
+                        className={classNames(
+                          "all",
+                          "li",
+                          "li__uyaK1",
+                          "__wab_text",
+                          sty.li__gCc5T
+                        )}
+                      >
+                        {
+                          "To notify our visitors of updates to the Sites or promotional product opportunities."
+                        }
+                      </li>
+                    </ul>
+                  }
+                  <React.Fragment>
+                    {
+                      "\n\rFrom time to time we may use the information we collect to notify you about other services we think you will find valuable and interesting such as updates to the Site. However, if you do not want to receive this information, you can let us know when you register by using the tick box provided.\r\n\nIt is Sterling Foods\u2019 policy to keep personal information only for so long as needed for such purposes. Sterling Foods does not sell, rent or otherwise distribute to third parties personal information about visitors to the Sites, except as needed for Sterling Foods to provide the services for which such information was volunteered. However, the Sites contain links to sites controlled by, and pages maintained by, independent third parties. Sterling Foods does not control use of information provided to such third parties. If you access other sites using the links provided, the operators of these sites may collect information from you which will then be used by them in accordance with their privacy policy, which may differ from ours.\r\n\nAuthorized third parties may need access to some of your personal information to provide the services for which you provided such information. For example, if you purchase a product, we would use third party shippers to deliver the order to you and we would need to provide the shipper with your name and address. It is Sterling Foods\u2019 policy to provide to third parties only that amount of personal information that they require to complete the requested service or transaction.\r\n\nGiven the global nature of both the Internet and Sterling Foods, using the Internet to collect and process Personal Data usually involves the transmission of data on an international basis. By browsing the Site and communicating electronically with us, you agree that we may export Personal Data to one or more of our offices in other countries and process it there in accordance with this policy. Although data may be held in countries that do not have strict data privacy laws, we do take steps to maintain the privacy and security of your Personal Data."
+                    }
+                  </React.Fragment>
+                </React.Fragment>
+              </p>
+            </div>
+          </div>
+          <CtaBottom
+            data-plasmic-name={"ctaBottom"}
+            data-plasmic-override={overrides.ctaBottom}
+            className={classNames("__wab_instance", sty.ctaBottom)}
+          />
+
+          <div
+            data-plasmic-name={"footer"}
+            data-plasmic-override={overrides.footer}
+            className={classNames("all", sty.footer)}
+          >
+            <Footer
+              className={classNames("__wab_instance", sty.footer___5Rkag)}
+            />
+          </div>
         </div>
       </div>
     </React.Fragment>
@@ -437,7 +438,7 @@ function PlasmicTermsAndConditions__RenderFunc(props: {
 const PlasmicDescendants = {
   termsConditions: [
     "termsConditions",
-    "header",
+    "pageContainer",
     "header2",
     "topHero",
     "body",
@@ -448,7 +449,18 @@ const PlasmicDescendants = {
     "ctaBottom",
     "footer"
   ],
-  header: ["header", "header2"],
+  pageContainer: [
+    "pageContainer",
+    "header2",
+    "topHero",
+    "body",
+    "sitesCovered",
+    "verticalStack",
+    "useRetention",
+    "ul",
+    "ctaBottom",
+    "footer"
+  ],
   header2: ["header2"],
   topHero: ["topHero"],
   body: ["body", "sitesCovered", "verticalStack", "useRetention", "ul"],
@@ -464,7 +476,7 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   termsConditions: "div";
-  header: "div";
+  pageContainer: "div";
   header2: typeof Header;
   topHero: typeof TopHero;
   body: "div";
@@ -538,7 +550,7 @@ export const PlasmicTermsAndConditions = Object.assign(
   makeNodeComponent("termsConditions"),
   {
     // Helper components rendering sub-elements
-    header: makeNodeComponent("header"),
+    pageContainer: makeNodeComponent("pageContainer"),
     header2: makeNodeComponent("header2"),
     topHero: makeNodeComponent("topHero"),
     body: makeNodeComponent("body"),

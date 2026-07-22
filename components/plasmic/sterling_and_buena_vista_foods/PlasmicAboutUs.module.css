@@ -3386,3 +3386,16 @@
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
 }
+.pageContainer {
+  animation: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 1920px;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: visible;
+  min-width: 0;
+}

@@ -115,6 +115,7 @@ export const PlasmicInnovation__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicInnovation__OverridesType = {
   root?: Flex__<"div">;
+  pageContainer?: Flex__<"div">;
   header?: Flex__<typeof Header>;
   topHero?: Flex__<typeof TopHero>;
   innovationBody?: Flex__<"div">;
@@ -226,525 +227,98 @@ function PlasmicInnovation__RenderFunc(props: {
             sty.root
           )}
         >
-          <Header
-            data-plasmic-name={"header"}
-            data-plasmic-override={overrides.header}
-            className={classNames("__wab_instance", sty.header)}
-          />
-
-          <TopHero
-            data-plasmic-name={"topHero"}
-            data-plasmic-override={overrides.topHero}
-            className={classNames("__wab_instance", sty.topHero)}
-            pages={"innovation"}
-          />
-
           <div
-            data-plasmic-name={"innovationBody"}
-            data-plasmic-override={overrides.innovationBody}
-            className={classNames("all", sty.innovationBody)}
+            data-plasmic-name={"pageContainer"}
+            data-plasmic-override={overrides.pageContainer}
+            className={classNames("all", sty.pageContainer)}
           >
+            <Header
+              data-plasmic-name={"header"}
+              data-plasmic-override={overrides.header}
+              className={classNames("__wab_instance", sty.header)}
+            />
+
+            <TopHero
+              data-plasmic-name={"topHero"}
+              data-plasmic-override={overrides.topHero}
+              className={classNames("__wab_instance", sty.topHero)}
+              pages={"innovation"}
+            />
+
             <div
-              data-plasmic-name={"intro"}
-              data-plasmic-override={overrides.intro}
-              className={classNames("all", sty.intro)}
+              data-plasmic-name={"innovationBody"}
+              data-plasmic-override={overrides.innovationBody}
+              className={classNames("all", sty.innovationBody)}
             >
-              <div className={classNames("all", sty.freeBox___7JFur)}>
-                <h4
+              <div
+                data-plasmic-name={"intro"}
+                data-plasmic-override={overrides.intro}
+                className={classNames("all", sty.intro)}
+              >
+                <div className={classNames("all", sty.freeBox___7JFur)}>
+                  <h4
+                    className={classNames(
+                      "all",
+                      "h4",
+                      "h4__uyaK1",
+                      "__wab_text",
+                      sty.h4__jVlC8
+                    )}
+                  >
+                    {"From Insight to"}
+                  </h4>
+                  <h3
+                    className={classNames(
+                      "all",
+                      "h3",
+                      "h3__uyaK1",
+                      "__wab_text",
+                      sty.h3__onLfl,
+                      hasVariant(globalVariants, "screen", "dualScreen")
+                        ? "fave-script"
+                        : "h3-script"
+                    )}
+                  >
+                    {"Innovation"}
+                  </h3>
+                </div>
+                <p
                   className={classNames(
                     "all",
-                    "h4",
-                    "h4__uyaK1",
+                    "p",
+                    "p__uyaK1",
                     "__wab_text",
-                    sty.h4__jVlC8
+                    sty.p___740UL
                   )}
                 >
-                  {"From Insight to"}
-                </h4>
-                <h3
+                  {hasVariant(globalVariants, "screen", "desktop")
+                    ? "Sterling Foods serves a diverse range of foodservice and retail channels, delivering innovative bakery solutions tailored to the unique needs of each market. Our customer-first approach, flexible manufacturing capabilities, and commitment to quality help partners bring differentiated products to market with confidence."
+                    : "At Sterling Foods, innovation begins with understanding your goals. Through a collaborative development process, technical expertise, and a passion for solving challenges, we help customers transform ideas into differentiated bakery solutions that meet evolving consumer demands."}
+                </p>
+                <p
                   className={classNames(
                     "all",
-                    "h3",
-                    "h3__uyaK1",
+                    "p",
+                    "p__uyaK1",
                     "__wab_text",
-                    sty.h3__onLfl,
-                    hasVariant(globalVariants, "screen", "dualScreen")
-                      ? "fave-script"
-                      : "h3-script"
+                    sty.p__tL3Ea
                   )}
                 >
-                  {"Innovation"}
-                </h3>
-              </div>
-              <p
-                className={classNames(
-                  "all",
-                  "p",
-                  "p__uyaK1",
-                  "__wab_text",
-                  sty.p___740UL
-                )}
-              >
-                {hasVariant(globalVariants, "screen", "desktop")
-                  ? "Sterling Foods serves a diverse range of foodservice and retail channels, delivering innovative bakery solutions tailored to the unique needs of each market. Our customer-first approach, flexible manufacturing capabilities, and commitment to quality help partners bring differentiated products to market with confidence."
-                  : "At Sterling Foods, innovation begins with understanding your goals. Through a collaborative development process, technical expertise, and a passion for solving challenges, we help customers transform ideas into differentiated bakery solutions that meet evolving consumer demands."}
-              </p>
-              <p
-                className={classNames(
-                  "all",
-                  "p",
-                  "p__uyaK1",
-                  "__wab_text",
-                  sty.p__tL3Ea
-                )}
-              >
-                {hasVariant(globalVariants, "screen", "desktop")
-                  ? "Sterling Foods serves a diverse range of foodservice and retail channels, delivering innovative bakery solutions tailored to the unique needs of each market. Our customer-first approach, flexible manufacturing capabilities, and commitment to quality help partners bring differentiated products to market with confidence."
-                  : hasVariant(globalVariants, "screen", "large")
-                    ? "Whether you're introducing a new product, refining an existing offering, or exploring emerging trends, our team partners with you every step of the way to bring your vision to life."
-                    : "Whether you're introducing a new product, refining an existing offering, or exploring emerging trends,\u0003our team partners with you every step of the way to bring your vision to life."}
-              </p>
-            </div>
-            <div
-              data-plasmic-name={"foodSafety"}
-              data-plasmic-override={overrides.foodSafety}
-              className={classNames("all", sty.foodSafety)}
-            >
-              <PlasmicImg__
-                alt={""}
-                className={classNames(sty.img__i4Gd9)}
-                displayHeight={"auto"}
-                displayMaxHeight={"none"}
-                displayMaxWidth={"100%"}
-                displayMinHeight={"0"}
-                displayMinWidth={"0"}
-                displayWidth={
-                  hasVariant(globalVariants, "screen", "mobile")
-                    ? "100%"
-                    : hasVariant(globalVariants, "screen", "dualScreen")
-                      ? "63.25%"
-                      : hasVariant(globalVariants, "screen", "smallTablet")
-                        ? "50%"
-                        : hasVariant(globalVariants, "screen", "laptop")
-                          ? "35%"
-                          : hasVariant(globalVariants, "screen", "smallDesktop")
-                            ? "472px"
-                            : hasVariant(globalVariants, "screen", "large")
-                              ? "auto"
-                              : "574px"
-                }
-                loading={"lazy"}
-                src={
-                  hasVariant(globalVariants, "screen", "large")
-                    ? {
-                        src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodIceCreamAppleDessertPng.png",
-                        fullWidth: 698,
-                        fullHeight: 591,
-                        aspectRatio: undefined
-                      }
-                    : {
-                        src: "/plasmic/sterling_and_buena_vista_foods/images/coffeeAvif.avif",
-                        fullWidth: 574,
-                        fullHeight: 488,
-                        aspectRatio: undefined
-                      }
-                }
-              />
-
-              <div
-                data-plasmic-name={"text"}
-                data-plasmic-override={overrides.text}
-                className={classNames("all", sty.text)}
-              >
-                <div
-                  data-plasmic-name={"title"}
-                  data-plasmic-override={overrides.title}
-                  className={classNames("all", sty.title)}
-                >
-                  {(
-                    hasVariant(globalVariants, "screen", "large") ? true : false
-                  ) ? (
-                    <h4
-                      className={classNames(
-                        "all",
-                        "h4",
-                        "h4__uyaK1",
-                        "__wab_text",
-                        sty.h4__gOaLt
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "large")
-                        ? "A"
-                        : "Restaurants"}
-                    </h4>
-                  ) : null}
-                  <h3
-                    className={classNames(
-                      "all",
-                      "h3",
-                      "h3__uyaK1",
-                      "__wab_text",
-                      sty.h3__oiZgu,
-                      "h3-script"
-                    )}
-                  >
-                    {hasVariant(globalVariants, "screen", "large")
-                      ? "Collaborative"
-                      : "National"}
-                  </h3>
-                  <h4
-                    className={classNames(
-                      "all",
-                      "h4",
-                      "h4__uyaK1",
-                      "__wab_text",
-                      sty.h4__gc3Cv
-                    )}
-                  >
-                    {hasVariant(globalVariants, "screen", "large")
-                      ? "Development Process"
-                      : "Restaurants"}
-                  </h4>
-                </div>
-                <div
-                  data-plasmic-name={"paragraph"}
-                  data-plasmic-override={overrides.paragraph}
-                  className={classNames("all", sty.paragraph)}
-                >
-                  <p
-                    className={classNames(
-                      "all",
-                      "p",
-                      "p__uyaK1",
-                      "__wab_text",
-                      sty.p__bFdR
-                    )}
-                  >
-                    {hasVariant(globalVariants, "screen", "large")
-                      ? "Every successful product starts with a conversation.\r\n\nOur innovation process begins with an in-depth assessment of your menu, brand, and business objectives. Together, we identify opportunities, explore new ideas, and develop custom solutions designed to help you stand out in the marketplace.\r\n\nFrom initial concept through commercialization, collaboration is at the core of everything we do."
-                      : "Sterling Foods partners with leading restaurant chains to develop proprietary bakery solutions that support menu innovation, operational consistency, and speed to market. With a focus on uniqueness and operational ease, we help brands create iconic, signature products that stand apart from the crowd."}
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              data-plasmic-name={"schoolFoodservice"}
-              data-plasmic-override={overrides.schoolFoodservice}
-              className={classNames("all", sty.schoolFoodservice)}
-            >
-              <div
-                data-plasmic-name={"text2"}
-                data-plasmic-override={overrides.text2}
-                className={classNames("all", sty.text2)}
-              >
-                <div
-                  data-plasmic-name={"title2"}
-                  data-plasmic-override={overrides.title2}
-                  className={classNames("all", sty.title2)}
-                >
-                  <h4
-                    className={classNames(
-                      "all",
-                      "h4",
-                      "h4__uyaK1",
-                      "__wab_text",
-                      sty.h4__vYjyw
-                    )}
-                  >
-                    {hasVariant(globalVariants, "screen", "large")
-                      ? "Innovation Backed by"
-                      : "Foodservice"}
-                  </h4>
-                  <h3
-                    className={classNames(
-                      "all",
-                      "h3",
-                      "h3__uyaK1",
-                      "__wab_text",
-                      sty.h3__bkTtE,
-                      "h3-script"
-                    )}
-                  >
-                    {hasVariant(globalVariants, "screen", "large")
-                      ? "Insight"
-                      : "School"}
-                  </h3>
-                </div>
-                <div
-                  data-plasmic-name={"paragraph2"}
-                  data-plasmic-override={overrides.paragraph2}
-                  className={classNames("all", sty.paragraph2)}
-                >
-                  <p
-                    className={classNames(
-                      "all",
-                      "p",
-                      "p__uyaK1",
-                      "__wab_text",
-                      sty.p__lzeA1
-                    )}
-                  >
-                    {hasVariant(globalVariants, "screen", "large")
-                      ? "The strongest ideas are driven by data and experience."
-                      : "Through our Buena Vista Foods division, Sterling Foods has been a trusted partner to K-12 nutrition programs for decades. We develop bakery solutions that seamlessly balance great taste, nutrition, and regulatory compliance\u2014helping school districts meet evolving nutritional standards while serving products students genuinely enjoy.  From clean label formulations to thoughtfully sourced, all natural ingredients, Buena Vista continues to set the standard in school nutrition."}
-                  </p>
-                  {(
-                    hasVariant(globalVariants, "screen", "large") ? true : false
-                  ) ? (
-                    <p
-                      className={classNames(
-                        "all",
-                        "p",
-                        "p__uyaK1",
-                        "__wab_text",
-                        sty.p__uqu0Z
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "large")
-                        ? "Our team evaluates market trends, consumer preferences, and menu opportunities to help identify gaps and uncover new possibilities. Through collaborative ideation sessions and strategic product development, we create bakery solutions that align with your goals and today's evolving marketplace."
-                        : "Through our Buena Vista Foods division, Sterling Foods has been a trusted partner to K-12 nutrition programs for decades. We develop bakery solutions that seamlessly balance great taste, nutrition, and regulatory compliance\u2014helping school districts meet evolving nutritional standards while serving products students genuinely enjoy.  From clean label formulations to thoughtfully sourced, all natural ingredients, Buena Vista continues to set the standard in school nutrition."}
-                    </p>
-                  ) : null}
-                  <PlasmicLink__
-                    data-plasmic-name={"aboutUs"}
-                    data-plasmic-override={overrides.aboutUs}
-                    className={classNames("all", "a", "a__uyaK1", sty.aboutUs)}
-                    component={Link}
-                    legacyBehavior={false}
-                    platform={"nextjs"}
-                  >
-                    <PrimaryBtn
-                      className={classNames(
-                        "__wab_instance",
-                        sty.primaryBtn__bfTdz
-                      )}
-                    >
-                      <div
-                        className={classNames(
-                          "all",
-                          "__wab_text",
-                          sty.text__nk7Mb
-                        )}
-                      >
-                        {"Learn More About Buena Vista Foods"}
-                      </div>
-                    </PrimaryBtn>
-                  </PlasmicLink__>
-                </div>
-              </div>
-              <PlasmicImg__
-                alt={""}
-                className={classNames(sty.img__ey5TF)}
-                displayHeight={"auto"}
-                displayMaxHeight={"none"}
-                displayMaxWidth={"100%"}
-                displayMinHeight={"0"}
-                displayMinWidth={"0"}
-                displayWidth={
-                  hasVariant(globalVariants, "screen", "mobile")
-                    ? "100%"
-                    : hasVariant(globalVariants, "screen", "dualScreen")
-                      ? "79.32%"
-                      : hasVariant(globalVariants, "screen", "smallTablet")
-                        ? "50%"
-                        : hasVariant(globalVariants, "screen", "tablet")
-                          ? "50%"
-                          : hasVariant(globalVariants, "screen", "smallLaptop")
-                            ? "40%"
-                            : hasVariant(globalVariants, "screen", "laptop")
-                              ? "40%"
-                              : hasVariant(
-                                    globalVariants,
-                                    "screen",
-                                    "smallDesktop"
-                                  )
-                                ? "590px"
-                                : hasVariant(globalVariants, "screen", "large")
-                                  ? "auto"
-                                  : "697px"
-                }
-                loading={"lazy"}
-                src={
-                  hasVariant(globalVariants, "screen", "large")
-                    ? {
-                        src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodHamCheeseCroissantPng.png",
-                        fullWidth: 732,
-                        fullHeight: 550,
-                        aspectRatio: undefined
-                      }
-                    : {
-                        src: "/plasmic/sterling_and_buena_vista_foods/images/pastriesAvif.avif",
-                        fullWidth: 697,
-                        fullHeight: 584,
-                        aspectRatio: undefined
-                      }
-                }
-              />
-            </div>
-            <div
-              data-plasmic-name={"convenienceStores"}
-              data-plasmic-override={overrides.convenienceStores}
-              className={classNames("all", sty.convenienceStores)}
-            >
-              <PlasmicImg__
-                alt={""}
-                className={classNames(sty.img__jkZr6)}
-                displayHeight={
-                  hasVariant(globalVariants, "screen", "tablet")
-                    ? "372px"
-                    : "auto"
-                }
-                displayMaxHeight={"none"}
-                displayMaxWidth={"100%"}
-                displayMinHeight={"0"}
-                displayMinWidth={"0"}
-                displayWidth={
-                  hasVariant(globalVariants, "screen", "mobile")
-                    ? "100%"
-                    : hasVariant(globalVariants, "screen", "dualScreen")
-                      ? "85.94%"
-                      : hasVariant(globalVariants, "screen", "smallTablet")
-                        ? "50%"
-                        : hasVariant(globalVariants, "screen", "tablet")
-                          ? "47.46%"
-                          : hasVariant(globalVariants, "screen", "laptop")
-                            ? "40%"
-                            : "698px"
-                }
-                loading={"lazy"}
-                src={
-                  hasVariant(globalVariants, "screen", "large")
-                    ? {
-                        src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodChocolateLavaCakePng.png",
-                        fullWidth: 698,
-                        fullHeight: 592,
-                        aspectRatio: undefined
-                      }
-                    : {
-                        src: "/plasmic/sterling_and_buena_vista_foods/images/cookiesAvif.avif",
-                        fullWidth: 698,
-                        fullHeight: 591,
-                        aspectRatio: undefined
-                      }
-                }
-              />
-
-              <div
-                data-plasmic-name={"text3"}
-                data-plasmic-override={overrides.text3}
-                className={classNames("all", sty.text3)}
-              >
-                <div
-                  data-plasmic-name={"title3"}
-                  data-plasmic-override={overrides.title3}
-                  className={classNames("all", sty.title3)}
-                >
-                  <h3
-                    className={classNames(
-                      "all",
-                      "h3",
-                      "h3__uyaK1",
-                      "__wab_text",
-                      sty.h3__iCLoB,
-                      "h3-script"
-                    )}
-                  >
-                    {hasVariant(globalVariants, "screen", "large")
-                      ? "Experstise"
-                      : "Convenience "}
-                  </h3>
-                  <h4
-                    className={classNames(
-                      "all",
-                      "h4",
-                      "h4__uyaK1",
-                      "__wab_text",
-                      sty.h4__jNpL
-                    )}
-                  >
-                    {hasVariant(globalVariants, "screen", "large")
-                      ? "Across Every Stage"
-                      : "Stores"}
-                  </h4>
-                </div>
-                {(
-                  hasVariant(globalVariants, "screen", "large") ? true : false
-                ) ? (
-                  <p
-                    className={classNames(
-                      "all",
-                      "p",
-                      "p__uyaK1",
-                      "__wab_text",
-                      sty.p__fFzVi
-                    )}
-                  >
-                    {hasVariant(globalVariants, "screen", "large")
-                      ? "Innovation takes a team."
-                      : "Through our Buena Vista Foods division, Sterling Foods has been a trusted partner to K-12 nutrition programs for decades. We develop bakery solutions that seamlessly balance great taste, nutrition, and regulatory compliance\u2014helping school districts meet evolving nutritional standards while serving products students genuinely enjoy.  From clean label formulations to thoughtfully sourced, all natural ingredients, Buena Vista continues to set the standard in school nutrition."}
-                  </p>
-                ) : null}
-                <div
-                  data-plasmic-name={"paragraph3"}
-                  data-plasmic-override={overrides.paragraph3}
-                  className={classNames("all", sty.paragraph3)}
-                >
-                  <p
-                    className={classNames(
-                      "all",
-                      "p",
-                      "p__uyaK1",
-                      "__wab_text",
-                      sty.p___1Hy0N
-                    )}
-                  >
-                    {hasVariant(globalVariants, "screen", "large")
-                      ? "Sterling Foods brings together food scientists, culinary professionals, nutrition experts, quality assurance specialists, and commercialization leaders to guide every project from concept to launch.\r\n\nBy combining diverse expertise with decades of industry experience, we help ensure every product is thoughtfully developed and ready for success"
-                      : "Sterling Foods develops portable, individually wrapped bakery products and nutrition-focused snack solutions ideally suited for today's on-the-go consumer. From protein-forward snacks and nutrition bars to grab-and-go bakery offerings, our products help convenience retailers meet evolving consumer preferences."}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          {(hasVariant(globalVariants, "screen", "large") ? true : false) ? (
-            <div
-              data-plasmic-name={"innovationSection"}
-              data-plasmic-override={overrides.innovationSection}
-              className={classNames("all", sty.innovationSection)}
-            >
-              <div
-                data-plasmic-name={"intro2"}
-                data-plasmic-override={overrides.intro2}
-                className={classNames("all", sty.intro2)}
-              >
-                <div className={classNames("all", sty.freeBox__mnnSn)}>
-                  <PlasmicImg__
-                    alt={""}
-                    className={classNames(sty.img__syicM)}
-                    displayHeight={"auto"}
-                    displayMaxHeight={"none"}
-                    displayMaxWidth={"100%"}
-                    displayMinHeight={"0"}
-                    displayMinWidth={"0"}
-                    displayWidth={"auto"}
-                    loading={"lazy"}
-                    src={{
-                      src: "/plasmic/sterling_and_buena_vista_foods/images/imagePng3.png",
-                      fullWidth: 1525,
-                      fullHeight: 417,
-                      aspectRatio: undefined
-                    }}
-                  />
-                </div>
+                  {hasVariant(globalVariants, "screen", "desktop")
+                    ? "Sterling Foods serves a diverse range of foodservice and retail channels, delivering innovative bakery solutions tailored to the unique needs of each market. Our customer-first approach, flexible manufacturing capabilities, and commitment to quality help partners bring differentiated products to market with confidence."
+                    : hasVariant(globalVariants, "screen", "large")
+                      ? "Whether you're introducing a new product, refining an existing offering, or exploring emerging trends, our team partners with you every step of the way to bring your vision to life."
+                      : "Whether you're introducing a new product, refining an existing offering, or exploring emerging trends,\u0003our team partners with you every step of the way to bring your vision to life."}
+                </p>
               </div>
               <div
-                data-plasmic-name={"foodSafety2"}
-                data-plasmic-override={overrides.foodSafety2}
-                className={classNames("all", sty.foodSafety2)}
+                data-plasmic-name={"foodSafety"}
+                data-plasmic-override={overrides.foodSafety}
+                className={classNames("all", sty.foodSafety)}
               >
                 <PlasmicImg__
                   alt={""}
-                  className={classNames(sty.img__cnGjQ)}
+                  className={classNames(sty.img__i4Gd9)}
                   displayHeight={"auto"}
                   displayMaxHeight={"none"}
                   displayMaxWidth={"100%"}
@@ -756,7 +330,7 @@ function PlasmicInnovation__RenderFunc(props: {
                       : hasVariant(globalVariants, "screen", "dualScreen")
                         ? "63.25%"
                         : hasVariant(globalVariants, "screen", "smallTablet")
-                          ? "60%"
+                          ? "50%"
                           : hasVariant(globalVariants, "screen", "laptop")
                             ? "35%"
                             : hasVariant(
@@ -773,9 +347,9 @@ function PlasmicInnovation__RenderFunc(props: {
                   src={
                     hasVariant(globalVariants, "screen", "large")
                       ? {
-                          src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodMiniQuichePng.png",
-                          fullWidth: 575,
-                          fullHeight: 482,
+                          src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodIceCreamAppleDessertPng.png",
+                          fullWidth: 698,
+                          fullHeight: 591,
                           aspectRatio: undefined
                         }
                       : {
@@ -788,14 +362,97 @@ function PlasmicInnovation__RenderFunc(props: {
                 />
 
                 <div
-                  data-plasmic-name={"text4"}
-                  data-plasmic-override={overrides.text4}
-                  className={classNames("all", sty.text4)}
+                  data-plasmic-name={"text"}
+                  data-plasmic-override={overrides.text}
+                  className={classNames("all", sty.text)}
                 >
                   <div
-                    data-plasmic-name={"title4"}
-                    data-plasmic-override={overrides.title4}
-                    className={classNames("all", sty.title4)}
+                    data-plasmic-name={"title"}
+                    data-plasmic-override={overrides.title}
+                    className={classNames("all", sty.title)}
+                  >
+                    {(
+                      hasVariant(globalVariants, "screen", "large")
+                        ? true
+                        : false
+                    ) ? (
+                      <h4
+                        className={classNames(
+                          "all",
+                          "h4",
+                          "h4__uyaK1",
+                          "__wab_text",
+                          sty.h4__gOaLt
+                        )}
+                      >
+                        {hasVariant(globalVariants, "screen", "large")
+                          ? "A"
+                          : "Restaurants"}
+                      </h4>
+                    ) : null}
+                    <h3
+                      className={classNames(
+                        "all",
+                        "h3",
+                        "h3__uyaK1",
+                        "__wab_text",
+                        sty.h3__oiZgu,
+                        "h3-script"
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "large")
+                        ? "Collaborative"
+                        : "National"}
+                    </h3>
+                    <h4
+                      className={classNames(
+                        "all",
+                        "h4",
+                        "h4__uyaK1",
+                        "__wab_text",
+                        sty.h4__gc3Cv
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "large")
+                        ? "Development Process"
+                        : "Restaurants"}
+                    </h4>
+                  </div>
+                  <div
+                    data-plasmic-name={"paragraph"}
+                    data-plasmic-override={overrides.paragraph}
+                    className={classNames("all", sty.paragraph)}
+                  >
+                    <p
+                      className={classNames(
+                        "all",
+                        "p",
+                        "p__uyaK1",
+                        "__wab_text",
+                        sty.p__bFdR
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "large")
+                        ? "Every successful product starts with a conversation.\r\n\nOur innovation process begins with an in-depth assessment of your menu, brand, and business objectives. Together, we identify opportunities, explore new ideas, and develop custom solutions designed to help you stand out in the marketplace.\r\n\nFrom initial concept through commercialization, collaboration is at the core of everything we do."
+                        : "Sterling Foods partners with leading restaurant chains to develop proprietary bakery solutions that support menu innovation, operational consistency, and speed to market. With a focus on uniqueness and operational ease, we help brands create iconic, signature products that stand apart from the crowd."}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                data-plasmic-name={"schoolFoodservice"}
+                data-plasmic-override={overrides.schoolFoodservice}
+                className={classNames("all", sty.schoolFoodservice)}
+              >
+                <div
+                  data-plasmic-name={"text2"}
+                  data-plasmic-override={overrides.text2}
+                  className={classNames("all", sty.text2)}
+                >
+                  <div
+                    data-plasmic-name={"title2"}
+                    data-plasmic-override={overrides.title2}
+                    className={classNames("all", sty.title2)}
                   >
                     <h4
                       className={classNames(
@@ -803,12 +460,12 @@ function PlasmicInnovation__RenderFunc(props: {
                         "h4",
                         "h4__uyaK1",
                         "__wab_text",
-                        sty.h4__ldLzs
+                        sty.h4__vYjyw
                       )}
                     >
                       {hasVariant(globalVariants, "screen", "large")
-                        ? "From Concept to"
-                        : "Restaurants"}
+                        ? "Innovation Backed by"
+                        : "Foodservice"}
                     </h4>
                     <h3
                       className={classNames(
@@ -816,19 +473,19 @@ function PlasmicInnovation__RenderFunc(props: {
                         "h3",
                         "h3__uyaK1",
                         "__wab_text",
-                        sty.h3__mYBy,
+                        sty.h3__bkTtE,
                         "h3-script"
                       )}
                     >
                       {hasVariant(globalVariants, "screen", "large")
-                        ? "Commercialization"
-                        : "National"}
+                        ? "Insight"
+                        : "School"}
                     </h3>
                   </div>
                   <div
-                    data-plasmic-name={"paragraph4"}
-                    data-plasmic-override={overrides.paragraph4}
-                    className={classNames("all", sty.paragraph4)}
+                    data-plasmic-name={"paragraph2"}
+                    data-plasmic-override={overrides.paragraph2}
+                    className={classNames("all", sty.paragraph2)}
                   >
                     <p
                       className={classNames(
@@ -836,116 +493,11 @@ function PlasmicInnovation__RenderFunc(props: {
                         "p",
                         "p__uyaK1",
                         "__wab_text",
-                        sty.p__b0Wok
+                        sty.p__lzeA1
                       )}
                     >
                       {hasVariant(globalVariants, "screen", "large")
-                        ? "Your operations deserve a seamless path to production.\r"
-                        : "Sterling Foods partners with leading restaurant chains to develop proprietary bakery solutions that support menu innovation, operational consistency, and speed to market. With a focus on uniqueness and operational ease, we help brands create iconic, signature products that stand apart from the crowd."}
-                    </p>
-                    <p
-                      className={classNames(
-                        "all",
-                        "p",
-                        "p__uyaK1",
-                        "__wab_text",
-                        sty.p__bxJoi
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "large")
-                        ? "Our development process is designed to efficiently move products from bench samples to commercial-scale manufacturing. With multiple production lines across our manufacturing network, we can evaluate, refine, and scale products while maintaining the quality and consistency our customers expect."
-                        : "Sterling Foods partners with leading restaurant chains to develop proprietary bakery solutions that support menu innovation, operational consistency, and speed to market. With a focus on uniqueness and operational ease, we help brands create iconic, signature products that stand apart from the crowd."}
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div
-                data-plasmic-name={"schoolFoodservice2"}
-                data-plasmic-override={overrides.schoolFoodservice2}
-                className={classNames("all", sty.schoolFoodservice2)}
-              >
-                <div
-                  data-plasmic-name={"text5"}
-                  data-plasmic-override={overrides.text5}
-                  className={classNames("all", sty.text5)}
-                >
-                  <div
-                    data-plasmic-name={"title5"}
-                    data-plasmic-override={overrides.title5}
-                    className={classNames("all", sty.title5)}
-                  >
-                    <div className={classNames("all", sty.freeBox___3RUfV)}>
-                      <h4
-                        className={classNames(
-                          "all",
-                          "h4",
-                          "h4__uyaK1",
-                          "__wab_text",
-                          sty.h4__vm8NE
-                        )}
-                      >
-                        {hasVariant(globalVariants, "screen", "large")
-                          ? "A"
-                          : "Foodservice"}
-                      </h4>
-                      <h3
-                        className={classNames(
-                          "all",
-                          "h3",
-                          "h3__uyaK1",
-                          "__wab_text",
-                          sty.h3__bo1QB,
-                          "h3-script"
-                        )}
-                      >
-                        {hasVariant(globalVariants, "screen", "large")
-                          ? "Culture"
-                          : "School"}
-                      </h3>
-                      <h4
-                        className={classNames(
-                          "all",
-                          "h4",
-                          "h4__uyaK1",
-                          "__wab_text",
-                          sty.h4__eDxZa
-                        )}
-                      >
-                        {hasVariant(globalVariants, "screen", "large")
-                          ? "of"
-                          : "Foodservice"}
-                      </h4>
-                    </div>
-                    <h4
-                      className={classNames(
-                        "all",
-                        "h4",
-                        "h4__uyaK1",
-                        "__wab_text",
-                        sty.h4__aU4O
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "large")
-                        ? "Continuous Innovation"
-                        : "Foodservice"}
-                    </h4>
-                  </div>
-                  <div
-                    data-plasmic-name={"paragraph5"}
-                    data-plasmic-override={overrides.paragraph5}
-                    className={classNames("all", sty.paragraph5)}
-                  >
-                    <p
-                      className={classNames(
-                        "all",
-                        "p",
-                        "p__uyaK1",
-                        "__wab_text",
-                        sty.p__llpw
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "large")
-                        ? "Innovation requires curiosity, flexibility, and a willingness\nto invest in what's next."
+                        ? "The strongest ideas are driven by data and experience."
                         : "Through our Buena Vista Foods division, Sterling Foods has been a trusted partner to K-12 nutrition programs for decades. We develop bakery solutions that seamlessly balance great taste, nutrition, and regulatory compliance\u2014helping school districts meet evolving nutritional standards while serving products students genuinely enjoy.  From clean label formulations to thoughtfully sourced, all natural ingredients, Buena Vista continues to set the standard in school nutrition."}
                     </p>
                     {(
@@ -959,7 +511,7 @@ function PlasmicInnovation__RenderFunc(props: {
                           "p",
                           "p__uyaK1",
                           "__wab_text",
-                          sty.p___1Jme
+                          sty.p__uqu0Z
                         )}
                       >
                         {hasVariant(globalVariants, "screen", "large")
@@ -968,13 +520,13 @@ function PlasmicInnovation__RenderFunc(props: {
                       </p>
                     ) : null}
                     <PlasmicLink__
-                      data-plasmic-name={"aboutUs2"}
-                      data-plasmic-override={overrides.aboutUs2}
+                      data-plasmic-name={"aboutUs"}
+                      data-plasmic-override={overrides.aboutUs}
                       className={classNames(
                         "all",
                         "a",
                         "a__uyaK1",
-                        sty.aboutUs2
+                        sty.aboutUs
                       )}
                       component={Link}
                       legacyBehavior={false}
@@ -983,14 +535,14 @@ function PlasmicInnovation__RenderFunc(props: {
                       <PrimaryBtn
                         className={classNames(
                           "__wab_instance",
-                          sty.primaryBtn__cnaCh
+                          sty.primaryBtn__bfTdz
                         )}
                       >
                         <div
                           className={classNames(
                             "all",
                             "__wab_text",
-                            sty.text__t47T8
+                            sty.text__nk7Mb
                           )}
                         >
                           {"Learn More About Buena Vista Foods"}
@@ -1001,7 +553,7 @@ function PlasmicInnovation__RenderFunc(props: {
                 </div>
                 <PlasmicImg__
                   alt={""}
-                  className={classNames(sty.img__xVawJ)}
+                  className={classNames(sty.img__ey5TF)}
                   displayHeight={"auto"}
                   displayMaxHeight={"none"}
                   displayMaxWidth={"100%"}
@@ -1013,7 +565,7 @@ function PlasmicInnovation__RenderFunc(props: {
                       : hasVariant(globalVariants, "screen", "dualScreen")
                         ? "79.32%"
                         : hasVariant(globalVariants, "screen", "smallTablet")
-                          ? "60%"
+                          ? "50%"
                           : hasVariant(globalVariants, "screen", "tablet")
                             ? "50%"
                             : hasVariant(
@@ -1042,9 +594,9 @@ function PlasmicInnovation__RenderFunc(props: {
                   src={
                     hasVariant(globalVariants, "screen", "large")
                       ? {
-                          src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodPuffPastriesPng.png",
-                          fullWidth: 695,
-                          fullHeight: 611,
+                          src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodHamCheeseCroissantPng.png",
+                          fullWidth: 732,
+                          fullHeight: 550,
                           aspectRatio: undefined
                         }
                       : {
@@ -1057,13 +609,13 @@ function PlasmicInnovation__RenderFunc(props: {
                 />
               </div>
               <div
-                data-plasmic-name={"convenienceStores2"}
-                data-plasmic-override={overrides.convenienceStores2}
-                className={classNames("all", sty.convenienceStores2)}
+                data-plasmic-name={"convenienceStores"}
+                data-plasmic-override={overrides.convenienceStores}
+                className={classNames("all", sty.convenienceStores)}
               >
                 <PlasmicImg__
                   alt={""}
-                  className={classNames(sty.img__di6Wp)}
+                  className={classNames(sty.img__jkZr6)}
                   displayHeight={
                     hasVariant(globalVariants, "screen", "tablet")
                       ? "372px"
@@ -1075,26 +627,24 @@ function PlasmicInnovation__RenderFunc(props: {
                   displayMinWidth={"0"}
                   displayWidth={
                     hasVariant(globalVariants, "screen", "mobile")
-                      ? "auto"
+                      ? "100%"
                       : hasVariant(globalVariants, "screen", "dualScreen")
                         ? "85.94%"
                         : hasVariant(globalVariants, "screen", "smallTablet")
-                          ? "auto"
+                          ? "50%"
                           : hasVariant(globalVariants, "screen", "tablet")
                             ? "47.46%"
                             : hasVariant(globalVariants, "screen", "laptop")
                               ? "40%"
-                              : hasVariant(globalVariants, "screen", "large")
-                                ? "auto"
-                                : "698px"
+                              : "698px"
                   }
                   loading={"lazy"}
                   src={
                     hasVariant(globalVariants, "screen", "large")
                       ? {
-                          src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodDessertWithFillingPng.png",
-                          fullWidth: 575,
-                          fullHeight: 482,
+                          src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodChocolateLavaCakePng.png",
+                          fullWidth: 698,
+                          fullHeight: 592,
                           aspectRatio: undefined
                         }
                       : {
@@ -1107,40 +657,27 @@ function PlasmicInnovation__RenderFunc(props: {
                 />
 
                 <div
-                  data-plasmic-name={"text6"}
-                  data-plasmic-override={overrides.text6}
-                  className={classNames("all", sty.text6)}
+                  data-plasmic-name={"text3"}
+                  data-plasmic-override={overrides.text3}
+                  className={classNames("all", sty.text3)}
                 >
                   <div
-                    data-plasmic-name={"title6"}
-                    data-plasmic-override={overrides.title6}
-                    className={classNames("all", sty.title6)}
+                    data-plasmic-name={"title3"}
+                    data-plasmic-override={overrides.title3}
+                    className={classNames("all", sty.title3)}
                   >
-                    <h4
-                      className={classNames(
-                        "all",
-                        "h4",
-                        "h4__uyaK1",
-                        "__wab_text",
-                        sty.h4__h5CIa
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "large")
-                        ? "Your"
-                        : "Stores"}
-                    </h4>
                     <h3
                       className={classNames(
                         "all",
                         "h3",
                         "h3__uyaK1",
                         "__wab_text",
-                        sty.h3__so0IA,
+                        sty.h3__iCLoB,
                         "h3-script"
                       )}
                     >
                       {hasVariant(globalVariants, "screen", "large")
-                        ? "Vision."
+                        ? "Experstise"
                         : "Convenience "}
                     </h3>
                     <h4
@@ -1149,32 +686,35 @@ function PlasmicInnovation__RenderFunc(props: {
                         "h4",
                         "h4__uyaK1",
                         "__wab_text",
-                        sty.h4__jTyNz
+                        sty.h4__jNpL
                       )}
                     >
                       {hasVariant(globalVariants, "screen", "large")
-                        ? "Our"
+                        ? "Across Every Stage"
                         : "Stores"}
                     </h4>
-                    <h3
-                      className={classNames(
-                        "all",
-                        "h3",
-                        "h3__uyaK1",
-                        "__wab_text",
-                        sty.h3__qpLid,
-                        "h3-script"
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "large")
-                        ? "Innovation."
-                        : "Convenience "}
-                    </h3>
                   </div>
+                  {(
+                    hasVariant(globalVariants, "screen", "large") ? true : false
+                  ) ? (
+                    <p
+                      className={classNames(
+                        "all",
+                        "p",
+                        "p__uyaK1",
+                        "__wab_text",
+                        sty.p__fFzVi
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "large")
+                        ? "Innovation takes a team."
+                        : "Through our Buena Vista Foods division, Sterling Foods has been a trusted partner to K-12 nutrition programs for decades. We develop bakery solutions that seamlessly balance great taste, nutrition, and regulatory compliance\u2014helping school districts meet evolving nutritional standards while serving products students genuinely enjoy.  From clean label formulations to thoughtfully sourced, all natural ingredients, Buena Vista continues to set the standard in school nutrition."}
+                    </p>
+                  ) : null}
                   <div
-                    data-plasmic-name={"paragraph6"}
-                    data-plasmic-override={overrides.paragraph6}
-                    className={classNames("all", sty.paragraph6)}
+                    data-plasmic-name={"paragraph3"}
+                    data-plasmic-override={overrides.paragraph3}
+                    className={classNames("all", sty.paragraph3)}
                   >
                     <p
                       className={classNames(
@@ -1182,29 +722,517 @@ function PlasmicInnovation__RenderFunc(props: {
                         "p",
                         "p__uyaK1",
                         "__wab_text",
-                        sty.p__wwxfl
+                        sty.p___1Hy0N
                       )}
                     >
                       {hasVariant(globalVariants, "screen", "large")
-                        ? "Whether you're launching a signature menu item, expanding your product portfolio, or responding to emerging trends, Sterling Foods provides the expertise, collaborative approach, and innovative thinking to help bring your ideas to market with confidence."
+                        ? "Sterling Foods brings together food scientists, culinary professionals, nutrition experts, quality assurance specialists, and commercialization leaders to guide every project from concept to launch.\r\n\nBy combining diverse expertise with decades of industry experience, we help ensure every product is thoughtfully developed and ready for success"
                         : "Sterling Foods develops portable, individually wrapped bakery products and nutrition-focused snack solutions ideally suited for today's on-the-go consumer. From protein-forward snacks and nutrition bars to grab-and-go bakery offerings, our products help convenience retailers meet evolving consumer preferences."}
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-          ) : null}
-          <CtaBottom
-            data-plasmic-name={"ctaBottom"}
-            data-plasmic-override={overrides.ctaBottom}
-            className={classNames("__wab_instance", sty.ctaBottom)}
-          />
+            {(hasVariant(globalVariants, "screen", "large") ? true : false) ? (
+              <div
+                data-plasmic-name={"innovationSection"}
+                data-plasmic-override={overrides.innovationSection}
+                className={classNames("all", sty.innovationSection)}
+              >
+                <div
+                  data-plasmic-name={"intro2"}
+                  data-plasmic-override={overrides.intro2}
+                  className={classNames("all", sty.intro2)}
+                >
+                  <div className={classNames("all", sty.freeBox__mnnSn)}>
+                    <PlasmicImg__
+                      alt={""}
+                      className={classNames(sty.img__syicM)}
+                      displayHeight={"auto"}
+                      displayMaxHeight={"none"}
+                      displayMaxWidth={"100%"}
+                      displayMinHeight={"0"}
+                      displayMinWidth={"0"}
+                      displayWidth={"auto"}
+                      loading={"lazy"}
+                      src={{
+                        src: "/plasmic/sterling_and_buena_vista_foods/images/imagePng3.png",
+                        fullWidth: 1525,
+                        fullHeight: 417,
+                        aspectRatio: undefined
+                      }}
+                    />
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"foodSafety2"}
+                  data-plasmic-override={overrides.foodSafety2}
+                  className={classNames("all", sty.foodSafety2)}
+                >
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__cnGjQ)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "mobile")
+                        ? "100%"
+                        : hasVariant(globalVariants, "screen", "dualScreen")
+                          ? "63.25%"
+                          : hasVariant(globalVariants, "screen", "smallTablet")
+                            ? "60%"
+                            : hasVariant(globalVariants, "screen", "laptop")
+                              ? "35%"
+                              : hasVariant(
+                                    globalVariants,
+                                    "screen",
+                                    "smallDesktop"
+                                  )
+                                ? "472px"
+                                : hasVariant(globalVariants, "screen", "large")
+                                  ? "auto"
+                                  : "574px"
+                    }
+                    loading={"lazy"}
+                    src={
+                      hasVariant(globalVariants, "screen", "large")
+                        ? {
+                            src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodMiniQuichePng.png",
+                            fullWidth: 575,
+                            fullHeight: 482,
+                            aspectRatio: undefined
+                          }
+                        : {
+                            src: "/plasmic/sterling_and_buena_vista_foods/images/coffeeAvif.avif",
+                            fullWidth: 574,
+                            fullHeight: 488,
+                            aspectRatio: undefined
+                          }
+                    }
+                  />
 
-          <Footer
-            data-plasmic-name={"footer"}
-            data-plasmic-override={overrides.footer}
-            className={classNames("__wab_instance", sty.footer)}
-          />
+                  <div
+                    data-plasmic-name={"text4"}
+                    data-plasmic-override={overrides.text4}
+                    className={classNames("all", sty.text4)}
+                  >
+                    <div
+                      data-plasmic-name={"title4"}
+                      data-plasmic-override={overrides.title4}
+                      className={classNames("all", sty.title4)}
+                    >
+                      <h4
+                        className={classNames(
+                          "all",
+                          "h4",
+                          "h4__uyaK1",
+                          "__wab_text",
+                          sty.h4__ldLzs
+                        )}
+                      >
+                        {hasVariant(globalVariants, "screen", "large")
+                          ? "From Concept to"
+                          : "Restaurants"}
+                      </h4>
+                      <h3
+                        className={classNames(
+                          "all",
+                          "h3",
+                          "h3__uyaK1",
+                          "__wab_text",
+                          sty.h3__mYBy,
+                          "h3-script"
+                        )}
+                      >
+                        {hasVariant(globalVariants, "screen", "large")
+                          ? "Commercialization"
+                          : "National"}
+                      </h3>
+                    </div>
+                    <div
+                      data-plasmic-name={"paragraph4"}
+                      data-plasmic-override={overrides.paragraph4}
+                      className={classNames("all", sty.paragraph4)}
+                    >
+                      <p
+                        className={classNames(
+                          "all",
+                          "p",
+                          "p__uyaK1",
+                          "__wab_text",
+                          sty.p__b0Wok
+                        )}
+                      >
+                        {hasVariant(globalVariants, "screen", "large")
+                          ? "Your operations deserve a seamless path to production.\r"
+                          : "Sterling Foods partners with leading restaurant chains to develop proprietary bakery solutions that support menu innovation, operational consistency, and speed to market. With a focus on uniqueness and operational ease, we help brands create iconic, signature products that stand apart from the crowd."}
+                      </p>
+                      <p
+                        className={classNames(
+                          "all",
+                          "p",
+                          "p__uyaK1",
+                          "__wab_text",
+                          sty.p__bxJoi
+                        )}
+                      >
+                        {hasVariant(globalVariants, "screen", "large")
+                          ? "Our development process is designed to efficiently move products from bench samples to commercial-scale manufacturing. With multiple production lines across our manufacturing network, we can evaluate, refine, and scale products while maintaining the quality and consistency our customers expect."
+                          : "Sterling Foods partners with leading restaurant chains to develop proprietary bakery solutions that support menu innovation, operational consistency, and speed to market. With a focus on uniqueness and operational ease, we help brands create iconic, signature products that stand apart from the crowd."}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"schoolFoodservice2"}
+                  data-plasmic-override={overrides.schoolFoodservice2}
+                  className={classNames("all", sty.schoolFoodservice2)}
+                >
+                  <div
+                    data-plasmic-name={"text5"}
+                    data-plasmic-override={overrides.text5}
+                    className={classNames("all", sty.text5)}
+                  >
+                    <div
+                      data-plasmic-name={"title5"}
+                      data-plasmic-override={overrides.title5}
+                      className={classNames("all", sty.title5)}
+                    >
+                      <div className={classNames("all", sty.freeBox___3RUfV)}>
+                        <h4
+                          className={classNames(
+                            "all",
+                            "h4",
+                            "h4__uyaK1",
+                            "__wab_text",
+                            sty.h4__vm8NE
+                          )}
+                        >
+                          {hasVariant(globalVariants, "screen", "large")
+                            ? "A"
+                            : "Foodservice"}
+                        </h4>
+                        <h3
+                          className={classNames(
+                            "all",
+                            "h3",
+                            "h3__uyaK1",
+                            "__wab_text",
+                            sty.h3__bo1QB,
+                            "h3-script"
+                          )}
+                        >
+                          {hasVariant(globalVariants, "screen", "large")
+                            ? "Culture"
+                            : "School"}
+                        </h3>
+                        <h4
+                          className={classNames(
+                            "all",
+                            "h4",
+                            "h4__uyaK1",
+                            "__wab_text",
+                            sty.h4__eDxZa
+                          )}
+                        >
+                          {hasVariant(globalVariants, "screen", "large")
+                            ? "of"
+                            : "Foodservice"}
+                        </h4>
+                      </div>
+                      <h4
+                        className={classNames(
+                          "all",
+                          "h4",
+                          "h4__uyaK1",
+                          "__wab_text",
+                          sty.h4__aU4O
+                        )}
+                      >
+                        {hasVariant(globalVariants, "screen", "large")
+                          ? "Continuous Innovation"
+                          : "Foodservice"}
+                      </h4>
+                    </div>
+                    <div
+                      data-plasmic-name={"paragraph5"}
+                      data-plasmic-override={overrides.paragraph5}
+                      className={classNames("all", sty.paragraph5)}
+                    >
+                      <p
+                        className={classNames(
+                          "all",
+                          "p",
+                          "p__uyaK1",
+                          "__wab_text",
+                          sty.p__llpw
+                        )}
+                      >
+                        {hasVariant(globalVariants, "screen", "large")
+                          ? "Innovation requires curiosity, flexibility, and a willingness\nto invest in what's next."
+                          : "Through our Buena Vista Foods division, Sterling Foods has been a trusted partner to K-12 nutrition programs for decades. We develop bakery solutions that seamlessly balance great taste, nutrition, and regulatory compliance\u2014helping school districts meet evolving nutritional standards while serving products students genuinely enjoy.  From clean label formulations to thoughtfully sourced, all natural ingredients, Buena Vista continues to set the standard in school nutrition."}
+                      </p>
+                      {(
+                        hasVariant(globalVariants, "screen", "large")
+                          ? true
+                          : false
+                      ) ? (
+                        <p
+                          className={classNames(
+                            "all",
+                            "p",
+                            "p__uyaK1",
+                            "__wab_text",
+                            sty.p___1Jme
+                          )}
+                        >
+                          {hasVariant(globalVariants, "screen", "large")
+                            ? "Our team evaluates market trends, consumer preferences, and menu opportunities to help identify gaps and uncover new possibilities. Through collaborative ideation sessions and strategic product development, we create bakery solutions that align with your goals and today's evolving marketplace."
+                            : "Through our Buena Vista Foods division, Sterling Foods has been a trusted partner to K-12 nutrition programs for decades. We develop bakery solutions that seamlessly balance great taste, nutrition, and regulatory compliance\u2014helping school districts meet evolving nutritional standards while serving products students genuinely enjoy.  From clean label formulations to thoughtfully sourced, all natural ingredients, Buena Vista continues to set the standard in school nutrition."}
+                        </p>
+                      ) : null}
+                      <PlasmicLink__
+                        data-plasmic-name={"aboutUs2"}
+                        data-plasmic-override={overrides.aboutUs2}
+                        className={classNames(
+                          "all",
+                          "a",
+                          "a__uyaK1",
+                          sty.aboutUs2
+                        )}
+                        component={Link}
+                        legacyBehavior={false}
+                        platform={"nextjs"}
+                      >
+                        <PrimaryBtn
+                          className={classNames(
+                            "__wab_instance",
+                            sty.primaryBtn__cnaCh
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__t47T8
+                            )}
+                          >
+                            {"Learn More About Buena Vista Foods"}
+                          </div>
+                        </PrimaryBtn>
+                      </PlasmicLink__>
+                    </div>
+                  </div>
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__xVawJ)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "mobile")
+                        ? "100%"
+                        : hasVariant(globalVariants, "screen", "dualScreen")
+                          ? "79.32%"
+                          : hasVariant(globalVariants, "screen", "smallTablet")
+                            ? "60%"
+                            : hasVariant(globalVariants, "screen", "tablet")
+                              ? "50%"
+                              : hasVariant(
+                                    globalVariants,
+                                    "screen",
+                                    "smallLaptop"
+                                  )
+                                ? "40%"
+                                : hasVariant(globalVariants, "screen", "laptop")
+                                  ? "40%"
+                                  : hasVariant(
+                                        globalVariants,
+                                        "screen",
+                                        "smallDesktop"
+                                      )
+                                    ? "590px"
+                                    : hasVariant(
+                                          globalVariants,
+                                          "screen",
+                                          "large"
+                                        )
+                                      ? "auto"
+                                      : "697px"
+                    }
+                    loading={"lazy"}
+                    src={
+                      hasVariant(globalVariants, "screen", "large")
+                        ? {
+                            src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodPuffPastriesPng.png",
+                            fullWidth: 695,
+                            fullHeight: 611,
+                            aspectRatio: undefined
+                          }
+                        : {
+                            src: "/plasmic/sterling_and_buena_vista_foods/images/pastriesAvif.avif",
+                            fullWidth: 697,
+                            fullHeight: 584,
+                            aspectRatio: undefined
+                          }
+                    }
+                  />
+                </div>
+                <div
+                  data-plasmic-name={"convenienceStores2"}
+                  data-plasmic-override={overrides.convenienceStores2}
+                  className={classNames("all", sty.convenienceStores2)}
+                >
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__di6Wp)}
+                    displayHeight={
+                      hasVariant(globalVariants, "screen", "tablet")
+                        ? "372px"
+                        : "auto"
+                    }
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "mobile")
+                        ? "auto"
+                        : hasVariant(globalVariants, "screen", "dualScreen")
+                          ? "85.94%"
+                          : hasVariant(globalVariants, "screen", "smallTablet")
+                            ? "auto"
+                            : hasVariant(globalVariants, "screen", "tablet")
+                              ? "47.46%"
+                              : hasVariant(globalVariants, "screen", "laptop")
+                                ? "40%"
+                                : hasVariant(globalVariants, "screen", "large")
+                                  ? "auto"
+                                  : "698px"
+                    }
+                    loading={"lazy"}
+                    src={
+                      hasVariant(globalVariants, "screen", "large")
+                        ? {
+                            src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodDessertWithFillingPng.png",
+                            fullWidth: 575,
+                            fullHeight: 482,
+                            aspectRatio: undefined
+                          }
+                        : {
+                            src: "/plasmic/sterling_and_buena_vista_foods/images/cookiesAvif.avif",
+                            fullWidth: 698,
+                            fullHeight: 591,
+                            aspectRatio: undefined
+                          }
+                    }
+                  />
+
+                  <div
+                    data-plasmic-name={"text6"}
+                    data-plasmic-override={overrides.text6}
+                    className={classNames("all", sty.text6)}
+                  >
+                    <div
+                      data-plasmic-name={"title6"}
+                      data-plasmic-override={overrides.title6}
+                      className={classNames("all", sty.title6)}
+                    >
+                      <h4
+                        className={classNames(
+                          "all",
+                          "h4",
+                          "h4__uyaK1",
+                          "__wab_text",
+                          sty.h4__h5CIa
+                        )}
+                      >
+                        {hasVariant(globalVariants, "screen", "large")
+                          ? "Your"
+                          : "Stores"}
+                      </h4>
+                      <h3
+                        className={classNames(
+                          "all",
+                          "h3",
+                          "h3__uyaK1",
+                          "__wab_text",
+                          sty.h3__so0IA,
+                          "h3-script"
+                        )}
+                      >
+                        {hasVariant(globalVariants, "screen", "large")
+                          ? "Vision."
+                          : "Convenience "}
+                      </h3>
+                      <h4
+                        className={classNames(
+                          "all",
+                          "h4",
+                          "h4__uyaK1",
+                          "__wab_text",
+                          sty.h4__jTyNz
+                        )}
+                      >
+                        {hasVariant(globalVariants, "screen", "large")
+                          ? "Our"
+                          : "Stores"}
+                      </h4>
+                      <h3
+                        className={classNames(
+                          "all",
+                          "h3",
+                          "h3__uyaK1",
+                          "__wab_text",
+                          sty.h3__qpLid,
+                          "h3-script"
+                        )}
+                      >
+                        {hasVariant(globalVariants, "screen", "large")
+                          ? "Innovation."
+                          : "Convenience "}
+                      </h3>
+                    </div>
+                    <div
+                      data-plasmic-name={"paragraph6"}
+                      data-plasmic-override={overrides.paragraph6}
+                      className={classNames("all", sty.paragraph6)}
+                    >
+                      <p
+                        className={classNames(
+                          "all",
+                          "p",
+                          "p__uyaK1",
+                          "__wab_text",
+                          sty.p__wwxfl
+                        )}
+                      >
+                        {hasVariant(globalVariants, "screen", "large")
+                          ? "Whether you're launching a signature menu item, expanding your product portfolio, or responding to emerging trends, Sterling Foods provides the expertise, collaborative approach, and innovative thinking to help bring your ideas to market with confidence."
+                          : "Sterling Foods develops portable, individually wrapped bakery products and nutrition-focused snack solutions ideally suited for today's on-the-go consumer. From protein-forward snacks and nutrition bars to grab-and-go bakery offerings, our products help convenience retailers meet evolving consumer preferences."}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ) : null}
+            <CtaBottom
+              data-plasmic-name={"ctaBottom"}
+              data-plasmic-override={overrides.ctaBottom}
+              className={classNames("__wab_instance", sty.ctaBottom)}
+            />
+
+            <Footer
+              data-plasmic-name={"footer"}
+              data-plasmic-override={overrides.footer}
+              className={classNames("__wab_instance", sty.footer)}
+            />
+          </div>
         </div>
       </div>
     </React.Fragment>
@@ -1214,6 +1242,44 @@ function PlasmicInnovation__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
+    "pageContainer",
+    "header",
+    "topHero",
+    "innovationBody",
+    "intro",
+    "foodSafety",
+    "text",
+    "title",
+    "paragraph",
+    "schoolFoodservice",
+    "text2",
+    "title2",
+    "paragraph2",
+    "aboutUs",
+    "convenienceStores",
+    "text3",
+    "title3",
+    "paragraph3",
+    "innovationSection",
+    "intro2",
+    "foodSafety2",
+    "text4",
+    "title4",
+    "paragraph4",
+    "schoolFoodservice2",
+    "text5",
+    "title5",
+    "paragraph5",
+    "aboutUs2",
+    "convenienceStores2",
+    "text6",
+    "title6",
+    "paragraph6",
+    "ctaBottom",
+    "footer"
+  ],
+  pageContainer: [
+    "pageContainer",
     "header",
     "topHero",
     "innovationBody",
@@ -1333,6 +1399,7 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  pageContainer: "div";
   header: typeof Header;
   topHero: typeof TopHero;
   innovationBody: "div";
@@ -1431,6 +1498,7 @@ export const PlasmicInnovation = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    pageContainer: makeNodeComponent("pageContainer"),
     header: makeNodeComponent("header"),
     topHero: makeNodeComponent("topHero"),
     innovationBody: makeNodeComponent("innovationBody"),

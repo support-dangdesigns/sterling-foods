@@ -240,6 +240,7 @@ export type PlasmicAboutUs__OverridesType = {
   aboutUsCta?: Flex__<"div">;
   ctaBottom?: Flex__<typeof CtaBottom>;
   footer?: Flex__<typeof Footer>;
+  pageContainer?: Flex__<"div">;
 };
 
 export interface DefaultAboutUsProps {}
@@ -2935,6 +2936,12 @@ function PlasmicAboutUs__RenderFunc(props: {
             data-plasmic-override={overrides.footer}
             className={classNames("__wab_instance", sty.footer)}
           />
+
+          <div
+            data-plasmic-name={"pageContainer"}
+            data-plasmic-override={overrides.pageContainer}
+            className={classNames("all", sty.pageContainer)}
+          />
         </div>
       </div>
     </React.Fragment>
@@ -3051,7 +3058,8 @@ const PlasmicDescendants = {
     "text31",
     "aboutUsCta",
     "ctaBottom",
-    "footer"
+    "footer",
+    "pageContainer"
   ],
   header: ["header"],
   topHero: ["topHero"],
@@ -3413,7 +3421,8 @@ const PlasmicDescendants = {
   text31: ["text31"],
   aboutUsCta: ["aboutUsCta", "ctaBottom"],
   ctaBottom: ["ctaBottom"],
-  footer: ["footer"]
+  footer: ["footer"],
+  pageContainer: ["pageContainer"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -3528,6 +3537,7 @@ type NodeDefaultElementType = {
   aboutUsCta: "div";
   ctaBottom: typeof CtaBottom;
   footer: typeof Footer;
+  pageContainer: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -3700,6 +3710,7 @@ export const PlasmicAboutUs = Object.assign(
     aboutUsCta: makeNodeComponent("aboutUsCta"),
     ctaBottom: makeNodeComponent("ctaBottom"),
     footer: makeNodeComponent("footer"),
+    pageContainer: makeNodeComponent("pageContainer"),
 
     // Metadata about props expected for PlasmicAboutUs
     internalVariantProps: PlasmicAboutUs__VariantProps,

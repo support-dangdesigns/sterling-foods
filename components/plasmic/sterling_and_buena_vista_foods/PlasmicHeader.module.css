@@ -140,7 +140,7 @@
     min-width: 0;
   }
 }
-.logo {
+.link {
   background: url("/plasmic/sterling_and_buena_vista_foods/images/frame68.png") center center / cover no-repeat;
   width: 392px;
   height: 106px;
@@ -154,7 +154,7 @@
   flex-shrink: 0;
 }
 @media (max-width: 1440px) {
-  .logo {
+  .link {
     text-align: left;
     left: 40px;
     right: auto;
@@ -165,14 +165,14 @@
   }
 }
 @media (max-width: 1024px) {
-  .logo {
+  .link {
     width: 300px;
     height: 80px;
     flex-shrink: 0;
   }
 }
 @media (max-width: 757px) {
-  .logo {
+  .link {
     width: 200px;
     display: flex;
     flex-direction: row;
@@ -189,7 +189,7 @@
   }
 }
 @media (max-width: 414px) {
-  .logo {
+  .link {
     left: auto;
     top: auto;
     align-self: baseline;

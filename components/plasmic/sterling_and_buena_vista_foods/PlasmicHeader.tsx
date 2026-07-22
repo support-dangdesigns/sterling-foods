@@ -89,7 +89,7 @@ export type PlasmicHeader__OverridesType = {
   colorbar?: Flex__<"div">;
   header?: Flex__<"div">;
   menu?: Flex__<"div">;
-  logo?: Flex__<"a"> & Partial<LinkProps>;
+  link?: Flex__<"a"> & Partial<LinkProps>;
   convoBtn?: Flex__<typeof Button>;
   expandMenu?: Flex__<"div">;
   menu2?: Flex__<"div">;
@@ -215,11 +215,52 @@ function PlasmicHeader__RenderFunc(props: {
             className={classNames("all", sty.menu)}
           >
             <PlasmicLink__
-              data-plasmic-name={"logo"}
-              data-plasmic-override={overrides.logo}
-              className={classNames("all", "a", "a__uyaK1", sty.logo)}
+              data-plasmic-name={"link"}
+              data-plasmic-override={overrides.link}
+              className={classNames("all", "a", "a__uyaK1", sty.link)}
               component={Link}
+              href={
+                hasVariant(globalVariants, "screen", "mediumDesktop")
+                  ? `/`
+                  : undefined
+              }
               legacyBehavior={false}
+              onClick={async event => {
+                const $steps = {};
+
+                $steps["updateExpanded"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        variable: {
+                          objRoot: $state,
+                          variablePath: ["expanded"]
+                        },
+                        operation: 0
+                      };
+                      return (({
+                        variable,
+                        value,
+                        startIndex,
+                        deleteCount
+                      }) => {
+                        if (!variable) {
+                          return;
+                        }
+                        const { objRoot, variablePath } = variable;
+
+                        $stateSet(objRoot, variablePath, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateExpanded"] != null &&
+                  typeof $steps["updateExpanded"] === "object" &&
+                  typeof $steps["updateExpanded"].then === "function"
+                ) {
+                  $steps["updateExpanded"] = await $steps["updateExpanded"];
+                }
+              }}
               platform={"nextjs"}
             />
 
@@ -439,7 +480,7 @@ const PlasmicDescendants = {
     "colorbar",
     "header",
     "menu",
-    "logo",
+    "link",
     "convoBtn",
     "expandMenu",
     "menu2",
@@ -448,9 +489,9 @@ const PlasmicDescendants = {
     "isopenNav"
   ],
   colorbar: ["colorbar"],
-  header: ["header", "menu", "logo", "convoBtn"],
-  menu: ["menu", "logo", "convoBtn"],
-  logo: ["logo"],
+  header: ["header", "menu", "link", "convoBtn"],
+  menu: ["menu", "link", "convoBtn"],
+  link: ["link"],
   convoBtn: ["convoBtn"],
   expandMenu: ["expandMenu", "menu2", "logo2", "convoBtn2", "isopenNav"],
   menu2: ["menu2", "logo2", "convoBtn2"],
@@ -466,7 +507,7 @@ type NodeDefaultElementType = {
   colorbar: "div";
   header: "div";
   menu: "div";
-  logo: "a";
+  link: "a";
   convoBtn: typeof Button;
   expandMenu: "div";
   menu2: "div";
@@ -540,7 +581,7 @@ export const PlasmicHeader = Object.assign(
     colorbar: makeNodeComponent("colorbar"),
     header: makeNodeComponent("header"),
     menu: makeNodeComponent("menu"),
-    logo: makeNodeComponent("logo"),
+    link: makeNodeComponent("link"),
     convoBtn: makeNodeComponent("convoBtn"),
     expandMenu: makeNodeComponent("expandMenu"),
     menu2: makeNodeComponent("menu2"),

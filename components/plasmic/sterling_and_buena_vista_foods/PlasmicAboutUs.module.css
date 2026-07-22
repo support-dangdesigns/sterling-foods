@@ -46,20 +46,46 @@
     grid-column: 4;
   }
 }
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 1920px;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: visible;
+  min-width: 0;
+}
 .header:global(.__wab_instance) {
   max-width: 100%;
   width: 100%;
-  grid-column-start: 1 !important;
-  grid-column-end: -1 !important;
-  display: none;
-}
-@media (max-width: 2000px) {
-  .header:global(.__wab_instance) {
-    display: flex;
-  }
+  min-width: 0;
 }
 .topHero:global(.__wab_instance) {
   position: relative;
+  flex-shrink: 0;
+}
+@media (max-width: 2000px) {
+  .topHero:global(.__wab_instance) {
+    flex-shrink: 0;
+  }
+}
+@media (max-width: 1280px) {
+  .topHero:global(.__wab_instance) {
+    flex-shrink: 0;
+  }
+}
+@media (max-width: 1024px) {
+  .topHero:global(.__wab_instance) {
+    flex-shrink: 0;
+  }
+}
+@media (max-width: 375px) {
+  .topHero:global(.__wab_instance) {
+    flex-shrink: 0;
+  }
 }
 .aboutUsSection {
   display: flex;
@@ -71,9 +97,8 @@
   justify-content: center;
   align-items: center;
   row-gap: 40px;
-  justify-self: flex-start;
-  grid-column-start: 3 !important;
-  grid-column-end: -3 !important;
+  min-width: 0;
+  flex-shrink: 0;
   padding: 0px;
 }
 @media (max-width: 1280px) {
@@ -466,8 +491,8 @@
     url("/plasmic/sterling_and_buena_vista_foods/images/backgroundJpg.jpg") top 50% left 50% / cover repeat,
     #f5e9d4;
   row-gap: 90px;
-  grid-column-start: 1 !important;
-  grid-column-end: -1 !important;
+  min-width: 0;
+  flex-shrink: 0;
   padding: 0px;
 }
 @media (max-width: 1280px) {
@@ -1188,8 +1213,8 @@
   background:
     url("/plasmic/sterling_and_buena_vista_foods/images/group1Png.png") top 50% left 50% / cover repeat,
     #d37456;
-  grid-column-start: 1 !important;
-  grid-column-end: -1 !important;
+  min-width: 0;
+  flex-shrink: 0;
   padding: 0px 20px;
 }
 @media (max-width: 1700px) {
@@ -1380,12 +1405,11 @@
   max-width: 100%;
   justify-content: flex-start;
   align-items: center;
-  justify-self: flex-start;
   background:
     url("/plasmic/sterling_and_buena_vista_foods/images/group2Png.png") top 50% left 50% / cover repeat,
     #ffffff;
-  grid-column-start: 1 !important;
-  grid-column-end: -1 !important;
+  min-width: 0;
+  flex-shrink: 0;
   padding: 0px;
 }
 @media (max-width: 1700px) {
@@ -1758,8 +1782,7 @@
   justify-content: flex-end;
   align-items: center;
   background: #f5e9d4;
-  grid-column-start: 1 !important;
-  grid-column-end: -1 !important;
+  min-width: 0;
   min-height: 0;
   padding: 0px;
 }
@@ -2028,8 +2051,7 @@
   justify-content: center;
   align-items: center;
   row-gap: 80px;
-  grid-column-start: 1 !important;
-  grid-column-end: -1 !important;
+  min-width: 0;
   padding: 50px 20px;
 }
 .heading4 {
@@ -3361,8 +3383,7 @@
   max-width: 100%;
   justify-content: flex-start;
   align-items: center;
-  grid-column-start: 1 !important;
-  grid-column-end: -1 !important;
+  min-width: 0;
   min-height: 0;
   padding: 0px;
 }
@@ -3383,19 +3404,5 @@
 .footer:global(.__wab_instance) {
   max-width: 100%;
   width: 100%;
-  grid-column-start: 1 !important;
-  grid-column-end: -1 !important;
-}
-.pageContainer {
-  animation: none;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 1920px;
-  justify-content: flex-start;
-  align-items: center;
-  overflow: visible;
   min-width: 0;
 }

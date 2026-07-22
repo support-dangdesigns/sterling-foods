@@ -214,9 +214,7 @@ function PlasmicQualitySafety__RenderFunc(props: {
             "plasmic_mixins",
             styleTokensClassNames,
             sty.qualitySafety,
-            hasVariant(globalVariants, "screen", "desktop")
-              ? "max-screen"
-              : undefined
+            hasVariant(globalVariants, "screen", "desktop") ? "" : undefined
           )}
         >
           <div

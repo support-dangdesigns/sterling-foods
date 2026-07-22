@@ -209,35 +209,84 @@ function PlasmicHeader__RenderFunc(props: {
               : undefined
           }
         >
-          {(
-            hasVariant(globalVariants, "screen", "large")
-              ? (() => {
-                  try {
-                    return !$state.expanded;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return true;
-                    }
-                    throw e;
-                  }
-                })()
-              : true
-          ) ? (
-            <div
-              data-plasmic-name={"menu"}
-              data-plasmic-override={overrides.menu}
-              className={classNames("all", sty.menu)}
-            >
-              <PlasmicLink__
-                data-plasmic-name={"returnHome"}
-                data-plasmic-override={overrides.returnHome}
-                className={classNames("all", "a", "a__uyaK1", sty.returnHome)}
-                component={Link}
-                href={`/`}
-                legacyBehavior={false}
+          <div
+            data-plasmic-name={"menu"}
+            data-plasmic-override={overrides.menu}
+            className={classNames("all", sty.menu)}
+          >
+            <PlasmicLink__
+              data-plasmic-name={"returnHome"}
+              data-plasmic-override={overrides.returnHome}
+              className={classNames("all", "a", "a__uyaK1", sty.returnHome)}
+              component={Link}
+              href={`/`}
+              legacyBehavior={false}
+              onClick={async event => {
+                const $steps = {};
+
+                $steps["updateExpanded"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        variable: {
+                          objRoot: $state,
+                          variablePath: ["expanded"]
+                        },
+                        operation: 0
+                      };
+                      return (({
+                        variable,
+                        value,
+                        startIndex,
+                        deleteCount
+                      }) => {
+                        if (!variable) {
+                          return;
+                        }
+                        const { objRoot, variablePath } = variable;
+
+                        $stateSet(objRoot, variablePath, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateExpanded"] != null &&
+                  typeof $steps["updateExpanded"] === "object" &&
+                  typeof $steps["updateExpanded"].then === "function"
+                ) {
+                  $steps["updateExpanded"] = await $steps["updateExpanded"];
+                }
+              }}
+              platform={"nextjs"}
+            />
+
+            <div className={classNames("all", sty.freeBox__wGhjk)}>
+              <Button
+                data-plasmic-name={"convoBtn"}
+                data-plasmic-override={overrides.convoBtn}
+                className={classNames("__wab_instance", sty.convoBtn)}
+                label={
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__tpd2)}
+                  >
+                    {"Start a Conversation"}
+                  </div>
+                }
+                linkTo={
+                  hasVariant(globalVariants, "screen", "mediumDesktop")
+                    ? `/contact-us`
+                    : `/contact-us`
+                }
+                start={
+                  <CircleIcon
+                    className={classNames("all", sty.svg__c54JB)}
+                    role={"img"}
+                  />
+                }
+              />
+
+              <div
+                className={classNames("all", sty.freeBox__bXduj)}
                 onClick={async event => {
                   const $steps = {};
 
@@ -248,7 +297,7 @@ function PlasmicHeader__RenderFunc(props: {
                             objRoot: $state,
                             variablePath: ["expanded"]
                           },
-                          operation: 0
+                          operation: 4
                         };
                         return (({
                           variable,
@@ -261,8 +310,9 @@ function PlasmicHeader__RenderFunc(props: {
                           }
                           const { objRoot, variablePath } = variable;
 
-                          $stateSet(objRoot, variablePath, value);
-                          return value;
+                          const oldValue = $stateGet(objRoot, variablePath);
+                          $stateSet(objRoot, variablePath, !oldValue);
+                          return !oldValue;
                         })?.apply(null, [actionArgs]);
                       })()
                     : undefined;
@@ -274,88 +324,16 @@ function PlasmicHeader__RenderFunc(props: {
                     $steps["updateExpanded"] = await $steps["updateExpanded"];
                   }
                 }}
-                platform={"nextjs"}
-              />
-
-              <div className={classNames("all", sty.freeBox__wGhjk)}>
-                <Button
-                  data-plasmic-name={"convoBtn"}
-                  data-plasmic-override={overrides.convoBtn}
-                  className={classNames("__wab_instance", sty.convoBtn)}
-                  label={
-                    <div
-                      className={classNames(
-                        "all",
-                        "__wab_text",
-                        sty.text__tpd2
-                      )}
-                    >
-                      {"Start a Conversation"}
-                    </div>
-                  }
-                  linkTo={
-                    hasVariant(globalVariants, "screen", "mediumDesktop")
-                      ? `/contact-us`
-                      : `/contact-us`
-                  }
-                  start={
-                    <CircleIcon
-                      className={classNames("all", sty.svg__c54JB)}
-                      role={"img"}
-                    />
-                  }
-                />
-
-                <div
-                  className={classNames("all", sty.freeBox__bXduj)}
-                  onClick={async event => {
-                    const $steps = {};
-
-                    $steps["updateExpanded"] = true
-                      ? (() => {
-                          const actionArgs = {
-                            variable: {
-                              objRoot: $state,
-                              variablePath: ["expanded"]
-                            },
-                            operation: 4
-                          };
-                          return (({
-                            variable,
-                            value,
-                            startIndex,
-                            deleteCount
-                          }) => {
-                            if (!variable) {
-                              return;
-                            }
-                            const { objRoot, variablePath } = variable;
-
-                            const oldValue = $stateGet(objRoot, variablePath);
-                            $stateSet(objRoot, variablePath, !oldValue);
-                            return !oldValue;
-                          })?.apply(null, [actionArgs]);
-                        })()
-                      : undefined;
-                    if (
-                      $steps["updateExpanded"] != null &&
-                      typeof $steps["updateExpanded"] === "object" &&
-                      typeof $steps["updateExpanded"].then === "function"
-                    ) {
-                      $steps["updateExpanded"] = await $steps["updateExpanded"];
-                    }
-                  }}
+                style={{ transitionTimingFunction: "ease" }}
+              >
+                <Group1Icon
+                  className={classNames("all", sty.svg__cbjZ0)}
+                  role={"img"}
                   style={{ transitionTimingFunction: "ease" }}
-                >
-                  <Group1Icon
-                    className={classNames("all", sty.svg__cbjZ0)}
-                    role={"img"}
-                    style={{ transitionTimingFunction: "ease" }}
-                  />
-                </div>
+                />
               </div>
             </div>
-          ) : null}
+          </div>
         </div>
       ) : null}
       {(

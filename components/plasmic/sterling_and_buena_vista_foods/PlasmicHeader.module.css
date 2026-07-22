@@ -36,7 +36,6 @@
   position: relative;
   width: 100%;
   height: auto;
-  max-width: 100%;
   justify-content: flex-start;
   align-items: center;
   z-index: 3;
@@ -370,7 +369,7 @@
   position: relative;
   width: 100%;
   height: auto;
-  max-width: 100%;
+  max-width: none;
   justify-content: flex-start;
   align-items: center;
   z-index: 3;
@@ -416,13 +415,13 @@
   width: 100%;
   height: 185px;
   display: flex;
-  overflow: hidden;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding-right: 130px;
   padding-left: 130px;
   transform: none;
+  overflow: hidden;
   min-width: 0;
   flex-shrink: 0;
 }

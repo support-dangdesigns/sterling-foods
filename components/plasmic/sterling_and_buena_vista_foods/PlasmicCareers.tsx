@@ -140,7 +140,6 @@ export type PlasmicCareers__OverridesType = {
   paragraph6?: Flex__<"div">;
   ctaBottom?: Flex__<typeof CtaBottom>;
   footer?: Flex__<typeof Footer>;
-  pageContainer?: Flex__<"div">;
 };
 
 export interface DefaultCareersProps {}
@@ -215,7 +214,8 @@ function PlasmicCareers__RenderFunc(props: {
             "plasmic_default_styles",
             "plasmic_mixins",
             styleTokensClassNames,
-            sty.root
+            sty.root,
+            hasVariant(globalVariants, "screen", "desktop") ? "max-screen" : ""
           )}
         >
           <Header
@@ -380,7 +380,7 @@ function PlasmicCareers__RenderFunc(props: {
                       "h3-script"
                     )}
                   >
-                    {"Oppoertunities"}
+                    {"Opportunities"}
                   </h3>
                   <h4
                     className={classNames(
@@ -598,430 +598,409 @@ function PlasmicCareers__RenderFunc(props: {
               </div>
             </div>
           </div>
-          {(hasVariant(globalVariants, "screen", "large") ? true : false) ? (
+          <div
+            data-plasmic-name={"marketsBody2"}
+            data-plasmic-override={overrides.marketsBody2}
+            className={classNames("all", sty.marketsBody2)}
+          >
             <div
-              data-plasmic-name={"marketsBody2"}
-              data-plasmic-override={overrides.marketsBody2}
-              className={classNames("all", sty.marketsBody2)}
+              data-plasmic-name={"section"}
+              data-plasmic-override={overrides.section}
+              className={classNames("all", sty.section)}
             >
-              <div
-                data-plasmic-name={"section"}
-                data-plasmic-override={overrides.section}
-                className={classNames("all", sty.section)}
-              >
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img__sud54)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"300px"}
-                  displayWidth={
-                    hasVariant(globalVariants, "screen", "mobile")
-                      ? "100%"
-                      : hasVariant(globalVariants, "screen", "largerMobile")
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__sud54)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"300px"}
+                displayWidth={
+                  hasVariant(globalVariants, "screen", "mobile")
+                    ? "100%"
+                    : hasVariant(globalVariants, "screen", "largerMobile")
+                      ? "auto"
+                      : hasVariant(globalVariants, "screen", "dualScreen")
                         ? "auto"
-                        : hasVariant(globalVariants, "screen", "dualScreen")
-                          ? "auto"
-                          : hasVariant(globalVariants, "screen", "smallTablet")
-                            ? "70%"
-                            : hasVariant(globalVariants, "screen", "laptop")
-                              ? "35%"
-                              : hasVariant(
-                                    globalVariants,
-                                    "screen",
-                                    "smallDesktop"
-                                  )
-                                ? "472px"
-                                : hasVariant(globalVariants, "screen", "large")
-                                  ? "700px"
-                                  : "574px"
-                  }
-                  loading={"lazy"}
-                  src={
-                    hasVariant(globalVariants, "screen", "large")
-                      ? {
-                          src: "/plasmic/sterling_and_buena_vista_foods/images/image2Png2.png",
-                          fullWidth: 698,
-                          fullHeight: 633,
-                          aspectRatio: undefined
-                        }
-                      : {
-                          src: "/plasmic/sterling_and_buena_vista_foods/images/coffeeAvif.avif",
-                          fullWidth: 574,
-                          fullHeight: 488,
-                          aspectRatio: undefined
-                        }
-                  }
-                />
+                        : hasVariant(globalVariants, "screen", "smallTablet")
+                          ? "70%"
+                          : hasVariant(globalVariants, "screen", "laptop")
+                            ? "35%"
+                            : hasVariant(
+                                  globalVariants,
+                                  "screen",
+                                  "smallDesktop"
+                                )
+                              ? "472px"
+                              : hasVariant(globalVariants, "screen", "large")
+                                ? "700px"
+                                : "574px"
+                }
+                loading={"lazy"}
+                src={
+                  hasVariant(globalVariants, "screen", "large")
+                    ? {
+                        src: "/plasmic/sterling_and_buena_vista_foods/images/image2Png2.png",
+                        fullWidth: 698,
+                        fullHeight: 633,
+                        aspectRatio: undefined
+                      }
+                    : {
+                        src: "/plasmic/sterling_and_buena_vista_foods/images/coffeeAvif.avif",
+                        fullWidth: 574,
+                        fullHeight: 488,
+                        aspectRatio: undefined
+                      }
+                }
+              />
 
-                <div
-                  data-plasmic-name={"text4"}
-                  data-plasmic-override={overrides.text4}
-                  className={classNames("all", sty.text4)}
-                >
-                  <div
-                    data-plasmic-name={"title4"}
-                    data-plasmic-override={overrides.title4}
-                    className={classNames("all", sty.title4)}
-                  >
-                    <h3
-                      className={classNames(
-                        "all",
-                        "h3",
-                        "h3__uyaK1",
-                        "__wab_text",
-                        sty.h3__iLeh,
-                        "h3-script"
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "large")
-                        ? "Equal"
-                        : "National"}
-                    </h3>
-                    <h4
-                      className={classNames(
-                        "all",
-                        "h4",
-                        "h4__uyaK1",
-                        "__wab_text",
-                        sty.h4___1Gl9X
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "large")
-                        ? "Employment Opportunity"
-                        : "Restaurants"}
-                    </h4>
-                  </div>
-                  <div
-                    data-plasmic-name={"paragraph4"}
-                    data-plasmic-override={overrides.paragraph4}
-                    className={classNames("all", sty.paragraph4)}
-                  >
-                    <p
-                      className={classNames(
-                        "all",
-                        "p",
-                        "p__uyaK1",
-                        "__wab_text",
-                        sty.p__abitj
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "large")
-                        ? "Sterling Foods is proud to be an Equal Opportunity Employer. We are committed to creating an inclusive workplace where all qualified applicants receive consideration for employment in accordance with applicable federal, state, and local laws."
-                        : "Sterling Foods partners with leading restaurant chains to develop proprietary bakery solutions that support menu innovation, operational consistency, and speed to market. With a focus on uniqueness and operational ease, we help brands create iconic, signature products that stand apart from the crowd."}
-                    </p>
-                  </div>
-                </div>
-              </div>
               <div
-                data-plasmic-name={"section2"}
-                data-plasmic-override={overrides.section2}
-                className={classNames("all", sty.section2)}
+                data-plasmic-name={"text4"}
+                data-plasmic-override={overrides.text4}
+                className={classNames("all", sty.text4)}
               >
                 <div
-                  data-plasmic-name={"text5"}
-                  data-plasmic-override={overrides.text5}
-                  className={classNames("all", sty.text5)}
+                  data-plasmic-name={"title4"}
+                  data-plasmic-override={overrides.title4}
+                  className={classNames("all", sty.title4)}
                 >
-                  <div
-                    data-plasmic-name={"title5"}
-                    data-plasmic-override={overrides.title5}
-                    className={classNames("all", sty.title5)}
-                  >
-                    <h4
-                      className={classNames(
-                        "all",
-                        "h4",
-                        "h4__uyaK1",
-                        "__wab_text",
-                        sty.h4__fwB6N
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "large")
-                        ? "Employment"
-                        : "Restaurants"}
-                    </h4>
-                    <h3
-                      className={classNames(
-                        "all",
-                        "h3",
-                        "h3__uyaK1",
-                        "__wab_text",
-                        sty.h3__gTnBo,
-                        "h3-script"
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "large")
-                        ? "Eligibility"
-                        : "National"}
-                    </h3>
-                  </div>
-                  <div
-                    data-plasmic-name={"paragraph5"}
-                    data-plasmic-override={overrides.paragraph5}
-                    className={classNames("all", sty.paragraph5)}
-                  >
-                    <p
-                      className={classNames(
-                        "all",
-                        "p",
-                        "p__uyaK1",
-                        "__wab_text",
-                        sty.p__lUog
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "large")
-                        ? "Sterling Foods participates in the E-Verify program to confirm employment eligibility for all newly hired employees."
-                        : "Sterling Foods partners with leading restaurant chains to develop proprietary bakery solutions that support menu innovation, operational consistency, and speed to market. With a focus on uniqueness and operational ease, we help brands create iconic, signature products that stand apart from the crowd."}
-                    </p>
-                  </div>
-                  <PrimaryBtn
+                  <h3
                     className={classNames(
-                      "__wab_instance",
-                      sty.primaryBtn__zsHqn
+                      "all",
+                      "h3",
+                      "h3__uyaK1",
+                      "__wab_text",
+                      sty.h3__iLeh,
+                      "h3-script"
                     )}
                   >
-                    {"E-Verify Poster"}
-                  </PrimaryBtn>
-                  <PrimaryBtn
+                    {hasVariant(globalVariants, "screen", "large")
+                      ? "Equal"
+                      : "National"}
+                  </h3>
+                  <h4
                     className={classNames(
-                      "__wab_instance",
-                      sty.primaryBtn__f7BuG
+                      "all",
+                      "h4",
+                      "h4__uyaK1",
+                      "__wab_text",
+                      sty.h4___1Gl9X
                     )}
                   >
-                    <div
-                      className={classNames(
-                        "all",
-                        "__wab_text",
-                        sty.text__v7ZNv
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "smallMobile")
-                        ? "Right to Work Notice (English)"
-                        : hasVariant(globalVariants, "screen", "tablet")
-                          ? "Right to Work Notice (English)"
-                          : "Right to Work Notice (English)"}
-                    </div>
-                  </PrimaryBtn>
-                  <PrimaryBtn
-                    className={classNames(
-                      "__wab_instance",
-                      sty.primaryBtn__kxSz
-                    )}
-                  >
-                    <div
-                      className={classNames(
-                        "all",
-                        "__wab_text",
-                        sty.text__esSzJ
-                      )}
-                    >
-                      {"Right to Work Notice (Spanish)\r"}
-                    </div>
-                  </PrimaryBtn>
+                    {hasVariant(globalVariants, "screen", "large")
+                      ? "Employment Opportunity"
+                      : "Restaurants"}
+                  </h4>
                 </div>
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img__tvPaz)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={
-                    hasVariant(globalVariants, "screen", "mobile")
-                      ? "100%"
-                      : hasVariant(globalVariants, "screen", "largerMobile")
-                        ? "auto"
-                        : hasVariant(globalVariants, "screen", "dualScreen")
-                          ? "auto"
-                          : hasVariant(globalVariants, "screen", "smallTablet")
-                            ? "70%"
-                            : hasVariant(globalVariants, "screen", "laptop")
-                              ? "35%"
-                              : hasVariant(
-                                    globalVariants,
-                                    "screen",
-                                    "smallDesktop"
-                                  )
-                                ? "472px"
-                                : hasVariant(globalVariants, "screen", "large")
-                                  ? "700px"
-                                  : "574px"
-                  }
-                  loading={"lazy"}
-                  src={
-                    hasVariant(globalVariants, "screen", "large")
-                      ? {
-                          src: "/plasmic/sterling_and_buena_vista_foods/images/image3Png2.png",
-                          fullWidth: 680,
-                          fullHeight: 620,
-                          aspectRatio: undefined
-                        }
-                      : {
-                          src: "/plasmic/sterling_and_buena_vista_foods/images/coffeeAvif.avif",
-                          fullWidth: 574,
-                          fullHeight: 488,
-                          aspectRatio: undefined
-                        }
-                  }
-                />
-              </div>
-              <div
-                data-plasmic-name={"section3"}
-                data-plasmic-override={overrides.section3}
-                className={classNames("all", sty.section3)}
-              >
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img__pubAb)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={
-                    hasVariant(globalVariants, "screen", "mobile")
-                      ? "100%"
-                      : hasVariant(globalVariants, "screen", "largerMobile")
-                        ? "auto"
-                        : hasVariant(globalVariants, "screen", "dualScreen")
-                          ? "auto"
-                          : hasVariant(globalVariants, "screen", "smallTablet")
-                            ? "70%"
-                            : hasVariant(globalVariants, "screen", "laptop")
-                              ? "35%"
-                              : hasVariant(
-                                    globalVariants,
-                                    "screen",
-                                    "smallDesktop"
-                                  )
-                                ? "472px"
-                                : hasVariant(globalVariants, "screen", "large")
-                                  ? "700px"
-                                  : "auto"
-                  }
-                  loading={"lazy"}
-                  src={
-                    hasVariant(globalVariants, "screen", "large")
-                      ? {
-                          src: "/plasmic/sterling_and_buena_vista_foods/images/image4Png2.png",
-                          fullWidth: 698,
-                          fullHeight: 637,
-                          aspectRatio: undefined
-                        }
-                      : {
-                          src: "/plasmic/sterling_and_buena_vista_foods/images/coffeeAvif.avif",
-                          fullWidth: 574,
-                          fullHeight: 488,
-                          aspectRatio: undefined
-                        }
-                  }
-                />
-
                 <div
-                  data-plasmic-name={"text6"}
-                  data-plasmic-override={overrides.text6}
-                  className={classNames("all", sty.text6)}
+                  data-plasmic-name={"paragraph4"}
+                  data-plasmic-override={overrides.paragraph4}
+                  className={classNames("all", sty.paragraph4)}
                 >
-                  <div
-                    data-plasmic-name={"title6"}
-                    data-plasmic-override={overrides.title6}
-                    className={classNames("all", sty.title6)}
-                  >
-                    <h3
-                      className={classNames(
-                        "all",
-                        "h3",
-                        "h3__uyaK1",
-                        "__wab_text",
-                        sty.h3__xosRz,
-                        "h3-script"
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "large")
-                        ? "Transparency"
-                        : "National"}
-                    </h3>
-                    <h4
-                      className={classNames(
-                        "all",
-                        "h4",
-                        "h4__uyaK1",
-                        "__wab_text",
-                        sty.h4__jugpP
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "large")
-                        ? "in Coverage"
-                        : "Restaurants"}
-                    </h4>
-                  </div>
-                  <div
-                    data-plasmic-name={"paragraph6"}
-                    data-plasmic-override={overrides.paragraph6}
-                    className={classNames("all", sty.paragraph6)}
-                  >
-                    <p
-                      className={classNames(
-                        "all",
-                        "p",
-                        "p__uyaK1",
-                        "__wab_text",
-                        sty.p___40FIy
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "large")
-                        ? "In accordance with the federal Transparency in Coverage Rule, machine-readable files containing negotiated service rates  and out-of-network allowed amounts are available below."
-                        : "Sterling Foods partners with leading restaurant chains to develop proprietary bakery solutions that support menu innovation, operational consistency, and speed to market. With a focus on uniqueness and operational ease, we help brands create iconic, signature products that stand apart from the crowd."}
-                    </p>
-                  </div>
-                  <PrimaryBtn
+                  <p
                     className={classNames(
-                      "__wab_instance",
-                      sty.primaryBtn__m20D4
+                      "all",
+                      "p",
+                      "p__uyaK1",
+                      "__wab_text",
+                      sty.p__abitj
                     )}
                   >
-                    <div
-                      className={classNames(
-                        "all",
-                        "__wab_text",
-                        sty.text__honod
-                      )}
-                    >
-                      {"View Machine-Readable Files"}
-                    </div>
-                  </PrimaryBtn>
-                  <PrimaryBtn
-                    className={classNames(
-                      "__wab_instance",
-                      sty.primaryBtn__pCaDy
-                    )}
-                  >
-                    {"Right to Work Notice (English)"}
-                  </PrimaryBtn>
-                  <PrimaryBtn
-                    className={classNames(
-                      "__wab_instance",
-                      sty.primaryBtn__cCcsr
-                    )}
-                  >
-                    <div
-                      className={classNames(
-                        "all",
-                        "__wab_text",
-                        sty.text__aHssm
-                      )}
-                    >
-                      {"Right to Work Notice (Spanish)\r"}
-                    </div>
-                  </PrimaryBtn>
+                    {hasVariant(globalVariants, "screen", "large")
+                      ? "Sterling Foods is proud to be an Equal Opportunity Employer. We are committed to creating an inclusive workplace where all qualified applicants receive consideration for employment in accordance with applicable federal, state, and local laws."
+                      : "Sterling Foods partners with leading restaurant chains to develop proprietary bakery solutions that support menu innovation, operational consistency, and speed to market. With a focus on uniqueness and operational ease, we help brands create iconic, signature products that stand apart from the crowd."}
+                  </p>
                 </div>
               </div>
             </div>
-          ) : null}
+            <div
+              data-plasmic-name={"section2"}
+              data-plasmic-override={overrides.section2}
+              className={classNames("all", sty.section2)}
+            >
+              <div
+                data-plasmic-name={"text5"}
+                data-plasmic-override={overrides.text5}
+                className={classNames("all", sty.text5)}
+              >
+                <div
+                  data-plasmic-name={"title5"}
+                  data-plasmic-override={overrides.title5}
+                  className={classNames("all", sty.title5)}
+                >
+                  <h4
+                    className={classNames(
+                      "all",
+                      "h4",
+                      "h4__uyaK1",
+                      "__wab_text",
+                      sty.h4__fwB6N
+                    )}
+                  >
+                    {hasVariant(globalVariants, "screen", "large")
+                      ? "Employment"
+                      : "Restaurants"}
+                  </h4>
+                  <h3
+                    className={classNames(
+                      "all",
+                      "h3",
+                      "h3__uyaK1",
+                      "__wab_text",
+                      sty.h3__gTnBo,
+                      "h3-script"
+                    )}
+                  >
+                    {hasVariant(globalVariants, "screen", "large")
+                      ? "Eligibility"
+                      : "National"}
+                  </h3>
+                </div>
+                <div
+                  data-plasmic-name={"paragraph5"}
+                  data-plasmic-override={overrides.paragraph5}
+                  className={classNames("all", sty.paragraph5)}
+                >
+                  <p
+                    className={classNames(
+                      "all",
+                      "p",
+                      "p__uyaK1",
+                      "__wab_text",
+                      sty.p__lUog
+                    )}
+                  >
+                    {hasVariant(globalVariants, "screen", "large")
+                      ? "Sterling Foods participates in the E-Verify program to confirm employment eligibility for all newly hired employees."
+                      : "Sterling Foods partners with leading restaurant chains to develop proprietary bakery solutions that support menu innovation, operational consistency, and speed to market. With a focus on uniqueness and operational ease, we help brands create iconic, signature products that stand apart from the crowd."}
+                  </p>
+                </div>
+                <PrimaryBtn
+                  className={classNames(
+                    "__wab_instance",
+                    sty.primaryBtn__zsHqn
+                  )}
+                >
+                  {"E-Verify Poster"}
+                </PrimaryBtn>
+                <PrimaryBtn
+                  className={classNames(
+                    "__wab_instance",
+                    sty.primaryBtn__f7BuG
+                  )}
+                >
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__v7ZNv)}
+                  >
+                    {hasVariant(globalVariants, "screen", "smallMobile")
+                      ? "Right to Work Notice (English)"
+                      : hasVariant(globalVariants, "screen", "tablet")
+                        ? "Right to Work Notice (English)"
+                        : "Right to Work Notice (English)"}
+                  </div>
+                </PrimaryBtn>
+                <PrimaryBtn
+                  className={classNames("__wab_instance", sty.primaryBtn__kxSz)}
+                >
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__esSzJ)}
+                  >
+                    {"Right to Work Notice (Spanish)\r"}
+                  </div>
+                </PrimaryBtn>
+              </div>
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__tvPaz)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={
+                  hasVariant(globalVariants, "screen", "mobile")
+                    ? "100%"
+                    : hasVariant(globalVariants, "screen", "largerMobile")
+                      ? "auto"
+                      : hasVariant(globalVariants, "screen", "dualScreen")
+                        ? "auto"
+                        : hasVariant(globalVariants, "screen", "smallTablet")
+                          ? "70%"
+                          : hasVariant(globalVariants, "screen", "laptop")
+                            ? "35%"
+                            : hasVariant(
+                                  globalVariants,
+                                  "screen",
+                                  "smallDesktop"
+                                )
+                              ? "472px"
+                              : hasVariant(globalVariants, "screen", "large")
+                                ? "700px"
+                                : "574px"
+                }
+                loading={"lazy"}
+                src={
+                  hasVariant(globalVariants, "screen", "large")
+                    ? {
+                        src: "/plasmic/sterling_and_buena_vista_foods/images/image3Png2.png",
+                        fullWidth: 680,
+                        fullHeight: 620,
+                        aspectRatio: undefined
+                      }
+                    : {
+                        src: "/plasmic/sterling_and_buena_vista_foods/images/coffeeAvif.avif",
+                        fullWidth: 574,
+                        fullHeight: 488,
+                        aspectRatio: undefined
+                      }
+                }
+              />
+            </div>
+            <div
+              data-plasmic-name={"section3"}
+              data-plasmic-override={overrides.section3}
+              className={classNames("all", sty.section3)}
+            >
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__pubAb)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={
+                  hasVariant(globalVariants, "screen", "mobile")
+                    ? "100%"
+                    : hasVariant(globalVariants, "screen", "largerMobile")
+                      ? "auto"
+                      : hasVariant(globalVariants, "screen", "dualScreen")
+                        ? "auto"
+                        : hasVariant(globalVariants, "screen", "smallTablet")
+                          ? "70%"
+                          : hasVariant(globalVariants, "screen", "laptop")
+                            ? "35%"
+                            : hasVariant(
+                                  globalVariants,
+                                  "screen",
+                                  "smallDesktop"
+                                )
+                              ? "472px"
+                              : hasVariant(globalVariants, "screen", "large")
+                                ? "700px"
+                                : "auto"
+                }
+                loading={"lazy"}
+                src={
+                  hasVariant(globalVariants, "screen", "large")
+                    ? {
+                        src: "/plasmic/sterling_and_buena_vista_foods/images/image4Png2.png",
+                        fullWidth: 698,
+                        fullHeight: 637,
+                        aspectRatio: undefined
+                      }
+                    : {
+                        src: "/plasmic/sterling_and_buena_vista_foods/images/coffeeAvif.avif",
+                        fullWidth: 574,
+                        fullHeight: 488,
+                        aspectRatio: undefined
+                      }
+                }
+              />
+
+              <div
+                data-plasmic-name={"text6"}
+                data-plasmic-override={overrides.text6}
+                className={classNames("all", sty.text6)}
+              >
+                <div
+                  data-plasmic-name={"title6"}
+                  data-plasmic-override={overrides.title6}
+                  className={classNames("all", sty.title6)}
+                >
+                  <h3
+                    className={classNames(
+                      "all",
+                      "h3",
+                      "h3__uyaK1",
+                      "__wab_text",
+                      sty.h3__xosRz,
+                      "h3-script"
+                    )}
+                  >
+                    {hasVariant(globalVariants, "screen", "large")
+                      ? "Transparency"
+                      : "National"}
+                  </h3>
+                  <h4
+                    className={classNames(
+                      "all",
+                      "h4",
+                      "h4__uyaK1",
+                      "__wab_text",
+                      sty.h4__jugpP
+                    )}
+                  >
+                    {hasVariant(globalVariants, "screen", "large")
+                      ? "in Coverage"
+                      : "Restaurants"}
+                  </h4>
+                </div>
+                <div
+                  data-plasmic-name={"paragraph6"}
+                  data-plasmic-override={overrides.paragraph6}
+                  className={classNames("all", sty.paragraph6)}
+                >
+                  <p
+                    className={classNames(
+                      "all",
+                      "p",
+                      "p__uyaK1",
+                      "__wab_text",
+                      sty.p___40FIy
+                    )}
+                  >
+                    {hasVariant(globalVariants, "screen", "large")
+                      ? "In accordance with the federal Transparency in Coverage Rule, machine-readable files containing negotiated service rates  and out-of-network allowed amounts are available below."
+                      : "Sterling Foods partners with leading restaurant chains to develop proprietary bakery solutions that support menu innovation, operational consistency, and speed to market. With a focus on uniqueness and operational ease, we help brands create iconic, signature products that stand apart from the crowd."}
+                  </p>
+                </div>
+                <PrimaryBtn
+                  className={classNames(
+                    "__wab_instance",
+                    sty.primaryBtn__m20D4
+                  )}
+                >
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__honod)}
+                  >
+                    {"View Machine-Readable Files"}
+                  </div>
+                </PrimaryBtn>
+                <PrimaryBtn
+                  className={classNames(
+                    "__wab_instance",
+                    sty.primaryBtn__pCaDy
+                  )}
+                >
+                  {"Right to Work Notice (English)"}
+                </PrimaryBtn>
+                <PrimaryBtn
+                  className={classNames(
+                    "__wab_instance",
+                    sty.primaryBtn__cCcsr
+                  )}
+                >
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__aHssm)}
+                  >
+                    {"Right to Work Notice (Spanish)\r"}
+                  </div>
+                </PrimaryBtn>
+              </div>
+            </div>
+          </div>
           <CtaBottom
             data-plasmic-name={"ctaBottom"}
             data-plasmic-override={overrides.ctaBottom}
@@ -1033,14 +1012,6 @@ function PlasmicCareers__RenderFunc(props: {
             data-plasmic-override={overrides.footer}
             className={classNames("__wab_instance", sty.footer)}
           />
-
-          {(hasVariant(globalVariants, "screen", "desktop") ? true : false) ? (
-            <div
-              data-plasmic-name={"pageContainer"}
-              data-plasmic-override={overrides.pageContainer}
-              className={classNames("all", sty.pageContainer)}
-            />
-          ) : null}
         </div>
       </div>
     </React.Fragment>
@@ -1074,8 +1045,7 @@ const PlasmicDescendants = {
     "title6",
     "paragraph6",
     "ctaBottom",
-    "footer",
-    "pageContainer"
+    "footer"
   ],
   header: ["header"],
   topHero: ["topHero"],
@@ -1122,8 +1092,7 @@ const PlasmicDescendants = {
   title6: ["title6"],
   paragraph6: ["paragraph6"],
   ctaBottom: ["ctaBottom"],
-  footer: ["footer"],
-  pageContainer: ["pageContainer"]
+  footer: ["footer"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -1155,7 +1124,6 @@ type NodeDefaultElementType = {
   paragraph6: "div";
   ctaBottom: typeof CtaBottom;
   footer: typeof Footer;
-  pageContainer: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -1245,7 +1213,6 @@ export const PlasmicCareers = Object.assign(
     paragraph6: makeNodeComponent("paragraph6"),
     ctaBottom: makeNodeComponent("ctaBottom"),
     footer: makeNodeComponent("footer"),
-    pageContainer: makeNodeComponent("pageContainer"),
 
     // Metadata about props expected for PlasmicCareers
     internalVariantProps: PlasmicCareers__VariantProps,

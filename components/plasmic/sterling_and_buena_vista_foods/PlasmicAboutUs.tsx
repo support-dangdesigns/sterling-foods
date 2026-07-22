@@ -132,6 +132,7 @@ export const PlasmicAboutUs__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicAboutUs__OverridesType = {
   root?: Flex__<"div">;
+  pageContainer?: Flex__<"div">;
   header?: Flex__<typeof Header>;
   topHero?: Flex__<typeof TopHero>;
   aboutUsSection?: Flex__<"div">;
@@ -240,7 +241,6 @@ export type PlasmicAboutUs__OverridesType = {
   aboutUsCta?: Flex__<"div">;
   ctaBottom?: Flex__<typeof CtaBottom>;
   footer?: Flex__<typeof Footer>;
-  pageContainer?: Flex__<"div">;
 };
 
 export interface DefaultAboutUsProps {}
@@ -384,283 +384,52 @@ function PlasmicAboutUs__RenderFunc(props: {
             sty.root
           )}
         >
-          <Header
-            data-plasmic-name={"header"}
-            data-plasmic-override={overrides.header}
-            className={classNames("__wab_instance", sty.header)}
-          />
-
-          <TopHero
-            data-plasmic-name={"topHero"}
-            data-plasmic-override={overrides.topHero}
-            className={classNames("__wab_instance", sty.topHero)}
-            pages={
-              hasVariant(globalVariants, "screen", "large")
-                ? "aboutUs"
-                : "aboutUs"
-            }
-          />
-
           <div
-            data-plasmic-name={"aboutUsSection"}
-            data-plasmic-override={overrides.aboutUsSection}
-            className={classNames("all", sty.aboutUsSection)}
+            data-plasmic-name={"pageContainer"}
+            data-plasmic-override={overrides.pageContainer}
+            className={classNames("all", sty.pageContainer)}
           >
-            <div
-              data-plasmic-name={"heading"}
-              data-plasmic-override={overrides.heading}
-              className={classNames("all", sty.heading)}
-            >
-              <div className={classNames("all", "__wab_text", sty.text__lcSl)}>
-                <React.Fragment>
-                  {(() => {
-                    try {
-                      return $q.aboutUs.data.body.data.pageBy.pageContent
-                        .headlineParent[0].headlinechild[0].headlinenormal;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return "About";
-                      }
-                      throw e;
-                    }
-                  })()}
-                </React.Fragment>
-              </div>
-              <div className={classNames("all", "__wab_text", sty.text__c1BdB)}>
-                <React.Fragment>
-                  {(() => {
-                    try {
-                      return $q.aboutUs.data.body.data.pageBy.pageContent
-                        .headlineParent[0].headlinechild[0].headlinefav;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return "Sterling Foods";
-                      }
-                      throw e;
-                    }
-                  })()}
-                </React.Fragment>
-              </div>
-            </div>
-            <div
-              data-plasmic-name={"text"}
-              data-plasmic-override={overrides.text}
-              className={classNames("all", sty.text)}
-            >
-              <div className={classNames("all", "__wab_text", sty.text__o4JiD)}>
-                <React.Fragment>
-                  {(() => {
-                    try {
-                      return $q.aboutUs.data.body.data.pageBy.pageContent
-                        .textArea[0].text;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return "Sterling Foods began over 55 years ago as a trusted partner to the U.S. military, developing technically advanced, custom food solutions designed to meet demanding performance, quality, and nutritional requirements.";
-                      }
-                      throw e;
-                    }
-                  })()}
-                </React.Fragment>
-              </div>
-              <div className={classNames("all", "__wab_text", sty.text__lyDF)}>
-                <React.Fragment>
-                  {(() => {
-                    try {
-                      return $q.aboutUs.data.body.data.pageBy.pageContent
-                        .textArea[1].text;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return "Today, our exceptional product quality along with our leading-edge ability to combine high-quality proteins\nwith artisan baked goods sets Sterling Foods apart. Backed by flexible manufacturing capabilities, an innovative mindset, and our customer-first approach, Sterling Foods is the partner of choice for leading brands looking\nfor unique, high-quality bakery solutions.";
-                      }
-                      throw e;
-                    }
-                  })()}
-                </React.Fragment>
-              </div>
-            </div>
-            <div
-              data-plasmic-name={"text2"}
-              data-plasmic-override={overrides.text2}
-              className={classNames("all", sty.text2)}
-            >
-              <div className={classNames("all", "__wab_text", sty.text__rBfOg)}>
-                {"Founded in 1971"}
-              </div>
-              <DividerVerticalSvgrepoComSvgIcon
-                className={classNames("all", sty.svg__pTs9D)}
-                role={"img"}
-              />
+            <Header
+              data-plasmic-name={"header"}
+              data-plasmic-override={overrides.header}
+              className={classNames("__wab_instance", sty.header)}
+            />
 
-              <div className={classNames("all", "__wab_text", sty.text__yoGdU)}>
-                {"Customer-Focused Culture"}
-              </div>
-              <DividerVerticalSvgrepoComSvgIcon
-                className={classNames("all", sty.svg__zHk7I)}
-                role={"img"}
-              />
-
-              <div className={classNames("all", "__wab_text", sty.text__mdrFf)}>
-                {hasVariant(globalVariants, "screen", "mediumDesktop")
-                  ? "Privately Held"
-                  : "Privately Held"}
-              </div>
-            </div>
-            <div
-              data-plasmic-name={"text3"}
-              data-plasmic-override={overrides.text3}
-              className={classNames("all", sty.text3)}
-            >
-              <div
-                data-plasmic-name={"box"}
-                data-plasmic-override={overrides.box}
-                className={classNames("all", sty.box)}
-              >
-                <h1
-                  className={classNames(
-                    "all",
-                    "h1",
-                    "h1__uyaK1",
-                    "__wab_text",
-                    sty.h1__rNcon
-                  )}
-                >
-                  {"1,000+"}
-                </h1>
-                <div
-                  className={classNames("all", "__wab_text", sty.text__jRnIg)}
-                >
-                  {"Employees"}
-                </div>
-              </div>
-              <div
-                data-plasmic-name={"box2"}
-                data-plasmic-override={overrides.box2}
-                className={classNames("all", sty.box2)}
-              >
-                <h1
-                  className={classNames(
-                    "all",
-                    "h1",
-                    "h1__uyaK1",
-                    "__wab_text",
-                    sty.h1__ha1KI
-                  )}
-                >
-                  {hasVariant(globalVariants, "screen", "mediumDesktop") ? (
-                    <React.Fragment>{undefined}</React.Fragment>
-                  ) : (
-                    <React.Fragment>
-                      {(() => {
-                        try {
-                          return $q.aboutUs.data.body.data.pageBy.pageContent
-                            .textArea[2].text;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return "6";
-                          }
-                          throw e;
-                        }
-                      })()}
-                    </React.Fragment>
-                  )}
-                </h1>
-                <div
-                  className={classNames("all", "__wab_text", sty.text__tKMx)}
-                >
-                  <React.Fragment>
-                    {(() => {
-                      try {
-                        return $q.aboutUs.data.body.data.pageBy.pageContent
-                          .textArea[3].text;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return "Manufacturing Facilities";
-                        }
-                        throw e;
-                      }
-                    })()}
-                  </React.Fragment>
-                </div>
-              </div>
-              <div
-                data-plasmic-name={"box3"}
-                data-plasmic-override={overrides.box3}
-                className={classNames("all", sty.box3)}
-              >
-                <h1
-                  className={classNames(
-                    "all",
-                    "h1",
-                    "h1__uyaK1",
-                    "__wab_text",
-                    sty.h1__ygZqR
-                  )}
-                >
-                  {"9,000+"}
-                </h1>
-                <div
-                  className={classNames("all", "__wab_text", sty.text__isCca)}
-                >
-                  {"Product Formulations"}
-                </div>
-              </div>
-            </div>
-            <Embed
-              data-plasmic-name={"embedHtml"}
-              data-plasmic-override={overrides.embedHtml}
-              className={classNames("__wab_instance", sty.embedHtml)}
-              code={
-                '<div\r\n  class="plasmic-traced-scroll-arrow"\r\n  data-traced-scroll-arrow\r\n  style="\r\n    --arrow-color: #c3761e;\r\n    --arrow-width: 162px;\r\n    --arrow-stroke-width: 7;\r\n  "\r\n>\r\n  <svg\r\n    class="plasmic-traced-scroll-arrow__svg"\r\n    viewBox="0 0 162 262"\r\n    xmlns="http://www.w3.org/2000/svg"\r\n    role="img"\r\n    aria-label="Animated curved arrow"\r\n  >\r\n    <!-- Main arrow shaft -->\r\n    <path\r\n      data-draw-path\r\n      data-draw-start="0"\r\n      data-draw-end="0.9"\r\n      d="\r\n        M 4 3\r\n        L 16 7\r\n        L 33 15\r\n        L 48 24\r\n        L 61 34\r\n        L 77 50\r\n        L 85 60\r\n        L 93 74\r\n        L 96 83\r\n        L 96 90\r\n        L 97 91\r\n        L 96 93\r\n        L 87 93\r\n        L 86 92\r\n        L 70 92\r\n        L 69 93\r\n        L 65 93\r\n        L 51 99\r\n        L 45 104\r\n        L 40 113\r\n        L 40 124\r\n        L 46 135\r\n        L 54 142\r\n        L 62 145\r\n        L 70 145\r\n        L 76 143\r\n        L 84 138\r\n        L 90 131\r\n        L 97 115\r\n        L 98 100\r\n        L 99 98\r\n        L 96 93\r\n        L 100 99\r\n        L 107 100\r\n        L 113 103\r\n        L 125 112\r\n        L 136 123\r\n        L 145 136\r\n        L 151 148\r\n        L 155 160\r\n        L 156 172\r\n        L 157 173\r\n        L 157 182\r\n        L 156 183\r\n        L 155 192\r\n        L 147 211\r\n        L 135 225\r\n        L 127 231\r\n        L 119 235\r\n        L 105 239\r\n        L 85 239\r\n        L 84 238\r\n        L 73 238\r\n        L 69 236\r\n      "\r\n    />\r\n\r\n    <!-- Upper arrowhead -->\r\n    <path\r\n      data-draw-path\r\n      data-draw-start="0.9"\r\n      data-draw-end="1"\r\n      d="\r\n        M 69 236\r\n        L 70 237\r\n        L 72 237\r\n        L 73 236\r\n        L 73 234\r\n        L 75 230\r\n        L 77 228\r\n        L 84 224\r\n        L 87 221\r\n        L 88 221\r\n      "\r\n    />\r\n\r\n    <!-- Lower arrowhead -->\r\n    <path\r\n      data-draw-path\r\n      data-draw-start="0.9"\r\n      data-draw-end="1"\r\n      d="\r\n        M 69 236\r\n        L 73 238\r\n        L 73 240\r\n        L 74 241\r\n        L 75 245\r\n        L 87 256\r\n      "\r\n    />\r\n  </svg>\r\n</div>\r\n\r\n<style>\r\n  .plasmic-traced-scroll-arrow {\r\n    position: relative;\r\n    width: var(--arrow-width, 162px);\r\n    max-width: 100%;\r\n  }\r\n\r\n  .plasmic-traced-scroll-arrow__svg {\r\n    display: block;\r\n    width: 100%;\r\n    height: auto;\r\n    overflow: visible;\r\n    visibility: hidden;\r\n  }\r\n\r\n  .plasmic-traced-scroll-arrow.is-ready\r\n    .plasmic-traced-scroll-arrow__svg {\r\n    visibility: visible;\r\n  }\r\n\r\n  .plasmic-traced-scroll-arrow [data-draw-path] {\r\n    fill: none;\r\n    stroke: var(--arrow-color, #c3761e);\r\n    stroke-width: var(--arrow-stroke-width, 7);\r\n    stroke-linecap: round;\r\n    stroke-linejoin: round;\r\n    vector-effect: non-scaling-stroke;\r\n    will-change: stroke-dashoffset;\r\n  }\r\n\r\n  @media (prefers-reduced-motion: reduce) {\r\n    .plasmic-traced-scroll-arrow [data-draw-path] {\r\n      stroke-dasharray: none !important;\r\n      stroke-dashoffset: 0 !important;\r\n    }\r\n  }\r\n</style>\r\n\r\n<script>\r\n  (() => {\r\n    const clamp = (value, minimum, maximum) =>\r\n      Math.min(Math.max(value, minimum), maximum);\r\n\r\n    function initializeArrow(root) {\r\n      if (root.dataset.arrowInitialized === "true") {\r\n        return;\r\n      }\r\n\r\n      root.dataset.arrowInitialized = "true";\r\n\r\n      const paths = Array.from(\r\n        root.querySelectorAll("[data-draw-path]")\r\n      );\r\n\r\n      if (!paths.length) {\r\n        return;\r\n      }\r\n\r\n      const reducedMotion = window.matchMedia(\r\n        "(prefers-reduced-motion: reduce)"\r\n      );\r\n\r\n      let animationFrame = null;\r\n\r\n      const pathData = paths.map((path) => {\r\n        const length = path.getTotalLength();\r\n\r\n        path.style.strokeDasharray = `${length} ${length}`;\r\n        path.style.strokeDashoffset = `${length}`;\r\n\r\n        return {\r\n          path,\r\n          length,\r\n          start: Number.parseFloat(\r\n            path.dataset.drawStart || "0"\r\n          ),\r\n          end: Number.parseFloat(\r\n            path.dataset.drawEnd || "1"\r\n          )\r\n        };\r\n      });\r\n\r\n      function getScrollProgress() {\r\n        const rect = root.getBoundingClientRect();\r\n\r\n        const viewportHeight =\r\n          window.innerHeight ||\r\n          document.documentElement.clientHeight;\r\n\r\n        /*\r\n         * The arrow begins drawing when its top reaches\r\n         * 90% of the viewport height.\r\n         */\r\n        const startPosition = viewportHeight * 0.9;\r\n\r\n        /*\r\n         * The arrow finishes drawing when its top reaches\r\n         * 18% of the viewport height.\r\n         */\r\n        const finishPosition = viewportHeight * 0.18;\r\n\r\n        return clamp(\r\n          (startPosition - rect.top) /\r\n            (startPosition - finishPosition),\r\n          0,\r\n          1\r\n        );\r\n      }\r\n\r\n      function render() {\r\n        animationFrame = null;\r\n\r\n        const overallProgress = reducedMotion.matches\r\n          ? 1\r\n          : getScrollProgress();\r\n\r\n        pathData.forEach(\r\n          ({ path, length, start, end }) => {\r\n            const duration = Math.max(\r\n              end - start,\r\n              0.0001\r\n            );\r\n\r\n            const localProgress = clamp(\r\n              (overallProgress - start) / duration,\r\n              0,\r\n              1\r\n            );\r\n\r\n            path.style.strokeDashoffset = `${\r\n              length * (1 - localProgress)\r\n            }`;\r\n          }\r\n        );\r\n      }\r\n\r\n      function requestRender() {\r\n        if (animationFrame !== null) {\r\n          return;\r\n        }\r\n\r\n        animationFrame =\r\n          window.requestAnimationFrame(render);\r\n      }\r\n\r\n      root.classList.add("is-ready");\r\n\r\n      window.addEventListener("scroll", requestRender, {\r\n        passive: true\r\n      });\r\n\r\n      window.addEventListener("resize", requestRender);\r\n\r\n      if (\r\n        typeof reducedMotion.addEventListener === "function"\r\n      ) {\r\n        reducedMotion.addEventListener(\r\n          "change",\r\n          requestRender\r\n        );\r\n      } else {\r\n        reducedMotion.addListener(requestRender);\r\n      }\r\n\r\n      requestRender();\r\n    }\r\n\r\n    document\r\n      .querySelectorAll(\r\n        "[data-traced-scroll-arrow]:not([data-arrow-initialized])"\r\n      )\r\n      .forEach(initializeArrow);\r\n  })();\r\n</script>'
+            <TopHero
+              data-plasmic-name={"topHero"}
+              data-plasmic-override={overrides.topHero}
+              className={classNames("__wab_instance", sty.topHero)}
+              pages={
+                hasVariant(globalVariants, "screen", "large")
+                  ? "aboutUs"
+                  : "aboutUs"
               }
             />
-          </div>
-          <div
-            data-plasmic-name={"aboutUsSection2"}
-            data-plasmic-override={overrides.aboutUsSection2}
-            className={classNames("all", sty.aboutUsSection2)}
-          >
+
             <div
-              data-plasmic-name={"wrapper"}
-              data-plasmic-override={overrides.wrapper}
-              className={classNames("all", sty.wrapper)}
+              data-plasmic-name={"aboutUsSection"}
+              data-plasmic-override={overrides.aboutUsSection}
+              className={classNames("all", sty.aboutUsSection)}
             >
               <div
-                data-plasmic-name={"heading2"}
-                data-plasmic-override={overrides.heading2}
-                className={classNames("all", sty.heading2)}
+                data-plasmic-name={"heading"}
+                data-plasmic-override={overrides.heading}
+                className={classNames("all", sty.heading)}
               >
                 <div
-                  className={classNames("all", "__wab_text", sty.text__ixm9)}
+                  className={classNames("all", "__wab_text", sty.text__lcSl)}
                 >
                   <React.Fragment>
                     {(() => {
                       try {
                         return $q.aboutUs.data.body.data.pageBy.pageContent
-                          .headlineParent[1].headlinechild[0].headlinenormal;
+                          .headlineParent[0].headlinechild[0].headlinenormal;
                       } catch (e) {
                         if (
                           e instanceof TypeError ||
                           e?.plasmicType === "PlasmicUndefinedDataError"
                         ) {
-                          return "Why";
+                          return "About";
                         }
                         throw e;
                       }
@@ -668,13 +437,13 @@ function PlasmicAboutUs__RenderFunc(props: {
                   </React.Fragment>
                 </div>
                 <div
-                  className={classNames("all", "__wab_text", sty.text__d5SCr)}
+                  className={classNames("all", "__wab_text", sty.text__c1BdB)}
                 >
                   <React.Fragment>
                     {(() => {
                       try {
                         return $q.aboutUs.data.body.data.pageBy.pageContent
-                          .headlineParent[1].headlinechild[0].headlinefav;
+                          .headlineParent[0].headlinechild[0].headlinefav;
                       } catch (e) {
                         if (
                           e instanceof TypeError ||
@@ -689,730 +458,1589 @@ function PlasmicAboutUs__RenderFunc(props: {
                 </div>
               </div>
               <div
-                data-plasmic-name={"text4"}
-                data-plasmic-override={overrides.text4}
-                className={classNames("all", sty.text4)}
+                data-plasmic-name={"text"}
+                data-plasmic-override={overrides.text}
+                className={classNames("all", sty.text)}
               >
                 <div
-                  className={classNames("all", "__wab_text", sty.text__gpIyH)}
+                  className={classNames("all", "__wab_text", sty.text__o4JiD)}
                 >
-                  {
-                    "What sets Sterling Foods apart is more than what we bake \u2014 it\u2019s how we partner."
-                  }
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $q.aboutUs.data.body.data.pageBy.pageContent
+                          .textArea[0].text;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "Sterling Foods began over 55 years ago as a trusted partner to the U.S. military, developing technically advanced, custom food solutions designed to meet demanding performance, quality, and nutritional requirements.";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
+                </div>
+                <div
+                  className={classNames("all", "__wab_text", sty.text__lyDF)}
+                >
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $q.aboutUs.data.body.data.pageBy.pageContent
+                          .textArea[1].text;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "Today, our exceptional product quality along with our leading-edge ability to combine high-quality proteins\nwith artisan baked goods sets Sterling Foods apart. Backed by flexible manufacturing capabilities, an innovative mindset, and our customer-first approach, Sterling Foods is the partner of choice for leading brands looking\nfor unique, high-quality bakery solutions.";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
                 </div>
               </div>
-            </div>
-            <div
-              data-plasmic-name={"group"}
-              data-plasmic-override={overrides.group}
-              className={classNames("all", sty.group)}
-            >
               <div
-                data-plasmic-name={"boxes"}
-                data-plasmic-override={overrides.boxes}
-                className={classNames("all", sty.boxes)}
+                data-plasmic-name={"text2"}
+                data-plasmic-override={overrides.text2}
+                className={classNames("all", sty.text2)}
               >
                 <div
-                  data-plasmic-name={"item"}
-                  data-plasmic-override={overrides.item}
-                  className={classNames("all", sty.item)}
+                  className={classNames("all", "__wab_text", sty.text__rBfOg)}
                 >
-                  <div
-                    data-plasmic-name={"icon"}
-                    data-plasmic-override={overrides.icon}
-                    className={classNames("all", sty.icon)}
-                  >
-                    <PlasmicImg__
-                      alt={""}
-                      className={classNames(sty.img___8UqN)}
-                      displayHeight={"auto"}
-                      displayMaxHeight={"none"}
-                      displayMaxWidth={"100%"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"auto"}
-                      loading={"lazy"}
-                      src={{
-                        src: "/plasmic/sterling_and_buena_vista_foods/images/croissantPng.png",
-                        fullWidth: 67,
-                        fullHeight: 67,
-                        aspectRatio: undefined
-                      }}
-                    />
-                  </div>
-                  <div
-                    data-plasmic-name={"text5"}
-                    data-plasmic-override={overrides.text5}
-                    className={classNames("all", sty.text5)}
-                  >
-                    <div
-                      className={classNames(
-                        "all",
-                        "__wab_text",
-                        sty.text__m9HKz
-                      )}
-                    >
-                      <React.Fragment>
-                        {(() => {
-                          try {
-                            return $q.aboutUs.data.body.data.pageBy.pageContent
-                              .headlineParent[2].headlinechild[0].headlinefav;
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return "Personalized Product Development";
-                            }
-                            throw e;
-                          }
-                        })()}
-                      </React.Fragment>
-                    </div>
-                    <div
-                      className={classNames(
-                        "all",
-                        "__wab_text",
-                        sty.text__xClBx
-                      )}
-                    >
-                      <React.Fragment>
-                        {(() => {
-                          try {
-                            return $q.aboutUs.data.body.data.pageBy.pageContent
-                              .headlineParent[2].headlinechild[0]
-                              .headlinenormal;
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return "Custom-crafted solutions tailored to your vision and operational needs.";
-                            }
-                            throw e;
-                          }
-                        })()}
-                      </React.Fragment>
-                    </div>
-                  </div>
+                  {"Founded in 1971"}
                 </div>
-                <div
-                  data-plasmic-name={"item2"}
-                  data-plasmic-override={overrides.item2}
-                  className={classNames("all", sty.item2)}
-                >
-                  <div
-                    data-plasmic-name={"icon2"}
-                    data-plasmic-override={overrides.icon2}
-                    className={classNames("all", sty.icon2)}
-                  >
-                    <PlasmicImg__
-                      alt={""}
-                      className={classNames(sty.img__px2Xw)}
-                      displayHeight={"auto"}
-                      displayMaxHeight={"none"}
-                      displayMaxWidth={"100%"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"auto"}
-                      loading={"lazy"}
-                      src={{
-                        src: "/plasmic/sterling_and_buena_vista_foods/images/breadsPng.png",
-                        fullWidth: 67,
-                        fullHeight: 67,
-                        aspectRatio: undefined
-                      }}
-                    />
-                  </div>
-                  <div
-                    data-plasmic-name={"text6"}
-                    data-plasmic-override={overrides.text6}
-                    className={classNames("all", sty.text6)}
-                  >
-                    <div
-                      className={classNames(
-                        "all",
-                        "__wab_text",
-                        sty.text__rdBfl
-                      )}
-                    >
-                      <React.Fragment>
-                        {(() => {
-                          try {
-                            return $q.aboutUs.data.body.data.pageBy.pageContent
-                              .headlineParent[2].headlinechild[1].headlinefav;
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return "Flexible, Large-Scale Capabilities";
-                            }
-                            throw e;
-                          }
-                        })()}
-                      </React.Fragment>
-                    </div>
-                    <div
-                      className={classNames(
-                        "all",
-                        "__wab_text",
-                        sty.text__q8AI
-                      )}
-                    >
-                      <React.Fragment>
-                        {(() => {
-                          try {
-                            return $q.aboutUs.data.body.data.pageBy.pageContent
-                              .headlineParent[2].headlinechild[1]
-                              .headlinenormal;
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return "Six manufacturing facilities built to support growth, flexibility and scalability.";
-                            }
-                            throw e;
-                          }
-                        })()}
-                      </React.Fragment>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  data-plasmic-name={"item3"}
-                  data-plasmic-override={overrides.item3}
-                  className={classNames("all", sty.item3)}
-                >
-                  <div
-                    data-plasmic-name={"icon3"}
-                    data-plasmic-override={overrides.icon3}
-                    className={classNames("all", sty.icon3)}
-                  >
-                    <PlasmicImg__
-                      alt={""}
-                      className={classNames(sty.img__dIgdX)}
-                      displayHeight={"auto"}
-                      displayMaxHeight={"none"}
-                      displayMaxWidth={"100%"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"auto"}
-                      loading={"lazy"}
-                      src={{
-                        src: "/plasmic/sterling_and_buena_vista_foods/images/doughPng.png",
-                        fullWidth: 67,
-                        fullHeight: 67,
-                        aspectRatio: undefined
-                      }}
-                    />
-                  </div>
-                  <div
-                    data-plasmic-name={"text7"}
-                    data-plasmic-override={overrides.text7}
-                    className={classNames("all", sty.text7)}
-                  >
-                    <div
-                      className={classNames(
-                        "all",
-                        "__wab_text",
-                        sty.text__lt6Tc
-                      )}
-                    >
-                      <React.Fragment>
-                        {(() => {
-                          try {
-                            return $q.aboutUs.data.body.data.pageBy.pageContent
-                              .headlineParent[2].headlinechild[2].headlinefav;
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return "Leading Edge Technologies";
-                            }
-                            throw e;
-                          }
-                        })()}
-                      </React.Fragment>
-                    </div>
-                    <div
-                      className={classNames(
-                        "all",
-                        "__wab_text",
-                        sty.text___193Le
-                      )}
-                    >
-                      <React.Fragment>
-                        {(() => {
-                          try {
-                            return $q.aboutUs.data.body.data.pageBy.pageContent
-                              .headlineParent[2].headlinechild[2]
-                              .headlinenormal;
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return "State-of-the-art technical and nutritional expertise to craft unique, trend-forward innovations.";
-                            }
-                            throw e;
-                          }
-                        })()}
-                      </React.Fragment>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <ParallaxWrapper
-                data-plasmic-name={"scrollParallax"}
-                data-plasmic-override={overrides.scrollParallax}
-                className={classNames("__wab_instance", sty.scrollParallax)}
-                disabled={
-                  hasVariant(globalVariants, "screen", "tablet")
-                    ? false
-                    : undefined
-                }
-                previewInEditor={
-                  hasVariant(globalVariants, "screen", "tablet") ? false : false
-                }
-                speed={hasVariant(globalVariants, "screen", "tablet") ? 0 : 20}
-              >
-                <div
-                  data-plasmic-name={"image"}
-                  data-plasmic-override={overrides.image}
-                  className={classNames("all", sty.image)}
+                <DividerVerticalSvgrepoComSvgIcon
+                  className={classNames("all", sty.svg__pTs9D)}
+                  role={"img"}
                 />
-              </ParallaxWrapper>
+
+                <div
+                  className={classNames("all", "__wab_text", sty.text__yoGdU)}
+                >
+                  {"Customer-Focused Culture"}
+                </div>
+                <DividerVerticalSvgrepoComSvgIcon
+                  className={classNames("all", sty.svg__zHk7I)}
+                  role={"img"}
+                />
+
+                <div
+                  className={classNames("all", "__wab_text", sty.text__mdrFf)}
+                >
+                  {hasVariant(globalVariants, "screen", "mediumDesktop")
+                    ? "Privately Held"
+                    : "Privately Held"}
+                </div>
+              </div>
               <div
-                data-plasmic-name={"boxes3"}
-                data-plasmic-override={overrides.boxes3}
-                className={classNames("all", sty.boxes3)}
+                data-plasmic-name={"text3"}
+                data-plasmic-override={overrides.text3}
+                className={classNames("all", sty.text3)}
               >
                 <div
-                  data-plasmic-name={"item9"}
-                  data-plasmic-override={overrides.item9}
-                  className={classNames("all", sty.item9)}
+                  data-plasmic-name={"box"}
+                  data-plasmic-override={overrides.box}
+                  className={classNames("all", sty.box)}
                 >
-                  <div
-                    data-plasmic-name={"icon7"}
-                    data-plasmic-override={overrides.icon7}
-                    className={classNames("all", sty.icon7)}
+                  <h1
+                    className={classNames(
+                      "all",
+                      "h1",
+                      "h1__uyaK1",
+                      "__wab_text",
+                      sty.h1__rNcon
+                    )}
                   >
-                    <PlasmicImg__
-                      alt={""}
-                      className={classNames(sty.img___51GcL)}
-                      displayHeight={"auto"}
-                      displayMaxHeight={"none"}
-                      displayMaxWidth={"100%"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"auto"}
-                      loading={"lazy"}
-                      src={{
-                        src: "/plasmic/sterling_and_buena_vista_foods/images/bakeryPng.png",
-                        fullWidth: 67,
-                        fullHeight: 67,
-                        aspectRatio: undefined
-                      }}
-                    />
-                  </div>
+                    {"1,000+"}
+                  </h1>
                   <div
-                    data-plasmic-name={"text11"}
-                    data-plasmic-override={overrides.text11}
-                    className={classNames("all", sty.text11)}
+                    className={classNames("all", "__wab_text", sty.text__jRnIg)}
                   >
-                    <div
-                      className={classNames(
-                        "all",
-                        "__wab_text",
-                        sty.text__jNrh9
-                      )}
-                    >
-                      <React.Fragment>
-                        {(() => {
-                          try {
-                            return $q.aboutUs.data.body.data.pageBy.pageContent
-                              .headlineParent[3].headlinechild[0].headlinefav;
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return "Effective & Efficient Scale-Up";
-                            }
-                            throw e;
-                          }
-                        })()}
-                      </React.Fragment>
-                    </div>
-                    <div
-                      className={classNames(
-                        "all",
-                        "__wab_text",
-                        sty.text___2WnOh
-                      )}
-                    >
-                      <React.Fragment>
-                        {(() => {
-                          try {
-                            return $q.aboutUs.data.body.data.pageBy.pageContent
-                              .headlineParent[3].headlinechild[0]
-                              .headlinenormal;
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return "From concept development to commercialization, we bring ideas to life seamlessly.";
-                            }
-                            throw e;
-                          }
-                        })()}
-                      </React.Fragment>
-                    </div>
+                    {"Employees"}
                   </div>
                 </div>
                 <div
-                  data-plasmic-name={"item10"}
-                  data-plasmic-override={overrides.item10}
-                  className={classNames("all", sty.item10)}
+                  data-plasmic-name={"box2"}
+                  data-plasmic-override={overrides.box2}
+                  className={classNames("all", sty.box2)}
                 >
-                  <div
-                    data-plasmic-name={"icon8"}
-                    data-plasmic-override={overrides.icon8}
-                    className={classNames("all", sty.icon8)}
+                  <h1
+                    className={classNames(
+                      "all",
+                      "h1",
+                      "h1__uyaK1",
+                      "__wab_text",
+                      sty.h1__ha1KI
+                    )}
                   >
-                    <PlasmicImg__
-                      alt={""}
-                      className={classNames(sty.img__q29OC)}
-                      displayHeight={"auto"}
-                      displayMaxHeight={"none"}
-                      displayMaxWidth={"100%"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"auto"}
-                      loading={"lazy"}
-                      src={{
-                        src: "/plasmic/sterling_and_buena_vista_foods/images/pastryBagPng.png",
-                        fullWidth: 67,
-                        fullHeight: 67,
-                        aspectRatio: undefined
-                      }}
-                    />
-                  </div>
-                  <div
-                    data-plasmic-name={"text12"}
-                    data-plasmic-override={overrides.text12}
-                    className={classNames("all", sty.text12)}
-                  >
-                    <div
-                      className={classNames(
-                        "all",
-                        "__wab_text",
-                        sty.text__eaqho
-                      )}
-                    >
+                    {hasVariant(globalVariants, "screen", "mediumDesktop") ? (
+                      <React.Fragment>{undefined}</React.Fragment>
+                    ) : (
                       <React.Fragment>
                         {(() => {
                           try {
                             return $q.aboutUs.data.body.data.pageBy.pageContent
-                              .headlineParent[3].headlinechild[1].headlinefav;
+                              .textArea[2].text;
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
                               e?.plasmicType === "PlasmicUndefinedDataError"
                             ) {
-                              return "Quality & Food\nSafety First";
+                              return "6";
                             }
                             throw e;
                           }
                         })()}
                       </React.Fragment>
-                    </div>
-                    <div
-                      className={classNames(
-                        "all",
-                        "__wab_text",
-                        sty.text__uYVeW
-                      )}
-                    >
-                      <React.Fragment>
-                        {(() => {
-                          try {
-                            return $q.aboutUs.data.body.data.pageBy.pageContent
-                              .headlineParent[3].headlinechild[1]
-                              .headlinenormal;
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return "Rigorous standards and a deeply embedded culture of accountability.";
-                            }
-                            throw e;
+                    )}
+                  </h1>
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__tKMx)}
+                  >
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $q.aboutUs.data.body.data.pageBy.pageContent
+                            .textArea[3].text;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "Manufacturing Facilities";
                           }
-                        })()}
-                      </React.Fragment>
-                    </div>
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
                   </div>
                 </div>
                 <div
-                  data-plasmic-name={"item11"}
-                  data-plasmic-override={overrides.item11}
-                  className={classNames("all", sty.item11)}
+                  data-plasmic-name={"box3"}
+                  data-plasmic-override={overrides.box3}
+                  className={classNames("all", sty.box3)}
                 >
-                  <div
-                    data-plasmic-name={"icon9"}
-                    data-plasmic-override={overrides.icon9}
-                    className={classNames("all", sty.icon9)}
+                  <h1
+                    className={classNames(
+                      "all",
+                      "h1",
+                      "h1__uyaK1",
+                      "__wab_text",
+                      sty.h1__ygZqR
+                    )}
                   >
-                    <PlasmicImg__
-                      alt={""}
-                      className={classNames(sty.img__abEtg)}
-                      displayHeight={"auto"}
-                      displayMaxHeight={"none"}
-                      displayMaxWidth={"100%"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"auto"}
-                      loading={"lazy"}
-                      src={{
-                        src: "/plasmic/sterling_and_buena_vista_foods/images/cookiePng.png",
-                        fullWidth: 67,
-                        fullHeight: 67,
-                        aspectRatio: undefined
-                      }}
-                    />
-                  </div>
+                    {"9,000+"}
+                  </h1>
                   <div
-                    data-plasmic-name={"text13"}
-                    data-plasmic-override={overrides.text13}
-                    className={classNames("all", sty.text13)}
+                    className={classNames("all", "__wab_text", sty.text__isCca)}
                   >
-                    <div
-                      className={classNames(
-                        "all",
-                        "__wab_text",
-                        sty.text__taK2W
-                      )}
-                    >
-                      <React.Fragment>
-                        {(() => {
-                          try {
-                            return $q.aboutUs.data.body.data.pageBy.pageContent
-                              .headlineParent[3].headlinechild[2].headlinefav;
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return "Collaborative \nPartnership";
-                            }
-                            throw e;
-                          }
-                        })()}
-                      </React.Fragment>
-                    </div>
-                    <div
-                      className={classNames(
-                        "all",
-                        "__wab_text",
-                        sty.text__nZ0Qt
-                      )}
-                    >
-                      <React.Fragment>
-                        {(() => {
-                          try {
-                            return $q.aboutUs.data.body.data.pageBy.pageContent
-                              .headlineParent[3].headlinechild[2]
-                              .headlinenormal;
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return "The agility and responsiveness of a smaller company backed by extensive capabilities.";
-                            }
-                            throw e;
-                          }
-                        })()}
-                      </React.Fragment>
-                    </div>
+                    {"Product Formulations"}
                   </div>
                 </div>
               </div>
+              <Embed
+                data-plasmic-name={"embedHtml"}
+                data-plasmic-override={overrides.embedHtml}
+                className={classNames("__wab_instance", sty.embedHtml)}
+                code={
+                  '<div\r\n  class="plasmic-traced-scroll-arrow"\r\n  data-traced-scroll-arrow\r\n  style="\r\n    --arrow-color: #c3761e;\r\n    --arrow-width: 162px;\r\n    --arrow-stroke-width: 7;\r\n  "\r\n>\r\n  <svg\r\n    class="plasmic-traced-scroll-arrow__svg"\r\n    viewBox="0 0 162 262"\r\n    xmlns="http://www.w3.org/2000/svg"\r\n    role="img"\r\n    aria-label="Animated curved arrow"\r\n  >\r\n    <!-- Main arrow shaft -->\r\n    <path\r\n      data-draw-path\r\n      data-draw-start="0"\r\n      data-draw-end="0.9"\r\n      d="\r\n        M 4 3\r\n        L 16 7\r\n        L 33 15\r\n        L 48 24\r\n        L 61 34\r\n        L 77 50\r\n        L 85 60\r\n        L 93 74\r\n        L 96 83\r\n        L 96 90\r\n        L 97 91\r\n        L 96 93\r\n        L 87 93\r\n        L 86 92\r\n        L 70 92\r\n        L 69 93\r\n        L 65 93\r\n        L 51 99\r\n        L 45 104\r\n        L 40 113\r\n        L 40 124\r\n        L 46 135\r\n        L 54 142\r\n        L 62 145\r\n        L 70 145\r\n        L 76 143\r\n        L 84 138\r\n        L 90 131\r\n        L 97 115\r\n        L 98 100\r\n        L 99 98\r\n        L 96 93\r\n        L 100 99\r\n        L 107 100\r\n        L 113 103\r\n        L 125 112\r\n        L 136 123\r\n        L 145 136\r\n        L 151 148\r\n        L 155 160\r\n        L 156 172\r\n        L 157 173\r\n        L 157 182\r\n        L 156 183\r\n        L 155 192\r\n        L 147 211\r\n        L 135 225\r\n        L 127 231\r\n        L 119 235\r\n        L 105 239\r\n        L 85 239\r\n        L 84 238\r\n        L 73 238\r\n        L 69 236\r\n      "\r\n    />\r\n\r\n    <!-- Upper arrowhead -->\r\n    <path\r\n      data-draw-path\r\n      data-draw-start="0.9"\r\n      data-draw-end="1"\r\n      d="\r\n        M 69 236\r\n        L 70 237\r\n        L 72 237\r\n        L 73 236\r\n        L 73 234\r\n        L 75 230\r\n        L 77 228\r\n        L 84 224\r\n        L 87 221\r\n        L 88 221\r\n      "\r\n    />\r\n\r\n    <!-- Lower arrowhead -->\r\n    <path\r\n      data-draw-path\r\n      data-draw-start="0.9"\r\n      data-draw-end="1"\r\n      d="\r\n        M 69 236\r\n        L 73 238\r\n        L 73 240\r\n        L 74 241\r\n        L 75 245\r\n        L 87 256\r\n      "\r\n    />\r\n  </svg>\r\n</div>\r\n\r\n<style>\r\n  .plasmic-traced-scroll-arrow {\r\n    position: relative;\r\n    width: var(--arrow-width, 162px);\r\n    max-width: 100%;\r\n  }\r\n\r\n  .plasmic-traced-scroll-arrow__svg {\r\n    display: block;\r\n    width: 100%;\r\n    height: auto;\r\n    overflow: visible;\r\n    visibility: hidden;\r\n  }\r\n\r\n  .plasmic-traced-scroll-arrow.is-ready\r\n    .plasmic-traced-scroll-arrow__svg {\r\n    visibility: visible;\r\n  }\r\n\r\n  .plasmic-traced-scroll-arrow [data-draw-path] {\r\n    fill: none;\r\n    stroke: var(--arrow-color, #c3761e);\r\n    stroke-width: var(--arrow-stroke-width, 7);\r\n    stroke-linecap: round;\r\n    stroke-linejoin: round;\r\n    vector-effect: non-scaling-stroke;\r\n    will-change: stroke-dashoffset;\r\n  }\r\n\r\n  @media (prefers-reduced-motion: reduce) {\r\n    .plasmic-traced-scroll-arrow [data-draw-path] {\r\n      stroke-dasharray: none !important;\r\n      stroke-dashoffset: 0 !important;\r\n    }\r\n  }\r\n</style>\r\n\r\n<script>\r\n  (() => {\r\n    const clamp = (value, minimum, maximum) =>\r\n      Math.min(Math.max(value, minimum), maximum);\r\n\r\n    function initializeArrow(root) {\r\n      if (root.dataset.arrowInitialized === "true") {\r\n        return;\r\n      }\r\n\r\n      root.dataset.arrowInitialized = "true";\r\n\r\n      const paths = Array.from(\r\n        root.querySelectorAll("[data-draw-path]")\r\n      );\r\n\r\n      if (!paths.length) {\r\n        return;\r\n      }\r\n\r\n      const reducedMotion = window.matchMedia(\r\n        "(prefers-reduced-motion: reduce)"\r\n      );\r\n\r\n      let animationFrame = null;\r\n\r\n      const pathData = paths.map((path) => {\r\n        const length = path.getTotalLength();\r\n\r\n        path.style.strokeDasharray = `${length} ${length}`;\r\n        path.style.strokeDashoffset = `${length}`;\r\n\r\n        return {\r\n          path,\r\n          length,\r\n          start: Number.parseFloat(\r\n            path.dataset.drawStart || "0"\r\n          ),\r\n          end: Number.parseFloat(\r\n            path.dataset.drawEnd || "1"\r\n          )\r\n        };\r\n      });\r\n\r\n      function getScrollProgress() {\r\n        const rect = root.getBoundingClientRect();\r\n\r\n        const viewportHeight =\r\n          window.innerHeight ||\r\n          document.documentElement.clientHeight;\r\n\r\n        /*\r\n         * The arrow begins drawing when its top reaches\r\n         * 90% of the viewport height.\r\n         */\r\n        const startPosition = viewportHeight * 0.9;\r\n\r\n        /*\r\n         * The arrow finishes drawing when its top reaches\r\n         * 18% of the viewport height.\r\n         */\r\n        const finishPosition = viewportHeight * 0.18;\r\n\r\n        return clamp(\r\n          (startPosition - rect.top) /\r\n            (startPosition - finishPosition),\r\n          0,\r\n          1\r\n        );\r\n      }\r\n\r\n      function render() {\r\n        animationFrame = null;\r\n\r\n        const overallProgress = reducedMotion.matches\r\n          ? 1\r\n          : getScrollProgress();\r\n\r\n        pathData.forEach(\r\n          ({ path, length, start, end }) => {\r\n            const duration = Math.max(\r\n              end - start,\r\n              0.0001\r\n            );\r\n\r\n            const localProgress = clamp(\r\n              (overallProgress - start) / duration,\r\n              0,\r\n              1\r\n            );\r\n\r\n            path.style.strokeDashoffset = `${\r\n              length * (1 - localProgress)\r\n            }`;\r\n          }\r\n        );\r\n      }\r\n\r\n      function requestRender() {\r\n        if (animationFrame !== null) {\r\n          return;\r\n        }\r\n\r\n        animationFrame =\r\n          window.requestAnimationFrame(render);\r\n      }\r\n\r\n      root.classList.add("is-ready");\r\n\r\n      window.addEventListener("scroll", requestRender, {\r\n        passive: true\r\n      });\r\n\r\n      window.addEventListener("resize", requestRender);\r\n\r\n      if (\r\n        typeof reducedMotion.addEventListener === "function"\r\n      ) {\r\n        reducedMotion.addEventListener(\r\n          "change",\r\n          requestRender\r\n        );\r\n      } else {\r\n        reducedMotion.addListener(requestRender);\r\n      }\r\n\r\n      requestRender();\r\n    }\r\n\r\n    document\r\n      .querySelectorAll(\r\n        "[data-traced-scroll-arrow]:not([data-arrow-initialized])"\r\n      )\r\n      .forEach(initializeArrow);\r\n  })();\r\n</script>'
+                }
+              />
             </div>
-          </div>
-          <div
-            data-plasmic-name={"aboutUsSection3"}
-            data-plasmic-override={overrides.aboutUsSection3}
-            className={classNames("all", sty.aboutUsSection3)}
-          >
             <div
-              data-plasmic-name={"wrapper2"}
-              data-plasmic-override={overrides.wrapper2}
-              className={classNames("all", sty.wrapper2)}
+              data-plasmic-name={"aboutUsSection2"}
+              data-plasmic-override={overrides.aboutUsSection2}
+              className={classNames("all", sty.aboutUsSection2)}
             >
               <div
-                data-plasmic-name={"texts"}
-                data-plasmic-override={overrides.texts}
-                className={classNames("all", sty.texts)}
+                data-plasmic-name={"wrapper"}
+                data-plasmic-override={overrides.wrapper}
+                className={classNames("all", sty.wrapper)}
               >
                 <div
-                  className={classNames("all", "__wab_text", sty.text___35Tun)}
+                  data-plasmic-name={"heading2"}
+                  data-plasmic-override={overrides.heading2}
+                  className={classNames("all", sty.heading2)}
                 >
-                  <React.Fragment>
-                    {(() => {
-                      try {
-                        return $q.aboutUs.data.body.data.pageBy.pageContent
-                          .textArea[5].text;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return "Mission & Values";
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__ixm9)}
+                  >
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $q.aboutUs.data.body.data.pageBy.pageContent
+                            .headlineParent[1].headlinechild[0].headlinenormal;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "Why";
+                          }
+                          throw e;
                         }
-                        throw e;
-                      }
-                    })()}
-                  </React.Fragment>
+                      })()}
+                    </React.Fragment>
+                  </div>
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__d5SCr)}
+                  >
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $q.aboutUs.data.body.data.pageBy.pageContent
+                            .headlineParent[1].headlinechild[0].headlinefav;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "Sterling Foods";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
+                  </div>
                 </div>
                 <div
-                  className={classNames("all", "__wab_text", sty.text__fgSL)}
+                  data-plasmic-name={"text4"}
+                  data-plasmic-override={overrides.text4}
+                  className={classNames("all", sty.text4)}
                 >
-                  <React.Fragment>
-                    {(() => {
-                      try {
-                        return $q.aboutUs.data.body.data.pageBy.pageContent
-                          .textArea[6].text;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return "At Sterling Foods, our mission goes beyond delivering great products.  We are passionate about building trusted partnerships with our customers through exceptional service, collaboration, and support, with a steadfast commitment to quality, safety, consistency, and technical innovation.";
-                        }
-                        throw e;
-                      }
-                    })()}
-                  </React.Fragment>
-                </div>
-                <div
-                  className={classNames("all", "__wab_text", sty.text__pS7J4)}
-                >
-                  <React.Fragment>
-                    <React.Fragment>{""}</React.Fragment>
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__gpIyH)}
+                  >
                     {
-                      <h5
-                        data-plasmic-name={"h5"}
-                        data-plasmic-override={overrides.h5}
+                      "What sets Sterling Foods apart is more than what we bake \u2014 it\u2019s how we partner."
+                    }
+                  </div>
+                </div>
+              </div>
+              <div
+                data-plasmic-name={"group"}
+                data-plasmic-override={overrides.group}
+                className={classNames("all", sty.group)}
+              >
+                <div
+                  data-plasmic-name={"boxes"}
+                  data-plasmic-override={overrides.boxes}
+                  className={classNames("all", sty.boxes)}
+                >
+                  <div
+                    data-plasmic-name={"item"}
+                    data-plasmic-override={overrides.item}
+                    className={classNames("all", sty.item)}
+                  >
+                    <div
+                      data-plasmic-name={"icon"}
+                      data-plasmic-override={overrides.icon}
+                      className={classNames("all", sty.icon)}
+                    >
+                      <PlasmicImg__
+                        alt={""}
+                        className={classNames(sty.img___8UqN)}
+                        displayHeight={"auto"}
+                        displayMaxHeight={"none"}
+                        displayMaxWidth={"100%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"auto"}
+                        loading={"lazy"}
+                        src={{
+                          src: "/plasmic/sterling_and_buena_vista_foods/images/croissantPng.png",
+                          fullWidth: 67,
+                          fullHeight: 67,
+                          aspectRatio: undefined
+                        }}
+                      />
+                    </div>
+                    <div
+                      data-plasmic-name={"text5"}
+                      data-plasmic-override={overrides.text5}
+                      className={classNames("all", sty.text5)}
+                    >
+                      <div
                         className={classNames(
                           "all",
-                          "h5",
-                          "h5__uyaK1",
                           "__wab_text",
-                          sty.h5
+                          sty.text__m9HKz
                         )}
                       >
-                        {"Our Values\n\n\r"}
-                      </h5>
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return $q.aboutUs.data.body.data.pageBy
+                                .pageContent.headlineParent[2].headlinechild[0]
+                                .headlinefav;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "Personalized Product Development";
+                              }
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
+                      </div>
+                      <div
+                        className={classNames(
+                          "all",
+                          "__wab_text",
+                          sty.text__xClBx
+                        )}
+                      >
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return $q.aboutUs.data.body.data.pageBy
+                                .pageContent.headlineParent[2].headlinechild[0]
+                                .headlinenormal;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "Custom-crafted solutions tailored to your vision and operational needs.";
+                              }
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-plasmic-name={"item2"}
+                    data-plasmic-override={overrides.item2}
+                    className={classNames("all", sty.item2)}
+                  >
+                    <div
+                      data-plasmic-name={"icon2"}
+                      data-plasmic-override={overrides.icon2}
+                      className={classNames("all", sty.icon2)}
+                    >
+                      <PlasmicImg__
+                        alt={""}
+                        className={classNames(sty.img__px2Xw)}
+                        displayHeight={"auto"}
+                        displayMaxHeight={"none"}
+                        displayMaxWidth={"100%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"auto"}
+                        loading={"lazy"}
+                        src={{
+                          src: "/plasmic/sterling_and_buena_vista_foods/images/breadsPng.png",
+                          fullWidth: 67,
+                          fullHeight: 67,
+                          aspectRatio: undefined
+                        }}
+                      />
+                    </div>
+                    <div
+                      data-plasmic-name={"text6"}
+                      data-plasmic-override={overrides.text6}
+                      className={classNames("all", sty.text6)}
+                    >
+                      <div
+                        className={classNames(
+                          "all",
+                          "__wab_text",
+                          sty.text__rdBfl
+                        )}
+                      >
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return $q.aboutUs.data.body.data.pageBy
+                                .pageContent.headlineParent[2].headlinechild[1]
+                                .headlinefav;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "Flexible, Large-Scale Capabilities";
+                              }
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
+                      </div>
+                      <div
+                        className={classNames(
+                          "all",
+                          "__wab_text",
+                          sty.text__q8AI
+                        )}
+                      >
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return $q.aboutUs.data.body.data.pageBy
+                                .pageContent.headlineParent[2].headlinechild[1]
+                                .headlinenormal;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "Six manufacturing facilities built to support growth, flexibility and scalability.";
+                              }
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-plasmic-name={"item3"}
+                    data-plasmic-override={overrides.item3}
+                    className={classNames("all", sty.item3)}
+                  >
+                    <div
+                      data-plasmic-name={"icon3"}
+                      data-plasmic-override={overrides.icon3}
+                      className={classNames("all", sty.icon3)}
+                    >
+                      <PlasmicImg__
+                        alt={""}
+                        className={classNames(sty.img__dIgdX)}
+                        displayHeight={"auto"}
+                        displayMaxHeight={"none"}
+                        displayMaxWidth={"100%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"auto"}
+                        loading={"lazy"}
+                        src={{
+                          src: "/plasmic/sterling_and_buena_vista_foods/images/doughPng.png",
+                          fullWidth: 67,
+                          fullHeight: 67,
+                          aspectRatio: undefined
+                        }}
+                      />
+                    </div>
+                    <div
+                      data-plasmic-name={"text7"}
+                      data-plasmic-override={overrides.text7}
+                      className={classNames("all", sty.text7)}
+                    >
+                      <div
+                        className={classNames(
+                          "all",
+                          "__wab_text",
+                          sty.text__lt6Tc
+                        )}
+                      >
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return $q.aboutUs.data.body.data.pageBy
+                                .pageContent.headlineParent[2].headlinechild[2]
+                                .headlinefav;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "Leading Edge Technologies";
+                              }
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
+                      </div>
+                      <div
+                        className={classNames(
+                          "all",
+                          "__wab_text",
+                          sty.text___193Le
+                        )}
+                      >
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return $q.aboutUs.data.body.data.pageBy
+                                .pageContent.headlineParent[2].headlinechild[2]
+                                .headlinenormal;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "State-of-the-art technical and nutritional expertise to craft unique, trend-forward innovations.";
+                              }
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <ParallaxWrapper
+                  data-plasmic-name={"scrollParallax"}
+                  data-plasmic-override={overrides.scrollParallax}
+                  className={classNames("__wab_instance", sty.scrollParallax)}
+                  disabled={
+                    hasVariant(globalVariants, "screen", "tablet")
+                      ? false
+                      : undefined
+                  }
+                  previewInEditor={
+                    hasVariant(globalVariants, "screen", "tablet")
+                      ? false
+                      : false
+                  }
+                  speed={
+                    hasVariant(globalVariants, "screen", "tablet") ? 0 : 20
+                  }
+                >
+                  <div
+                    data-plasmic-name={"image"}
+                    data-plasmic-override={overrides.image}
+                    className={classNames("all", sty.image)}
+                  />
+                </ParallaxWrapper>
+                <div
+                  data-plasmic-name={"boxes3"}
+                  data-plasmic-override={overrides.boxes3}
+                  className={classNames("all", sty.boxes3)}
+                >
+                  <div
+                    data-plasmic-name={"item9"}
+                    data-plasmic-override={overrides.item9}
+                    className={classNames("all", sty.item9)}
+                  >
+                    <div
+                      data-plasmic-name={"icon7"}
+                      data-plasmic-override={overrides.icon7}
+                      className={classNames("all", sty.icon7)}
+                    >
+                      <PlasmicImg__
+                        alt={""}
+                        className={classNames(sty.img___51GcL)}
+                        displayHeight={"auto"}
+                        displayMaxHeight={"none"}
+                        displayMaxWidth={"100%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"auto"}
+                        loading={"lazy"}
+                        src={{
+                          src: "/plasmic/sterling_and_buena_vista_foods/images/bakeryPng.png",
+                          fullWidth: 67,
+                          fullHeight: 67,
+                          aspectRatio: undefined
+                        }}
+                      />
+                    </div>
+                    <div
+                      data-plasmic-name={"text11"}
+                      data-plasmic-override={overrides.text11}
+                      className={classNames("all", sty.text11)}
+                    >
+                      <div
+                        className={classNames(
+                          "all",
+                          "__wab_text",
+                          sty.text__jNrh9
+                        )}
+                      >
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return $q.aboutUs.data.body.data.pageBy
+                                .pageContent.headlineParent[3].headlinechild[0]
+                                .headlinefav;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "Effective & Efficient Scale-Up";
+                              }
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
+                      </div>
+                      <div
+                        className={classNames(
+                          "all",
+                          "__wab_text",
+                          sty.text___2WnOh
+                        )}
+                      >
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return $q.aboutUs.data.body.data.pageBy
+                                .pageContent.headlineParent[3].headlinechild[0]
+                                .headlinenormal;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "From concept development to commercialization, we bring ideas to life seamlessly.";
+                              }
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-plasmic-name={"item10"}
+                    data-plasmic-override={overrides.item10}
+                    className={classNames("all", sty.item10)}
+                  >
+                    <div
+                      data-plasmic-name={"icon8"}
+                      data-plasmic-override={overrides.icon8}
+                      className={classNames("all", sty.icon8)}
+                    >
+                      <PlasmicImg__
+                        alt={""}
+                        className={classNames(sty.img__q29OC)}
+                        displayHeight={"auto"}
+                        displayMaxHeight={"none"}
+                        displayMaxWidth={"100%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"auto"}
+                        loading={"lazy"}
+                        src={{
+                          src: "/plasmic/sterling_and_buena_vista_foods/images/pastryBagPng.png",
+                          fullWidth: 67,
+                          fullHeight: 67,
+                          aspectRatio: undefined
+                        }}
+                      />
+                    </div>
+                    <div
+                      data-plasmic-name={"text12"}
+                      data-plasmic-override={overrides.text12}
+                      className={classNames("all", sty.text12)}
+                    >
+                      <div
+                        className={classNames(
+                          "all",
+                          "__wab_text",
+                          sty.text__eaqho
+                        )}
+                      >
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return $q.aboutUs.data.body.data.pageBy
+                                .pageContent.headlineParent[3].headlinechild[1]
+                                .headlinefav;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "Quality & Food\nSafety First";
+                              }
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
+                      </div>
+                      <div
+                        className={classNames(
+                          "all",
+                          "__wab_text",
+                          sty.text__uYVeW
+                        )}
+                      >
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return $q.aboutUs.data.body.data.pageBy
+                                .pageContent.headlineParent[3].headlinechild[1]
+                                .headlinenormal;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "Rigorous standards and a deeply embedded culture of accountability.";
+                              }
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-plasmic-name={"item11"}
+                    data-plasmic-override={overrides.item11}
+                    className={classNames("all", sty.item11)}
+                  >
+                    <div
+                      data-plasmic-name={"icon9"}
+                      data-plasmic-override={overrides.icon9}
+                      className={classNames("all", sty.icon9)}
+                    >
+                      <PlasmicImg__
+                        alt={""}
+                        className={classNames(sty.img__abEtg)}
+                        displayHeight={"auto"}
+                        displayMaxHeight={"none"}
+                        displayMaxWidth={"100%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"auto"}
+                        loading={"lazy"}
+                        src={{
+                          src: "/plasmic/sterling_and_buena_vista_foods/images/cookiePng.png",
+                          fullWidth: 67,
+                          fullHeight: 67,
+                          aspectRatio: undefined
+                        }}
+                      />
+                    </div>
+                    <div
+                      data-plasmic-name={"text13"}
+                      data-plasmic-override={overrides.text13}
+                      className={classNames("all", sty.text13)}
+                    >
+                      <div
+                        className={classNames(
+                          "all",
+                          "__wab_text",
+                          sty.text__taK2W
+                        )}
+                      >
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return $q.aboutUs.data.body.data.pageBy
+                                .pageContent.headlineParent[3].headlinechild[2]
+                                .headlinefav;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "Collaborative \nPartnership";
+                              }
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
+                      </div>
+                      <div
+                        className={classNames(
+                          "all",
+                          "__wab_text",
+                          sty.text__nZ0Qt
+                        )}
+                      >
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return $q.aboutUs.data.body.data.pageBy
+                                .pageContent.headlineParent[3].headlinechild[2]
+                                .headlinenormal;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "The agility and responsiveness of a smaller company backed by extensive capabilities.";
+                              }
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              data-plasmic-name={"aboutUsSection3"}
+              data-plasmic-override={overrides.aboutUsSection3}
+              className={classNames("all", sty.aboutUsSection3)}
+            >
+              <div
+                data-plasmic-name={"wrapper2"}
+                data-plasmic-override={overrides.wrapper2}
+                className={classNames("all", sty.wrapper2)}
+              >
+                <div
+                  data-plasmic-name={"texts"}
+                  data-plasmic-override={overrides.texts}
+                  className={classNames("all", sty.texts)}
+                >
+                  <div
+                    className={classNames(
+                      "all",
+                      "__wab_text",
+                      sty.text___35Tun
+                    )}
+                  >
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $q.aboutUs.data.body.data.pageBy.pageContent
+                            .textArea[5].text;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "Mission & Values";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
+                  </div>
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__fgSL)}
+                  >
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $q.aboutUs.data.body.data.pageBy.pageContent
+                            .textArea[6].text;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "At Sterling Foods, our mission goes beyond delivering great products.  We are passionate about building trusted partnerships with our customers through exceptional service, collaboration, and support, with a steadfast commitment to quality, safety, consistency, and technical innovation.";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
+                  </div>
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__pS7J4)}
+                  >
+                    <React.Fragment>
+                      <React.Fragment>{""}</React.Fragment>
+                      {
+                        <h5
+                          data-plasmic-name={"h5"}
+                          data-plasmic-override={overrides.h5}
+                          className={classNames(
+                            "all",
+                            "h5",
+                            "h5__uyaK1",
+                            "__wab_text",
+                            sty.h5
+                          )}
+                        >
+                          {"Our Values\n\n\r"}
+                        </h5>
+                      }
+                      <React.Fragment>{"\u2022 "}</React.Fragment>
+                      <span
+                        className={
+                          "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
+                        }
+                        style={{ fontWeight: 700 }}
+                      >
+                        {" Safety First"}
+                      </span>
+                      <React.Fragment>
+                        {
+                          ": protecting our people and the food we create.\r\n\u2022"
+                        }
+                      </React.Fragment>
+                      <span
+                        className={
+                          "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
+                        }
+                        style={{ fontWeight: 700 }}
+                      >
+                        {"  Purpose-driven:"}
+                      </span>
+                      <React.Fragment>
+                        {
+                          " doing right by our people, our communities, and the environment \r\n\u2022"
+                        }
+                      </React.Fragment>
+                      <span
+                        className={
+                          "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
+                        }
+                        style={{ fontWeight: 700 }}
+                      >
+                        {"  Trustworthy and Ethical: "}
+                      </span>
+                      <React.Fragment>
+                        {
+                          "conducting ourselves with integrity, respect, transparency and accountability\r\n\u2022"
+                        }
+                      </React.Fragment>
+                      <span
+                        className={
+                          "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
+                        }
+                        style={{ fontWeight: 700 }}
+                      >
+                        {"  Collaborative:"}
+                      </span>
+                      <React.Fragment>
+                        {" fostering a teamwork-driven culture\r\n\u2022 "}
+                      </React.Fragment>
+                      <span
+                        className={
+                          "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
+                        }
+                        style={{ fontWeight: 700 }}
+                      >
+                        {" Exceptional Execution:"}
+                      </span>
+                      <React.Fragment>
+                        {
+                          " executing with excellence and embracing flexibility \r\n"
+                        }
+                      </React.Fragment>
+                      <span
+                        className={
+                          "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
+                        }
+                        style={{ fontWeight: 700 }}
+                      >
+                        {"\u2022  Customer-focused:"}
+                      </span>
+                      <React.Fragment>
+                        {
+                          " building trusted, long-term partnerships, and putting our customers at the center of everything we do."
+                        }
+                      </React.Fragment>
+                    </React.Fragment>
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"images"}
+                  data-plasmic-override={overrides.images}
+                  className={classNames("all", sty.images)}
+                >
+                  <div
+                    data-plasmic-name={"item7"}
+                    data-plasmic-override={overrides.item7}
+                    className={classNames("all", sty.item7)}
+                  >
+                    <PlasmicImg__
+                      alt={""}
+                      className={classNames(sty.img__uE9Le)}
+                      displayHeight={"auto"}
+                      displayMaxHeight={"none"}
+                      displayMaxWidth={"100%"}
+                      displayMinHeight={"0"}
+                      displayMinWidth={"0"}
+                      displayWidth={"auto"}
+                      loading={"lazy"}
+                      src={{
+                        src: "/plasmic/sterling_and_buena_vista_foods/images/image1Png.png",
+                        fullWidth: 596,
+                        fullHeight: 454,
+                        aspectRatio: undefined
+                      }}
+                    />
+                  </div>
+                  <div
+                    data-plasmic-name={"item8"}
+                    data-plasmic-override={overrides.item8}
+                    className={classNames("all", sty.item8)}
+                  >
+                    <PlasmicImg__
+                      alt={""}
+                      className={classNames(sty.img__tGkaT)}
+                      displayHeight={"auto"}
+                      displayMaxHeight={"none"}
+                      displayMaxWidth={"100%"}
+                      displayMinHeight={"0"}
+                      displayMinWidth={"0"}
+                      displayWidth={"auto"}
+                      loading={"lazy"}
+                      src={{
+                        src: "/plasmic/sterling_and_buena_vista_foods/images/image2Png.png",
+                        fullWidth: 284,
+                        fullHeight: 272,
+                        aspectRatio: undefined
+                      }}
+                    />
+
+                    <PlasmicImg__
+                      alt={""}
+                      className={classNames(sty.img__vnq1I)}
+                      displayHeight={"auto"}
+                      displayMaxHeight={"none"}
+                      displayMaxWidth={"100%"}
+                      displayMinHeight={"0"}
+                      displayMinWidth={"0"}
+                      displayWidth={"auto"}
+                      loading={"lazy"}
+                      src={{
+                        src: "/plasmic/sterling_and_buena_vista_foods/images/image3Png.png",
+                        fullWidth: 284,
+                        fullHeight: 272,
+                        aspectRatio: undefined
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              data-plasmic-name={"aboutUsSection5"}
+              data-plasmic-override={overrides.aboutUsSection5}
+              className={classNames("all", sty.aboutUsSection5)}
+            >
+              <div
+                data-plasmic-name={"rectangle"}
+                data-plasmic-override={overrides.rectangle}
+                className={classNames("all", sty.rectangle)}
+              >
+                <div
+                  data-plasmic-name={"heading3"}
+                  data-plasmic-override={overrides.heading3}
+                  className={classNames("all", sty.heading3)}
+                >
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__cIteS)}
+                  >
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $q.aboutUs.data.body.data.pageBy.pageContent
+                            .headlineParent[4].headlinechild[0].headlinenormal;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "Creating Impact";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
+                  </div>
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__xZRcQ)}
+                  >
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $q.aboutUs.data.body.data.pageBy.pageContent
+                            .headlineParent[4].headlinechild[0].headlinefav;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "Beyond the Bakery";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
+                  </div>
+                </div>
+                <div
+                  className={classNames("all", "__wab_text", sty.text__cie5)}
+                >
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $q.aboutUs.data.body.data.pageBy.pageContent
+                          .textArea[7].text;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "Sterling Foods is committed to doing what\u2019s right for our employees, customers, communities, and the environment \u2013 acting as thoughtful stewards of all we impact.";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
+                </div>
+                <div
+                  className={classNames("all", "__wab_text", sty.text__lNigi)}
+                >
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $q.aboutUs.data.body.data.pageBy.pageContent
+                          .textArea[8].text;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "As a purpose-driven organization, we believe business success is about more than products. Through responsible growth, strong partnerships, and meaningful investments in people and communities, we strive to create lasting impact both inside and outside our organization.";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
+                </div>
+                <div
+                  data-plasmic-name={"section"}
+                  data-plasmic-override={overrides.section}
+                  className={classNames("all", sty.section)}
+                >
+                  <PlasmicImg__
+                    alt={"Sterling Food"}
+                    className={classNames(sty.img__ypwQh)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={
+                      hasVariant(globalVariants, "screen", "tablet")
+                        ? "300px"
+                        : "none"
                     }
-                    <React.Fragment>{"\u2022 "}</React.Fragment>
-                    <span
-                      className={
-                        "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
-                      }
-                      style={{ fontWeight: 700 }}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/sterling_and_buena_vista_foods/images/image4Png.png",
+                      fullWidth: 307,
+                      fullHeight: 236,
+                      aspectRatio: undefined
+                    }}
+                  />
+
+                  <div
+                    data-plasmic-name={"text8"}
+                    data-plasmic-override={overrides.text8}
+                    className={classNames("all", sty.text8)}
+                  >
+                    <h1
+                      className={classNames(
+                        "all",
+                        "h1",
+                        "h1__uyaK1",
+                        "__wab_text",
+                        sty.h1__iJl7G
+                      )}
                     >
-                      {" Safety First"}
-                    </span>
-                    <React.Fragment>
-                      {
-                        ": protecting our people and the food we create.\r\n\u2022"
-                      }
-                    </React.Fragment>
-                    <span
-                      className={
-                        "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
-                      }
-                      style={{ fontWeight: 700 }}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.aboutUs.data.body.data.pageBy.pageContent
+                              .headlineParent[5].headlinechild[0].headlinefav;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "Sustainability";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
+                    </h1>
+                    <div
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text__td0Lu
+                      )}
                     >
-                      {"  Purpose-driven:"}
-                    </span>
-                    <React.Fragment>
-                      {
-                        " doing right by our people, our communities, and the environment \r\n\u2022"
-                      }
-                    </React.Fragment>
-                    <span
-                      className={
-                        "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
-                      }
-                      style={{ fontWeight: 700 }}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.aboutUs.data.body.data.pageBy.pageContent
+                              .textArea[9].text;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "We continually seek opportunities to support responsible business practices,\nimprove operational efficiency, and leverage our supplier network to source ingredients responsibly.";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"section2"}
+                  data-plasmic-override={overrides.section2}
+                  className={classNames("all", sty.section2)}
+                >
+                  <PlasmicImg__
+                    alt={"Sterling Food"}
+                    className={classNames(sty.img__tMwd)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={
+                      hasVariant(globalVariants, "screen", "tablet")
+                        ? "300px"
+                        : "none"
+                    }
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/sterling_and_buena_vista_foods/images/image6Png.png",
+                      fullWidth: 307,
+                      fullHeight: 236,
+                      aspectRatio: undefined
+                    }}
+                  />
+
+                  <div
+                    data-plasmic-name={"text9"}
+                    data-plasmic-override={overrides.text9}
+                    className={classNames("all", sty.text9)}
+                  >
+                    <h1
+                      className={classNames(
+                        "all",
+                        "h1",
+                        "h1__uyaK1",
+                        "__wab_text",
+                        sty.h1__je9Us
+                      )}
                     >
-                      {"  Trustworthy and Ethical: "}
-                    </span>
-                    <React.Fragment>
-                      {
-                        "conducting ourselves with integrity, respect, transparency and accountability\r\n\u2022"
-                      }
-                    </React.Fragment>
-                    <span
-                      className={
-                        "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
-                      }
-                      style={{ fontWeight: 700 }}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.aboutUs.data.body.data.pageBy.pageContent
+                              .headlineParent[5].headlinechild[1].headlinefav;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "Community Engagement";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
+                    </h1>
+                    <div
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text___11O
+                      )}
                     >
-                      {"  Collaborative:"}
-                    </span>
-                    <React.Fragment>
-                      {" fostering a teamwork-driven culture\r\n\u2022 "}
-                    </React.Fragment>
-                    <span
-                      className={
-                        "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
-                      }
-                      style={{ fontWeight: 700 }}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.aboutUs.data.body.data.pageBy.pageContent
+                              .textArea[10].text;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "We believe strong companies help build strong communities and meaningful connections. As such, our associates actively engage with and support a variety of charitable causes within the local communities where we operate.";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"section3"}
+                  data-plasmic-override={overrides.section3}
+                  className={classNames("all", sty.section3)}
+                >
+                  <PlasmicImg__
+                    alt={"Sterling Food"}
+                    className={classNames(sty.img__sDqTh)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={
+                      hasVariant(globalVariants, "screen", "tablet")
+                        ? "300px"
+                        : "none"
+                    }
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/sterling_and_buena_vista_foods/images/image7Png.png",
+                      fullWidth: 307,
+                      fullHeight: 236,
+                      aspectRatio: undefined
+                    }}
+                  />
+
+                  <div
+                    data-plasmic-name={"text10"}
+                    data-plasmic-override={overrides.text10}
+                    className={classNames("all", sty.text10)}
+                  >
+                    <h1
+                      className={classNames(
+                        "all",
+                        "h1",
+                        "h1__uyaK1",
+                        "__wab_text",
+                        sty.h1__buMCa
+                      )}
                     >
-                      {" Exceptional Execution:"}
-                    </span>
-                    <React.Fragment>
-                      {
-                        " executing with excellence and embracing flexibility \r\n"
-                      }
-                    </React.Fragment>
-                    <span
-                      className={
-                        "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
-                      }
-                      style={{ fontWeight: 700 }}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.aboutUs.data.body.data.pageBy.pageContent
+                              .headlineParent[5].headlinechild[2].headlinefav;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "Partnerships & Giving Back";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
+                    </h1>
+                    <div
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text___2FRgU
+                      )}
                     >
-                      {"\u2022  Customer-focused:"}
-                    </span>
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.aboutUs.data.body.data.pageBy.pageContent
+                              .textArea[11].text;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "We\u2019re committed to building relationships that create positive impact beyond our business. Through trusted partnerships with suppliers, enrichment programs for our associates, and support for the communities we serve, we foster a culture of collaboration, integrity, and shared success.";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              data-plasmic-name={"aboutUsSection4"}
+              data-plasmic-override={overrides.aboutUsSection4}
+              className={classNames("all", sty.aboutUsSection4)}
+            >
+              <div
+                data-plasmic-name={"wrapper3"}
+                data-plasmic-override={overrides.wrapper3}
+                className={classNames("all", sty.wrapper3)}
+              >
+                <div className={classNames("all", sty.freeBox__iFRqM)}>
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__ccudt)}
+                  >
                     <React.Fragment>
-                      {
-                        " building trusted, long-term partnerships, and putting our customers at the center of everything we do."
-                      }
+                      {(() => {
+                        try {
+                          return $q.aboutUs.data.body.data.pageBy.pageContent
+                            .headlineParent[6].headlinechild[0].headlinenormal;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "Delivering Excellence";
+                          }
+                          throw e;
+                        }
+                      })()}
                     </React.Fragment>
+                  </div>
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__a1UKq)}
+                  >
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $q.aboutUs.data.body.data.pageBy.pageContent
+                            .headlineParent[6].headlinechild[0].headlinefav;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "Across Every Facility";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
+                  </div>
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__aLer5)}
+                  >
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $q.aboutUs.data.body.data.pageBy.pageContent
+                            .textArea[12].text;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "Our vast network of facilities features redundant capabilities, providing customers with the added comfort of assured supply.  Every Sterling Foods facility is strongly committed to quality, food safety, innovation, and customer partnership. Collectively, our network provides the manufacturing bandwidth and operational flexibility to support our customers\u2019 growth.";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
+                  </div>
+                  <PrimaryBtn
+                    data-plasmic-name={"primaryBtn"}
+                    data-plasmic-override={overrides.primaryBtn}
+                    className={classNames("__wab_instance", sty.primaryBtn)}
+                  >
+                    {"Explore Our Facilities"}
+                  </PrimaryBtn>
+                </div>
+                <div className={classNames("all", sty.freeBox__lYw9D)} />
+              </div>
+            </div>
+            <div
+              data-plasmic-name={"aboutUsSection6"}
+              data-plasmic-override={overrides.aboutUsSection6}
+              className={classNames("all", sty.aboutUsSection6)}
+            >
+              <div
+                data-plasmic-name={"heading4"}
+                data-plasmic-override={overrides.heading4}
+                className={classNames("all", sty.heading4)}
+              >
+                <div
+                  className={classNames("all", "__wab_text", sty.text__uUDw)}
+                >
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $q.aboutUs.data.body.data.pageBy.pageContent
+                          .headlineParent[7].headlinechild[0].headlinefav;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "Meet Our";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
+                </div>
+                <div
+                  className={classNames("all", "__wab_text", sty.text__t8J0T)}
+                >
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $q.aboutUs.data.body.data.pageBy.pageContent
+                          .headlineParent[7].headlinechild[0].headlinenormal;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "Leadership";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
+                </div>
+                <div
+                  className={classNames("all", "__wab_text", sty.text__bnCbi)}
+                >
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $q.aboutUs.data.body.data.pageBy.pageContent
+                          .headlineParent[7].headlinechild[1].headlinefav;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "Team";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
+                </div>
+                <div
+                  className={classNames("all", "__wab_text", sty.text__zwfc5)}
+                >
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $q.aboutUs.data.body.data.pageBy.pageContent
+                          .textArea[13].text;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "Behind Sterling Foods is a team committed to innovation, long-term growth, and building strong customer partnerships.";
+                        }
+                        throw e;
+                      }
+                    })()}
                   </React.Fragment>
                 </div>
               </div>
               <div
-                data-plasmic-name={"images"}
-                data-plasmic-override={overrides.images}
-                className={classNames("all", sty.images)}
+                data-plasmic-name={"row"}
+                data-plasmic-override={overrides.row}
+                className={classNames("all", sty.row)}
               >
                 <div
-                  data-plasmic-name={"item7"}
-                  data-plasmic-override={overrides.item7}
-                  className={classNames("all", sty.item7)}
+                  data-plasmic-name={"profile"}
+                  data-plasmic-override={overrides.profile}
+                  className={classNames("all", sty.profile)}
                 >
                   <PlasmicImg__
-                    alt={""}
-                    className={classNames(sty.img__uE9Le)}
+                    alt={"Kelly Crouse CEO"}
+                    className={classNames(sty.img__javmH)}
                     displayHeight={"auto"}
                     displayMaxHeight={"none"}
                     displayMaxWidth={"100%"}
@@ -1421,21 +2049,46 @@ function PlasmicAboutUs__RenderFunc(props: {
                     displayWidth={"auto"}
                     loading={"lazy"}
                     src={{
-                      src: "/plasmic/sterling_and_buena_vista_foods/images/image1Png.png",
-                      fullWidth: 596,
-                      fullHeight: 454,
+                      src: "/plasmic/sterling_and_buena_vista_foods/images/kellyCrousePng.png",
+                      fullWidth: 266,
+                      fullHeight: 329,
                       aspectRatio: undefined
                     }}
                   />
+
+                  <div
+                    data-plasmic-name={"text14"}
+                    data-plasmic-override={overrides.text14}
+                    className={classNames("all", sty.text14)}
+                  >
+                    <div
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text___3WHr
+                      )}
+                    >
+                      {"Kelly Crouse"}
+                    </div>
+                    <div
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text___6Rclh
+                      )}
+                    >
+                      {"Chief Executive Officer"}
+                    </div>
+                  </div>
                 </div>
                 <div
-                  data-plasmic-name={"item8"}
-                  data-plasmic-override={overrides.item8}
-                  className={classNames("all", sty.item8)}
+                  data-plasmic-name={"profile2"}
+                  data-plasmic-override={overrides.profile2}
+                  className={classNames("all", sty.profile2)}
                 >
                   <PlasmicImg__
-                    alt={""}
-                    className={classNames(sty.img__tGkaT)}
+                    alt={"Chad Sim COO"}
+                    className={classNames(sty.img__lw9VY)}
                     displayHeight={"auto"}
                     displayMaxHeight={"none"}
                     displayMaxWidth={"100%"}
@@ -1444,16 +2097,46 @@ function PlasmicAboutUs__RenderFunc(props: {
                     displayWidth={"auto"}
                     loading={"lazy"}
                     src={{
-                      src: "/plasmic/sterling_and_buena_vista_foods/images/image2Png.png",
-                      fullWidth: 284,
-                      fullHeight: 272,
+                      src: "/plasmic/sterling_and_buena_vista_foods/images/jImPng.png",
+                      fullWidth: 266,
+                      fullHeight: 329,
                       aspectRatio: undefined
                     }}
                   />
 
+                  <div
+                    data-plasmic-name={"text15"}
+                    data-plasmic-override={overrides.text15}
+                    className={classNames("all", sty.text15)}
+                  >
+                    <div
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text___8Bwyc
+                      )}
+                    >
+                      {"Chad Sim"}
+                    </div>
+                    <div
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text__wdtz1
+                      )}
+                    >
+                      {"Chief Operating Officer"}
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"profile3"}
+                  data-plasmic-override={overrides.profile3}
+                  className={classNames("all", sty.profile3)}
+                >
                   <PlasmicImg__
-                    alt={""}
-                    className={classNames(sty.img__vnq1I)}
+                    alt={"Jim Nattier CFO"}
+                    className={classNames(sty.img___1FOvp)}
                     displayHeight={"auto"}
                     displayMaxHeight={"none"}
                     displayMaxWidth={"100%"}
@@ -1462,1486 +2145,913 @@ function PlasmicAboutUs__RenderFunc(props: {
                     displayWidth={"auto"}
                     loading={"lazy"}
                     src={{
-                      src: "/plasmic/sterling_and_buena_vista_foods/images/image3Png.png",
-                      fullWidth: 284,
-                      fullHeight: 272,
+                      src: "/plasmic/sterling_and_buena_vista_foods/images/danPng.png",
+                      fullWidth: 266,
+                      fullHeight: 329,
                       aspectRatio: undefined
                     }}
                   />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            data-plasmic-name={"aboutUsSection5"}
-            data-plasmic-override={overrides.aboutUsSection5}
-            className={classNames("all", sty.aboutUsSection5)}
-          >
-            <div
-              data-plasmic-name={"rectangle"}
-              data-plasmic-override={overrides.rectangle}
-              className={classNames("all", sty.rectangle)}
-            >
-              <div
-                data-plasmic-name={"heading3"}
-                data-plasmic-override={overrides.heading3}
-                className={classNames("all", sty.heading3)}
-              >
-                <div
-                  className={classNames("all", "__wab_text", sty.text__cIteS)}
-                >
-                  <React.Fragment>
-                    {(() => {
-                      try {
-                        return $q.aboutUs.data.body.data.pageBy.pageContent
-                          .headlineParent[4].headlinechild[0].headlinenormal;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return "Creating Impact";
-                        }
-                        throw e;
-                      }
-                    })()}
-                  </React.Fragment>
-                </div>
-                <div
-                  className={classNames("all", "__wab_text", sty.text__xZRcQ)}
-                >
-                  <React.Fragment>
-                    {(() => {
-                      try {
-                        return $q.aboutUs.data.body.data.pageBy.pageContent
-                          .headlineParent[4].headlinechild[0].headlinefav;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return "Beyond the Bakery";
-                        }
-                        throw e;
-                      }
-                    })()}
-                  </React.Fragment>
-                </div>
-              </div>
-              <div className={classNames("all", "__wab_text", sty.text__cie5)}>
-                <React.Fragment>
-                  {(() => {
-                    try {
-                      return $q.aboutUs.data.body.data.pageBy.pageContent
-                        .textArea[7].text;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return "Sterling Foods is committed to doing what\u2019s right for our employees, customers, communities, and the environment \u2013 acting as thoughtful stewards of all we impact.";
-                      }
-                      throw e;
-                    }
-                  })()}
-                </React.Fragment>
-              </div>
-              <div className={classNames("all", "__wab_text", sty.text__lNigi)}>
-                <React.Fragment>
-                  {(() => {
-                    try {
-                      return $q.aboutUs.data.body.data.pageBy.pageContent
-                        .textArea[8].text;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return "As a purpose-driven organization, we believe business success is about more than products. Through responsible growth, strong partnerships, and meaningful investments in people and communities, we strive to create lasting impact both inside and outside our organization.";
-                      }
-                      throw e;
-                    }
-                  })()}
-                </React.Fragment>
-              </div>
-              <div
-                data-plasmic-name={"section"}
-                data-plasmic-override={overrides.section}
-                className={classNames("all", sty.section)}
-              >
-                <PlasmicImg__
-                  alt={"Sterling Food"}
-                  className={classNames(sty.img__ypwQh)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={
-                    hasVariant(globalVariants, "screen", "tablet")
-                      ? "300px"
-                      : "none"
-                  }
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/sterling_and_buena_vista_foods/images/image4Png.png",
-                    fullWidth: 307,
-                    fullHeight: 236,
-                    aspectRatio: undefined
-                  }}
-                />
 
-                <div
-                  data-plasmic-name={"text8"}
-                  data-plasmic-override={overrides.text8}
-                  className={classNames("all", sty.text8)}
-                >
-                  <h1
-                    className={classNames(
-                      "all",
-                      "h1",
-                      "h1__uyaK1",
-                      "__wab_text",
-                      sty.h1__iJl7G
-                    )}
-                  >
-                    <React.Fragment>
-                      {(() => {
-                        try {
-                          return $q.aboutUs.data.body.data.pageBy.pageContent
-                            .headlineParent[5].headlinechild[0].headlinefav;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return "Sustainability";
-                          }
-                          throw e;
-                        }
-                      })()}
-                    </React.Fragment>
-                  </h1>
                   <div
-                    className={classNames("all", "__wab_text", sty.text__td0Lu)}
-                  >
-                    <React.Fragment>
-                      {(() => {
-                        try {
-                          return $q.aboutUs.data.body.data.pageBy.pageContent
-                            .textArea[9].text;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return "We continually seek opportunities to support responsible business practices,\nimprove operational efficiency, and leverage our supplier network to source ingredients responsibly.";
-                          }
-                          throw e;
-                        }
-                      })()}
-                    </React.Fragment>
-                  </div>
-                </div>
-              </div>
-              <div
-                data-plasmic-name={"section2"}
-                data-plasmic-override={overrides.section2}
-                className={classNames("all", sty.section2)}
-              >
-                <PlasmicImg__
-                  alt={"Sterling Food"}
-                  className={classNames(sty.img__tMwd)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={
-                    hasVariant(globalVariants, "screen", "tablet")
-                      ? "300px"
-                      : "none"
-                  }
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/sterling_and_buena_vista_foods/images/image6Png.png",
-                    fullWidth: 307,
-                    fullHeight: 236,
-                    aspectRatio: undefined
-                  }}
-                />
-
-                <div
-                  data-plasmic-name={"text9"}
-                  data-plasmic-override={overrides.text9}
-                  className={classNames("all", sty.text9)}
-                >
-                  <h1
-                    className={classNames(
-                      "all",
-                      "h1",
-                      "h1__uyaK1",
-                      "__wab_text",
-                      sty.h1__je9Us
-                    )}
-                  >
-                    <React.Fragment>
-                      {(() => {
-                        try {
-                          return $q.aboutUs.data.body.data.pageBy.pageContent
-                            .headlineParent[5].headlinechild[1].headlinefav;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return "Community Engagement";
-                          }
-                          throw e;
-                        }
-                      })()}
-                    </React.Fragment>
-                  </h1>
-                  <div
-                    className={classNames("all", "__wab_text", sty.text___11O)}
-                  >
-                    <React.Fragment>
-                      {(() => {
-                        try {
-                          return $q.aboutUs.data.body.data.pageBy.pageContent
-                            .textArea[10].text;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return "We believe strong companies help build strong communities and meaningful connections. As such, our associates actively engage with and support a variety of charitable causes within the local communities where we operate.";
-                          }
-                          throw e;
-                        }
-                      })()}
-                    </React.Fragment>
-                  </div>
-                </div>
-              </div>
-              <div
-                data-plasmic-name={"section3"}
-                data-plasmic-override={overrides.section3}
-                className={classNames("all", sty.section3)}
-              >
-                <PlasmicImg__
-                  alt={"Sterling Food"}
-                  className={classNames(sty.img__sDqTh)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={
-                    hasVariant(globalVariants, "screen", "tablet")
-                      ? "300px"
-                      : "none"
-                  }
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/sterling_and_buena_vista_foods/images/image7Png.png",
-                    fullWidth: 307,
-                    fullHeight: 236,
-                    aspectRatio: undefined
-                  }}
-                />
-
-                <div
-                  data-plasmic-name={"text10"}
-                  data-plasmic-override={overrides.text10}
-                  className={classNames("all", sty.text10)}
-                >
-                  <h1
-                    className={classNames(
-                      "all",
-                      "h1",
-                      "h1__uyaK1",
-                      "__wab_text",
-                      sty.h1__buMCa
-                    )}
-                  >
-                    <React.Fragment>
-                      {(() => {
-                        try {
-                          return $q.aboutUs.data.body.data.pageBy.pageContent
-                            .headlineParent[5].headlinechild[2].headlinefav;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return "Partnerships & Giving Back";
-                          }
-                          throw e;
-                        }
-                      })()}
-                    </React.Fragment>
-                  </h1>
-                  <div
-                    className={classNames(
-                      "all",
-                      "__wab_text",
-                      sty.text___2FRgU
-                    )}
-                  >
-                    <React.Fragment>
-                      {(() => {
-                        try {
-                          return $q.aboutUs.data.body.data.pageBy.pageContent
-                            .textArea[11].text;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return "We\u2019re committed to building relationships that create positive impact beyond our business. Through trusted partnerships with suppliers, enrichment programs for our associates, and support for the communities we serve, we foster a culture of collaboration, integrity, and shared success.";
-                          }
-                          throw e;
-                        }
-                      })()}
-                    </React.Fragment>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            data-plasmic-name={"aboutUsSection4"}
-            data-plasmic-override={overrides.aboutUsSection4}
-            className={classNames("all", sty.aboutUsSection4)}
-          >
-            <div
-              data-plasmic-name={"wrapper3"}
-              data-plasmic-override={overrides.wrapper3}
-              className={classNames("all", sty.wrapper3)}
-            >
-              <div className={classNames("all", sty.freeBox__iFRqM)}>
-                <div
-                  className={classNames("all", "__wab_text", sty.text__ccudt)}
-                >
-                  <React.Fragment>
-                    {(() => {
-                      try {
-                        return $q.aboutUs.data.body.data.pageBy.pageContent
-                          .headlineParent[6].headlinechild[0].headlinenormal;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return "Delivering Excellence";
-                        }
-                        throw e;
-                      }
-                    })()}
-                  </React.Fragment>
-                </div>
-                <div
-                  className={classNames("all", "__wab_text", sty.text__a1UKq)}
-                >
-                  <React.Fragment>
-                    {(() => {
-                      try {
-                        return $q.aboutUs.data.body.data.pageBy.pageContent
-                          .headlineParent[6].headlinechild[0].headlinefav;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return "Across Every Facility";
-                        }
-                        throw e;
-                      }
-                    })()}
-                  </React.Fragment>
-                </div>
-                <div
-                  className={classNames("all", "__wab_text", sty.text__aLer5)}
-                >
-                  <React.Fragment>
-                    {(() => {
-                      try {
-                        return $q.aboutUs.data.body.data.pageBy.pageContent
-                          .textArea[12].text;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return "Our vast network of facilities features redundant capabilities, providing customers with the added comfort of assured supply.  Every Sterling Foods facility is strongly committed to quality, food safety, innovation, and customer partnership. Collectively, our network provides the manufacturing bandwidth and operational flexibility to support our customers\u2019 growth.";
-                        }
-                        throw e;
-                      }
-                    })()}
-                  </React.Fragment>
-                </div>
-                <PrimaryBtn
-                  data-plasmic-name={"primaryBtn"}
-                  data-plasmic-override={overrides.primaryBtn}
-                  className={classNames("__wab_instance", sty.primaryBtn)}
-                >
-                  {"Explore Our Facilities"}
-                </PrimaryBtn>
-              </div>
-              <div className={classNames("all", sty.freeBox__lYw9D)} />
-            </div>
-          </div>
-          <div
-            data-plasmic-name={"aboutUsSection6"}
-            data-plasmic-override={overrides.aboutUsSection6}
-            className={classNames("all", sty.aboutUsSection6)}
-          >
-            <div
-              data-plasmic-name={"heading4"}
-              data-plasmic-override={overrides.heading4}
-              className={classNames("all", sty.heading4)}
-            >
-              <div className={classNames("all", "__wab_text", sty.text__uUDw)}>
-                <React.Fragment>
-                  {(() => {
-                    try {
-                      return $q.aboutUs.data.body.data.pageBy.pageContent
-                        .headlineParent[7].headlinechild[0].headlinefav;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return "Meet Our";
-                      }
-                      throw e;
-                    }
-                  })()}
-                </React.Fragment>
-              </div>
-              <div className={classNames("all", "__wab_text", sty.text__t8J0T)}>
-                <React.Fragment>
-                  {(() => {
-                    try {
-                      return $q.aboutUs.data.body.data.pageBy.pageContent
-                        .headlineParent[7].headlinechild[0].headlinenormal;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return "Leadership";
-                      }
-                      throw e;
-                    }
-                  })()}
-                </React.Fragment>
-              </div>
-              <div className={classNames("all", "__wab_text", sty.text__bnCbi)}>
-                <React.Fragment>
-                  {(() => {
-                    try {
-                      return $q.aboutUs.data.body.data.pageBy.pageContent
-                        .headlineParent[7].headlinechild[1].headlinefav;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return "Team";
-                      }
-                      throw e;
-                    }
-                  })()}
-                </React.Fragment>
-              </div>
-              <div className={classNames("all", "__wab_text", sty.text__zwfc5)}>
-                <React.Fragment>
-                  {(() => {
-                    try {
-                      return $q.aboutUs.data.body.data.pageBy.pageContent
-                        .textArea[13].text;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return "Behind Sterling Foods is a team committed to innovation, long-term growth, and building strong customer partnerships.";
-                      }
-                      throw e;
-                    }
-                  })()}
-                </React.Fragment>
-              </div>
-            </div>
-            <div
-              data-plasmic-name={"row"}
-              data-plasmic-override={overrides.row}
-              className={classNames("all", sty.row)}
-            >
-              <div
-                data-plasmic-name={"profile"}
-                data-plasmic-override={overrides.profile}
-                className={classNames("all", sty.profile)}
-              >
-                <PlasmicImg__
-                  alt={"Kelly Crouse CEO"}
-                  className={classNames(sty.img__javmH)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/sterling_and_buena_vista_foods/images/kellyCrousePng.png",
-                    fullWidth: 266,
-                    fullHeight: 329,
-                    aspectRatio: undefined
-                  }}
-                />
-
-                <div
-                  data-plasmic-name={"text14"}
-                  data-plasmic-override={overrides.text14}
-                  className={classNames("all", sty.text14)}
-                >
-                  <div
-                    className={classNames("all", "__wab_text", sty.text___3WHr)}
-                  >
-                    {"Kelly Crouse"}
-                  </div>
-                  <div
-                    className={classNames(
-                      "all",
-                      "__wab_text",
-                      sty.text___6Rclh
-                    )}
-                  >
-                    {"Chief Executive Officer"}
-                  </div>
-                </div>
-              </div>
-              <div
-                data-plasmic-name={"profile2"}
-                data-plasmic-override={overrides.profile2}
-                className={classNames("all", sty.profile2)}
-              >
-                <PlasmicImg__
-                  alt={"Chad Sim COO"}
-                  className={classNames(sty.img__lw9VY)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/sterling_and_buena_vista_foods/images/jImPng.png",
-                    fullWidth: 266,
-                    fullHeight: 329,
-                    aspectRatio: undefined
-                  }}
-                />
-
-                <div
-                  data-plasmic-name={"text15"}
-                  data-plasmic-override={overrides.text15}
-                  className={classNames("all", sty.text15)}
-                >
-                  <div
-                    className={classNames(
-                      "all",
-                      "__wab_text",
-                      sty.text___8Bwyc
-                    )}
-                  >
-                    {"Chad Sim"}
-                  </div>
-                  <div
-                    className={classNames("all", "__wab_text", sty.text__wdtz1)}
-                  >
-                    {"Chief Operating Officer"}
-                  </div>
-                </div>
-              </div>
-              <div
-                data-plasmic-name={"profile3"}
-                data-plasmic-override={overrides.profile3}
-                className={classNames("all", sty.profile3)}
-              >
-                <PlasmicImg__
-                  alt={"Jim Nattier CFO"}
-                  className={classNames(sty.img___1FOvp)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/sterling_and_buena_vista_foods/images/danPng.png",
-                    fullWidth: 266,
-                    fullHeight: 329,
-                    aspectRatio: undefined
-                  }}
-                />
-
-                <div
-                  data-plasmic-name={"text16"}
-                  data-plasmic-override={overrides.text16}
-                  className={classNames("all", sty.text16)}
-                >
-                  <div
-                    className={classNames("all", "__wab_text", sty.text__jfSaQ)}
-                  >
-                    {"Jim Nattier"}
-                  </div>
-                  <div
-                    className={classNames("all", "__wab_text", sty.text__nihjw)}
-                  >
-                    {"Chief Financial Officer"}
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              data-plasmic-name={"row2"}
-              data-plasmic-override={overrides.row2}
-              className={classNames("all", sty.row2)}
-            >
-              <div
-                data-plasmic-name={"profile4"}
-                data-plasmic-override={overrides.profile4}
-                className={classNames("all", sty.profile4)}
-              >
-                <PlasmicImg__
-                  alt={"Kelly Crouse CEO"}
-                  className={classNames(sty.img___2T2O)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/sterling_and_buena_vista_foods/images/elvaPng.png",
-                    fullWidth: 266,
-                    fullHeight: 329,
-                    aspectRatio: undefined
-                  }}
-                />
-
-                <div
-                  data-plasmic-name={"text17"}
-                  data-plasmic-override={overrides.text17}
-                  className={classNames("all", sty.text17)}
-                >
-                  <div
-                    className={classNames("all", "__wab_text", sty.text__m2Iew)}
-                  >
-                    {"Elva Charles"}
-                  </div>
-                  <div
-                    className={classNames("all", "__wab_text", sty.text__rjjK2)}
-                  >
-                    {
-                      "Sr. Vice President of Procurement,\r Quality, Government, and Specialty Channels"
-                    }
-                  </div>
-                </div>
-              </div>
-              <div
-                data-plasmic-name={"profile5"}
-                data-plasmic-override={overrides.profile5}
-                className={classNames("all", sty.profile5)}
-              >
-                <PlasmicImg__
-                  alt={"Chad Sim COO"}
-                  className={classNames(sty.img___6P0P0)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/sterling_and_buena_vista_foods/images/lauraPng.png",
-                    fullWidth: 266,
-                    fullHeight: 329,
-                    aspectRatio: undefined
-                  }}
-                />
-
-                <div
-                  data-plasmic-name={"text18"}
-                  data-plasmic-override={overrides.text18}
-                  className={classNames("all", sty.text18)}
-                >
-                  <div
-                    className={classNames("all", "__wab_text", sty.text__rYkaE)}
-                  >
-                    {"Laura Bruno"}
-                  </div>
-                  <div
-                    className={classNames("all", "__wab_text", sty.text__xhdrO)}
-                  >
-                    {"President, Buena Vista Foods Division"}
-                  </div>
-                </div>
-              </div>
-              <div
-                data-plasmic-name={"profile6"}
-                data-plasmic-override={overrides.profile6}
-                className={classNames("all", sty.profile6)}
-              >
-                <PlasmicImg__
-                  alt={"Jim Nattier CFO"}
-                  className={classNames(sty.img__mPQr0)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/sterling_and_buena_vista_foods/images/lizPng.png",
-                    fullWidth: 266,
-                    fullHeight: 329,
-                    aspectRatio: undefined
-                  }}
-                />
-
-                <div
-                  data-plasmic-name={"text19"}
-                  data-plasmic-override={overrides.text19}
-                  className={classNames("all", sty.text19)}
-                >
-                  <div
-                    className={classNames(
-                      "all",
-                      "__wab_text",
-                      sty.text___91Mu2
-                    )}
-                  >
-                    {"Liz Thomas"}
-                  </div>
-                  <div
-                    className={classNames("all", "__wab_text", sty.text__iZlJu)}
-                  >
-                    {"Executive Vice President, National Restaurants Division"}
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              data-plasmic-name={"row3"}
-              data-plasmic-override={overrides.row3}
-              className={classNames("all", sty.row3)}
-            >
-              <div
-                data-plasmic-name={"profile7"}
-                data-plasmic-override={overrides.profile7}
-                className={classNames("all", sty.profile7)}
-              >
-                <PlasmicImg__
-                  alt={"Kelly Crouse CEO"}
-                  className={classNames(sty.img__hFqMs)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/sterling_and_buena_vista_foods/images/dan2Png.png",
-                    fullWidth: 266,
-                    fullHeight: 329,
-                    aspectRatio: undefined
-                  }}
-                />
-
-                <div
-                  data-plasmic-name={"text20"}
-                  data-plasmic-override={overrides.text20}
-                  className={classNames("all", sty.text20)}
-                >
-                  <div
-                    className={classNames("all", "__wab_text", sty.text__ccVvY)}
-                  >
-                    {"Dan Seale"}
-                  </div>
-                  <div
-                    className={classNames("all", "__wab_text", sty.text___1Sb2)}
-                  >
-                    {
-                      "Sr. Vice President of Human Resources and Process Improvement"
-                    }
-                  </div>
-                </div>
-              </div>
-              <div
-                data-plasmic-name={"profile8"}
-                data-plasmic-override={overrides.profile8}
-                className={classNames("all", sty.profile8)}
-              >
-                <PlasmicImg__
-                  alt={"Chad Sim COO"}
-                  className={classNames(sty.img__byInH)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/sterling_and_buena_vista_foods/images/ericPng.png",
-                    fullWidth: 266,
-                    fullHeight: 329,
-                    aspectRatio: undefined
-                  }}
-                />
-
-                <div
-                  data-plasmic-name={"text21"}
-                  data-plasmic-override={overrides.text21}
-                  className={classNames("all", sty.text21)}
-                >
-                  <div
-                    className={classNames("all", "__wab_text", sty.text__yEuQp)}
-                  >
-                    {"Eric Newman"}
-                  </div>
-                  <div
-                    className={classNames("all", "__wab_text", sty.text__l4Gst)}
-                  >
-                    {"Vice President of Corporate Food Safety"}
-                  </div>
-                </div>
-              </div>
-              <div
-                data-plasmic-name={"profile9"}
-                data-plasmic-override={overrides.profile9}
-                className={classNames("all", sty.profile9)}
-              >
-                <PlasmicImg__
-                  alt={"Jim Nattier CFO"}
-                  className={classNames(sty.img__gzTk)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/sterling_and_buena_vista_foods/images/summerPng.png",
-                    fullWidth: 266,
-                    fullHeight: 329,
-                    aspectRatio: undefined
-                  }}
-                />
-
-                <div
-                  data-plasmic-name={"text22"}
-                  data-plasmic-override={overrides.text22}
-                  className={classNames("all", sty.text22)}
-                >
-                  <div
-                    className={classNames("all", "__wab_text", sty.text__jaZ0F)}
-                  >
-                    {"Summer Dedick"}
-                  </div>
-                  <div
-                    className={classNames("all", "__wab_text", sty.text__rnfKl)}
-                  >
-                    {
-                      "Vice President of Product Development & Commercialization"
-                    }
-                  </div>
-                </div>
-              </div>
-            </div>
-            {(() => {
-              const child$Props = {
-                arrows: false,
-                autoplay: true,
-                autoplaySpeed: hasVariant(
-                  globalVariants,
-                  "screen",
-                  "largerMobile"
-                )
-                  ? 5000
-                  : 0,
-                beforeChange: async (...eventArgs: any) => {
-                  generateStateOnChangePropForCodeComponents(
-                    $state,
-                    "currentSlide",
-                    ["sliderCarousel", "currentSlide"],
-                    SliderWrapper_Helpers
-                  ).apply(null, eventArgs);
-                },
-                centerMode: true,
-                centerPadding: hasVariant(
-                  globalVariants,
-                  "screen",
-                  "smallMobile"
-                )
-                  ? "0-px"
-                  : hasVariant(globalVariants, "screen", "largerMobile")
-                    ? "20px"
-                    : "30px",
-                className: classNames("__wab_instance", sty.sliderCarousel),
-                cssEase: "linear",
-                initialSlide: generateStateValueProp($state, [
-                  "sliderCarousel",
-                  "currentSlide"
-                ]),
-                ref: ref => {
-                  $refs["sliderCarousel"] = ref;
-                },
-                sliderScopeClassName: sty["sliderCarousel__slider"],
-                speed: hasVariant(globalVariants, "screen", "largerMobile")
-                  ? 2500
-                  : 5000,
-                swipeToSlide: hasVariant(
-                  globalVariants,
-                  "screen",
-                  "largerMobile"
-                )
-                  ? true
-                  : undefined
-              };
-              initializeCodeComponentStates(
-                $state,
-                [
-                  {
-                    name: "currentSlide",
-                    plasmicStateName: "sliderCarousel.currentSlide"
-                  }
-                ],
-                [],
-                SliderWrapper_Helpers ?? {},
-                child$Props
-              );
-
-              return (
-                <SliderWrapper
-                  data-plasmic-name={"sliderCarousel"}
-                  data-plasmic-override={overrides.sliderCarousel}
-                  {...child$Props}
-                >
-                  <div
-                    data-plasmic-name={"slide"}
-                    data-plasmic-override={overrides.slide}
-                    className={classNames("all", sty.slide)}
+                    data-plasmic-name={"text16"}
+                    data-plasmic-override={overrides.text16}
+                    className={classNames("all", sty.text16)}
                   >
                     <div
-                      data-plasmic-name={"row4"}
-                      data-plasmic-override={overrides.row4}
-                      className={classNames("all", sty.row4)}
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text__jfSaQ
+                      )}
+                    >
+                      {"Jim Nattier"}
+                    </div>
+                    <div
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text__nihjw
+                      )}
+                    >
+                      {"Chief Financial Officer"}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                data-plasmic-name={"row2"}
+                data-plasmic-override={overrides.row2}
+                className={classNames("all", sty.row2)}
+              >
+                <div
+                  data-plasmic-name={"profile4"}
+                  data-plasmic-override={overrides.profile4}
+                  className={classNames("all", sty.profile4)}
+                >
+                  <PlasmicImg__
+                    alt={"Kelly Crouse CEO"}
+                    className={classNames(sty.img___2T2O)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/sterling_and_buena_vista_foods/images/elvaPng.png",
+                      fullWidth: 266,
+                      fullHeight: 329,
+                      aspectRatio: undefined
+                    }}
+                  />
+
+                  <div
+                    data-plasmic-name={"text17"}
+                    data-plasmic-override={overrides.text17}
+                    className={classNames("all", sty.text17)}
+                  >
+                    <div
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text__m2Iew
+                      )}
+                    >
+                      {"Elva Charles"}
+                    </div>
+                    <div
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text__rjjK2
+                      )}
+                    >
+                      {
+                        "Sr. Vice President of Procurement,\r Quality, Government, and Specialty Channels"
+                      }
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"profile5"}
+                  data-plasmic-override={overrides.profile5}
+                  className={classNames("all", sty.profile5)}
+                >
+                  <PlasmicImg__
+                    alt={"Chad Sim COO"}
+                    className={classNames(sty.img___6P0P0)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/sterling_and_buena_vista_foods/images/lauraPng.png",
+                      fullWidth: 266,
+                      fullHeight: 329,
+                      aspectRatio: undefined
+                    }}
+                  />
+
+                  <div
+                    data-plasmic-name={"text18"}
+                    data-plasmic-override={overrides.text18}
+                    className={classNames("all", sty.text18)}
+                  >
+                    <div
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text__rYkaE
+                      )}
+                    >
+                      {"Laura Bruno"}
+                    </div>
+                    <div
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text__xhdrO
+                      )}
+                    >
+                      {"President, Buena Vista Foods Division"}
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"profile6"}
+                  data-plasmic-override={overrides.profile6}
+                  className={classNames("all", sty.profile6)}
+                >
+                  <PlasmicImg__
+                    alt={"Jim Nattier CFO"}
+                    className={classNames(sty.img__mPQr0)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/sterling_and_buena_vista_foods/images/lizPng.png",
+                      fullWidth: 266,
+                      fullHeight: 329,
+                      aspectRatio: undefined
+                    }}
+                  />
+
+                  <div
+                    data-plasmic-name={"text19"}
+                    data-plasmic-override={overrides.text19}
+                    className={classNames("all", sty.text19)}
+                  >
+                    <div
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text___91Mu2
+                      )}
+                    >
+                      {"Liz Thomas"}
+                    </div>
+                    <div
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text__iZlJu
+                      )}
+                    >
+                      {
+                        "Executive Vice President, National Restaurants Division"
+                      }
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                data-plasmic-name={"row3"}
+                data-plasmic-override={overrides.row3}
+                className={classNames("all", sty.row3)}
+              >
+                <div
+                  data-plasmic-name={"profile7"}
+                  data-plasmic-override={overrides.profile7}
+                  className={classNames("all", sty.profile7)}
+                >
+                  <PlasmicImg__
+                    alt={"Kelly Crouse CEO"}
+                    className={classNames(sty.img__hFqMs)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/sterling_and_buena_vista_foods/images/dan2Png.png",
+                      fullWidth: 266,
+                      fullHeight: 329,
+                      aspectRatio: undefined
+                    }}
+                  />
+
+                  <div
+                    data-plasmic-name={"text20"}
+                    data-plasmic-override={overrides.text20}
+                    className={classNames("all", sty.text20)}
+                  >
+                    <div
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text__ccVvY
+                      )}
+                    >
+                      {"Dan Seale"}
+                    </div>
+                    <div
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text___1Sb2
+                      )}
+                    >
+                      {
+                        "Sr. Vice President of Human Resources and Process Improvement"
+                      }
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"profile8"}
+                  data-plasmic-override={overrides.profile8}
+                  className={classNames("all", sty.profile8)}
+                >
+                  <PlasmicImg__
+                    alt={"Chad Sim COO"}
+                    className={classNames(sty.img__byInH)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/sterling_and_buena_vista_foods/images/ericPng.png",
+                      fullWidth: 266,
+                      fullHeight: 329,
+                      aspectRatio: undefined
+                    }}
+                  />
+
+                  <div
+                    data-plasmic-name={"text21"}
+                    data-plasmic-override={overrides.text21}
+                    className={classNames("all", sty.text21)}
+                  >
+                    <div
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text__yEuQp
+                      )}
+                    >
+                      {"Eric Newman"}
+                    </div>
+                    <div
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text__l4Gst
+                      )}
+                    >
+                      {"Vice President of Corporate Food Safety"}
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"profile9"}
+                  data-plasmic-override={overrides.profile9}
+                  className={classNames("all", sty.profile9)}
+                >
+                  <PlasmicImg__
+                    alt={"Jim Nattier CFO"}
+                    className={classNames(sty.img__gzTk)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/sterling_and_buena_vista_foods/images/summerPng.png",
+                      fullWidth: 266,
+                      fullHeight: 329,
+                      aspectRatio: undefined
+                    }}
+                  />
+
+                  <div
+                    data-plasmic-name={"text22"}
+                    data-plasmic-override={overrides.text22}
+                    className={classNames("all", sty.text22)}
+                  >
+                    <div
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text__jaZ0F
+                      )}
+                    >
+                      {"Summer Dedick"}
+                    </div>
+                    <div
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text__rnfKl
+                      )}
+                    >
+                      {
+                        "Vice President of Product Development & Commercialization"
+                      }
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {(() => {
+                const child$Props = {
+                  arrows: false,
+                  autoplay: true,
+                  autoplaySpeed: hasVariant(
+                    globalVariants,
+                    "screen",
+                    "largerMobile"
+                  )
+                    ? 5000
+                    : 0,
+                  beforeChange: async (...eventArgs: any) => {
+                    generateStateOnChangePropForCodeComponents(
+                      $state,
+                      "currentSlide",
+                      ["sliderCarousel", "currentSlide"],
+                      SliderWrapper_Helpers
+                    ).apply(null, eventArgs);
+                  },
+                  centerMode: true,
+                  centerPadding: hasVariant(
+                    globalVariants,
+                    "screen",
+                    "smallMobile"
+                  )
+                    ? "0-px"
+                    : hasVariant(globalVariants, "screen", "largerMobile")
+                      ? "20px"
+                      : "30px",
+                  className: classNames("__wab_instance", sty.sliderCarousel),
+                  cssEase: "linear",
+                  initialSlide: generateStateValueProp($state, [
+                    "sliderCarousel",
+                    "currentSlide"
+                  ]),
+                  ref: ref => {
+                    $refs["sliderCarousel"] = ref;
+                  },
+                  sliderScopeClassName: sty["sliderCarousel__slider"],
+                  speed: hasVariant(globalVariants, "screen", "largerMobile")
+                    ? 2500
+                    : 5000,
+                  swipeToSlide: hasVariant(
+                    globalVariants,
+                    "screen",
+                    "largerMobile"
+                  )
+                    ? true
+                    : undefined
+                };
+                initializeCodeComponentStates(
+                  $state,
+                  [
+                    {
+                      name: "currentSlide",
+                      plasmicStateName: "sliderCarousel.currentSlide"
+                    }
+                  ],
+                  [],
+                  SliderWrapper_Helpers ?? {},
+                  child$Props
+                );
+
+                return (
+                  <SliderWrapper
+                    data-plasmic-name={"sliderCarousel"}
+                    data-plasmic-override={overrides.sliderCarousel}
+                    {...child$Props}
+                  >
+                    <div
+                      data-plasmic-name={"slide"}
+                      data-plasmic-override={overrides.slide}
+                      className={classNames("all", sty.slide)}
                     >
                       <div
-                        data-plasmic-name={"profile10"}
-                        data-plasmic-override={overrides.profile10}
-                        className={classNames("all", sty.profile10)}
+                        data-plasmic-name={"row4"}
+                        data-plasmic-override={overrides.row4}
+                        className={classNames("all", sty.row4)}
                       >
-                        <PlasmicImg__
-                          alt={"Kelly Crouse CEO"}
-                          className={classNames(sty.img__td6Ko)}
-                          displayHeight={"auto"}
-                          displayMaxHeight={"none"}
-                          displayMaxWidth={"100%"}
-                          displayMinHeight={"0"}
-                          displayMinWidth={"0"}
-                          displayWidth={"auto"}
-                          loading={"lazy"}
-                          src={{
-                            src: "/plasmic/sterling_and_buena_vista_foods/images/kellyCrousePng.png",
-                            fullWidth: 266,
-                            fullHeight: 329,
-                            aspectRatio: undefined
-                          }}
-                        />
-
                         <div
-                          data-plasmic-name={"text23"}
-                          data-plasmic-override={overrides.text23}
-                          className={classNames("all", sty.text23)}
+                          data-plasmic-name={"profile10"}
+                          data-plasmic-override={overrides.profile10}
+                          className={classNames("all", sty.profile10)}
                         >
+                          <PlasmicImg__
+                            alt={"Kelly Crouse CEO"}
+                            className={classNames(sty.img__td6Ko)}
+                            displayHeight={"auto"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={"100%"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={"auto"}
+                            loading={"lazy"}
+                            src={{
+                              src: "/plasmic/sterling_and_buena_vista_foods/images/kellyCrousePng.png",
+                              fullWidth: 266,
+                              fullHeight: 329,
+                              aspectRatio: undefined
+                            }}
+                          />
+
                           <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__pX1Df
-                            )}
+                            data-plasmic-name={"text23"}
+                            data-plasmic-override={overrides.text23}
+                            className={classNames("all", sty.text23)}
                           >
-                            {"Kelly Crouse"}
-                          </div>
-                          <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__xjX3
-                            )}
-                          >
-                            {"Chief Executive Officer"}
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text__pX1Df
+                              )}
+                            >
+                              {"Kelly Crouse"}
+                            </div>
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text__xjX3
+                              )}
+                            >
+                              {"Chief Executive Officer"}
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div
-                        data-plasmic-name={"profile11"}
-                        data-plasmic-override={overrides.profile11}
-                        className={classNames("all", sty.profile11)}
-                      >
-                        <PlasmicImg__
-                          alt={"Chad Sim COO"}
-                          className={classNames(sty.img__hlHta)}
-                          displayHeight={"auto"}
-                          displayMaxHeight={"none"}
-                          displayMaxWidth={"100%"}
-                          displayMinHeight={"0"}
-                          displayMinWidth={"0"}
-                          displayWidth={"auto"}
-                          loading={"lazy"}
-                          src={{
-                            src: "/plasmic/sterling_and_buena_vista_foods/images/jImPng.png",
-                            fullWidth: 266,
-                            fullHeight: 329,
-                            aspectRatio: undefined
-                          }}
-                        />
-
                         <div
-                          data-plasmic-name={"text24"}
-                          data-plasmic-override={overrides.text24}
-                          className={classNames("all", sty.text24)}
+                          data-plasmic-name={"profile11"}
+                          data-plasmic-override={overrides.profile11}
+                          className={classNames("all", sty.profile11)}
                         >
+                          <PlasmicImg__
+                            alt={"Chad Sim COO"}
+                            className={classNames(sty.img__hlHta)}
+                            displayHeight={"auto"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={"100%"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={"auto"}
+                            loading={"lazy"}
+                            src={{
+                              src: "/plasmic/sterling_and_buena_vista_foods/images/jImPng.png",
+                              fullWidth: 266,
+                              fullHeight: 329,
+                              aspectRatio: undefined
+                            }}
+                          />
+
                           <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__a9Jf4
-                            )}
+                            data-plasmic-name={"text24"}
+                            data-plasmic-override={overrides.text24}
+                            className={classNames("all", sty.text24)}
                           >
-                            {"Chad Sim"}
-                          </div>
-                          <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__nWxd
-                            )}
-                          >
-                            {"Chief Operating Officer"}
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text__a9Jf4
+                              )}
+                            >
+                              {"Chad Sim"}
+                            </div>
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text__nWxd
+                              )}
+                            >
+                              {"Chief Operating Officer"}
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div
-                        data-plasmic-name={"profile12"}
-                        data-plasmic-override={overrides.profile12}
-                        className={classNames("all", sty.profile12)}
-                      >
-                        <PlasmicImg__
-                          alt={"Jim Nattier CFO"}
-                          className={classNames(sty.img__e5SoW)}
-                          displayHeight={"auto"}
-                          displayMaxHeight={"none"}
-                          displayMaxWidth={"100%"}
-                          displayMinHeight={"0"}
-                          displayMinWidth={"0"}
-                          displayWidth={"auto"}
-                          loading={"lazy"}
-                          src={{
-                            src: "/plasmic/sterling_and_buena_vista_foods/images/danPng.png",
-                            fullWidth: 266,
-                            fullHeight: 329,
-                            aspectRatio: undefined
-                          }}
-                        />
-
                         <div
-                          data-plasmic-name={"text25"}
-                          data-plasmic-override={overrides.text25}
-                          className={classNames("all", sty.text25)}
+                          data-plasmic-name={"profile12"}
+                          data-plasmic-override={overrides.profile12}
+                          className={classNames("all", sty.profile12)}
                         >
+                          <PlasmicImg__
+                            alt={"Jim Nattier CFO"}
+                            className={classNames(sty.img__e5SoW)}
+                            displayHeight={"auto"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={"100%"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={"auto"}
+                            loading={"lazy"}
+                            src={{
+                              src: "/plasmic/sterling_and_buena_vista_foods/images/danPng.png",
+                              fullWidth: 266,
+                              fullHeight: 329,
+                              aspectRatio: undefined
+                            }}
+                          />
+
                           <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__knBvZ
-                            )}
+                            data-plasmic-name={"text25"}
+                            data-plasmic-override={overrides.text25}
+                            className={classNames("all", sty.text25)}
                           >
-                            {"Jim Nattier"}
-                          </div>
-                          <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__uBuum
-                            )}
-                          >
-                            {"Chief Financial Officer"}
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text__knBvZ
+                              )}
+                            >
+                              {"Jim Nattier"}
+                            </div>
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text__uBuum
+                              )}
+                            >
+                              {"Chief Financial Officer"}
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    data-plasmic-name={"slide2"}
-                    data-plasmic-override={overrides.slide2}
-                    className={classNames("all", sty.slide2)}
-                  >
                     <div
-                      data-plasmic-name={"row5"}
-                      data-plasmic-override={overrides.row5}
-                      className={classNames("all", sty.row5)}
+                      data-plasmic-name={"slide2"}
+                      data-plasmic-override={overrides.slide2}
+                      className={classNames("all", sty.slide2)}
                     >
                       <div
-                        data-plasmic-name={"profile13"}
-                        data-plasmic-override={overrides.profile13}
-                        className={classNames("all", sty.profile13)}
+                        data-plasmic-name={"row5"}
+                        data-plasmic-override={overrides.row5}
+                        className={classNames("all", sty.row5)}
                       >
-                        <PlasmicImg__
-                          alt={"Kelly Crouse CEO"}
-                          className={classNames(sty.img__e1Ey)}
-                          displayHeight={"auto"}
-                          displayMaxHeight={"none"}
-                          displayMaxWidth={"100%"}
-                          displayMinHeight={"0"}
-                          displayMinWidth={"0"}
-                          displayWidth={"auto"}
-                          loading={"lazy"}
-                          src={{
-                            src: "/plasmic/sterling_and_buena_vista_foods/images/elvaPng.png",
-                            fullWidth: 266,
-                            fullHeight: 329,
-                            aspectRatio: undefined
-                          }}
-                        />
-
                         <div
-                          data-plasmic-name={"text26"}
-                          data-plasmic-override={overrides.text26}
-                          className={classNames("all", sty.text26)}
+                          data-plasmic-name={"profile13"}
+                          data-plasmic-override={overrides.profile13}
+                          className={classNames("all", sty.profile13)}
                         >
+                          <PlasmicImg__
+                            alt={"Kelly Crouse CEO"}
+                            className={classNames(sty.img__e1Ey)}
+                            displayHeight={"auto"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={"100%"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={"auto"}
+                            loading={"lazy"}
+                            src={{
+                              src: "/plasmic/sterling_and_buena_vista_foods/images/elvaPng.png",
+                              fullWidth: 266,
+                              fullHeight: 329,
+                              aspectRatio: undefined
+                            }}
+                          />
+
                           <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__xk0Tc
-                            )}
+                            data-plasmic-name={"text26"}
+                            data-plasmic-override={overrides.text26}
+                            className={classNames("all", sty.text26)}
                           >
-                            {"Elva Charles"}
-                          </div>
-                          <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__qL8Cd
-                            )}
-                          >
-                            {
-                              "Sr. Vice President of Procurement,\r Quality, Government, and Specialty Channels"
-                            }
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text__xk0Tc
+                              )}
+                            >
+                              {"Elva Charles"}
+                            </div>
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text__qL8Cd
+                              )}
+                            >
+                              {
+                                "Sr. Vice President of Procurement,\r Quality, Government, and Specialty Channels"
+                              }
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div
-                        data-plasmic-name={"profile14"}
-                        data-plasmic-override={overrides.profile14}
-                        className={classNames("all", sty.profile14)}
-                      >
-                        <PlasmicImg__
-                          alt={"Chad Sim COO"}
-                          className={classNames(sty.img__ewIi8)}
-                          displayHeight={"auto"}
-                          displayMaxHeight={"none"}
-                          displayMaxWidth={"100%"}
-                          displayMinHeight={"0"}
-                          displayMinWidth={"0"}
-                          displayWidth={"auto"}
-                          loading={"lazy"}
-                          src={{
-                            src: "/plasmic/sterling_and_buena_vista_foods/images/lauraPng.png",
-                            fullWidth: 266,
-                            fullHeight: 329,
-                            aspectRatio: undefined
-                          }}
-                        />
-
                         <div
-                          data-plasmic-name={"text27"}
-                          data-plasmic-override={overrides.text27}
-                          className={classNames("all", sty.text27)}
+                          data-plasmic-name={"profile14"}
+                          data-plasmic-override={overrides.profile14}
+                          className={classNames("all", sty.profile14)}
                         >
+                          <PlasmicImg__
+                            alt={"Chad Sim COO"}
+                            className={classNames(sty.img__ewIi8)}
+                            displayHeight={"auto"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={"100%"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={"auto"}
+                            loading={"lazy"}
+                            src={{
+                              src: "/plasmic/sterling_and_buena_vista_foods/images/lauraPng.png",
+                              fullWidth: 266,
+                              fullHeight: 329,
+                              aspectRatio: undefined
+                            }}
+                          />
+
                           <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__iTbgQ
-                            )}
+                            data-plasmic-name={"text27"}
+                            data-plasmic-override={overrides.text27}
+                            className={classNames("all", sty.text27)}
                           >
-                            {"Laura Bruno"}
-                          </div>
-                          <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text___9QBsF
-                            )}
-                          >
-                            {"President, Buena Vista Foods Division"}
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text__iTbgQ
+                              )}
+                            >
+                              {"Laura Bruno"}
+                            </div>
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text___9QBsF
+                              )}
+                            >
+                              {"President, Buena Vista Foods Division"}
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div
-                        data-plasmic-name={"profile15"}
-                        data-plasmic-override={overrides.profile15}
-                        className={classNames("all", sty.profile15)}
-                      >
-                        <PlasmicImg__
-                          alt={"Jim Nattier CFO"}
-                          className={classNames(sty.img__uEkof)}
-                          displayHeight={"auto"}
-                          displayMaxHeight={"none"}
-                          displayMaxWidth={"100%"}
-                          displayMinHeight={"0"}
-                          displayMinWidth={"0"}
-                          displayWidth={"auto"}
-                          loading={"lazy"}
-                          src={{
-                            src: "/plasmic/sterling_and_buena_vista_foods/images/lizPng.png",
-                            fullWidth: 266,
-                            fullHeight: 329,
-                            aspectRatio: undefined
-                          }}
-                        />
-
                         <div
-                          data-plasmic-name={"text28"}
-                          data-plasmic-override={overrides.text28}
-                          className={classNames("all", sty.text28)}
+                          data-plasmic-name={"profile15"}
+                          data-plasmic-override={overrides.profile15}
+                          className={classNames("all", sty.profile15)}
                         >
+                          <PlasmicImg__
+                            alt={"Jim Nattier CFO"}
+                            className={classNames(sty.img__uEkof)}
+                            displayHeight={"auto"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={"100%"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={"auto"}
+                            loading={"lazy"}
+                            src={{
+                              src: "/plasmic/sterling_and_buena_vista_foods/images/lizPng.png",
+                              fullWidth: 266,
+                              fullHeight: 329,
+                              aspectRatio: undefined
+                            }}
+                          />
+
                           <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__v7Lq7
-                            )}
+                            data-plasmic-name={"text28"}
+                            data-plasmic-override={overrides.text28}
+                            className={classNames("all", sty.text28)}
                           >
-                            {"Liz Thomas"}
-                          </div>
-                          <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__hUx4
-                            )}
-                          >
-                            {
-                              "Executive Vice President, National Restaurants Division"
-                            }
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text__v7Lq7
+                              )}
+                            >
+                              {"Liz Thomas"}
+                            </div>
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text__hUx4
+                              )}
+                            >
+                              {
+                                "Executive Vice President, National Restaurants Division"
+                              }
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    data-plasmic-name={"slide3"}
-                    data-plasmic-override={overrides.slide3}
-                    className={classNames("all", sty.slide3)}
-                  >
                     <div
-                      data-plasmic-name={"row6"}
-                      data-plasmic-override={overrides.row6}
-                      className={classNames("all", sty.row6)}
+                      data-plasmic-name={"slide3"}
+                      data-plasmic-override={overrides.slide3}
+                      className={classNames("all", sty.slide3)}
                     >
                       <div
-                        data-plasmic-name={"profile16"}
-                        data-plasmic-override={overrides.profile16}
-                        className={classNames("all", sty.profile16)}
+                        data-plasmic-name={"row6"}
+                        data-plasmic-override={overrides.row6}
+                        className={classNames("all", sty.row6)}
                       >
-                        <PlasmicImg__
-                          alt={"Kelly Crouse CEO"}
-                          className={classNames(sty.img__bv1N)}
-                          displayHeight={"auto"}
-                          displayMaxHeight={"none"}
-                          displayMaxWidth={"100%"}
-                          displayMinHeight={"0"}
-                          displayMinWidth={"0"}
-                          displayWidth={"auto"}
-                          loading={"lazy"}
-                          src={{
-                            src: "/plasmic/sterling_and_buena_vista_foods/images/dan2Png.png",
-                            fullWidth: 266,
-                            fullHeight: 329,
-                            aspectRatio: undefined
-                          }}
-                        />
-
                         <div
-                          data-plasmic-name={"text29"}
-                          data-plasmic-override={overrides.text29}
-                          className={classNames("all", sty.text29)}
+                          data-plasmic-name={"profile16"}
+                          data-plasmic-override={overrides.profile16}
+                          className={classNames("all", sty.profile16)}
                         >
+                          <PlasmicImg__
+                            alt={"Kelly Crouse CEO"}
+                            className={classNames(sty.img__bv1N)}
+                            displayHeight={"auto"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={"100%"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={"auto"}
+                            loading={"lazy"}
+                            src={{
+                              src: "/plasmic/sterling_and_buena_vista_foods/images/dan2Png.png",
+                              fullWidth: 266,
+                              fullHeight: 329,
+                              aspectRatio: undefined
+                            }}
+                          />
+
                           <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__fS6H
-                            )}
+                            data-plasmic-name={"text29"}
+                            data-plasmic-override={overrides.text29}
+                            className={classNames("all", sty.text29)}
                           >
-                            {"Dan Seale"}
-                          </div>
-                          <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__eYdJj
-                            )}
-                          >
-                            {
-                              "Sr. Vice President of Human Resources and Process Improvement"
-                            }
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text__fS6H
+                              )}
+                            >
+                              {"Dan Seale"}
+                            </div>
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text__eYdJj
+                              )}
+                            >
+                              {
+                                "Sr. Vice President of Human Resources and Process Improvement"
+                              }
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div
-                        data-plasmic-name={"profile17"}
-                        data-plasmic-override={overrides.profile17}
-                        className={classNames("all", sty.profile17)}
-                      >
-                        <PlasmicImg__
-                          alt={"Chad Sim COO"}
-                          className={classNames(sty.img__cs940)}
-                          displayHeight={"auto"}
-                          displayMaxHeight={"none"}
-                          displayMaxWidth={"100%"}
-                          displayMinHeight={"0"}
-                          displayMinWidth={"0"}
-                          displayWidth={"auto"}
-                          loading={"lazy"}
-                          src={{
-                            src: "/plasmic/sterling_and_buena_vista_foods/images/ericPng.png",
-                            fullWidth: 266,
-                            fullHeight: 329,
-                            aspectRatio: undefined
-                          }}
-                        />
-
                         <div
-                          data-plasmic-name={"text30"}
-                          data-plasmic-override={overrides.text30}
-                          className={classNames("all", sty.text30)}
+                          data-plasmic-name={"profile17"}
+                          data-plasmic-override={overrides.profile17}
+                          className={classNames("all", sty.profile17)}
                         >
+                          <PlasmicImg__
+                            alt={"Chad Sim COO"}
+                            className={classNames(sty.img__cs940)}
+                            displayHeight={"auto"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={"100%"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={"auto"}
+                            loading={"lazy"}
+                            src={{
+                              src: "/plasmic/sterling_and_buena_vista_foods/images/ericPng.png",
+                              fullWidth: 266,
+                              fullHeight: 329,
+                              aspectRatio: undefined
+                            }}
+                          />
+
                           <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__odcWr
-                            )}
+                            data-plasmic-name={"text30"}
+                            data-plasmic-override={overrides.text30}
+                            className={classNames("all", sty.text30)}
                           >
-                            {"Eric Newman"}
-                          </div>
-                          <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__sQ3Zz
-                            )}
-                          >
-                            {"Vice President of Corporate Food Safety"}
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text__odcWr
+                              )}
+                            >
+                              {"Eric Newman"}
+                            </div>
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text__sQ3Zz
+                              )}
+                            >
+                              {"Vice President of Corporate Food Safety"}
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div
-                        data-plasmic-name={"profile18"}
-                        data-plasmic-override={overrides.profile18}
-                        className={classNames("all", sty.profile18)}
-                      >
-                        <PlasmicImg__
-                          alt={"Jim Nattier CFO"}
-                          className={classNames(sty.img__d3Goi)}
-                          displayHeight={"auto"}
-                          displayMaxHeight={"none"}
-                          displayMaxWidth={"100%"}
-                          displayMinHeight={"0"}
-                          displayMinWidth={"0"}
-                          displayWidth={"auto"}
-                          loading={"lazy"}
-                          src={{
-                            src: "/plasmic/sterling_and_buena_vista_foods/images/summerPng.png",
-                            fullWidth: 266,
-                            fullHeight: 329,
-                            aspectRatio: undefined
-                          }}
-                        />
-
                         <div
-                          data-plasmic-name={"text31"}
-                          data-plasmic-override={overrides.text31}
-                          className={classNames("all", sty.text31)}
+                          data-plasmic-name={"profile18"}
+                          data-plasmic-override={overrides.profile18}
+                          className={classNames("all", sty.profile18)}
                         >
+                          <PlasmicImg__
+                            alt={"Jim Nattier CFO"}
+                            className={classNames(sty.img__d3Goi)}
+                            displayHeight={"auto"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={"100%"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={"auto"}
+                            loading={"lazy"}
+                            src={{
+                              src: "/plasmic/sterling_and_buena_vista_foods/images/summerPng.png",
+                              fullWidth: 266,
+                              fullHeight: 329,
+                              aspectRatio: undefined
+                            }}
+                          />
+
                           <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__bQXs
-                            )}
+                            data-plasmic-name={"text31"}
+                            data-plasmic-override={overrides.text31}
+                            className={classNames("all", sty.text31)}
                           >
-                            {"Summer Dedick"}
-                          </div>
-                          <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__tyDm9
-                            )}
-                          >
-                            {
-                              "Vice President of Product Development & Commercialization"
-                            }
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text__bQXs
+                              )}
+                            >
+                              {"Summer Dedick"}
+                            </div>
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text__tyDm9
+                              )}
+                            >
+                              {
+                                "Vice President of Product Development & Commercialization"
+                              }
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </SliderWrapper>
-              );
-            })()}
-          </div>
-          <div
-            data-plasmic-name={"aboutUsCta"}
-            data-plasmic-override={overrides.aboutUsCta}
-            className={classNames("all", sty.aboutUsCta)}
-          >
-            <CtaBottom
-              data-plasmic-name={"ctaBottom"}
-              data-plasmic-override={overrides.ctaBottom}
-              className={classNames("__wab_instance", sty.ctaBottom)}
+                  </SliderWrapper>
+                );
+              })()}
+            </div>
+            <div
+              data-plasmic-name={"aboutUsCta"}
+              data-plasmic-override={overrides.aboutUsCta}
+              className={classNames("all", sty.aboutUsCta)}
+            >
+              <CtaBottom
+                data-plasmic-name={"ctaBottom"}
+                data-plasmic-override={overrides.ctaBottom}
+                className={classNames("__wab_instance", sty.ctaBottom)}
+              />
+            </div>
+            <Footer
+              data-plasmic-name={"footer"}
+              data-plasmic-override={overrides.footer}
+              className={classNames("__wab_instance", sty.footer)}
             />
           </div>
-          <Footer
-            data-plasmic-name={"footer"}
-            data-plasmic-override={overrides.footer}
-            className={classNames("__wab_instance", sty.footer)}
-          />
-
-          <div
-            data-plasmic-name={"pageContainer"}
-            data-plasmic-override={overrides.pageContainer}
-            className={classNames("all", sty.pageContainer)}
-          />
         </div>
       </div>
     </React.Fragment>
@@ -2951,6 +3061,7 @@ function PlasmicAboutUs__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
+    "pageContainer",
     "header",
     "topHero",
     "aboutUsSection",
@@ -3058,8 +3169,118 @@ const PlasmicDescendants = {
     "text31",
     "aboutUsCta",
     "ctaBottom",
-    "footer",
-    "pageContainer"
+    "footer"
+  ],
+  pageContainer: [
+    "pageContainer",
+    "header",
+    "topHero",
+    "aboutUsSection",
+    "heading",
+    "text",
+    "text2",
+    "text3",
+    "box",
+    "box2",
+    "box3",
+    "embedHtml",
+    "aboutUsSection2",
+    "wrapper",
+    "heading2",
+    "text4",
+    "group",
+    "boxes",
+    "item",
+    "icon",
+    "text5",
+    "item2",
+    "icon2",
+    "text6",
+    "item3",
+    "icon3",
+    "text7",
+    "scrollParallax",
+    "image",
+    "boxes3",
+    "item9",
+    "icon7",
+    "text11",
+    "item10",
+    "icon8",
+    "text12",
+    "item11",
+    "icon9",
+    "text13",
+    "aboutUsSection3",
+    "wrapper2",
+    "texts",
+    "h5",
+    "images",
+    "item7",
+    "item8",
+    "aboutUsSection5",
+    "rectangle",
+    "heading3",
+    "section",
+    "text8",
+    "section2",
+    "text9",
+    "section3",
+    "text10",
+    "aboutUsSection4",
+    "wrapper3",
+    "primaryBtn",
+    "aboutUsSection6",
+    "heading4",
+    "row",
+    "profile",
+    "text14",
+    "profile2",
+    "text15",
+    "profile3",
+    "text16",
+    "row2",
+    "profile4",
+    "text17",
+    "profile5",
+    "text18",
+    "profile6",
+    "text19",
+    "row3",
+    "profile7",
+    "text20",
+    "profile8",
+    "text21",
+    "profile9",
+    "text22",
+    "sliderCarousel",
+    "slide",
+    "row4",
+    "profile10",
+    "text23",
+    "profile11",
+    "text24",
+    "profile12",
+    "text25",
+    "slide2",
+    "row5",
+    "profile13",
+    "text26",
+    "profile14",
+    "text27",
+    "profile15",
+    "text28",
+    "slide3",
+    "row6",
+    "profile16",
+    "text29",
+    "profile17",
+    "text30",
+    "profile18",
+    "text31",
+    "aboutUsCta",
+    "ctaBottom",
+    "footer"
   ],
   header: ["header"],
   topHero: ["topHero"],
@@ -3421,14 +3642,14 @@ const PlasmicDescendants = {
   text31: ["text31"],
   aboutUsCta: ["aboutUsCta", "ctaBottom"],
   ctaBottom: ["ctaBottom"],
-  footer: ["footer"],
-  pageContainer: ["pageContainer"]
+  footer: ["footer"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  pageContainer: "div";
   header: typeof Header;
   topHero: typeof TopHero;
   aboutUsSection: "div";
@@ -3537,7 +3758,6 @@ type NodeDefaultElementType = {
   aboutUsCta: "div";
   ctaBottom: typeof CtaBottom;
   footer: typeof Footer;
-  pageContainer: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -3602,6 +3822,7 @@ export const PlasmicAboutUs = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    pageContainer: makeNodeComponent("pageContainer"),
     header: makeNodeComponent("header"),
     topHero: makeNodeComponent("topHero"),
     aboutUsSection: makeNodeComponent("aboutUsSection"),
@@ -3710,7 +3931,6 @@ export const PlasmicAboutUs = Object.assign(
     aboutUsCta: makeNodeComponent("aboutUsCta"),
     ctaBottom: makeNodeComponent("ctaBottom"),
     footer: makeNodeComponent("footer"),
-    pageContainer: makeNodeComponent("pageContainer"),
 
     // Metadata about props expected for PlasmicAboutUs
     internalVariantProps: PlasmicAboutUs__VariantProps,

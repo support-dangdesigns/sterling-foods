@@ -324,10 +324,12 @@ function PlasmicHeader__RenderFunc(props: {
                     $steps["updateExpanded"] = await $steps["updateExpanded"];
                   }
                 }}
+                style={{ transitionTimingFunction: "ease" }}
               >
                 <Group1Icon
                   className={classNames("all", sty.svg__cbjZ0)}
                   role={"img"}
+                  style={{ transitionTimingFunction: "ease" }}
                 />
               </div>
             </div>
@@ -363,19 +365,7 @@ function PlasmicHeader__RenderFunc(props: {
                   throw e;
                 }
               })()
-            : (() => {
-                try {
-                  return $state.expanded;
-                } catch (e) {
-                  if (
-                    e instanceof TypeError ||
-                    e?.plasmicType === "PlasmicUndefinedDataError"
-                  ) {
-                    return true;
-                  }
-                  throw e;
-                }
-              })()
+            : true
       ) ? (
         <div
           data-plasmic-name={"expandMenu"}
@@ -456,10 +446,12 @@ function PlasmicHeader__RenderFunc(props: {
                       await $steps["updateDefaultstate"];
                   }
                 }}
+                style={{ transitionTimingFunction: "ease" }}
               >
                 <XIcon
                   className={classNames("all", sty.svg__ad4FK)}
                   role={"img"}
+                  style={{ transitionTimingFunction: "ease" }}
                 />
               </div>
             </div>

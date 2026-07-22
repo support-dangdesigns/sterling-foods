@@ -59,6 +59,15 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import { useMutablePlasmicQueryData } from "@plasmicapp/query";
+
+import { usePlasmicQueries } from "@plasmicapp/react-web/lib/data-sources";
+import type {
+  PlasmicQuery,
+  PlasmicQueryResult
+} from "@plasmicapp/react-web/lib/data-sources";
+import type { QueryComponentNode } from "@plasmicapp/react-web/lib/data-sources";
+
 import Header from "../../Header"; // plasmic-import: qmNXHiKWCTTQ/component
 import TopHero from "../../TopHero"; // plasmic-import: 2xRY6WOypZh7/component
 import { Embed } from "@plasmicpkgs/plasmic-basic-components";
@@ -76,6 +85,8 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import sty from "./PlasmicAboutUs.module.css"; // plasmic-import: znlkUBH8Q8TT/css
 
 import DividerVerticalSvgrepoComSvgIcon from "./icons/PlasmicIcon__DividerVerticalSvgrepoComSvg"; // plasmic-import: -SY6-q3210eN/icon
+
+import { fetchGraphQL as __fn_fetchGraphQL } from "@plasmicpkgs/graphql";
 
 const emptyProxy: any = new Proxy(() => "", {
   get(_, prop) {
@@ -233,7 +244,43 @@ export type PlasmicAboutUs__OverridesType = {
 
 export interface DefaultAboutUsProps {}
 
-const $$ = {};
+const $$ = {
+  fetchGraphQL: __fn_fetchGraphQL
+};
+
+export const serverQueryTree: QueryComponentNode = {
+  type: "component",
+  queries: {
+    aboutUs: {
+      id: "fetchGraphQL",
+      fn: $$.fetchGraphQL,
+      args: ({ $q, $props, $ctx, $state }) => [
+        (() => {
+          const __composite = { method: "POST", url: null, request: null };
+          __composite["url"] = "https://edit-sterling.dangstaging.org/graphql";
+          __composite["request"] = {
+            query:
+              "query MyQuery {\n  pageBy(pageId: 100) {\n    pageContent {\n      fieldGroupName\n      button {\n        fieldGroupName\n        text\n        url\n      }\n      headlineParent {\n        fieldGroupName\n        headlinechild {\n          fieldGroupName\n          headlinefav\n          headlinenormal\n        }\n      }\n      textArea {\n        fieldGroupName\n        text\n      }\n    }\n  }\n}",
+            variables: {}
+          };
+          return __composite;
+        })()
+      ]
+    }
+  },
+  propsContext: {},
+  stateSpecs: [
+    {
+      path: "sliderCarousel.currentSlide",
+      type: "private",
+      variableType: "number",
+      initFunc: ({ $props, $state, $queries, $q, $ctx }) => 0,
+
+      refName: "sliderCarousel"
+    }
+  ],
+  children: []
+};
 
 function useNextRouter() {
   try {
@@ -286,6 +333,12 @@ function PlasmicAboutUs__RenderFunc(props: {
     ],
     [$props, $ctx, $refs]
   );
+  const $stateRef = React.useRef<Record<string, unknown> | null>(null);
+  const $q = usePlasmicQueries(serverQueryTree, {
+    $ctx,
+    $props,
+    $state: $stateRef.current
+  });
 
   const globalVariants = _useGlobalVariants();
 
@@ -293,12 +346,13 @@ function PlasmicAboutUs__RenderFunc(props: {
     $props,
     $ctx,
     $queries: {},
-    $q: {},
+    $q: $q,
     $refs
   });
+  $stateRef.current = $state;
 
   const pageMetadata = generateDynamicMetadata(
-    wrapQueriesWithLoadingProxy({}),
+    wrapQueriesWithLoadingProxy($q),
     $ctx as PageCtx
   );
 
@@ -357,10 +411,40 @@ function PlasmicAboutUs__RenderFunc(props: {
               className={classNames("all", sty.heading)}
             >
               <div className={classNames("all", "__wab_text", sty.text__lcSl)}>
-                {"About"}
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return $q.aboutUs.data.body.data.pageBy.pageContent
+                        .headlineParent[0].headlinechild[0].headlinenormal;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "About";
+                      }
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
               </div>
               <div className={classNames("all", "__wab_text", sty.text__c1BdB)}>
-                {"Sterling Foods"}
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return $q.aboutUs.data.body.data.pageBy.pageContent
+                        .headlineParent[0].headlinechild[0].headlinefav;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "Sterling Foods";
+                      }
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
               </div>
             </div>
             <div
@@ -369,14 +453,40 @@ function PlasmicAboutUs__RenderFunc(props: {
               className={classNames("all", sty.text)}
             >
               <div className={classNames("all", "__wab_text", sty.text__o4JiD)}>
-                {
-                  "Sterling Foods began over 55 years ago as a trusted partner to the U.S. military, developing technically advanced, custom food solutions designed to meet demanding performance, quality, and nutritional requirements."
-                }
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return $q.aboutUs.data.body.data.pageBy.pageContent
+                        .textArea[0].text;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "Sterling Foods began over 55 years ago as a trusted partner to the U.S. military, developing technically advanced, custom food solutions designed to meet demanding performance, quality, and nutritional requirements.";
+                      }
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
               </div>
               <div className={classNames("all", "__wab_text", sty.text__lyDF)}>
-                {
-                  "Today, our exceptional product quality along with our leading-edge ability to combine high-quality proteins\nwith artisan baked goods sets Sterling Foods apart. Backed by flexible manufacturing capabilities, an innovative mindset, and our customer-first approach, Sterling Foods is the partner of choice for leading brands looking\nfor unique, high-quality bakery solutions."
-                }
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return $q.aboutUs.data.body.data.pageBy.pageContent
+                        .textArea[1].text;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "Today, our exceptional product quality along with our leading-edge ability to combine high-quality proteins\nwith artisan baked goods sets Sterling Foods apart. Backed by flexible manufacturing capabilities, an innovative mindset, and our customer-first approach, Sterling Foods is the partner of choice for leading brands looking\nfor unique, high-quality bakery solutions.";
+                      }
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
               </div>
             </div>
             <div
@@ -401,7 +511,9 @@ function PlasmicAboutUs__RenderFunc(props: {
               />
 
               <div className={classNames("all", "__wab_text", sty.text__mdrFf)}>
-                {"Privetly Held"}
+                {hasVariant(globalVariants, "screen", "mediumDesktop")
+                  ? "Privately Held"
+                  : "Privetly Held"}
               </div>
             </div>
             <div

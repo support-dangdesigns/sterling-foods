@@ -91,6 +91,7 @@ export type PlasmicCtaBottom__OverridesType = {
   span?: Flex__<"span">;
   buttonContainer?: Flex__<"div">;
   primaryBtn?: Flex__<typeof PrimaryBtn>;
+  link?: Flex__<"a"> & Partial<LinkProps>;
 };
 
 export interface DefaultCtaBottomProps {
@@ -279,9 +280,23 @@ function PlasmicCtaBottom__RenderFunc(props: {
             data-plasmic-override={overrides.primaryBtn}
             className={classNames("__wab_instance", sty.primaryBtn)}
           >
-            <div className={classNames("all", "__wab_text", sty.text__wxI53)}>
+            <PlasmicLink__
+              data-plasmic-name={"link"}
+              data-plasmic-override={overrides.link}
+              className={classNames(
+                "all",
+                "a",
+                "a__uyaK1",
+                "__wab_text",
+                sty.link
+              )}
+              component={Link}
+              href={`/contact-us`}
+              legacyBehavior={false}
+              platform={"nextjs"}
+            >
               {"Start a Conversation"}
-            </div>
+            </PlasmicLink__>
           </PrimaryBtn>
         </div>
       </div>
@@ -290,12 +305,28 @@ function PlasmicCtaBottom__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  cta: ["cta", "freeBox", "frame52", "span", "buttonContainer", "primaryBtn"],
-  freeBox: ["freeBox", "frame52", "span", "buttonContainer", "primaryBtn"],
+  cta: [
+    "cta",
+    "freeBox",
+    "frame52",
+    "span",
+    "buttonContainer",
+    "primaryBtn",
+    "link"
+  ],
+  freeBox: [
+    "freeBox",
+    "frame52",
+    "span",
+    "buttonContainer",
+    "primaryBtn",
+    "link"
+  ],
   frame52: ["frame52", "span"],
   span: ["span"],
-  buttonContainer: ["buttonContainer", "primaryBtn"],
-  primaryBtn: ["primaryBtn"]
+  buttonContainer: ["buttonContainer", "primaryBtn", "link"],
+  primaryBtn: ["primaryBtn", "link"],
+  link: ["link"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -307,6 +338,7 @@ type NodeDefaultElementType = {
   span: "span";
   buttonContainer: "div";
   primaryBtn: typeof PrimaryBtn;
+  link: "a";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -376,6 +408,7 @@ export const PlasmicCtaBottom = Object.assign(
     span: makeNodeComponent("span"),
     buttonContainer: makeNodeComponent("buttonContainer"),
     primaryBtn: makeNodeComponent("primaryBtn"),
+    link: makeNodeComponent("link"),
 
     // Metadata about props expected for PlasmicCtaBottom
     internalVariantProps: PlasmicCtaBottom__VariantProps,

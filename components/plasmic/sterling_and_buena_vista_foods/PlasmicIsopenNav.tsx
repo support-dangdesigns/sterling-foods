@@ -1285,10 +1285,6 @@ function PlasmicIsopenNav__RenderFunc(props: {
           </PlasmicLink__>
         </div>
       </div>
-      <div
-        className={classNames("all", sty.freeBox__ml9Ja)}
-        data-navhoverhost={"true"}
-      />
     </div>
   ) as React.ReactElement | null;
 }

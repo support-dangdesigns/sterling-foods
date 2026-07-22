@@ -90,8 +90,8 @@ export type PlasmicCtaBottom__OverridesType = {
   frame52?: Flex__<"div">;
   span?: Flex__<"span">;
   buttonContainer?: Flex__<"div">;
-  primaryBtn?: Flex__<typeof PrimaryBtn>;
   link?: Flex__<"a"> & Partial<LinkProps>;
+  primaryBtn?: Flex__<typeof PrimaryBtn>;
 };
 
 export interface DefaultCtaBottomProps {
@@ -197,31 +197,86 @@ function PlasmicCtaBottom__RenderFunc(props: {
           data-plasmic-override={overrides.frame52}
           className={classNames("all", sty.frame52)}
         >
-          <div className={classNames("all", "__wab_text", sty.text__n2Use)}>
-            <React.Fragment>
-              <React.Fragment>{"Looking for a "}</React.Fragment>
-              {
-                <span
-                  data-plasmic-name={"span"}
-                  data-plasmic-override={overrides.span}
-                  className={classNames(
-                    "all",
-                    "span",
-                    "span__uyaK1",
-                    "__wab_text",
-                    "plasmic_default__inline",
-                    sty.span
-                  )}
-                >
-                  {hasVariant(globalVariants, "screen", "desktop")
-                    ? "bakery partner"
-                    : hasVariant(globalVariants, "screen", "large")
+          <div
+            className={classNames("all", "__wab_text", sty.text__n2Use, {
+              [sty.textmarketsPage_base2__n2UseEh6Eg]: hasVariant(
+                $state,
+                "marketsPage",
+                "base2"
+              )
+            })}
+          >
+            {hasVariant($state, "marketsPage", "base2") ? (
+              <React.Fragment>
+                <React.Fragment>{"Looking for a "}</React.Fragment>
+                {
+                  <span
+                    data-plasmic-name={"span"}
+                    data-plasmic-override={overrides.span}
+                    className={classNames(
+                      "all",
+                      "span",
+                      "span__uyaK1",
+                      "__wab_text",
+                      "plasmic_default__inline",
+                      sty.span,
+                      {
+                        [sty.spanmarketsPage_base2]: hasVariant(
+                          $state,
+                          "marketsPage",
+                          "base2"
+                        )
+                      }
+                    )}
+                  >
+                    {hasVariant($state, "marketsPage", "base2")
                       ? "bakery partner"
-                      : "bakery partner"}
-                </span>
-              }
-              <React.Fragment>{" that can grow with you?"}</React.Fragment>
-            </React.Fragment>
+                      : hasVariant(globalVariants, "screen", "desktop")
+                        ? "bakery partner"
+                        : hasVariant(globalVariants, "screen", "large")
+                          ? "bakery partner"
+                          : "bakery partner"}
+                  </span>
+                }
+                <React.Fragment>
+                  {" that understands your market?"}
+                </React.Fragment>
+              </React.Fragment>
+            ) : (
+              <React.Fragment>
+                <React.Fragment>{"Looking for a "}</React.Fragment>
+                {
+                  <span
+                    data-plasmic-name={"span"}
+                    data-plasmic-override={overrides.span}
+                    className={classNames(
+                      "all",
+                      "span",
+                      "span__uyaK1",
+                      "__wab_text",
+                      "plasmic_default__inline",
+                      sty.span,
+                      {
+                        [sty.spanmarketsPage_base2]: hasVariant(
+                          $state,
+                          "marketsPage",
+                          "base2"
+                        )
+                      }
+                    )}
+                  >
+                    {hasVariant($state, "marketsPage", "base2")
+                      ? "bakery partner"
+                      : hasVariant(globalVariants, "screen", "desktop")
+                        ? "bakery partner"
+                        : hasVariant(globalVariants, "screen", "large")
+                          ? "bakery partner"
+                          : "bakery partner"}
+                  </span>
+                }
+                <React.Fragment>{" that can grow with you?"}</React.Fragment>
+              </React.Fragment>
+            )}
           </div>
         </div>
         <div
@@ -241,29 +296,21 @@ function PlasmicCtaBottom__RenderFunc(props: {
                 ? "Let\u2019s create something exceptional together."
                 : "Let\u2019s create something exceptional together."}
         </div>
-        {(
-          hasVariant($state, "marketsPage", "base2")
-            ? true
-            : hasVariant(globalVariants, "screen", "largerMobile")
-              ? true
-              : false
-        ) ? (
-          <div
-            className={classNames("all", "__wab_text", sty.text___2EPm, {
-              [sty.textmarketsPage_base2___2EPmEh6Eg]: hasVariant(
-                $state,
-                "marketsPage",
-                "base2"
-              )
-            })}
-          >
-            {hasVariant(globalVariants, "screen", "desktop")
+        <div
+          className={classNames("all", "__wab_text", sty.text___2EPm, {
+            [sty.textmarketsPage_base2___2EPmEh6Eg]: hasVariant(
+              $state,
+              "marketsPage",
+              "base2"
+            )
+          })}
+        >
+          {hasVariant(globalVariants, "screen", "desktop")
+            ? "Let\u2019s create something exceptional together."
+            : hasVariant(globalVariants, "screen", "large")
               ? "Let\u2019s create something exceptional together."
-              : hasVariant(globalVariants, "screen", "large")
-                ? "Let\u2019s create something exceptional together."
-                : "Let\u2019s create something exceptional together."}
-          </div>
-        ) : null}
+              : "Let\u2019s create something exceptional together."}
+        </div>
         <div
           data-plasmic-name={"buttonContainer"}
           data-plasmic-override={overrides.buttonContainer}
@@ -275,29 +322,23 @@ function PlasmicCtaBottom__RenderFunc(props: {
             )
           })}
         >
-          <PrimaryBtn
-            data-plasmic-name={"primaryBtn"}
-            data-plasmic-override={overrides.primaryBtn}
-            className={classNames("__wab_instance", sty.primaryBtn)}
+          <PlasmicLink__
+            data-plasmic-name={"link"}
+            data-plasmic-override={overrides.link}
+            className={classNames("all", "a", "a__uyaK1", sty.link)}
+            component={Link}
+            href={`/contact-us`}
+            legacyBehavior={false}
+            platform={"nextjs"}
           >
-            <PlasmicLink__
-              data-plasmic-name={"link"}
-              data-plasmic-override={overrides.link}
-              className={classNames(
-                "all",
-                "a",
-                "a__uyaK1",
-                "__wab_text",
-                sty.link
-              )}
-              component={Link}
-              href={`/contact-us`}
-              legacyBehavior={false}
-              platform={"nextjs"}
+            <PrimaryBtn
+              data-plasmic-name={"primaryBtn"}
+              data-plasmic-override={overrides.primaryBtn}
+              className={classNames("__wab_instance", sty.primaryBtn)}
             >
               {"Start a Conversation"}
-            </PlasmicLink__>
-          </PrimaryBtn>
+            </PrimaryBtn>
+          </PlasmicLink__>
         </div>
       </div>
     </div>
@@ -311,22 +352,22 @@ const PlasmicDescendants = {
     "frame52",
     "span",
     "buttonContainer",
-    "primaryBtn",
-    "link"
+    "link",
+    "primaryBtn"
   ],
   freeBox: [
     "freeBox",
     "frame52",
     "span",
     "buttonContainer",
-    "primaryBtn",
-    "link"
+    "link",
+    "primaryBtn"
   ],
   frame52: ["frame52", "span"],
   span: ["span"],
-  buttonContainer: ["buttonContainer", "primaryBtn", "link"],
-  primaryBtn: ["primaryBtn", "link"],
-  link: ["link"]
+  buttonContainer: ["buttonContainer", "link", "primaryBtn"],
+  link: ["link", "primaryBtn"],
+  primaryBtn: ["primaryBtn"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -337,8 +378,8 @@ type NodeDefaultElementType = {
   frame52: "div";
   span: "span";
   buttonContainer: "div";
-  primaryBtn: typeof PrimaryBtn;
   link: "a";
+  primaryBtn: typeof PrimaryBtn;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -407,8 +448,8 @@ export const PlasmicCtaBottom = Object.assign(
     frame52: makeNodeComponent("frame52"),
     span: makeNodeComponent("span"),
     buttonContainer: makeNodeComponent("buttonContainer"),
-    primaryBtn: makeNodeComponent("primaryBtn"),
     link: makeNodeComponent("link"),
+    primaryBtn: makeNodeComponent("primaryBtn"),
 
     // Metadata about props expected for PlasmicCtaBottom
     internalVariantProps: PlasmicCtaBottom__VariantProps,

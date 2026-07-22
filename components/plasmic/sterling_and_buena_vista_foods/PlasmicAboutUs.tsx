@@ -513,7 +513,7 @@ function PlasmicAboutUs__RenderFunc(props: {
               <div className={classNames("all", "__wab_text", sty.text__mdrFf)}>
                 {hasVariant(globalVariants, "screen", "mediumDesktop")
                   ? "Privately Held"
-                  : "Privetly Held"}
+                  : "Privately Held"}
               </div>
             </div>
             <div
@@ -557,12 +557,46 @@ function PlasmicAboutUs__RenderFunc(props: {
                     sty.h1__ha1KI
                   )}
                 >
-                  {"6"}
+                  {hasVariant(globalVariants, "screen", "mediumDesktop") ? (
+                    <React.Fragment>{undefined}</React.Fragment>
+                  ) : (
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $q.aboutUs.data.body.data.pageBy.pageContent
+                            .textArea[2].text;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "6";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
+                  )}
                 </h1>
                 <div
                   className={classNames("all", "__wab_text", sty.text__tKMx)}
                 >
-                  {"Manufacturing Facilities"}
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $q.aboutUs.data.body.data.pageBy.pageContent
+                          .textArea[3].text;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "Manufacturing Facilities";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
                 </div>
               </div>
               <div
@@ -615,12 +649,42 @@ function PlasmicAboutUs__RenderFunc(props: {
                 <div
                   className={classNames("all", "__wab_text", sty.text__ixm9)}
                 >
-                  {"Why"}
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $q.aboutUs.data.body.data.pageBy.pageContent
+                          .headlineParent[1].headlinechild[0].headlinenormal;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "Why";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
                 </div>
                 <div
                   className={classNames("all", "__wab_text", sty.text__d5SCr)}
                 >
-                  {"Sterling Foods"}
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $q.aboutUs.data.body.data.pageBy.pageContent
+                          .headlineParent[1].headlinechild[0].headlinefav;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "Sterling Foods";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
                 </div>
               </div>
               <div

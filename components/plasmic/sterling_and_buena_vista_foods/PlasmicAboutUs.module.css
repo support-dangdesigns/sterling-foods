@@ -991,6 +991,7 @@
   font-size: 24px;
   color: var(--token-Xx7oe00aHq8H);
   line-height: 26px;
+  padding-top: 0px;
   min-width: 0;
 }
 .text___2WnOh {
@@ -1267,6 +1268,7 @@
   font-family: "Georgia";
   font-size: var(--token-EBGyLHrpfttb);
   line-height: 60px;
+  padding-top: 0px;
   min-width: 0;
 }
 @media (max-width: 757px) {
@@ -2130,6 +2132,7 @@
   color: var(--token-Q67gH6ouJM2i);
   text-align: center;
   align-self: center;
+  margin-bottom: 0px;
 }
 @media (max-width: 757px) {
   .text__bnCbi {

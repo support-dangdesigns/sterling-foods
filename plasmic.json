@@ -27531,19 +27531,6 @@
           "componentType": "component"
         },
         {
-          "id": "vaN8Gezs179c",
-          "name": "CtaBtn",
-          "type": "managed",
-          "projectId": "uyaK17nhz8WhGjYZfKjMhX",
-          "renderModuleFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicCtaBtn.tsx",
-          "importSpec": {
-            "modulePath": "CtaBtn.tsx"
-          },
-          "cssFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicCtaBtn.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
           "id": "5db6kxlVpzXq",
           "name": "SocialBtns",
           "type": "managed",

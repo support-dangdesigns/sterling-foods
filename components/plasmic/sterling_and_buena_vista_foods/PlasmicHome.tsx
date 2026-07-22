@@ -156,6 +156,7 @@ export type PlasmicHome__OverridesType = {
   image2?: Flex__<"div">;
   innovationResponsive?: Flex__<"div">;
   buttons?: Flex__<"div">;
+  qualitySafetyLink?: Flex__<"a"> & Partial<LinkProps>;
   reviews?: Flex__<typeof Reviews>;
   ctaBottom?: Flex__<typeof CtaBottom>;
   homeFooter?: Flex__<"div">;
@@ -1335,58 +1336,71 @@ function PlasmicHome__RenderFunc(props: {
                           </React.Fragment>
                         </div>
                       </div>
-                      <PrimaryBtn
+                      <PlasmicLink__
                         className={classNames(
-                          "__wab_instance",
-                          sty.primaryBtn__gurqP
+                          "all",
+                          "a",
+                          "a__uyaK1",
+                          sty.link__hcDpt
                         )}
+                        component={Link}
+                        href={`/markets`}
+                        legacyBehavior={false}
+                        platform={"nextjs"}
                       >
-                        <div
+                        <PrimaryBtn
                           className={classNames(
-                            "all",
-                            "__wab_text",
-                            sty.text__c0Kxh
+                            "__wab_instance",
+                            sty.primaryBtn__gurqP
                           )}
                         >
-                          {hasVariant(globalVariants, "screen", "large") ? (
-                            <React.Fragment>
-                              {(() => {
-                                try {
-                                  return $q.homePage.data.body.data.pageBy
-                                    .pageContent.button[3].text;
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return "View All Markets";
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__c0Kxh
+                            )}
+                          >
+                            {hasVariant(globalVariants, "screen", "large") ? (
+                              <React.Fragment>
+                                {(() => {
+                                  try {
+                                    return $q.homePage.data.body.data.pageBy
+                                      .pageContent.button[3].text;
+                                  } catch (e) {
+                                    if (
+                                      e instanceof TypeError ||
+                                      e?.plasmicType ===
+                                        "PlasmicUndefinedDataError"
+                                    ) {
+                                      return "View All Markets";
+                                    }
+                                    throw e;
                                   }
-                                  throw e;
-                                }
-                              })()}
-                            </React.Fragment>
-                          ) : (
-                            <React.Fragment>
-                              {(() => {
-                                try {
-                                  return $queries.wpGraph.data.response.data
-                                    .pageBy.pageContent.button[3].text;
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return "View All Markets";
+                                })()}
+                              </React.Fragment>
+                            ) : (
+                              <React.Fragment>
+                                {(() => {
+                                  try {
+                                    return $queries.wpGraph.data.response.data
+                                      .pageBy.pageContent.button[3].text;
+                                  } catch (e) {
+                                    if (
+                                      e instanceof TypeError ||
+                                      e?.plasmicType ===
+                                        "PlasmicUndefinedDataError"
+                                    ) {
+                                      return "View All Markets";
+                                    }
+                                    throw e;
                                   }
-                                  throw e;
-                                }
-                              })()}
-                            </React.Fragment>
-                          )}
-                        </div>
-                      </PrimaryBtn>
+                                })()}
+                              </React.Fragment>
+                            )}
+                          </div>
+                        </PrimaryBtn>
+                      </PlasmicLink__>
                     </div>
                     <div
                       data-plasmic-name={"image2"}
@@ -1527,58 +1541,73 @@ function PlasmicHome__RenderFunc(props: {
                           )}
                         </div>
                       </SecondaryBtn>
-                      <SecondaryBtn
+                      <PlasmicLink__
+                        data-plasmic-name={"qualitySafetyLink"}
+                        data-plasmic-override={overrides.qualitySafetyLink}
                         className={classNames(
-                          "__wab_instance",
-                          sty.secondaryBtn__xb607
+                          "all",
+                          "a",
+                          "a__uyaK1",
+                          sty.qualitySafetyLink
                         )}
+                        component={Link}
+                        href={`/quality-safety`}
+                        legacyBehavior={false}
+                        platform={"nextjs"}
                       >
-                        <div
+                        <SecondaryBtn
                           className={classNames(
-                            "all",
-                            "__wab_text",
-                            sty.text__acejO
+                            "__wab_instance",
+                            sty.secondaryBtn__xb607
                           )}
                         >
-                          {hasVariant(globalVariants, "screen", "large") ? (
-                            <React.Fragment>
-                              {(() => {
-                                try {
-                                  return $q.homePage.data.body.data.pageBy
-                                    .pageContent.button[5].text;
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return "Explore Quality & Safety";
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__acejO
+                            )}
+                          >
+                            {hasVariant(globalVariants, "screen", "large") ? (
+                              <React.Fragment>
+                                {(() => {
+                                  try {
+                                    return $q.homePage.data.body.data.pageBy
+                                      .pageContent.button[5].text;
+                                  } catch (e) {
+                                    if (
+                                      e instanceof TypeError ||
+                                      e?.plasmicType ===
+                                        "PlasmicUndefinedDataError"
+                                    ) {
+                                      return "Explore Quality & Safety";
+                                    }
+                                    throw e;
                                   }
-                                  throw e;
-                                }
-                              })()}
-                            </React.Fragment>
-                          ) : (
-                            <React.Fragment>
-                              {(() => {
-                                try {
-                                  return $queries.wpGraph.data.response.data
-                                    .pageBy.pageContent.button[5].text;
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return "Explore Quality & Safety";
+                                })()}
+                              </React.Fragment>
+                            ) : (
+                              <React.Fragment>
+                                {(() => {
+                                  try {
+                                    return $queries.wpGraph.data.response.data
+                                      .pageBy.pageContent.button[5].text;
+                                  } catch (e) {
+                                    if (
+                                      e instanceof TypeError ||
+                                      e?.plasmicType ===
+                                        "PlasmicUndefinedDataError"
+                                    ) {
+                                      return "Explore Quality & Safety";
+                                    }
+                                    throw e;
                                   }
-                                  throw e;
-                                }
-                              })()}
-                            </React.Fragment>
-                          )}
-                        </div>
-                      </SecondaryBtn>
+                                })()}
+                              </React.Fragment>
+                            )}
+                          </div>
+                        </SecondaryBtn>
+                      </PlasmicLink__>
                     </div>
                   </div>
                 </div>
@@ -1648,6 +1677,7 @@ const PlasmicDescendants = {
     "image2",
     "innovationResponsive",
     "buttons",
+    "qualitySafetyLink",
     "reviews",
     "ctaBottom",
     "homeFooter",
@@ -1675,6 +1705,7 @@ const PlasmicDescendants = {
     "image2",
     "innovationResponsive",
     "buttons",
+    "qualitySafetyLink",
     "reviews",
     "ctaBottom",
     "homeFooter",
@@ -1700,6 +1731,7 @@ const PlasmicDescendants = {
     "image2",
     "innovationResponsive",
     "buttons",
+    "qualitySafetyLink",
     "reviews",
     "ctaBottom"
   ],
@@ -1731,8 +1763,13 @@ const PlasmicDescendants = {
   ],
   text2: ["text2"],
   image2: ["image2"],
-  innovationResponsive: ["innovationResponsive", "buttons"],
-  buttons: ["buttons"],
+  innovationResponsive: [
+    "innovationResponsive",
+    "buttons",
+    "qualitySafetyLink"
+  ],
+  buttons: ["buttons", "qualitySafetyLink"],
+  qualitySafetyLink: ["qualitySafetyLink"],
   reviews: ["reviews"],
   ctaBottom: ["ctaBottom"],
   homeFooter: ["homeFooter", "footer"],
@@ -1764,6 +1801,7 @@ type NodeDefaultElementType = {
   image2: "div";
   innovationResponsive: "div";
   buttons: "div";
+  qualitySafetyLink: "a";
   reviews: typeof Reviews;
   ctaBottom: typeof CtaBottom;
   homeFooter: "div";
@@ -1855,6 +1893,7 @@ export const PlasmicHome = Object.assign(
     image2: makeNodeComponent("image2"),
     innovationResponsive: makeNodeComponent("innovationResponsive"),
     buttons: makeNodeComponent("buttons"),
+    qualitySafetyLink: makeNodeComponent("qualitySafetyLink"),
     reviews: makeNodeComponent("reviews"),
     ctaBottom: makeNodeComponent("ctaBottom"),
     homeFooter: makeNodeComponent("homeFooter"),

@@ -298,15 +298,14 @@ function PlasmicHome__RenderFunc(props: {
             ""
           )}
         >
+          <Header className={classNames("__wab_instance", sty.header__o4Nex)} />
+
           <div
             data-plasmic-name={"header"}
             data-plasmic-override={overrides.header}
             className={classNames("all", sty.header)}
-          >
-            <Header
-              className={classNames("__wab_instance", sty.header__o4Nex)}
-            />
-          </div>
+          />
+
           <div
             data-plasmic-name={"homeHero"}
             data-plasmic-override={overrides.homeHero}

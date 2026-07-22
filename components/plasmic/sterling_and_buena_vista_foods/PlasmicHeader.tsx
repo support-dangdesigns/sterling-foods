@@ -222,7 +222,9 @@ function PlasmicHeader__RenderFunc(props: {
               href={
                 hasVariant(globalVariants, "screen", "mediumDesktop")
                   ? `/`
-                  : undefined
+                  : hasVariant(globalVariants, "screen", "large")
+                    ? `/`
+                    : `/`
               }
               legacyBehavior={false}
               onClick={async event => {
@@ -279,7 +281,7 @@ function PlasmicHeader__RenderFunc(props: {
                 linkTo={
                   hasVariant(globalVariants, "screen", "mediumDesktop")
                     ? `/contact-us`
-                    : undefined
+                    : `/contact-us`
                 }
                 start={
                   <CircleIcon

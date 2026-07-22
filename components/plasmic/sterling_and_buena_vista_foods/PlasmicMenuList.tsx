@@ -68,10 +68,29 @@ import sty from "./PlasmicMenuList.module.css"; // plasmic-import: -6leV5wneOe9/
 
 createPlasmicElementProxy;
 
-export type PlasmicMenuList__VariantMembers = {};
-export type PlasmicMenuList__VariantsArgs = {};
+export type PlasmicMenuList__VariantMembers = {
+  current:
+    | "aboutUs"
+    | "capabilities"
+    | "markets"
+    | "ourFacilities"
+    | "qualitySafety"
+    | "careers";
+};
+export type PlasmicMenuList__VariantsArgs = {
+  current?: SingleChoiceArg<
+    | "aboutUs"
+    | "capabilities"
+    | "markets"
+    | "ourFacilities"
+    | "qualitySafety"
+    | "careers"
+  >;
+};
 type VariantPropType = keyof PlasmicMenuList__VariantsArgs;
-export const PlasmicMenuList__VariantProps = new Array<VariantPropType>();
+export const PlasmicMenuList__VariantProps = new Array<VariantPropType>(
+  "current"
+);
 
 export type PlasmicMenuList__ArgsType = {};
 type ArgPropType = keyof PlasmicMenuList__ArgsType;
@@ -82,6 +101,14 @@ export type PlasmicMenuList__OverridesType = {
 };
 
 export interface DefaultMenuListProps {
+  current?: SingleChoiceArg<
+    | "aboutUs"
+    | "capabilities"
+    | "markets"
+    | "ourFacilities"
+    | "qualitySafety"
+    | "careers"
+  >;
   className?: string;
 }
 
@@ -124,7 +151,47 @@ function PlasmicMenuList__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
+  const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
+    () => [
+      {
+        path: "current",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) =>
+          (() => {
+            try {
+              return {
+                "/about-us": "aboutUs",
+                "/capabilities": "capabilities",
+                "/markets": "markets",
+                "/our-facilities": "ourFacilities",
+                "/quality-safety": "qualitySafety",
+                "/careers": "careers"
+              }[typeof location !== "undefined" ? location.pathname : ""];
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return undefined;
+              }
+              throw e;
+            }
+          })() ?? $props.current
+      }
+    ],
+    [$props, $ctx, $refs]
+  );
+
   const globalVariants = _useGlobalVariants();
+
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: {},
+    $q: {},
+    $refs
+  });
 
   const styleTokensClassNames = _useStyleTokens();
 
@@ -149,12 +216,28 @@ function PlasmicMenuList__RenderFunc(props: {
         href={
           hasVariant(globalVariants, "screen", "large")
             ? `/about-us`
-            : undefined
+            : "/about-us"
         }
         legacyBehavior={false}
         platform={"nextjs"}
       >
-        <div className={classNames("all", "__wab_text", sty.text__egVfI)}>
+        <div
+          className={classNames("all", "__wab_text", sty.text__egVfI, {
+            [sty.textcurrent_aboutUs__egVfI1RAfk]: hasVariant(
+              $state,
+              "current",
+              "aboutUs"
+            )
+          })}
+          style={
+            hasVariant($state, "current", "aboutUs")
+              ? {
+                  textDecorationColor: "var(--token-VSsNRyw2VYkH)",
+                  textUnderlineOffset: "4px"
+                }
+              : undefined
+          }
+        >
           {"About Us"}
         </div>
       </PlasmicLink__>
@@ -164,12 +247,28 @@ function PlasmicMenuList__RenderFunc(props: {
         href={
           hasVariant(globalVariants, "screen", "large")
             ? `/capabilities`
-            : undefined
+            : "/capabilities"
         }
         legacyBehavior={false}
         platform={"nextjs"}
       >
-        <div className={classNames("all", "__wab_text", sty.text__vX5PD)}>
+        <div
+          className={classNames("all", "__wab_text", sty.text__vX5PD, {
+            [sty.textcurrent_capabilities__vX5PDnWrPh]: hasVariant(
+              $state,
+              "current",
+              "capabilities"
+            )
+          })}
+          style={
+            hasVariant($state, "current", "capabilities")
+              ? {
+                  textDecorationColor: "var(--token-VSsNRyw2VYkH)",
+                  textUnderlineOffset: "4px"
+                }
+              : undefined
+          }
+        >
           <React.Fragment>
             <span
               className={
@@ -186,12 +285,30 @@ function PlasmicMenuList__RenderFunc(props: {
         className={classNames("all", "a", "a__uyaK1", sty.link__nl7P)}
         component={Link}
         href={
-          hasVariant(globalVariants, "screen", "large") ? `/markets` : undefined
+          hasVariant(globalVariants, "screen", "large")
+            ? `/markets`
+            : "/markets"
         }
         legacyBehavior={false}
         platform={"nextjs"}
       >
-        <div className={classNames("all", "__wab_text", sty.text___0V80P)}>
+        <div
+          className={classNames("all", "__wab_text", sty.text___0V80P, {
+            [sty.textcurrent_markets___0V80PIcs7Q]: hasVariant(
+              $state,
+              "current",
+              "markets"
+            )
+          })}
+          style={
+            hasVariant($state, "current", "markets")
+              ? {
+                  textDecorationColor: "var(--token-VSsNRyw2VYkH)",
+                  textUnderlineOffset: "4px"
+                }
+              : undefined
+          }
+        >
           {"Markets"}
         </div>
       </PlasmicLink__>
@@ -201,12 +318,28 @@ function PlasmicMenuList__RenderFunc(props: {
         href={
           hasVariant(globalVariants, "screen", "large")
             ? `/our-facilities`
-            : undefined
+            : "/our-facilities"
         }
         legacyBehavior={false}
         platform={"nextjs"}
       >
-        <div className={classNames("all", "__wab_text", sty.text__kOnNl)}>
+        <div
+          className={classNames("all", "__wab_text", sty.text__kOnNl, {
+            [sty.textcurrent_ourFacilities__kOnNl8BTpx]: hasVariant(
+              $state,
+              "current",
+              "ourFacilities"
+            )
+          })}
+          style={
+            hasVariant($state, "current", "ourFacilities")
+              ? {
+                  textDecorationColor: "var(--token-VSsNRyw2VYkH)",
+                  textUnderlineOffset: "4px"
+                }
+              : undefined
+          }
+        >
           {"Our Facilities"}
         </div>
       </PlasmicLink__>
@@ -216,12 +349,28 @@ function PlasmicMenuList__RenderFunc(props: {
         href={
           hasVariant(globalVariants, "screen", "large")
             ? `/quality-safety`
-            : undefined
+            : "/quality-safety"
         }
         legacyBehavior={false}
         platform={"nextjs"}
       >
-        <div className={classNames("all", "__wab_text", sty.text___11Aoz)}>
+        <div
+          className={classNames("all", "__wab_text", sty.text___11Aoz, {
+            [sty.textcurrent_qualitySafety___11AozvZhXb]: hasVariant(
+              $state,
+              "current",
+              "qualitySafety"
+            )
+          })}
+          style={
+            hasVariant($state, "current", "qualitySafety")
+              ? {
+                  textDecorationColor: "var(--token-VSsNRyw2VYkH)",
+                  textUnderlineOffset: "4px"
+                }
+              : undefined
+          }
+        >
           {"Quality & Safety"}
         </div>
       </PlasmicLink__>
@@ -229,12 +378,30 @@ function PlasmicMenuList__RenderFunc(props: {
         className={classNames("all", "a", "a__uyaK1", sty.link___5USgH)}
         component={Link}
         href={
-          hasVariant(globalVariants, "screen", "large") ? `/careers` : undefined
+          hasVariant(globalVariants, "screen", "large")
+            ? `/careers`
+            : "/careers"
         }
         legacyBehavior={false}
         platform={"nextjs"}
       >
-        <div className={classNames("all", "__wab_text", sty.text__eLs7R)}>
+        <div
+          className={classNames("all", "__wab_text", sty.text__eLs7R, {
+            [sty.textcurrent_careers__eLs7RgAaqf]: hasVariant(
+              $state,
+              "current",
+              "careers"
+            )
+          })}
+          style={
+            hasVariant($state, "current", "careers")
+              ? {
+                  textDecorationColor: "var(--token-VSsNRyw2VYkH)",
+                  textUnderlineOffset: "4px"
+                }
+              : undefined
+          }
+        >
           {"Careers"}
         </div>
       </PlasmicLink__>

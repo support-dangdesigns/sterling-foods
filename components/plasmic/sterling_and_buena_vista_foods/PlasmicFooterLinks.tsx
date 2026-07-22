@@ -68,14 +68,28 @@ import sty from "./PlasmicFooterLinks.module.css"; // plasmic-import: oZjw7jibmi
 
 createPlasmicElementProxy;
 
-export type PlasmicFooterLinks__VariantMembers = {};
-export type PlasmicFooterLinks__VariantsArgs = {};
+export type PlasmicFooterLinks__VariantMembers = {
+  active: "active";
+};
+export type PlasmicFooterLinks__VariantsArgs = {
+  active?: SingleBooleanChoiceArg<"active">;
+};
 type VariantPropType = keyof PlasmicFooterLinks__VariantsArgs;
-export const PlasmicFooterLinks__VariantProps = new Array<VariantPropType>();
+export const PlasmicFooterLinks__VariantProps = new Array<VariantPropType>(
+  "active"
+);
 
-export type PlasmicFooterLinks__ArgsType = { children?: React.ReactNode };
+export type PlasmicFooterLinks__ArgsType = {
+  children?: React.ReactNode;
+  linkPath?: string;
+  onLinkPathChange?: (val: string) => void;
+};
 type ArgPropType = keyof PlasmicFooterLinks__ArgsType;
-export const PlasmicFooterLinks__ArgProps = new Array<ArgPropType>("children");
+export const PlasmicFooterLinks__ArgProps = new Array<ArgPropType>(
+  "children",
+  "linkPath",
+  "onLinkPathChange"
+);
 
 export type PlasmicFooterLinks__OverridesType = {
   root?: Flex__<"a"> & Partial<LinkProps>;
@@ -83,6 +97,9 @@ export type PlasmicFooterLinks__OverridesType = {
 
 export interface DefaultFooterLinksProps {
   children?: React.ReactNode;
+  linkPath?: string;
+  onLinkPathChange?: (val: string) => void;
+  active?: SingleBooleanChoiceArg<"active">;
   className?: string;
 }
 
@@ -125,7 +142,49 @@ function PlasmicFooterLinks__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const globalVariants = _useGlobalVariants();
+  const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
+    () => [
+      {
+        path: "active",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) =>
+          (() => {
+            try {
+              return (
+                typeof location !== "undefined" &&
+                location.pathname === $state.linkPath
+              );
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return undefined;
+              }
+              throw e;
+            }
+          })() ?? $props.active
+      },
+      {
+        path: "linkPath",
+        type: "writable",
+        variableType: "text",
+
+        valueProp: "linkPath",
+        onChangeProp: "onLinkPathChange"
+      }
+    ],
+    [$props, $ctx, $refs]
+  );
+
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: {},
+    $q: {},
+    $refs
+  });
 
   const styleTokensClassNames = _useStyleTokens();
 
@@ -143,16 +202,28 @@ function PlasmicFooterLinks__RenderFunc(props: {
         "plasmic_default_styles",
         "plasmic_mixins",
         styleTokensClassNames,
-        sty.root
+        sty.root,
+        { [sty.rootactive]: hasVariant($state, "active", "active") }
       )}
       component={Link}
+      href={$state.linkPath}
       legacyBehavior={false}
       platform={"nextjs"}
+      style={
+        hasVariant($state, "active", "active")
+          ? {
+              textDecorationColor: "var(--token-VSsNRyw2VYkH)",
+              textUnderlineOffset: "4px"
+            }
+          : undefined
+      }
     >
       {renderPlasmicSlot({
         defaultContents: "Enter some text",
         value: args.children,
-        className: classNames(sty.slotTargetChildren)
+        className: classNames(sty.slotTargetChildren, {
+          [sty.slotTargetChildrenactive]: hasVariant($state, "active", "active")
+        })
       })}
     </PlasmicLink__>
   ) as React.ReactElement | null;

@@ -9,6 +9,11 @@
   align-items: center;
   min-width: 0;
 }
+.rootactive {
+  color: var(--token-VSsNRyw2VYkH);
+  font-weight: 700;
+  text-decoration-line: underline;
+}
 .root:hover:hover {
   border-bottom: 1.5px solid var(--token-VSsNRyw2VYkH);
 }

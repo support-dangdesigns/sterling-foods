@@ -108,9 +108,13 @@ export type PlasmicFooter__OverridesType = {
   address8?: Flex__<"div">;
   address9?: Flex__<"div">;
   footerMenu?: Flex__<"div">;
+  footerLinks?: Flex__<typeof FooterLinks>;
   clientLogin?: Flex__<"div">;
+  footerLinks2?: Flex__<typeof FooterLinks>;
+  footerLinks3?: Flex__<typeof FooterLinks>;
   clientLogin3?: Flex__<"div">;
   terms?: Flex__<typeof FooterLinks>;
+  footerLinks4?: Flex__<typeof FooterLinks>;
   clientLogin5?: Flex__<"div">;
   colorBar?: Flex__<"div">;
 };
@@ -173,6 +177,37 @@ function PlasmicFooter__RenderFunc(props: {
           "activePanelId",
           AntdAccordion_Helpers
         )
+      },
+      {
+        path: "footerLinks.linkPath",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => ""
+      },
+      {
+        path: "footerLinks2.linkPath",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => ""
+      },
+      {
+        path: "footerLinks3.linkPath",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => ""
+      },
+      {
+        path: "terms.linkPath",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) =>
+          "/terms-and-conditions"
+      },
+      {
+        path: "footerLinks4.linkPath",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => ""
       }
     ],
     [$props, $ctx, $refs]
@@ -554,7 +589,27 @@ function PlasmicFooter__RenderFunc(props: {
             className={classNames("all", sty.footerMenu)}
           >
             <FooterLinks
-              className={classNames("__wab_instance", sty.footerLinks__mnfMc)}
+              data-plasmic-name={"footerLinks"}
+              data-plasmic-override={overrides.footerLinks}
+              className={classNames("__wab_instance", sty.footerLinks)}
+              linkPath={generateStateValueProp($state, [
+                "footerLinks",
+                "linkPath"
+              ])}
+              onLinkPathChange={async (...eventArgs: any) => {
+                generateStateOnChangeProp($state, [
+                  "footerLinks",
+                  "linkPath"
+                ]).apply(null, eventArgs);
+
+                if (
+                  eventArgs.length > 1 &&
+                  eventArgs[1] &&
+                  eventArgs[1]._plasmic_state_init_
+                ) {
+                  return;
+                }
+              }}
             >
               <div
                 data-plasmic-name={"clientLogin"}
@@ -569,7 +624,27 @@ function PlasmicFooter__RenderFunc(props: {
             />
 
             <FooterLinks
-              className={classNames("__wab_instance", sty.footerLinks__yryc)}
+              data-plasmic-name={"footerLinks2"}
+              data-plasmic-override={overrides.footerLinks2}
+              className={classNames("__wab_instance", sty.footerLinks2)}
+              linkPath={generateStateValueProp($state, [
+                "footerLinks2",
+                "linkPath"
+              ])}
+              onLinkPathChange={async (...eventArgs: any) => {
+                generateStateOnChangeProp($state, [
+                  "footerLinks2",
+                  "linkPath"
+                ]).apply(null, eventArgs);
+
+                if (
+                  eventArgs.length > 1 &&
+                  eventArgs[1] &&
+                  eventArgs[1]._plasmic_state_init_
+                ) {
+                  return;
+                }
+              }}
             >
               <div className={classNames("all", "__wab_text", sty.text__zzEq3)}>
                 {"Privacy Policy"}
@@ -580,7 +655,27 @@ function PlasmicFooter__RenderFunc(props: {
             />
 
             <FooterLinks
-              className={classNames("__wab_instance", sty.footerLinks___1Pm4C)}
+              data-plasmic-name={"footerLinks3"}
+              data-plasmic-override={overrides.footerLinks3}
+              className={classNames("__wab_instance", sty.footerLinks3)}
+              linkPath={generateStateValueProp($state, [
+                "footerLinks3",
+                "linkPath"
+              ])}
+              onLinkPathChange={async (...eventArgs: any) => {
+                generateStateOnChangeProp($state, [
+                  "footerLinks3",
+                  "linkPath"
+                ]).apply(null, eventArgs);
+
+                if (
+                  eventArgs.length > 1 &&
+                  eventArgs[1] &&
+                  eventArgs[1]._plasmic_state_init_
+                ) {
+                  return;
+                }
+              }}
             >
               <div
                 data-plasmic-name={"clientLogin3"}
@@ -643,6 +738,21 @@ function PlasmicFooter__RenderFunc(props: {
                 data-plasmic-name={"terms"}
                 data-plasmic-override={overrides.terms}
                 className={classNames("__wab_instance", sty.terms)}
+                linkPath={generateStateValueProp($state, ["terms", "linkPath"])}
+                onLinkPathChange={async (...eventArgs: any) => {
+                  generateStateOnChangeProp($state, [
+                    "terms",
+                    "linkPath"
+                  ]).apply(null, eventArgs);
+
+                  if (
+                    eventArgs.length > 1 &&
+                    eventArgs[1] &&
+                    eventArgs[1]._plasmic_state_init_
+                  ) {
+                    return;
+                  }
+                }}
               >
                 <div
                   className={classNames("all", "__wab_text", sty.text__hYKe)}
@@ -656,7 +766,27 @@ function PlasmicFooter__RenderFunc(props: {
             />
 
             <FooterLinks
-              className={classNames("__wab_instance", sty.footerLinks__o5CAc)}
+              data-plasmic-name={"footerLinks4"}
+              data-plasmic-override={overrides.footerLinks4}
+              className={classNames("__wab_instance", sty.footerLinks4)}
+              linkPath={generateStateValueProp($state, [
+                "footerLinks4",
+                "linkPath"
+              ])}
+              onLinkPathChange={async (...eventArgs: any) => {
+                generateStateOnChangeProp($state, [
+                  "footerLinks4",
+                  "linkPath"
+                ]).apply(null, eventArgs);
+
+                if (
+                  eventArgs.length > 1 &&
+                  eventArgs[1] &&
+                  eventArgs[1]._plasmic_state_init_
+                ) {
+                  return;
+                }
+              }}
             >
               <div
                 data-plasmic-name={"clientLogin5"}
@@ -743,9 +873,13 @@ const PlasmicDescendants = {
     "address8",
     "address9",
     "footerMenu",
+    "footerLinks",
     "clientLogin",
+    "footerLinks2",
+    "footerLinks3",
     "clientLogin3",
     "terms",
+    "footerLinks4",
     "clientLogin5",
     "colorBar"
   ],
@@ -767,9 +901,13 @@ const PlasmicDescendants = {
     "address8",
     "address9",
     "footerMenu",
+    "footerLinks",
     "clientLogin",
+    "footerLinks2",
+    "footerLinks3",
     "clientLogin3",
     "terms",
+    "footerLinks4",
     "clientLogin5"
   ],
   topChild: [
@@ -807,14 +945,22 @@ const PlasmicDescendants = {
   address9: ["address9"],
   footerMenu: [
     "footerMenu",
+    "footerLinks",
     "clientLogin",
+    "footerLinks2",
+    "footerLinks3",
     "clientLogin3",
     "terms",
+    "footerLinks4",
     "clientLogin5"
   ],
+  footerLinks: ["footerLinks", "clientLogin"],
   clientLogin: ["clientLogin"],
+  footerLinks2: ["footerLinks2"],
+  footerLinks3: ["footerLinks3", "clientLogin3"],
   clientLogin3: ["clientLogin3"],
   terms: ["terms"],
+  footerLinks4: ["footerLinks4", "clientLogin5"],
   clientLogin5: ["clientLogin5"],
   colorBar: ["colorBar"]
 } as const;
@@ -840,9 +986,13 @@ type NodeDefaultElementType = {
   address8: "div";
   address9: "div";
   footerMenu: "div";
+  footerLinks: typeof FooterLinks;
   clientLogin: "div";
+  footerLinks2: typeof FooterLinks;
+  footerLinks3: typeof FooterLinks;
   clientLogin3: "div";
   terms: typeof FooterLinks;
+  footerLinks4: typeof FooterLinks;
   clientLogin5: "div";
   colorBar: "div";
 };
@@ -926,9 +1076,13 @@ export const PlasmicFooter = Object.assign(
     address8: makeNodeComponent("address8"),
     address9: makeNodeComponent("address9"),
     footerMenu: makeNodeComponent("footerMenu"),
+    footerLinks: makeNodeComponent("footerLinks"),
     clientLogin: makeNodeComponent("clientLogin"),
+    footerLinks2: makeNodeComponent("footerLinks2"),
+    footerLinks3: makeNodeComponent("footerLinks3"),
     clientLogin3: makeNodeComponent("clientLogin3"),
     terms: makeNodeComponent("terms"),
+    footerLinks4: makeNodeComponent("footerLinks4"),
     clientLogin5: makeNodeComponent("clientLogin5"),
     colorBar: makeNodeComponent("colorBar"),
 

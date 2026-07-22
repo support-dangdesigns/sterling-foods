@@ -124,8 +124,6 @@ function PlasmicMenuItemsLinks__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const globalVariants = _useGlobalVariants();
-
   const styleTokensClassNames = _useStyleTokens();
 
   return (

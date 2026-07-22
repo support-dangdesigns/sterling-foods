@@ -24,6 +24,9 @@
   height: 42px;
   flex-shrink: 0;
 }
+.link {
+  display: flex;
+}
 .linkedinIcon:global(.__wab_instance) {
   max-width: 100%;
   width: 42px;

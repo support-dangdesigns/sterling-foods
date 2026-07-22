@@ -84,6 +84,7 @@ export type PlasmicSocialBtns__OverridesType = {
   socialBox?: Flex__<"div">;
   facebookIcon?: Flex__<typeof FacebookIcon>;
   instaIcon?: Flex__<typeof InstaIcon>;
+  link?: Flex__<"a"> & Partial<LinkProps>;
   linkedinIcon?: Flex__<typeof LinkedinIcon>;
 };
 
@@ -159,19 +160,30 @@ function PlasmicSocialBtns__RenderFunc(props: {
         className={classNames("__wab_instance", sty.instaIcon)}
       />
 
-      <LinkedinIcon
-        data-plasmic-name={"linkedinIcon"}
-        data-plasmic-override={overrides.linkedinIcon}
-        className={classNames("__wab_instance", sty.linkedinIcon)}
-      />
+      <PlasmicLink__
+        data-plasmic-name={"link"}
+        data-plasmic-override={overrides.link}
+        className={classNames("all", "a", "a__uyaK1", sty.link)}
+        component={Link}
+        href={"https://www.linkedin.com/company/sterling-foods/"}
+        legacyBehavior={false}
+        platform={"nextjs"}
+      >
+        <LinkedinIcon
+          data-plasmic-name={"linkedinIcon"}
+          data-plasmic-override={overrides.linkedinIcon}
+          className={classNames("__wab_instance", sty.linkedinIcon)}
+        />
+      </PlasmicLink__>
     </div>
   ) as React.ReactElement | null;
 }
 
 const PlasmicDescendants = {
-  socialBox: ["socialBox", "facebookIcon", "instaIcon", "linkedinIcon"],
+  socialBox: ["socialBox", "facebookIcon", "instaIcon", "link", "linkedinIcon"],
   facebookIcon: ["facebookIcon"],
   instaIcon: ["instaIcon"],
+  link: ["link", "linkedinIcon"],
   linkedinIcon: ["linkedinIcon"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -181,6 +193,7 @@ type NodeDefaultElementType = {
   socialBox: "div";
   facebookIcon: typeof FacebookIcon;
   instaIcon: typeof InstaIcon;
+  link: "a";
   linkedinIcon: typeof LinkedinIcon;
 };
 
@@ -248,6 +261,7 @@ export const PlasmicSocialBtns = Object.assign(
     // Helper components rendering sub-elements
     facebookIcon: makeNodeComponent("facebookIcon"),
     instaIcon: makeNodeComponent("instaIcon"),
+    link: makeNodeComponent("link"),
     linkedinIcon: makeNodeComponent("linkedinIcon"),
 
     // Metadata about props expected for PlasmicSocialBtns

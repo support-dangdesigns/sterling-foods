@@ -185,6 +185,22 @@ export const serverQueryTree: QueryComponentNode = {
           return __composite;
         })()
       ]
+    },
+    contactPage: {
+      id: "fetchGraphQL",
+      fn: $$.fetchGraphQL,
+      args: ({ $q, $props, $ctx, $state }) => [
+        (() => {
+          const __composite = { method: "POST", url: null, request: null };
+          __composite["url"] = "https://edit-sterling.dangstaging.org/graphql";
+          __composite["request"] = {
+            query:
+              "query MyQuery {\n  pageBy(pageId: 87) {\n    pageContent {\n      fieldGroupName\n      button {\n        fieldGroupName\n        text\n        url\n      }\n      headlineParent {\n        fieldGroupName\n        headlinechild {\n          fieldGroupName\n          headlinefav\n          headlinenormal\n        }\n      }\n      textArea {\n        fieldGroupName\n        text\n      }\n    }\n  }\n}",
+            variables: {}
+          };
+          return __composite;
+        })()
+      ]
     }
   },
   propsContext: {},
@@ -439,7 +455,23 @@ function PlasmicContactPage__RenderFunc(props: {
                   <div
                     className={classNames("all", "__wab_text", sty.text__kJdHa)}
                   >
-                    {"Connect"}
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $q.contactPage.data.body.data.pageBy
+                            .pageContent.headlineParent[0].headlinechild[0]
+                            .headlinefav;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "Connect";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
                   </div>
                   <div
                     className={classNames(
@@ -448,22 +480,64 @@ function PlasmicContactPage__RenderFunc(props: {
                       sty.text___2Cp16
                     )}
                   >
-                    {"with Our Team"}
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $q.contactPage.data.body.data.pageBy
+                            .pageContent.headlineParent[0].headlinechild[0]
+                            .headlinenormal;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "with Our Team";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
                   </div>
                 </div>
                 <div
                   className={classNames("all", "__wab_text", sty.text__uHeLj)}
                 >
-                  {
-                    "Whether you have a question, need additional information, or would like to connect with our team, we\u2019re here to help."
-                  }
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $q.contactPage.data.body.data.pageBy.pageContent
+                          .textArea[1].text;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "Whether you have a question, need additional information, or would like to connect with our team, we\u2019re here to help.";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
                 </div>
                 <div
                   className={classNames("all", "__wab_text", sty.text__emevl)}
                 >
-                  {
-                    "Complete the form below, and a member of our team will be in touch soon."
-                  }
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $q.contactPage.data.body.data.pageBy.pageContent
+                          .textArea[0].text;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "Complete the form below, and a member of our team will be in touch soon.";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
                 </div>
                 <div
                   data-plasmic-name={"formWrapper"}
@@ -990,7 +1064,23 @@ function PlasmicContactPage__RenderFunc(props: {
                               sty.text__b3MVc
                             )}
                           >
-                            {"Send"}
+                            <React.Fragment>
+                              {(() => {
+                                try {
+                                  return $q.contactPage.data.body.data.pageBy
+                                    .pageContent.button[0].text;
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return "Send";
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                            </React.Fragment>
                           </div>
                         </AntdButton>
                       </FormWrapper>
@@ -1021,7 +1111,22 @@ function PlasmicContactPage__RenderFunc(props: {
                         sty.text___58IoI
                       )}
                     >
-                      {"(210) 490-1669"}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.contactPage.data.body.data.pageBy
+                              .pageContent.textArea[2].text;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "(210) 490-1669";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </div>
                   </div>
                   <DividerVerticalSvgrepoComSvgIcon
@@ -1042,7 +1147,22 @@ function PlasmicContactPage__RenderFunc(props: {
                         sty.text__kRZf
                       )}
                     >
-                      {"info@sterling-fd.com"}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.contactPage.data.body.data.pageBy
+                              .pageContent.textArea[3].text;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "info@sterling-fd.com";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </div>
                   </div>
                 </div>

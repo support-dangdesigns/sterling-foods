@@ -59,12 +59,39 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import { useMutablePlasmicQueryData } from "@plasmicapp/query";
+
+import { usePlasmicQueries } from "@plasmicapp/react-web/lib/data-sources";
+import type {
+  PlasmicQuery,
+  PlasmicQueryResult
+} from "@plasmicapp/react-web/lib/data-sources";
+import type { QueryComponentNode } from "@plasmicapp/react-web/lib/data-sources";
+
+import MenuItemsLinks from "../../MenuItemsLinks"; // plasmic-import: kAkezw8T7epi/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/styleTokensProvider
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import sty from "./PlasmicMenuList.module.css"; // plasmic-import: -6leV5wneOe9/css
+
+import { fetchGraphQL as __fn_fetchGraphQL } from "@plasmicpkgs/graphql";
+
+const emptyProxy: any = new Proxy(() => "", {
+  get(_, prop) {
+    return prop === Symbol.toPrimitive ? () => "" : emptyProxy;
+  }
+});
+
+function wrapQueriesWithLoadingProxy($q: any): any {
+  return new Proxy($q, {
+    get(target, queryName) {
+      const query = target[queryName];
+      return !query || query.isLoading || !query.data ? emptyProxy : query;
+    }
+  });
+}
 
 createPlasmicElementProxy;
 
@@ -112,7 +139,61 @@ export interface DefaultMenuListProps {
   className?: string;
 }
 
-const $$ = {};
+const $$ = {
+  fetchGraphQL: __fn_fetchGraphQL
+};
+
+const serverQueryTree: QueryComponentNode = {
+  type: "component",
+  queries: {
+    footer: {
+      id: "fetchGraphQL",
+      fn: $$.fetchGraphQL,
+      args: ({ $q, $props, $ctx, $state }) => [
+        (() => {
+          const __composite = { method: "POST", url: null, request: null };
+          __composite["url"] = "https://edit-sterling.dangstaging.org/graphql";
+          __composite["request"] = {
+            query:
+              "query MyQuery {\n  componentBy(componentId: 59) {\n    components {\n      buttonCheck\n      buttonsrepeater {\n        buttontextrepeater\n        fieldGroupName\n      }\n      footerLocations {\n        fieldGroupName\n        locationAddress\n        locationTitle\n      }\n      fieldGroupName\n      footerParagraph\n      footerLocationsOpen\n      image {\n        node {\n          mediaItemUrl\n        }\n      }\n      menu {\n        fieldGroupName\n        image {\n          node {\n            mediaItemUrl\n          }\n        }\n        menuitem\n      }\n      reviews {\n        customerComment\n        customerName\n        fieldGroupName\n      }\n      socialMedia {\n        fieldGroupName\n        urlSocial\n      }\n      textsrepeater {\n        textchild\n        fieldGroupName\n      }\n    }\n  }\n}",
+            variables: {}
+          };
+          return __composite;
+        })()
+      ]
+    }
+  },
+  propsContext: {},
+  stateSpecs: [
+    {
+      path: "current",
+      type: "private",
+      variableType: "variant",
+      initFunc: ({ $props, $state, $queries, $q, $ctx }) =>
+        (() => {
+          try {
+            return {
+              "/about-us": "aboutUs",
+              "/capabilities": "capabilities",
+              "/markets": "markets",
+              "/our-facilities": "ourFacilities",
+              "/quality-safety": "qualitySafety",
+              "/careers": "careers"
+            }[typeof location !== "undefined" ? location.pathname : ""];
+          } catch (e) {
+            if (
+              e instanceof TypeError ||
+              e?.plasmicType === "PlasmicUndefinedDataError"
+            ) {
+              return undefined;
+            }
+            throw e;
+          }
+        })() ?? $props.current
+    }
+  ],
+  children: []
+};
 
 function useNextRouter() {
   try {
@@ -182,6 +263,12 @@ function PlasmicMenuList__RenderFunc(props: {
     ],
     [$props, $ctx, $refs]
   );
+  const $stateRef = React.useRef<Record<string, unknown> | null>(null);
+  const $q = usePlasmicQueries(serverQueryTree, {
+    $ctx,
+    $props,
+    $state: $stateRef.current
+  });
 
   const globalVariants = _useGlobalVariants();
 
@@ -189,9 +276,10 @@ function PlasmicMenuList__RenderFunc(props: {
     $props,
     $ctx,
     $queries: {},
-    $q: {},
+    $q: $q,
     $refs
   });
+  $stateRef.current = $state;
 
   const styleTokensClassNames = _useStyleTokens();
 
@@ -211,7 +299,18 @@ function PlasmicMenuList__RenderFunc(props: {
       )}
     >
       <PlasmicLink__
-        className={classNames("all", "a", "a__uyaK1", sty.link___3RaYy)}
+        className={classNames("all", "a", "a__uyaK1", sty.link___3RaYy, {
+          [sty.linkcurrent_aboutUs___3RaYy1RAfk]: hasVariant(
+            $state,
+            "current",
+            "aboutUs"
+          ),
+          [sty.linkcurrent_capabilities___3RaYynWrPh]: hasVariant(
+            $state,
+            "current",
+            "capabilities"
+          )
+        })}
         component={Link}
         href={
           hasVariant(globalVariants, "screen", "large")
@@ -221,28 +320,28 @@ function PlasmicMenuList__RenderFunc(props: {
         legacyBehavior={false}
         platform={"nextjs"}
       >
-        <div
-          className={classNames("all", "__wab_text", sty.text__egVfI, {
-            [sty.textcurrent_aboutUs__egVfI1RAfk]: hasVariant(
-              $state,
-              "current",
-              "aboutUs"
-            )
-          })}
-          style={
-            hasVariant($state, "current", "aboutUs")
-              ? {
-                  textDecorationColor: "var(--token-VSsNRyw2VYkH)",
-                  textUnderlineOffset: "4px"
+        <MenuItemsLinks
+          className={classNames("__wab_instance", sty.menuItemsLinks__xxayG)}
+          quickLinks2={
+            <div className={classNames("all", "__wab_text", sty.text__tzLw5)}>
+              <React.Fragment>
+                {
+                  $q.footer.data.body.data.componentBy.components.menu[0]
+                    .menuitem
                 }
-              : undefined
+              </React.Fragment>
+            </div>
           }
-        >
-          {"About Us"}
-        </div>
+        />
       </PlasmicLink__>
       <PlasmicLink__
-        className={classNames("all", "a", "a__uyaK1", sty.link__hUnhB)}
+        className={classNames("all", "a", "a__uyaK1", sty.link__hUnhB, {
+          [sty.linkcurrent_markets__hUnhBIcs7Q]: hasVariant(
+            $state,
+            "current",
+            "markets"
+          )
+        })}
         component={Link}
         href={
           hasVariant(globalVariants, "screen", "large")
@@ -252,37 +351,23 @@ function PlasmicMenuList__RenderFunc(props: {
         legacyBehavior={false}
         platform={"nextjs"}
       >
-        <div
-          className={classNames("all", "__wab_text", sty.text__vX5PD, {
-            [sty.textcurrent_capabilities__vX5PDnWrPh]: hasVariant(
-              $state,
-              "current",
-              "capabilities"
-            )
-          })}
-          style={
-            hasVariant($state, "current", "capabilities")
-              ? {
-                  textDecorationColor: "var(--token-VSsNRyw2VYkH)",
-                  textUnderlineOffset: "4px"
-                }
-              : undefined
-          }
-        >
-          <React.Fragment>
-            <span
-              className={
-                "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
-              }
-              style={{ color: "var(--token-Gx156sR9ht1r)" }}
-            >
+        <MenuItemsLinks
+          className={classNames("__wab_instance", sty.menuItemsLinks__nzbca)}
+          quickLinks2={
+            <div className={classNames("all", "__wab_text", sty.text__abUlf)}>
               {"Capabilties"}
-            </span>
-          </React.Fragment>
-        </div>
+            </div>
+          }
+        />
       </PlasmicLink__>
       <PlasmicLink__
-        className={classNames("all", "a", "a__uyaK1", sty.link__nl7P)}
+        className={classNames("all", "a", "a__uyaK1", sty.link__nl7P, {
+          [sty.linkcurrent_capabilities__nl7PnWrPh]: hasVariant(
+            $state,
+            "current",
+            "capabilities"
+          )
+        })}
         component={Link}
         href={
           hasVariant(globalVariants, "screen", "large")
@@ -292,25 +377,14 @@ function PlasmicMenuList__RenderFunc(props: {
         legacyBehavior={false}
         platform={"nextjs"}
       >
-        <div
-          className={classNames("all", "__wab_text", sty.text___0V80P, {
-            [sty.textcurrent_markets___0V80PIcs7Q]: hasVariant(
-              $state,
-              "current",
-              "markets"
-            )
-          })}
-          style={
-            hasVariant($state, "current", "markets")
-              ? {
-                  textDecorationColor: "var(--token-VSsNRyw2VYkH)",
-                  textUnderlineOffset: "4px"
-                }
-              : undefined
+        <MenuItemsLinks
+          className={classNames("__wab_instance", sty.menuItemsLinks___1NmgR)}
+          quickLinks2={
+            <div className={classNames("all", "__wab_text", sty.text__f90)}>
+              {"Markets"}
+            </div>
           }
-        >
-          {"Markets"}
-        </div>
+        />
       </PlasmicLink__>
       <PlasmicLink__
         className={classNames("all", "a", "a__uyaK1", sty.link__djjcq)}
@@ -323,56 +397,34 @@ function PlasmicMenuList__RenderFunc(props: {
         legacyBehavior={false}
         platform={"nextjs"}
       >
-        <div
-          className={classNames("all", "__wab_text", sty.text__kOnNl, {
-            [sty.textcurrent_ourFacilities__kOnNl8BTpx]: hasVariant(
-              $state,
-              "current",
-              "ourFacilities"
-            )
-          })}
-          style={
-            hasVariant($state, "current", "ourFacilities")
-              ? {
-                  textDecorationColor: "var(--token-VSsNRyw2VYkH)",
-                  textUnderlineOffset: "4px"
-                }
-              : undefined
+        <MenuItemsLinks
+          className={classNames("__wab_instance", sty.menuItemsLinks__u58Ur)}
+          quickLinks2={
+            <div className={classNames("all", "__wab_text", sty.text__rM732)}>
+              {"Our Facilities"}
+            </div>
           }
-        >
-          {"Our Facilities"}
-        </div>
+        />
       </PlasmicLink__>
       <PlasmicLink__
-        className={classNames("all", "a", "a__uyaK1", sty.link__n0Rjz)}
+        className={classNames("all", "a", "a__uyaK1", sty.link__mh953)}
         component={Link}
         href={
           hasVariant(globalVariants, "screen", "large")
-            ? `/quality-safety`
-            : "/quality-safety"
+            ? `/our-facilities`
+            : "/our-facilities"
         }
         legacyBehavior={false}
         platform={"nextjs"}
       >
-        <div
-          className={classNames("all", "__wab_text", sty.text___11Aoz, {
-            [sty.textcurrent_qualitySafety___11AozvZhXb]: hasVariant(
-              $state,
-              "current",
-              "qualitySafety"
-            )
-          })}
-          style={
-            hasVariant($state, "current", "qualitySafety")
-              ? {
-                  textDecorationColor: "var(--token-VSsNRyw2VYkH)",
-                  textUnderlineOffset: "4px"
-                }
-              : undefined
+        <MenuItemsLinks
+          className={classNames("__wab_instance", sty.menuItemsLinks__oNo63)}
+          quickLinks2={
+            <div className={classNames("all", "__wab_text", sty.text__xsqji)}>
+              {"Quality & Safety"}
+            </div>
           }
-        >
-          {"Quality & Safety"}
-        </div>
+        />
       </PlasmicLink__>
       <PlasmicLink__
         className={classNames("all", "a", "a__uyaK1", sty.link___5USgH)}
@@ -385,25 +437,14 @@ function PlasmicMenuList__RenderFunc(props: {
         legacyBehavior={false}
         platform={"nextjs"}
       >
-        <div
-          className={classNames("all", "__wab_text", sty.text__eLs7R, {
-            [sty.textcurrent_careers__eLs7RgAaqf]: hasVariant(
-              $state,
-              "current",
-              "careers"
-            )
-          })}
-          style={
-            hasVariant($state, "current", "careers")
-              ? {
-                  textDecorationColor: "var(--token-VSsNRyw2VYkH)",
-                  textUnderlineOffset: "4px"
-                }
-              : undefined
+        <MenuItemsLinks
+          className={classNames("__wab_instance", sty.menuItemsLinks__mGhB)}
+          quickLinks2={
+            <div className={classNames("all", "__wab_text", sty.text__naWg4)}>
+              {"Careers"}
+            </div>
           }
-        >
-          {"Careers"}
-        </div>
+        />
       </PlasmicLink__>
     </div>
   ) as React.ReactElement | null;

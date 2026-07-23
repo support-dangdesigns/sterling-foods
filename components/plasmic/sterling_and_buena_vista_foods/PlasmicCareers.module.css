@@ -374,6 +374,7 @@
   .p__oxWyG {
     animation: none;
     width: 65.5%;
+    padding-top: 0px;
   }
 }
 @media (max-width: 1700px) {
@@ -2573,6 +2574,11 @@
     flex-shrink: 0;
   }
 }
+@media (max-width: 1920px) {
+  .primaryBtn__zsHqn:global(.__wab_instance) {
+    flex-shrink: 0;
+  }
+}
 @media (max-width: 1024px) {
   .primaryBtn__zsHqn:global(.__wab_instance) {
     align-self: center;
@@ -2627,6 +2633,11 @@
 .text__esSzJ {
   font-weight: 700;
   text-align: center;
+}
+@media (max-width: 1920px) {
+  .text__esSzJ {
+    height: auto;
+  }
 }
 .img__tvPaz {
   animation: none;

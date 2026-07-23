@@ -59,6 +59,15 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import { useMutablePlasmicQueryData } from "@plasmicapp/query";
+
+import { usePlasmicQueries } from "@plasmicapp/react-web/lib/data-sources";
+import type {
+  PlasmicQuery,
+  PlasmicQueryResult
+} from "@plasmicapp/react-web/lib/data-sources";
+import type { QueryComponentNode } from "@plasmicapp/react-web/lib/data-sources";
+
 import Header from "../../Header"; // plasmic-import: qmNXHiKWCTTQ/component
 import TopHero from "../../TopHero"; // plasmic-import: 2xRY6WOypZh7/component
 import { AntdTabs } from "@plasmicpkgs/antd5/skinny/registerTabs";
@@ -77,6 +86,8 @@ import sty from "./PlasmicCapabilities.module.css"; // plasmic-import: PbDWXAtQE
 
 import CheckSvgIcon from "./icons/PlasmicIcon__CheckSvg"; // plasmic-import: XJ7-EwyAPgh7/icon
 import VectorList01Icon from "./icons/PlasmicIcon__VectorList01"; // plasmic-import: pw6woELC72Qg/icon
+
+import { fetchGraphQL as __fn_fetchGraphQL } from "@plasmicpkgs/graphql";
 
 const emptyProxy: any = new Proxy(() => "", {
   get(_, prop) {
@@ -230,7 +241,81 @@ export type PlasmicCapabilities__OverridesType = {
 
 export interface DefaultCapabilitiesProps {}
 
-const $$ = {};
+const $$ = {
+  fetchGraphQL: __fn_fetchGraphQL
+};
+
+export const serverQueryTree: QueryComponentNode = {
+  type: "component",
+  queries: {
+    capabilites: {
+      id: "fetchGraphQL",
+      fn: $$.fetchGraphQL,
+      args: ({ $q, $props, $ctx, $state }) => [
+        (() => {
+          const __composite = { method: "POST", url: null, request: null };
+          __composite["url"] = "https://edit-sterling.dangstaging.org/graphql";
+          __composite["request"] = {
+            query:
+              "query MyQuery {\n  pageBy(pageId: 98) {\n    pageContent {\n      fieldGroupName\n      button {\n        fieldGroupName\n        text\n        url\n      }\n      headlineParent {\n        fieldGroupName\n        headlinechild {\n          fieldGroupName\n          headlinefav\n          headlinenormal\n        }\n      }\n      textArea {\n        fieldGroupName\n        text\n      }\n    }\n  }\n}",
+            variables: {}
+          };
+          return __composite;
+        })()
+      ]
+    }
+  },
+  propsContext: {},
+  stateSpecs: [
+    {
+      path: "tabs2.activeKey",
+      type: "private",
+      variableType: "text",
+      initFunc: ({ $props, $state, $queries, $q, $ctx }) => "2"
+    },
+    {
+      path: "sliderCarousel.currentSlide",
+      type: "private",
+      variableType: "number",
+      initFunc: ({ $props, $state, $queries, $q, $ctx }) => 0,
+
+      refName: "sliderCarousel"
+    },
+    {
+      path: "sliderCarousel2.currentSlide",
+      type: "private",
+      variableType: "number",
+      initFunc: ({ $props, $state, $queries, $q, $ctx }) => 0,
+
+      refName: "sliderCarousel2"
+    },
+    {
+      path: "sliderCarousel3.currentSlide",
+      type: "private",
+      variableType: "number",
+      initFunc: ({ $props, $state, $queries, $q, $ctx }) => 0,
+
+      refName: "sliderCarousel3"
+    },
+    {
+      path: "sliderCarousel4.currentSlide",
+      type: "private",
+      variableType: "number",
+      initFunc: ({ $props, $state, $queries, $q, $ctx }) => 0,
+
+      refName: "sliderCarousel4"
+    },
+    {
+      path: "sliderCarousel5.currentSlide",
+      type: "private",
+      variableType: "number",
+      initFunc: ({ $props, $state, $queries, $q, $ctx }) => 0,
+
+      refName: "sliderCarousel5"
+    }
+  ],
+  children: []
+};
 
 function useNextRouter() {
   try {
@@ -325,6 +410,12 @@ function PlasmicCapabilities__RenderFunc(props: {
     ],
     [$props, $ctx, $refs]
   );
+  const $stateRef = React.useRef<Record<string, unknown> | null>(null);
+  const $q = usePlasmicQueries(serverQueryTree, {
+    $ctx,
+    $props,
+    $state: $stateRef.current
+  });
 
   const globalVariants = _useGlobalVariants();
 
@@ -332,12 +423,13 @@ function PlasmicCapabilities__RenderFunc(props: {
     $props,
     $ctx,
     $queries: {},
-    $q: {},
+    $q: $q,
     $refs
   });
+  $stateRef.current = $state;
 
   const pageMetadata = generateDynamicMetadata(
-    wrapQueriesWithLoadingProxy({}),
+    wrapQueriesWithLoadingProxy($q),
     $ctx as PageCtx
   );
 
@@ -410,7 +502,16 @@ function PlasmicCapabilities__RenderFunc(props: {
                         : "h3-script"
                     )}
                   >
-                    {"Custom-crafted"}
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.capabilites.data.body.data.pageBy.pageContent
+                            .headlineParent[0].headlinechild[0].headlinenormal
+                        }
+                      </React.Fragment>
+                    ) : (
+                      "Custom-crafted"
+                    )}
                   </h3>
                   <h4
                     className={classNames(
@@ -421,21 +522,47 @@ function PlasmicCapabilities__RenderFunc(props: {
                       sty.h4__svW3G
                     )}
                   >
-                    {"Bakery Solutions"}
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.capabilites.data.body.data.pageBy.pageContent
+                            .headlineParent[0].headlinechild[0].headlinefav
+                        }
+                      </React.Fragment>
+                    ) : (
+                      "Bakery Solutions"
+                    )}
                   </h4>
                 </div>
-                <p
-                  className={classNames(
-                    "all",
-                    "p",
-                    "p__uyaK1",
-                    "__wab_text",
-                    sty.p__dkjQb
-                  )}
-                >
-                  {hasVariant(globalVariants, "screen", "desktop")
-                    ? "Custom-crafted bakery solutions uniquely created to suit your needs, whether for performance, differentiation or growth.  From protein-forward to large-scale production featuring artisan touches, Sterling Foods brings innovative bakery products to market with the quality, consistency, and flexibility customers depend on."
-                    : "Custom-crafted bakery solutions uniquely created to suit your needs, whether for performance, differentiation or growth.  From protein-forward to large-scale production featuring artisan touches, Sterling Foods brings innovative bakery products to market with the quality, consistency, and flexibility customers depend on."}
+                <p className={classNames("all", "p", "p__uyaK1", sty.p__dkjQb)}>
+                  <div
+                    className={classNames(
+                      "all",
+                      "__wab_text",
+                      sty.text___5G9Cr
+                    )}
+                  >
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.capabilites.data.body.data.pageBy
+                              .pageContent.textArea[0].text;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "Custom-crafted bakery solutions uniquely created to suit your needs, whether for performance, differentiation or growth.  From protein-forward to large-scale production featuring artisan touches, Sterling Foods brings innovative bakery products to market with the quality, consistency, and flexibility customers depend on.";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
+                    ) : (
+                      "Custom-crafted bakery solutions uniquely created to suit your needs, whether for performance, differentiation or growth.  From protein-forward to large-scale production featuring artisan touches, Sterling Foods brings innovative bakery products to market with the quality, consistency, and flexibility customers depend on."
+                    )}
+                  </div>
                 </p>
               </div>
               <div
@@ -510,9 +637,18 @@ function PlasmicCapabilities__RenderFunc(props: {
                         "h3-script"
                       )}
                     >
-                      {hasVariant(globalVariants, "screen", "large")
-                        ? "Baking"
-                        : "Oppoertunities"}
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .headlineParent[1].headlinechild[0].headlinenormal
+                          }
+                        </React.Fragment>
+                      ) : hasVariant(globalVariants, "screen", "large") ? (
+                        "Baking"
+                      ) : (
+                        "Oppoertunities"
+                      )}
                     </h3>
                     <h4
                       className={classNames(
@@ -523,9 +659,18 @@ function PlasmicCapabilities__RenderFunc(props: {
                         sty.h4__jLL4
                       )}
                     >
-                      {hasVariant(globalVariants, "screen", "large")
-                        ? "Reimagined"
-                        : "Across Our Organization"}
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .headlineParent[1].headlinechild[0].headlinefav
+                          }
+                        </React.Fragment>
+                      ) : hasVariant(globalVariants, "screen", "large") ? (
+                        "Reimagined"
+                      ) : (
+                        "Across Our Organization"
+                      )}
                     </h4>
                   </div>
                   <div
@@ -552,7 +697,17 @@ function PlasmicCapabilities__RenderFunc(props: {
                           sty.p__bwWpc
                         )}
                       >
-                        {hasVariant(globalVariants, "screen", "large") ? (
+                        {hasVariant(globalVariants, "screen", "desktop") ? (
+                          <div
+                            className={"__wab_expr_html_text"}
+                            dangerouslySetInnerHTML={{
+                              __html:
+                                $q.capabilites.data.body.data.pageBy.pageContent
+                                  .headlineParent[1].headlinechild[1]
+                                  .headlinenormal
+                            }}
+                          />
+                        ) : hasVariant(globalVariants, "screen", "large") ? (
                           <React.Fragment>
                             <span
                               className={
@@ -599,7 +754,17 @@ function PlasmicCapabilities__RenderFunc(props: {
                             sty.p__iIfmI
                           )}
                         >
-                          {hasVariant(globalVariants, "screen", "large") ? (
+                          {hasVariant(globalVariants, "screen", "desktop") ? (
+                            <div
+                              className={"__wab_expr_html_text"}
+                              dangerouslySetInnerHTML={{
+                                __html:
+                                  $q.capabilites.data.body.data.pageBy
+                                    .pageContent.headlineParent[1]
+                                    .headlinechild[2].headlinenormal
+                              }}
+                            />
+                          ) : hasVariant(globalVariants, "screen", "large") ? (
                             <React.Fragment>
                               <span
                                 className={
@@ -647,7 +812,17 @@ function PlasmicCapabilities__RenderFunc(props: {
                             sty.p__qhmDb
                           )}
                         >
-                          {hasVariant(globalVariants, "screen", "large") ? (
+                          {hasVariant(globalVariants, "screen", "desktop") ? (
+                            <div
+                              className={"__wab_expr_html_text"}
+                              dangerouslySetInnerHTML={{
+                                __html:
+                                  $q.capabilites.data.body.data.pageBy
+                                    .pageContent.headlineParent[1]
+                                    .headlinechild[3].headlinenormal
+                              }}
+                            />
+                          ) : hasVariant(globalVariants, "screen", "large") ? (
                             <React.Fragment>
                               <span
                                 className={
@@ -695,7 +870,17 @@ function PlasmicCapabilities__RenderFunc(props: {
                             sty.p__oPqi
                           )}
                         >
-                          {hasVariant(globalVariants, "screen", "large") ? (
+                          {hasVariant(globalVariants, "screen", "desktop") ? (
+                            <div
+                              className={"__wab_expr_html_text"}
+                              dangerouslySetInnerHTML={{
+                                __html:
+                                  $q.capabilites.data.body.data.pageBy
+                                    .pageContent.headlineParent[1]
+                                    .headlinechild[4].headlinenormal
+                              }}
+                            />
+                          ) : hasVariant(globalVariants, "screen", "large") ? (
                             <React.Fragment>
                               <span
                                 className={
@@ -745,7 +930,17 @@ function PlasmicCapabilities__RenderFunc(props: {
                             sty.p__tKfjj
                           )}
                         >
-                          {hasVariant(globalVariants, "screen", "large") ? (
+                          {hasVariant(globalVariants, "screen", "desktop") ? (
+                            <div
+                              className={"__wab_expr_html_text"}
+                              dangerouslySetInnerHTML={{
+                                __html:
+                                  $q.capabilites.data.body.data.pageBy
+                                    .pageContent.headlineParent[1]
+                                    .headlinechild[5].headlinenormal
+                              }}
+                            />
+                          ) : hasVariant(globalVariants, "screen", "large") ? (
                             <React.Fragment>
                               <span
                                 className={
@@ -793,7 +988,17 @@ function PlasmicCapabilities__RenderFunc(props: {
                             sty.p__bnxPq
                           )}
                         >
-                          {hasVariant(globalVariants, "screen", "large") ? (
+                          {hasVariant(globalVariants, "screen", "desktop") ? (
+                            <div
+                              className={"__wab_expr_html_text"}
+                              dangerouslySetInnerHTML={{
+                                __html:
+                                  $q.capabilites.data.body.data.pageBy
+                                    .pageContent.headlineParent[1]
+                                    .headlinechild[6].headlinenormal
+                              }}
+                            />
+                          ) : hasVariant(globalVariants, "screen", "large") ? (
                             <React.Fragment>
                               <span
                                 className={
@@ -838,7 +1043,17 @@ function PlasmicCapabilities__RenderFunc(props: {
                             sty.p__wQpcg
                           )}
                         >
-                          {hasVariant(globalVariants, "screen", "large") ? (
+                          {hasVariant(globalVariants, "screen", "desktop") ? (
+                            <div
+                              className={"__wab_expr_html_text"}
+                              dangerouslySetInnerHTML={{
+                                __html:
+                                  $q.capabilites.data.body.data.pageBy
+                                    .pageContent.headlineParent[1]
+                                    .headlinechild[7].headlinenormal
+                              }}
+                            />
+                          ) : hasVariant(globalVariants, "screen", "large") ? (
                             <React.Fragment>
                               <span
                                 className={
@@ -887,9 +1102,19 @@ function PlasmicCapabilities__RenderFunc(props: {
                           "h3-script"
                         )}
                       >
-                        {hasVariant(globalVariants, "screen", "large")
-                          ? "Custom"
-                          : "Oppoertunities"}
+                        {hasVariant(globalVariants, "screen", "desktop") ? (
+                          <React.Fragment>
+                            {
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .headlineParent[2].headlinechild[0]
+                                .headlinenormal
+                            }
+                          </React.Fragment>
+                        ) : hasVariant(globalVariants, "screen", "large") ? (
+                          "Custom"
+                        ) : (
+                          "Oppoertunities"
+                        )}
                       </h3>
                       <h4
                         className={classNames(
@@ -900,9 +1125,18 @@ function PlasmicCapabilities__RenderFunc(props: {
                           sty.h4__eZa4T
                         )}
                       >
-                        {hasVariant(globalVariants, "screen", "large")
-                          ? "Manufacturing"
-                          : "Across Our Organization"}
+                        {hasVariant(globalVariants, "screen", "desktop") ? (
+                          <React.Fragment>
+                            {
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .headlineParent[2].headlinechild[0].headlinefav
+                            }
+                          </React.Fragment>
+                        ) : hasVariant(globalVariants, "screen", "large") ? (
+                          "Manufacturing"
+                        ) : (
+                          "Across Our Organization"
+                        )}
                       </h4>
                     </div>
                     <div
@@ -924,9 +1158,18 @@ function PlasmicCapabilities__RenderFunc(props: {
                             sty.p__vqh1N
                           )}
                         >
-                          {hasVariant(globalVariants, "screen", "large")
-                            ? "Every product begins with a partnership. Our team works closely with customers to develop proprietary solutions tailored to their brand, operational requirements, and menu goals."
-                            : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                          {hasVariant(globalVariants, "screen", "desktop") ? (
+                            <React.Fragment>
+                              {
+                                $q.capabilites.data.body.data.pageBy.pageContent
+                                  .textArea[1].text
+                              }
+                            </React.Fragment>
+                          ) : hasVariant(globalVariants, "screen", "large") ? (
+                            "Every product begins with a partnership. Our team works closely with customers to develop proprietary solutions tailored to their brand, operational requirements, and menu goals."
+                          ) : (
+                            "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                          )}
                         </p>
                       ) : null}
                       <p
@@ -938,9 +1181,18 @@ function PlasmicCapabilities__RenderFunc(props: {
                           sty.p__h7RCo
                         )}
                       >
-                        {hasVariant(globalVariants, "screen", "large")
-                          ? "From concept through commercialization, we provide the expertise and flexibility needed to bring differentiated products to market efficiently and at scale."
-                          : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                        {hasVariant(globalVariants, "screen", "desktop") ? (
+                          <React.Fragment>
+                            {
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .textArea[2].text
+                            }
+                          </React.Fragment>
+                        ) : hasVariant(globalVariants, "screen", "large") ? (
+                          "From concept through commercialization, we provide the expertise and flexibility needed to bring differentiated products to market efficiently and at scale."
+                        ) : (
+                          "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                        )}
                       </p>
                       <p
                         className={classNames(
@@ -951,9 +1203,18 @@ function PlasmicCapabilities__RenderFunc(props: {
                           sty.p__rVgP1
                         )}
                       >
-                        {hasVariant(globalVariants, "screen", "large")
-                          ? "Whether you\u2019re looking for the ultimate indulgence or a great-tasting, nutrient-rich product, we have the expertise to custom craft the perfect solution to fit your brand, consumers, and market needs."
-                          : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                        {hasVariant(globalVariants, "screen", "desktop") ? (
+                          <React.Fragment>
+                            {
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .textArea[3].text
+                            }
+                          </React.Fragment>
+                        ) : hasVariant(globalVariants, "screen", "large") ? (
+                          "Whether you\u2019re looking for the ultimate indulgence or a great-tasting, nutrient-rich product, we have the expertise to custom craft the perfect solution to fit your brand, consumers, and market needs."
+                        ) : (
+                          "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                        )}
                       </p>
                     </div>
                   </div>
@@ -1036,9 +1297,18 @@ function PlasmicCapabilities__RenderFunc(props: {
                           : "h3-script"
                       )}
                     >
-                      {hasVariant(globalVariants, "screen", "large")
-                        ? "Product"
-                        : "Custom-crafted"}
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .headlineParent[3].headlinechild[0].headlinenormal
+                          }
+                        </React.Fragment>
+                      ) : hasVariant(globalVariants, "screen", "large") ? (
+                        "Product"
+                      ) : (
+                        "Custom-crafted"
+                      )}
                     </h3>
                     <h4
                       className={classNames(
@@ -1049,9 +1319,18 @@ function PlasmicCapabilities__RenderFunc(props: {
                         sty.h4___84MX
                       )}
                     >
-                      {hasVariant(globalVariants, "screen", "large")
-                        ? "Capabilities"
-                        : "Bakery Solutions"}
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .headlineParent[3].headlinechild[0].headlinefav
+                          }
+                        </React.Fragment>
+                      ) : hasVariant(globalVariants, "screen", "large") ? (
+                        "Capabilities"
+                      ) : (
+                        "Bakery Solutions"
+                      )}
                     </h4>
                   </div>
                 ) : null}
@@ -1067,11 +1346,28 @@ function PlasmicCapabilities__RenderFunc(props: {
                       sty.p__bxLxI
                     )}
                   >
-                    {hasVariant(globalVariants, "screen", "desktop")
-                      ? "Custom-crafted bakery solutions uniquely created to suit your needs, whether for performance, differentiation or growth.  From protein-forward to large-scale production featuring artisan touches, Sterling Foods brings innovative bakery products to market with the quality, consistency, and flexibility customers depend on."
-                      : hasVariant(globalVariants, "screen", "large")
-                        ? "From breakfast bakery and handheld offerings to indulgent desserts, snacks, and nutritional bars, Sterling Foods custom create solutions to meet your needs and delight your customers."
-                        : "Custom-crafted bakery solutions uniquely created to suit your needs, whether for performance, differentiation or growth.  From protein-forward to large-scale production featuring artisan touches, Sterling Foods brings innovative bakery products to market with the quality, consistency, and flexibility customers depend on."}
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.capabilites.data.body.data.pageBy
+                              .pageContent.textArea[4].text;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "Custom-crafted bakery solutions uniquely created to suit your needs, whether for performance, differentiation or growth.  From protein-forward to large-scale production featuring artisan touches, Sterling Foods brings innovative bakery products to market with the quality, consistency, and flexibility customers depend on.";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
+                    ) : hasVariant(globalVariants, "screen", "large") ? (
+                      "From breakfast bakery and handheld offerings to indulgent desserts, snacks, and nutritional bars, Sterling Foods custom create solutions to meet your needs and delight your customers."
+                    ) : (
+                      "Custom-crafted bakery solutions uniquely created to suit your needs, whether for performance, differentiation or growth.  From protein-forward to large-scale production featuring artisan touches, Sterling Foods brings innovative bakery products to market with the quality, consistency, and flexibility customers depend on."
+                    )}
                   </p>
                 ) : null}
               </div>
@@ -3750,9 +4046,18 @@ function PlasmicCapabilities__RenderFunc(props: {
                         sty.h4__nwgZ6
                       )}
                     >
-                      {hasVariant(globalVariants, "screen", "large")
-                        ? "Quality & Food"
-                        : "Across Our Organization"}
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .headlineParent[4].headlinechild[0].headlinefav
+                          }
+                        </React.Fragment>
+                      ) : hasVariant(globalVariants, "screen", "large") ? (
+                        "Quality & Food"
+                      ) : (
+                        "Across Our Organization"
+                      )}
                     </h4>
                     <h3
                       className={classNames(
@@ -3764,9 +4069,18 @@ function PlasmicCapabilities__RenderFunc(props: {
                         "h3-script"
                       )}
                     >
-                      {hasVariant(globalVariants, "screen", "large")
-                        ? "Safety"
-                        : "Oppoertunities"}
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .headlineParent[4].headlinechild[0].headlinenormal
+                          }
+                        </React.Fragment>
+                      ) : hasVariant(globalVariants, "screen", "large") ? (
+                        "Safety"
+                      ) : (
+                        "Oppoertunities"
+                      )}
                     </h3>
                   </div>
                   <div
@@ -3788,9 +4102,18 @@ function PlasmicCapabilities__RenderFunc(props: {
                           sty.p___37EN
                         )}
                       >
-                        {hasVariant(globalVariants, "screen", "large")
-                          ? "Quality and food safety are embedded in everything we do. Through rigorous standards, continuous improvement initiatives, and a culture of accountability, we deliver products our customers can trust."
-                          : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                        {hasVariant(globalVariants, "screen", "desktop") ? (
+                          <React.Fragment>
+                            {
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .textArea[5].text
+                            }
+                          </React.Fragment>
+                        ) : hasVariant(globalVariants, "screen", "large") ? (
+                          "Quality and food safety are embedded in everything we do. Through rigorous standards, continuous improvement initiatives, and a culture of accountability, we deliver products our customers can trust."
+                        ) : (
+                          "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                        )}
                       </p>
                     ) : null}
                   </div>
@@ -3806,7 +4129,16 @@ function PlasmicCapabilities__RenderFunc(props: {
                         sty.text__rner1
                       )}
                     >
-                      {"See Quality in Action"}
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .button[0].text
+                          }
+                        </React.Fragment>
+                      ) : (
+                        "See Quality in Action"
+                      )}
                     </div>
                   </PrimaryBtn>
                 </div>
@@ -3839,9 +4171,18 @@ function PlasmicCapabilities__RenderFunc(props: {
                           "h3-script"
                         )}
                       >
-                        {hasVariant(globalVariants, "screen", "large")
-                          ? "Custom"
-                          : "Oppoertunities"}
+                        {hasVariant(globalVariants, "screen", "desktop") ? (
+                          <React.Fragment>
+                            {
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .headlineParent[5].headlinechild[0].headlinefav
+                            }
+                          </React.Fragment>
+                        ) : hasVariant(globalVariants, "screen", "large") ? (
+                          "Custom"
+                        ) : (
+                          "Oppoertunities"
+                        )}
                       </h3>
                       <h4
                         className={classNames(
@@ -3852,9 +4193,19 @@ function PlasmicCapabilities__RenderFunc(props: {
                           sty.h4__jvoqm
                         )}
                       >
-                        {hasVariant(globalVariants, "screen", "large")
-                          ? "Manufacturing"
-                          : "Across Our Organization"}
+                        {hasVariant(globalVariants, "screen", "desktop") ? (
+                          <React.Fragment>
+                            {
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .headlineParent[5].headlinechild[0]
+                                .headlinenormal
+                            }
+                          </React.Fragment>
+                        ) : hasVariant(globalVariants, "screen", "large") ? (
+                          "Manufacturing"
+                        ) : (
+                          "Across Our Organization"
+                        )}
                       </h4>
                     </div>
                     <div
@@ -3876,9 +4227,18 @@ function PlasmicCapabilities__RenderFunc(props: {
                             sty.p__jjt8
                           )}
                         >
-                          {hasVariant(globalVariants, "screen", "large")
-                            ? "Want to see where innovation comes to life?"
-                            : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                          {hasVariant(globalVariants, "screen", "desktop") ? (
+                            <React.Fragment>
+                              {
+                                $q.capabilites.data.body.data.pageBy.pageContent
+                                  .textArea[6].text
+                              }
+                            </React.Fragment>
+                          ) : hasVariant(globalVariants, "screen", "large") ? (
+                            "Want to see where innovation comes to life?"
+                          ) : (
+                            "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                          )}
                         </p>
                       ) : null}
                       <p
@@ -3890,9 +4250,18 @@ function PlasmicCapabilities__RenderFunc(props: {
                           sty.p___6TOet
                         )}
                       >
-                        {hasVariant(globalVariants, "screen", "large")
-                          ? "Explore our network of six manufacturing facilities designed to support quality, flexibility, and scale."
-                          : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                        {hasVariant(globalVariants, "screen", "desktop") ? (
+                          <React.Fragment>
+                            {
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .textArea[7].text
+                            }
+                          </React.Fragment>
+                        ) : hasVariant(globalVariants, "screen", "large") ? (
+                          "Explore our network of six manufacturing facilities designed to support quality, flexibility, and scale."
+                        ) : (
+                          "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                        )}
                       </p>
                     </div>
                   </div>

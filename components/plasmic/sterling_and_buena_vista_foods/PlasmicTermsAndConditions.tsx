@@ -59,6 +59,15 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import { useMutablePlasmicQueryData } from "@plasmicapp/query";
+
+import { usePlasmicQueries } from "@plasmicapp/react-web/lib/data-sources";
+import type {
+  PlasmicQuery,
+  PlasmicQueryResult
+} from "@plasmicapp/react-web/lib/data-sources";
+import type { QueryComponentNode } from "@plasmicapp/react-web/lib/data-sources";
+
 import Header from "../../Header"; // plasmic-import: qmNXHiKWCTTQ/component
 import TopHero from "../../TopHero"; // plasmic-import: 2xRY6WOypZh7/component
 import CtaBottom from "../../CtaBottom"; // plasmic-import: UmfSTsW6wMCz/component
@@ -69,6 +78,8 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import sty from "./PlasmicTermsAndConditions.module.css"; // plasmic-import: yH1SfQ-c9Kl2/css
+
+import { fetchGraphQL as __fn_fetchGraphQL } from "@plasmicpkgs/graphql";
 
 const emptyProxy: any = new Proxy(() => "", {
   get(_, prop) {
@@ -129,7 +140,34 @@ export type PlasmicTermsAndConditions__OverridesType = {
 
 export interface DefaultTermsAndConditionsProps {}
 
-const $$ = {};
+const $$ = {
+  fetchGraphQL: __fn_fetchGraphQL
+};
+
+export const serverQueryTree: QueryComponentNode = {
+  type: "component",
+  queries: {
+    terms: {
+      id: "fetchGraphQL",
+      fn: $$.fetchGraphQL,
+      args: ({ $q, $props, $ctx, $state }) => [
+        (() => {
+          const __composite = { method: "POST", url: null, request: null };
+          __composite["url"] = "https://edit-sterling.dangstaging.org/graphql";
+          __composite["request"] = {
+            query:
+              "query MyQuery {\n  pageBy(pageId: 94) {\n    pageContent {\n      fieldGroupName\n      button {\n        fieldGroupName\n        text\n        url\n      }\n      headlineParent {\n        fieldGroupName\n        headlinechild {\n          fieldGroupName\n          headlinefav\n          headlinenormal\n        }\n      }\n      textArea {\n        fieldGroupName\n        text\n      }\n    }\n  }\n}",
+            variables: {}
+          };
+          return __composite;
+        })()
+      ]
+    }
+  },
+  propsContext: {},
+  stateSpecs: [],
+  children: []
+};
 
 function useNextRouter() {
   try {
@@ -168,8 +206,10 @@ function PlasmicTermsAndConditions__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
+  const $q = usePlasmicQueries(serverQueryTree, { $ctx, $props, $state: null });
+
   const pageMetadata = generateDynamicMetadata(
-    wrapQueriesWithLoadingProxy({}),
+    wrapQueriesWithLoadingProxy($q),
     $ctx as PageCtx
   );
 
@@ -237,7 +277,22 @@ function PlasmicTermsAndConditions__RenderFunc(props: {
                   sty.h5__ymiyb
                 )}
               >
-                {"Sites Covered"}
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return $q.terms.data.body.data.pageBy.pageContent
+                        .headlineParent[0].headlinechild[0].headlinefav;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "Sites Covered";
+                      }
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
               </h5>
               <p
                 className={classNames(
@@ -249,51 +304,7 @@ function PlasmicTermsAndConditions__RenderFunc(props: {
                 )}
               >
                 <React.Fragment>
-                  <React.Fragment>
-                    {"This Privacy Policy applies to this site, "}
-                  </React.Fragment>
-                  {
-                    <PlasmicLink__
-                      className={classNames(
-                        "all",
-                        "a",
-                        "a__uyaK1",
-                        "__wab_text",
-                        "plasmic_default__inline",
-                        sty.link__k8YNz
-                      )}
-                      component={Link}
-                      href={"www.sterling-fd.com "}
-                      legacyBehavior={false}
-                      platform={"nextjs"}
-                    >
-                      {"www.sterling-fd.com"}
-                    </PlasmicLink__>
-                  }
-                  <React.Fragment>{" and "}</React.Fragment>
-                  {
-                    <PlasmicLink__
-                      className={classNames(
-                        "all",
-                        "a",
-                        "a__uyaK1",
-                        "__wab_text",
-                        "plasmic_default__inline",
-                        sty.link__neRLw
-                      )}
-                      component={Link}
-                      href={"www.sterlingfoodsusa.com"}
-                      legacyBehavior={false}
-                      platform={"nextjs"}
-                    >
-                      {"www.sterlingfoodsusa.com"}
-                    </PlasmicLink__>
-                  }
-                  <React.Fragment>
-                    {
-                      ". By viewing or using our Site, you are agreeing to the terms set forth in this Privacy Policy."
-                    }
-                  </React.Fragment>
+                  {$q.terms.data.body.data.pageBy.pageContent.textArea[0].text}
                 </React.Fragment>
               </p>
             </div>
@@ -311,7 +322,22 @@ function PlasmicTermsAndConditions__RenderFunc(props: {
                   sty.h5__sCyRs
                 )}
               >
-                {"Personal Information Collected"}
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return $q.terms.data.body.data.pageBy.pageContent
+                        .headlineParent[1].headlinechild[0].headlinefav;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "Personal Information Collected";
+                      }
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
               </h5>
               <p
                 className={classNames(
@@ -322,9 +348,22 @@ function PlasmicTermsAndConditions__RenderFunc(props: {
                   sty.p___09WwY
                 )}
               >
-                {
-                  "For purposes of this Privacy Policy, \u201cpersonal information\u201d means any information by which you can be personally identified, and includes your name, address, telephone number, e-mail address, account number and similar information. Sterling BV, Inc. (Sterling Foods) generally collects personal information only when you voluntarily submit such personal information to us, for example by submitting a comment or inquiry or completing a registration form."
-                }
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return $q.terms.data.body.data.pageBy.pageContent
+                        .textArea[1].text;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "For purposes of this Privacy Policy, \u201cpersonal information\u201d means any information by which you can be personally identified, and includes your name, address, telephone number, e-mail address, account number and similar information. Sterling BV, Inc. (Sterling Foods) generally collects personal information only when you voluntarily submit such personal information to us, for example by submitting a comment or inquiry or completing a registration form.";
+                      }
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
               </p>
             </div>
             <div
@@ -341,7 +380,22 @@ function PlasmicTermsAndConditions__RenderFunc(props: {
                   sty.h5__en7Mz
                 )}
               >
-                {"Use and Retention of Personal Information"}
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return $q.terms.data.body.data.pageBy.pageContent
+                        .headlineParent[2].headlinechild[0].headlinefav;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "Use and Retention of Personal Information";
+                      }
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
               </h5>
               <p
                 className={classNames(

@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   width: 168px;
   height: auto;
   max-width: 100%;
@@ -10,19 +10,6 @@
   background: none;
   column-gap: 15px;
   padding: 0px;
-}
-.facebookIcon:global(.__wab_instance) {
-  max-width: 100%;
-  width: 42px;
-  height: 42px;
-  align-self: center;
-  flex-shrink: 0;
-}
-.instaIcon:global(.__wab_instance) {
-  max-width: 100%;
-  width: 42px;
-  height: 42px;
-  flex-shrink: 0;
 }
 .link {
   display: flex;
@@ -32,4 +19,19 @@
   width: 42px;
   height: 42px;
   flex-shrink: 0;
+}
+.facebookIcon:global(.__wab_instance) {
+  max-width: 100%;
+  width: 42px;
+  height: 42px;
+  align-self: center;
+  flex-shrink: 0;
+  display: none;
+}
+.instaIcon:global(.__wab_instance) {
+  max-width: 100%;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: none;
 }

@@ -27889,6 +27889,19 @@
           "cssFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicFootertestlink.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "f-96F67Lgua4",
+          "name": "QuickLinks",
+          "type": "managed",
+          "projectId": "uyaK17nhz8WhGjYZfKjMhX",
+          "renderModuleFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicQuickLinks.tsx",
+          "importSpec": {
+            "modulePath": "QuickLinks.tsx"
+          },
+          "cssFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicQuickLinks.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [

@@ -59,6 +59,15 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import { useMutablePlasmicQueryData } from "@plasmicapp/query";
+
+import { usePlasmicQueries } from "@plasmicapp/react-web/lib/data-sources";
+import type {
+  PlasmicQuery,
+  PlasmicQueryResult
+} from "@plasmicapp/react-web/lib/data-sources";
+import type { QueryComponentNode } from "@plasmicapp/react-web/lib/data-sources";
+
 import Header from "../../Header"; // plasmic-import: qmNXHiKWCTTQ/component
 import TopHero from "../../TopHero"; // plasmic-import: 2xRY6WOypZh7/component
 import PrimaryBtn from "../../PrimaryBtn"; // plasmic-import: TiffCyYLfuDQ/component
@@ -70,6 +79,8 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import sty from "./PlasmicMarkets.module.css"; // plasmic-import: _Fdy6XyySvwi/css
+
+import { fetchGraphQL as __fn_fetchGraphQL } from "@plasmicpkgs/graphql";
 
 const emptyProxy: any = new Proxy(() => "", {
   get(_, prop) {
@@ -156,7 +167,34 @@ export type PlasmicMarkets__OverridesType = {
 
 export interface DefaultMarketsProps {}
 
-const $$ = {};
+const $$ = {
+  fetchGraphQL: __fn_fetchGraphQL
+};
+
+export const serverQueryTree: QueryComponentNode = {
+  type: "component",
+  queries: {
+    markets: {
+      id: "fetchGraphQL",
+      fn: $$.fetchGraphQL,
+      args: ({ $q, $props, $ctx, $state }) => [
+        (() => {
+          const __composite = { method: "POST", url: null, request: null };
+          __composite["url"] = "https://edit-sterling.dangstaging.org/graphql";
+          __composite["request"] = {
+            query:
+              "query MyQuery {\n  pageBy(pageId: 90) {\n    pageContent {\n      fieldGroupName\n      button {\n        fieldGroupName\n        text\n        url\n      }\n      headlineParent {\n        fieldGroupName\n        headlinechild {\n          fieldGroupName\n          headlinefav\n          headlinenormal\n        }\n      }\n      textArea {\n        fieldGroupName\n        text\n      }\n    }\n  }\n}",
+            variables: {}
+          };
+          return __composite;
+        })()
+      ]
+    }
+  },
+  propsContext: {},
+  stateSpecs: [],
+  children: []
+};
 
 function useNextRouter() {
   try {
@@ -195,10 +233,12 @@ function PlasmicMarkets__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
+  const $q = usePlasmicQueries(serverQueryTree, { $ctx, $props, $state: null });
+
   const globalVariants = _useGlobalVariants();
 
   const pageMetadata = generateDynamicMetadata(
-    wrapQueriesWithLoadingProxy({}),
+    wrapQueriesWithLoadingProxy($q),
     $ctx as PageCtx
   );
 
@@ -283,7 +323,16 @@ function PlasmicMarkets__RenderFunc(props: {
                         : "h3-script"
                     )}
                   >
-                    {"Customer-first"}
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.markets.data.body.data.pageBy.pageContent
+                            .headlineParent[0].headlinechild[0].headlinefav
+                        }
+                      </React.Fragment>
+                    ) : (
+                      "Customer-first"
+                    )}
                   </h3>
                   <h4
                     className={classNames(
@@ -294,7 +343,16 @@ function PlasmicMarkets__RenderFunc(props: {
                       sty.h4__fmzSc
                     )}
                   >
-                    {"Approach"}
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.markets.data.body.data.pageBy.pageContent
+                            .headlineParent[0].headlinechild[0].headlinenormal
+                        }
+                      </React.Fragment>
+                    ) : (
+                      "Approach"
+                    )}
                   </h4>
                 </div>
                 <p
@@ -306,9 +364,26 @@ function PlasmicMarkets__RenderFunc(props: {
                     sty.p__ptTp3
                   )}
                 >
-                  {hasVariant(globalVariants, "screen", "desktop")
-                    ? "Sterling Foods serves a diverse range of foodservice and retail channels, delivering innovative bakery solutions tailored to the unique needs of each market. Our customer-first approach, flexible manufacturing capabilities, and commitment to quality help partners bring differentiated products to market with confidence."
-                    : "Sterling Foods serves a diverse range of foodservice and retail channels, delivering innovative bakery solutions tailored to the unique needs of each market. Our customer-first approach, flexible manufacturing capabilities, and commitment to quality help partners bring differentiated products to market with confidence."}
+                  {hasVariant(globalVariants, "screen", "desktop") ? (
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $q.markets.data.body.data.pageBy.pageContent
+                            .textArea[0].text;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "Sterling Foods serves a diverse range of foodservice and retail channels, delivering innovative bakery solutions tailored to the unique needs of each market. Our customer-first approach, flexible manufacturing capabilities, and commitment to quality help partners bring differentiated products to market with confidence.";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
+                  ) : (
+                    "Sterling Foods serves a diverse range of foodservice and retail channels, delivering innovative bakery solutions tailored to the unique needs of each market. Our customer-first approach, flexible manufacturing capabilities, and commitment to quality help partners bring differentiated products to market with confidence."
+                  )}
                 </p>
               </div>
               <div
@@ -392,7 +467,16 @@ function PlasmicMarkets__RenderFunc(props: {
                         "h3-script"
                       )}
                     >
-                      {"National"}
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.markets.data.body.data.pageBy.pageContent
+                              .headlineParent[0].headlinechild[1].headlinefav
+                          }
+                        </React.Fragment>
+                      ) : (
+                        "National"
+                      )}
                     </h3>
                     <h4
                       className={classNames(
@@ -403,7 +487,16 @@ function PlasmicMarkets__RenderFunc(props: {
                         sty.h4__m8Qr
                       )}
                     >
-                      {"Restaurants"}
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.markets.data.body.data.pageBy.pageContent
+                              .headlineParent[0].headlinechild[1].headlinenormal
+                          }
+                        </React.Fragment>
+                      ) : (
+                        "Restaurants"
+                      )}
                     </h4>
                   </div>
                   <div
@@ -420,9 +513,16 @@ function PlasmicMarkets__RenderFunc(props: {
                         sty.p___4LkW
                       )}
                     >
-                      {
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.markets.data.body.data.pageBy.pageContent
+                              .textArea[1].text
+                          }
+                        </React.Fragment>
+                      ) : (
                         "Sterling Foods partners with leading restaurant chains to develop proprietary bakery solutions that support menu innovation, operational consistency, and speed to market. With a focus on uniqueness and operational ease, we help brands create iconic, signature products that stand apart from the crowd."
-                      }
+                      )}
                     </p>
                   </div>
                 </div>
@@ -452,7 +552,16 @@ function PlasmicMarkets__RenderFunc(props: {
                         "h3-script"
                       )}
                     >
-                      {"School"}
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.markets.data.body.data.pageBy.pageContent
+                              .headlineParent[0].headlinechild[2].headlinefav
+                          }
+                        </React.Fragment>
+                      ) : (
+                        "School"
+                      )}
                     </h3>
                     <h4
                       className={classNames(
@@ -463,7 +572,16 @@ function PlasmicMarkets__RenderFunc(props: {
                         sty.h4__msdny
                       )}
                     >
-                      {"Foodservice"}
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.markets.data.body.data.pageBy.pageContent
+                              .headlineParent[0].headlinechild[2].headlinenormal
+                          }
+                        </React.Fragment>
+                      ) : (
+                        "Foodservice"
+                      )}
                     </h4>
                   </div>
                   <div
@@ -480,9 +598,16 @@ function PlasmicMarkets__RenderFunc(props: {
                         sty.p___6ZfH
                       )}
                     >
-                      {
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.markets.data.body.data.pageBy.pageContent
+                              .textArea[2].text
+                          }
+                        </React.Fragment>
+                      ) : (
                         "Through our Buena Vista Foods division, Sterling Foods has been a trusted partner to K-12 nutrition programs for decades. We develop bakery solutions that seamlessly balance great taste, nutrition, and regulatory compliance\u2014helping school districts meet evolving nutritional standards while serving products students genuinely enjoy.  From clean label formulations to thoughtfully sourced, all natural ingredients, Buena Vista continues to set the standard in school nutrition."
-                      }
+                      )}
                     </p>
                     <PlasmicLink__
                       data-plasmic-name={"aboutUs"}
@@ -509,7 +634,16 @@ function PlasmicMarkets__RenderFunc(props: {
                             sty.text__yhT3F
                           )}
                         >
-                          {"Learn More About Buena Vista Foods"}
+                          {hasVariant(globalVariants, "screen", "desktop") ? (
+                            <React.Fragment>
+                              {
+                                $q.markets.data.body.data.pageBy.pageContent
+                                  .button[0].text
+                              }
+                            </React.Fragment>
+                          ) : (
+                            "Learn More About Buena Vista Foods"
+                          )}
                         </div>
                       </PrimaryBtn>
                     </PlasmicLink__>
@@ -616,7 +750,16 @@ function PlasmicMarkets__RenderFunc(props: {
                         "h3-script"
                       )}
                     >
-                      {"Convenience "}
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.markets.data.body.data.pageBy.pageContent
+                              .headlineParent[0].headlinechild[3].headlinefav
+                          }
+                        </React.Fragment>
+                      ) : (
+                        "Convenience "
+                      )}
                     </h3>
                     <h4
                       className={classNames(
@@ -627,7 +770,16 @@ function PlasmicMarkets__RenderFunc(props: {
                         sty.h4___3F273
                       )}
                     >
-                      {"Stores"}
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.markets.data.body.data.pageBy.pageContent
+                              .headlineParent[0].headlinechild[3].headlinenormal
+                          }
+                        </React.Fragment>
+                      ) : (
+                        "Stores"
+                      )}
                     </h4>
                   </div>
                   <div
@@ -644,9 +796,16 @@ function PlasmicMarkets__RenderFunc(props: {
                         sty.p__jreLi
                       )}
                     >
-                      {
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.markets.data.body.data.pageBy.pageContent
+                              .textArea[3].text
+                          }
+                        </React.Fragment>
+                      ) : (
                         "Sterling Foods develops portable, individually wrapped bakery products and nutrition-focused snack solutions ideally suited for today's on-the-go consumer. From protein-forward snacks and nutrition bars to grab-and-go bakery offerings, our products help convenience retailers meet evolving consumer preferences."
-                      }
+                      )}
                     </p>
                   </div>
                 </div>
@@ -739,7 +898,16 @@ function PlasmicMarkets__RenderFunc(props: {
                         "h3-script"
                       )}
                     >
-                      {"Our"}
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.markets.data.body.data.pageBy.pageContent
+                              .headlineParent[0].headlinechild[4].headlinefav
+                          }
+                        </React.Fragment>
+                      ) : (
+                        "Our"
+                      )}
                     </h3>
                     <h4
                       className={classNames(
@@ -750,7 +918,16 @@ function PlasmicMarkets__RenderFunc(props: {
                         sty.h4__cX8B
                       )}
                     >
-                      {"Military"}
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.markets.data.body.data.pageBy.pageContent
+                              .headlineParent[0].headlinechild[4].headlinenormal
+                          }
+                        </React.Fragment>
+                      ) : (
+                        "Military"
+                      )}
                     </h4>
                   </div>
                   <div
@@ -767,9 +944,26 @@ function PlasmicMarkets__RenderFunc(props: {
                         sty.p___4WcxP
                       )}
                     >
-                      {hasVariant(globalVariants, "screen", "desktop")
-                        ? "Since 1971, Sterling Foods has been a trusted supplier to \nthe U.S. military, delivering products that meet the highest standards \nfor performance, quality, nutrition, and durability. Leveraging advanced shelf-life technologies and deep nutritional expertise, Sterling remains a leading provider of baked goods and specialty food solutions, supplying ration components, performance nutrition products, and desserts to service members around the globe."
-                        : "Since 1971, Sterling Foods has been a trusted supplier to \nthe U.S. military, delivering products that meet the highest standards for performance, quality, nutrition, and durability. Leveraging advanced \nshelf-life technologies and deep nutritional expertise, Sterling remains a leading provider of baked goods and specialty food solutions, supplying \nration components, performance nutrition products, and desserts to service members around the globe."}
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return $q.markets.data.body.data.pageBy
+                                .pageContent.textArea[4].text;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "Since 1971, Sterling Foods has been a trusted supplier to \nthe U.S. military, delivering products that meet the highest standards \nfor performance, quality, nutrition, and durability. Leveraging advanced shelf-life technologies and deep nutritional expertise, Sterling remains a leading provider of baked goods and specialty food solutions, supplying ration components, performance nutrition products, and desserts to service members around the globe.";
+                              }
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
+                      ) : (
+                        "Since 1971, Sterling Foods has been a trusted supplier to \nthe U.S. military, delivering products that meet the highest standards for performance, quality, nutrition, and durability. Leveraging advanced \nshelf-life technologies and deep nutritional expertise, Sterling remains a leading provider of baked goods and specialty food solutions, supplying \nration components, performance nutrition products, and desserts to service members around the globe."
+                      )}
                     </p>
                   </div>
                 </div>
@@ -799,7 +993,16 @@ function PlasmicMarkets__RenderFunc(props: {
                         "h3-script"
                       )}
                     >
-                      {"In-Store"}
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.markets.data.body.data.pageBy.pageContent
+                              .headlineParent[0].headlinechild[5].headlinefav
+                          }
+                        </React.Fragment>
+                      ) : (
+                        "In-Store"
+                      )}
                     </h3>
                     <h4
                       className={classNames(
@@ -810,7 +1013,16 @@ function PlasmicMarkets__RenderFunc(props: {
                         sty.h4__wKdJb
                       )}
                     >
-                      {"Bakery"}
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.markets.data.body.data.pageBy.pageContent
+                              .headlineParent[0].headlinechild[5].headlinenormal
+                          }
+                        </React.Fragment>
+                      ) : (
+                        "Bakery"
+                      )}
                     </h4>
                   </div>
                   <div
@@ -827,9 +1039,18 @@ function PlasmicMarkets__RenderFunc(props: {
                         sty.p__kdmR
                       )}
                     >
-                      {hasVariant(globalVariants, "screen", "mediumDesktop")
-                        ? "Sterling Foods can help retailers deliver bakery experiences that combine fresh-made appeal with operational efficiency. From croissants and pastries to muffins, cornbread, cookies, and specialty bakery items, our products help drive customer satisfaction while supporting consistency across locations.\r"
-                        : "Sterling Foods can help retailers deliver bakery experiences that combine \nfresh-made appeal with operational efficiency. From croissants and pastries to muffins, cornbread, cookies, and specialty bakery items, our products help \ndrive customer satisfaction while supporting consistency across locations.\r"}
+                      {hasVariant(globalVariants, "screen", "mediumDesktop") ? (
+                        "Sterling Foods can help retailers deliver bakery experiences that combine fresh-made appeal with operational efficiency. From croissants and pastries to muffins, cornbread, cookies, and specialty bakery items, our products help drive customer satisfaction while supporting consistency across locations.\r"
+                      ) : hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.markets.data.body.data.pageBy.pageContent
+                              .textArea[5].text
+                          }
+                        </React.Fragment>
+                      ) : (
+                        "Sterling Foods can help retailers deliver bakery experiences that combine \nfresh-made appeal with operational efficiency. From croissants and pastries to muffins, cornbread, cookies, and specialty bakery items, our products help \ndrive customer satisfaction while supporting consistency across locations.\r"
+                      )}
                     </p>
                   </div>
                 </div>

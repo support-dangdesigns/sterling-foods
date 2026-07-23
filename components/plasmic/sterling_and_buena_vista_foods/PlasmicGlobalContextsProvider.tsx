@@ -18,15 +18,12 @@ export interface GlobalContextsProviderProps {
   embedCssProps?: Partial<
     Omit<React.ComponentProps<typeof EmbedCss>, "children">
   >;
-
   wordpressProviderProps?: Partial<
     Omit<React.ComponentProps<typeof WordpressProvider>, "children">
   >;
-
   antdConfigProviderProps?: Partial<
     Omit<React.ComponentProps<typeof AntdConfigProvider>, "children">
   >;
-
   parallaxProviderWrapperProps?: Partial<
     Omit<React.ComponentProps<typeof ParallaxProviderWrapper>, "children">
   >;
@@ -143,7 +140,7 @@ export default function GlobalContextsProvider(
                     fontSize: "21px",
                     fontWeight: "400",
                     lineHeight: "100%",
-                    color: "#0B284A",
+                    color: "#1C3757",
                     letterSpacing: "normal"
                   }
                 : undefined

@@ -59,6 +59,15 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import { useMutablePlasmicQueryData } from "@plasmicapp/query";
+
+import { usePlasmicQueries } from "@plasmicapp/react-web/lib/data-sources";
+import type {
+  PlasmicQuery,
+  PlasmicQueryResult
+} from "@plasmicapp/react-web/lib/data-sources";
+import type { QueryComponentNode } from "@plasmicapp/react-web/lib/data-sources";
+
 import Header from "../../Header"; // plasmic-import: qmNXHiKWCTTQ/component
 import TopHero from "../../TopHero"; // plasmic-import: 2xRY6WOypZh7/component
 import CtaBottom from "../../CtaBottom"; // plasmic-import: UmfSTsW6wMCz/component
@@ -69,6 +78,8 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import sty from "./PlasmicQualitySafety.module.css"; // plasmic-import: mL3VjrPxKvhL/css
+
+import { fetchGraphQL as __fn_fetchGraphQL } from "@plasmicpkgs/graphql";
 
 const emptyProxy: any = new Proxy(() => "", {
   get(_, prop) {
@@ -143,7 +154,34 @@ export type PlasmicQualitySafety__OverridesType = {
 
 export interface DefaultQualitySafetyProps {}
 
-const $$ = {};
+const $$ = {
+  fetchGraphQL: __fn_fetchGraphQL
+};
+
+export const serverQueryTree: QueryComponentNode = {
+  type: "component",
+  queries: {
+    qualityAndSafety: {
+      id: "fetchGraphQL",
+      fn: $$.fetchGraphQL,
+      args: ({ $q, $props, $ctx, $state }) => [
+        (() => {
+          const __composite = { method: "POST", url: null, request: null };
+          __composite["url"] = "https://edit-sterling.dangstaging.org/graphql";
+          __composite["request"] = {
+            query:
+              "query MyQuery {\n  pageBy(pageId: 92) {\n    pageContent {\n      fieldGroupName\n      button {\n        fieldGroupName\n        text\n        url\n      }\n      headlineParent {\n        fieldGroupName\n        headlinechild {\n          fieldGroupName\n          headlinefav\n          headlinenormal\n        }\n      }\n      textArea {\n        fieldGroupName\n        text\n      }\n      imagesupload {\n        fieldGroupName\n        imagerepeater {\n          cursor\n          node {\n            sourceUrl\n            title\n          }\n        }\n      }\n    }\n  }\n}",
+            variables: {}
+          };
+          return __composite;
+        })()
+      ]
+    }
+  },
+  propsContext: {},
+  stateSpecs: [],
+  children: []
+};
 
 function useNextRouter() {
   try {
@@ -182,10 +220,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
+  const $q = usePlasmicQueries(serverQueryTree, { $ctx, $props, $state: null });
+
   const globalVariants = _useGlobalVariants();
 
   const pageMetadata = generateDynamicMetadata(
-    wrapQueriesWithLoadingProxy({}),
+    wrapQueriesWithLoadingProxy($q),
     $ctx as PageCtx
   );
 
@@ -254,7 +294,16 @@ function PlasmicQualitySafety__RenderFunc(props: {
                     "h3-script"
                   )}
                 >
-                  {"Built on Accountability."}
+                  {hasVariant(globalVariants, "screen", "desktop") ? (
+                    <React.Fragment>
+                      {
+                        $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                          .headlineParent[0].headlinechild[0].headlinefav
+                      }
+                    </React.Fragment>
+                  ) : (
+                    "Built on Accountability."
+                  )}
                 </h3>
                 <h3
                   className={classNames(
@@ -265,7 +314,16 @@ function PlasmicQualitySafety__RenderFunc(props: {
                     sty.h3__x2Qrn
                   )}
                 >
-                  {"Driven by Excellence."}
+                  {hasVariant(globalVariants, "screen", "desktop") ? (
+                    <React.Fragment>
+                      {
+                        $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                          .headlineParent[0].headlinechild[0].headlinenormal
+                      }
+                    </React.Fragment>
+                  ) : (
+                    "Driven by Excellence."
+                  )}
                 </h3>
               </div>
               <p
@@ -277,9 +335,16 @@ function PlasmicQualitySafety__RenderFunc(props: {
                   sty.p___6RcTr
                 )}
               >
-                {
+                {hasVariant(globalVariants, "screen", "desktop") ? (
+                  <React.Fragment>
+                    {
+                      $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                        .textArea[0].text
+                    }
+                  </React.Fragment>
+                ) : (
                   "Sterling Foods serves a diverse range of foodservice and retail channels, delivering innovative bakery solutions tailored to the unique needs of each market. Our customer-first approach, flexible manufacturing capabilities, and commitment to quality help partners bring differentiated products to market with confidence."
-                }
+                )}
               </p>
             </div>
             <div
@@ -313,7 +378,16 @@ function PlasmicQualitySafety__RenderFunc(props: {
                       "h3-script"
                     )}
                   >
-                    {"Food Safety"}
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .headlineParent[0].headlinechild[1].headlinefav
+                        }
+                      </React.Fragment>
+                    ) : (
+                      "Food Safety"
+                    )}
                   </h3>
                   <h3
                     className={classNames(
@@ -324,7 +398,16 @@ function PlasmicQualitySafety__RenderFunc(props: {
                       sty.h3__lkzyM
                     )}
                   >
-                    {"& Regulatory Compliance"}
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .headlineParent[0].headlinechild[1].headlinenormal
+                        }
+                      </React.Fragment>
+                    ) : (
+                      "& Regulatory Compliance"
+                    )}
                   </h3>
                 </div>
                 <div
@@ -341,9 +424,16 @@ function PlasmicQualitySafety__RenderFunc(props: {
                       sty.p__ykPnl
                     )}
                   >
-                    {
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .textArea[1].text
+                        }
+                      </React.Fragment>
+                    ) : (
                       "Protecting the integrity of our products starts with rigorous food safety programs and strict regulatory oversight.  "
-                    }
+                    )}
                   </p>
                   <p
                     className={classNames(
@@ -354,9 +444,16 @@ function PlasmicQualitySafety__RenderFunc(props: {
                       sty.p__axkZs
                     )}
                   >
-                    {
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .textArea[2].text
+                        }
+                      </React.Fragment>
+                    ) : (
                       "Our facilities operate under comprehensive food safety programs designed to meet the requirements of our customers, regulatory agencies, and globally recognized standards. Across our network, facilities operate under USDA and/or FDA oversight and maintain rigorous programs that support product safety, quality, and regulatory compliance."
-                    }
+                    )}
                   </p>
                 </div>
                 <div
@@ -373,7 +470,16 @@ function PlasmicQualitySafety__RenderFunc(props: {
                       sty.h6__n7NsM
                     )}
                   >
-                    {"Highlights"}
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .textArea[3].text
+                        }
+                      </React.Fragment>
+                    ) : (
+                      "Highlights"
+                    )}
                   </h6>
                   <div
                     className={classNames("all", "__wab_text", sty.text__x9YRq)}
@@ -398,7 +504,16 @@ function PlasmicQualitySafety__RenderFunc(props: {
                               sty.li__o14GC
                             )}
                           >
-                            {"GFSI-certified food safety programs\r"}
+                            {hasVariant(globalVariants, "screen", "desktop") ? (
+                              <React.Fragment>
+                                {
+                                  $q.qualityAndSafety.data.body.data.pageBy
+                                    .pageContent.textArea[4].text
+                                }
+                              </React.Fragment>
+                            ) : (
+                              "GFSI-certified food safety programs\r"
+                            )}
                           </li>
                           <li
                             className={classNames(
@@ -409,7 +524,16 @@ function PlasmicQualitySafety__RenderFunc(props: {
                               sty.li__wzm7
                             )}
                           >
-                            {"High-performing SQF certification results\r"}
+                            {hasVariant(globalVariants, "screen", "desktop") ? (
+                              <React.Fragment>
+                                {
+                                  $q.qualityAndSafety.data.body.data.pageBy
+                                    .pageContent.textArea[5].text
+                                }
+                              </React.Fragment>
+                            ) : (
+                              "High-performing SQF certification results\r"
+                            )}
                           </li>
                           <li
                             className={classNames(
@@ -420,9 +544,16 @@ function PlasmicQualitySafety__RenderFunc(props: {
                               sty.li__krHy
                             )}
                           >
-                            {
+                            {hasVariant(globalVariants, "screen", "desktop") ? (
+                              <React.Fragment>
+                                {
+                                  $q.qualityAndSafety.data.body.data.pageBy
+                                    .pageContent.textArea[6].text
+                                }
+                              </React.Fragment>
+                            ) : (
                               "USDA-regulated facilities (FSIS and/or AMS, as applicable)\r"
-                            }
+                            )}
                           </li>
                           <li
                             className={classNames(
@@ -433,7 +564,16 @@ function PlasmicQualitySafety__RenderFunc(props: {
                               sty.li__vre9J
                             )}
                           >
-                            {"FDA-regulated facilities"}
+                            {hasVariant(globalVariants, "screen", "desktop") ? (
+                              <React.Fragment>
+                                {
+                                  $q.qualityAndSafety.data.body.data.pageBy
+                                    .pageContent.textArea[7].text
+                                }
+                              </React.Fragment>
+                            ) : (
+                              "FDA-regulated facilities"
+                            )}
                           </li>
                           <li
                             className={classNames(
@@ -444,9 +584,16 @@ function PlasmicQualitySafety__RenderFunc(props: {
                               sty.li__swick
                             )}
                           >
-                            {
+                            {hasVariant(globalVariants, "screen", "desktop") ? (
+                              <React.Fragment>
+                                {
+                                  $q.qualityAndSafety.data.body.data.pageBy
+                                    .pageContent.textArea[8].text
+                                }
+                              </React.Fragment>
+                            ) : (
                               "Comprehensive preventive controls and quality systems"
-                            }
+                            )}
                           </li>
                         </ul>
                       }
@@ -554,7 +701,16 @@ function PlasmicQualitySafety__RenderFunc(props: {
                       "h3-script"
                     )}
                   >
-                    {"Quality Assurance"}
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .headlineParent[0].headlinechild[2].headlinefav
+                        }
+                      </React.Fragment>
+                    ) : (
+                      "Quality Assurance"
+                    )}
                   </h3>
                   <h3
                     className={classNames(
@@ -565,7 +721,16 @@ function PlasmicQualitySafety__RenderFunc(props: {
                       sty.h3___0UvNu
                     )}
                   >
-                    {"at Every Step"}
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .headlineParent[0].headlinechild[2].headlinenormal
+                        }
+                      </React.Fragment>
+                    ) : (
+                      "at Every Step"
+                    )}
                   </h3>
                 </div>
                 <p
@@ -577,9 +742,16 @@ function PlasmicQualitySafety__RenderFunc(props: {
                     sty.p__vgKhD
                   )}
                 >
-                  {
+                  {hasVariant(globalVariants, "screen", "desktop") ? (
+                    <React.Fragment>
+                      {
+                        $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                          .textArea[9].text
+                      }
+                    </React.Fragment>
+                  ) : (
                     "Quality is built into every stage of the manufacturing process."
-                  }
+                  )}
                 </p>
                 <p
                   className={classNames(
@@ -590,9 +762,16 @@ function PlasmicQualitySafety__RenderFunc(props: {
                     sty.p__oKAkr
                   )}
                 >
-                  {
+                  {hasVariant(globalVariants, "screen", "desktop") ? (
+                    <React.Fragment>
+                      {
+                        $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                          .textArea[10].text
+                      }
+                    </React.Fragment>
+                  ) : (
                     "From ingredient receiving and production to finished product evaluation, our teams utilize proven quality control measures to monitor performance, maintain consistency, and verify product specifications."
-                  }
+                  )}
                 </p>
                 <div
                   data-plasmic-name={"list2"}
@@ -608,7 +787,16 @@ function PlasmicQualitySafety__RenderFunc(props: {
                       sty.p__tOwC
                     )}
                   >
-                    {"Our quality systems include:"}
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .textArea[11].text
+                        }
+                      </React.Fragment>
+                    ) : (
+                      "Our quality systems include:"
+                    )}
                   </p>
                   <p
                     className={classNames(
@@ -639,9 +827,16 @@ function PlasmicQualitySafety__RenderFunc(props: {
                               sty.li__htNoi
                             )}
                           >
-                            {
+                            {hasVariant(globalVariants, "screen", "desktop") ? (
+                              <React.Fragment>
+                                {
+                                  $q.qualityAndSafety.data.body.data.pageBy
+                                    .pageContent.textArea[12].text
+                                }
+                              </React.Fragment>
+                            ) : (
                               "Statistical Process Control (SPC) to monitor key production parameters"
-                            }
+                            )}
                           </li>
                           <li
                             className={classNames(
@@ -652,9 +847,16 @@ function PlasmicQualitySafety__RenderFunc(props: {
                               sty.li__y9Lep
                             )}
                           >
-                            {
+                            {hasVariant(globalVariants, "screen", "desktop") ? (
+                              <React.Fragment>
+                                {
+                                  $q.qualityAndSafety.data.body.data.pageBy
+                                    .pageContent.textArea[13].text
+                                }
+                              </React.Fragment>
+                            ) : (
                               "ANSI/ASQ Z1.4 sampling methodologies for finished product evaluation\r"
-                            }
+                            )}
                           </li>
                           <li
                             className={classNames(
@@ -665,7 +867,16 @@ function PlasmicQualitySafety__RenderFunc(props: {
                               sty.li__jIf
                             )}
                           >
-                            {"Advanced laboratory testing and product analysis"}
+                            {hasVariant(globalVariants, "screen", "desktop") ? (
+                              <React.Fragment>
+                                {
+                                  $q.qualityAndSafety.data.body.data.pageBy
+                                    .pageContent.textArea[14].text
+                                }
+                              </React.Fragment>
+                            ) : (
+                              "Advanced laboratory testing and product analysis"
+                            )}
                           </li>
                           <li
                             className={classNames(
@@ -676,7 +887,16 @@ function PlasmicQualitySafety__RenderFunc(props: {
                               sty.li__fzhGv
                             )}
                           >
-                            {"Comprehensive quality verification programs"}
+                            {hasVariant(globalVariants, "screen", "desktop") ? (
+                              <React.Fragment>
+                                {
+                                  $q.qualityAndSafety.data.body.data.pageBy
+                                    .pageContent.textArea[15].text
+                                }
+                              </React.Fragment>
+                            ) : (
+                              "Comprehensive quality verification programs"
+                            )}
                           </li>
                         </ul>
                       }
@@ -693,9 +913,16 @@ function PlasmicQualitySafety__RenderFunc(props: {
                     sty.p__t4Yp
                   )}
                 >
-                  {
+                  {hasVariant(globalVariants, "screen", "desktop") ? (
+                    <React.Fragment>
+                      {
+                        $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                          .textArea[16].text
+                      }
+                    </React.Fragment>
+                  ) : (
                     "These systems provide accurate, actionable insights that help ensure products consistently meet customer specifications."
-                  }
+                  )}
                 </p>
               </div>
             </div>
@@ -730,7 +957,16 @@ function PlasmicQualitySafety__RenderFunc(props: {
                       "h3-script"
                     )}
                   >
-                    {"A Culture of"}
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .headlineParent[0].headlinechild[3].headlinefav
+                        }
+                      </React.Fragment>
+                    ) : (
+                      "A Culture of"
+                    )}
                   </h3>
                   <h3
                     className={classNames(
@@ -741,7 +977,16 @@ function PlasmicQualitySafety__RenderFunc(props: {
                       sty.h3__bD3E
                     )}
                   >
-                    {"Continuous Improvement"}
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .headlineParent[0].headlinechild[3].headlinenormal
+                        }
+                      </React.Fragment>
+                    ) : (
+                      "Continuous Improvement"
+                    )}
                   </h3>
                 </div>
                 <div
@@ -758,9 +1003,16 @@ function PlasmicQualitySafety__RenderFunc(props: {
                       sty.p__bxzvU
                     )}
                   >
-                    {
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .textArea[17].text
+                        }
+                      </React.Fragment>
+                    ) : (
                       "Excellence requires constant evaluation and innovation.\r"
-                    }
+                    )}
                   </p>
                   <p
                     className={classNames(
@@ -771,9 +1023,16 @@ function PlasmicQualitySafety__RenderFunc(props: {
                       sty.p___00IHk
                     )}
                   >
-                    {
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .textArea[18].text
+                        }
+                      </React.Fragment>
+                    ) : (
                       "Sterling Foods is committed to continuously strengthening our processes, technologies, and quality systems through a proactive approach to improvement."
-                    }
+                    )}
                   </p>
                 </div>
                 <div
@@ -790,7 +1049,16 @@ function PlasmicQualitySafety__RenderFunc(props: {
                       sty.h6__noYne
                     )}
                   >
-                    {"This commitment includes:"}
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .textArea[19].text
+                        }
+                      </React.Fragment>
+                    ) : (
+                      "This commitment includes:"
+                    )}
                   </h6>
                   <div
                     className={classNames("all", "__wab_text", sty.text__sGwsH)}
@@ -816,16 +1084,25 @@ function PlasmicQualitySafety__RenderFunc(props: {
                               sty.li__tCb
                             )}
                           >
-                            <React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
+                            {hasVariant(globalVariants, "screen", "desktop") ? (
+                              <React.Fragment>
+                                {
+                                  $q.qualityAndSafety.data.body.data.pageBy
+                                    .pageContent.textArea[20].text
                                 }
-                                style={{ color: "var(--token-sP5FKk2rRQuW)" }}
-                              >
-                                {"Risk assessment and mitigation programs\r"}
-                              </span>
-                            </React.Fragment>
+                              </React.Fragment>
+                            ) : (
+                              <React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
+                                  }
+                                  style={{ color: "var(--token-sP5FKk2rRQuW)" }}
+                                >
+                                  {"Risk assessment and mitigation programs\r"}
+                                </span>
+                              </React.Fragment>
+                            )}
                           </li>
                           <li
                             className={classNames(
@@ -836,18 +1113,27 @@ function PlasmicQualitySafety__RenderFunc(props: {
                               sty.li__pCcvL
                             )}
                           >
-                            <React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
-                                }
-                                style={{ color: "var(--token-sP5FKk2rRQuW)" }}
-                              >
+                            {hasVariant(globalVariants, "screen", "desktop") ? (
+                              <React.Fragment>
                                 {
-                                  "Root cause analysis and corrective action processes\r"
+                                  $q.qualityAndSafety.data.body.data.pageBy
+                                    .pageContent.textArea[21].text
                                 }
-                              </span>
-                            </React.Fragment>
+                              </React.Fragment>
+                            ) : (
+                              <React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
+                                  }
+                                  style={{ color: "var(--token-sP5FKk2rRQuW)" }}
+                                >
+                                  {
+                                    "Root cause analysis and corrective action processes\r"
+                                  }
+                                </span>
+                              </React.Fragment>
+                            )}
                           </li>
                           <li
                             className={classNames(
@@ -858,18 +1144,27 @@ function PlasmicQualitySafety__RenderFunc(props: {
                               sty.li__aE7WS
                             )}
                           >
-                            <React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
-                                }
-                                style={{ color: "var(--token-sP5FKk2rRQuW)" }}
-                              >
+                            {hasVariant(globalVariants, "screen", "desktop") ? (
+                              <React.Fragment>
                                 {
-                                  "Ongoing investment in technologies and manufacturing capabilities\r"
+                                  $q.qualityAndSafety.data.body.data.pageBy
+                                    .pageContent.textArea[22].text
                                 }
-                              </span>
-                            </React.Fragment>
+                              </React.Fragment>
+                            ) : (
+                              <React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
+                                  }
+                                  style={{ color: "var(--token-sP5FKk2rRQuW)" }}
+                                >
+                                  {
+                                    "Ongoing investment in technologies and manufacturing capabilities\r"
+                                  }
+                                </span>
+                              </React.Fragment>
+                            )}
                           </li>
                           <li
                             className={classNames(
@@ -880,18 +1175,27 @@ function PlasmicQualitySafety__RenderFunc(props: {
                               sty.li__krFn
                             )}
                           >
-                            <React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
-                                }
-                                style={{ color: "var(--token-sP5FKk2rRQuW)" }}
-                              >
+                            {hasVariant(globalVariants, "screen", "desktop") ? (
+                              <React.Fragment>
                                 {
-                                  "Employee training and engagement at every level of the organization"
+                                  $q.qualityAndSafety.data.body.data.pageBy
+                                    .pageContent.textArea[23].text
                                 }
-                              </span>
-                            </React.Fragment>
+                              </React.Fragment>
+                            ) : (
+                              <React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
+                                  }
+                                  style={{ color: "var(--token-sP5FKk2rRQuW)" }}
+                                >
+                                  {
+                                    "Employee training and engagement at every level of the organization"
+                                  }
+                                </span>
+                              </React.Fragment>
+                            )}
                           </li>
                         </ul>
                       }
@@ -907,9 +1211,16 @@ function PlasmicQualitySafety__RenderFunc(props: {
                       sty.p__tAjIe
                     )}
                   >
-                    {
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .textArea[24].text
+                        }
+                      </React.Fragment>
+                    ) : (
                       "By continuously improving how we operate, we help ensure long-term success for our customers, employees, and partners."
-                    }
+                    )}
                   </p>
                 </div>
               </div>
@@ -968,7 +1279,16 @@ function PlasmicQualitySafety__RenderFunc(props: {
                       "h3-script"
                     )}
                   >
-                    {"Quality and Safety"}
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .headlineParent[0].headlinechild[4].headlinefav
+                        }
+                      </React.Fragment>
+                    ) : (
+                      "Quality and Safety"
+                    )}
                   </h3>
                   <h3
                     className={classNames(
@@ -979,7 +1299,16 @@ function PlasmicQualitySafety__RenderFunc(props: {
                       sty.h3___4Q0O
                     )}
                   >
-                    {"You Can Trust"}
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .headlineParent[0].headlinechild[4].headlinenormal
+                        }
+                      </React.Fragment>
+                    ) : (
+                      "You Can Trust"
+                    )}
                   </h3>
                 </div>
                 <p
@@ -991,9 +1320,26 @@ function PlasmicQualitySafety__RenderFunc(props: {
                     sty.p___2YTV
                   )}
                 >
-                  {hasVariant(globalVariants, "screen", "desktop")
-                    ? "Whether developing a new product or scaling an existing program, Sterling Foods is committed to delivering solutions supported by robust food safety systems, disciplined quality practices, and a culture focused on continuous improvement."
-                    : "Whether developing a new product or scaling an existing program, Sterling Foods is committed to delivering solutions supported by robust food safety systems, disciplined quality practices, and a culture focused on continuous improvement."}
+                  {hasVariant(globalVariants, "screen", "desktop") ? (
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $q.qualityAndSafety.data.body.data.pageBy
+                            .pageContent.textArea[25].text;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "Whether developing a new product or scaling an existing program, Sterling Foods is committed to delivering solutions supported by robust food safety systems, disciplined quality practices, and a culture focused on continuous improvement.";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
+                  ) : (
+                    "Whether developing a new product or scaling an existing program, Sterling Foods is committed to delivering solutions supported by robust food safety systems, disciplined quality practices, and a culture focused on continuous improvement."
+                  )}
                 </p>
               </div>
               <div className={classNames("all", sty.freeBox__nmMmx)}>

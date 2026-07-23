@@ -109,6 +109,7 @@
   font-size: var(--token-KiAZW0gIrhlw);
   color: var(--token-Q67gH6ouJM2i);
   text-align: center;
+  margin-bottom: 0px;
 }
 @media (max-width: 2000px) {
   .text___2Cp16 {
@@ -507,6 +508,7 @@
   color: var(--token-Q67gH6ouJM2i);
   font-size: 37px;
   line-height: 32px;
+  padding-bottom: 0px;
 }
 @media (max-width: 2000px) {
   .text___58IoI {

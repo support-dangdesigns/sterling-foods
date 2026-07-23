@@ -1,0 +1,33 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--token-Gx156sR9ht1r);
+  min-width: 0;
+}
+.root:hover:hover {
+  color: var(--token-VSsNRyw2VYkH);
+}
+.root:active:active {
+  color: var(--token-VSsNRyw2VYkH);
+}
+.root:active .slotTargetChildren {
+  color: #c1751e;
+}
+.text__yW8BG {
+  animation: none;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  text-align: center;
+  min-width: 0;
+}
+.h6__jQe5Q {
+  font-size: 20px;
+  color: var(--token-VSsNRyw2VYkH);
+}

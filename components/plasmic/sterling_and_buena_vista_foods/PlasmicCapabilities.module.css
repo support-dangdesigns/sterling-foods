@@ -374,19 +374,9 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  text-align: center;
-  font-family: "Avenir LT Std";
-  font-size: 24px;
-  font-weight: 400;
-  font-style: normal;
-  text-transform: none;
-  line-height: 36px;
-  letter-spacing: normal;
-  white-space: pre-wrap;
-  user-select: text;
-  text-decoration-line: none;
-  text-overflow: clip;
-  color: var(--token-Xx7oe00aHq8H);
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
 }
 @media (max-width: 2000px) {
   .p__dkjQb {
@@ -456,6 +446,21 @@
     min-width: 0;
     padding: 40px 10px;
   }
+}
+.text___5G9Cr {
+  font-family: "Avenir LT Std";
+  font-size: 24px;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--token-Xx7oe00aHq8H);
+  text-align: center;
+  text-transform: none;
+  line-height: 36px;
+  letter-spacing: normal;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
 }
 .foodSafety {
   animation: none;
@@ -975,6 +980,11 @@
   color: var(--token-Xx7oe00aHq8H);
   flex-shrink: 0;
 }
+@media (max-width: 1920px) {
+  .svg__vgXts {
+    width: auto;
+  }
+}
 .p__iIfmI {
   animation: none;
   position: relative;
@@ -1095,6 +1105,7 @@
   .p__qhmDb {
     animation: none;
     width: 739px;
+    padding-bottom: 0px;
     flex-shrink: 0;
   }
 }
@@ -1459,6 +1470,7 @@
   .p__wQpcg {
     animation: none;
     width: 739px;
+    height: auto;
     flex-shrink: 0;
   }
 }
@@ -1860,6 +1872,7 @@
   .p__vqh1N {
     animation: none;
     width: 739px;
+    padding-bottom: 0px;
   }
 }
 @media (max-width: 1200px) {

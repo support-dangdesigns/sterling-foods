@@ -59,6 +59,7 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/styleTokensProvider
 
@@ -68,20 +69,30 @@ import sty from "./PlasmicMenuItemsLinks.module.css"; // plasmic-import: kAkezw8
 
 createPlasmicElementProxy;
 
-export type PlasmicMenuItemsLinks__VariantMembers = {};
-export type PlasmicMenuItemsLinks__VariantsArgs = {};
+export type PlasmicMenuItemsLinks__VariantMembers = {
+  isActive: "isActive";
+};
+export type PlasmicMenuItemsLinks__VariantsArgs = {
+  isActive?: SingleBooleanChoiceArg<"isActive">;
+};
 type VariantPropType = keyof PlasmicMenuItemsLinks__VariantsArgs;
-export const PlasmicMenuItemsLinks__VariantProps = new Array<VariantPropType>();
+export const PlasmicMenuItemsLinks__VariantProps = new Array<VariantPropType>(
+  "isActive"
+);
 
-export type PlasmicMenuItemsLinks__ArgsType = {};
+export type PlasmicMenuItemsLinks__ArgsType = { quickLinks2?: React.ReactNode };
 type ArgPropType = keyof PlasmicMenuItemsLinks__ArgsType;
-export const PlasmicMenuItemsLinks__ArgProps = new Array<ArgPropType>();
+export const PlasmicMenuItemsLinks__ArgProps = new Array<ArgPropType>(
+  "quickLinks2"
+);
 
 export type PlasmicMenuItemsLinks__OverridesType = {
-  root?: Flex__<"div">;
+  quickLinks?: Flex__<"a"> & Partial<LinkProps>;
 };
 
 export interface DefaultMenuItemsLinksProps {
+  quickLinks2?: React.ReactNode;
+  isActive?: SingleBooleanChoiceArg<"isActive">;
   className?: string;
 }
 
@@ -124,37 +135,125 @@ function PlasmicMenuItemsLinks__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
+  const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
+    () => [
+      {
+        path: "active",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => false
+      },
+      {
+        path: "isActive",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) =>
+          (() => {
+            try {
+              return $state.active;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return undefined;
+              }
+              throw e;
+            }
+          })() ?? $props.isActive
+      }
+    ],
+    [$props, $ctx, $refs]
+  );
+
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: {},
+    $q: {},
+    $refs
+  });
+
   const styleTokensClassNames = _useStyleTokens();
 
   return (
-    <div
-      data-plasmic-name={"root"}
-      data-plasmic-override={overrides.root}
+    <PlasmicLink__
+      data-plasmic-name={"quickLinks"}
+      data-plasmic-override={overrides.quickLinks}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       className={classNames(
         "all",
-        "__wab_text",
+        "a",
+        "a__uyaK1",
         "root_reset_uyaK17nhz8WhGjYZfKjMhX",
         "plasmic_default_styles",
         "plasmic_mixins",
         styleTokensClassNames,
-        sty.root
+        sty.quickLinks
       )}
+      component={Link}
+      legacyBehavior={false}
+      onClick={async event => {
+        const $steps = {};
+
+        $steps["updateIsActive"] = true
+          ? (() => {
+              const actionArgs = {
+                variable: {
+                  objRoot: $state,
+                  variablePath: ["isActive"]
+                },
+                operation: 0
+              };
+              return (({ variable, value, startIndex, deleteCount }) => {
+                if (!variable) {
+                  return;
+                }
+                const { objRoot, variablePath } = variable;
+
+                $stateSet(objRoot, variablePath, value);
+                return value;
+              })?.apply(null, [actionArgs]);
+            })()
+          : undefined;
+        if (
+          $steps["updateIsActive"] != null &&
+          typeof $steps["updateIsActive"] === "object" &&
+          typeof $steps["updateIsActive"].then === "function"
+        ) {
+          $steps["updateIsActive"] = await $steps["updateIsActive"];
+        }
+      }}
+      platform={"nextjs"}
     >
-      {"Enter some text"}
-    </div>
+      {renderPlasmicSlot({
+        defaultContents: (
+          <div className={classNames("all", "__wab_text", sty.text__m0Gb)}>
+            {"Enter some text"}
+          </div>
+        ),
+        value: args.quickLinks2,
+        className: classNames(sty.slotTargetQuickLinks2, {
+          [sty.slotTargetQuickLinks2isActive]: hasVariant(
+            $state,
+            "isActive",
+            "isActive"
+          )
+        })
+      })}
+    </PlasmicLink__>
   ) as React.ReactElement | null;
 }
 
 const PlasmicDescendants = {
-  root: ["root"]
+  quickLinks: ["quickLinks"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
-  root: "div";
+  quickLinks: "a";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -206,7 +305,7 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "root") {
+  if (nodeName === "quickLinks") {
     func.displayName = "PlasmicMenuItemsLinks";
   } else {
     func.displayName = `PlasmicMenuItemsLinks.${nodeName}`;
@@ -216,7 +315,7 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
 
 export const PlasmicMenuItemsLinks = Object.assign(
   // Top-level PlasmicMenuItemsLinks renders the root element
-  makeNodeComponent("root"),
+  makeNodeComponent("quickLinks"),
   {
     // Helper components rendering sub-elements
 

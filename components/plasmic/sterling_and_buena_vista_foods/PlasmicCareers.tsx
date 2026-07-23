@@ -59,6 +59,15 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import { useMutablePlasmicQueryData } from "@plasmicapp/query";
+
+import { usePlasmicQueries } from "@plasmicapp/react-web/lib/data-sources";
+import type {
+  PlasmicQuery,
+  PlasmicQueryResult
+} from "@plasmicapp/react-web/lib/data-sources";
+import type { QueryComponentNode } from "@plasmicapp/react-web/lib/data-sources";
+
 import Header from "../../Header"; // plasmic-import: qmNXHiKWCTTQ/component
 import TopHero from "../../TopHero"; // plasmic-import: 2xRY6WOypZh7/component
 import PrimaryBtn from "../../PrimaryBtn"; // plasmic-import: TiffCyYLfuDQ/component
@@ -70,6 +79,8 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import sty from "./PlasmicCareers.module.css"; // plasmic-import: qfJvQkefwMy7/css
+
+import { fetchGraphQL as __fn_fetchGraphQL } from "@plasmicpkgs/graphql";
 
 const emptyProxy: any = new Proxy(() => "", {
   get(_, prop) {
@@ -144,7 +155,34 @@ export type PlasmicCareers__OverridesType = {
 
 export interface DefaultCareersProps {}
 
-const $$ = {};
+const $$ = {
+  fetchGraphQL: __fn_fetchGraphQL
+};
+
+export const serverQueryTree: QueryComponentNode = {
+  type: "component",
+  queries: {
+    careers: {
+      id: "fetchGraphQL",
+      fn: $$.fetchGraphQL,
+      args: ({ $q, $props, $ctx, $state }) => [
+        (() => {
+          const __composite = { method: "POST", url: null, request: null };
+          __composite["url"] = "https://edit-sterling.dangstaging.org/graphql";
+          __composite["request"] = {
+            query:
+              "query MyQuery {\n  pageBy(pageId: 96) {\n    pageContent {\n      fieldGroupName\n      button {\n        fieldGroupName\n        text\n        url\n      }\n      headlineParent {\n        fieldGroupName\n        headlinechild {\n          fieldGroupName\n          headlinefav\n          headlinenormal\n        }\n      }\n      textArea {\n        fieldGroupName\n        text\n      }\n    }\n  }\n}",
+            variables: {}
+          };
+          return __composite;
+        })()
+      ]
+    }
+  },
+  propsContext: {},
+  stateSpecs: [],
+  children: []
+};
 
 function useNextRouter() {
   try {
@@ -183,10 +221,12 @@ function PlasmicCareers__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
+  const $q = usePlasmicQueries(serverQueryTree, { $ctx, $props, $state: null });
+
   const globalVariants = _useGlobalVariants();
 
   const pageMetadata = generateDynamicMetadata(
-    wrapQueriesWithLoadingProxy({}),
+    wrapQueriesWithLoadingProxy($q),
     $ctx as PageCtx
   );
 
@@ -251,7 +291,16 @@ function PlasmicCareers__RenderFunc(props: {
                     sty.h4___9M2I7
                   )}
                 >
-                  {"Success starts with"}
+                  {hasVariant(globalVariants, "screen", "desktop") ? (
+                    <React.Fragment>
+                      {
+                        $q.careers.data.body.data.pageBy.pageContent
+                          .headlineParent[0].headlinechild[0].headlinefav
+                      }
+                    </React.Fragment>
+                  ) : (
+                    "Success starts with"
+                  )}
                 </h4>
                 <h3
                   className={classNames(
@@ -265,7 +314,16 @@ function PlasmicCareers__RenderFunc(props: {
                       : "h3-script"
                   )}
                 >
-                  {"Great People"}
+                  {hasVariant(globalVariants, "screen", "desktop") ? (
+                    <React.Fragment>
+                      {
+                        $q.careers.data.body.data.pageBy.pageContent
+                          .headlineParent[0].headlinechild[0].headlinenormal
+                      }
+                    </React.Fragment>
+                  ) : (
+                    "Great People"
+                  )}
                 </h3>
               </div>
               <p
@@ -277,9 +335,26 @@ function PlasmicCareers__RenderFunc(props: {
                   sty.p__oxWyG
                 )}
               >
-                {hasVariant(globalVariants, "screen", "desktop")
-                  ? "At Sterling Foods, our people are at the heart of everything we do. For more than 55 years, we've built a culture rooted in collaboration, innovation, quality, and accountability. Every team member plays an important role in delivering exceptional food solutions to customers across the country."
-                  : "At Sterling Foods, our people are at the heart of everything we do. For more than 55 years, we've built a culture rooted in collaboration, innovation, quality, and accountability. Every team member plays an important role in delivering exceptional food solutions to customers across the country."}
+                {hasVariant(globalVariants, "screen", "desktop") ? (
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $q.careers.data.body.data.pageBy.pageContent
+                          .textArea[0].text;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "At Sterling Foods, our people are at the heart of everything we do. For more than 55 years, we've built a culture rooted in collaboration, innovation, quality, and accountability. Every team member plays an important role in delivering exceptional food solutions to customers across the country.";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
+                ) : (
+                  "At Sterling Foods, our people are at the heart of everything we do. For more than 55 years, we've built a culture rooted in collaboration, innovation, quality, and accountability. Every team member plays an important role in delivering exceptional food solutions to customers across the country."
+                )}
               </p>
               <p
                 className={classNames(
@@ -290,9 +365,26 @@ function PlasmicCareers__RenderFunc(props: {
                   sty.p__mDTj
                 )}
               >
-                {hasVariant(globalVariants, "screen", "desktop")
-                  ? "Whether you're starting your career or bringing years of experience, Sterling Foods offers opportunities to learn, grow, and make a meaningful impact."
-                  : "Whether you're starting your career or bringing years of experience, Sterling Foods offers opportunities to learn, grow, and make a meaningful impact."}
+                {hasVariant(globalVariants, "screen", "desktop") ? (
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $q.careers.data.body.data.pageBy.pageContent
+                          .textArea[1].text;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "Whether you're starting your career or bringing years of experience, Sterling Foods offers opportunities to learn, grow, and make a meaningful impact.";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
+                ) : (
+                  "Whether you're starting your career or bringing years of experience, Sterling Foods offers opportunities to learn, grow, and make a meaningful impact."
+                )}
               </p>
             </div>
             <div
@@ -380,7 +472,16 @@ function PlasmicCareers__RenderFunc(props: {
                       "h3-script"
                     )}
                   >
-                    {"Opportunities"}
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.careers.data.body.data.pageBy.pageContent
+                            .headlineParent[1].headlinechild[0].headlinefav
+                        }
+                      </React.Fragment>
+                    ) : (
+                      "Opportunities"
+                    )}
                   </h3>
                   <h4
                     className={classNames(
@@ -391,7 +492,16 @@ function PlasmicCareers__RenderFunc(props: {
                       sty.h4__rDvhd
                     )}
                   >
-                    {"Across Our Organization"}
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.careers.data.body.data.pageBy.pageContent
+                            .headlineParent[1].headlinechild[0].headlinenormal
+                        }
+                      </React.Fragment>
+                    ) : (
+                      "Across Our Organization"
+                    )}
                   </h4>
                 </div>
                 <div
@@ -408,9 +518,16 @@ function PlasmicCareers__RenderFunc(props: {
                       sty.p__hVr1Q
                     )}
                   >
-                    {
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.careers.data.body.data.pageBy.pageContent
+                            .textArea[2].text
+                        }
+                      </React.Fragment>
+                    ) : (
                       "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                    }
+                    )}
                   </p>
                   <div
                     className={classNames("all", "__wab_text", sty.text__wsjha)}
@@ -511,9 +628,16 @@ function PlasmicCareers__RenderFunc(props: {
                       sty.p__lRzqU
                     )}
                   >
-                    {
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.careers.data.body.data.pageBy.pageContent
+                            .textArea[3].text
+                        }
+                      </React.Fragment>
+                    ) : (
                       "No matter your role, you'll be part of a team dedicated to delivering quality products and helping customers succeed."
-                    }
+                    )}
                   </p>
                 </div>
               </div>
@@ -543,9 +667,18 @@ function PlasmicCareers__RenderFunc(props: {
                         sty.h4__nImG
                       )}
                     >
-                      {hasVariant(globalVariants, "screen", "large")
-                        ? "Current"
-                        : "Success starts with"}
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.careers.data.body.data.pageBy.pageContent
+                              .headlineParent[2].headlinechild[0].headlinefav
+                          }
+                        </React.Fragment>
+                      ) : hasVariant(globalVariants, "screen", "large") ? (
+                        "Current"
+                      ) : (
+                        "Success starts with"
+                      )}
                     </h4>
                     <h3
                       className={classNames(
@@ -559,9 +692,18 @@ function PlasmicCareers__RenderFunc(props: {
                           : "h3-script"
                       )}
                     >
-                      {hasVariant(globalVariants, "screen", "large")
-                        ? "Openings"
-                        : "Great People"}
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.careers.data.body.data.pageBy.pageContent
+                              .headlineParent[2].headlinechild[0].headlinenormal
+                          }
+                        </React.Fragment>
+                      ) : hasVariant(globalVariants, "screen", "large") ? (
+                        "Openings"
+                      ) : (
+                        "Great People"
+                      )}
                     </h3>
                   </div>
                 ) : null}
@@ -577,9 +719,18 @@ function PlasmicCareers__RenderFunc(props: {
                       sty.p__blb6
                     )}
                   >
-                    {hasVariant(globalVariants, "screen", "large")
-                      ? "Ready to join the Sterling Foods team?"
-                      : "No matter your role, you'll be part of a team dedicated to delivering quality products and helping customers succeed."}
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.careers.data.body.data.pageBy.pageContent
+                            .textArea[4].text
+                        }
+                      </React.Fragment>
+                    ) : hasVariant(globalVariants, "screen", "large") ? (
+                      "Ready to join the Sterling Foods team?"
+                    ) : (
+                      "No matter your role, you'll be part of a team dedicated to delivering quality products and helping customers succeed."
+                    )}
                   </p>
                 ) : null}
                 <p
@@ -591,9 +742,18 @@ function PlasmicCareers__RenderFunc(props: {
                     sty.p__bfCwi
                   )}
                 >
-                  {hasVariant(globalVariants, "screen", "large")
-                    ? "Browse our current career opportunities below. When you find a position that's right for you, you'll be directed to our secure online application portal to complete your application."
-                    : "No matter your role, you'll be part of a team dedicated to delivering quality products and helping customers succeed."}
+                  {hasVariant(globalVariants, "screen", "desktop") ? (
+                    <React.Fragment>
+                      {
+                        $q.careers.data.body.data.pageBy.pageContent.textArea[5]
+                          .text
+                      }
+                    </React.Fragment>
+                  ) : hasVariant(globalVariants, "screen", "large") ? (
+                    "Browse our current career opportunities below. When you find a position that's right for you, you'll be directed to our secure online application portal to complete your application."
+                  ) : (
+                    "No matter your role, you'll be part of a team dedicated to delivering quality products and helping customers succeed."
+                  )}
                 </p>
               </div>
             </div>
@@ -675,9 +835,18 @@ function PlasmicCareers__RenderFunc(props: {
                       "h3-script"
                     )}
                   >
-                    {hasVariant(globalVariants, "screen", "large")
-                      ? "Equal"
-                      : "National"}
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.careers.data.body.data.pageBy.pageContent
+                            .headlineParent[3].headlinechild[0].headlinefav
+                        }
+                      </React.Fragment>
+                    ) : hasVariant(globalVariants, "screen", "large") ? (
+                      "Equal"
+                    ) : (
+                      "National"
+                    )}
                   </h3>
                   <h4
                     className={classNames(
@@ -688,9 +857,18 @@ function PlasmicCareers__RenderFunc(props: {
                       sty.h4___1Gl9X
                     )}
                   >
-                    {hasVariant(globalVariants, "screen", "large")
-                      ? "Employment Opportunity"
-                      : "Restaurants"}
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.careers.data.body.data.pageBy.pageContent
+                            .headlineParent[3].headlinechild[0].headlinenormal
+                        }
+                      </React.Fragment>
+                    ) : hasVariant(globalVariants, "screen", "large") ? (
+                      "Employment Opportunity"
+                    ) : (
+                      "Restaurants"
+                    )}
                   </h4>
                 </div>
                 <div
@@ -707,9 +885,18 @@ function PlasmicCareers__RenderFunc(props: {
                       sty.p__abitj
                     )}
                   >
-                    {hasVariant(globalVariants, "screen", "large")
-                      ? "Sterling Foods is proud to be an Equal Opportunity Employer. We are committed to creating an inclusive workplace where all qualified applicants receive consideration for employment in accordance with applicable federal, state, and local laws."
-                      : "Sterling Foods partners with leading restaurant chains to develop proprietary bakery solutions that support menu innovation, operational consistency, and speed to market. With a focus on uniqueness and operational ease, we help brands create iconic, signature products that stand apart from the crowd."}
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.careers.data.body.data.pageBy.pageContent
+                            .textArea[6].text
+                        }
+                      </React.Fragment>
+                    ) : hasVariant(globalVariants, "screen", "large") ? (
+                      "Sterling Foods is proud to be an Equal Opportunity Employer. We are committed to creating an inclusive workplace where all qualified applicants receive consideration for employment in accordance with applicable federal, state, and local laws."
+                    ) : (
+                      "Sterling Foods partners with leading restaurant chains to develop proprietary bakery solutions that support menu innovation, operational consistency, and speed to market. With a focus on uniqueness and operational ease, we help brands create iconic, signature products that stand apart from the crowd."
+                    )}
                   </p>
                 </div>
               </div>
@@ -738,9 +925,18 @@ function PlasmicCareers__RenderFunc(props: {
                       sty.h4__fwB6N
                     )}
                   >
-                    {hasVariant(globalVariants, "screen", "large")
-                      ? "Employment"
-                      : "Restaurants"}
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.careers.data.body.data.pageBy.pageContent
+                            .headlineParent[4].headlinechild[0].headlinefav
+                        }
+                      </React.Fragment>
+                    ) : hasVariant(globalVariants, "screen", "large") ? (
+                      "Employment"
+                    ) : (
+                      "Restaurants"
+                    )}
                   </h4>
                   <h3
                     className={classNames(
@@ -752,9 +948,18 @@ function PlasmicCareers__RenderFunc(props: {
                       "h3-script"
                     )}
                   >
-                    {hasVariant(globalVariants, "screen", "large")
-                      ? "Eligibility"
-                      : "National"}
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.careers.data.body.data.pageBy.pageContent
+                            .headlineParent[4].headlinechild[0].headlinenormal
+                        }
+                      </React.Fragment>
+                    ) : hasVariant(globalVariants, "screen", "large") ? (
+                      "Eligibility"
+                    ) : (
+                      "National"
+                    )}
                   </h3>
                 </div>
                 <div
@@ -771,9 +976,18 @@ function PlasmicCareers__RenderFunc(props: {
                       sty.p__lUog
                     )}
                   >
-                    {hasVariant(globalVariants, "screen", "large")
-                      ? "Sterling Foods participates in the E-Verify program to confirm employment eligibility for all newly hired employees."
-                      : "Sterling Foods partners with leading restaurant chains to develop proprietary bakery solutions that support menu innovation, operational consistency, and speed to market. With a focus on uniqueness and operational ease, we help brands create iconic, signature products that stand apart from the crowd."}
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.careers.data.body.data.pageBy.pageContent
+                            .textArea[7].text
+                        }
+                      </React.Fragment>
+                    ) : hasVariant(globalVariants, "screen", "large") ? (
+                      "Sterling Foods participates in the E-Verify program to confirm employment eligibility for all newly hired employees."
+                    ) : (
+                      "Sterling Foods partners with leading restaurant chains to develop proprietary bakery solutions that support menu innovation, operational consistency, and speed to market. With a focus on uniqueness and operational ease, we help brands create iconic, signature products that stand apart from the crowd."
+                    )}
                   </p>
                 </div>
                 <PrimaryBtn
@@ -782,7 +996,16 @@ function PlasmicCareers__RenderFunc(props: {
                     sty.primaryBtn__zsHqn
                   )}
                 >
-                  {"E-Verify Poster"}
+                  {hasVariant(globalVariants, "screen", "desktop") ? (
+                    <React.Fragment>
+                      {
+                        $q.careers.data.body.data.pageBy.pageContent.button[0]
+                          .text
+                      }
+                    </React.Fragment>
+                  ) : (
+                    "E-Verify Poster"
+                  )}
                 </PrimaryBtn>
                 <PrimaryBtn
                   className={classNames(
@@ -793,11 +1016,20 @@ function PlasmicCareers__RenderFunc(props: {
                   <div
                     className={classNames("all", "__wab_text", sty.text__v7ZNv)}
                   >
-                    {hasVariant(globalVariants, "screen", "smallMobile")
-                      ? "Right to Work Notice (English)"
-                      : hasVariant(globalVariants, "screen", "tablet")
-                        ? "Right to Work Notice (English)"
-                        : "Right to Work Notice (English)"}
+                    {hasVariant(globalVariants, "screen", "smallMobile") ? (
+                      "Right to Work Notice (English)"
+                    ) : hasVariant(globalVariants, "screen", "tablet") ? (
+                      "Right to Work Notice (English)"
+                    ) : hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.careers.data.body.data.pageBy.pageContent.button[1]
+                            .text
+                        }
+                      </React.Fragment>
+                    ) : (
+                      "Right to Work Notice (English)"
+                    )}
                   </div>
                 </PrimaryBtn>
                 <PrimaryBtn
@@ -806,7 +1038,16 @@ function PlasmicCareers__RenderFunc(props: {
                   <div
                     className={classNames("all", "__wab_text", sty.text__esSzJ)}
                   >
-                    {"Right to Work Notice (Spanish)\r"}
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.careers.data.body.data.pageBy.pageContent.button[2]
+                            .text
+                        }
+                      </React.Fragment>
+                    ) : (
+                      "Right to Work Notice (Spanish)\r"
+                    )}
                   </div>
                 </PrimaryBtn>
               </div>
@@ -929,9 +1170,18 @@ function PlasmicCareers__RenderFunc(props: {
                       "h3-script"
                     )}
                   >
-                    {hasVariant(globalVariants, "screen", "large")
-                      ? "Transparency"
-                      : "National"}
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.careers.data.body.data.pageBy.pageContent
+                            .headlineParent[5].headlinechild[0].headlinefav
+                        }
+                      </React.Fragment>
+                    ) : hasVariant(globalVariants, "screen", "large") ? (
+                      "Transparency"
+                    ) : (
+                      "National"
+                    )}
                   </h3>
                   <h4
                     className={classNames(
@@ -942,9 +1192,18 @@ function PlasmicCareers__RenderFunc(props: {
                       sty.h4__jugpP
                     )}
                   >
-                    {hasVariant(globalVariants, "screen", "large")
-                      ? "in Coverage"
-                      : "Restaurants"}
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.careers.data.body.data.pageBy.pageContent
+                            .headlineParent[5].headlinechild[0].headlinenormal
+                        }
+                      </React.Fragment>
+                    ) : hasVariant(globalVariants, "screen", "large") ? (
+                      "in Coverage"
+                    ) : (
+                      "Restaurants"
+                    )}
                   </h4>
                 </div>
                 <div
@@ -961,9 +1220,18 @@ function PlasmicCareers__RenderFunc(props: {
                       sty.p___40FIy
                     )}
                   >
-                    {hasVariant(globalVariants, "screen", "large")
-                      ? "In accordance with the federal Transparency in Coverage Rule, machine-readable files containing negotiated service rates  and out-of-network allowed amounts are available below."
-                      : "Sterling Foods partners with leading restaurant chains to develop proprietary bakery solutions that support menu innovation, operational consistency, and speed to market. With a focus on uniqueness and operational ease, we help brands create iconic, signature products that stand apart from the crowd."}
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.careers.data.body.data.pageBy.pageContent
+                            .textArea[8].text
+                        }
+                      </React.Fragment>
+                    ) : hasVariant(globalVariants, "screen", "large") ? (
+                      "In accordance with the federal Transparency in Coverage Rule, machine-readable files containing negotiated service rates  and out-of-network allowed amounts are available below."
+                    ) : (
+                      "Sterling Foods partners with leading restaurant chains to develop proprietary bakery solutions that support menu innovation, operational consistency, and speed to market. With a focus on uniqueness and operational ease, we help brands create iconic, signature products that stand apart from the crowd."
+                    )}
                   </p>
                 </div>
                 <PrimaryBtn
@@ -975,7 +1243,16 @@ function PlasmicCareers__RenderFunc(props: {
                   <div
                     className={classNames("all", "__wab_text", sty.text__honod)}
                   >
-                    {"View Machine-Readable Files"}
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.careers.data.body.data.pageBy.pageContent.button[3]
+                            .text
+                        }
+                      </React.Fragment>
+                    ) : (
+                      "View Machine-Readable Files"
+                    )}
                   </div>
                 </PrimaryBtn>
                 <PrimaryBtn

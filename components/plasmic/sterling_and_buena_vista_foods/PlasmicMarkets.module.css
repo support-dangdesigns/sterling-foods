@@ -588,6 +588,11 @@
     animation: none;
   }
 }
+@media (max-width: 1920px) {
+  .h4__m8Qr {
+    padding-bottom: 0px;
+  }
+}
 .paragraph {
   animation: none;
   display: flex;
@@ -1210,6 +1215,11 @@
 @media (max-width: 2000px) {
   .h4___3F273 {
     animation: none;
+  }
+}
+@media (max-width: 1920px) {
+  .h4___3F273 {
+    padding-bottom: 0px;
   }
 }
 .paragraph3 {

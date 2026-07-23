@@ -220,6 +220,7 @@ function PlasmicCtaBottom__RenderFunc(props: {
                       "__wab_text",
                       "plasmic_default__inline",
                       sty.span,
+                      "fave-script",
                       {
                         [sty.spanmarketsPage_base2]: hasVariant(
                           $state,
@@ -256,6 +257,7 @@ function PlasmicCtaBottom__RenderFunc(props: {
                       "__wab_text",
                       "plasmic_default__inline",
                       sty.span,
+                      "fave-script",
                       {
                         [sty.spanmarketsPage_base2]: hasVariant(
                           $state,
@@ -336,7 +338,9 @@ function PlasmicCtaBottom__RenderFunc(props: {
               data-plasmic-override={overrides.primaryBtn}
               className={classNames("__wab_instance", sty.primaryBtn)}
             >
-              {"Start a Conversation"}
+              <div className={classNames("all", "__wab_text", sty.text__hOq7P)}>
+                {"Start a Conversation"}
+              </div>
             </PrimaryBtn>
           </PlasmicLink__>
         </div>

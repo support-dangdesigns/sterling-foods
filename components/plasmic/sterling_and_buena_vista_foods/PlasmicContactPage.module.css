@@ -94,7 +94,8 @@
   color: var(--token-Gx156sR9ht1r);
   text-align: center;
   font-family: var(--token-3FFZ7xNHqr9C);
-  font-size: 85px;
+  font-size: 95px;
+  align-self: center;
 }
 @media (max-width: 2000px) {
   .text__kJdHa {
@@ -110,6 +111,7 @@
   color: var(--token-Q67gH6ouJM2i);
   text-align: center;
   margin-bottom: 0px;
+  align-self: center;
 }
 @media (max-width: 2000px) {
   .text___2Cp16 {

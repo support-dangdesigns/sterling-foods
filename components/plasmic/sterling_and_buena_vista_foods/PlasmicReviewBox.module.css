@@ -79,6 +79,11 @@
   line-height: 1.25;
   flex-shrink: 0;
 }
+@media (max-width: 2000px) {
+  .text {
+    padding: 8px;
+  }
+}
 .frame51 {
   animation: none;
   width: 52px;

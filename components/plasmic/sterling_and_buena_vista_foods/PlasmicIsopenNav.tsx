@@ -357,7 +357,7 @@ function PlasmicIsopenNav__RenderFunc(props: {
                 ? (() => {
                     const actionArgs = {
                       vgroup: "animateImage",
-                      operation: 2,
+                      operation: 4,
                       value: "animateImage"
                     };
                     return (({ vgroup, value }) => {
@@ -365,9 +365,8 @@ function PlasmicIsopenNav__RenderFunc(props: {
                         value = [value];
                       }
 
-                      const oldValue = $stateGet($state, vgroup);
-                      $stateSet($state, vgroup, !oldValue);
-                      return !oldValue;
+                      $stateSet($state, vgroup, true);
+                      return true;
                     })?.apply(null, [actionArgs]);
                   })()
                 : undefined;
@@ -411,6 +410,31 @@ function PlasmicIsopenNav__RenderFunc(props: {
                 typeof $steps["updateHoverImage"].then === "function"
               ) {
                 $steps["updateHoverImage"] = await $steps["updateHoverImage"];
+              }
+
+              $steps["updateHoverImage2"] = true
+                ? (() => {
+                    const actionArgs = {
+                      vgroup: "animateImage",
+                      operation: 6,
+                      value: "animateImage"
+                    };
+                    return (({ vgroup, value }) => {
+                      if (typeof value === "string") {
+                        value = [value];
+                      }
+
+                      $stateSet($state, vgroup, false);
+                      return false;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateHoverImage2"] != null &&
+                typeof $steps["updateHoverImage2"] === "object" &&
+                typeof $steps["updateHoverImage2"].then === "function"
+              ) {
+                $steps["updateHoverImage2"] = await $steps["updateHoverImage2"];
               }
             }}
             platform={"nextjs"}
@@ -1348,11 +1372,25 @@ function PlasmicIsopenNav__RenderFunc(props: {
             </TopMenuLinks>
           </PlasmicLink__>
         </div>
-        <div className={classNames("all", sty.freeBox__wqMwo)}>
+        <div
+          className={classNames("all", sty.freeBox__wqMwo, {
+            [sty.freeBoxanimateImage__wqMwoSrhyo]: hasVariant(
+              $state,
+              "animateImage",
+              "animateImage"
+            )
+          })}
+        >
           <PlasmicLink__
             data-plasmic-name={"link"}
             data-plasmic-override={overrides.link}
-            className={classNames("all", "a", "a__uyaK1", sty.link)}
+            className={classNames("all", "a", "a__uyaK1", sty.link, {
+              [sty.linkanimateImage]: hasVariant(
+                $state,
+                "animateImage",
+                "animateImage"
+              )
+            })}
             component={Link}
             href={
               $queries.headerComponent.data.response.data.component.components
@@ -1360,11 +1398,22 @@ function PlasmicIsopenNav__RenderFunc(props: {
             }
             legacyBehavior={false}
             platform={"nextjs"}
+            target={
+              hasVariant($state, "animateImage", "animateImage")
+                ? "_blank"
+                : undefined
+            }
           >
             <Linkedin161SvgrepoCom2SvgIcon
               data-plasmic-name={"svg"}
               data-plasmic-override={overrides.svg}
-              className={classNames("all", sty.svg)}
+              className={classNames("all", sty.svg, {
+                [sty.svganimateImage]: hasVariant(
+                  $state,
+                  "animateImage",
+                  "animateImage"
+                )
+              })}
               role={"img"}
             />
           </PlasmicLink__>

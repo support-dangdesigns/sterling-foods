@@ -52,6 +52,12 @@
   animation: none;
   object-fit: contain;
   max-width: 710px;
+  transition-property: opacity, transform;
+  transition-duration: 300ms, 400ms;
+  pointer-events: none;
+  transform: none;
+  -webkit-transition-property: opacity, transform;
+  -webkit-transition-duration: 300ms, 400ms;
 }
 .img > picture > img {
   object-fit: contain;
@@ -62,8 +68,12 @@
   }
 }
 .imganimateImage {
-  animation: var(--anim-8_EsQyUE1f6D) 1s ease-in 200ms infinite normal none
-    running;
+  animation: none;
+  transform: scale3d(1.05, 1.05, 1);
+  mix-blend-mode: normal;
+  filter: none;
+  isolation: auto;
+  opacity: 1;
 }
 .freeBox__cek1N {
   display: flex;

@@ -583,41 +583,22 @@ function PlasmicHome__RenderFunc(props: {
                         sty.p__w18L
                       )}
                     >
-                      {hasVariant(globalVariants, "screen", "large") ? (
-                        <React.Fragment>
-                          {(() => {
-                            try {
-                              return $q.homePage.data.body.data.pageBy
-                                .pageContent.textArea[0].text;
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return "At Sterling Foods, we combine bakery expertise, innovation, and leading-edge technology to create products that perform.";
-                              }
-                              throw e;
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.homePage.data.body.data.pageBy.pageContent
+                              .textArea[0].text;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "At Sterling Foods, we combine bakery expertise, innovation, and leading-edge technology to create products that perform.";
                             }
-                          })()}
-                        </React.Fragment>
-                      ) : (
-                        <React.Fragment>
-                          {(() => {
-                            try {
-                              return $q.homePage.data.body.data.pageBy
-                                .pageContent.textArea[0].text;
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return "At Sterling Foods, we combine bakery expertise, innovation, and leading-edge technology to create products that perform.";
-                              }
-                              throw e;
-                            }
-                          })()}
-                        </React.Fragment>
-                      )}
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </p>
                     <p
                       className={classNames(
@@ -628,41 +609,22 @@ function PlasmicHome__RenderFunc(props: {
                         sty.p__jid1W
                       )}
                     >
-                      {hasVariant(globalVariants, "screen", "large") ? (
-                        <React.Fragment>
-                          {(() => {
-                            try {
-                              return $q.homePage.data.body.data.pageBy
-                                .pageContent.textArea[1].text;
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return "";
-                              }
-                              throw e;
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.homePage.data.body.data.pageBy.pageContent
+                              .textArea[1].text;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "";
                             }
-                          })()}
-                        </React.Fragment>
-                      ) : (
-                        <React.Fragment>
-                          {(() => {
-                            try {
-                              return $q.homePage.data.body.data.pageBy
-                                .pageContent.textArea[1].text;
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return "";
-                              }
-                              throw e;
-                            }
-                          })()}
-                        </React.Fragment>
-                      )}
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </p>
                   </div>
                   <div className={classNames("all", sty.freeBox__v56Y6)}>
@@ -679,41 +641,22 @@ function PlasmicHome__RenderFunc(props: {
                           sty.text__cEfj0
                         )}
                       >
-                        {hasVariant(globalVariants, "screen", "large") ? (
-                          <React.Fragment>
-                            {(() => {
-                              try {
-                                return $q.homePage.data.body.data.pageBy
-                                  .pageContent.button[0].text;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return "Start Your Project";
-                                }
-                                throw e;
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return $q.homePage.data.body.data.pageBy
+                                .pageContent.button[0].text;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "Start Your Project";
                               }
-                            })()}
-                          </React.Fragment>
-                        ) : (
-                          <React.Fragment>
-                            {(() => {
-                              try {
-                                return $q.homePage.data.body.data.pageBy
-                                  .pageContent.button[0].text;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return "Start Your Project";
-                                }
-                                throw e;
-                              }
-                            })()}
-                          </React.Fragment>
-                        )}
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
                       </div>
                     </PrimaryBtn>
                     <PlasmicLink__
@@ -741,43 +684,22 @@ function PlasmicHome__RenderFunc(props: {
                             sty.text__ye4QN
                           )}
                         >
-                          {hasVariant(globalVariants, "screen", "large") ? (
-                            <React.Fragment>
-                              {(() => {
-                                try {
-                                  return $q.homePage.data.body.data.pageBy
-                                    .pageContent.button[1].text;
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return "Learn More About Sterling Foods";
-                                  }
-                                  throw e;
+                          <React.Fragment>
+                            {(() => {
+                              try {
+                                return $q.homePage.data.body.data.pageBy
+                                  .pageContent.button[1].text;
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return "Learn More About Sterling Foods";
                                 }
-                              })()}
-                            </React.Fragment>
-                          ) : (
-                            <React.Fragment>
-                              {(() => {
-                                try {
-                                  return $q.homePage.data.body.data.pageBy
-                                    .pageContent.button[1].text;
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return "Learn More About Sterling Foods";
-                                  }
-                                  throw e;
-                                }
-                              })()}
-                            </React.Fragment>
-                          )}
+                                throw e;
+                              }
+                            })()}
+                          </React.Fragment>
                         </div>
                       </PrimaryBtn>
                     </PlasmicLink__>
@@ -820,43 +742,23 @@ function PlasmicHome__RenderFunc(props: {
                           "h4-script"
                         )}
                       >
-                        {hasVariant(globalVariants, "screen", "large") ? (
-                          <React.Fragment>
-                            {(() => {
-                              try {
-                                return $q.homePage.data.body.data.pageBy
-                                  .pageContent.headlineParent[2]
-                                  .headlinechild[0].headlinefav;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return "Bakery Solutions";
-                                }
-                                throw e;
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return $q.homePage.data.body.data.pageBy
+                                .pageContent.headlineParent[2].headlinechild[0]
+                                .headlinefav;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "Bakery Solutions";
                               }
-                            })()}
-                          </React.Fragment>
-                        ) : (
-                          <React.Fragment>
-                            {(() => {
-                              try {
-                                return $q.homePage.data.body.data.pageBy
-                                  .pageContent.headlineParent[2]
-                                  .headlinechild[0].headlinefav;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return "Bakery Solutions";
-                                }
-                                throw e;
-                              }
-                            })()}
-                          </React.Fragment>
-                        )}
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
                       </h4>
                       <h4
                         className={classNames(
@@ -867,23 +769,12 @@ function PlasmicHome__RenderFunc(props: {
                           sty.h4___4Rj2M
                         )}
                       >
-                        {hasVariant(globalVariants, "screen", "large") ? (
-                          <React.Fragment>
-                            {
-                              $q.homePage.data.body.data.pageBy.pageContent
-                                .headlineParent[2].headlinechild[0]
-                                .headlinenormal
-                            }
-                          </React.Fragment>
-                        ) : (
-                          <React.Fragment>
-                            {
-                              $q.homePage.data.body.data.pageBy.pageContent
-                                .headlineParent[2].headlinechild[0]
-                                .headlinenormal
-                            }
-                          </React.Fragment>
-                        )}
+                        <React.Fragment>
+                          {
+                            $q.homePage.data.body.data.pageBy.pageContent
+                              .headlineParent[2].headlinechild[0].headlinenormal
+                          }
+                        </React.Fragment>
                       </h4>
                       <p
                         className={classNames(
@@ -894,41 +785,22 @@ function PlasmicHome__RenderFunc(props: {
                           sty.p___37Rkd
                         )}
                       >
-                        {hasVariant(globalVariants, "screen", "large") ? (
-                          <React.Fragment>
-                            {(() => {
-                              try {
-                                return $q.homePage.data.body.data.pageBy
-                                  .pageContent.textArea[2].text;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return "We understand that consumer tastes, operational needs, and market demands are always evolving. That\u2019s why we take a flexible, can-do approach to product development, production, and partnership.\nOur team works with you to create bakery solutions that are consistent, scalable, and made with quality and food safety at the forefront.";
-                                }
-                                throw e;
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return $q.homePage.data.body.data.pageBy
+                                .pageContent.textArea[2].text;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "We understand that consumer tastes, operational needs, and market demands are always evolving. That\u2019s why we take a flexible, can-do approach to product development, production, and partnership.\nOur team works with you to create bakery solutions that are consistent, scalable, and made with quality and food safety at the forefront.";
                               }
-                            })()}
-                          </React.Fragment>
-                        ) : (
-                          <React.Fragment>
-                            {(() => {
-                              try {
-                                return $q.homePage.data.body.data.pageBy
-                                  .pageContent.textArea[2].text;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return "We understand that consumer tastes, operational needs, and market demands are always evolving. That\u2019s why we take a flexible, can-do approach to product development, production, and partnership.\nOur team works with you to create bakery solutions that are consistent, scalable, and made with quality and food safety at the forefront.";
-                                }
-                                throw e;
-                              }
-                            })()}
-                          </React.Fragment>
-                        )}
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
                       </p>
                       <PlasmicLink__
                         className={classNames(
@@ -955,21 +827,12 @@ function PlasmicHome__RenderFunc(props: {
                               sty.text__tzNq
                             )}
                           >
-                            {hasVariant(globalVariants, "screen", "large") ? (
-                              <React.Fragment>
-                                {
-                                  $q.homePage.data.body.data.pageBy.pageContent
-                                    .button[2].text
-                                }
-                              </React.Fragment>
-                            ) : (
-                              <React.Fragment>
-                                {
-                                  $q.homePage.data.body.data.pageBy.pageContent
-                                    .button[2].text
-                                }
-                              </React.Fragment>
-                            )}
+                            <React.Fragment>
+                              {
+                                $q.homePage.data.body.data.pageBy.pageContent
+                                  .button[2].text
+                              }
+                            </React.Fragment>
                           </div>
                         </PrimaryBtn>
                       </PlasmicLink__>
@@ -1014,43 +877,23 @@ function PlasmicHome__RenderFunc(props: {
                           "h4-script"
                         )}
                       >
-                        {hasVariant(globalVariants, "screen", "large") ? (
-                          <React.Fragment>
-                            {(() => {
-                              try {
-                                return $q.homePage.data.body.data.pageBy
-                                  .pageContent.headlineParent[3]
-                                  .headlinechild[0].headlinefav;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return "Serving a Wide Range of";
-                                }
-                                throw e;
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return $q.homePage.data.body.data.pageBy
+                                .pageContent.headlineParent[3].headlinechild[0]
+                                .headlinefav;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "Serving a Wide Range of";
                               }
-                            })()}
-                          </React.Fragment>
-                        ) : (
-                          <React.Fragment>
-                            {(() => {
-                              try {
-                                return $q.homePage.data.body.data.pageBy
-                                  .pageContent.headlineParent[3]
-                                  .headlinechild[0].headlinefav;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return "Serving a Wide Range of";
-                                }
-                                throw e;
-                              }
-                            })()}
-                          </React.Fragment>
-                        )}
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
                       </h4>
                       <h4
                         className={classNames(
@@ -1061,23 +904,12 @@ function PlasmicHome__RenderFunc(props: {
                           sty.h4__lgHx
                         )}
                       >
-                        {hasVariant(globalVariants, "screen", "large") ? (
-                          <React.Fragment>
-                            {
-                              $q.homePage.data.body.data.pageBy.pageContent
-                                .headlineParent[3].headlinechild[0]
-                                .headlinenormal
-                            }
-                          </React.Fragment>
-                        ) : (
-                          <React.Fragment>
-                            {
-                              $q.homePage.data.body.data.pageBy.pageContent
-                                .headlineParent[3].headlinechild[0]
-                                .headlinenormal
-                            }
-                          </React.Fragment>
-                        )}
+                        <React.Fragment>
+                          {
+                            $q.homePage.data.body.data.pageBy.pageContent
+                              .headlineParent[3].headlinechild[0].headlinenormal
+                          }
+                        </React.Fragment>
                       </h4>
                       <p
                         className={classNames(
@@ -1088,41 +920,22 @@ function PlasmicHome__RenderFunc(props: {
                           sty.p__xZzR
                         )}
                       >
-                        {hasVariant(globalVariants, "screen", "large") ? (
-                          <React.Fragment>
-                            {(() => {
-                              try {
-                                return $q.homePage.data.body.data.pageBy
-                                  .pageContent.textArea[3].text;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return "Sterling Foods proudly serves:";
-                                }
-                                throw e;
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return $q.homePage.data.body.data.pageBy
+                                .pageContent.textArea[3].text;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "Sterling Foods proudly serves:";
                               }
-                            })()}
-                          </React.Fragment>
-                        ) : (
-                          <React.Fragment>
-                            {(() => {
-                              try {
-                                return $q.homePage.data.body.data.pageBy
-                                  .pageContent.textArea[3].text;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return "Sterling Foods proudly serves:";
-                                }
-                                throw e;
-                              }
-                            })()}
-                          </React.Fragment>
-                        )}
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
                       </p>
                       <div className={classNames("all", sty.freeBox__tCUx)}>
                         <div
@@ -1152,49 +965,23 @@ function PlasmicHome__RenderFunc(props: {
                                     sty.li__aVfbp
                                   )}
                                 >
-                                  {hasVariant(
-                                    globalVariants,
-                                    "screen",
-                                    "large"
-                                  ) ? (
-                                    <React.Fragment>
-                                      {(() => {
-                                        try {
-                                          return $q.homePage.data.body.data
-                                            .pageBy.pageContent.textArea[5]
-                                            .text;
-                                        } catch (e) {
-                                          if (
-                                            e instanceof TypeError ||
-                                            e?.plasmicType ===
-                                              "PlasmicUndefinedDataError"
-                                          ) {
-                                            return "";
-                                          }
-                                          throw e;
+                                  <React.Fragment>
+                                    {(() => {
+                                      try {
+                                        return $q.homePage.data.body.data.pageBy
+                                          .pageContent.textArea[5].text;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return "";
                                         }
-                                      })()}
-                                    </React.Fragment>
-                                  ) : (
-                                    <React.Fragment>
-                                      {(() => {
-                                        try {
-                                          return $q.homePage.data.body.data
-                                            .pageBy.pageContent.textArea[5]
-                                            .text;
-                                        } catch (e) {
-                                          if (
-                                            e instanceof TypeError ||
-                                            e?.plasmicType ===
-                                              "PlasmicUndefinedDataError"
-                                          ) {
-                                            return "";
-                                          }
-                                          throw e;
-                                        }
-                                      })()}
-                                    </React.Fragment>
-                                  )}
+                                        throw e;
+                                      }
+                                    })()}
+                                  </React.Fragment>
                                 </li>
                               </ul>
                             }
@@ -1217,49 +1004,23 @@ function PlasmicHome__RenderFunc(props: {
                                     sty.li__yu0Ad
                                   )}
                                 >
-                                  {hasVariant(
-                                    globalVariants,
-                                    "screen",
-                                    "large"
-                                  ) ? (
-                                    <React.Fragment>
-                                      {(() => {
-                                        try {
-                                          return $q.homePage.data.body.data
-                                            .pageBy.pageContent.textArea[6]
-                                            .text;
-                                        } catch (e) {
-                                          if (
-                                            e instanceof TypeError ||
-                                            e?.plasmicType ===
-                                              "PlasmicUndefinedDataError"
-                                          ) {
-                                            return "";
-                                          }
-                                          throw e;
+                                  <React.Fragment>
+                                    {(() => {
+                                      try {
+                                        return $q.homePage.data.body.data.pageBy
+                                          .pageContent.textArea[6].text;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return "";
                                         }
-                                      })()}
-                                    </React.Fragment>
-                                  ) : (
-                                    <React.Fragment>
-                                      {(() => {
-                                        try {
-                                          return $q.homePage.data.body.data
-                                            .pageBy.pageContent.textArea[6]
-                                            .text;
-                                        } catch (e) {
-                                          if (
-                                            e instanceof TypeError ||
-                                            e?.plasmicType ===
-                                              "PlasmicUndefinedDataError"
-                                          ) {
-                                            return "";
-                                          }
-                                          throw e;
-                                        }
-                                      })()}
-                                    </React.Fragment>
-                                  )}
+                                        throw e;
+                                      }
+                                    })()}
+                                  </React.Fragment>
                                 </li>
                               </ul>
                             }
@@ -1282,49 +1043,23 @@ function PlasmicHome__RenderFunc(props: {
                                     sty.li___4UrCd
                                   )}
                                 >
-                                  {hasVariant(
-                                    globalVariants,
-                                    "screen",
-                                    "large"
-                                  ) ? (
-                                    <React.Fragment>
-                                      {(() => {
-                                        try {
-                                          return $q.homePage.data.body.data
-                                            .pageBy.pageContent.textArea[7]
-                                            .text;
-                                        } catch (e) {
-                                          if (
-                                            e instanceof TypeError ||
-                                            e?.plasmicType ===
-                                              "PlasmicUndefinedDataError"
-                                          ) {
-                                            return "";
-                                          }
-                                          throw e;
+                                  <React.Fragment>
+                                    {(() => {
+                                      try {
+                                        return $q.homePage.data.body.data.pageBy
+                                          .pageContent.textArea[7].text;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return "";
                                         }
-                                      })()}
-                                    </React.Fragment>
-                                  ) : (
-                                    <React.Fragment>
-                                      {(() => {
-                                        try {
-                                          return $q.homePage.data.body.data
-                                            .pageBy.pageContent.textArea[7]
-                                            .text;
-                                        } catch (e) {
-                                          if (
-                                            e instanceof TypeError ||
-                                            e?.plasmicType ===
-                                              "PlasmicUndefinedDataError"
-                                          ) {
-                                            return "";
-                                          }
-                                          throw e;
-                                        }
-                                      })()}
-                                    </React.Fragment>
-                                  )}
+                                        throw e;
+                                      }
+                                    })()}
+                                  </React.Fragment>
                                 </li>
                               </ul>
                             }
@@ -1358,49 +1093,23 @@ function PlasmicHome__RenderFunc(props: {
                                     sty.li__t9KMp
                                   )}
                                 >
-                                  {hasVariant(
-                                    globalVariants,
-                                    "screen",
-                                    "large"
-                                  ) ? (
-                                    <React.Fragment>
-                                      {(() => {
-                                        try {
-                                          return $q.homePage.data.body.data
-                                            .pageBy.pageContent.textArea[8]
-                                            .text;
-                                        } catch (e) {
-                                          if (
-                                            e instanceof TypeError ||
-                                            e?.plasmicType ===
-                                              "PlasmicUndefinedDataError"
-                                          ) {
-                                            return "";
-                                          }
-                                          throw e;
+                                  <React.Fragment>
+                                    {(() => {
+                                      try {
+                                        return $q.homePage.data.body.data.pageBy
+                                          .pageContent.textArea[8].text;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return "";
                                         }
-                                      })()}
-                                    </React.Fragment>
-                                  ) : (
-                                    <React.Fragment>
-                                      {(() => {
-                                        try {
-                                          return $q.homePage.data.body.data
-                                            .pageBy.pageContent.textArea[8]
-                                            .text;
-                                        } catch (e) {
-                                          if (
-                                            e instanceof TypeError ||
-                                            e?.plasmicType ===
-                                              "PlasmicUndefinedDataError"
-                                          ) {
-                                            return "";
-                                          }
-                                          throw e;
-                                        }
-                                      })()}
-                                    </React.Fragment>
-                                  )}
+                                        throw e;
+                                      }
+                                    })()}
+                                  </React.Fragment>
                                 </li>
                               </ul>
                             }
@@ -1423,49 +1132,23 @@ function PlasmicHome__RenderFunc(props: {
                                     sty.li__vcYgl
                                   )}
                                 >
-                                  {hasVariant(
-                                    globalVariants,
-                                    "screen",
-                                    "large"
-                                  ) ? (
-                                    <React.Fragment>
-                                      {(() => {
-                                        try {
-                                          return $q.homePage.data.body.data
-                                            .pageBy.pageContent.textArea[9]
-                                            .text;
-                                        } catch (e) {
-                                          if (
-                                            e instanceof TypeError ||
-                                            e?.plasmicType ===
-                                              "PlasmicUndefinedDataError"
-                                          ) {
-                                            return "";
-                                          }
-                                          throw e;
+                                  <React.Fragment>
+                                    {(() => {
+                                      try {
+                                        return $q.homePage.data.body.data.pageBy
+                                          .pageContent.textArea[9].text;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return "";
                                         }
-                                      })()}
-                                    </React.Fragment>
-                                  ) : (
-                                    <React.Fragment>
-                                      {(() => {
-                                        try {
-                                          return $q.homePage.data.body.data
-                                            .pageBy.pageContent.textArea[9]
-                                            .text;
-                                        } catch (e) {
-                                          if (
-                                            e instanceof TypeError ||
-                                            e?.plasmicType ===
-                                              "PlasmicUndefinedDataError"
-                                          ) {
-                                            return "";
-                                          }
-                                          throw e;
-                                        }
-                                      })()}
-                                    </React.Fragment>
-                                  )}
+                                        throw e;
+                                      }
+                                    })()}
+                                  </React.Fragment>
                                 </li>
                               </ul>
                             }
@@ -1498,43 +1181,23 @@ function PlasmicHome__RenderFunc(props: {
                               sty.text__c0Kxh
                             )}
                           >
-                            {hasVariant(globalVariants, "screen", "large") ? (
-                              <React.Fragment>
-                                {(() => {
-                                  try {
-                                    return $q.homePage.data.body.data.pageBy
-                                      .pageContent.button[3].text;
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return "View All Markets";
-                                    }
-                                    throw e;
+                            <React.Fragment>
+                              {(() => {
+                                try {
+                                  return $q.homePage.data.body.data.pageBy
+                                    .pageContent.button[3].text;
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return "View All Markets";
                                   }
-                                })()}
-                              </React.Fragment>
-                            ) : (
-                              <React.Fragment>
-                                {(() => {
-                                  try {
-                                    return $q.homePage.data.body.data.pageBy
-                                      .pageContent.button[3].text;
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return "View All Markets";
-                                    }
-                                    throw e;
-                                  }
-                                })()}
-                              </React.Fragment>
-                            )}
+                                  throw e;
+                                }
+                              })()}
+                            </React.Fragment>
                           </div>
                         </PrimaryBtn>
                       </PlasmicLink__>
@@ -1567,23 +1230,12 @@ function PlasmicHome__RenderFunc(props: {
                           sty.h4__gwMWe
                         )}
                       >
-                        {hasVariant(globalVariants, "screen", "large") ? (
-                          <React.Fragment>
-                            {
-                              $q.homePage.data.body.data.pageBy.pageContent
-                                .headlineParent[4].headlinechild[0]
-                                .headlinenormal
-                            }
-                          </React.Fragment>
-                        ) : (
-                          <React.Fragment>
-                            {
-                              $q.homePage.data.body.data.pageBy.pageContent
-                                .headlineParent[4].headlinechild[0]
-                                .headlinenormal
-                            }
-                          </React.Fragment>
-                        )}
+                        <React.Fragment>
+                          {
+                            $q.homePage.data.body.data.pageBy.pageContent
+                              .headlineParent[4].headlinechild[0].headlinenormal
+                          }
+                        </React.Fragment>
                       </h4>
                       <h3
                         className={classNames(
@@ -1595,21 +1247,12 @@ function PlasmicHome__RenderFunc(props: {
                           "h4-script"
                         )}
                       >
-                        {hasVariant(globalVariants, "screen", "large") ? (
-                          <React.Fragment>
-                            {
-                              $q.homePage.data.body.data.pageBy.pageContent
-                                .headlineParent[4].headlinechild[0].headlinefav
-                            }
-                          </React.Fragment>
-                        ) : (
-                          <React.Fragment>
-                            {
-                              $q.homePage.data.body.data.pageBy.pageContent
-                                .headlineParent[4].headlinechild[0].headlinefav
-                            }
-                          </React.Fragment>
-                        )}
+                        <React.Fragment>
+                          {
+                            $q.homePage.data.body.data.pageBy.pageContent
+                              .headlineParent[4].headlinechild[0].headlinefav
+                          }
+                        </React.Fragment>
                       </h3>
                     </div>
                     <p
@@ -1621,21 +1264,12 @@ function PlasmicHome__RenderFunc(props: {
                         sty.p__pbUxp
                       )}
                     >
-                      {hasVariant(globalVariants, "screen", "large") ? (
-                        <React.Fragment>
-                          {
-                            $q.homePage.data.body.data.pageBy.pageContent
-                              .textArea[4].text
-                          }
-                        </React.Fragment>
-                      ) : (
-                        <React.Fragment>
-                          {
-                            $q.homePage.data.body.data.pageBy.pageContent
-                              .textArea[4].text
-                          }
-                        </React.Fragment>
-                      )}
+                      <React.Fragment>
+                        {
+                          $q.homePage.data.body.data.pageBy.pageContent
+                            .textArea[4].text
+                        }
+                      </React.Fragment>
                     </p>
                     <div
                       data-plasmic-name={"buttons"}
@@ -1655,43 +1289,22 @@ function PlasmicHome__RenderFunc(props: {
                             sty.text__udAml
                           )}
                         >
-                          {hasVariant(globalVariants, "screen", "large") ? (
-                            <React.Fragment>
-                              {(() => {
-                                try {
-                                  return $q.homePage.data.body.data.pageBy
-                                    .pageContent.button[4].text;
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return "View Our Facilities";
-                                  }
-                                  throw e;
+                          <React.Fragment>
+                            {(() => {
+                              try {
+                                return $q.homePage.data.body.data.pageBy
+                                  .pageContent.button[4].text;
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return "View Our Facilities";
                                 }
-                              })()}
-                            </React.Fragment>
-                          ) : (
-                            <React.Fragment>
-                              {(() => {
-                                try {
-                                  return $q.homePage.data.body.data.pageBy
-                                    .pageContent.button[4].text;
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return "View Our Facilities";
-                                  }
-                                  throw e;
-                                }
-                              })()}
-                            </React.Fragment>
-                          )}
+                                throw e;
+                              }
+                            })()}
+                          </React.Fragment>
                         </div>
                       </SecondaryBtn>
                       <PlasmicLink__
@@ -1721,43 +1334,23 @@ function PlasmicHome__RenderFunc(props: {
                               sty.text__acejO
                             )}
                           >
-                            {hasVariant(globalVariants, "screen", "large") ? (
-                              <React.Fragment>
-                                {(() => {
-                                  try {
-                                    return $q.homePage.data.body.data.pageBy
-                                      .pageContent.button[5].text;
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return "Explore Quality & Safety";
-                                    }
-                                    throw e;
+                            <React.Fragment>
+                              {(() => {
+                                try {
+                                  return $q.homePage.data.body.data.pageBy
+                                    .pageContent.button[5].text;
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return "Explore Quality & Safety";
                                   }
-                                })()}
-                              </React.Fragment>
-                            ) : (
-                              <React.Fragment>
-                                {(() => {
-                                  try {
-                                    return $q.homePage.data.body.data.pageBy
-                                      .pageContent.button[5].text;
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return "Explore Quality & Safety";
-                                    }
-                                    throw e;
-                                  }
-                                })()}
-                              </React.Fragment>
-                            )}
+                                  throw e;
+                                }
+                              })()}
+                            </React.Fragment>
                           </div>
                         </SecondaryBtn>
                       </PlasmicLink__>
@@ -1769,16 +1362,8 @@ function PlasmicHome__RenderFunc(props: {
                 data-plasmic-name={"reviews"}
                 data-plasmic-override={overrides.reviews}
                 className={classNames("__wab_instance", sty.reviews)}
-                query={
-                  hasVariant(globalVariants, "screen", "large")
-                    ? $q.homePage.data
-                    : $q.homePage.data
-                }
-                wpGraph={
-                  hasVariant(globalVariants, "screen", "large")
-                    ? $q.homePage.data
-                    : $q.homePage.data
-                }
+                query={$q.homePage.data}
+                wpGraph={$q.homePage.data}
               />
 
               <CtaBottom

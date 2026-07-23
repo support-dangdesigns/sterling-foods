@@ -234,9 +234,7 @@ function PlasmicCtaBottom__RenderFunc(props: {
                       ? "bakery partner"
                       : hasVariant(globalVariants, "screen", "desktop")
                         ? "bakery partner"
-                        : hasVariant(globalVariants, "screen", "large")
-                          ? "bakery partner"
-                          : "bakery partner"}
+                        : "bakery partner"}
                   </span>
                 }
                 <React.Fragment>
@@ -271,9 +269,7 @@ function PlasmicCtaBottom__RenderFunc(props: {
                       ? "bakery partner"
                       : hasVariant(globalVariants, "screen", "desktop")
                         ? "bakery partner"
-                        : hasVariant(globalVariants, "screen", "large")
-                          ? "bakery partner"
-                          : "bakery partner"}
+                        : "bakery partner"}
                   </span>
                 }
                 <React.Fragment>{" that can grow with you?"}</React.Fragment>
@@ -294,9 +290,7 @@ function PlasmicCtaBottom__RenderFunc(props: {
             ? "For more than 50 years, Sterling Foods has partnered with customers across \nfoodservice, retail, military, healthcare, and institutional markets, helping bring innovative \nbakery solutions to consumers nationwide."
             : hasVariant(globalVariants, "screen", "desktop")
               ? "Let\u2019s create something exceptional together."
-              : hasVariant(globalVariants, "screen", "large")
-                ? "Let\u2019s create something exceptional together."
-                : "Let\u2019s create something exceptional together."}
+              : "Let\u2019s create something exceptional together."}
         </div>
         <div
           className={classNames("all", "__wab_text", sty.text___2EPm, {
@@ -309,9 +303,7 @@ function PlasmicCtaBottom__RenderFunc(props: {
         >
           {hasVariant(globalVariants, "screen", "desktop")
             ? "Let\u2019s create something exceptional together."
-            : hasVariant(globalVariants, "screen", "large")
-              ? "Let\u2019s create something exceptional together."
-              : "Let\u2019s create something exceptional together."}
+            : "Let\u2019s create something exceptional together."}
         </div>
         <div
           data-plasmic-name={"buttonContainer"}

@@ -439,9 +439,7 @@ function PlasmicCareers__RenderFunc(props: {
                                   "smallDesktop"
                                 )
                               ? "472px"
-                              : hasVariant(globalVariants, "screen", "large")
-                                ? "640px"
-                                : "100%"
+                              : "auto"
                 }
                 loading={"lazy"}
                 src={{
@@ -654,9 +652,7 @@ function PlasmicCareers__RenderFunc(props: {
               className={classNames("all", sty.openings)}
             >
               <div className={classNames("all", sty.freeBox___6Zuo0)}>
-                {(
-                  hasVariant(globalVariants, "screen", "large") ? true : false
-                ) ? (
+                {false ? (
                   <div className={classNames("all", sty.freeBox___4Mucr)}>
                     <h4
                       className={classNames(
@@ -674,8 +670,6 @@ function PlasmicCareers__RenderFunc(props: {
                               .headlineParent[2].headlinechild[0].headlinefav
                           }
                         </React.Fragment>
-                      ) : hasVariant(globalVariants, "screen", "large") ? (
-                        "Current"
                       ) : (
                         "Success starts with"
                       )}
@@ -699,17 +693,13 @@ function PlasmicCareers__RenderFunc(props: {
                               .headlineParent[2].headlinechild[0].headlinenormal
                           }
                         </React.Fragment>
-                      ) : hasVariant(globalVariants, "screen", "large") ? (
-                        "Openings"
                       ) : (
                         "Great People"
                       )}
                     </h3>
                   </div>
                 ) : null}
-                {(
-                  hasVariant(globalVariants, "screen", "large") ? true : false
-                ) ? (
+                {false ? (
                   <p
                     className={classNames(
                       "all",
@@ -726,8 +716,6 @@ function PlasmicCareers__RenderFunc(props: {
                             .textArea[4].text
                         }
                       </React.Fragment>
-                    ) : hasVariant(globalVariants, "screen", "large") ? (
-                      "Ready to join the Sterling Foods team?"
                     ) : (
                       "No matter your role, you'll be part of a team dedicated to delivering quality products and helping customers succeed."
                     )}
@@ -749,8 +737,6 @@ function PlasmicCareers__RenderFunc(props: {
                           .text
                       }
                     </React.Fragment>
-                  ) : hasVariant(globalVariants, "screen", "large") ? (
-                    "Browse our current career opportunities below. When you find a position that's right for you, you'll be directed to our secure online application portal to complete your application."
                   ) : (
                     "No matter your role, you'll be part of a team dedicated to delivering quality products and helping customers succeed."
                   )}
@@ -793,26 +779,15 @@ function PlasmicCareers__RenderFunc(props: {
                                   "smallDesktop"
                                 )
                               ? "472px"
-                              : hasVariant(globalVariants, "screen", "large")
-                                ? "700px"
-                                : "574px"
+                              : "574px"
                 }
                 loading={"lazy"}
-                src={
-                  hasVariant(globalVariants, "screen", "large")
-                    ? {
-                        src: "/plasmic/sterling_and_buena_vista_foods/images/image2Png2.png",
-                        fullWidth: 698,
-                        fullHeight: 633,
-                        aspectRatio: undefined
-                      }
-                    : {
-                        src: "/plasmic/sterling_and_buena_vista_foods/images/coffeeAvif.avif",
-                        fullWidth: 574,
-                        fullHeight: 488,
-                        aspectRatio: undefined
-                      }
-                }
+                src={{
+                  src: "/plasmic/sterling_and_buena_vista_foods/images/coffeeAvif.avif",
+                  fullWidth: 574,
+                  fullHeight: 488,
+                  aspectRatio: undefined
+                }}
               />
 
               <div
@@ -842,8 +817,6 @@ function PlasmicCareers__RenderFunc(props: {
                             .headlineParent[3].headlinechild[0].headlinefav
                         }
                       </React.Fragment>
-                    ) : hasVariant(globalVariants, "screen", "large") ? (
-                      "Equal"
                     ) : (
                       "National"
                     )}
@@ -864,8 +837,6 @@ function PlasmicCareers__RenderFunc(props: {
                             .headlineParent[3].headlinechild[0].headlinenormal
                         }
                       </React.Fragment>
-                    ) : hasVariant(globalVariants, "screen", "large") ? (
-                      "Employment Opportunity"
                     ) : (
                       "Restaurants"
                     )}
@@ -892,8 +863,6 @@ function PlasmicCareers__RenderFunc(props: {
                             .textArea[6].text
                         }
                       </React.Fragment>
-                    ) : hasVariant(globalVariants, "screen", "large") ? (
-                      "Sterling Foods is proud to be an Equal Opportunity Employer. We are committed to creating an inclusive workplace where all qualified applicants receive consideration for employment in accordance with applicable federal, state, and local laws."
                     ) : (
                       "Sterling Foods partners with leading restaurant chains to develop proprietary bakery solutions that support menu innovation, operational consistency, and speed to market. With a focus on uniqueness and operational ease, we help brands create iconic, signature products that stand apart from the crowd."
                     )}
@@ -932,8 +901,6 @@ function PlasmicCareers__RenderFunc(props: {
                             .headlineParent[4].headlinechild[0].headlinefav
                         }
                       </React.Fragment>
-                    ) : hasVariant(globalVariants, "screen", "large") ? (
-                      "Employment"
                     ) : (
                       "Restaurants"
                     )}
@@ -955,8 +922,6 @@ function PlasmicCareers__RenderFunc(props: {
                             .headlineParent[4].headlinechild[0].headlinenormal
                         }
                       </React.Fragment>
-                    ) : hasVariant(globalVariants, "screen", "large") ? (
-                      "Eligibility"
                     ) : (
                       "National"
                     )}
@@ -983,8 +948,6 @@ function PlasmicCareers__RenderFunc(props: {
                             .textArea[7].text
                         }
                       </React.Fragment>
-                    ) : hasVariant(globalVariants, "screen", "large") ? (
-                      "Sterling Foods participates in the E-Verify program to confirm employment eligibility for all newly hired employees."
                     ) : (
                       "Sterling Foods partners with leading restaurant chains to develop proprietary bakery solutions that support menu innovation, operational consistency, and speed to market. With a focus on uniqueness and operational ease, we help brands create iconic, signature products that stand apart from the crowd."
                     )}
@@ -1076,26 +1039,15 @@ function PlasmicCareers__RenderFunc(props: {
                                   "smallDesktop"
                                 )
                               ? "472px"
-                              : hasVariant(globalVariants, "screen", "large")
-                                ? "700px"
-                                : "574px"
+                              : "574px"
                 }
                 loading={"lazy"}
-                src={
-                  hasVariant(globalVariants, "screen", "large")
-                    ? {
-                        src: "/plasmic/sterling_and_buena_vista_foods/images/image3Png2.png",
-                        fullWidth: 680,
-                        fullHeight: 620,
-                        aspectRatio: undefined
-                      }
-                    : {
-                        src: "/plasmic/sterling_and_buena_vista_foods/images/coffeeAvif.avif",
-                        fullWidth: 574,
-                        fullHeight: 488,
-                        aspectRatio: undefined
-                      }
-                }
+                src={{
+                  src: "/plasmic/sterling_and_buena_vista_foods/images/coffeeAvif.avif",
+                  fullWidth: 574,
+                  fullHeight: 488,
+                  aspectRatio: undefined
+                }}
               />
             </div>
             <div
@@ -1128,26 +1080,15 @@ function PlasmicCareers__RenderFunc(props: {
                                   "smallDesktop"
                                 )
                               ? "472px"
-                              : hasVariant(globalVariants, "screen", "large")
-                                ? "700px"
-                                : "auto"
+                              : "auto"
                 }
                 loading={"lazy"}
-                src={
-                  hasVariant(globalVariants, "screen", "large")
-                    ? {
-                        src: "/plasmic/sterling_and_buena_vista_foods/images/image4Png2.png",
-                        fullWidth: 698,
-                        fullHeight: 637,
-                        aspectRatio: undefined
-                      }
-                    : {
-                        src: "/plasmic/sterling_and_buena_vista_foods/images/coffeeAvif.avif",
-                        fullWidth: 574,
-                        fullHeight: 488,
-                        aspectRatio: undefined
-                      }
-                }
+                src={{
+                  src: "/plasmic/sterling_and_buena_vista_foods/images/coffeeAvif.avif",
+                  fullWidth: 574,
+                  fullHeight: 488,
+                  aspectRatio: undefined
+                }}
               />
 
               <div
@@ -1177,8 +1118,6 @@ function PlasmicCareers__RenderFunc(props: {
                             .headlineParent[5].headlinechild[0].headlinefav
                         }
                       </React.Fragment>
-                    ) : hasVariant(globalVariants, "screen", "large") ? (
-                      "Transparency"
                     ) : (
                       "National"
                     )}
@@ -1199,8 +1138,6 @@ function PlasmicCareers__RenderFunc(props: {
                             .headlineParent[5].headlinechild[0].headlinenormal
                         }
                       </React.Fragment>
-                    ) : hasVariant(globalVariants, "screen", "large") ? (
-                      "in Coverage"
                     ) : (
                       "Restaurants"
                     )}
@@ -1227,8 +1164,6 @@ function PlasmicCareers__RenderFunc(props: {
                             .textArea[8].text
                         }
                       </React.Fragment>
-                    ) : hasVariant(globalVariants, "screen", "large") ? (
-                      "In accordance with the federal Transparency in Coverage Rule, machine-readable files containing negotiated service rates  and out-of-network allowed amounts are available below."
                     ) : (
                       "Sterling Foods partners with leading restaurant chains to develop proprietary bakery solutions that support menu innovation, operational consistency, and speed to market. With a focus on uniqueness and operational ease, we help brands create iconic, signature products that stand apart from the crowd."
                     )}

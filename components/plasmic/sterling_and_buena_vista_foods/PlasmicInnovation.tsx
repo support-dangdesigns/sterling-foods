@@ -140,6 +140,7 @@ export type PlasmicInnovation__OverridesType = {
   title2?: Flex__<"div">;
   paragraph2?: Flex__<"div">;
   aboutUs?: Flex__<"a"> & Partial<LinkProps>;
+  primaryBtn?: Flex__<typeof PrimaryBtn>;
   convenienceStores?: Flex__<"div">;
   text3?: Flex__<"div">;
   title3?: Flex__<"div">;
@@ -154,7 +155,6 @@ export type PlasmicInnovation__OverridesType = {
   text5?: Flex__<"div">;
   title5?: Flex__<"div">;
   paragraph5?: Flex__<"div">;
-  aboutUs2?: Flex__<"a"> & Partial<LinkProps>;
   convenienceStores2?: Flex__<"div">;
   text6?: Flex__<"div">;
   title6?: Flex__<"div">;
@@ -396,8 +396,6 @@ function PlasmicInnovation__RenderFunc(props: {
                         }
                       })()}
                     </React.Fragment>
-                  ) : hasVariant(globalVariants, "screen", "large") ? (
-                    "Whether you're introducing a new product, refining an existing offering, or exploring emerging trends, our team partners with you every step of the way to bring your vision to life."
                   ) : (
                     "Whether you're introducing a new product, refining an existing offering, or exploring emerging trends,\u0003our team partners with you every step of the way to bring your vision to life."
                   )}
@@ -431,26 +429,15 @@ function PlasmicInnovation__RenderFunc(props: {
                                   "smallDesktop"
                                 )
                               ? "472px"
-                              : hasVariant(globalVariants, "screen", "large")
-                                ? "auto"
-                                : "574px"
+                              : "574px"
                   }
                   loading={"lazy"}
-                  src={
-                    hasVariant(globalVariants, "screen", "large")
-                      ? {
-                          src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodIceCreamAppleDessertPng.png",
-                          fullWidth: 698,
-                          fullHeight: 591,
-                          aspectRatio: undefined
-                        }
-                      : {
-                          src: "/plasmic/sterling_and_buena_vista_foods/images/coffeeAvif.avif",
-                          fullWidth: 574,
-                          fullHeight: 488,
-                          aspectRatio: undefined
-                        }
-                  }
+                  src={{
+                    src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodIceCreamAppleDessertPng.png",
+                    fullWidth: 698,
+                    fullHeight: 591,
+                    aspectRatio: undefined
+                  }}
                 />
 
                 <div
@@ -463,34 +450,26 @@ function PlasmicInnovation__RenderFunc(props: {
                     data-plasmic-override={overrides.title}
                     className={classNames("all", sty.title)}
                   >
-                    {(
-                      hasVariant(globalVariants, "screen", "large")
-                        ? true
-                        : false
-                    ) ? (
-                      <h4
-                        className={classNames(
-                          "all",
-                          "h4",
-                          "h4__uyaK1",
-                          "__wab_text",
-                          sty.h4__gOaLt
-                        )}
-                      >
-                        {hasVariant(globalVariants, "screen", "desktop") ? (
-                          <React.Fragment>
-                            {
-                              $q.innovation.data.body.data.pageBy.pageContent
-                                .headlineParent[1].headlinechild[0].headlinefav
-                            }
-                          </React.Fragment>
-                        ) : hasVariant(globalVariants, "screen", "large") ? (
-                          "A"
-                        ) : (
-                          "Restaurants"
-                        )}
-                      </h4>
-                    ) : null}
+                    <h4
+                      className={classNames(
+                        "all",
+                        "h4",
+                        "h4__uyaK1",
+                        "__wab_text",
+                        sty.h4__gOaLt
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.innovation.data.body.data.pageBy.pageContent
+                              .headlineParent[1].headlinechild[0].headlinefav
+                          }
+                        </React.Fragment>
+                      ) : (
+                        "Restaurants"
+                      )}
+                    </h4>
                     <h3
                       className={classNames(
                         "all",
@@ -508,8 +487,6 @@ function PlasmicInnovation__RenderFunc(props: {
                               .headlineParent[1].headlinechild[0].headlinenormal
                           }
                         </React.Fragment>
-                      ) : hasVariant(globalVariants, "screen", "large") ? (
-                        "Collaborative"
                       ) : (
                         "National"
                       )}
@@ -530,8 +507,6 @@ function PlasmicInnovation__RenderFunc(props: {
                               .headlineParent[1].headlinechild[1].headlinefav
                           }
                         </React.Fragment>
-                      ) : hasVariant(globalVariants, "screen", "large") ? (
-                        "Development Process"
                       ) : (
                         "Restaurants"
                       )}
@@ -558,8 +533,6 @@ function PlasmicInnovation__RenderFunc(props: {
                               .textArea[2].text
                           }
                         </React.Fragment>
-                      ) : hasVariant(globalVariants, "screen", "large") ? (
-                        "Every successful product starts with a conversation.\r\n\nOur innovation process begins with an in-depth assessment of your menu, brand, and business objectives. Together, we identify opportunities, explore new ideas, and develop custom solutions designed to help you stand out in the marketplace.\r\n\nFrom initial concept through commercialization, collaboration is at the core of everything we do."
                       ) : (
                         "Sterling Foods partners with leading restaurant chains to develop proprietary bakery solutions that support menu innovation, operational consistency, and speed to market. With a focus on uniqueness and operational ease, we help brands create iconic, signature products that stand apart from the crowd."
                       )}
@@ -598,8 +571,6 @@ function PlasmicInnovation__RenderFunc(props: {
                               .headlineParent[2].headlinechild[0].headlinefav
                           }
                         </React.Fragment>
-                      ) : hasVariant(globalVariants, "screen", "large") ? (
-                        "Innovation Backed by"
                       ) : (
                         "Foodservice"
                       )}
@@ -621,8 +592,6 @@ function PlasmicInnovation__RenderFunc(props: {
                               .headlineParent[2].headlinechild[0].headlinenormal
                           }
                         </React.Fragment>
-                      ) : hasVariant(globalVariants, "screen", "large") ? (
-                        "Insight"
                       ) : (
                         "School"
                       )}
@@ -649,40 +618,30 @@ function PlasmicInnovation__RenderFunc(props: {
                               .textArea[3].text
                           }
                         </React.Fragment>
-                      ) : hasVariant(globalVariants, "screen", "large") ? (
-                        "The strongest ideas are driven by data and experience."
                       ) : (
                         "Through our Buena Vista Foods division, Sterling Foods has been a trusted partner to K-12 nutrition programs for decades. We develop bakery solutions that seamlessly balance great taste, nutrition, and regulatory compliance\u2014helping school districts meet evolving nutritional standards while serving products students genuinely enjoy.  From clean label formulations to thoughtfully sourced, all natural ingredients, Buena Vista continues to set the standard in school nutrition."
                       )}
                     </p>
-                    {(
-                      hasVariant(globalVariants, "screen", "large")
-                        ? true
-                        : false
-                    ) ? (
-                      <p
-                        className={classNames(
-                          "all",
-                          "p",
-                          "p__uyaK1",
-                          "__wab_text",
-                          sty.p__uqu0Z
-                        )}
-                      >
-                        {hasVariant(globalVariants, "screen", "desktop") ? (
-                          <React.Fragment>
-                            {
-                              $q.innovation.data.body.data.pageBy.pageContent
-                                .textArea[4].text
-                            }
-                          </React.Fragment>
-                        ) : hasVariant(globalVariants, "screen", "large") ? (
-                          "Our team evaluates market trends, consumer preferences, and menu opportunities to help identify gaps and uncover new possibilities. Through collaborative ideation sessions and strategic product development, we create bakery solutions that align with your goals and today's evolving marketplace."
-                        ) : (
-                          "Through our Buena Vista Foods division, Sterling Foods has been a trusted partner to K-12 nutrition programs for decades. We develop bakery solutions that seamlessly balance great taste, nutrition, and regulatory compliance\u2014helping school districts meet evolving nutritional standards while serving products students genuinely enjoy.  From clean label formulations to thoughtfully sourced, all natural ingredients, Buena Vista continues to set the standard in school nutrition."
-                        )}
-                      </p>
-                    ) : null}
+                    <p
+                      className={classNames(
+                        "all",
+                        "p",
+                        "p__uyaK1",
+                        "__wab_text",
+                        sty.p__uqu0Z
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.innovation.data.body.data.pageBy.pageContent
+                              .textArea[4].text
+                          }
+                        </React.Fragment>
+                      ) : (
+                        "Through our Buena Vista Foods division, Sterling Foods has been a trusted partner to K-12 nutrition programs for decades. We develop bakery solutions that seamlessly balance great taste, nutrition, and regulatory compliance\u2014helping school districts meet evolving nutritional standards while serving products students genuinely enjoy.  From clean label formulations to thoughtfully sourced, all natural ingredients, Buena Vista continues to set the standard in school nutrition."
+                      )}
+                    </p>
                     <PlasmicLink__
                       data-plasmic-name={"aboutUs"}
                       data-plasmic-override={overrides.aboutUs}
@@ -697,10 +656,9 @@ function PlasmicInnovation__RenderFunc(props: {
                       platform={"nextjs"}
                     >
                       <PrimaryBtn
-                        className={classNames(
-                          "__wab_instance",
-                          sty.primaryBtn__bfTdz
-                        )}
+                        data-plasmic-name={"primaryBtn"}
+                        data-plasmic-override={overrides.primaryBtn}
+                        className={classNames("__wab_instance", sty.primaryBtn)}
                       >
                         <div
                           className={classNames(
@@ -746,30 +704,15 @@ function PlasmicInnovation__RenderFunc(props: {
                                       "smallDesktop"
                                     )
                                   ? "590px"
-                                  : hasVariant(
-                                        globalVariants,
-                                        "screen",
-                                        "large"
-                                      )
-                                    ? "auto"
-                                    : "697px"
+                                  : "697px"
                   }
                   loading={"lazy"}
-                  src={
-                    hasVariant(globalVariants, "screen", "large")
-                      ? {
-                          src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodHamCheeseCroissantPng.png",
-                          fullWidth: 732,
-                          fullHeight: 550,
-                          aspectRatio: undefined
-                        }
-                      : {
-                          src: "/plasmic/sterling_and_buena_vista_foods/images/pastriesAvif.avif",
-                          fullWidth: 697,
-                          fullHeight: 584,
-                          aspectRatio: undefined
-                        }
-                  }
+                  src={{
+                    src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodHamCheeseCroissantPng.png",
+                    fullWidth: 732,
+                    fullHeight: 550,
+                    aspectRatio: undefined
+                  }}
                 />
               </div>
               <div
@@ -803,21 +746,12 @@ function PlasmicInnovation__RenderFunc(props: {
                               : "698px"
                   }
                   loading={"lazy"}
-                  src={
-                    hasVariant(globalVariants, "screen", "large")
-                      ? {
-                          src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodChocolateLavaCakePng.png",
-                          fullWidth: 698,
-                          fullHeight: 592,
-                          aspectRatio: undefined
-                        }
-                      : {
-                          src: "/plasmic/sterling_and_buena_vista_foods/images/cookiesAvif.avif",
-                          fullWidth: 698,
-                          fullHeight: 591,
-                          aspectRatio: undefined
-                        }
-                  }
+                  src={{
+                    src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodChocolateLavaCakePng.png",
+                    fullWidth: 698,
+                    fullHeight: 592,
+                    aspectRatio: undefined
+                  }}
                 />
 
                 <div
@@ -847,8 +781,6 @@ function PlasmicInnovation__RenderFunc(props: {
                               .headlineParent[3].headlinechild[0].headlinefav
                           }
                         </React.Fragment>
-                      ) : hasVariant(globalVariants, "screen", "large") ? (
-                        "Experstise"
                       ) : (
                         "Convenience "
                       )}
@@ -869,39 +801,31 @@ function PlasmicInnovation__RenderFunc(props: {
                               .headlineParent[3].headlinechild[0].headlinenormal
                           }
                         </React.Fragment>
-                      ) : hasVariant(globalVariants, "screen", "large") ? (
-                        "Across Every Stage"
                       ) : (
                         "Stores"
                       )}
                     </h4>
                   </div>
-                  {(
-                    hasVariant(globalVariants, "screen", "large") ? true : false
-                  ) ? (
-                    <p
-                      className={classNames(
-                        "all",
-                        "p",
-                        "p__uyaK1",
-                        "__wab_text",
-                        sty.p__fFzVi
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "desktop") ? (
-                        <React.Fragment>
-                          {
-                            $q.innovation.data.body.data.pageBy.pageContent
-                              .textArea[5].text
-                          }
-                        </React.Fragment>
-                      ) : hasVariant(globalVariants, "screen", "large") ? (
-                        "Innovation takes a team."
-                      ) : (
-                        "Through our Buena Vista Foods division, Sterling Foods has been a trusted partner to K-12 nutrition programs for decades. We develop bakery solutions that seamlessly balance great taste, nutrition, and regulatory compliance\u2014helping school districts meet evolving nutritional standards while serving products students genuinely enjoy.  From clean label formulations to thoughtfully sourced, all natural ingredients, Buena Vista continues to set the standard in school nutrition."
-                      )}
-                    </p>
-                  ) : null}
+                  <p
+                    className={classNames(
+                      "all",
+                      "p",
+                      "p__uyaK1",
+                      "__wab_text",
+                      sty.p__fFzVi
+                    )}
+                  >
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.innovation.data.body.data.pageBy.pageContent
+                            .textArea[5].text
+                        }
+                      </React.Fragment>
+                    ) : (
+                      "Through our Buena Vista Foods division, Sterling Foods has been a trusted partner to K-12 nutrition programs for decades. We develop bakery solutions that seamlessly balance great taste, nutrition, and regulatory compliance\u2014helping school districts meet evolving nutritional standards while serving products students genuinely enjoy.  From clean label formulations to thoughtfully sourced, all natural ingredients, Buena Vista continues to set the standard in school nutrition."
+                    )}
+                  </p>
                   <div
                     data-plasmic-name={"paragraph3"}
                     data-plasmic-override={overrides.paragraph3}
@@ -923,8 +847,6 @@ function PlasmicInnovation__RenderFunc(props: {
                               .textArea[6].text
                           }
                         </React.Fragment>
-                      ) : hasVariant(globalVariants, "screen", "large") ? (
-                        "Sterling Foods brings together food scientists, culinary professionals, nutrition experts, quality assurance specialists, and commercialization leaders to guide every project from concept to launch.\r\n\nBy combining diverse expertise with decades of industry experience, we help ensure every product is thoughtfully developed and ready for success"
                       ) : (
                         "Sterling Foods develops portable, individually wrapped bakery products and nutrition-focused snack solutions ideally suited for today's on-the-go consumer. From protein-forward snacks and nutrition bars to grab-and-go bakery offerings, our products help convenience retailers meet evolving consumer preferences."
                       )}
@@ -933,7 +855,9 @@ function PlasmicInnovation__RenderFunc(props: {
                 </div>
               </div>
             </div>
-            {(hasVariant(globalVariants, "screen", "large") ? true : false) ? (
+            {(
+              hasVariant(globalVariants, "screen", "desktop") ? true : false
+            ) ? (
               <div
                 data-plasmic-name={"innovationSection"}
                 data-plasmic-override={overrides.innovationSection}
@@ -992,26 +916,15 @@ function PlasmicInnovation__RenderFunc(props: {
                                     "smallDesktop"
                                   )
                                 ? "472px"
-                                : hasVariant(globalVariants, "screen", "large")
-                                  ? "auto"
-                                  : "574px"
+                                : "574px"
                     }
                     loading={"lazy"}
-                    src={
-                      hasVariant(globalVariants, "screen", "large")
-                        ? {
-                            src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodMiniQuichePng.png",
-                            fullWidth: 575,
-                            fullHeight: 482,
-                            aspectRatio: undefined
-                          }
-                        : {
-                            src: "/plasmic/sterling_and_buena_vista_foods/images/coffeeAvif.avif",
-                            fullWidth: 574,
-                            fullHeight: 488,
-                            aspectRatio: undefined
-                          }
-                    }
+                    src={{
+                      src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodMiniQuichePng.png",
+                      fullWidth: 575,
+                      fullHeight: 482,
+                      aspectRatio: undefined
+                    }}
                   />
 
                   <div
@@ -1040,8 +953,6 @@ function PlasmicInnovation__RenderFunc(props: {
                                 .headlineParent[4].headlinechild[0].headlinefav
                             }
                           </React.Fragment>
-                        ) : hasVariant(globalVariants, "screen", "large") ? (
-                          "From Concept to"
                         ) : (
                           "Restaurants"
                         )}
@@ -1064,8 +975,6 @@ function PlasmicInnovation__RenderFunc(props: {
                                 .headlinenormal
                             }
                           </React.Fragment>
-                        ) : hasVariant(globalVariants, "screen", "large") ? (
-                          "Commercialization"
                         ) : (
                           "National"
                         )}
@@ -1092,8 +1001,6 @@ function PlasmicInnovation__RenderFunc(props: {
                                 .textArea[7].text
                             }
                           </React.Fragment>
-                        ) : hasVariant(globalVariants, "screen", "large") ? (
-                          "Your operations deserve a seamless path to production.\r"
                         ) : (
                           "Sterling Foods partners with leading restaurant chains to develop proprietary bakery solutions that support menu innovation, operational consistency, and speed to market. With a focus on uniqueness and operational ease, we help brands create iconic, signature products that stand apart from the crowd."
                         )}
@@ -1114,8 +1021,6 @@ function PlasmicInnovation__RenderFunc(props: {
                                 .textArea[8].text
                             }
                           </React.Fragment>
-                        ) : hasVariant(globalVariants, "screen", "large") ? (
-                          "Our development process is designed to efficiently move products from bench samples to commercial-scale manufacturing. With multiple production lines across our manufacturing network, we can evaluate, refine, and scale products while maintaining the quality and consistency our customers expect."
                         ) : (
                           "Sterling Foods partners with leading restaurant chains to develop proprietary bakery solutions that support menu innovation, operational consistency, and speed to market. With a focus on uniqueness and operational ease, we help brands create iconic, signature products that stand apart from the crowd."
                         )}
@@ -1156,8 +1061,6 @@ function PlasmicInnovation__RenderFunc(props: {
                                   .headlinefav
                               }
                             </React.Fragment>
-                          ) : hasVariant(globalVariants, "screen", "large") ? (
-                            "A"
                           ) : (
                             "Foodservice"
                           )}
@@ -1180,8 +1083,6 @@ function PlasmicInnovation__RenderFunc(props: {
                                   .headlinenormal
                               }
                             </React.Fragment>
-                          ) : hasVariant(globalVariants, "screen", "large") ? (
-                            "Culture"
                           ) : (
                             "School"
                           )}
@@ -1203,8 +1104,6 @@ function PlasmicInnovation__RenderFunc(props: {
                                   .headlinefav
                               }
                             </React.Fragment>
-                          ) : hasVariant(globalVariants, "screen", "large") ? (
-                            "of"
                           ) : (
                             "Foodservice"
                           )}
@@ -1227,8 +1126,6 @@ function PlasmicInnovation__RenderFunc(props: {
                                 .headlinenormal
                             }
                           </React.Fragment>
-                        ) : hasVariant(globalVariants, "screen", "large") ? (
-                          "Continuous Innovation"
                         ) : (
                           "Foodservice"
                         )}
@@ -1255,70 +1152,30 @@ function PlasmicInnovation__RenderFunc(props: {
                                 .textArea[9].text
                             }
                           </React.Fragment>
-                        ) : hasVariant(globalVariants, "screen", "large") ? (
-                          "Innovation requires curiosity, flexibility, and a willingness\nto invest in what's next."
                         ) : (
                           "Through our Buena Vista Foods division, Sterling Foods has been a trusted partner to K-12 nutrition programs for decades. We develop bakery solutions that seamlessly balance great taste, nutrition, and regulatory compliance\u2014helping school districts meet evolving nutritional standards while serving products students genuinely enjoy.  From clean label formulations to thoughtfully sourced, all natural ingredients, Buena Vista continues to set the standard in school nutrition."
                         )}
                       </p>
-                      {(
-                        hasVariant(globalVariants, "screen", "large")
-                          ? true
-                          : false
-                      ) ? (
-                        <p
-                          className={classNames(
-                            "all",
-                            "p",
-                            "p__uyaK1",
-                            "__wab_text",
-                            sty.p___1Jme
-                          )}
-                        >
-                          {hasVariant(globalVariants, "screen", "desktop") ? (
-                            <React.Fragment>
-                              {
-                                $q.innovation.data.body.data.pageBy.pageContent
-                                  .textArea[10].text
-                              }
-                            </React.Fragment>
-                          ) : hasVariant(globalVariants, "screen", "large") ? (
-                            "Our team evaluates market trends, consumer preferences, and menu opportunities to help identify gaps and uncover new possibilities. Through collaborative ideation sessions and strategic product development, we create bakery solutions that align with your goals and today's evolving marketplace."
-                          ) : (
-                            "Through our Buena Vista Foods division, Sterling Foods has been a trusted partner to K-12 nutrition programs for decades. We develop bakery solutions that seamlessly balance great taste, nutrition, and regulatory compliance\u2014helping school districts meet evolving nutritional standards while serving products students genuinely enjoy.  From clean label formulations to thoughtfully sourced, all natural ingredients, Buena Vista continues to set the standard in school nutrition."
-                          )}
-                        </p>
-                      ) : null}
-                      <PlasmicLink__
-                        data-plasmic-name={"aboutUs2"}
-                        data-plasmic-override={overrides.aboutUs2}
+                      <p
                         className={classNames(
                           "all",
-                          "a",
-                          "a__uyaK1",
-                          sty.aboutUs2
+                          "p",
+                          "p__uyaK1",
+                          "__wab_text",
+                          sty.p___1Jme
                         )}
-                        component={Link}
-                        legacyBehavior={false}
-                        platform={"nextjs"}
                       >
-                        <PrimaryBtn
-                          className={classNames(
-                            "__wab_instance",
-                            sty.primaryBtn__cnaCh
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__t47T8
-                            )}
-                          >
-                            {"Learn More About Buena Vista Foods"}
-                          </div>
-                        </PrimaryBtn>
-                      </PlasmicLink__>
+                        {hasVariant(globalVariants, "screen", "desktop") ? (
+                          <React.Fragment>
+                            {
+                              $q.innovation.data.body.data.pageBy.pageContent
+                                .textArea[10].text
+                            }
+                          </React.Fragment>
+                        ) : (
+                          "Through our Buena Vista Foods division, Sterling Foods has been a trusted partner to K-12 nutrition programs for decades. We develop bakery solutions that seamlessly balance great taste, nutrition, and regulatory compliance\u2014helping school districts meet evolving nutritional standards while serving products students genuinely enjoy.  From clean label formulations to thoughtfully sourced, all natural ingredients, Buena Vista continues to set the standard in school nutrition."
+                        )}
+                      </p>
                     </div>
                   </div>
                   <PlasmicImg__
@@ -1352,30 +1209,15 @@ function PlasmicInnovation__RenderFunc(props: {
                                         "smallDesktop"
                                       )
                                     ? "590px"
-                                    : hasVariant(
-                                          globalVariants,
-                                          "screen",
-                                          "large"
-                                        )
-                                      ? "auto"
-                                      : "697px"
+                                    : "695px"
                     }
                     loading={"lazy"}
-                    src={
-                      hasVariant(globalVariants, "screen", "large")
-                        ? {
-                            src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodPuffPastriesPng.png",
-                            fullWidth: 695,
-                            fullHeight: 611,
-                            aspectRatio: undefined
-                          }
-                        : {
-                            src: "/plasmic/sterling_and_buena_vista_foods/images/pastriesAvif.avif",
-                            fullWidth: 697,
-                            fullHeight: 584,
-                            aspectRatio: undefined
-                          }
-                    }
+                    src={{
+                      src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodPuffPastriesPng.png",
+                      fullWidth: 695,
+                      fullHeight: 611,
+                      aspectRatio: undefined
+                    }}
                   />
                 </div>
                 <div
@@ -1406,26 +1248,15 @@ function PlasmicInnovation__RenderFunc(props: {
                               ? "47.46%"
                               : hasVariant(globalVariants, "screen", "laptop")
                                 ? "40%"
-                                : hasVariant(globalVariants, "screen", "large")
-                                  ? "auto"
-                                  : "698px"
+                                : "574px"
                     }
                     loading={"lazy"}
-                    src={
-                      hasVariant(globalVariants, "screen", "large")
-                        ? {
-                            src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodDessertWithFillingPng.png",
-                            fullWidth: 575,
-                            fullHeight: 482,
-                            aspectRatio: undefined
-                          }
-                        : {
-                            src: "/plasmic/sterling_and_buena_vista_foods/images/cookiesAvif.avif",
-                            fullWidth: 698,
-                            fullHeight: 591,
-                            aspectRatio: undefined
-                          }
-                    }
+                    src={{
+                      src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodDessertWithFillingPng.png",
+                      fullWidth: 575,
+                      fullHeight: 482,
+                      aspectRatio: undefined
+                    }}
                   />
 
                   <div
@@ -1454,8 +1285,6 @@ function PlasmicInnovation__RenderFunc(props: {
                                 .headlineParent[6].headlinechild[0].headlinefav
                             }
                           </React.Fragment>
-                        ) : hasVariant(globalVariants, "screen", "large") ? (
-                          "Your"
                         ) : (
                           "Stores"
                         )}
@@ -1478,8 +1307,6 @@ function PlasmicInnovation__RenderFunc(props: {
                                 .headlinenormal
                             }
                           </React.Fragment>
-                        ) : hasVariant(globalVariants, "screen", "large") ? (
-                          "Vision."
                         ) : (
                           "Convenience "
                         )}
@@ -1500,8 +1327,6 @@ function PlasmicInnovation__RenderFunc(props: {
                                 .headlineParent[6].headlinechild[1].headlinefav
                             }
                           </React.Fragment>
-                        ) : hasVariant(globalVariants, "screen", "large") ? (
-                          "Our"
                         ) : (
                           "Stores"
                         )}
@@ -1524,8 +1349,6 @@ function PlasmicInnovation__RenderFunc(props: {
                                 .headlinenormal
                             }
                           </React.Fragment>
-                        ) : hasVariant(globalVariants, "screen", "large") ? (
-                          "Innovation."
                         ) : (
                           "Convenience "
                         )}
@@ -1552,8 +1375,6 @@ function PlasmicInnovation__RenderFunc(props: {
                                 .textArea[11].text
                             }
                           </React.Fragment>
-                        ) : hasVariant(globalVariants, "screen", "large") ? (
-                          "Whether you're launching a signature menu item, expanding your product portfolio, or responding to emerging trends, Sterling Foods provides the expertise, collaborative approach, and innovative thinking to help bring your ideas to market with confidence."
                         ) : (
                           "Sterling Foods develops portable, individually wrapped bakery products and nutrition-focused snack solutions ideally suited for today's on-the-go consumer. From protein-forward snacks and nutrition bars to grab-and-go bakery offerings, our products help convenience retailers meet evolving consumer preferences."
                         )}
@@ -1598,6 +1419,7 @@ const PlasmicDescendants = {
     "title2",
     "paragraph2",
     "aboutUs",
+    "primaryBtn",
     "convenienceStores",
     "text3",
     "title3",
@@ -1612,7 +1434,6 @@ const PlasmicDescendants = {
     "text5",
     "title5",
     "paragraph5",
-    "aboutUs2",
     "convenienceStores2",
     "text6",
     "title6",
@@ -1635,6 +1456,7 @@ const PlasmicDescendants = {
     "title2",
     "paragraph2",
     "aboutUs",
+    "primaryBtn",
     "convenienceStores",
     "text3",
     "title3",
@@ -1649,7 +1471,6 @@ const PlasmicDescendants = {
     "text5",
     "title5",
     "paragraph5",
-    "aboutUs2",
     "convenienceStores2",
     "text6",
     "title6",
@@ -1671,6 +1492,7 @@ const PlasmicDescendants = {
     "title2",
     "paragraph2",
     "aboutUs",
+    "primaryBtn",
     "convenienceStores",
     "text3",
     "title3",
@@ -1686,12 +1508,14 @@ const PlasmicDescendants = {
     "text2",
     "title2",
     "paragraph2",
-    "aboutUs"
+    "aboutUs",
+    "primaryBtn"
   ],
-  text2: ["text2", "title2", "paragraph2", "aboutUs"],
+  text2: ["text2", "title2", "paragraph2", "aboutUs", "primaryBtn"],
   title2: ["title2"],
-  paragraph2: ["paragraph2", "aboutUs"],
-  aboutUs: ["aboutUs"],
+  paragraph2: ["paragraph2", "aboutUs", "primaryBtn"],
+  aboutUs: ["aboutUs", "primaryBtn"],
+  primaryBtn: ["primaryBtn"],
   convenienceStores: ["convenienceStores", "text3", "title3", "paragraph3"],
   text3: ["text3", "title3", "paragraph3"],
   title3: ["title3"],
@@ -1707,7 +1531,6 @@ const PlasmicDescendants = {
     "text5",
     "title5",
     "paragraph5",
-    "aboutUs2",
     "convenienceStores2",
     "text6",
     "title6",
@@ -1718,17 +1541,10 @@ const PlasmicDescendants = {
   text4: ["text4", "title4", "paragraph4"],
   title4: ["title4"],
   paragraph4: ["paragraph4"],
-  schoolFoodservice2: [
-    "schoolFoodservice2",
-    "text5",
-    "title5",
-    "paragraph5",
-    "aboutUs2"
-  ],
-  text5: ["text5", "title5", "paragraph5", "aboutUs2"],
+  schoolFoodservice2: ["schoolFoodservice2", "text5", "title5", "paragraph5"],
+  text5: ["text5", "title5", "paragraph5"],
   title5: ["title5"],
-  paragraph5: ["paragraph5", "aboutUs2"],
-  aboutUs2: ["aboutUs2"],
+  paragraph5: ["paragraph5"],
   convenienceStores2: ["convenienceStores2", "text6", "title6", "paragraph6"],
   text6: ["text6", "title6", "paragraph6"],
   title6: ["title6"],
@@ -1755,6 +1571,7 @@ type NodeDefaultElementType = {
   title2: "div";
   paragraph2: "div";
   aboutUs: "a";
+  primaryBtn: typeof PrimaryBtn;
   convenienceStores: "div";
   text3: "div";
   title3: "div";
@@ -1769,7 +1586,6 @@ type NodeDefaultElementType = {
   text5: "div";
   title5: "div";
   paragraph5: "div";
-  aboutUs2: "a";
   convenienceStores2: "div";
   text6: "div";
   title6: "div";
@@ -1854,6 +1670,7 @@ export const PlasmicInnovation = Object.assign(
     title2: makeNodeComponent("title2"),
     paragraph2: makeNodeComponent("paragraph2"),
     aboutUs: makeNodeComponent("aboutUs"),
+    primaryBtn: makeNodeComponent("primaryBtn"),
     convenienceStores: makeNodeComponent("convenienceStores"),
     text3: makeNodeComponent("text3"),
     title3: makeNodeComponent("title3"),
@@ -1868,7 +1685,6 @@ export const PlasmicInnovation = Object.assign(
     text5: makeNodeComponent("text5"),
     title5: makeNodeComponent("title5"),
     paragraph5: makeNodeComponent("paragraph5"),
-    aboutUs2: makeNodeComponent("aboutUs2"),
     convenienceStores2: makeNodeComponent("convenienceStores2"),
     text6: makeNodeComponent("text6"),
     title6: makeNodeComponent("title6"),

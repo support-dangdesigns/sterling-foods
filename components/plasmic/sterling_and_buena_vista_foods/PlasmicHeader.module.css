@@ -392,11 +392,6 @@
   -webkit-transition-duration: 1s;
   padding: 0px 0px 70px;
 }
-@media (max-width: 2000px) {
-  .expandMenu {
-    display: flex;
-  }
-}
 @media (max-width: 757px) {
   .expandMenu {
     align-self: center;

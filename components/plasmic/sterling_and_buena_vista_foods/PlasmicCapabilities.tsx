@@ -230,7 +230,6 @@ export type PlasmicCapabilities__OverridesType = {
   text3?: Flex__<"div">;
   title8?: Flex__<"div">;
   p8?: Flex__<"div">;
-  primaryBtn?: Flex__<typeof PrimaryBtn>;
   foodSafety4?: Flex__<"div">;
   text4?: Flex__<"div">;
   title9?: Flex__<"div">;
@@ -595,26 +594,15 @@ function PlasmicCapabilities__RenderFunc(props: {
                                     "smallDesktop"
                                   )
                                 ? "472px"
-                                : hasVariant(globalVariants, "screen", "large")
-                                  ? "640px"
-                                  : "640px"
+                                : "640px"
                   }
                   loading={"lazy"}
-                  src={
-                    hasVariant(globalVariants, "screen", "large")
-                      ? {
-                          src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodEmpanadasPng.png",
-                          fullWidth: 700,
-                          fullHeight: 573,
-                          aspectRatio: undefined
-                        }
-                      : {
-                          src: "/plasmic/sterling_and_buena_vista_foods/images/imagePng2.png",
-                          fullWidth: 639,
-                          fullHeight: 610,
-                          aspectRatio: undefined
-                        }
-                  }
+                  src={{
+                    src: "/plasmic/sterling_and_buena_vista_foods/images/imagePng2.png",
+                    fullWidth: 639,
+                    fullHeight: 610,
+                    aspectRatio: undefined
+                  }}
                 />
 
                 <div
@@ -644,8 +632,6 @@ function PlasmicCapabilities__RenderFunc(props: {
                               .headlineParent[1].headlinechild[0].headlinenormal
                           }
                         </React.Fragment>
-                      ) : hasVariant(globalVariants, "screen", "large") ? (
-                        "Baking"
                       ) : (
                         "Oppoertunities"
                       )}
@@ -666,8 +652,6 @@ function PlasmicCapabilities__RenderFunc(props: {
                               .headlineParent[1].headlinechild[0].headlinefav
                           }
                         </React.Fragment>
-                      ) : hasVariant(globalVariants, "screen", "large") ? (
-                        "Reimagined"
                       ) : (
                         "Across Our Organization"
                       )}
@@ -683,631 +667,270 @@ function PlasmicCapabilities__RenderFunc(props: {
                       role={"img"}
                     />
 
-                    {(
-                      hasVariant(globalVariants, "screen", "large")
-                        ? true
-                        : false
-                    ) ? (
-                      <p
-                        className={classNames(
-                          "all",
-                          "p",
-                          "p__uyaK1",
-                          "__wab_text",
-                          sty.p__bwWpc
-                        )}
-                      >
-                        {hasVariant(globalVariants, "screen", "desktop") ? (
-                          <div
-                            className={"__wab_expr_html_text"}
-                            dangerouslySetInnerHTML={{
-                              __html:
-                                $q.capabilites.data.body.data.pageBy.pageContent
-                                  .headlineParent[1].headlinechild[1]
-                                  .headlinenormal
-                            }}
-                          />
-                        ) : hasVariant(globalVariants, "screen", "large") ? (
-                          <React.Fragment>
-                            <span
-                              className={
-                                "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
-                              }
-                              style={{ fontWeight: 700 }}
-                            >
-                              {"Unique creations,"}
-                            </span>
-                            <React.Fragment>
-                              {" differentiated flavors"}
-                            </React.Fragment>
-                          </React.Fragment>
-                        ) : (
-                          "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                        )}
-                      </p>
-                    ) : null}
+                    <p
+                      className={classNames(
+                        "all",
+                        "p",
+                        "p__uyaK1",
+                        "__wab_text",
+                        sty.p__bwWpc
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <div
+                          className={"__wab_expr_html_text"}
+                          dangerouslySetInnerHTML={{
+                            __html:
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .headlineParent[1].headlinechild[1]
+                                .headlinenormal
+                          }}
+                        />
+                      ) : (
+                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                      )}
+                    </p>
                   </div>
-                  {(
-                    hasVariant(globalVariants, "screen", "large") ? true : false
-                  ) ? (
-                    <div
-                      data-plasmic-name={"bulletPoint2"}
-                      data-plasmic-override={overrides.bulletPoint2}
-                      className={classNames("all", sty.bulletPoint2)}
-                    >
-                      <CheckSvgIcon
-                        className={classNames("all", sty.svg__vgXts)}
-                        role={"img"}
-                      />
+                  <div
+                    data-plasmic-name={"bulletPoint2"}
+                    data-plasmic-override={overrides.bulletPoint2}
+                    className={classNames("all", sty.bulletPoint2)}
+                  >
+                    <CheckSvgIcon
+                      className={classNames("all", sty.svg__vgXts)}
+                      role={"img"}
+                    />
 
-                      {(
-                        hasVariant(globalVariants, "screen", "large")
-                          ? true
-                          : false
-                      ) ? (
-                        <p
-                          className={classNames(
-                            "all",
-                            "p",
-                            "p__uyaK1",
-                            "__wab_text",
-                            sty.p__iIfmI
-                          )}
-                        >
-                          {hasVariant(globalVariants, "screen", "desktop") ? (
-                            <div
-                              className={"__wab_expr_html_text"}
-                              dangerouslySetInnerHTML={{
-                                __html:
-                                  $q.capabilites.data.body.data.pageBy
-                                    .pageContent.headlineParent[1]
-                                    .headlinechild[2].headlinenormal
-                              }}
-                            />
-                          ) : hasVariant(globalVariants, "screen", "large") ? (
-                            <React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
-                                }
-                                style={{ fontWeight: 700 }}
-                              >
-                                {"On-trend, protein-centric "}
-                              </span>
-                              <React.Fragment>
-                                {"baked goods meet today\u2019s consumer needs"}
-                              </React.Fragment>
-                            </React.Fragment>
-                          ) : (
-                            "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                          )}
-                        </p>
-                      ) : null}
-                    </div>
-                  ) : null}
-                  {(
-                    hasVariant(globalVariants, "screen", "large") ? true : false
-                  ) ? (
-                    <div
-                      data-plasmic-name={"bulletPoint3"}
-                      data-plasmic-override={overrides.bulletPoint3}
-                      className={classNames("all", sty.bulletPoint3)}
+                    <p
+                      className={classNames(
+                        "all",
+                        "p",
+                        "p__uyaK1",
+                        "__wab_text",
+                        sty.p__iIfmI
+                      )}
                     >
-                      <CheckSvgIcon
-                        className={classNames("all", sty.svg__iHzL4)}
-                        role={"img"}
-                      />
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <div
+                          className={"__wab_expr_html_text"}
+                          dangerouslySetInnerHTML={{
+                            __html:
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .headlineParent[1].headlinechild[2]
+                                .headlinenormal
+                          }}
+                        />
+                      ) : (
+                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                      )}
+                    </p>
+                  </div>
+                  <div
+                    data-plasmic-name={"bulletPoint3"}
+                    data-plasmic-override={overrides.bulletPoint3}
+                    className={classNames("all", sty.bulletPoint3)}
+                  >
+                    <CheckSvgIcon
+                      className={classNames("all", sty.svg__iHzL4)}
+                      role={"img"}
+                    />
 
-                      {(
-                        hasVariant(globalVariants, "screen", "large")
-                          ? true
-                          : false
-                      ) ? (
-                        <p
-                          className={classNames(
-                            "all",
-                            "p",
-                            "p__uyaK1",
-                            "__wab_text",
-                            sty.p__qhmDb
-                          )}
-                        >
-                          {hasVariant(globalVariants, "screen", "desktop") ? (
-                            <div
-                              className={"__wab_expr_html_text"}
-                              dangerouslySetInnerHTML={{
-                                __html:
-                                  $q.capabilites.data.body.data.pageBy
-                                    .pageContent.headlineParent[1]
-                                    .headlinechild[3].headlinenormal
-                              }}
-                            />
-                          ) : hasVariant(globalVariants, "screen", "large") ? (
-                            <React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
-                                }
-                                style={{ fontWeight: 700 }}
-                              >
-                                {"Signature offerings "}
-                              </span>
-                              <React.Fragment>
-                                {"that stand apart in the crowd"}
-                              </React.Fragment>
-                            </React.Fragment>
-                          ) : (
-                            "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                          )}
-                        </p>
-                      ) : null}
-                    </div>
-                  ) : null}
-                  {(
-                    hasVariant(globalVariants, "screen", "large") ? true : false
-                  ) ? (
-                    <div
-                      data-plasmic-name={"bulletPoint4"}
-                      data-plasmic-override={overrides.bulletPoint4}
-                      className={classNames("all", sty.bulletPoint4)}
+                    <p
+                      className={classNames(
+                        "all",
+                        "p",
+                        "p__uyaK1",
+                        "__wab_text",
+                        sty.p__qhmDb
+                      )}
                     >
-                      <CheckSvgIcon
-                        className={classNames("all", sty.svg__ivJr)}
-                        role={"img"}
-                      />
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <div
+                          className={"__wab_expr_html_text"}
+                          dangerouslySetInnerHTML={{
+                            __html:
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .headlineParent[1].headlinechild[3]
+                                .headlinenormal
+                          }}
+                        />
+                      ) : (
+                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                      )}
+                    </p>
+                  </div>
+                  <div
+                    data-plasmic-name={"bulletPoint4"}
+                    data-plasmic-override={overrides.bulletPoint4}
+                    className={classNames("all", sty.bulletPoint4)}
+                  >
+                    <CheckSvgIcon
+                      className={classNames("all", sty.svg__ivJr)}
+                      role={"img"}
+                    />
 
-                      {(
-                        hasVariant(globalVariants, "screen", "large")
-                          ? true
-                          : false
-                      ) ? (
-                        <p
-                          className={classNames(
-                            "all",
-                            "p",
-                            "p__uyaK1",
-                            "__wab_text",
-                            sty.p__oPqi
-                          )}
-                        >
-                          {hasVariant(globalVariants, "screen", "desktop") ? (
-                            <div
-                              className={"__wab_expr_html_text"}
-                              dangerouslySetInnerHTML={{
-                                __html:
-                                  $q.capabilites.data.body.data.pageBy
-                                    .pageContent.headlineParent[1]
-                                    .headlinechild[4].headlinenormal
-                              }}
-                            />
-                          ) : hasVariant(globalVariants, "screen", "large") ? (
-                            <React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
-                                }
-                                style={{ fontWeight: 700 }}
-                              >
-                                {"Extensive expertise: "}
-                              </span>
-                              <React.Fragment>
-                                {
-                                  "ingredient functionality, nutrition analysis, regulatory and labeling requirements"
-                                }
-                              </React.Fragment>
-                            </React.Fragment>
-                          ) : (
-                            "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                          )}
-                        </p>
-                      ) : null}
-                    </div>
-                  ) : null}
-                  {(
-                    hasVariant(globalVariants, "screen", "large") ? true : false
-                  ) ? (
-                    <div
-                      data-plasmic-name={"bulletPoint5"}
-                      data-plasmic-override={overrides.bulletPoint5}
-                      className={classNames("all", sty.bulletPoint5)}
+                    <p
+                      className={classNames(
+                        "all",
+                        "p",
+                        "p__uyaK1",
+                        "__wab_text",
+                        sty.p__oPqi
+                      )}
                     >
-                      <CheckSvgIcon
-                        className={classNames("all", sty.svg__dQgMx)}
-                        role={"img"}
-                      />
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <div
+                          className={"__wab_expr_html_text"}
+                          dangerouslySetInnerHTML={{
+                            __html:
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .headlineParent[1].headlinechild[4]
+                                .headlinenormal
+                          }}
+                        />
+                      ) : (
+                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                      )}
+                    </p>
+                  </div>
+                  <div
+                    data-plasmic-name={"bulletPoint5"}
+                    data-plasmic-override={overrides.bulletPoint5}
+                    className={classNames("all", sty.bulletPoint5)}
+                  >
+                    <CheckSvgIcon
+                      className={classNames("all", sty.svg__dQgMx)}
+                      role={"img"}
+                    />
 
-                      {(
-                        hasVariant(globalVariants, "screen", "large")
-                          ? true
-                          : false
-                      ) ? (
-                        <p
-                          className={classNames(
-                            "all",
-                            "p",
-                            "p__uyaK1",
-                            "__wab_text",
-                            sty.p__tKfjj
-                          )}
-                        >
-                          {hasVariant(globalVariants, "screen", "desktop") ? (
-                            <div
-                              className={"__wab_expr_html_text"}
-                              dangerouslySetInnerHTML={{
-                                __html:
-                                  $q.capabilites.data.body.data.pageBy
-                                    .pageContent.headlineParent[1]
-                                    .headlinechild[5].headlinenormal
-                              }}
-                            />
-                          ) : hasVariant(globalVariants, "screen", "large") ? (
-                            <React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
-                                }
-                                style={{ fontWeight: 700 }}
-                              >
-                                {"Leading-edge concepts, "}
-                              </span>
-                              <React.Fragment>
-                                {"research & consumer-insights backed"}
-                              </React.Fragment>
-                            </React.Fragment>
-                          ) : (
-                            "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                          )}
-                        </p>
-                      ) : null}
-                    </div>
-                  ) : null}
-                  {(
-                    hasVariant(globalVariants, "screen", "large") ? true : false
-                  ) ? (
-                    <div
-                      data-plasmic-name={"bulletPoint6"}
-                      data-plasmic-override={overrides.bulletPoint6}
-                      className={classNames("all", sty.bulletPoint6)}
+                    <p
+                      className={classNames(
+                        "all",
+                        "p",
+                        "p__uyaK1",
+                        "__wab_text",
+                        sty.p__tKfjj
+                      )}
                     >
-                      <CheckSvgIcon
-                        className={classNames("all", sty.svg__msCfw)}
-                        role={"img"}
-                      />
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <div
+                          className={"__wab_expr_html_text"}
+                          dangerouslySetInnerHTML={{
+                            __html:
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .headlineParent[1].headlinechild[5]
+                                .headlinenormal
+                          }}
+                        />
+                      ) : (
+                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                      )}
+                    </p>
+                  </div>
+                  <div
+                    data-plasmic-name={"bulletPoint6"}
+                    data-plasmic-override={overrides.bulletPoint6}
+                    className={classNames("all", sty.bulletPoint6)}
+                  >
+                    <CheckSvgIcon
+                      className={classNames("all", sty.svg__msCfw)}
+                      role={"img"}
+                    />
 
-                      {(
-                        hasVariant(globalVariants, "screen", "large")
-                          ? true
-                          : false
-                      ) ? (
-                        <p
-                          className={classNames(
-                            "all",
-                            "p",
-                            "p__uyaK1",
-                            "__wab_text",
-                            sty.p__bnxPq
-                          )}
-                        >
-                          {hasVariant(globalVariants, "screen", "desktop") ? (
-                            <div
-                              className={"__wab_expr_html_text"}
-                              dangerouslySetInnerHTML={{
-                                __html:
-                                  $q.capabilites.data.body.data.pageBy
-                                    .pageContent.headlineParent[1]
-                                    .headlinechild[6].headlinenormal
-                              }}
-                            />
-                          ) : hasVariant(globalVariants, "screen", "large") ? (
-                            <React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
-                                }
-                                style={{ fontWeight: 700 }}
-                              >
-                                {"Operational simplicity"}
-                              </span>
-                            </React.Fragment>
-                          ) : (
-                            "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                          )}
-                        </p>
-                      ) : null}
-                    </div>
-                  ) : null}
-                  {(
-                    hasVariant(globalVariants, "screen", "large") ? true : false
-                  ) ? (
-                    <div
-                      data-plasmic-name={"bulletPoint7"}
-                      data-plasmic-override={overrides.bulletPoint7}
-                      className={classNames("all", sty.bulletPoint7)}
+                    <p
+                      className={classNames(
+                        "all",
+                        "p",
+                        "p__uyaK1",
+                        "__wab_text",
+                        sty.p__bnxPq
+                      )}
                     >
-                      <CheckSvgIcon
-                        className={classNames("all", sty.svg__sTnZn)}
-                        role={"img"}
-                      />
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <div
+                          className={"__wab_expr_html_text"}
+                          dangerouslySetInnerHTML={{
+                            __html:
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .headlineParent[1].headlinechild[6]
+                                .headlinenormal
+                          }}
+                        />
+                      ) : (
+                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                      )}
+                    </p>
+                  </div>
+                  <div
+                    data-plasmic-name={"bulletPoint7"}
+                    data-plasmic-override={overrides.bulletPoint7}
+                    className={classNames("all", sty.bulletPoint7)}
+                  >
+                    <CheckSvgIcon
+                      className={classNames("all", sty.svg__sTnZn)}
+                      role={"img"}
+                    />
 
-                      {(
-                        hasVariant(globalVariants, "screen", "large")
-                          ? true
-                          : false
-                      ) ? (
-                        <p
-                          className={classNames(
-                            "all",
-                            "p",
-                            "p__uyaK1",
-                            "__wab_text",
-                            sty.p__wQpcg
-                          )}
-                        >
-                          {hasVariant(globalVariants, "screen", "desktop") ? (
-                            <div
-                              className={"__wab_expr_html_text"}
-                              dangerouslySetInnerHTML={{
-                                __html:
-                                  $q.capabilites.data.body.data.pageBy
-                                    .pageContent.headlineParent[1]
-                                    .headlinechild[7].headlinenormal
-                              }}
-                            />
-                          ) : hasVariant(globalVariants, "screen", "large") ? (
-                            <React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
-                                }
-                                style={{ fontWeight: 700 }}
-                              >
-                                {"Extended shelf-life "}
-                              </span>
-                              <React.Fragment>{"formulations"}</React.Fragment>
-                            </React.Fragment>
-                          ) : (
-                            "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                          )}
-                        </p>
-                      ) : null}
-                    </div>
-                  ) : null}
+                    <p
+                      className={classNames(
+                        "all",
+                        "p",
+                        "p__uyaK1",
+                        "__wab_text",
+                        sty.p__wQpcg
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <div
+                          className={"__wab_expr_html_text"}
+                          dangerouslySetInnerHTML={{
+                            __html:
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .headlineParent[1].headlinechild[7]
+                                .headlinenormal
+                          }}
+                        />
+                      ) : (
+                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                      )}
+                    </p>
+                  </div>
                 </div>
               </div>
-              {(
-                hasVariant(globalVariants, "screen", "large") ? true : false
-              ) ? (
+              <div
+                data-plasmic-name={"foodSafety2"}
+                data-plasmic-override={overrides.foodSafety2}
+                className={classNames("all", sty.foodSafety2)}
+              >
                 <div
-                  data-plasmic-name={"foodSafety2"}
-                  data-plasmic-override={overrides.foodSafety2}
-                  className={classNames("all", sty.foodSafety2)}
+                  data-plasmic-name={"text2"}
+                  data-plasmic-override={overrides.text2}
+                  className={classNames("all", sty.text2)}
                 >
                   <div
-                    data-plasmic-name={"text2"}
-                    data-plasmic-override={overrides.text2}
-                    className={classNames("all", sty.text2)}
+                    data-plasmic-name={"title2"}
+                    data-plasmic-override={overrides.title2}
+                    className={classNames("all", sty.title2)}
                   >
-                    <div
-                      data-plasmic-name={"title2"}
-                      data-plasmic-override={overrides.title2}
-                      className={classNames("all", sty.title2)}
-                    >
-                      <h3
-                        className={classNames(
-                          "all",
-                          "h3",
-                          "h3__uyaK1",
-                          "__wab_text",
-                          sty.h3__iPxaz,
-                          "h3-script"
-                        )}
-                      >
-                        {hasVariant(globalVariants, "screen", "desktop") ? (
-                          <React.Fragment>
-                            {
-                              $q.capabilites.data.body.data.pageBy.pageContent
-                                .headlineParent[2].headlinechild[0]
-                                .headlinenormal
-                            }
-                          </React.Fragment>
-                        ) : hasVariant(globalVariants, "screen", "large") ? (
-                          "Custom"
-                        ) : (
-                          "Oppoertunities"
-                        )}
-                      </h3>
-                      <h4
-                        className={classNames(
-                          "all",
-                          "h4",
-                          "h4__uyaK1",
-                          "__wab_text",
-                          sty.h4__eZa4T
-                        )}
-                      >
-                        {hasVariant(globalVariants, "screen", "desktop") ? (
-                          <React.Fragment>
-                            {
-                              $q.capabilites.data.body.data.pageBy.pageContent
-                                .headlineParent[2].headlinechild[0].headlinefav
-                            }
-                          </React.Fragment>
-                        ) : hasVariant(globalVariants, "screen", "large") ? (
-                          "Manufacturing"
-                        ) : (
-                          "Across Our Organization"
-                        )}
-                      </h4>
-                    </div>
-                    <div
-                      data-plasmic-name={"p"}
-                      data-plasmic-override={overrides.p}
-                      className={classNames("all", sty.p)}
-                    >
-                      {(
-                        hasVariant(globalVariants, "screen", "large")
-                          ? true
-                          : false
-                      ) ? (
-                        <p
-                          className={classNames(
-                            "all",
-                            "p",
-                            "p__uyaK1",
-                            "__wab_text",
-                            sty.p__vqh1N
-                          )}
-                        >
-                          {hasVariant(globalVariants, "screen", "desktop") ? (
-                            <React.Fragment>
-                              {
-                                $q.capabilites.data.body.data.pageBy.pageContent
-                                  .textArea[1].text
-                              }
-                            </React.Fragment>
-                          ) : hasVariant(globalVariants, "screen", "large") ? (
-                            "Every product begins with a partnership. Our team works closely with customers to develop proprietary solutions tailored to their brand, operational requirements, and menu goals."
-                          ) : (
-                            "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                          )}
-                        </p>
-                      ) : null}
-                      <p
-                        className={classNames(
-                          "all",
-                          "p",
-                          "p__uyaK1",
-                          "__wab_text",
-                          sty.p__h7RCo
-                        )}
-                      >
-                        {hasVariant(globalVariants, "screen", "desktop") ? (
-                          <React.Fragment>
-                            {
-                              $q.capabilites.data.body.data.pageBy.pageContent
-                                .textArea[2].text
-                            }
-                          </React.Fragment>
-                        ) : hasVariant(globalVariants, "screen", "large") ? (
-                          "From concept through commercialization, we provide the expertise and flexibility needed to bring differentiated products to market efficiently and at scale."
-                        ) : (
-                          "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                        )}
-                      </p>
-                      <p
-                        className={classNames(
-                          "all",
-                          "p",
-                          "p__uyaK1",
-                          "__wab_text",
-                          sty.p__rVgP1
-                        )}
-                      >
-                        {hasVariant(globalVariants, "screen", "desktop") ? (
-                          <React.Fragment>
-                            {
-                              $q.capabilites.data.body.data.pageBy.pageContent
-                                .textArea[3].text
-                            }
-                          </React.Fragment>
-                        ) : hasVariant(globalVariants, "screen", "large") ? (
-                          "Whether you\u2019re looking for the ultimate indulgence or a great-tasting, nutrient-rich product, we have the expertise to custom craft the perfect solution to fit your brand, consumers, and market needs."
-                        ) : (
-                          "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                        )}
-                      </p>
-                    </div>
-                  </div>
-                  <PlasmicImg__
-                    alt={""}
-                    className={classNames(sty.img___12V3)}
-                    displayHeight={"auto"}
-                    displayMaxHeight={"none"}
-                    displayMaxWidth={"100%"}
-                    displayMinHeight={"0"}
-                    displayMinWidth={"0"}
-                    displayWidth={
-                      hasVariant(globalVariants, "screen", "mobile")
-                        ? "100%"
-                        : hasVariant(globalVariants, "screen", "largerMobile")
-                          ? "auto"
-                          : hasVariant(globalVariants, "screen", "dualScreen")
-                            ? "auto"
-                            : hasVariant(
-                                  globalVariants,
-                                  "screen",
-                                  "smallTablet"
-                                )
-                              ? "70%"
-                              : hasVariant(globalVariants, "screen", "laptop")
-                                ? "35%"
-                                : hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "smallDesktop"
-                                    )
-                                  ? "472px"
-                                  : hasVariant(
-                                        globalVariants,
-                                        "screen",
-                                        "large"
-                                      )
-                                    ? "640px"
-                                    : "640px"
-                    }
-                    loading={"lazy"}
-                    src={
-                      hasVariant(globalVariants, "screen", "large")
-                        ? {
-                            src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodWeighingFlourPng.png",
-                            fullWidth: 680,
-                            fullHeight: 553,
-                            aspectRatio: undefined
-                          }
-                        : {
-                            src: "/plasmic/sterling_and_buena_vista_foods/images/imagePng2.png",
-                            fullWidth: 639,
-                            fullHeight: 610,
-                            aspectRatio: undefined
-                          }
-                    }
-                  />
-                </div>
-              ) : null}
-            </div>
-            <div
-              data-plasmic-name={"capabilitiesSection"}
-              data-plasmic-override={overrides.capabilitiesSection}
-              className={classNames("all", sty.capabilitiesSection)}
-            >
-              <div className={classNames("all", sty.freeBox__bReDb)}>
-                {(
-                  hasVariant(globalVariants, "screen", "large") ? true : false
-                ) ? (
-                  <div className={classNames("all", sty.freeBox___9VXn)}>
                     <h3
                       className={classNames(
                         "all",
                         "h3",
                         "h3__uyaK1",
                         "__wab_text",
-                        sty.h3__qVleB,
-                        hasVariant(globalVariants, "screen", "dualScreen")
-                          ? "fave-script"
-                          : "h3-script"
+                        sty.h3__iPxaz,
+                        "h3-script"
                       )}
                     >
                       {hasVariant(globalVariants, "screen", "desktop") ? (
                         <React.Fragment>
                           {
                             $q.capabilites.data.body.data.pageBy.pageContent
-                              .headlineParent[3].headlinechild[0].headlinenormal
+                              .headlineParent[2].headlinechild[0].headlinenormal
                           }
                         </React.Fragment>
-                      ) : hasVariant(globalVariants, "screen", "large") ? (
-                        "Product"
                       ) : (
-                        "Custom-crafted"
+                        "Oppoertunities"
                       )}
                     </h3>
                     <h4
@@ -1316,60 +939,208 @@ function PlasmicCapabilities__RenderFunc(props: {
                         "h4",
                         "h4__uyaK1",
                         "__wab_text",
-                        sty.h4___84MX
+                        sty.h4__eZa4T
                       )}
                     >
                       {hasVariant(globalVariants, "screen", "desktop") ? (
                         <React.Fragment>
                           {
                             $q.capabilites.data.body.data.pageBy.pageContent
-                              .headlineParent[3].headlinechild[0].headlinefav
+                              .headlineParent[2].headlinechild[0].headlinefav
                           }
                         </React.Fragment>
-                      ) : hasVariant(globalVariants, "screen", "large") ? (
-                        "Capabilities"
                       ) : (
-                        "Bakery Solutions"
+                        "Across Our Organization"
                       )}
                     </h4>
                   </div>
-                ) : null}
-                {(
-                  hasVariant(globalVariants, "screen", "large") ? true : false
-                ) ? (
-                  <p
+                  <div
+                    data-plasmic-name={"p"}
+                    data-plasmic-override={overrides.p}
+                    className={classNames("all", sty.p)}
+                  >
+                    {false ? (
+                      <p
+                        className={classNames(
+                          "all",
+                          "p",
+                          "p__uyaK1",
+                          "__wab_text",
+                          sty.p__vqh1N
+                        )}
+                      >
+                        {hasVariant(globalVariants, "screen", "desktop") ? (
+                          <React.Fragment>
+                            {
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .textArea[1].text
+                            }
+                          </React.Fragment>
+                        ) : (
+                          "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                        )}
+                      </p>
+                    ) : null}
+                    <p
+                      className={classNames(
+                        "all",
+                        "p",
+                        "p__uyaK1",
+                        "__wab_text",
+                        sty.p__h7RCo
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .textArea[2].text
+                          }
+                        </React.Fragment>
+                      ) : (
+                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                      )}
+                    </p>
+                    <p
+                      className={classNames(
+                        "all",
+                        "p",
+                        "p__uyaK1",
+                        "__wab_text",
+                        sty.p__rVgP1
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .textArea[3].text
+                          }
+                        </React.Fragment>
+                      ) : (
+                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                      )}
+                    </p>
+                  </div>
+                </div>
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img___12V3)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={
+                    hasVariant(globalVariants, "screen", "mobile")
+                      ? "100%"
+                      : hasVariant(globalVariants, "screen", "largerMobile")
+                        ? "auto"
+                        : hasVariant(globalVariants, "screen", "dualScreen")
+                          ? "auto"
+                          : hasVariant(globalVariants, "screen", "smallTablet")
+                            ? "70%"
+                            : hasVariant(globalVariants, "screen", "laptop")
+                              ? "35%"
+                              : hasVariant(
+                                    globalVariants,
+                                    "screen",
+                                    "smallDesktop"
+                                  )
+                                ? "472px"
+                                : "640px"
+                  }
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/sterling_and_buena_vista_foods/images/imagePng2.png",
+                    fullWidth: 639,
+                    fullHeight: 610,
+                    aspectRatio: undefined
+                  }}
+                />
+              </div>
+            </div>
+            <div
+              data-plasmic-name={"capabilitiesSection"}
+              data-plasmic-override={overrides.capabilitiesSection}
+              className={classNames("all", sty.capabilitiesSection)}
+            >
+              <div className={classNames("all", sty.freeBox__bReDb)}>
+                <div className={classNames("all", sty.freeBox___9VXn)}>
+                  <h3
                     className={classNames(
                       "all",
-                      "p",
-                      "p__uyaK1",
+                      "h3",
+                      "h3__uyaK1",
                       "__wab_text",
-                      sty.p__bxLxI
+                      sty.h3__qVleB,
+                      hasVariant(globalVariants, "screen", "dualScreen")
+                        ? "fave-script"
+                        : "h3-script"
                     )}
                   >
                     {hasVariant(globalVariants, "screen", "desktop") ? (
                       <React.Fragment>
-                        {(() => {
-                          try {
-                            return $q.capabilites.data.body.data.pageBy
-                              .pageContent.textArea[4].text;
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return "Custom-crafted bakery solutions uniquely created to suit your needs, whether for performance, differentiation or growth.  From protein-forward to large-scale production featuring artisan touches, Sterling Foods brings innovative bakery products to market with the quality, consistency, and flexibility customers depend on.";
-                            }
-                            throw e;
-                          }
-                        })()}
+                        {
+                          $q.capabilites.data.body.data.pageBy.pageContent
+                            .headlineParent[3].headlinechild[0].headlinenormal
+                        }
                       </React.Fragment>
-                    ) : hasVariant(globalVariants, "screen", "large") ? (
-                      "From breakfast bakery and handheld offerings to indulgent desserts, snacks, and nutritional bars, Sterling Foods custom create solutions to meet your needs and delight your customers."
                     ) : (
-                      "Custom-crafted bakery solutions uniquely created to suit your needs, whether for performance, differentiation or growth.  From protein-forward to large-scale production featuring artisan touches, Sterling Foods brings innovative bakery products to market with the quality, consistency, and flexibility customers depend on."
+                      "Custom-crafted"
                     )}
-                  </p>
-                ) : null}
+                  </h3>
+                  <h4
+                    className={classNames(
+                      "all",
+                      "h4",
+                      "h4__uyaK1",
+                      "__wab_text",
+                      sty.h4___84MX
+                    )}
+                  >
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.capabilites.data.body.data.pageBy.pageContent
+                            .headlineParent[3].headlinechild[0].headlinefav
+                        }
+                      </React.Fragment>
+                    ) : (
+                      "Bakery Solutions"
+                    )}
+                  </h4>
+                </div>
+                <p
+                  className={classNames(
+                    "all",
+                    "p",
+                    "p__uyaK1",
+                    "__wab_text",
+                    sty.p__bxLxI
+                  )}
+                >
+                  {hasVariant(globalVariants, "screen", "desktop") ? (
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $q.capabilites.data.body.data.pageBy
+                            .pageContent.textArea[4].text;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "Custom-crafted bakery solutions uniquely created to suit your needs, whether for performance, differentiation or growth.  From protein-forward to large-scale production featuring artisan touches, Sterling Foods brings innovative bakery products to market with the quality, consistency, and flexibility customers depend on.";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
+                  ) : (
+                    "Custom-crafted bakery solutions uniquely created to suit your needs, whether for performance, differentiation or growth.  From protein-forward to large-scale production featuring artisan touches, Sterling Foods brings innovative bakery products to market with the quality, consistency, and flexibility customers depend on."
+                  )}
+                </p>
               </div>
               <div
                 data-plasmic-name={"tabs"}
@@ -1429,9 +1200,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   sty.h4___4LIeu
                                 )}
                               >
-                                {hasVariant(globalVariants, "screen", "large")
-                                  ? "Artisan Bakery"
-                                  : "Across Our Organization"}
+                                {"Across Our Organization"}
                               </h4>
                               <h3
                                 className={classNames(
@@ -1443,9 +1212,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   "h3-script"
                                 )}
                               >
-                                {hasVariant(globalVariants, "screen", "large")
-                                  ? "Items"
-                                  : "Oppoertunities"}
+                                {"Oppoertunities"}
                               </h3>
                             </div>
                             <div
@@ -1453,11 +1220,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                               data-plasmic-override={overrides.p2}
                               className={classNames("all", sty.p2)}
                             >
-                              {(
-                                hasVariant(globalVariants, "screen", "large")
-                                  ? true
-                                  : false
-                              ) ? (
+                              {false ? (
                                 <p
                                   className={classNames(
                                     "all",
@@ -1467,9 +1230,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                     sty.p___8XlBu
                                   )}
                                 >
-                                  {hasVariant(globalVariants, "screen", "large")
-                                    ? "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                  {
+                                    "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                  }
                                 </p>
                               ) : null}
                             </div>
@@ -1478,11 +1241,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                               data-plasmic-override={overrides.ul}
                               className={classNames("all", sty.ul)}
                             >
-                              {(
-                                hasVariant(globalVariants, "screen", "large")
-                                  ? true
-                                  : false
-                              ) ? (
+                              {false ? (
                                 <div
                                   data-plasmic-name={"bulletPoint8"}
                                   data-plasmic-override={overrides.bulletPoint8}
@@ -1499,15 +1258,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                     role={"img"}
                                   />
 
-                                  {(
-                                    hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? true
-                                      : false
-                                  ) ? (
+                                  {false ? (
                                     <p
                                       className={classNames(
                                         "all",
@@ -1517,13 +1268,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                         sty.p__n6VtJ
                                       )}
                                     >
-                                      {hasVariant(
-                                        globalVariants,
-                                        "screen",
-                                        "large"
-                                      )
-                                        ? "Pull-Apart Breads"
-                                        : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                      {
+                                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                      }
                                     </p>
                                   ) : null}
                                 </div>
@@ -1538,11 +1285,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
+                                {false ? (
                                   <p
                                     className={classNames(
                                       "all",
@@ -1552,13 +1295,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                       sty.p__aQvqB
                                     )}
                                   >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Biscuits"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                    {
+                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                    }
                                   </p>
                                 ) : null}
                               </div>
@@ -1572,11 +1311,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
+                                {false ? (
                                   <p
                                     className={classNames(
                                       "all",
@@ -1586,13 +1321,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                       sty.p__g7IDl
                                     )}
                                   >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Authentic New York style Bagels"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                    {
+                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                    }
                                   </p>
                                 ) : null}
                               </div>
@@ -1606,11 +1337,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
+                                {false ? (
                                   <p
                                     className={classNames(
                                       "all",
@@ -1620,13 +1347,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                       sty.p__k4VHk
                                     )}
                                   >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Cinnamon Rolls"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                    {
+                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                    }
                                   </p>
                                 ) : null}
                               </div>
@@ -1640,11 +1363,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
+                                {false ? (
                                   <p
                                     className={classNames(
                                       "all",
@@ -1654,13 +1373,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                       sty.p__fvP2D
                                     )}
                                   >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Muffins"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                    {
+                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                    }
                                   </p>
                                 ) : null}
                               </div>
@@ -1674,11 +1389,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
+                                {false ? (
                                   <p
                                     className={classNames(
                                       "all",
@@ -1688,13 +1399,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                       sty.p__hfsEa
                                     )}
                                   >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Coffee Cakes"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                    {
+                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                    }
                                   </p>
                                 ) : null}
                               </div>
@@ -1708,11 +1415,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
+                                {false ? (
                                   <p
                                     className={classNames(
                                       "all",
@@ -1722,13 +1425,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                       sty.p__mzFen
                                     )}
                                   >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Gourmet Danish"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                    {
+                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                    }
                                   </p>
                                 ) : null}
                               </div>
@@ -1742,11 +1441,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
+                                {false ? (
                                   <p
                                     className={classNames(
                                       "all",
@@ -1756,13 +1451,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                       sty.p__hPmXk
                                     )}
                                   >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Cornbread"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                    {
+                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                    }
                                   </p>
                                 ) : null}
                               </div>
@@ -1941,9 +1632,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   sty.h4__auqW9
                                 )}
                               >
-                                {hasVariant(globalVariants, "screen", "large")
-                                  ? "Artisan Bakery"
-                                  : "Across Our Organization"}
+                                {"Artisan Bakery"}
                               </h4>
                               <h3
                                 className={classNames(
@@ -1955,9 +1644,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   "h3-script"
                                 )}
                               >
-                                {hasVariant(globalVariants, "screen", "large")
-                                  ? "Items"
-                                  : "Oppoertunities"}
+                                {"Items"}
                               </h3>
                             </div>
                             <div
@@ -1965,11 +1652,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                               data-plasmic-override={overrides.p3}
                               className={classNames("all", sty.p3)}
                             >
-                              {(
-                                hasVariant(globalVariants, "screen", "large")
-                                  ? true
-                                  : false
-                              ) ? (
+                              {false ? (
                                 <p
                                   className={classNames(
                                     "all",
@@ -1979,9 +1662,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                     sty.p__gdIn1
                                   )}
                                 >
-                                  {hasVariant(globalVariants, "screen", "large")
-                                    ? "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                  {
+                                    "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                  }
                                 </p>
                               ) : null}
                             </div>
@@ -1990,55 +1673,28 @@ function PlasmicCapabilities__RenderFunc(props: {
                               data-plasmic-override={overrides.ul2}
                               className={classNames("all", sty.ul2)}
                             >
-                              {(
-                                hasVariant(globalVariants, "screen", "large")
-                                  ? true
-                                  : false
-                              ) ? (
-                                <div
-                                  data-plasmic-name={"bulletPoint16"}
-                                  data-plasmic-override={
-                                    overrides.bulletPoint16
-                                  }
+                              <div
+                                data-plasmic-name={"bulletPoint16"}
+                                data-plasmic-override={overrides.bulletPoint16}
+                                className={classNames("all", sty.bulletPoint16)}
+                              >
+                                <VectorList01Icon
+                                  className={classNames("all", sty.svg__kESl)}
+                                  role={"img"}
+                                />
+
+                                <p
                                   className={classNames(
                                     "all",
-                                    sty.bulletPoint16
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__seUjs
                                   )}
                                 >
-                                  <VectorList01Icon
-                                    className={classNames("all", sty.svg__kESl)}
-                                    role={"img"}
-                                  />
-
-                                  {(
-                                    hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? true
-                                      : false
-                                  ) ? (
-                                    <p
-                                      className={classNames(
-                                        "all",
-                                        "p",
-                                        "p__uyaK1",
-                                        "__wab_text",
-                                        sty.p__seUjs
-                                      )}
-                                    >
-                                      {hasVariant(
-                                        globalVariants,
-                                        "screen",
-                                        "large"
-                                      )
-                                        ? "Pull-Apart Breads"
-                                        : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
-                                    </p>
-                                  ) : null}
-                                </div>
-                              ) : null}
+                                  {"Pull-Apart Breads"}
+                                </p>
+                              </div>
                               <div
                                 data-plasmic-name={"bulletPoint17"}
                                 data-plasmic-override={overrides.bulletPoint17}
@@ -2049,29 +1705,17 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p__maKmF
-                                    )}
-                                  >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Biscuits"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
-                                  </p>
-                                ) : null}
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__maKmF
+                                  )}
+                                >
+                                  {"Biscuits"}
+                                </p>
                               </div>
                               <div
                                 data-plasmic-name={"bulletPoint18"}
@@ -2083,29 +1727,17 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p__mSjQc
-                                    )}
-                                  >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Authentic New York style Bagels"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
-                                  </p>
-                                ) : null}
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__mSjQc
+                                  )}
+                                >
+                                  {"Authentic New York style Bagels"}
+                                </p>
                               </div>
                               <div
                                 data-plasmic-name={"bulletPoint19"}
@@ -2117,29 +1749,17 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p__g4Tem
-                                    )}
-                                  >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Cinnamon Rolls"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
-                                  </p>
-                                ) : null}
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__g4Tem
+                                  )}
+                                >
+                                  {"Cinnamon Rolls"}
+                                </p>
                               </div>
                               <div
                                 data-plasmic-name={"bulletPoint20"}
@@ -2151,29 +1771,17 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p__muCp6
-                                    )}
-                                  >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Muffins"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
-                                  </p>
-                                ) : null}
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__muCp6
+                                  )}
+                                >
+                                  {"Muffins"}
+                                </p>
                               </div>
                               <div
                                 data-plasmic-name={"bulletPoint21"}
@@ -2185,29 +1793,17 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p__feG9G
-                                    )}
-                                  >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Coffee Cakes"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
-                                  </p>
-                                ) : null}
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__feG9G
+                                  )}
+                                >
+                                  {"Coffee Cakes"}
+                                </p>
                               </div>
                               <div
                                 data-plasmic-name={"bulletPoint22"}
@@ -2219,29 +1815,17 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p__j6Y0S
-                                    )}
-                                  >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Gourmet Danish"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
-                                  </p>
-                                ) : null}
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__j6Y0S
+                                  )}
+                                >
+                                  {"Gourmet Danish"}
+                                </p>
                               </div>
                               <div
                                 data-plasmic-name={"bulletPoint23"}
@@ -2253,29 +1837,17 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p__pZehl
-                                    )}
-                                  >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Cornbread"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
-                                  </p>
-                                ) : null}
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__pZehl
+                                  )}
+                                >
+                                  {"Cornbread"}
+                                </p>
                               </div>
                             </div>
                           </div>
@@ -2454,9 +2026,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   sty.h4__tbLp
                                 )}
                               >
-                                {hasVariant(globalVariants, "screen", "large")
-                                  ? "Artisan Bakery"
-                                  : "Across Our Organization"}
+                                {"Across Our Organization"}
                               </h4>
                               <h3
                                 className={classNames(
@@ -2468,9 +2038,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   "h3-script"
                                 )}
                               >
-                                {hasVariant(globalVariants, "screen", "large")
-                                  ? "Items"
-                                  : "Oppoertunities"}
+                                {"Oppoertunities"}
                               </h3>
                             </div>
                             <div
@@ -2478,11 +2046,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                               data-plasmic-override={overrides.p4}
                               className={classNames("all", sty.p4)}
                             >
-                              {(
-                                hasVariant(globalVariants, "screen", "large")
-                                  ? true
-                                  : false
-                              ) ? (
+                              {false ? (
                                 <p
                                   className={classNames(
                                     "all",
@@ -2492,9 +2056,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                     sty.p__m2Fcn
                                   )}
                                 >
-                                  {hasVariant(globalVariants, "screen", "large")
-                                    ? "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                  {
+                                    "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                  }
                                 </p>
                               ) : null}
                             </div>
@@ -2503,11 +2067,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                               data-plasmic-override={overrides.ul3}
                               className={classNames("all", sty.ul3)}
                             >
-                              {(
-                                hasVariant(globalVariants, "screen", "large")
-                                  ? true
-                                  : false
-                              ) ? (
+                              {false ? (
                                 <div
                                   data-plasmic-name={"bulletPoint24"}
                                   data-plasmic-override={
@@ -2526,15 +2086,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                     role={"img"}
                                   />
 
-                                  {(
-                                    hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? true
-                                      : false
-                                  ) ? (
+                                  {false ? (
                                     <p
                                       className={classNames(
                                         "all",
@@ -2544,13 +2096,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                         sty.p__yk3G5
                                       )}
                                     >
-                                      {hasVariant(
-                                        globalVariants,
-                                        "screen",
-                                        "large"
-                                      )
-                                        ? "Pull-Apart Breads"
-                                        : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                      {
+                                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                      }
                                     </p>
                                   ) : null}
                                 </div>
@@ -2565,11 +2113,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
+                                {false ? (
                                   <p
                                     className={classNames(
                                       "all",
@@ -2579,13 +2123,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                       sty.p__tKlWp
                                     )}
                                   >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Biscuits"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                    {
+                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                    }
                                   </p>
                                 ) : null}
                               </div>
@@ -2599,11 +2139,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
+                                {false ? (
                                   <p
                                     className={classNames(
                                       "all",
@@ -2613,13 +2149,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                       sty.p___3Bmt4
                                     )}
                                   >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Authentic New York style Bagels"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                    {
+                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                    }
                                   </p>
                                 ) : null}
                               </div>
@@ -2633,11 +2165,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
+                                {false ? (
                                   <p
                                     className={classNames(
                                       "all",
@@ -2647,13 +2175,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                       sty.p__vya3T
                                     )}
                                   >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Cinnamon Rolls"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                    {
+                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                    }
                                   </p>
                                 ) : null}
                               </div>
@@ -2667,11 +2191,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
+                                {false ? (
                                   <p
                                     className={classNames(
                                       "all",
@@ -2681,13 +2201,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                       sty.p__kxPjn
                                     )}
                                   >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Muffins"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                    {
+                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                    }
                                   </p>
                                 ) : null}
                               </div>
@@ -2701,11 +2217,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
+                                {false ? (
                                   <p
                                     className={classNames(
                                       "all",
@@ -2715,13 +2227,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                       sty.p__rxWgl
                                     )}
                                   >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Coffee Cakes"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                    {
+                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                    }
                                   </p>
                                 ) : null}
                               </div>
@@ -2735,11 +2243,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
+                                {false ? (
                                   <p
                                     className={classNames(
                                       "all",
@@ -2749,13 +2253,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                       sty.p__ulBz2
                                     )}
                                   >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Gourmet Danish"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                    {
+                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                    }
                                   </p>
                                 ) : null}
                               </div>
@@ -2769,11 +2269,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
+                                {false ? (
                                   <p
                                     className={classNames(
                                       "all",
@@ -2783,13 +2279,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                       sty.p__sIYws
                                     )}
                                   >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Cornbread"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                    {
+                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                    }
                                   </p>
                                 ) : null}
                               </div>
@@ -2968,9 +2460,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   sty.h4__et9Oa
                                 )}
                               >
-                                {hasVariant(globalVariants, "screen", "large")
-                                  ? "Artisan Bakery"
-                                  : "Across Our Organization"}
+                                {"Across Our Organization"}
                               </h4>
                               <h3
                                 className={classNames(
@@ -2982,9 +2472,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   "h3-script"
                                 )}
                               >
-                                {hasVariant(globalVariants, "screen", "large")
-                                  ? "Items"
-                                  : "Oppoertunities"}
+                                {"Oppoertunities"}
                               </h3>
                             </div>
                             <div
@@ -2992,11 +2480,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                               data-plasmic-override={overrides.p5}
                               className={classNames("all", sty.p5)}
                             >
-                              {(
-                                hasVariant(globalVariants, "screen", "large")
-                                  ? true
-                                  : false
-                              ) ? (
+                              {false ? (
                                 <p
                                   className={classNames(
                                     "all",
@@ -3006,9 +2490,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                     sty.p__hq17K
                                   )}
                                 >
-                                  {hasVariant(globalVariants, "screen", "large")
-                                    ? "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                  {
+                                    "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                  }
                                 </p>
                               ) : null}
                             </div>
@@ -3017,11 +2501,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                               data-plasmic-override={overrides.ul4}
                               className={classNames("all", sty.ul4)}
                             >
-                              {(
-                                hasVariant(globalVariants, "screen", "large")
-                                  ? true
-                                  : false
-                              ) ? (
+                              {false ? (
                                 <div
                                   data-plasmic-name={"bulletPoint32"}
                                   data-plasmic-override={
@@ -3040,15 +2520,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                     role={"img"}
                                   />
 
-                                  {(
-                                    hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? true
-                                      : false
-                                  ) ? (
+                                  {false ? (
                                     <p
                                       className={classNames(
                                         "all",
@@ -3058,13 +2530,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                         sty.p__hkRql
                                       )}
                                     >
-                                      {hasVariant(
-                                        globalVariants,
-                                        "screen",
-                                        "large"
-                                      )
-                                        ? "Pull-Apart Breads"
-                                        : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                      {
+                                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                      }
                                     </p>
                                   ) : null}
                                 </div>
@@ -3079,11 +2547,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
+                                {false ? (
                                   <p
                                     className={classNames(
                                       "all",
@@ -3093,13 +2557,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                       sty.p__q8WwU
                                     )}
                                   >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Biscuits"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                    {
+                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                    }
                                   </p>
                                 ) : null}
                               </div>
@@ -3113,11 +2573,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
+                                {false ? (
                                   <p
                                     className={classNames(
                                       "all",
@@ -3127,13 +2583,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                       sty.p__mMe3J
                                     )}
                                   >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Authentic New York style Bagels"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                    {
+                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                    }
                                   </p>
                                 ) : null}
                               </div>
@@ -3147,11 +2599,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
+                                {false ? (
                                   <p
                                     className={classNames(
                                       "all",
@@ -3161,13 +2609,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                       sty.p___7SZVe
                                     )}
                                   >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Cinnamon Rolls"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                    {
+                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                    }
                                   </p>
                                 ) : null}
                               </div>
@@ -3181,11 +2625,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
+                                {false ? (
                                   <p
                                     className={classNames(
                                       "all",
@@ -3195,13 +2635,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                       sty.p__t37Hd
                                     )}
                                   >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Muffins"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                    {
+                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                    }
                                   </p>
                                 ) : null}
                               </div>
@@ -3215,11 +2651,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
+                                {false ? (
                                   <p
                                     className={classNames(
                                       "all",
@@ -3229,13 +2661,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                       sty.p__rAscJ
                                     )}
                                   >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Coffee Cakes"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                    {
+                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                    }
                                   </p>
                                 ) : null}
                               </div>
@@ -3249,11 +2677,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
+                                {false ? (
                                   <p
                                     className={classNames(
                                       "all",
@@ -3263,13 +2687,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                       sty.p__kwMrl
                                     )}
                                   >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Gourmet Danish"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                    {
+                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                    }
                                   </p>
                                 ) : null}
                               </div>
@@ -3283,11 +2703,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
+                                {false ? (
                                   <p
                                     className={classNames(
                                       "all",
@@ -3297,13 +2713,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                       sty.p___5El3C
                                     )}
                                   >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Cornbread"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                    {
+                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                    }
                                   </p>
                                 ) : null}
                               </div>
@@ -3482,9 +2894,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   sty.h4___4Az96
                                 )}
                               >
-                                {hasVariant(globalVariants, "screen", "large")
-                                  ? "Artisan Bakery"
-                                  : "Across Our Organization"}
+                                {"Across Our Organization"}
                               </h4>
                               <h3
                                 className={classNames(
@@ -3496,9 +2906,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   "h3-script"
                                 )}
                               >
-                                {hasVariant(globalVariants, "screen", "large")
-                                  ? "Items"
-                                  : "Oppoertunities"}
+                                {"Oppoertunities"}
                               </h3>
                             </div>
                             <div
@@ -3506,11 +2914,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                               data-plasmic-override={overrides.p6}
                               className={classNames("all", sty.p6)}
                             >
-                              {(
-                                hasVariant(globalVariants, "screen", "large")
-                                  ? true
-                                  : false
-                              ) ? (
+                              {false ? (
                                 <p
                                   className={classNames(
                                     "all",
@@ -3520,9 +2924,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                     sty.p___9Eke2
                                   )}
                                 >
-                                  {hasVariant(globalVariants, "screen", "large")
-                                    ? "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                                    : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                  {
+                                    "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                  }
                                 </p>
                               ) : null}
                             </div>
@@ -3531,11 +2935,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                               data-plasmic-override={overrides.ul5}
                               className={classNames("all", sty.ul5)}
                             >
-                              {(
-                                hasVariant(globalVariants, "screen", "large")
-                                  ? true
-                                  : false
-                              ) ? (
+                              {false ? (
                                 <div
                                   data-plasmic-name={"bulletPoint40"}
                                   data-plasmic-override={
@@ -3551,15 +2951,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                     role={"img"}
                                   />
 
-                                  {(
-                                    hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? true
-                                      : false
-                                  ) ? (
+                                  {false ? (
                                     <p
                                       className={classNames(
                                         "all",
@@ -3569,13 +2961,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                         sty.p__uQEmy
                                       )}
                                     >
-                                      {hasVariant(
-                                        globalVariants,
-                                        "screen",
-                                        "large"
-                                      )
-                                        ? "Pull-Apart Breads"
-                                        : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                      {
+                                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                      }
                                     </p>
                                   ) : null}
                                 </div>
@@ -3590,11 +2978,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
+                                {false ? (
                                   <p
                                     className={classNames(
                                       "all",
@@ -3604,13 +2988,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                       sty.p__oCTbp
                                     )}
                                   >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Biscuits"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                    {
+                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                    }
                                   </p>
                                 ) : null}
                               </div>
@@ -3624,11 +3004,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
+                                {false ? (
                                   <p
                                     className={classNames(
                                       "all",
@@ -3638,13 +3014,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                       sty.p__yyIf5
                                     )}
                                   >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Authentic New York style Bagels"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                    {
+                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                    }
                                   </p>
                                 ) : null}
                               </div>
@@ -3658,11 +3030,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
+                                {false ? (
                                   <p
                                     className={classNames(
                                       "all",
@@ -3672,13 +3040,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                       sty.p__nb2MK
                                     )}
                                   >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Cinnamon Rolls"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                    {
+                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                    }
                                   </p>
                                 ) : null}
                               </div>
@@ -3692,11 +3056,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
+                                {false ? (
                                   <p
                                     className={classNames(
                                       "all",
@@ -3706,13 +3066,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                       sty.p__ljQVo
                                     )}
                                   >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Muffins"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                    {
+                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                    }
                                   </p>
                                 ) : null}
                               </div>
@@ -3726,11 +3082,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
+                                {false ? (
                                   <p
                                     className={classNames(
                                       "all",
@@ -3740,13 +3092,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                       sty.p__pSvd2
                                     )}
                                   >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Coffee Cakes"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                    {
+                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                    }
                                   </p>
                                 ) : null}
                               </div>
@@ -3760,11 +3108,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
+                                {false ? (
                                   <p
                                     className={classNames(
                                       "all",
@@ -3774,13 +3118,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                       sty.p___735N
                                     )}
                                   >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Gourmet Danish"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                    {
+                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                    }
                                   </p>
                                 ) : null}
                               </div>
@@ -3794,11 +3134,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   role={"img"}
                                 />
 
-                                {(
-                                  hasVariant(globalVariants, "screen", "large")
-                                    ? true
-                                    : false
-                                ) ? (
+                                {false ? (
                                   <p
                                     className={classNames(
                                       "all",
@@ -3808,13 +3144,9 @@ function PlasmicCapabilities__RenderFunc(props: {
                                       sty.p__huMi6
                                     )}
                                   >
-                                    {hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "large"
-                                    )
-                                      ? "Cornbread"
-                                      : "Sterling Foods offers career opportunities across \na variety of disciplines, including:"}
+                                    {
+                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                                    }
                                   </p>
                                 ) : null}
                               </div>
@@ -4005,26 +3337,15 @@ function PlasmicCapabilities__RenderFunc(props: {
                                     "smallDesktop"
                                   )
                                 ? "472px"
-                                : hasVariant(globalVariants, "screen", "large")
-                                  ? "640px"
-                                  : "640px"
+                                : "640px"
                   }
                   loading={"lazy"}
-                  src={
-                    hasVariant(globalVariants, "screen", "large")
-                      ? {
-                          src: "/plasmic/sterling_and_buena_vista_foods/images/group1Png4.png",
-                          fullWidth: 698,
-                          fullHeight: 591,
-                          aspectRatio: undefined
-                        }
-                      : {
-                          src: "/plasmic/sterling_and_buena_vista_foods/images/imagePng2.png",
-                          fullWidth: 639,
-                          fullHeight: 610,
-                          aspectRatio: undefined
-                        }
-                  }
+                  src={{
+                    src: "/plasmic/sterling_and_buena_vista_foods/images/imagePng2.png",
+                    fullWidth: 639,
+                    fullHeight: 610,
+                    aspectRatio: undefined
+                  }}
                 />
 
                 <div
@@ -4053,8 +3374,6 @@ function PlasmicCapabilities__RenderFunc(props: {
                               .headlineParent[4].headlinechild[0].headlinefav
                           }
                         </React.Fragment>
-                      ) : hasVariant(globalVariants, "screen", "large") ? (
-                        "Quality & Food"
                       ) : (
                         "Across Our Organization"
                       )}
@@ -4076,8 +3395,6 @@ function PlasmicCapabilities__RenderFunc(props: {
                               .headlineParent[4].headlinechild[0].headlinenormal
                           }
                         </React.Fragment>
-                      ) : hasVariant(globalVariants, "screen", "large") ? (
-                        "Safety"
                       ) : (
                         "Oppoertunities"
                       )}
@@ -4088,39 +3405,32 @@ function PlasmicCapabilities__RenderFunc(props: {
                     data-plasmic-override={overrides.p8}
                     className={classNames("all", sty.p8)}
                   >
-                    {(
-                      hasVariant(globalVariants, "screen", "large")
-                        ? true
-                        : false
-                    ) ? (
-                      <p
-                        className={classNames(
-                          "all",
-                          "p",
-                          "p__uyaK1",
-                          "__wab_text",
-                          sty.p___37EN
-                        )}
-                      >
-                        {hasVariant(globalVariants, "screen", "desktop") ? (
-                          <React.Fragment>
-                            {
-                              $q.capabilites.data.body.data.pageBy.pageContent
-                                .textArea[5].text
-                            }
-                          </React.Fragment>
-                        ) : hasVariant(globalVariants, "screen", "large") ? (
-                          "Quality and food safety are embedded in everything we do. Through rigorous standards, continuous improvement initiatives, and a culture of accountability, we deliver products our customers can trust."
-                        ) : (
-                          "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                        )}
-                      </p>
-                    ) : null}
+                    <p
+                      className={classNames(
+                        "all",
+                        "p",
+                        "p__uyaK1",
+                        "__wab_text",
+                        sty.p___37EN
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .textArea[5].text
+                          }
+                        </React.Fragment>
+                      ) : (
+                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                      )}
+                    </p>
                   </div>
                   <PrimaryBtn
-                    data-plasmic-name={"primaryBtn"}
-                    data-plasmic-override={overrides.primaryBtn}
-                    className={classNames("__wab_instance", sty.primaryBtn)}
+                    className={classNames(
+                      "__wab_instance",
+                      sty.primaryBtn__lFn7
+                    )}
                   >
                     <div
                       className={classNames(
@@ -4143,184 +3453,164 @@ function PlasmicCapabilities__RenderFunc(props: {
                   </PrimaryBtn>
                 </div>
               </div>
-              {(
-                hasVariant(globalVariants, "screen", "large") ? true : false
-              ) ? (
+              <div
+                data-plasmic-name={"foodSafety4"}
+                data-plasmic-override={overrides.foodSafety4}
+                className={classNames("all", sty.foodSafety4)}
+              >
                 <div
-                  data-plasmic-name={"foodSafety4"}
-                  data-plasmic-override={overrides.foodSafety4}
-                  className={classNames("all", sty.foodSafety4)}
+                  data-plasmic-name={"text4"}
+                  data-plasmic-override={overrides.text4}
+                  className={classNames("all", sty.text4)}
                 >
                   <div
-                    data-plasmic-name={"text4"}
-                    data-plasmic-override={overrides.text4}
-                    className={classNames("all", sty.text4)}
+                    data-plasmic-name={"title9"}
+                    data-plasmic-override={overrides.title9}
+                    className={classNames("all", sty.title9)}
+                  >
+                    <h4
+                      className={classNames(
+                        "all",
+                        "h4",
+                        "h4__uyaK1",
+                        "__wab_text",
+                        sty.h4__jvoqm
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .headlineParent[5].headlinechild[0].headlinenormal
+                          }
+                        </React.Fragment>
+                      ) : (
+                        "Across Our Organization"
+                      )}
+                    </h4>
+                    <h3
+                      className={classNames(
+                        "all",
+                        "h3",
+                        "h3__uyaK1",
+                        "__wab_text",
+                        sty.h3__mqVYk,
+                        "h3-script"
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .headlineParent[5].headlinechild[0].headlinefav
+                          }
+                        </React.Fragment>
+                      ) : (
+                        "Oppoertunities"
+                      )}
+                    </h3>
+                  </div>
+                  <div
+                    data-plasmic-name={"p7"}
+                    data-plasmic-override={overrides.p7}
+                    className={classNames("all", sty.p7)}
+                  >
+                    <p
+                      className={classNames(
+                        "all",
+                        "p",
+                        "p__uyaK1",
+                        "__wab_text",
+                        sty.p__jjt8
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .textArea[6].text
+                          }
+                        </React.Fragment>
+                      ) : (
+                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                      )}
+                    </p>
+                    <p
+                      className={classNames(
+                        "all",
+                        "p",
+                        "p__uyaK1",
+                        "__wab_text",
+                        sty.p___6TOet
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .textArea[7].text
+                          }
+                        </React.Fragment>
+                      ) : (
+                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                      )}
+                    </p>
+                  </div>
+                  <PrimaryBtn
+                    className={classNames(
+                      "__wab_instance",
+                      sty.primaryBtn__kZmTc
+                    )}
                   >
                     <div
-                      data-plasmic-name={"title9"}
-                      data-plasmic-override={overrides.title9}
-                      className={classNames("all", sty.title9)}
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text__vrQgY
+                      )}
                     >
-                      <h3
-                        className={classNames(
-                          "all",
-                          "h3",
-                          "h3__uyaK1",
-                          "__wab_text",
-                          sty.h3__mqVYk,
-                          "h3-script"
-                        )}
-                      >
-                        {hasVariant(globalVariants, "screen", "desktop") ? (
-                          <React.Fragment>
-                            {
-                              $q.capabilites.data.body.data.pageBy.pageContent
-                                .headlineParent[5].headlinechild[0].headlinefav
-                            }
-                          </React.Fragment>
-                        ) : hasVariant(globalVariants, "screen", "large") ? (
-                          "Custom"
-                        ) : (
-                          "Oppoertunities"
-                        )}
-                      </h3>
-                      <h4
-                        className={classNames(
-                          "all",
-                          "h4",
-                          "h4__uyaK1",
-                          "__wab_text",
-                          sty.h4__jvoqm
-                        )}
-                      >
-                        {hasVariant(globalVariants, "screen", "desktop") ? (
-                          <React.Fragment>
-                            {
-                              $q.capabilites.data.body.data.pageBy.pageContent
-                                .headlineParent[5].headlinechild[0]
-                                .headlinenormal
-                            }
-                          </React.Fragment>
-                        ) : hasVariant(globalVariants, "screen", "large") ? (
-                          "Manufacturing"
-                        ) : (
-                          "Across Our Organization"
-                        )}
-                      </h4>
+                      {hasVariant(globalVariants, "screen", "desktop")
+                        ? "Learn More About Us"
+                        : "See Quality in Action"}
                     </div>
-                    <div
-                      data-plasmic-name={"p7"}
-                      data-plasmic-override={overrides.p7}
-                      className={classNames("all", sty.p7)}
-                    >
-                      {(
-                        hasVariant(globalVariants, "screen", "large")
-                          ? true
-                          : false
-                      ) ? (
-                        <p
-                          className={classNames(
-                            "all",
-                            "p",
-                            "p__uyaK1",
-                            "__wab_text",
-                            sty.p__jjt8
-                          )}
-                        >
-                          {hasVariant(globalVariants, "screen", "desktop") ? (
-                            <React.Fragment>
-                              {
-                                $q.capabilites.data.body.data.pageBy.pageContent
-                                  .textArea[6].text
-                              }
-                            </React.Fragment>
-                          ) : hasVariant(globalVariants, "screen", "large") ? (
-                            "Want to see where innovation comes to life?"
-                          ) : (
-                            "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                          )}
-                        </p>
-                      ) : null}
-                      <p
-                        className={classNames(
-                          "all",
-                          "p",
-                          "p__uyaK1",
-                          "__wab_text",
-                          sty.p___6TOet
-                        )}
-                      >
-                        {hasVariant(globalVariants, "screen", "desktop") ? (
-                          <React.Fragment>
-                            {
-                              $q.capabilites.data.body.data.pageBy.pageContent
-                                .textArea[7].text
-                            }
-                          </React.Fragment>
-                        ) : hasVariant(globalVariants, "screen", "large") ? (
-                          "Explore our network of six manufacturing facilities designed to support quality, flexibility, and scale."
-                        ) : (
-                          "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                        )}
-                      </p>
-                    </div>
-                  </div>
-                  <PlasmicImg__
-                    alt={""}
-                    className={classNames(sty.img__cAa9O)}
-                    displayHeight={"auto"}
-                    displayMaxHeight={"none"}
-                    displayMaxWidth={"100%"}
-                    displayMinHeight={"0"}
-                    displayMinWidth={"0"}
-                    displayWidth={
-                      hasVariant(globalVariants, "screen", "mobile")
-                        ? "100%"
-                        : hasVariant(globalVariants, "screen", "largerMobile")
-                          ? "auto"
-                          : hasVariant(globalVariants, "screen", "dualScreen")
-                            ? "auto"
-                            : hasVariant(
-                                  globalVariants,
-                                  "screen",
-                                  "smallTablet"
-                                )
-                              ? "70%"
-                              : hasVariant(globalVariants, "screen", "laptop")
-                                ? "35%"
-                                : hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "smallDesktop"
-                                    )
-                                  ? "472px"
-                                  : hasVariant(
-                                        globalVariants,
-                                        "screen",
-                                        "large"
-                                      )
-                                    ? "640px"
-                                    : "640px"
-                    }
-                    loading={"lazy"}
-                    src={
-                      hasVariant(globalVariants, "screen", "large")
-                        ? {
-                            src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodManufacturingExcellencePng.png",
-                            fullWidth: 680,
-                            fullHeight: 553,
-                            aspectRatio: undefined
-                          }
-                        : {
-                            src: "/plasmic/sterling_and_buena_vista_foods/images/imagePng2.png",
-                            fullWidth: 639,
-                            fullHeight: 610,
-                            aspectRatio: undefined
-                          }
-                    }
-                  />
+                  </PrimaryBtn>
                 </div>
-              ) : null}
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__cAa9O)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={
+                    hasVariant(globalVariants, "screen", "mobile")
+                      ? "100%"
+                      : hasVariant(globalVariants, "screen", "largerMobile")
+                        ? "auto"
+                        : hasVariant(globalVariants, "screen", "dualScreen")
+                          ? "auto"
+                          : hasVariant(globalVariants, "screen", "smallTablet")
+                            ? "70%"
+                            : hasVariant(globalVariants, "screen", "laptop")
+                              ? "35%"
+                              : hasVariant(
+                                    globalVariants,
+                                    "screen",
+                                    "smallDesktop"
+                                  )
+                                ? "472px"
+                                : "640px"
+                  }
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/sterling_and_buena_vista_foods/images/imagePng2.png",
+                    fullWidth: 639,
+                    fullHeight: 610,
+                    aspectRatio: undefined
+                  }}
+                />
+              </div>
             </div>
             <CtaBottom
               data-plasmic-name={"ctaBottom"}
@@ -4440,7 +3730,6 @@ const PlasmicDescendants = {
     "text3",
     "title8",
     "p8",
-    "primaryBtn",
     "foodSafety4",
     "text4",
     "title9",
@@ -4546,7 +3835,6 @@ const PlasmicDescendants = {
     "text3",
     "title8",
     "p8",
-    "primaryBtn",
     "foodSafety4",
     "text4",
     "title9",
@@ -5023,17 +4311,15 @@ const PlasmicDescendants = {
     "text3",
     "title8",
     "p8",
-    "primaryBtn",
     "foodSafety4",
     "text4",
     "title9",
     "p7"
   ],
-  foodSafety3: ["foodSafety3", "text3", "title8", "p8", "primaryBtn"],
-  text3: ["text3", "title8", "p8", "primaryBtn"],
+  foodSafety3: ["foodSafety3", "text3", "title8", "p8"],
+  text3: ["text3", "title8", "p8"],
   title8: ["title8"],
   p8: ["p8"],
-  primaryBtn: ["primaryBtn"],
   foodSafety4: ["foodSafety4", "text4", "title9", "p7"],
   text4: ["text4", "title9", "p7"],
   title9: ["title9"],
@@ -5143,7 +4429,6 @@ type NodeDefaultElementType = {
   text3: "div";
   title8: "div";
   p8: "div";
-  primaryBtn: typeof PrimaryBtn;
   foodSafety4: "div";
   text4: "div";
   title9: "div";
@@ -5311,7 +4596,6 @@ export const PlasmicCapabilities = Object.assign(
     text3: makeNodeComponent("text3"),
     title8: makeNodeComponent("title8"),
     p8: makeNodeComponent("p8"),
-    primaryBtn: makeNodeComponent("primaryBtn"),
     foodSafety4: makeNodeComponent("foodSafety4"),
     text4: makeNodeComponent("text4"),
     title9: makeNodeComponent("title9"),

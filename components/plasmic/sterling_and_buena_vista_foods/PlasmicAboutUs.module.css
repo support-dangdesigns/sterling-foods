@@ -21,11 +21,6 @@
 .root > * {
   grid-column: 4;
 }
-@media (max-width: 2000px) {
-  .root > * {
-    grid-column: 4;
-  }
-}
 @media (max-width: 1440px) {
   .root > * {
     grid-column: 4;
@@ -68,11 +63,6 @@
 .topHero:global(.__wab_instance) {
   position: relative;
   flex-shrink: 0;
-}
-@media (max-width: 2000px) {
-  .topHero:global(.__wab_instance) {
-    flex-shrink: 0;
-  }
 }
 @media (max-width: 1280px) {
   .topHero:global(.__wab_instance) {
@@ -1993,11 +1983,6 @@
   width: 340px;
   flex-shrink: 0;
 }
-@media (max-width: 2000px) {
-  .primaryBtn:global(.__wab_instance) {
-    flex-shrink: 0;
-  }
-}
 @media (max-width: 1280px) {
   .primaryBtn:global(.__wab_instance) {
     flex-shrink: 0;
@@ -2755,11 +2740,6 @@
   min-width: 0;
   display: none;
 }
-@media (max-width: 2000px) {
-  .sliderCarousel:global(.__wab_instance) {
-    display: none;
-  }
-}
 @media (max-width: 530px) {
   .sliderCarousel:global(.__wab_instance) {
     display: flex;
@@ -3392,11 +3372,6 @@
 .ctaBottom:global(.__wab_instance) {
   max-width: 100%;
   flex-shrink: 0;
-}
-@media (max-width: 2000px) {
-  .ctaBottom:global(.__wab_instance) {
-    flex-shrink: 0;
-  }
 }
 @media (max-width: 1700px) {
   .ctaBottom:global(.__wab_instance) {

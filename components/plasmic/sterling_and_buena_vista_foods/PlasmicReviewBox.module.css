@@ -78,11 +78,6 @@
   flex-shrink: 0;
   padding: 8px;
 }
-@media (max-width: 2000px) {
-  .text {
-    padding: 10px;
-  }
-}
 .frame51 {
   animation: none;
   width: 52px;

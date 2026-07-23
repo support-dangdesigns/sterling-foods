@@ -270,8 +270,6 @@ function PlasmicMenuList__RenderFunc(props: {
     $state: $stateRef.current
   });
 
-  const globalVariants = _useGlobalVariants();
-
   const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
@@ -312,11 +310,7 @@ function PlasmicMenuList__RenderFunc(props: {
           )
         })}
         component={Link}
-        href={
-          hasVariant(globalVariants, "screen", "large")
-            ? `/about-us`
-            : "/about-us"
-        }
+        href={"/about-us"}
         legacyBehavior={false}
         platform={"nextjs"}
       >
@@ -343,11 +337,7 @@ function PlasmicMenuList__RenderFunc(props: {
           )
         })}
         component={Link}
-        href={
-          hasVariant(globalVariants, "screen", "large")
-            ? `/capabilities`
-            : "/capabilities"
-        }
+        href={"/capabilities"}
         legacyBehavior={false}
         platform={"nextjs"}
       >
@@ -369,11 +359,7 @@ function PlasmicMenuList__RenderFunc(props: {
           )
         })}
         component={Link}
-        href={
-          hasVariant(globalVariants, "screen", "large")
-            ? `/markets`
-            : "/markets"
-        }
+        href={"/markets"}
         legacyBehavior={false}
         platform={"nextjs"}
       >
@@ -389,11 +375,7 @@ function PlasmicMenuList__RenderFunc(props: {
       <PlasmicLink__
         className={classNames("all", "a", "a__uyaK1", sty.link__djjcq)}
         component={Link}
-        href={
-          hasVariant(globalVariants, "screen", "large")
-            ? `/our-facilities`
-            : "/our-facilities"
-        }
+        href={"/our-facilities"}
         legacyBehavior={false}
         platform={"nextjs"}
       >
@@ -409,11 +391,7 @@ function PlasmicMenuList__RenderFunc(props: {
       <PlasmicLink__
         className={classNames("all", "a", "a__uyaK1", sty.link__mh953)}
         component={Link}
-        href={
-          hasVariant(globalVariants, "screen", "large")
-            ? `/our-facilities`
-            : "/our-facilities"
-        }
+        href={"/our-facilities"}
         legacyBehavior={false}
         platform={"nextjs"}
       >
@@ -429,11 +407,7 @@ function PlasmicMenuList__RenderFunc(props: {
       <PlasmicLink__
         className={classNames("all", "a", "a__uyaK1", sty.link___5USgH)}
         component={Link}
-        href={
-          hasVariant(globalVariants, "screen", "large")
-            ? `/careers`
-            : "/careers"
-        }
+        href={"/careers"}
         legacyBehavior={false}
         platform={"nextjs"}
       >

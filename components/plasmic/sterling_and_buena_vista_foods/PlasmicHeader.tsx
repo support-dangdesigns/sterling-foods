@@ -203,11 +203,6 @@ function PlasmicHeader__RenderFunc(props: {
           data-plasmic-name={"header"}
           data-plasmic-override={overrides.header}
           className={classNames("all", sty.header)}
-          id={
-            hasVariant(globalVariants, "screen", "large")
-              ? "top-header"
-              : undefined
-          }
         >
           <div
             data-plasmic-name={"menu"}
@@ -351,21 +346,7 @@ function PlasmicHeader__RenderFunc(props: {
                 throw e;
               }
             })()
-          : hasVariant(globalVariants, "screen", "large")
-            ? (() => {
-                try {
-                  return $state.expanded;
-                } catch (e) {
-                  if (
-                    e instanceof TypeError ||
-                    e?.plasmicType === "PlasmicUndefinedDataError"
-                  ) {
-                    return true;
-                  }
-                  throw e;
-                }
-              })()
-            : $state.expanded
+          : $state.expanded
       ) ? (
         <div
           data-plasmic-name={"expandMenu"}

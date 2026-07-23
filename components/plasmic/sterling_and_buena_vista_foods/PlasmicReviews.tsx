@@ -69,9 +69,7 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import sty from "./PlasmicReviews.module.css"; // plasmic-import: QjfQfEfd1CGs/css
 
 import CaretLeftSmSvgrepoComSvgIcon from "./icons/PlasmicIcon__CaretLeftSmSvgrepoComSvg"; // plasmic-import: Fos_YVXKTavi/icon
-import AngleLeftSolidFullSvgIcon from "./icons/PlasmicIcon__AngleLeftSolidFullSvg"; // plasmic-import: wGKh3C7DCjX9/icon
 import CaretRightSmSvgrepoComSvgIcon from "./icons/PlasmicIcon__CaretRightSmSvgrepoComSvg"; // plasmic-import: 9p31HanEpOae/icon
-import AngleRightSolidFullSvgIcon from "./icons/PlasmicIcon__AngleRightSolidFullSvg"; // plasmic-import: 6ZAfQoit46_8/icon
 import StarFilledIcon from "./icons/PlasmicIcon__StarFilled"; // plasmic-import: QmvyYi5qQaXv/icon
 
 createPlasmicElementProxy;
@@ -224,9 +222,7 @@ function PlasmicReviews__RenderFunc(props: {
                     sty.span
                   )}
                 >
-                  {hasVariant(globalVariants, "screen", "large")
-                    ? "Reviews"
-                    : ""}
+                  {""}
                 </span>
               }
               <React.Fragment>{""}</React.Fragment>
@@ -266,12 +262,7 @@ function PlasmicReviews__RenderFunc(props: {
               }
             }}
           >
-            <PlasmicIcon__
-              PlasmicIconType={
-                hasVariant(globalVariants, "screen", "large")
-                  ? AngleLeftSolidFullSvgIcon
-                  : CaretLeftSmSvgrepoComSvgIcon
-              }
+            <CaretLeftSmSvgrepoComSvgIcon
               className={classNames("all", sty.svg__exajh)}
               onClick={async event => {
                 const $steps = {};
@@ -327,12 +318,7 @@ function PlasmicReviews__RenderFunc(props: {
               }
             }}
           >
-            <PlasmicIcon__
-              PlasmicIconType={
-                hasVariant(globalVariants, "screen", "large")
-                  ? AngleRightSolidFullSvgIcon
-                  : CaretRightSmSvgrepoComSvgIcon
-              }
+            <CaretRightSmSvgrepoComSvgIcon
               className={classNames("all", sty.svg__m1L0V)}
               onClick={async event => {
                 const $steps = {};
@@ -364,9 +350,7 @@ function PlasmicReviews__RenderFunc(props: {
       </div>
       {(() => {
         const child$Props = {
-          adaptiveHeight: hasVariant(globalVariants, "screen", "large")
-            ? false
-            : true,
+          adaptiveHeight: true,
           arrows: false,
           autoplay: false,
           autoplaySpeed: hasVariant(globalVariants, "screen", "tablet")
@@ -417,9 +401,7 @@ function PlasmicReviews__RenderFunc(props: {
                     ? 2
                     : hasVariant(globalVariants, "screen", "mediumDesktop")
                       ? 2
-                      : hasVariant(globalVariants, "screen", "large")
-                        ? 3
-                        : 3,
+                      : 3,
           slidesToShow: hasVariant(globalVariants, "screen", "smallMobile")
             ? 1
             : hasVariant(globalVariants, "screen", "mobile")
@@ -432,13 +414,9 @@ function PlasmicReviews__RenderFunc(props: {
                     ? 1
                     : hasVariant(globalVariants, "screen", "smallDesktop")
                       ? 1
-                      : hasVariant(globalVariants, "screen", "large")
-                        ? 1
-                        : 1,
-          speed: 500,
-          swipeToSlide: hasVariant(globalVariants, "screen", "large")
-            ? true
-            : true,
+                      : 1,
+          speed: 1500,
+          swipeToSlide: true,
           variableWidth: hasVariant(globalVariants, "screen", "mobile")
             ? false
             : undefined,

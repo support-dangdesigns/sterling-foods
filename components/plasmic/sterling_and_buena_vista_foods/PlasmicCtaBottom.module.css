@@ -12,15 +12,6 @@
   min-width: 0;
   padding: 0px;
 }
-@media (max-width: 2000px) {
-  .cta {
-    padding-right: 0px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    align-items: center;
-    justify-content: center;
-  }
-}
 @media (max-width: 1512px) {
   .cta {
     height: auto;
@@ -83,16 +74,6 @@
   min-height: 0;
   padding: 0px 0px 2px;
   margin: 0px;
-}
-@media (max-width: 2000px) {
-  .freeBox {
-    padding-bottom: 0px;
-    padding-top: 0px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-    column-gap: 0px;
-  }
 }
 @media (max-width: 1512px) {
   .freeBox {
@@ -354,13 +335,6 @@
   align-self: center;
   padding: 0px 30px;
 }
-@media (max-width: 2000px) {
-  .text___9CO6F {
-    padding-bottom: 0px;
-    left: auto;
-    top: auto;
-  }
-}
 @media (max-width: 1200px) {
   .text___9CO6F {
     left: auto;
@@ -436,13 +410,6 @@
   text-overflow: clip;
   display: none;
   padding: 0px 30px;
-}
-@media (max-width: 2000px) {
-  .text___2EPm {
-    padding-bottom: 0px;
-    left: auto;
-    top: auto;
-  }
 }
 @media (max-width: 1920px) {
   .text___2EPm {
@@ -547,12 +514,6 @@
   align-self: center;
   flex-shrink: 0;
   margin: 20px;
-}
-@media (max-width: 2000px) {
-  .buttonContainer {
-    left: auto;
-    top: auto;
-  }
 }
 @media (max-width: 1200px) {
   .buttonContainer {

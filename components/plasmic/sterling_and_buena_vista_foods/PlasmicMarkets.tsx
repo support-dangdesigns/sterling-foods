@@ -137,18 +137,16 @@ export type PlasmicMarkets__OverridesType = {
   marketsBody?: Flex__<"div">;
   intro?: Flex__<"div">;
   freeBox?: Flex__<"div">;
-  foodSafety?: Flex__<"div">;
-  text?: Flex__<"div">;
+  national?: Flex__<"div">;
   title?: Flex__<"div">;
   paragraph?: Flex__<"div">;
-  schoolFoodservice?: Flex__<"div">;
-  text2?: Flex__<"div">;
+  schoolFoodservice3?: Flex__<"div">;
   title2?: Flex__<"div">;
   paragraph2?: Flex__<"div">;
   aboutUs?: Flex__<"a"> & Partial<LinkProps>;
   primaryBtn?: Flex__<typeof PrimaryBtn>;
-  convenienceStores?: Flex__<"div">;
-  text3?: Flex__<"div">;
+  text?: Flex__<"div">;
+  convenienceStores2?: Flex__<"div">;
   title3?: Flex__<"div">;
   paragraph3?: Flex__<"div">;
   floatingImage?: Flex__<"section">;
@@ -175,6 +173,22 @@ export const serverQueryTree: QueryComponentNode = {
   type: "component",
   queries: {
     markets: {
+      id: "fetchGraphQL",
+      fn: $$.fetchGraphQL,
+      args: ({ $q, $props, $ctx, $state }) => [
+        (() => {
+          const __composite = { method: "POST", url: null, request: null };
+          __composite["url"] = "https://edit-sterling.dangstaging.org/graphql";
+          __composite["request"] = {
+            query:
+              "query MyQuery {\n  pageBy(pageId: 90) {\n    pageContent {\n      fieldGroupName\n      button {\n        fieldGroupName\n        text\n        url\n      }\n      headlineParent {\n        fieldGroupName\n        headlinechild {\n          fieldGroupName\n          headlinefav\n          headlinenormal\n        }\n      }\n      textArea {\n        fieldGroupName\n        text\n      }\n    }\n  }\n}",
+            variables: {}
+          };
+          return __composite;
+        })()
+      ]
+    },
+    markets2: {
       id: "fetchGraphQL",
       fn: $$.fetchGraphQL,
       args: ({ $q, $props, $ctx, $state }) => [
@@ -387,71 +401,80 @@ function PlasmicMarkets__RenderFunc(props: {
                 </p>
               </div>
               <div
-                data-plasmic-name={"foodSafety"}
-                data-plasmic-override={overrides.foodSafety}
-                className={classNames("all", sty.foodSafety)}
+                data-plasmic-name={"national"}
+                data-plasmic-override={overrides.national}
+                className={classNames("all", sty.national)}
               >
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img__msSnL)}
-                  displayHeight={
-                    hasVariant(globalVariants, "screen", "mobile")
-                      ? "50%"
-                      : "550px"
-                  }
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/sterling_and_buena_vista_foods/images/croissantBkgdElementPng.png",
-                    fullWidth: 364,
-                    fullHeight: 550,
-                    aspectRatio: undefined
-                  }}
-                />
-
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img___6NoRb)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={
-                    hasVariant(globalVariants, "screen", "mobile")
-                      ? "100%"
-                      : hasVariant(globalVariants, "screen", "dualScreen")
-                        ? "63.25%"
-                        : hasVariant(globalVariants, "screen", "smallTablet")
-                          ? "50%"
-                          : hasVariant(globalVariants, "screen", "laptop")
-                            ? "35%"
+                <div className={classNames("all", sty.column___51R2P)}>
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__msSnL)}
+                    displayHeight={
+                      hasVariant(globalVariants, "screen", "mobile")
+                        ? "50%"
+                        : hasVariant(globalVariants, "screen", "smallLaptop")
+                          ? "100%"
+                          : hasVariant(globalVariants, "screen", "smallDesktop")
+                            ? "130%"
                             : hasVariant(
                                   globalVariants,
                                   "screen",
-                                  "smallDesktop"
+                                  "mediumDesktop"
                                 )
-                              ? "472px"
-                              : "574px"
-                  }
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/sterling_and_buena_vista_foods/images/coffeeAvif.avif",
-                    fullWidth: 574,
-                    fullHeight: 488,
-                    aspectRatio: undefined
-                  }}
-                />
+                              ? "auto"
+                              : "550px"
+                    }
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/sterling_and_buena_vista_foods/images/croissantBkgdElementPng.png",
+                      fullWidth: 364,
+                      fullHeight: 550,
+                      aspectRatio: undefined
+                    }}
+                  />
 
-                <div
-                  data-plasmic-name={"text"}
-                  data-plasmic-override={overrides.text}
-                  className={classNames("all", sty.text)}
-                >
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img___6NoRb)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={
+                      hasVariant(globalVariants, "screen", "mediumDesktop")
+                        ? "75%"
+                        : "100%"
+                    }
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "mobile")
+                        ? "100%"
+                        : hasVariant(globalVariants, "screen", "dualScreen")
+                          ? "63.25%"
+                          : hasVariant(globalVariants, "screen", "smallTablet")
+                            ? "50%"
+                            : hasVariant(
+                                  globalVariants,
+                                  "screen",
+                                  "mediumDesktop"
+                                )
+                              ? "auto"
+                              : "574px"
+                    }
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/sterling_and_buena_vista_foods/images/coffeeAvif.avif",
+                      fullWidth: 574,
+                      fullHeight: 488,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
+                <div className={classNames("all", sty.column__lDybX)}>
                   <div
                     data-plasmic-name={"title"}
                     data-plasmic-override={overrides.title}
@@ -528,15 +551,11 @@ function PlasmicMarkets__RenderFunc(props: {
                 </div>
               </div>
               <div
-                data-plasmic-name={"schoolFoodservice"}
-                data-plasmic-override={overrides.schoolFoodservice}
-                className={classNames("all", sty.schoolFoodservice)}
+                data-plasmic-name={"schoolFoodservice3"}
+                data-plasmic-override={overrides.schoolFoodservice3}
+                className={classNames("all", sty.schoolFoodservice3)}
               >
-                <div
-                  data-plasmic-name={"text2"}
-                  data-plasmic-override={overrides.text2}
-                  className={classNames("all", sty.text2)}
-                >
+                <div className={classNames("all", sty.column__toOnr)}>
                   <div
                     data-plasmic-name={"title2"}
                     data-plasmic-override={overrides.title2}
@@ -628,11 +647,9 @@ function PlasmicMarkets__RenderFunc(props: {
                         className={classNames("__wab_instance", sty.primaryBtn)}
                       >
                         <div
-                          className={classNames(
-                            "all",
-                            "__wab_text",
-                            sty.text__yhT3F
-                          )}
+                          data-plasmic-name={"text"}
+                          data-plasmic-override={overrides.text}
+                          className={classNames("all", "__wab_text", sty.text)}
                         >
                           {hasVariant(globalVariants, "screen", "desktop") ? (
                             <React.Fragment>
@@ -649,92 +666,101 @@ function PlasmicMarkets__RenderFunc(props: {
                     </PlasmicLink__>
                   </div>
                 </div>
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img__opTma)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={
-                    hasVariant(globalVariants, "screen", "mobile")
-                      ? "100%"
-                      : hasVariant(globalVariants, "screen", "dualScreen")
-                        ? "79.32%"
-                        : hasVariant(globalVariants, "screen", "smallTablet")
-                          ? "50%"
-                          : hasVariant(globalVariants, "screen", "tablet")
+                <div className={classNames("all", sty.column__q1ZpS)}>
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__opTma)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={
+                      hasVariant(globalVariants, "screen", "mediumDesktop")
+                        ? "90%"
+                        : "100%"
+                    }
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "mobile")
+                        ? "100%"
+                        : hasVariant(globalVariants, "screen", "dualScreen")
+                          ? "79.32%"
+                          : hasVariant(globalVariants, "screen", "smallTablet")
                             ? "50%"
-                            : hasVariant(
-                                  globalVariants,
-                                  "screen",
-                                  "smallLaptop"
-                                )
-                              ? "40%"
-                              : hasVariant(globalVariants, "screen", "laptop")
-                                ? "40%"
+                            : hasVariant(globalVariants, "screen", "tablet")
+                              ? "50%"
+                              : hasVariant(
+                                    globalVariants,
+                                    "screen",
+                                    "smallDesktop"
+                                  )
+                                ? "590px"
                                 : hasVariant(
                                       globalVariants,
                                       "screen",
-                                      "smallDesktop"
+                                      "mediumDesktop"
                                     )
-                                  ? "590px"
+                                  ? "auto"
                                   : "697px"
-                  }
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/sterling_and_buena_vista_foods/images/pastriesAvif.avif",
-                    fullWidth: 697,
-                    fullHeight: 584,
-                    aspectRatio: undefined
-                  }}
-                />
+                    }
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/sterling_and_buena_vista_foods/images/pastriesAvif.avif",
+                      fullWidth: 697,
+                      fullHeight: 584,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
               </div>
               <div
-                data-plasmic-name={"convenienceStores"}
-                data-plasmic-override={overrides.convenienceStores}
-                className={classNames("all", sty.convenienceStores)}
+                data-plasmic-name={"convenienceStores2"}
+                data-plasmic-override={overrides.convenienceStores2}
+                className={classNames("all", sty.convenienceStores2)}
               >
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img__kcvXq)}
-                  displayHeight={
-                    hasVariant(globalVariants, "screen", "tablet")
-                      ? "372px"
-                      : "auto"
-                  }
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={
-                    hasVariant(globalVariants, "screen", "mobile")
-                      ? "100%"
-                      : hasVariant(globalVariants, "screen", "dualScreen")
-                        ? "85.94%"
-                        : hasVariant(globalVariants, "screen", "smallTablet")
-                          ? "50%"
-                          : hasVariant(globalVariants, "screen", "tablet")
-                            ? "47.46%"
-                            : hasVariant(globalVariants, "screen", "laptop")
-                              ? "40%"
-                              : "698px"
-                  }
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/sterling_and_buena_vista_foods/images/cookiesAvif.avif",
-                    fullWidth: 698,
-                    fullHeight: 591,
-                    aspectRatio: undefined
-                  }}
-                />
-
-                <div
-                  data-plasmic-name={"text3"}
-                  data-plasmic-override={overrides.text3}
-                  className={classNames("all", sty.text3)}
-                >
+                <div className={classNames("all", sty.column___9Qg7L)}>
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__kcvXq)}
+                    displayHeight={
+                      hasVariant(globalVariants, "screen", "tablet")
+                        ? "372px"
+                        : "auto"
+                    }
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={
+                      hasVariant(globalVariants, "screen", "mediumDesktop")
+                        ? "90%"
+                        : "100%"
+                    }
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "mobile")
+                        ? "100%"
+                        : hasVariant(globalVariants, "screen", "dualScreen")
+                          ? "85.94%"
+                          : hasVariant(globalVariants, "screen", "smallTablet")
+                            ? "50%"
+                            : hasVariant(globalVariants, "screen", "tablet")
+                              ? "47.46%"
+                              : hasVariant(
+                                    globalVariants,
+                                    "screen",
+                                    "mediumDesktop"
+                                  )
+                                ? "auto"
+                                : "698px"
+                    }
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/sterling_and_buena_vista_foods/images/cookiesAvif.avif",
+                      fullWidth: 698,
+                      fullHeight: 591,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
+                <div className={classNames("all", sty.column__n8SMe)}>
                   <div
                     data-plasmic-name={"title3"}
                     data-plasmic-override={overrides.title3}
@@ -1117,18 +1143,16 @@ const PlasmicDescendants = {
     "marketsBody",
     "intro",
     "freeBox",
-    "foodSafety",
-    "text",
+    "national",
     "title",
     "paragraph",
-    "schoolFoodservice",
-    "text2",
+    "schoolFoodservice3",
     "title2",
     "paragraph2",
     "aboutUs",
     "primaryBtn",
-    "convenienceStores",
-    "text3",
+    "text",
+    "convenienceStores2",
     "title3",
     "paragraph3",
     "floatingImage",
@@ -1151,18 +1175,16 @@ const PlasmicDescendants = {
     "marketsBody",
     "intro",
     "freeBox",
-    "foodSafety",
-    "text",
+    "national",
     "title",
     "paragraph",
-    "schoolFoodservice",
-    "text2",
+    "schoolFoodservice3",
     "title2",
     "paragraph2",
     "aboutUs",
     "primaryBtn",
-    "convenienceStores",
-    "text3",
+    "text",
+    "convenienceStores2",
     "title3",
     "paragraph3",
     "floatingImage",
@@ -1184,42 +1206,38 @@ const PlasmicDescendants = {
     "marketsBody",
     "intro",
     "freeBox",
-    "foodSafety",
-    "text",
+    "national",
     "title",
     "paragraph",
-    "schoolFoodservice",
-    "text2",
+    "schoolFoodservice3",
     "title2",
     "paragraph2",
     "aboutUs",
     "primaryBtn",
-    "convenienceStores",
-    "text3",
+    "text",
+    "convenienceStores2",
     "title3",
     "paragraph3"
   ],
   intro: ["intro", "freeBox"],
   freeBox: ["freeBox"],
-  foodSafety: ["foodSafety", "text", "title", "paragraph"],
-  text: ["text", "title", "paragraph"],
+  national: ["national", "title", "paragraph"],
   title: ["title"],
   paragraph: ["paragraph"],
-  schoolFoodservice: [
-    "schoolFoodservice",
-    "text2",
+  schoolFoodservice3: [
+    "schoolFoodservice3",
     "title2",
     "paragraph2",
     "aboutUs",
-    "primaryBtn"
+    "primaryBtn",
+    "text"
   ],
-  text2: ["text2", "title2", "paragraph2", "aboutUs", "primaryBtn"],
   title2: ["title2"],
-  paragraph2: ["paragraph2", "aboutUs", "primaryBtn"],
-  aboutUs: ["aboutUs", "primaryBtn"],
-  primaryBtn: ["primaryBtn"],
-  convenienceStores: ["convenienceStores", "text3", "title3", "paragraph3"],
-  text3: ["text3", "title3", "paragraph3"],
+  paragraph2: ["paragraph2", "aboutUs", "primaryBtn", "text"],
+  aboutUs: ["aboutUs", "primaryBtn", "text"],
+  primaryBtn: ["primaryBtn", "text"],
+  text: ["text"],
+  convenienceStores2: ["convenienceStores2", "title3", "paragraph3"],
   title3: ["title3"],
   paragraph3: ["paragraph3"],
   floatingImage: ["floatingImage"],
@@ -1256,18 +1274,16 @@ type NodeDefaultElementType = {
   marketsBody: "div";
   intro: "div";
   freeBox: "div";
-  foodSafety: "div";
-  text: "div";
+  national: "div";
   title: "div";
   paragraph: "div";
-  schoolFoodservice: "div";
-  text2: "div";
+  schoolFoodservice3: "div";
   title2: "div";
   paragraph2: "div";
   aboutUs: "a";
   primaryBtn: typeof PrimaryBtn;
-  convenienceStores: "div";
-  text3: "div";
+  text: "div";
+  convenienceStores2: "div";
   title3: "div";
   paragraph3: "div";
   floatingImage: "section";
@@ -1352,18 +1368,16 @@ export const PlasmicMarkets = Object.assign(
     marketsBody: makeNodeComponent("marketsBody"),
     intro: makeNodeComponent("intro"),
     freeBox: makeNodeComponent("freeBox"),
-    foodSafety: makeNodeComponent("foodSafety"),
-    text: makeNodeComponent("text"),
+    national: makeNodeComponent("national"),
     title: makeNodeComponent("title"),
     paragraph: makeNodeComponent("paragraph"),
-    schoolFoodservice: makeNodeComponent("schoolFoodservice"),
-    text2: makeNodeComponent("text2"),
+    schoolFoodservice3: makeNodeComponent("schoolFoodservice3"),
     title2: makeNodeComponent("title2"),
     paragraph2: makeNodeComponent("paragraph2"),
     aboutUs: makeNodeComponent("aboutUs"),
     primaryBtn: makeNodeComponent("primaryBtn"),
-    convenienceStores: makeNodeComponent("convenienceStores"),
-    text3: makeNodeComponent("text3"),
+    text: makeNodeComponent("text"),
+    convenienceStores2: makeNodeComponent("convenienceStores2"),
     title3: makeNodeComponent("title3"),
     paragraph3: makeNodeComponent("paragraph3"),
     floatingImage: makeNodeComponent("floatingImage"),

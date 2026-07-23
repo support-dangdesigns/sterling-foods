@@ -376,8 +376,6 @@ function PlasmicContactPage__RenderFunc(props: {
     $state: $stateRef.current
   });
 
-  const globalVariants = _useGlobalVariants();
-
   const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,

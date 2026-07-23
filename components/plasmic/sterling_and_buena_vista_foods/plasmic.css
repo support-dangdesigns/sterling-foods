@@ -127,13 +127,6 @@
   --token-WxvvgatuPYoJ: var(--antd-colorBgSpotlight);
 }
 
-@media (max-width: 2000px) {
-  .plasmic_tokens_override_uyaK17nhz8WhGjYZfKjMhX.plasmic_tokens_override_uyaK17nhz8WhGjYZfKjMhX {
-    --token-RvPI6LyeIPmd: #1c3757;
-    --token-WxvvgatuPYoJ: #1c3757;
-  }
-}
-
 @media (max-width: 1920px) {
   .plasmic_tokens_override_uyaK17nhz8WhGjYZfKjMhX.plasmic_tokens_override_uyaK17nhz8WhGjYZfKjMhX {
     --token-RvPI6LyeIPmd: #1c3757;

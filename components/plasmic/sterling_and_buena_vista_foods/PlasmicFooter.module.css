@@ -370,11 +370,6 @@
   left: auto;
   width: 462px;
 }
-@media (max-width: 2000px) {
-  .text {
-    width: auto;
-  }
-}
 @media (max-width: 1920px) {
   .text {
     width: auto;
@@ -1442,14 +1437,6 @@
   bottom: auto;
   padding: 10px;
 }
-@media (max-width: 2000px) {
-  .locations5 {
-    left: auto;
-    top: auto;
-    bottom: auto;
-    right: auto;
-  }
-}
 @media (max-width: 1920px) {
   .locations5 {
     left: auto;
@@ -2112,11 +2099,6 @@
   height: auto;
   bottom: auto;
   padding-left: 20px;
-}
-@media (max-width: 2000px) {
-  .text__nL8Zp {
-    padding: 0px 0px 0px 17px;
-  }
 }
 @media (max-width: 1200px) {
   .text__nL8Zp {

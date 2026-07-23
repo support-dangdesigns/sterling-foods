@@ -16,7 +16,6 @@ export type ScreenValue =
   | "smallLaptop2"
   | "smallLaptop"
   | "smallDesktop"
-  | "large"
   | "largerMobile"
   | "dualScreen"
   | "mediumDesktop";
@@ -43,7 +42,6 @@ export const useScreenVariants = createUseScreenVariants(true, {
   smallLaptop2: "(max-width:1200px)",
   smallLaptop: "(max-width:1280px)",
   smallDesktop: "(max-width:1512px)",
-  large: "(max-width:2000px)",
   largerMobile: "(max-width:430px)",
   dualScreen: "(max-width:530px)",
   mediumDesktop: "(max-width:1700px)"

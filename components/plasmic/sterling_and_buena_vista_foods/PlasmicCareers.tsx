@@ -70,6 +70,7 @@ import type { QueryComponentNode } from "@plasmicapp/react-web/lib/data-sources"
 
 import Header from "../../Header"; // plasmic-import: qmNXHiKWCTTQ/component
 import TopHero from "../../TopHero"; // plasmic-import: 2xRY6WOypZh7/component
+import { Reveal } from "@plasmicpkgs/react-awesome-reveal";
 import PrimaryBtn from "../../PrimaryBtn"; // plasmic-import: TiffCyYLfuDQ/component
 import CtaBottom from "../../CtaBottom"; // plasmic-import: UmfSTsW6wMCz/component
 import Footer from "../../Footer"; // plasmic-import: RbMtVh1ii_PZ/component
@@ -414,42 +415,46 @@ function PlasmicCareers__RenderFunc(props: {
                 }}
               />
 
-              <PlasmicImg__
-                alt={""}
-                className={classNames(sty.img___6Rpo)}
-                displayHeight={"auto"}
-                displayMaxHeight={"none"}
-                displayMaxWidth={"100%"}
-                displayMinHeight={"0"}
-                displayMinWidth={"0"}
-                displayWidth={
-                  hasVariant(globalVariants, "screen", "mobile")
-                    ? "100%"
-                    : hasVariant(globalVariants, "screen", "largerMobile")
-                      ? "auto"
-                      : hasVariant(globalVariants, "screen", "dualScreen")
+              <Reveal
+                className={classNames("__wab_instance", sty.reveal___99BU)}
+                triggerOnce={true}
+              >
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img___6Rpo)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={
+                    hasVariant(globalVariants, "screen", "mobile")
+                      ? "100%"
+                      : hasVariant(globalVariants, "screen", "largerMobile")
                         ? "auto"
-                        : hasVariant(globalVariants, "screen", "smallTablet")
-                          ? "70%"
-                          : hasVariant(globalVariants, "screen", "laptop")
-                            ? "35%"
-                            : hasVariant(
-                                  globalVariants,
-                                  "screen",
-                                  "smallDesktop"
-                                )
-                              ? "472px"
-                              : "auto"
-                }
-                loading={"lazy"}
-                src={{
-                  src: "/plasmic/sterling_and_buena_vista_foods/images/imagePng2.png",
-                  fullWidth: 639,
-                  fullHeight: 610,
-                  aspectRatio: undefined
-                }}
-              />
-
+                        : hasVariant(globalVariants, "screen", "dualScreen")
+                          ? "auto"
+                          : hasVariant(globalVariants, "screen", "smallTablet")
+                            ? "70%"
+                            : hasVariant(globalVariants, "screen", "laptop")
+                              ? "35%"
+                              : hasVariant(
+                                    globalVariants,
+                                    "screen",
+                                    "smallDesktop"
+                                  )
+                                ? "472px"
+                                : "auto"
+                  }
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/sterling_and_buena_vista_foods/images/imagePng2.png",
+                    fullWidth: 639,
+                    fullHeight: 610,
+                    aspectRatio: undefined
+                  }}
+                />
+              </Reveal>
               <div
                 data-plasmic-name={"text"}
                 data-plasmic-override={overrides.text}
@@ -652,75 +657,71 @@ function PlasmicCareers__RenderFunc(props: {
               className={classNames("all", sty.openings)}
             >
               <div className={classNames("all", sty.freeBox___6Zuo0)}>
-                {false ? (
-                  <div className={classNames("all", sty.freeBox___4Mucr)}>
-                    <h4
-                      className={classNames(
-                        "all",
-                        "h4",
-                        "h4__uyaK1",
-                        "__wab_text",
-                        sty.h4__nImG
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "desktop") ? (
-                        <React.Fragment>
-                          {
-                            $q.careers.data.body.data.pageBy.pageContent
-                              .headlineParent[2].headlinechild[0].headlinefav
-                          }
-                        </React.Fragment>
-                      ) : (
-                        "Success starts with"
-                      )}
-                    </h4>
-                    <h3
-                      className={classNames(
-                        "all",
-                        "h3",
-                        "h3__uyaK1",
-                        "__wab_text",
-                        sty.h3__wnDWr,
-                        hasVariant(globalVariants, "screen", "dualScreen")
-                          ? "fave-script"
-                          : "h3-script"
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "desktop") ? (
-                        <React.Fragment>
-                          {
-                            $q.careers.data.body.data.pageBy.pageContent
-                              .headlineParent[2].headlinechild[0].headlinenormal
-                          }
-                        </React.Fragment>
-                      ) : (
-                        "Great People"
-                      )}
-                    </h3>
-                  </div>
-                ) : null}
-                {false ? (
-                  <p
+                <div className={classNames("all", sty.freeBox___4Mucr)}>
+                  <h4
                     className={classNames(
                       "all",
-                      "p",
-                      "p__uyaK1",
+                      "h4",
+                      "h4__uyaK1",
                       "__wab_text",
-                      sty.p__blb6
+                      sty.h4__nImG
                     )}
                   >
                     {hasVariant(globalVariants, "screen", "desktop") ? (
                       <React.Fragment>
                         {
                           $q.careers.data.body.data.pageBy.pageContent
-                            .textArea[4].text
+                            .headlineParent[2].headlinechild[0].headlinefav
                         }
                       </React.Fragment>
                     ) : (
-                      "No matter your role, you'll be part of a team dedicated to delivering quality products and helping customers succeed."
+                      "Success starts with"
                     )}
-                  </p>
-                ) : null}
+                  </h4>
+                  <h3
+                    className={classNames(
+                      "all",
+                      "h3",
+                      "h3__uyaK1",
+                      "__wab_text",
+                      sty.h3__wnDWr,
+                      hasVariant(globalVariants, "screen", "dualScreen")
+                        ? "fave-script"
+                        : "h3-script"
+                    )}
+                  >
+                    {hasVariant(globalVariants, "screen", "desktop") ? (
+                      <React.Fragment>
+                        {
+                          $q.careers.data.body.data.pageBy.pageContent
+                            .headlineParent[2].headlinechild[0].headlinenormal
+                        }
+                      </React.Fragment>
+                    ) : (
+                      "Great People"
+                    )}
+                  </h3>
+                </div>
+                <p
+                  className={classNames(
+                    "all",
+                    "p",
+                    "p__uyaK1",
+                    "__wab_text",
+                    sty.p__blb6
+                  )}
+                >
+                  {hasVariant(globalVariants, "screen", "desktop") ? (
+                    <React.Fragment>
+                      {
+                        $q.careers.data.body.data.pageBy.pageContent.textArea[4]
+                          .text
+                      }
+                    </React.Fragment>
+                  ) : (
+                    "No matter your role, you'll be part of a team dedicated to delivering quality products and helping customers succeed."
+                  )}
+                </p>
                 <p
                   className={classNames(
                     "all",
@@ -754,42 +755,46 @@ function PlasmicCareers__RenderFunc(props: {
               data-plasmic-override={overrides.section}
               className={classNames("all", sty.section)}
             >
-              <PlasmicImg__
-                alt={""}
-                className={classNames(sty.img__sud54)}
-                displayHeight={"auto"}
-                displayMaxHeight={"none"}
-                displayMaxWidth={"100%"}
-                displayMinHeight={"0"}
-                displayMinWidth={"300px"}
-                displayWidth={
-                  hasVariant(globalVariants, "screen", "mobile")
-                    ? "100%"
-                    : hasVariant(globalVariants, "screen", "largerMobile")
-                      ? "auto"
-                      : hasVariant(globalVariants, "screen", "dualScreen")
+              <Reveal
+                className={classNames("__wab_instance", sty.reveal__uNqV0)}
+                triggerOnce={true}
+              >
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__sud54)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"300px"}
+                  displayWidth={
+                    hasVariant(globalVariants, "screen", "mobile")
+                      ? "100%"
+                      : hasVariant(globalVariants, "screen", "largerMobile")
                         ? "auto"
-                        : hasVariant(globalVariants, "screen", "smallTablet")
-                          ? "70%"
-                          : hasVariant(globalVariants, "screen", "laptop")
-                            ? "35%"
-                            : hasVariant(
-                                  globalVariants,
-                                  "screen",
-                                  "smallDesktop"
-                                )
-                              ? "472px"
-                              : "574px"
-                }
-                loading={"lazy"}
-                src={{
-                  src: "/plasmic/sterling_and_buena_vista_foods/images/coffeeAvif.avif",
-                  fullWidth: 574,
-                  fullHeight: 488,
-                  aspectRatio: undefined
-                }}
-              />
-
+                        : hasVariant(globalVariants, "screen", "dualScreen")
+                          ? "auto"
+                          : hasVariant(globalVariants, "screen", "smallTablet")
+                            ? "70%"
+                            : hasVariant(globalVariants, "screen", "laptop")
+                              ? "35%"
+                              : hasVariant(
+                                    globalVariants,
+                                    "screen",
+                                    "smallDesktop"
+                                  )
+                                ? "472px"
+                                : "574px"
+                  }
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/sterling_and_buena_vista_foods/images/image2Png2.png",
+                    fullWidth: 698,
+                    fullHeight: 633,
+                    aspectRatio: undefined
+                  }}
+                />
+              </Reveal>
               <div
                 data-plasmic-name={"text4"}
                 data-plasmic-override={overrides.text4}
@@ -1043,9 +1048,9 @@ function PlasmicCareers__RenderFunc(props: {
                 }
                 loading={"lazy"}
                 src={{
-                  src: "/plasmic/sterling_and_buena_vista_foods/images/coffeeAvif.avif",
-                  fullWidth: 574,
-                  fullHeight: 488,
+                  src: "/plasmic/sterling_and_buena_vista_foods/images/image3Png2.png",
+                  fullWidth: 680,
+                  fullHeight: 620,
                   aspectRatio: undefined
                 }}
               />
@@ -1084,9 +1089,9 @@ function PlasmicCareers__RenderFunc(props: {
                 }
                 loading={"lazy"}
                 src={{
-                  src: "/plasmic/sterling_and_buena_vista_foods/images/coffeeAvif.avif",
-                  fullWidth: 574,
-                  fullHeight: 488,
+                  src: "/plasmic/sterling_and_buena_vista_foods/images/image4Png2.png",
+                  fullWidth: 698,
+                  fullHeight: 637,
                   aspectRatio: undefined
                 }}
               />
@@ -1188,26 +1193,6 @@ function PlasmicCareers__RenderFunc(props: {
                     ) : (
                       "View Machine-Readable Files"
                     )}
-                  </div>
-                </PrimaryBtn>
-                <PrimaryBtn
-                  className={classNames(
-                    "__wab_instance",
-                    sty.primaryBtn__pCaDy
-                  )}
-                >
-                  {"Right to Work Notice (English)"}
-                </PrimaryBtn>
-                <PrimaryBtn
-                  className={classNames(
-                    "__wab_instance",
-                    sty.primaryBtn__cCcsr
-                  )}
-                >
-                  <div
-                    className={classNames("all", "__wab_text", sty.text__aHssm)}
-                  >
-                    {"Right to Work Notice (Spanish)\r"}
                   </div>
                 </PrimaryBtn>
               </div>

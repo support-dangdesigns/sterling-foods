@@ -70,7 +70,7 @@ import type { QueryComponentNode } from "@plasmicapp/react-web/lib/data-sources"
 
 import Header from "../../Header"; // plasmic-import: qmNXHiKWCTTQ/component
 import TopHero from "../../TopHero"; // plasmic-import: 2xRY6WOypZh7/component
-import PrimaryBtn from "../../PrimaryBtn"; // plasmic-import: TiffCyYLfuDQ/component
+import CtaBottom from "../../CtaBottom"; // plasmic-import: UmfSTsW6wMCz/component
 import Footer from "../../Footer"; // plasmic-import: RbMtVh1ii_PZ/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/styleTokensProvider
@@ -130,12 +130,7 @@ export type PlasmicOurFacilities__OverridesType = {
   topHero?: Flex__<typeof TopHero>;
   body?: Flex__<"section">;
   intro?: Flex__<"div">;
-  cta?: Flex__<"div">;
-  h1?: Flex__<"h1">;
-  buttonContainer?: Flex__<"div">;
-  contactUs?: Flex__<"a"> & Partial<LinkProps>;
-  primaryBtn?: Flex__<typeof PrimaryBtn>;
-  text?: Flex__<"div">;
+  ctaBottom?: Flex__<typeof CtaBottom>;
   footer?: Flex__<typeof Footer>;
 };
 
@@ -1235,89 +1230,12 @@ function PlasmicOurFacilities__RenderFunc(props: {
                 </div>
               </div>
             </section>
-            <div
-              data-plasmic-name={"cta"}
-              data-plasmic-override={overrides.cta}
-              className={classNames("all", sty.cta)}
-            >
-              <div className={classNames("all", sty.freeBox__hIHzJ)}>
-                <h3
-                  className={classNames(
-                    "all",
-                    "h3",
-                    "h3__uyaK1",
-                    "__wab_text",
-                    sty.h3__o4UDf
-                  )}
-                >
-                  {"Looking for a"}
-                </h3>
-                <h1
-                  data-plasmic-name={"h1"}
-                  data-plasmic-override={overrides.h1}
-                  className={classNames(
-                    "all",
-                    "h1",
-                    "h1__uyaK1",
-                    "__wab_text",
-                    sty.h1,
-                    "h3-script"
-                  )}
-                >
-                  {"bakery partner"}
-                </h1>
-                <h3
-                  className={classNames(
-                    "all",
-                    "h3",
-                    "h3__uyaK1",
-                    "__wab_text",
-                    sty.h3__wJf82
-                  )}
-                >
-                  {"that can grow with you?"}
-                </h3>
-              </div>
-              <h5
-                className={classNames(
-                  "all",
-                  "h5",
-                  "h5__uyaK1",
-                  "__wab_text",
-                  sty.h5__wjtkq
-                )}
-              >
-                {"Let\u2019s create something exceptional together."}
-              </h5>
-              <div
-                data-plasmic-name={"buttonContainer"}
-                data-plasmic-override={overrides.buttonContainer}
-                className={classNames("all", sty.buttonContainer)}
-              >
-                <PlasmicLink__
-                  data-plasmic-name={"contactUs"}
-                  data-plasmic-override={overrides.contactUs}
-                  className={classNames("all", "a", "a__uyaK1", sty.contactUs)}
-                  component={Link}
-                  legacyBehavior={false}
-                  platform={"nextjs"}
-                >
-                  <PrimaryBtn
-                    data-plasmic-name={"primaryBtn"}
-                    data-plasmic-override={overrides.primaryBtn}
-                    className={classNames("__wab_instance", sty.primaryBtn)}
-                  >
-                    <div
-                      data-plasmic-name={"text"}
-                      data-plasmic-override={overrides.text}
-                      className={classNames("all", "__wab_text", sty.text)}
-                    >
-                      {"Start a Conversation"}
-                    </div>
-                  </PrimaryBtn>
-                </PlasmicLink__>
-              </div>
-            </div>
+            <CtaBottom
+              data-plasmic-name={"ctaBottom"}
+              data-plasmic-override={overrides.ctaBottom}
+              className={classNames("__wab_instance", sty.ctaBottom)}
+            />
+
             <Footer
               data-plasmic-name={"footer"}
               data-plasmic-override={overrides.footer}
@@ -1338,12 +1256,7 @@ const PlasmicDescendants = {
     "topHero",
     "body",
     "intro",
-    "cta",
-    "h1",
-    "buttonContainer",
-    "contactUs",
-    "primaryBtn",
-    "text",
+    "ctaBottom",
     "footer"
   ],
   pageContainer: [
@@ -1352,24 +1265,14 @@ const PlasmicDescendants = {
     "topHero",
     "body",
     "intro",
-    "cta",
-    "h1",
-    "buttonContainer",
-    "contactUs",
-    "primaryBtn",
-    "text",
+    "ctaBottom",
     "footer"
   ],
   header: ["header"],
   topHero: ["topHero"],
   body: ["body", "intro"],
   intro: ["intro"],
-  cta: ["cta", "h1", "buttonContainer", "contactUs", "primaryBtn", "text"],
-  h1: ["h1"],
-  buttonContainer: ["buttonContainer", "contactUs", "primaryBtn", "text"],
-  contactUs: ["contactUs", "primaryBtn", "text"],
-  primaryBtn: ["primaryBtn", "text"],
-  text: ["text"],
+  ctaBottom: ["ctaBottom"],
   footer: ["footer"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -1382,12 +1285,7 @@ type NodeDefaultElementType = {
   topHero: typeof TopHero;
   body: "section";
   intro: "div";
-  cta: "div";
-  h1: "h1";
-  buttonContainer: "div";
-  contactUs: "a";
-  primaryBtn: typeof PrimaryBtn;
-  text: "div";
+  ctaBottom: typeof CtaBottom;
   footer: typeof Footer;
 };
 
@@ -1458,12 +1356,7 @@ export const PlasmicOurFacilities = Object.assign(
     topHero: makeNodeComponent("topHero"),
     body: makeNodeComponent("body"),
     intro: makeNodeComponent("intro"),
-    cta: makeNodeComponent("cta"),
-    h1: makeNodeComponent("h1"),
-    buttonContainer: makeNodeComponent("buttonContainer"),
-    contactUs: makeNodeComponent("contactUs"),
-    primaryBtn: makeNodeComponent("primaryBtn"),
-    text: makeNodeComponent("text"),
+    ctaBottom: makeNodeComponent("ctaBottom"),
     footer: makeNodeComponent("footer"),
 
     // Metadata about props expected for PlasmicOurFacilities

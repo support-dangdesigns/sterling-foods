@@ -608,6 +608,20 @@ function PlasmicContactPage__RenderFunc(props: {
                               sty.formField__dS2Ax
                             )}
                             hidden={false}
+                            initialValue={(() => {
+                              try {
+                                return $q.form.data.body.data.gfForm.formFields
+                                  .nodes[0].databaseId;
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return undefined;
+                                }
+                                throw e;
+                              }
+                            })()}
                             label={
                               <div
                                 className={classNames(
@@ -622,19 +636,7 @@ function PlasmicContactPage__RenderFunc(props: {
                             name={"first_name_field"}
                             noLabel={true}
                             rules={[{ ruleType: "required" }]}
-                            valuePropName={(() => {
-                              try {
-                                return undefined;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return undefined;
-                                }
-                                throw e;
-                              }
-                            })()}
+                            valuePropName={undefined}
                           >
                             {(() => {
                               const child$Props = {
@@ -707,7 +709,19 @@ function PlasmicContactPage__RenderFunc(props: {
                             name={"last_name_field"}
                             noLabel={true}
                             rules={[{ ruleType: "required" }]}
-                            valuePropName={""}
+                            valuePropName={(() => {
+                              try {
+                                return $state.form.value.last_name_field;
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return undefined;
+                                }
+                                throw e;
+                              }
+                            })()}
                           >
                             {(() => {
                               const child$Props = {
@@ -779,7 +793,19 @@ function PlasmicContactPage__RenderFunc(props: {
                           }
                           name={"organization_field"}
                           noLabel={true}
-                          valuePropName={""}
+                          valuePropName={(() => {
+                            try {
+                              return $state.form.value.organization_field;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return undefined;
+                              }
+                              throw e;
+                            }
+                          })()}
                         >
                           {(() => {
                             const child$Props = {

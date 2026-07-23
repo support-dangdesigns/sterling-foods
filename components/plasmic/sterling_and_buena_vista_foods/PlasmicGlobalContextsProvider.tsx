@@ -18,15 +18,12 @@ export interface GlobalContextsProviderProps {
   embedCssProps?: Partial<
     Omit<React.ComponentProps<typeof EmbedCss>, "children">
   >;
-
   wordpressProviderProps?: Partial<
     Omit<React.ComponentProps<typeof WordpressProvider>, "children">
   >;
-
   antdConfigProviderProps?: Partial<
     Omit<React.ComponentProps<typeof AntdConfigProvider>, "children">
   >;
-
   parallaxProviderWrapperProps?: Partial<
     Omit<React.ComponentProps<typeof ParallaxProviderWrapper>, "children">
   >;
@@ -80,17 +77,17 @@ export default function GlobalContextsProvider(
           colorInfo={
             antdConfigProviderProps && "colorInfo" in antdConfigProviderProps
               ? antdConfigProviderProps.colorInfo!
-              : "#1677ff"
+              : "#1C3757"
           }
           colorPrimary={
             antdConfigProviderProps && "colorPrimary" in antdConfigProviderProps
               ? antdConfigProviderProps.colorPrimary!
-              : "#1677ff"
+              : "#1C3757"
           }
           colorSuccess={
             antdConfigProviderProps && "colorSuccess" in antdConfigProviderProps
               ? antdConfigProviderProps.colorSuccess!
-              : "#52c41a"
+              : "#1C5723"
           }
           colorWarning={
             antdConfigProviderProps && "colorWarning" in antdConfigProviderProps

@@ -1978,6 +1978,22 @@
     padding: 0px 20px 20px;
   }
 }
+.link {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 8px;
+}
+@media (max-width: 757px) {
+  .link {
+    align-self: center;
+  }
+}
 .primaryBtn:global(.__wab_instance) {
   max-width: 100%;
   width: 340px;
@@ -1990,7 +2006,6 @@
 }
 @media (max-width: 757px) {
   .primaryBtn:global(.__wab_instance) {
-    align-self: center;
     flex-shrink: 0;
   }
 }

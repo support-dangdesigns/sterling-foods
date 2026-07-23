@@ -189,6 +189,7 @@ export type PlasmicAboutUs__OverridesType = {
   text10?: Flex__<"div">;
   aboutUsSection4?: Flex__<"div">;
   wrapper3?: Flex__<"div">;
+  link?: Flex__<"a"> & Partial<LinkProps>;
   primaryBtn?: Flex__<typeof PrimaryBtn>;
   aboutUsSection6?: Flex__<"div">;
   heading4?: Flex__<"div">;
@@ -1927,13 +1928,23 @@ function PlasmicAboutUs__RenderFunc(props: {
                       })()}
                     </React.Fragment>
                   </div>
-                  <PrimaryBtn
-                    data-plasmic-name={"primaryBtn"}
-                    data-plasmic-override={overrides.primaryBtn}
-                    className={classNames("__wab_instance", sty.primaryBtn)}
+                  <PlasmicLink__
+                    data-plasmic-name={"link"}
+                    data-plasmic-override={overrides.link}
+                    className={classNames("all", "a", "a__uyaK1", sty.link)}
+                    component={Link}
+                    href={`/our-facilities`}
+                    legacyBehavior={false}
+                    platform={"nextjs"}
                   >
-                    {"Explore Our Facilities"}
-                  </PrimaryBtn>
+                    <PrimaryBtn
+                      data-plasmic-name={"primaryBtn"}
+                      data-plasmic-override={overrides.primaryBtn}
+                      className={classNames("__wab_instance", sty.primaryBtn)}
+                    >
+                      {"Explore Our Facilities"}
+                    </PrimaryBtn>
+                  </PlasmicLink__>
                 </div>
                 <div className={classNames("all", sty.freeBox__lYw9D)} />
               </div>
@@ -3119,6 +3130,7 @@ const PlasmicDescendants = {
     "text10",
     "aboutUsSection4",
     "wrapper3",
+    "link",
     "primaryBtn",
     "aboutUsSection6",
     "heading4",
@@ -3230,6 +3242,7 @@ const PlasmicDescendants = {
     "text10",
     "aboutUsSection4",
     "wrapper3",
+    "link",
     "primaryBtn",
     "aboutUsSection6",
     "heading4",
@@ -3448,8 +3461,9 @@ const PlasmicDescendants = {
   text9: ["text9"],
   section3: ["section3", "text10"],
   text10: ["text10"],
-  aboutUsSection4: ["aboutUsSection4", "wrapper3", "primaryBtn"],
-  wrapper3: ["wrapper3", "primaryBtn"],
+  aboutUsSection4: ["aboutUsSection4", "wrapper3", "link", "primaryBtn"],
+  wrapper3: ["wrapper3", "link", "primaryBtn"],
+  link: ["link", "primaryBtn"],
   primaryBtn: ["primaryBtn"],
   aboutUsSection6: [
     "aboutUsSection6",
@@ -3707,6 +3721,7 @@ type NodeDefaultElementType = {
   text10: "div";
   aboutUsSection4: "div";
   wrapper3: "div";
+  link: "a";
   primaryBtn: typeof PrimaryBtn;
   aboutUsSection6: "div";
   heading4: "div";
@@ -3880,6 +3895,7 @@ export const PlasmicAboutUs = Object.assign(
     text10: makeNodeComponent("text10"),
     aboutUsSection4: makeNodeComponent("aboutUsSection4"),
     wrapper3: makeNodeComponent("wrapper3"),
+    link: makeNodeComponent("link"),
     primaryBtn: makeNodeComponent("primaryBtn"),
     aboutUsSection6: makeNodeComponent("aboutUsSection6"),
     heading4: makeNodeComponent("heading4"),

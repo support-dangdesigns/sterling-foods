@@ -628,37 +628,45 @@ function PlasmicHome__RenderFunc(props: {
                     </p>
                   </div>
                   <div className={classNames("all", sty.freeBox__v56Y6)}>
-                    <PrimaryBtn
+                    <Reveal
                       className={classNames(
                         "__wab_instance",
-                        sty.primaryBtn__h8Wfb
+                        sty.reveal___2U43Q
                       )}
+                      triggerOnce={true}
                     >
-                      <div
+                      <PrimaryBtn
                         className={classNames(
-                          "all",
-                          "__wab_text",
-                          sty.text__cEfj0
+                          "__wab_instance",
+                          sty.primaryBtn__h8Wfb
                         )}
                       >
-                        <React.Fragment>
-                          {(() => {
-                            try {
-                              return $q.homePage.data.body.data.pageBy
-                                .pageContent.button[0].text;
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return "Start Your Project";
+                        <div
+                          className={classNames(
+                            "all",
+                            "__wab_text",
+                            sty.text__cEfj0
+                          )}
+                        >
+                          <React.Fragment>
+                            {(() => {
+                              try {
+                                return $q.homePage.data.body.data.pageBy
+                                  .pageContent.button[0].text;
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return "Start Your Project";
+                                }
+                                throw e;
                               }
-                              throw e;
-                            }
-                          })()}
-                        </React.Fragment>
-                      </div>
-                    </PrimaryBtn>
+                            })()}
+                          </React.Fragment>
+                        </div>
+                      </PrimaryBtn>
+                    </Reveal>
                     <PlasmicLink__
                       className={classNames(
                         "all",
@@ -671,37 +679,46 @@ function PlasmicHome__RenderFunc(props: {
                       legacyBehavior={false}
                       platform={"nextjs"}
                     >
-                      <PrimaryBtn
+                      <Reveal
                         className={classNames(
                           "__wab_instance",
-                          sty.primaryBtn__bH4Ix
+                          sty.reveal__c6TRs
                         )}
+                        triggerOnce={true}
                       >
-                        <div
+                        <PrimaryBtn
                           className={classNames(
-                            "all",
-                            "__wab_text",
-                            sty.text__ye4QN
+                            "__wab_instance",
+                            sty.primaryBtn__bH4Ix
                           )}
                         >
-                          <React.Fragment>
-                            {(() => {
-                              try {
-                                return $q.homePage.data.body.data.pageBy
-                                  .pageContent.button[1].text;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return "Learn More About Sterling Foods";
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__ye4QN
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                try {
+                                  return $q.homePage.data.body.data.pageBy
+                                    .pageContent.button[1].text;
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return "Learn More About Sterling Foods";
+                                  }
+                                  throw e;
                                 }
-                                throw e;
-                              }
-                            })()}
-                          </React.Fragment>
-                        </div>
-                      </PrimaryBtn>
+                              })()}
+                            </React.Fragment>
+                          </div>
+                        </PrimaryBtn>
+                      </Reveal>
                     </PlasmicLink__>
                   </div>
                 </div>
@@ -721,12 +738,19 @@ function PlasmicHome__RenderFunc(props: {
                     data-plasmic-override={overrides.bakerysolutions}
                     className={classNames("all", sty.bakerysolutions)}
                   >
-                    <div
-                      data-plasmic-name={"image"}
-                      data-plasmic-override={overrides.image}
-                      className={classNames("all", sty.image)}
-                    />
-
+                    <Reveal
+                      className={classNames(
+                        "__wab_instance",
+                        sty.reveal__tTiMo
+                      )}
+                      triggerOnce={true}
+                    >
+                      <div
+                        data-plasmic-name={"image"}
+                        data-plasmic-override={overrides.image}
+                        className={classNames("all", sty.image)}
+                      />
+                    </Reveal>
                     <div
                       data-plasmic-name={"text"}
                       data-plasmic-override={overrides.text}
@@ -814,27 +838,35 @@ function PlasmicHome__RenderFunc(props: {
                         legacyBehavior={false}
                         platform={"nextjs"}
                       >
-                        <PrimaryBtn
+                        <Reveal
                           className={classNames(
                             "__wab_instance",
-                            sty.primaryBtn__sB6Y
+                            sty.reveal___8ZBZ
                           )}
+                          triggerOnce={true}
                         >
-                          <div
+                          <PrimaryBtn
                             className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__tzNq
+                              "__wab_instance",
+                              sty.primaryBtn__sB6Y
                             )}
                           >
-                            <React.Fragment>
-                              {
-                                $q.homePage.data.body.data.pageBy.pageContent
-                                  .button[2].text
-                              }
-                            </React.Fragment>
-                          </div>
-                        </PrimaryBtn>
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text__tzNq
+                              )}
+                            >
+                              <React.Fragment>
+                                {
+                                  $q.homePage.data.body.data.pageBy.pageContent
+                                    .button[2].text
+                                }
+                              </React.Fragment>
+                            </div>
+                          </PrimaryBtn>
+                        </Reveal>
                       </PlasmicLink__>
                     </div>
                   </div>
@@ -1168,45 +1200,61 @@ function PlasmicHome__RenderFunc(props: {
                         legacyBehavior={false}
                         platform={"nextjs"}
                       >
-                        <PrimaryBtn
+                        <Reveal
                           className={classNames(
                             "__wab_instance",
-                            sty.primaryBtn__gurqP
+                            sty.reveal__zr2VL
                           )}
+                          triggerOnce={true}
                         >
-                          <div
+                          <PrimaryBtn
                             className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__c0Kxh
+                              "__wab_instance",
+                              sty.primaryBtn__gurqP
                             )}
                           >
-                            <React.Fragment>
-                              {(() => {
-                                try {
-                                  return $q.homePage.data.body.data.pageBy
-                                    .pageContent.button[3].text;
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return "View All Markets";
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text__c0Kxh
+                              )}
+                            >
+                              <React.Fragment>
+                                {(() => {
+                                  try {
+                                    return $q.homePage.data.body.data.pageBy
+                                      .pageContent.button[3].text;
+                                  } catch (e) {
+                                    if (
+                                      e instanceof TypeError ||
+                                      e?.plasmicType ===
+                                        "PlasmicUndefinedDataError"
+                                    ) {
+                                      return "View All Markets";
+                                    }
+                                    throw e;
                                   }
-                                  throw e;
-                                }
-                              })()}
-                            </React.Fragment>
-                          </div>
-                        </PrimaryBtn>
+                                })()}
+                              </React.Fragment>
+                            </div>
+                          </PrimaryBtn>
+                        </Reveal>
                       </PlasmicLink__>
                     </div>
-                    <div
-                      data-plasmic-name={"image2"}
-                      data-plasmic-override={overrides.image2}
-                      className={classNames("all", sty.image2)}
-                    />
+                    <Reveal
+                      className={classNames(
+                        "__wab_instance",
+                        sty.reveal__nyOup
+                      )}
+                      triggerOnce={true}
+                    >
+                      <div
+                        data-plasmic-name={"image2"}
+                        data-plasmic-override={overrides.image2}
+                        className={classNames("all", sty.image2)}
+                      />
+                    </Reveal>
                   </div>
                 </div>
               </div>
@@ -1276,37 +1324,46 @@ function PlasmicHome__RenderFunc(props: {
                       data-plasmic-override={overrides.buttons}
                       className={classNames("all", sty.buttons)}
                     >
-                      <SecondaryBtn
+                      <Reveal
                         className={classNames(
                           "__wab_instance",
-                          sty.secondaryBtn__pKcaL
+                          sty.reveal__g7Hro
                         )}
+                        triggerOnce={true}
                       >
-                        <div
+                        <SecondaryBtn
                           className={classNames(
-                            "all",
-                            "__wab_text",
-                            sty.text__udAml
+                            "__wab_instance",
+                            sty.secondaryBtn__pKcaL
                           )}
                         >
-                          <React.Fragment>
-                            {(() => {
-                              try {
-                                return $q.homePage.data.body.data.pageBy
-                                  .pageContent.button[4].text;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return "View Our Facilities";
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__udAml
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                try {
+                                  return $q.homePage.data.body.data.pageBy
+                                    .pageContent.button[4].text;
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return "View Our Facilities";
+                                  }
+                                  throw e;
                                 }
-                                throw e;
-                              }
-                            })()}
-                          </React.Fragment>
-                        </div>
-                      </SecondaryBtn>
+                              })()}
+                            </React.Fragment>
+                          </div>
+                        </SecondaryBtn>
+                      </Reveal>
                       <PlasmicLink__
                         data-plasmic-name={"qualitySafetyLink"}
                         data-plasmic-override={overrides.qualitySafetyLink}
@@ -1321,38 +1378,46 @@ function PlasmicHome__RenderFunc(props: {
                         legacyBehavior={false}
                         platform={"nextjs"}
                       >
-                        <SecondaryBtn
+                        <Reveal
                           className={classNames(
                             "__wab_instance",
-                            sty.secondaryBtn__xb607
+                            sty.reveal__fn1Cz
                           )}
+                          triggerOnce={true}
                         >
-                          <div
+                          <SecondaryBtn
                             className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__acejO
+                              "__wab_instance",
+                              sty.secondaryBtn__xb607
                             )}
                           >
-                            <React.Fragment>
-                              {(() => {
-                                try {
-                                  return $q.homePage.data.body.data.pageBy
-                                    .pageContent.button[5].text;
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return "Explore Quality & Safety";
+                            <div
+                              className={classNames(
+                                "all",
+                                "__wab_text",
+                                sty.text__acejO
+                              )}
+                            >
+                              <React.Fragment>
+                                {(() => {
+                                  try {
+                                    return $q.homePage.data.body.data.pageBy
+                                      .pageContent.button[5].text;
+                                  } catch (e) {
+                                    if (
+                                      e instanceof TypeError ||
+                                      e?.plasmicType ===
+                                        "PlasmicUndefinedDataError"
+                                    ) {
+                                      return "Explore Quality & Safety";
+                                    }
+                                    throw e;
                                   }
-                                  throw e;
-                                }
-                              })()}
-                            </React.Fragment>
-                          </div>
-                        </SecondaryBtn>
+                                })()}
+                              </React.Fragment>
+                            </div>
+                          </SecondaryBtn>
+                        </Reveal>
                       </PlasmicLink__>
                     </div>
                   </div>

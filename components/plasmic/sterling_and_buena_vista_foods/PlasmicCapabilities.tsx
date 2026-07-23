@@ -70,6 +70,7 @@ import type { QueryComponentNode } from "@plasmicapp/react-web/lib/data-sources"
 
 import Header from "../../Header"; // plasmic-import: qmNXHiKWCTTQ/component
 import TopHero from "../../TopHero"; // plasmic-import: 2xRY6WOypZh7/component
+import { Reveal } from "@plasmicpkgs/react-awesome-reveal";
 import { AntdTabs } from "@plasmicpkgs/antd5/skinny/registerTabs";
 import { AntdTabItem } from "@plasmicpkgs/antd5/skinny/registerTabs";
 import { SliderWrapper } from "@plasmicpkgs/react-slick";
@@ -488,51 +489,66 @@ function PlasmicCapabilities__RenderFunc(props: {
                 data-plasmic-override={overrides.intro}
                 className={classNames("all", sty.intro)}
               >
-                <div className={classNames("all", sty.freeBox__fpMcA)}>
-                  <h3
-                    className={classNames(
-                      "all",
-                      "h3",
-                      "h3__uyaK1",
-                      "__wab_text",
-                      sty.h3__peQcw,
-                      hasVariant(globalVariants, "screen", "dualScreen")
-                        ? "fave-script"
-                        : "h3-script"
-                    )}
-                  >
-                    {hasVariant(globalVariants, "screen", "desktop") ? (
-                      <React.Fragment>
-                        {
-                          $q.capabilites.data.body.data.pageBy.pageContent
-                            .headlineParent[0].headlinechild[0].headlinenormal
-                        }
-                      </React.Fragment>
-                    ) : (
-                      "Custom-crafted"
-                    )}
-                  </h3>
-                  <h4
-                    className={classNames(
-                      "all",
-                      "h4",
-                      "h4__uyaK1",
-                      "__wab_text",
-                      sty.h4__svW3G
-                    )}
-                  >
-                    {hasVariant(globalVariants, "screen", "desktop") ? (
-                      <React.Fragment>
-                        {
-                          $q.capabilites.data.body.data.pageBy.pageContent
-                            .headlineParent[0].headlinechild[0].headlinefav
-                        }
-                      </React.Fragment>
-                    ) : (
-                      "Bakery Solutions"
-                    )}
-                  </h4>
-                </div>
+                <Reveal
+                  className={classNames("__wab_instance", sty.reveal__jyfMx)}
+                  triggerOnce={true}
+                >
+                  <div className={classNames("all", sty.freeBox__fpMcA)}>
+                    <h3
+                      className={classNames(
+                        "all",
+                        "h3",
+                        "h3__uyaK1",
+                        "__wab_text",
+                        sty.h3__peQcw,
+                        hasVariant(globalVariants, "screen", "dualScreen")
+                          ? "fave-script"
+                          : "h3-script"
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .headlineParent[0].headlinechild[0].headlinenormal
+                          }
+                        </React.Fragment>
+                      ) : (
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .headlineParent[0].headlinechild[0].headlinenormal
+                          }
+                        </React.Fragment>
+                      )}
+                    </h3>
+                    <h4
+                      className={classNames(
+                        "all",
+                        "h4",
+                        "h4__uyaK1",
+                        "__wab_text",
+                        sty.h4__svW3G
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .headlineParent[0].headlinechild[0].headlinefav
+                          }
+                        </React.Fragment>
+                      ) : (
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .headlineParent[0].headlinechild[0].headlinefav
+                          }
+                        </React.Fragment>
+                      )}
+                    </h4>
+                  </div>
+                </Reveal>
                 <p className={classNames("all", "p", "p__uyaK1", sty.p__dkjQb)}>
                   <div
                     className={classNames(
@@ -559,7 +575,22 @@ function PlasmicCapabilities__RenderFunc(props: {
                         })()}
                       </React.Fragment>
                     ) : (
-                      "Custom-crafted bakery solutions uniquely created to suit your needs, whether for performance, differentiation or growth.  From protein-forward to large-scale production featuring artisan touches, Sterling Foods brings innovative bakery products to market with the quality, consistency, and flexibility customers depend on."
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.capabilites.data.body.data.pageBy
+                              .pageContent.textArea[0].text;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "Custom-crafted bakery solutions uniquely created to suit your needs, whether for performance, differentiation or growth.  From protein-forward to large-scale production featuring artisan touches, Sterling Foods brings innovative bakery products to market with the quality, consistency, and flexibility customers depend on.";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     )}
                   </div>
                 </p>
@@ -569,103 +600,128 @@ function PlasmicCapabilities__RenderFunc(props: {
                 data-plasmic-override={overrides.foodSafety}
                 className={classNames("all", sty.foodSafety)}
               >
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img__jz6Rv)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={
-                    hasVariant(globalVariants, "screen", "mobile")
-                      ? "100%"
-                      : hasVariant(globalVariants, "screen", "largerMobile")
-                        ? "auto"
-                        : hasVariant(globalVariants, "screen", "dualScreen")
+                <Reveal
+                  className={classNames("__wab_instance", sty.reveal__n8NxH)}
+                  triggerOnce={true}
+                >
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__jz6Rv)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "mobile")
+                        ? "100%"
+                        : hasVariant(globalVariants, "screen", "largerMobile")
                           ? "auto"
-                          : hasVariant(globalVariants, "screen", "smallTablet")
-                            ? "70%"
-                            : hasVariant(globalVariants, "screen", "laptop")
-                              ? "35%"
-                              : hasVariant(
-                                    globalVariants,
-                                    "screen",
-                                    "smallDesktop"
-                                  )
-                                ? "472px"
-                                : "640px"
-                  }
-                  loading={"lazy"}
-                  src={
-                    hasVariant(globalVariants, "screen", "desktop")
-                      ? {
-                          src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodEmpanadasPng.png",
-                          fullWidth: 700,
-                          fullHeight: 573,
-                          aspectRatio: undefined
-                        }
-                      : {
-                          src: "/plasmic/sterling_and_buena_vista_foods/images/imagePng2.png",
-                          fullWidth: 639,
-                          fullHeight: 610,
-                          aspectRatio: undefined
-                        }
-                  }
-                />
-
+                          : hasVariant(globalVariants, "screen", "dualScreen")
+                            ? "auto"
+                            : hasVariant(
+                                  globalVariants,
+                                  "screen",
+                                  "smallTablet"
+                                )
+                              ? "70%"
+                              : hasVariant(globalVariants, "screen", "laptop")
+                                ? "35%"
+                                : hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "smallDesktop"
+                                    )
+                                  ? "472px"
+                                  : "640px"
+                    }
+                    loading={"lazy"}
+                    src={
+                      hasVariant(globalVariants, "screen", "desktop")
+                        ? {
+                            src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodEmpanadasPng.png",
+                            fullWidth: 700,
+                            fullHeight: 573,
+                            aspectRatio: undefined
+                          }
+                        : {
+                            src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodEmpanadasPng.png",
+                            fullWidth: 700,
+                            fullHeight: 573,
+                            aspectRatio: undefined
+                          }
+                    }
+                  />
+                </Reveal>
                 <div
                   data-plasmic-name={"text"}
                   data-plasmic-override={overrides.text}
                   className={classNames("all", sty.text)}
                 >
-                  <div
-                    data-plasmic-name={"title"}
-                    data-plasmic-override={overrides.title}
-                    className={classNames("all", sty.title)}
+                  <Reveal
+                    className={classNames("__wab_instance", sty.reveal__yrO4H)}
+                    triggerOnce={true}
                   >
-                    <h3
-                      className={classNames(
-                        "all",
-                        "h3",
-                        "h3__uyaK1",
-                        "__wab_text",
-                        sty.h3__nzrIm,
-                        "h3-script"
-                      )}
+                    <div
+                      data-plasmic-name={"title"}
+                      data-plasmic-override={overrides.title}
+                      className={classNames("all", sty.title)}
                     >
-                      {hasVariant(globalVariants, "screen", "desktop") ? (
-                        <React.Fragment>
-                          {
-                            $q.capabilites.data.body.data.pageBy.pageContent
-                              .headlineParent[1].headlinechild[0].headlinenormal
-                          }
-                        </React.Fragment>
-                      ) : (
-                        "Oppoertunities"
-                      )}
-                    </h3>
-                    <h4
-                      className={classNames(
-                        "all",
-                        "h4",
-                        "h4__uyaK1",
-                        "__wab_text",
-                        sty.h4__jLL4
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "desktop") ? (
-                        <React.Fragment>
-                          {
-                            $q.capabilites.data.body.data.pageBy.pageContent
-                              .headlineParent[1].headlinechild[0].headlinefav
-                          }
-                        </React.Fragment>
-                      ) : (
-                        "Across Our Organization"
-                      )}
-                    </h4>
-                  </div>
+                      <h3
+                        className={classNames(
+                          "all",
+                          "h3",
+                          "h3__uyaK1",
+                          "__wab_text",
+                          sty.h3__nzrIm,
+                          "h3-script"
+                        )}
+                      >
+                        {hasVariant(globalVariants, "screen", "desktop") ? (
+                          <React.Fragment>
+                            {
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .headlineParent[1].headlinechild[0]
+                                .headlinenormal
+                            }
+                          </React.Fragment>
+                        ) : (
+                          <React.Fragment>
+                            {
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .headlineParent[1].headlinechild[0]
+                                .headlinenormal
+                            }
+                          </React.Fragment>
+                        )}
+                      </h3>
+                      <h4
+                        className={classNames(
+                          "all",
+                          "h4",
+                          "h4__uyaK1",
+                          "__wab_text",
+                          sty.h4__jLL4
+                        )}
+                      >
+                        {hasVariant(globalVariants, "screen", "desktop") ? (
+                          <React.Fragment>
+                            {
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .headlineParent[1].headlinechild[0].headlinefav
+                            }
+                          </React.Fragment>
+                        ) : (
+                          <React.Fragment>
+                            {
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .headlineParent[1].headlinechild[0].headlinefav
+                            }
+                          </React.Fragment>
+                        )}
+                      </h4>
+                    </div>
+                  </Reveal>
                   <div
                     data-plasmic-name={"bulletPoint"}
                     data-plasmic-override={overrides.bulletPoint}
@@ -696,7 +752,15 @@ function PlasmicCapabilities__RenderFunc(props: {
                           }}
                         />
                       ) : (
-                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                        <div
+                          className={"__wab_expr_html_text"}
+                          dangerouslySetInnerHTML={{
+                            __html:
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .headlineParent[1].headlinechild[1]
+                                .headlinenormal
+                          }}
+                        />
                       )}
                     </p>
                   </div>
@@ -730,7 +794,15 @@ function PlasmicCapabilities__RenderFunc(props: {
                           }}
                         />
                       ) : (
-                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                        <div
+                          className={"__wab_expr_html_text"}
+                          dangerouslySetInnerHTML={{
+                            __html:
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .headlineParent[1].headlinechild[2]
+                                .headlinenormal
+                          }}
+                        />
                       )}
                     </p>
                   </div>
@@ -764,7 +836,15 @@ function PlasmicCapabilities__RenderFunc(props: {
                           }}
                         />
                       ) : (
-                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                        <div
+                          className={"__wab_expr_html_text"}
+                          dangerouslySetInnerHTML={{
+                            __html:
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .headlineParent[1].headlinechild[3]
+                                .headlinenormal
+                          }}
+                        />
                       )}
                     </p>
                   </div>
@@ -798,7 +878,15 @@ function PlasmicCapabilities__RenderFunc(props: {
                           }}
                         />
                       ) : (
-                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                        <div
+                          className={"__wab_expr_html_text"}
+                          dangerouslySetInnerHTML={{
+                            __html:
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .headlineParent[1].headlinechild[4]
+                                .headlinenormal
+                          }}
+                        />
                       )}
                     </p>
                   </div>
@@ -832,7 +920,15 @@ function PlasmicCapabilities__RenderFunc(props: {
                           }}
                         />
                       ) : (
-                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                        <div
+                          className={"__wab_expr_html_text"}
+                          dangerouslySetInnerHTML={{
+                            __html:
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .headlineParent[1].headlinechild[5]
+                                .headlinenormal
+                          }}
+                        />
                       )}
                     </p>
                   </div>
@@ -866,7 +962,15 @@ function PlasmicCapabilities__RenderFunc(props: {
                           }}
                         />
                       ) : (
-                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                        <div
+                          className={"__wab_expr_html_text"}
+                          dangerouslySetInnerHTML={{
+                            __html:
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .headlineParent[1].headlinechild[6]
+                                .headlinenormal
+                          }}
+                        />
                       )}
                     </p>
                   </div>
@@ -900,7 +1004,15 @@ function PlasmicCapabilities__RenderFunc(props: {
                           }}
                         />
                       ) : (
-                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                        <div
+                          className={"__wab_expr_html_text"}
+                          dangerouslySetInnerHTML={{
+                            __html:
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .headlineParent[1].headlinechild[7]
+                                .headlinenormal
+                          }}
+                        />
                       )}
                     </p>
                   </div>
@@ -916,84 +1028,100 @@ function PlasmicCapabilities__RenderFunc(props: {
                   data-plasmic-override={overrides.text2}
                   className={classNames("all", sty.text2)}
                 >
-                  <div
-                    data-plasmic-name={"title2"}
-                    data-plasmic-override={overrides.title2}
-                    className={classNames("all", sty.title2)}
+                  <Reveal
+                    className={classNames("__wab_instance", sty.reveal__jJCbq)}
+                    triggerOnce={true}
                   >
-                    <h3
-                      className={classNames(
-                        "all",
-                        "h3",
-                        "h3__uyaK1",
-                        "__wab_text",
-                        sty.h3__iPxaz,
-                        "h3-script"
-                      )}
+                    <div
+                      data-plasmic-name={"title2"}
+                      data-plasmic-override={overrides.title2}
+                      className={classNames("all", sty.title2)}
                     >
-                      {hasVariant(globalVariants, "screen", "desktop") ? (
-                        <React.Fragment>
-                          {
-                            $q.capabilites.data.body.data.pageBy.pageContent
-                              .headlineParent[2].headlinechild[0].headlinenormal
-                          }
-                        </React.Fragment>
-                      ) : (
-                        "Oppoertunities"
-                      )}
-                    </h3>
-                    <h4
-                      className={classNames(
-                        "all",
-                        "h4",
-                        "h4__uyaK1",
-                        "__wab_text",
-                        sty.h4__eZa4T
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "desktop") ? (
-                        <React.Fragment>
-                          {
-                            $q.capabilites.data.body.data.pageBy.pageContent
-                              .headlineParent[2].headlinechild[0].headlinefav
-                          }
-                        </React.Fragment>
-                      ) : (
-                        "Across Our Organization"
-                      )}
-                    </h4>
-                  </div>
-                  <div
-                    data-plasmic-name={"p"}
-                    data-plasmic-override={overrides.p}
-                    className={classNames("all", sty.p)}
-                  >
-                    {(
-                      hasVariant(globalVariants, "screen", "desktop")
-                        ? true
-                        : false
-                    ) ? (
-                      <p
+                      <h3
                         className={classNames(
                           "all",
-                          "p",
-                          "p__uyaK1",
+                          "h3",
+                          "h3__uyaK1",
                           "__wab_text",
-                          sty.p__vqh1N
+                          sty.h3__iPxaz,
+                          "h3-script"
                         )}
                       >
                         {hasVariant(globalVariants, "screen", "desktop") ? (
                           <React.Fragment>
                             {
                               $q.capabilites.data.body.data.pageBy.pageContent
-                                .textArea[1].text
+                                .headlineParent[2].headlinechild[0]
+                                .headlinenormal
                             }
                           </React.Fragment>
                         ) : (
-                          "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                          <React.Fragment>
+                            {
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .headlineParent[2].headlinechild[0]
+                                .headlinenormal
+                            }
+                          </React.Fragment>
                         )}
-                      </p>
-                    ) : null}
+                      </h3>
+                      <h4
+                        className={classNames(
+                          "all",
+                          "h4",
+                          "h4__uyaK1",
+                          "__wab_text",
+                          sty.h4__eZa4T
+                        )}
+                      >
+                        {hasVariant(globalVariants, "screen", "desktop") ? (
+                          <React.Fragment>
+                            {
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .headlineParent[2].headlinechild[0].headlinefav
+                            }
+                          </React.Fragment>
+                        ) : (
+                          <React.Fragment>
+                            {
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .headlineParent[2].headlinechild[0].headlinefav
+                            }
+                          </React.Fragment>
+                        )}
+                      </h4>
+                    </div>
+                  </Reveal>
+                  <div
+                    data-plasmic-name={"p"}
+                    data-plasmic-override={overrides.p}
+                    className={classNames("all", sty.p)}
+                  >
+                    <p
+                      className={classNames(
+                        "all",
+                        "p",
+                        "p__uyaK1",
+                        "__wab_text",
+                        sty.p__vqh1N
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .textArea[1].text
+                          }
+                        </React.Fragment>
+                      ) : (
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .textArea[1].text
+                          }
+                        </React.Fragment>
+                      )}
+                    </p>
                     <p
                       className={classNames(
                         "all",
@@ -1011,7 +1139,12 @@ function PlasmicCapabilities__RenderFunc(props: {
                           }
                         </React.Fragment>
                       ) : (
-                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .textArea[2].text
+                          }
+                        </React.Fragment>
                       )}
                     </p>
                     <p
@@ -1031,55 +1164,69 @@ function PlasmicCapabilities__RenderFunc(props: {
                           }
                         </React.Fragment>
                       ) : (
-                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .textArea[3].text
+                          }
+                        </React.Fragment>
                       )}
                     </p>
                   </div>
                 </div>
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img___12V3)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={
-                    hasVariant(globalVariants, "screen", "mobile")
-                      ? "100%"
-                      : hasVariant(globalVariants, "screen", "largerMobile")
-                        ? "auto"
-                        : hasVariant(globalVariants, "screen", "dualScreen")
+                <Reveal
+                  className={classNames("__wab_instance", sty.reveal__xsBpx)}
+                  triggerOnce={true}
+                >
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img___12V3)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "mobile")
+                        ? "100%"
+                        : hasVariant(globalVariants, "screen", "largerMobile")
                           ? "auto"
-                          : hasVariant(globalVariants, "screen", "smallTablet")
-                            ? "70%"
-                            : hasVariant(globalVariants, "screen", "laptop")
-                              ? "35%"
-                              : hasVariant(
-                                    globalVariants,
-                                    "screen",
-                                    "smallDesktop"
-                                  )
-                                ? "472px"
-                                : "640px"
-                  }
-                  loading={"lazy"}
-                  src={
-                    hasVariant(globalVariants, "screen", "desktop")
-                      ? {
-                          src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodWeighingFlourPng.png",
-                          fullWidth: 680,
-                          fullHeight: 553,
-                          aspectRatio: undefined
-                        }
-                      : {
-                          src: "/plasmic/sterling_and_buena_vista_foods/images/imagePng2.png",
-                          fullWidth: 639,
-                          fullHeight: 610,
-                          aspectRatio: undefined
-                        }
-                  }
-                />
+                          : hasVariant(globalVariants, "screen", "dualScreen")
+                            ? "auto"
+                            : hasVariant(
+                                  globalVariants,
+                                  "screen",
+                                  "smallTablet"
+                                )
+                              ? "70%"
+                              : hasVariant(globalVariants, "screen", "laptop")
+                                ? "35%"
+                                : hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "smallDesktop"
+                                    )
+                                  ? "472px"
+                                  : "640px"
+                    }
+                    loading={"lazy"}
+                    src={
+                      hasVariant(globalVariants, "screen", "desktop")
+                        ? {
+                            src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodWeighingFlourPng.png",
+                            fullWidth: 680,
+                            fullHeight: 553,
+                            aspectRatio: undefined
+                          }
+                        : {
+                            src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodWeighingFlourPng.png",
+                            fullWidth: 680,
+                            fullHeight: 553,
+                            aspectRatio: undefined
+                          }
+                    }
+                  />
+                </Reveal>
               </div>
             </div>
             <div
@@ -1088,51 +1235,66 @@ function PlasmicCapabilities__RenderFunc(props: {
               className={classNames("all", sty.capabilitiesSection)}
             >
               <div className={classNames("all", sty.freeBox__bReDb)}>
-                <div className={classNames("all", sty.freeBox___9VXn)}>
-                  <h3
-                    className={classNames(
-                      "all",
-                      "h3",
-                      "h3__uyaK1",
-                      "__wab_text",
-                      sty.h3__qVleB,
-                      hasVariant(globalVariants, "screen", "dualScreen")
-                        ? "fave-script"
-                        : "h3-script"
-                    )}
-                  >
-                    {hasVariant(globalVariants, "screen", "desktop") ? (
-                      <React.Fragment>
-                        {
-                          $q.capabilites.data.body.data.pageBy.pageContent
-                            .headlineParent[3].headlinechild[0].headlinenormal
-                        }
-                      </React.Fragment>
-                    ) : (
-                      "Custom-crafted"
-                    )}
-                  </h3>
-                  <h4
-                    className={classNames(
-                      "all",
-                      "h4",
-                      "h4__uyaK1",
-                      "__wab_text",
-                      sty.h4___84MX
-                    )}
-                  >
-                    {hasVariant(globalVariants, "screen", "desktop") ? (
-                      <React.Fragment>
-                        {
-                          $q.capabilites.data.body.data.pageBy.pageContent
-                            .headlineParent[3].headlinechild[0].headlinefav
-                        }
-                      </React.Fragment>
-                    ) : (
-                      "Bakery Solutions"
-                    )}
-                  </h4>
-                </div>
+                <Reveal
+                  className={classNames("__wab_instance", sty.reveal__s3Wf6)}
+                  triggerOnce={true}
+                >
+                  <div className={classNames("all", sty.freeBox___9VXn)}>
+                    <h3
+                      className={classNames(
+                        "all",
+                        "h3",
+                        "h3__uyaK1",
+                        "__wab_text",
+                        sty.h3__qVleB,
+                        hasVariant(globalVariants, "screen", "dualScreen")
+                          ? "fave-script"
+                          : "h3-script"
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .headlineParent[3].headlinechild[0].headlinenormal
+                          }
+                        </React.Fragment>
+                      ) : (
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .headlineParent[3].headlinechild[0].headlinenormal
+                          }
+                        </React.Fragment>
+                      )}
+                    </h3>
+                    <h4
+                      className={classNames(
+                        "all",
+                        "h4",
+                        "h4__uyaK1",
+                        "__wab_text",
+                        sty.h4___84MX
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .headlineParent[3].headlinechild[0].headlinefav
+                          }
+                        </React.Fragment>
+                      ) : (
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .headlineParent[3].headlinechild[0].headlinefav
+                          }
+                        </React.Fragment>
+                      )}
+                    </h4>
+                  </div>
+                </Reveal>
                 <p
                   className={classNames(
                     "all",
@@ -1160,7 +1322,22 @@ function PlasmicCapabilities__RenderFunc(props: {
                       })()}
                     </React.Fragment>
                   ) : (
-                    "Custom-crafted bakery solutions uniquely created to suit your needs, whether for performance, differentiation or growth.  From protein-forward to large-scale production featuring artisan touches, Sterling Foods brings innovative bakery products to market with the quality, consistency, and flexibility customers depend on."
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $q.capabilites.data.body.data.pageBy
+                            .pageContent.textArea[4].text;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "Custom-crafted bakery solutions uniquely created to suit your needs, whether for performance, differentiation or growth.  From protein-forward to large-scale production featuring artisan touches, Sterling Foods brings innovative bakery products to market with the quality, consistency, and flexibility customers depend on.";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
                   )}
                 </p>
               </div>
@@ -1674,25 +1851,19 @@ function PlasmicCapabilities__RenderFunc(props: {
                               data-plasmic-override={overrides.p3}
                               className={classNames("all", sty.p3)}
                             >
-                              {(
-                                hasVariant(globalVariants, "screen", "desktop")
-                                  ? true
-                                  : false
-                              ) ? (
-                                <p
-                                  className={classNames(
-                                    "all",
-                                    "p",
-                                    "p__uyaK1",
-                                    "__wab_text",
-                                    sty.p__gdIn1
-                                  )}
-                                >
-                                  {
-                                    "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                  }
-                                </p>
-                              ) : null}
+                              <p
+                                className={classNames(
+                                  "all",
+                                  "p",
+                                  "p__uyaK1",
+                                  "__wab_text",
+                                  sty.p__gdIn1
+                                )}
+                              >
+                                {hasVariant(globalVariants, "screen", "desktop")
+                                  ? "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                                  : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
+                              </p>
                             </div>
                             <div
                               data-plasmic-name={"ul2"}
@@ -3338,57 +3509,65 @@ function PlasmicCapabilities__RenderFunc(props: {
                 data-plasmic-override={overrides.foodSafety3}
                 className={classNames("all", sty.foodSafety3)}
               >
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img__xg7Rd)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={
-                    hasVariant(globalVariants, "screen", "mobile")
-                      ? "100%"
-                      : hasVariant(globalVariants, "screen", "largerMobile")
-                        ? "auto"
-                        : hasVariant(globalVariants, "screen", "dualScreen")
+                <Reveal
+                  className={classNames("__wab_instance", sty.reveal__n88Ca)}
+                  triggerOnce={true}
+                >
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__xg7Rd)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "mobile")
+                        ? "100%"
+                        : hasVariant(globalVariants, "screen", "largerMobile")
                           ? "auto"
-                          : hasVariant(globalVariants, "screen", "smallTablet")
-                            ? "70%"
-                            : hasVariant(globalVariants, "screen", "laptop")
-                              ? "35%"
-                              : hasVariant(
-                                    globalVariants,
-                                    "screen",
-                                    "smallDesktop"
-                                  )
-                                ? "472px"
+                          : hasVariant(globalVariants, "screen", "dualScreen")
+                            ? "auto"
+                            : hasVariant(
+                                  globalVariants,
+                                  "screen",
+                                  "smallTablet"
+                                )
+                              ? "70%"
+                              : hasVariant(globalVariants, "screen", "laptop")
+                                ? "35%"
                                 : hasVariant(
                                       globalVariants,
                                       "screen",
-                                      "desktop"
+                                      "smallDesktop"
                                     )
-                                  ? "575px"
-                                  : "640px"
-                  }
-                  loading={"lazy"}
-                  src={
-                    hasVariant(globalVariants, "screen", "desktop")
-                      ? {
-                          src: "/plasmic/sterling_and_buena_vista_foods/images/group1Png4.png",
-                          fullWidth: 698,
-                          fullHeight: 591,
-                          aspectRatio: undefined
-                        }
-                      : {
-                          src: "/plasmic/sterling_and_buena_vista_foods/images/imagePng2.png",
-                          fullWidth: 639,
-                          fullHeight: 610,
-                          aspectRatio: undefined
-                        }
-                  }
-                />
-
+                                  ? "472px"
+                                  : hasVariant(
+                                        globalVariants,
+                                        "screen",
+                                        "desktop"
+                                      )
+                                    ? "575px"
+                                    : "575px"
+                    }
+                    loading={"lazy"}
+                    src={
+                      hasVariant(globalVariants, "screen", "desktop")
+                        ? {
+                            src: "/plasmic/sterling_and_buena_vista_foods/images/group1Png4.png",
+                            fullWidth: 698,
+                            fullHeight: 591,
+                            aspectRatio: undefined
+                          }
+                        : {
+                            src: "/plasmic/sterling_and_buena_vista_foods/images/group1Png4.png",
+                            fullWidth: 698,
+                            fullHeight: 591,
+                            aspectRatio: undefined
+                          }
+                    }
+                  />
+                </Reveal>
                 <div
                   data-plasmic-name={"text3"}
                   data-plasmic-override={overrides.text3}
@@ -3416,7 +3595,12 @@ function PlasmicCapabilities__RenderFunc(props: {
                           }
                         </React.Fragment>
                       ) : (
-                        "Across Our Organization"
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .headlineParent[4].headlinechild[0].headlinefav
+                          }
+                        </React.Fragment>
                       )}
                     </h4>
                     <h3
@@ -3437,7 +3621,12 @@ function PlasmicCapabilities__RenderFunc(props: {
                           }
                         </React.Fragment>
                       ) : (
-                        "Oppoertunities"
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .headlineParent[4].headlinechild[0].headlinenormal
+                          }
+                        </React.Fragment>
                       )}
                     </h3>
                   </div>
@@ -3463,35 +3652,50 @@ function PlasmicCapabilities__RenderFunc(props: {
                           }
                         </React.Fragment>
                       ) : (
-                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                      )}
-                    </p>
-                  </div>
-                  <PrimaryBtn
-                    className={classNames(
-                      "__wab_instance",
-                      sty.primaryBtn__lFn7
-                    )}
-                  >
-                    <div
-                      className={classNames(
-                        "all",
-                        "__wab_text",
-                        sty.text__rner1
-                      )}
-                    >
-                      {hasVariant(globalVariants, "screen", "desktop") ? (
                         <React.Fragment>
                           {
                             $q.capabilites.data.body.data.pageBy.pageContent
-                              .button[0].text
+                              .textArea[5].text
                           }
                         </React.Fragment>
-                      ) : (
-                        "See Quality in Action"
                       )}
-                    </div>
-                  </PrimaryBtn>
+                    </p>
+                  </div>
+                  <Reveal
+                    className={classNames("__wab_instance", sty.reveal__y4Plr)}
+                    triggerOnce={true}
+                  >
+                    <PrimaryBtn
+                      className={classNames(
+                        "__wab_instance",
+                        sty.primaryBtn__lFn7
+                      )}
+                    >
+                      <div
+                        className={classNames(
+                          "all",
+                          "__wab_text",
+                          sty.text__rner1
+                        )}
+                      >
+                        {hasVariant(globalVariants, "screen", "desktop") ? (
+                          <React.Fragment>
+                            {
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .button[0].text
+                            }
+                          </React.Fragment>
+                        ) : (
+                          <React.Fragment>
+                            {
+                              $q.capabilites.data.body.data.pageBy.pageContent
+                                .button[0].text
+                            }
+                          </React.Fragment>
+                        )}
+                      </div>
+                    </PrimaryBtn>
+                  </Reveal>
                 </div>
               </div>
               <div
@@ -3526,7 +3730,12 @@ function PlasmicCapabilities__RenderFunc(props: {
                           }
                         </React.Fragment>
                       ) : (
-                        "Across Our Organization"
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .headlineParent[5].headlinechild[0].headlinenormal
+                          }
+                        </React.Fragment>
                       )}
                     </h4>
                     <h3
@@ -3547,7 +3756,12 @@ function PlasmicCapabilities__RenderFunc(props: {
                           }
                         </React.Fragment>
                       ) : (
-                        "Oppoertunities"
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .headlineParent[5].headlinechild[0].headlinefav
+                          }
+                        </React.Fragment>
                       )}
                     </h3>
                   </div>
@@ -3573,7 +3787,12 @@ function PlasmicCapabilities__RenderFunc(props: {
                           }
                         </React.Fragment>
                       ) : (
-                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .textArea[6].text
+                          }
+                        </React.Fragment>
                       )}
                     </p>
                     <p
@@ -3593,79 +3812,98 @@ function PlasmicCapabilities__RenderFunc(props: {
                           }
                         </React.Fragment>
                       ) : (
-                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
+                        <React.Fragment>
+                          {
+                            $q.capabilites.data.body.data.pageBy.pageContent
+                              .textArea[7].text
+                          }
+                        </React.Fragment>
                       )}
                     </p>
                   </div>
-                  <PrimaryBtn
-                    className={classNames(
-                      "__wab_instance",
-                      sty.primaryBtn__kZmTc
-                    )}
+                  <Reveal
+                    className={classNames("__wab_instance", sty.reveal__eRmXh)}
+                    triggerOnce={true}
                   >
-                    <div
+                    <PrimaryBtn
                       className={classNames(
-                        "all",
-                        "__wab_text",
-                        sty.text__vrQgY
+                        "__wab_instance",
+                        sty.primaryBtn__kZmTc
                       )}
                     >
-                      {hasVariant(globalVariants, "screen", "desktop")
-                        ? "Learn More About Us"
-                        : "See Quality in Action"}
-                    </div>
-                  </PrimaryBtn>
+                      <div
+                        className={classNames(
+                          "all",
+                          "__wab_text",
+                          sty.text__vrQgY
+                        )}
+                      >
+                        {hasVariant(globalVariants, "screen", "desktop")
+                          ? "Learn More About Us"
+                          : "Learn More About Us"}
+                      </div>
+                    </PrimaryBtn>
+                  </Reveal>
                 </div>
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img__cAa9O)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={
-                    hasVariant(globalVariants, "screen", "mobile")
-                      ? "100%"
-                      : hasVariant(globalVariants, "screen", "largerMobile")
-                        ? "auto"
-                        : hasVariant(globalVariants, "screen", "dualScreen")
+                <Reveal
+                  className={classNames("__wab_instance", sty.reveal___3764B)}
+                  triggerOnce={true}
+                >
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__cAa9O)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "mobile")
+                        ? "100%"
+                        : hasVariant(globalVariants, "screen", "largerMobile")
                           ? "auto"
-                          : hasVariant(globalVariants, "screen", "smallTablet")
-                            ? "70%"
-                            : hasVariant(globalVariants, "screen", "laptop")
-                              ? "35%"
-                              : hasVariant(
-                                    globalVariants,
-                                    "screen",
-                                    "smallDesktop"
-                                  )
-                                ? "472px"
+                          : hasVariant(globalVariants, "screen", "dualScreen")
+                            ? "auto"
+                            : hasVariant(
+                                  globalVariants,
+                                  "screen",
+                                  "smallTablet"
+                                )
+                              ? "70%"
+                              : hasVariant(globalVariants, "screen", "laptop")
+                                ? "35%"
                                 : hasVariant(
                                       globalVariants,
                                       "screen",
-                                      "desktop"
+                                      "smallDesktop"
                                     )
-                                  ? "575px"
-                                  : "640px"
-                  }
-                  loading={"lazy"}
-                  src={
-                    hasVariant(globalVariants, "screen", "desktop")
-                      ? {
-                          src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodManufacturingExcellencePng.png",
-                          fullWidth: 680,
-                          fullHeight: 553,
-                          aspectRatio: undefined
-                        }
-                      : {
-                          src: "/plasmic/sterling_and_buena_vista_foods/images/imagePng2.png",
-                          fullWidth: 639,
-                          fullHeight: 610,
-                          aspectRatio: undefined
-                        }
-                  }
-                />
+                                  ? "472px"
+                                  : hasVariant(
+                                        globalVariants,
+                                        "screen",
+                                        "desktop"
+                                      )
+                                    ? "575px"
+                                    : "575px"
+                    }
+                    loading={"lazy"}
+                    src={
+                      hasVariant(globalVariants, "screen", "desktop")
+                        ? {
+                            src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodManufacturingExcellencePng.png",
+                            fullWidth: 680,
+                            fullHeight: 553,
+                            aspectRatio: undefined
+                          }
+                        : {
+                            src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodManufacturingExcellencePng.png",
+                            fullWidth: 680,
+                            fullHeight: 553,
+                            aspectRatio: undefined
+                          }
+                    }
+                  />
+                </Reveal>
               </div>
             </div>
             <CtaBottom

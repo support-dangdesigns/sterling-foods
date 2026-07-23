@@ -345,7 +345,12 @@ function PlasmicMarkets__RenderFunc(props: {
                         }
                       </React.Fragment>
                     ) : (
-                      "Customer-first"
+                      <React.Fragment>
+                        {
+                          $q.markets.data.body.data.pageBy.pageContent
+                            .headlineParent[0].headlinechild[0].headlinefav
+                        }
+                      </React.Fragment>
                     )}
                   </h3>
                   <h4
@@ -365,7 +370,12 @@ function PlasmicMarkets__RenderFunc(props: {
                         }
                       </React.Fragment>
                     ) : (
-                      "Approach"
+                      <React.Fragment>
+                        {
+                          $q.markets.data.body.data.pageBy.pageContent
+                            .headlineParent[0].headlinechild[0].headlinenormal
+                        }
+                      </React.Fragment>
                     )}
                   </h4>
                 </div>
@@ -396,7 +406,22 @@ function PlasmicMarkets__RenderFunc(props: {
                       })()}
                     </React.Fragment>
                   ) : (
-                    "Sterling Foods serves a diverse range of foodservice and retail channels, delivering innovative bakery solutions tailored to the unique needs of each market. Our customer-first approach, flexible manufacturing capabilities, and commitment to quality help partners bring differentiated products to market with confidence."
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $q.markets.data.body.data.pageBy.pageContent
+                            .textArea[0].text;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "Sterling Foods serves a diverse range of foodservice and retail channels, delivering innovative bakery solutions tailored to the unique needs of each market. Our customer-first approach, flexible manufacturing capabilities, and commitment to quality help partners bring differentiated products to market with confidence.";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
                   )}
                 </p>
               </div>
@@ -498,7 +523,12 @@ function PlasmicMarkets__RenderFunc(props: {
                           }
                         </React.Fragment>
                       ) : (
-                        "National"
+                        <React.Fragment>
+                          {
+                            $q.markets.data.body.data.pageBy.pageContent
+                              .headlineParent[0].headlinechild[1].headlinefav
+                          }
+                        </React.Fragment>
                       )}
                     </h3>
                     <h4
@@ -518,7 +548,12 @@ function PlasmicMarkets__RenderFunc(props: {
                           }
                         </React.Fragment>
                       ) : (
-                        "Restaurants"
+                        <React.Fragment>
+                          {
+                            $q.markets.data.body.data.pageBy.pageContent
+                              .headlineParent[0].headlinechild[1].headlinenormal
+                          }
+                        </React.Fragment>
                       )}
                     </h4>
                   </div>
@@ -544,7 +579,12 @@ function PlasmicMarkets__RenderFunc(props: {
                           }
                         </React.Fragment>
                       ) : (
-                        "Sterling Foods partners with leading restaurant chains to develop proprietary bakery solutions that support menu innovation, operational consistency, and speed to market. With a focus on uniqueness and operational ease, we help brands create iconic, signature products that stand apart from the crowd."
+                        <React.Fragment>
+                          {
+                            $q.markets.data.body.data.pageBy.pageContent
+                              .textArea[1].text
+                          }
+                        </React.Fragment>
                       )}
                     </p>
                   </div>
@@ -579,7 +619,12 @@ function PlasmicMarkets__RenderFunc(props: {
                           }
                         </React.Fragment>
                       ) : (
-                        "School"
+                        <React.Fragment>
+                          {
+                            $q.markets.data.body.data.pageBy.pageContent
+                              .headlineParent[0].headlinechild[2].headlinefav
+                          }
+                        </React.Fragment>
                       )}
                     </h3>
                     <h4
@@ -599,7 +644,12 @@ function PlasmicMarkets__RenderFunc(props: {
                           }
                         </React.Fragment>
                       ) : (
-                        "Foodservice"
+                        <React.Fragment>
+                          {
+                            $q.markets.data.body.data.pageBy.pageContent
+                              .headlineParent[0].headlinechild[2].headlinenormal
+                          }
+                        </React.Fragment>
                       )}
                     </h4>
                   </div>
@@ -625,7 +675,12 @@ function PlasmicMarkets__RenderFunc(props: {
                           }
                         </React.Fragment>
                       ) : (
-                        "Through our Buena Vista Foods division, Sterling Foods has been a trusted partner to K-12 nutrition programs for decades. We develop bakery solutions that seamlessly balance great taste, nutrition, and regulatory compliance\u2014helping school districts meet evolving nutritional standards while serving products students genuinely enjoy.  From clean label formulations to thoughtfully sourced, all natural ingredients, Buena Vista continues to set the standard in school nutrition."
+                        <React.Fragment>
+                          {
+                            $q.markets.data.body.data.pageBy.pageContent
+                              .textArea[2].text
+                          }
+                        </React.Fragment>
                       )}
                     </p>
                     <PlasmicLink__
@@ -659,7 +714,12 @@ function PlasmicMarkets__RenderFunc(props: {
                               }
                             </React.Fragment>
                           ) : (
-                            "Learn More About Buena Vista Foods"
+                            <React.Fragment>
+                              {
+                                $q.markets.data.body.data.pageBy.pageContent
+                                  .button[0].text
+                              }
+                            </React.Fragment>
                           )}
                         </div>
                       </PrimaryBtn>
@@ -778,7 +838,12 @@ function PlasmicMarkets__RenderFunc(props: {
                           }
                         </React.Fragment>
                       ) : (
-                        "Convenience "
+                        <React.Fragment>
+                          {
+                            $q.markets.data.body.data.pageBy.pageContent
+                              .headlineParent[0].headlinechild[3].headlinefav
+                          }
+                        </React.Fragment>
                       )}
                     </h3>
                     <h4
@@ -798,7 +863,12 @@ function PlasmicMarkets__RenderFunc(props: {
                           }
                         </React.Fragment>
                       ) : (
-                        "Stores"
+                        <React.Fragment>
+                          {
+                            $q.markets.data.body.data.pageBy.pageContent
+                              .headlineParent[0].headlinechild[3].headlinenormal
+                          }
+                        </React.Fragment>
                       )}
                     </h4>
                   </div>
@@ -824,7 +894,12 @@ function PlasmicMarkets__RenderFunc(props: {
                           }
                         </React.Fragment>
                       ) : (
-                        "Sterling Foods develops portable, individually wrapped bakery products and nutrition-focused snack solutions ideally suited for today's on-the-go consumer. From protein-forward snacks and nutrition bars to grab-and-go bakery offerings, our products help convenience retailers meet evolving consumer preferences."
+                        <React.Fragment>
+                          {
+                            $q.markets.data.body.data.pageBy.pageContent
+                              .textArea[3].text
+                          }
+                        </React.Fragment>
                       )}
                     </p>
                   </div>
@@ -932,7 +1007,12 @@ function PlasmicMarkets__RenderFunc(props: {
                           }
                         </React.Fragment>
                       ) : (
-                        "Our"
+                        <React.Fragment>
+                          {
+                            $q.markets.data.body.data.pageBy.pageContent
+                              .headlineParent[0].headlinechild[4].headlinefav
+                          }
+                        </React.Fragment>
                       )}
                     </h3>
                     <h4
@@ -952,7 +1032,12 @@ function PlasmicMarkets__RenderFunc(props: {
                           }
                         </React.Fragment>
                       ) : (
-                        "Military"
+                        <React.Fragment>
+                          {
+                            $q.markets.data.body.data.pageBy.pageContent
+                              .headlineParent[0].headlinechild[4].headlinenormal
+                          }
+                        </React.Fragment>
                       )}
                     </h4>
                   </div>
@@ -988,7 +1073,22 @@ function PlasmicMarkets__RenderFunc(props: {
                           })()}
                         </React.Fragment>
                       ) : (
-                        "Since 1971, Sterling Foods has been a trusted supplier to \nthe U.S. military, delivering products that meet the highest standards for performance, quality, nutrition, and durability. Leveraging advanced \nshelf-life technologies and deep nutritional expertise, Sterling remains a leading provider of baked goods and specialty food solutions, supplying \nration components, performance nutrition products, and desserts to service members around the globe."
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return $q.markets.data.body.data.pageBy
+                                .pageContent.textArea[4].text;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "Since 1971, Sterling Foods has been a trusted supplier to \nthe U.S. military, delivering products that meet the highest standards \nfor performance, quality, nutrition, and durability. Leveraging advanced shelf-life technologies and deep nutritional expertise, Sterling remains a leading provider of baked goods and specialty food solutions, supplying ration components, performance nutrition products, and desserts to service members around the globe.";
+                              }
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
                       )}
                     </p>
                   </div>
@@ -1027,7 +1127,12 @@ function PlasmicMarkets__RenderFunc(props: {
                           }
                         </React.Fragment>
                       ) : (
-                        "In-Store"
+                        <React.Fragment>
+                          {
+                            $q.markets.data.body.data.pageBy.pageContent
+                              .headlineParent[0].headlinechild[5].headlinefav
+                          }
+                        </React.Fragment>
                       )}
                     </h3>
                     <h4
@@ -1047,7 +1152,12 @@ function PlasmicMarkets__RenderFunc(props: {
                           }
                         </React.Fragment>
                       ) : (
-                        "Bakery"
+                        <React.Fragment>
+                          {
+                            $q.markets.data.body.data.pageBy.pageContent
+                              .headlineParent[0].headlinechild[5].headlinenormal
+                          }
+                        </React.Fragment>
                       )}
                     </h4>
                   </div>
@@ -1075,7 +1185,12 @@ function PlasmicMarkets__RenderFunc(props: {
                           }
                         </React.Fragment>
                       ) : (
-                        "Sterling Foods can help retailers deliver bakery experiences that combine \nfresh-made appeal with operational efficiency. From croissants and pastries to muffins, cornbread, cookies, and specialty bakery items, our products help \ndrive customer satisfaction while supporting consistency across locations.\r"
+                        <React.Fragment>
+                          {
+                            $q.markets.data.body.data.pageBy.pageContent
+                              .textArea[5].text
+                          }
+                        </React.Fragment>
                       )}
                     </p>
                   </div>

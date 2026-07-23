@@ -236,6 +236,29 @@ function PlasmicReviews__RenderFunc(props: {
             data-plasmic-name={"frame43"}
             data-plasmic-override={overrides.frame43}
             className={classNames("all", sty.frame43)}
+            onClick={async event => {
+              const $steps = {};
+
+              $steps["runActionOnSliderCarousel"] = true
+                ? (() => {
+                    const actionArgs = {
+                      tplRef: "sliderCarousel",
+                      action: "slickPrev"
+                    };
+                    return (({ tplRef, action, args }) => {
+                      return $refs?.[tplRef]?.[action]?.(...(args ?? []));
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["runActionOnSliderCarousel"] != null &&
+                typeof $steps["runActionOnSliderCarousel"] === "object" &&
+                typeof $steps["runActionOnSliderCarousel"].then === "function"
+              ) {
+                $steps["runActionOnSliderCarousel"] =
+                  await $steps["runActionOnSliderCarousel"];
+              }
+            }}
           >
             <PlasmicIcon__
               PlasmicIconType={
@@ -274,6 +297,29 @@ function PlasmicReviews__RenderFunc(props: {
             data-plasmic-name={"frame44"}
             data-plasmic-override={overrides.frame44}
             className={classNames("all", sty.frame44)}
+            onClick={async event => {
+              const $steps = {};
+
+              $steps["runActionOnSliderCarousel"] = true
+                ? (() => {
+                    const actionArgs = {
+                      tplRef: "sliderCarousel",
+                      action: "slickNext"
+                    };
+                    return (({ tplRef, action, args }) => {
+                      return $refs?.[tplRef]?.[action]?.(...(args ?? []));
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["runActionOnSliderCarousel"] != null &&
+                typeof $steps["runActionOnSliderCarousel"] === "object" &&
+                typeof $steps["runActionOnSliderCarousel"].then === "function"
+              ) {
+                $steps["runActionOnSliderCarousel"] =
+                  await $steps["runActionOnSliderCarousel"];
+              }
+            }}
           >
             <PlasmicIcon__
               PlasmicIconType={

@@ -56,6 +56,7 @@
   justify-content: flex-start;
   align-items: center;
   overflow: visible;
+  justify-self: flex-start;
   min-width: 0;
 }
 .header:global(.__wab_instance) {

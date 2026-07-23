@@ -382,6 +382,7 @@ function PlasmicHeader__RenderFunc(props: {
               data-plasmic-override={overrides.logo2}
               className={classNames("all", "a", "a__uyaK1", sty.logo2)}
               component={Link}
+              href={`/`}
               legacyBehavior={false}
               platform={"nextjs"}
             />

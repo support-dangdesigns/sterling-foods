@@ -59,6 +59,15 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import { useMutablePlasmicQueryData } from "@plasmicapp/query";
+
+import { usePlasmicQueries } from "@plasmicapp/react-web/lib/data-sources";
+import type {
+  PlasmicQuery,
+  PlasmicQueryResult
+} from "@plasmicapp/react-web/lib/data-sources";
+import type { QueryComponentNode } from "@plasmicapp/react-web/lib/data-sources";
+
 import Header from "../../Header"; // plasmic-import: qmNXHiKWCTTQ/component
 import TopHero from "../../TopHero"; // plasmic-import: 2xRY6WOypZh7/component
 import PrimaryBtn from "../../PrimaryBtn"; // plasmic-import: TiffCyYLfuDQ/component
@@ -69,6 +78,8 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import sty from "./PlasmicOurFacilities.module.css"; // plasmic-import: fgbXC_G_QREF/css
+
+import { fetchGraphQL as __fn_fetchGraphQL } from "@plasmicpkgs/graphql";
 
 const emptyProxy: any = new Proxy(() => "", {
   get(_, prop) {
@@ -130,7 +141,34 @@ export type PlasmicOurFacilities__OverridesType = {
 
 export interface DefaultOurFacilitiesProps {}
 
-const $$ = {};
+const $$ = {
+  fetchGraphQL: __fn_fetchGraphQL
+};
+
+export const serverQueryTree: QueryComponentNode = {
+  type: "component",
+  queries: {
+    ourFacilities: {
+      id: "fetchGraphQL",
+      fn: $$.fetchGraphQL,
+      args: ({ $q, $props, $ctx, $state }) => [
+        (() => {
+          const __composite = { method: "POST", url: null, request: null };
+          __composite["url"] = "https://edit-sterling.dangstaging.org/graphql";
+          __composite["request"] = {
+            query:
+              "query MyQuery {\n  pageBy(pageId: 199) {\n    pageContent {\n      fieldGroupName\n      button {\n        fieldGroupName\n        text\n        url\n      }\n      headlineParent {\n        fieldGroupName\n        headlinechild {\n          fieldGroupName\n          headlinefav\n          headlinenormal\n        }\n      }\n      textArea {\n        fieldGroupName\n        text\n      }\n    }\n  }\n}",
+            variables: {}
+          };
+          return __composite;
+        })()
+      ]
+    }
+  },
+  propsContext: {},
+  stateSpecs: [],
+  children: []
+};
 
 function useNextRouter() {
   try {
@@ -169,10 +207,12 @@ function PlasmicOurFacilities__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
+  const $q = usePlasmicQueries(serverQueryTree, { $ctx, $props, $state: null });
+
   const globalVariants = _useGlobalVariants();
 
   const pageMetadata = generateDynamicMetadata(
-    wrapQueriesWithLoadingProxy({}),
+    wrapQueriesWithLoadingProxy($q),
     $ctx as PageCtx
   );
 
@@ -243,7 +283,23 @@ function PlasmicOurFacilities__RenderFunc(props: {
                       : "h4-script"
                   )}
                 >
-                  {"A Manufacturing Network"}
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $q.ourFacilities.data.body.data.pageBy
+                          .pageContent.headlineParent[0].headlinechild[0]
+                          .headlinefav;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "A Manufacturing Network";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
                 </h4>
                 <h4
                   className={classNames(
@@ -254,7 +310,23 @@ function PlasmicOurFacilities__RenderFunc(props: {
                     sty.h4__lKpNh
                   )}
                 >
-                  {"Built for Flexibility and Growth"}
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $q.ourFacilities.data.body.data.pageBy
+                          .pageContent.headlineParent[0].headlinechild[0]
+                          .headlinenormal;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "Built for Flexibility and Growth";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
                 </h4>
                 <p
                   className={classNames(
@@ -265,9 +337,74 @@ function PlasmicOurFacilities__RenderFunc(props: {
                     sty.p__r5BPx
                   )}
                 >
-                  {
-                    "Sterling Foods' network of six complementary facilities provides the flexibility, capacity, and specialized capabilities needed to support customers across multiple markets and product categories.\n\nFrom artisan bakery production to highly automated manufacturing processes, our facilities are equipped with advanced technologies and operate under the highest food safety and quality standards, with all facilities GFSI-SQF certified and FDA registered. \nAdditionally, we have kosher and vegan certified as well as designated peanut/tree nut free plants. Two of our facilities are also certified to export poultry and meat to Canada.\n\nThis comprehensive manufacturing network delivers the reliability, consistency, capabilities, and scalability our customers depend on."
-                  }
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $q.ourFacilities.data.body.data.pageBy
+                          .pageContent.textArea[0].text;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "Sterling Foods' network of six complementary facilities provides the flexibility, capacity, and specialized capabilities needed to support customers across multiple markets and product categories.";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
+                </p>
+                <p
+                  className={classNames(
+                    "all",
+                    "p",
+                    "p__uyaK1",
+                    "__wab_text",
+                    sty.p__ala68
+                  )}
+                >
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $q.ourFacilities.data.body.data.pageBy
+                          .pageContent.textArea[1].text;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "From artisan bakery production to highly automated manufacturing processes, our facilities are equipped with advanced technologies and operate under the highest food safety and quality standards, with all facilities GFSI-SQF certified and FDA registered. \nAdditionally, we have kosher and vegan certified as well as designated peanut/tree nut free plants. Two of our facilities are also certified to export poultry and meat to Canada.";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
+                </p>
+                <p
+                  className={classNames(
+                    "all",
+                    "p",
+                    "p__uyaK1",
+                    "__wab_text",
+                    sty.p__xRhJo
+                  )}
+                >
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $q.ourFacilities.data.body.data.pageBy
+                          .pageContent.textArea[2].text;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "This comprehensive manufacturing network delivers the reliability, consistency, capabilities, and scalability our customers depend on.";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
                 </p>
               </div>
               <PlasmicImg__
@@ -331,7 +468,23 @@ function PlasmicOurFacilities__RenderFunc(props: {
                         sty.h5___92Een
                       )}
                     >
-                      {"San Antonio 1075/1080"}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.ourFacilities.data.body.data.pageBy
+                              .pageContent.headlineParent[0].headlinechild[1]
+                              .headlinenormal;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "San Antonio 1075/1080";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </h5>
                     <h6
                       className={classNames(
@@ -342,7 +495,23 @@ function PlasmicOurFacilities__RenderFunc(props: {
                         sty.h6___4QorZ
                       )}
                     >
-                      {"1075/1080 Arion Parkway | San Antonio, Texas"}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.ourFacilities.data.body.data.pageBy
+                              .pageContent.headlineParent[0].headlinechild[2]
+                              .headlinenormal;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "1075/1080 Arion Parkway | San Antonio, Texas";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </h6>
                     <h6
                       className={classNames(
@@ -353,7 +522,23 @@ function PlasmicOurFacilities__RenderFunc(props: {
                         sty.h6___2Zsg
                       )}
                     >
-                      {"FDA, USDA AMS, Kosher"}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.ourFacilities.data.body.data.pageBy
+                              .pageContent.headlineParent[0].headlinechild[3]
+                              .headlinenormal;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "FDA, USDA AMS, Kosher";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </h6>
                     <p
                       className={classNames(
@@ -364,9 +549,22 @@ function PlasmicOurFacilities__RenderFunc(props: {
                         sty.p__fJih
                       )}
                     >
-                      {
-                        "As the home of Sterling Foods, our San Antonio headquarters serves as the center of our operations and a key manufacturing facility. This location supports a wide range of bakery production capabilities while providing the leadership, innovation, and customer support that drive our business forward."
-                      }
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.ourFacilities.data.body.data.pageBy
+                              .pageContent.textArea[3].text;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "As the home of Sterling Foods, our San Antonio headquarters serves as the center of our operations and a key manufacturing facility. This location supports a wide range of bakery production capabilities while providing the leadership, innovation, and customer support that drive our business forward.";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </p>
                   </div>
                 </div>
@@ -403,7 +601,23 @@ function PlasmicOurFacilities__RenderFunc(props: {
                         sty.h5__v5Ge1
                       )}
                     >
-                      {"San Antonio 1050"}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.ourFacilities.data.body.data.pageBy
+                              .pageContent.headlineParent[0].headlinechild[4]
+                              .headlinenormal;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "San Antonio 1050";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </h5>
                     <h6
                       className={classNames(
@@ -414,7 +628,23 @@ function PlasmicOurFacilities__RenderFunc(props: {
                         sty.h6__kexQl
                       )}
                     >
-                      {"1050 Arion Parkway | San Antonio, Texas"}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.ourFacilities.data.body.data.pageBy
+                              .pageContent.headlineParent[0].headlinechild[5]
+                              .headlinenormal;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "1050 Arion Parkway | San Antonio, Texas";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </h6>
                     <h6
                       className={classNames(
@@ -425,7 +655,23 @@ function PlasmicOurFacilities__RenderFunc(props: {
                         sty.h6__q1XNp
                       )}
                     >
-                      {"FDA, USDA FSIS"}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.ourFacilities.data.body.data.pageBy
+                              .pageContent.headlineParent[0].headlinechild[6]
+                              .headlinenormal;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "FDA, USDA FSIS";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </h6>
                     <p
                       className={classNames(
@@ -436,9 +682,22 @@ function PlasmicOurFacilities__RenderFunc(props: {
                         sty.p__yriHs
                       )}
                     >
-                      {
-                        "This USDA-FSIS certified facility specializes in signature croissants and pastries with an emphasis on customized protein-filled offerings in high demand by today's consumers. Equipped with advanced automated production lines, the facility delivers flexibility, consistency, and scalability while maintaining the highest quality standards."
-                      }
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.ourFacilities.data.body.data.pageBy
+                              .pageContent.textArea[4].text;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "This USDA-FSIS certified facility specializes in signature croissants and pastries with an emphasis on customized protein-filled offerings in high demand by today's consumers. Equipped with advanced automated production lines, the facility delivers flexibility, consistency, and scalability while maintaining the highest quality standards.";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </p>
                   </div>
                 </div>
@@ -475,7 +734,23 @@ function PlasmicOurFacilities__RenderFunc(props: {
                         sty.h5__do3Rc
                       )}
                     >
-                      {"Interpark"}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.ourFacilities.data.body.data.pageBy
+                              .pageContent.headlineParent[0].headlinechild[7]
+                              .headlinenormal;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "Interpark";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </h5>
                     <h6
                       className={classNames(
@@ -486,7 +761,23 @@ function PlasmicOurFacilities__RenderFunc(props: {
                         sty.h6___915Vk
                       )}
                     >
-                      {"San Antonio, Texas"}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.ourFacilities.data.body.data.pageBy
+                              .pageContent.headlineParent[0].headlinechild[8]
+                              .headlinenormal;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "San Antonio, Texas";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </h6>
                     <h6
                       className={classNames(
@@ -497,7 +788,23 @@ function PlasmicOurFacilities__RenderFunc(props: {
                         sty.h6__en0Ui
                       )}
                     >
-                      {"FDA, USDA FSIS"}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.ourFacilities.data.body.data.pageBy
+                              .pageContent.headlineParent[0].headlinechild[9]
+                              .headlinenormal;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "FDA, USDA FSIS";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </h6>
                     <p
                       className={classNames(
@@ -508,9 +815,22 @@ function PlasmicOurFacilities__RenderFunc(props: {
                         sty.p__gxpK9
                       )}
                     >
-                      {
-                        "Scheduled to open in Fall 2026, the Interpark facility represents Sterling Foods' continued investment in growth and innovation. Designed to support the production of gourmet filled pastries and specialty bakery products, this state-of-the-art facility will expand manufacturing capacity while providing the flexibility needed to meet evolving customer demands."
-                      }
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.ourFacilities.data.body.data.pageBy
+                              .pageContent.textArea[5].text;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "Scheduled to open in Fall 2026, the Interpark facility represents Sterling Foods' continued investment in growth and innovation. Designed to support the production of gourmet filled pastries and specialty bakery products, this state-of-the-art facility will expand manufacturing capacity while providing the flexibility needed to meet evolving customer demands.";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </p>
                   </div>
                 </div>
@@ -547,7 +867,23 @@ function PlasmicOurFacilities__RenderFunc(props: {
                         sty.h5__rpbH9
                       )}
                     >
-                      {"Azusa"}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.ourFacilities.data.body.data.pageBy
+                              .pageContent.headlineParent[0].headlinechild[10]
+                              .headlinenormal;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "Azusa";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </h5>
                     <h6
                       className={classNames(
@@ -558,7 +894,23 @@ function PlasmicOurFacilities__RenderFunc(props: {
                         sty.h6__xGq3E
                       )}
                     >
-                      {"823 W 8th St | Azusa, California"}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.ourFacilities.data.body.data.pageBy
+                              .pageContent.headlineParent[0].headlinechild[11]
+                              .headlinenormal;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "823 W 8th St | Azusa, California";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </h6>
                     <h6
                       className={classNames(
@@ -569,7 +921,23 @@ function PlasmicOurFacilities__RenderFunc(props: {
                         sty.h6__sVhDw
                       )}
                     >
-                      {"FDA, Peanut / Nut-Free"}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.ourFacilities.data.body.data.pageBy
+                              .pageContent.headlineParent[0].headlinechild[12]
+                              .headlinenormal;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "FDA, Peanut / Nut-Free";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </h6>
                     <p
                       className={classNames(
@@ -580,9 +948,22 @@ function PlasmicOurFacilities__RenderFunc(props: {
                         sty.p__o34Zx
                       )}
                     >
-                      {
-                        "Located in Southern California, our Azusa facility specializes in serving the K-12 market through our Buena Vista Foods brand, with products designed to meet the evolving needs of schools and students. Through quality ingredients, nutritional expertise, and dependable manufacturing, the facility is a leading supplier to school nutrition programs across the country."
-                      }
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.ourFacilities.data.body.data.pageBy
+                              .pageContent.textArea[6].text;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "Located in Southern California, our Azusa facility specializes in serving the K-12 market through our Buena Vista Foods brand, with products designed to meet the evolving needs of schools and students. Through quality ingredients, nutritional expertise, and dependable manufacturing, the facility is a leading supplier to school nutrition programs across the country.";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </p>
                   </div>
                 </div>
@@ -619,7 +1000,23 @@ function PlasmicOurFacilities__RenderFunc(props: {
                         sty.h5__yGwBu
                       )}
                     >
-                      {"Union City (1)"}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.ourFacilities.data.body.data.pageBy
+                              .pageContent.headlineParent[0].headlinechild[13]
+                              .headlinenormal;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "Union City (1)";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </h5>
                     <h6
                       className={classNames(
@@ -630,7 +1027,23 @@ function PlasmicOurFacilities__RenderFunc(props: {
                         sty.h6__mHvdR
                       )}
                     >
-                      {"33300 Western Avenue | Union City, California"}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.ourFacilities.data.body.data.pageBy
+                              .pageContent.headlineParent[0].headlinechild[14]
+                              .headlinenormal;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "33300 Western Avenue | Union City, California";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </h6>
                     <h6
                       className={classNames(
@@ -641,7 +1054,23 @@ function PlasmicOurFacilities__RenderFunc(props: {
                         sty.h6__uv4W6
                       )}
                     >
-                      {"FDA, USDA FSIS"}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.ourFacilities.data.body.data.pageBy
+                              .pageContent.headlineParent[0].headlinechild[15]
+                              .headlinenormal;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "FDA, USDA FSIS";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </h6>
                     <p
                       className={classNames(
@@ -652,9 +1081,22 @@ function PlasmicOurFacilities__RenderFunc(props: {
                         sty.p__j3Il
                       )}
                     >
-                      {
-                        "Serving national restaurant, foodservice, and retail customers, this USDA-certified facility specializes in a broad range of protein-filled bakery products, croissants, pastries, and custom food solutions. Its diverse capabilities help customers bring innovative products to market with confidence."
-                      }
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.ourFacilities.data.body.data.pageBy
+                              .pageContent.textArea[7].text;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "Serving national restaurant, foodservice, and retail customers, this USDA-certified facility specializes in a broad range of protein-filled bakery products, croissants, pastries, and custom food solutions. Its diverse capabilities help customers bring innovative products to market with confidence.";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </p>
                   </div>
                 </div>
@@ -691,7 +1133,23 @@ function PlasmicOurFacilities__RenderFunc(props: {
                         sty.h5__fdUE
                       )}
                     >
-                      {"Union City (2)"}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.ourFacilities.data.body.data.pageBy
+                              .pageContent.headlineParent[0].headlinechild[16]
+                              .headlinenormal;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "Union City (2)";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </h5>
                     <h6
                       className={classNames(
@@ -702,7 +1160,23 @@ function PlasmicOurFacilities__RenderFunc(props: {
                         sty.h6__o0OKx
                       )}
                     >
-                      {"33333 Western Avenue | Union City, California"}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.ourFacilities.data.body.data.pageBy
+                              .pageContent.headlineParent[0].headlinechild[17]
+                              .headlinenormal;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "33333 Western Avenue | Union City, California";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </h6>
                     <h6
                       className={classNames(
@@ -713,7 +1187,23 @@ function PlasmicOurFacilities__RenderFunc(props: {
                         sty.h6___7FiHb
                       )}
                     >
-                      {"FDA, OU Kosher"}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.ourFacilities.data.body.data.pageBy
+                              .pageContent.headlineParent[0].headlinechild[18]
+                              .headlinenormal;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "FDA, OU Kosher";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </h6>
                     <p
                       className={classNames(
@@ -724,9 +1214,22 @@ function PlasmicOurFacilities__RenderFunc(props: {
                         sty.p___0Tpef
                       )}
                     >
-                      {
-                        "Focused on artisan-style bakery production, this facility specializes in producing authentic New York-style bagels. Combining traditional methods with efficient production processes, it supports customers seeking distinctive, high-quality offerings."
-                      }
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $q.ourFacilities.data.body.data.pageBy
+                              .pageContent.textArea[8].text;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "Focused on artisan-style bakery production, this facility specializes in producing authentic New York-style bagels. Combining traditional methods with efficient production processes, it supports customers seeking distinctive, high-quality offerings.";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </p>
                   </div>
                 </div>
@@ -814,12 +1317,12 @@ function PlasmicOurFacilities__RenderFunc(props: {
                   </PrimaryBtn>
                 </PlasmicLink__>
               </div>
-              <Footer
-                data-plasmic-name={"footer"}
-                data-plasmic-override={overrides.footer}
-                className={classNames("__wab_instance", sty.footer)}
-              />
             </div>
+            <Footer
+              data-plasmic-name={"footer"}
+              data-plasmic-override={overrides.footer}
+              className={classNames("__wab_instance", sty.footer)}
+            />
           </div>
         </div>
       </div>
@@ -861,15 +1364,7 @@ const PlasmicDescendants = {
   topHero: ["topHero"],
   body: ["body", "intro"],
   intro: ["intro"],
-  cta: [
-    "cta",
-    "h1",
-    "buttonContainer",
-    "contactUs",
-    "primaryBtn",
-    "text",
-    "footer"
-  ],
+  cta: ["cta", "h1", "buttonContainer", "contactUs", "primaryBtn", "text"],
   h1: ["h1"],
   buttonContainer: ["buttonContainer", "contactUs", "primaryBtn", "text"],
   contactUs: ["contactUs", "primaryBtn", "text"],

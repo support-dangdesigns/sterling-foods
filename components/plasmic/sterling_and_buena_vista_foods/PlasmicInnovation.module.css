@@ -26,6 +26,11 @@
     grid-column: 4;
   }
 }
+@media (max-width: 1920px) {
+  .root > * {
+    grid-column: 4;
+  }
+}
 .pageContainer {
   animation: none;
   display: flex;

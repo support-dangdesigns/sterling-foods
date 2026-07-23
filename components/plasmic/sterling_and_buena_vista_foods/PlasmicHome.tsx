@@ -336,7 +336,7 @@ function PlasmicHome__RenderFunc(props: {
                       sty.h1,
                       hasVariant(globalVariants, "screen", "desktop")
                         ? "cambria-lineheight"
-                        : undefined
+                        : "cambria-lineheight"
                     )}
                   >
                     <React.Fragment>
@@ -437,7 +437,7 @@ function PlasmicHome__RenderFunc(props: {
                     sty.intro,
                     hasVariant(globalVariants, "screen", "desktop")
                       ? "cambria-lineheight"
-                      : undefined
+                      : "cambria-lineheight"
                   )}
                 >
                   <Reveal
@@ -489,7 +489,7 @@ function PlasmicHome__RenderFunc(props: {
                             sty.h3__wdfVl,
                             hasVariant(globalVariants, "screen", "desktop")
                               ? "cambria-lineheight"
-                              : undefined
+                              : "cambria-lineheight"
                           )}
                         >
                           <React.Fragment>

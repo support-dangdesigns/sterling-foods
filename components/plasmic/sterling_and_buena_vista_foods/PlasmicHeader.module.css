@@ -384,6 +384,7 @@
   transition-timing-function: ease-in;
   max-height: 963px;
   overflow: visible;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.2);
   min-width: 0;
   display: none;
   -webkit-transition-property: transform;

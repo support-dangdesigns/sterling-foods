@@ -597,12 +597,21 @@ function PlasmicCapabilities__RenderFunc(props: {
                                 : "640px"
                   }
                   loading={"lazy"}
-                  src={{
-                    src: "/plasmic/sterling_and_buena_vista_foods/images/imagePng2.png",
-                    fullWidth: 639,
-                    fullHeight: 610,
-                    aspectRatio: undefined
-                  }}
+                  src={
+                    hasVariant(globalVariants, "screen", "desktop")
+                      ? {
+                          src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodEmpanadasPng.png",
+                          fullWidth: 700,
+                          fullHeight: 573,
+                          aspectRatio: undefined
+                        }
+                      : {
+                          src: "/plasmic/sterling_and_buena_vista_foods/images/imagePng2.png",
+                          fullWidth: 639,
+                          fullHeight: 610,
+                          aspectRatio: undefined
+                        }
+                  }
                 />
 
                 <div
@@ -959,7 +968,11 @@ function PlasmicCapabilities__RenderFunc(props: {
                     data-plasmic-override={overrides.p}
                     className={classNames("all", sty.p)}
                   >
-                    {false ? (
+                    {(
+                      hasVariant(globalVariants, "screen", "desktop")
+                        ? true
+                        : false
+                    ) ? (
                       <p
                         className={classNames(
                           "all",
@@ -1051,12 +1064,21 @@ function PlasmicCapabilities__RenderFunc(props: {
                                 : "640px"
                   }
                   loading={"lazy"}
-                  src={{
-                    src: "/plasmic/sterling_and_buena_vista_foods/images/imagePng2.png",
-                    fullWidth: 639,
-                    fullHeight: 610,
-                    aspectRatio: undefined
-                  }}
+                  src={
+                    hasVariant(globalVariants, "screen", "desktop")
+                      ? {
+                          src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodWeighingFlourPng.png",
+                          fullWidth: 680,
+                          fullHeight: 553,
+                          aspectRatio: undefined
+                        }
+                      : {
+                          src: "/plasmic/sterling_and_buena_vista_foods/images/imagePng2.png",
+                          fullWidth: 639,
+                          fullHeight: 610,
+                          aspectRatio: undefined
+                        }
+                  }
                 />
               </div>
             </div>
@@ -1652,7 +1674,11 @@ function PlasmicCapabilities__RenderFunc(props: {
                               data-plasmic-override={overrides.p3}
                               className={classNames("all", sty.p3)}
                             >
-                              {false ? (
+                              {(
+                                hasVariant(globalVariants, "screen", "desktop")
+                                  ? true
+                                  : false
+                              ) ? (
                                 <p
                                   className={classNames(
                                     "all",
@@ -3337,15 +3363,30 @@ function PlasmicCapabilities__RenderFunc(props: {
                                     "smallDesktop"
                                   )
                                 ? "472px"
-                                : "640px"
+                                : hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "desktop"
+                                    )
+                                  ? "575px"
+                                  : "640px"
                   }
                   loading={"lazy"}
-                  src={{
-                    src: "/plasmic/sterling_and_buena_vista_foods/images/imagePng2.png",
-                    fullWidth: 639,
-                    fullHeight: 610,
-                    aspectRatio: undefined
-                  }}
+                  src={
+                    hasVariant(globalVariants, "screen", "desktop")
+                      ? {
+                          src: "/plasmic/sterling_and_buena_vista_foods/images/group1Png4.png",
+                          fullWidth: 698,
+                          fullHeight: 591,
+                          aspectRatio: undefined
+                        }
+                      : {
+                          src: "/plasmic/sterling_and_buena_vista_foods/images/imagePng2.png",
+                          fullWidth: 639,
+                          fullHeight: 610,
+                          aspectRatio: undefined
+                        }
+                  }
                 />
 
                 <div
@@ -3600,15 +3641,30 @@ function PlasmicCapabilities__RenderFunc(props: {
                                     "smallDesktop"
                                   )
                                 ? "472px"
-                                : "640px"
+                                : hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "desktop"
+                                    )
+                                  ? "575px"
+                                  : "640px"
                   }
                   loading={"lazy"}
-                  src={{
-                    src: "/plasmic/sterling_and_buena_vista_foods/images/imagePng2.png",
-                    fullWidth: 639,
-                    fullHeight: 610,
-                    aspectRatio: undefined
-                  }}
+                  src={
+                    hasVariant(globalVariants, "screen", "desktop")
+                      ? {
+                          src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodManufacturingExcellencePng.png",
+                          fullWidth: 680,
+                          fullHeight: 553,
+                          aspectRatio: undefined
+                        }
+                      : {
+                          src: "/plasmic/sterling_and_buena_vista_foods/images/imagePng2.png",
+                          fullWidth: 639,
+                          fullHeight: 610,
+                          aspectRatio: undefined
+                        }
+                  }
                 />
               </div>
             </div>

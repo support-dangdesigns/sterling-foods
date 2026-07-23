@@ -55,6 +55,11 @@
   max-width: 100%;
   flex-shrink: 0;
 }
+@media (max-width: 757px) {
+  .topHero:global(.__wab_instance) {
+    flex-shrink: 0;
+  }
+}
 .capabilitiesBody {
   animation: none;
   display: flex;
@@ -448,6 +453,8 @@
 @media (max-width: 1920px) {
   .foodSafety {
     animation: none;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 @media (max-width: 1512px) {
@@ -619,6 +626,10 @@
 @media (max-width: 1920px) {
   .text {
     animation: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    column-gap: 0px;
   }
 }
 @media (max-width: 1512px) {
@@ -687,6 +698,10 @@
 @media (max-width: 1920px) {
   .title {
     animation: none;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    row-gap: 0px;
   }
 }
 @media (max-width: 1280px) {
@@ -772,6 +787,11 @@
   text-overflow: clip;
   pointer-events: none;
 }
+@media (max-width: 1920px) {
+  .h4__jLL4 {
+    align-self: center;
+  }
+}
 @media (max-width: 1280px) {
   .h4__jLL4 {
     animation: none;
@@ -792,7 +812,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  column-gap: 20px;
+  column-gap: 10px;
   min-width: 0;
   padding: 0px;
 }
@@ -803,6 +823,11 @@
   height: 45px;
   color: var(--token-Xx7oe00aHq8H);
   flex-shrink: 0;
+}
+@media (max-width: 1920px) {
+  .svg__f8ZBs {
+    color: var(--token-Q67gH6ouJM2i);
+  }
 }
 .p__bwWpc {
   animation: none;
@@ -873,7 +898,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  column-gap: 20px;
+  column-gap: 10px;
   min-width: 0;
   padding: 0px;
 }
@@ -893,6 +918,7 @@
 @media (max-width: 1920px) {
   .svg__vgXts {
     width: auto;
+    color: var(--token-Q67gH6ouJM2i);
   }
 }
 .p__iIfmI {
@@ -964,7 +990,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  column-gap: 20px;
+  column-gap: 10px;
   min-width: 0;
   padding: 0px;
 }
@@ -975,6 +1001,11 @@
   height: 45px;
   color: var(--token-Xx7oe00aHq8H);
   flex-shrink: 0;
+}
+@media (max-width: 1920px) {
+  .svg__iHzL4 {
+    color: var(--token-Q67gH6ouJM2i);
+  }
 }
 .p__qhmDb {
   animation: none;
@@ -1047,7 +1078,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  column-gap: 20px;
+  column-gap: 10px;
   min-width: 0;
   padding: 0px;
 }
@@ -1058,6 +1089,11 @@
   height: 45px;
   color: var(--token-Xx7oe00aHq8H);
   flex-shrink: 0;
+}
+@media (max-width: 1920px) {
+  .svg__ivJr {
+    color: var(--token-Q67gH6ouJM2i);
+  }
 }
 .p__oPqi {
   animation: none;
@@ -1129,7 +1165,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  column-gap: 20px;
+  column-gap: 10px;
   min-width: 0;
   padding: 0px;
 }
@@ -1140,6 +1176,11 @@
   height: 45px;
   color: var(--token-Xx7oe00aHq8H);
   flex-shrink: 0;
+}
+@media (max-width: 1920px) {
+  .svg__dQgMx {
+    color: var(--token-Q67gH6ouJM2i);
+  }
 }
 .p__tKfjj {
   animation: none;
@@ -1211,7 +1252,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  column-gap: 20px;
+  column-gap: 10px;
   min-width: 0;
   padding: 0px;
 }
@@ -1222,6 +1263,11 @@
   height: 45px;
   color: var(--token-Xx7oe00aHq8H);
   flex-shrink: 0;
+}
+@media (max-width: 1920px) {
+  .svg__msCfw {
+    color: var(--token-Q67gH6ouJM2i);
+  }
 }
 .p__bnxPq {
   animation: none;
@@ -1293,7 +1339,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  column-gap: 20px;
+  column-gap: 10px;
   min-width: 0;
   padding: 0px;
 }
@@ -1304,6 +1350,11 @@
   height: 45px;
   color: var(--token-Xx7oe00aHq8H);
   flex-shrink: 0;
+}
+@media (max-width: 1920px) {
+  .svg__sTnZn {
+    color: var(--token-Q67gH6ouJM2i);
+  }
 }
 .p__wQpcg {
   animation: none;
@@ -1385,13 +1436,16 @@
 @media (max-width: 1920px) {
   .foodSafety2 {
     animation: none;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 166px;
   }
 }
 @media (max-width: 1512px) {
   .foodSafety2 {
     animation: none;
     width: auto;
-    padding: 50px;
+    padding: 50px 50px 70px;
   }
 }
 @media (max-width: 1440px) {
@@ -1552,6 +1606,10 @@
 @media (max-width: 1920px) {
   .title2 {
     animation: none;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    row-gap: 0px;
   }
 }
 @media (max-width: 1280px) {
@@ -1636,6 +1694,11 @@
   text-overflow: clip;
   pointer-events: none;
 }
+@media (max-width: 1920px) {
+  .h4__eZa4T {
+    align-self: center;
+  }
+}
 @media (max-width: 1280px) {
   .h4__eZa4T {
     animation: none;
@@ -1659,6 +1722,11 @@
   row-gap: 20px;
   min-width: 0;
   padding: 0px;
+}
+@media (max-width: 1920px) {
+  .p {
+    align-self: flex-start;
+  }
 }
 .p__vqh1N {
   animation: none;
@@ -1686,6 +1754,8 @@
     animation: none;
     width: 739px;
     padding-bottom: 0px;
+    align-self: flex-start;
+    display: block;
   }
 }
 @media (max-width: 1200px) {
@@ -1746,6 +1816,7 @@
   .p__h7RCo {
     animation: none;
     width: 739px;
+    align-self: flex-start;
   }
 }
 @media (max-width: 1200px) {
@@ -1806,6 +1877,7 @@
   .p__rVgP1 {
     animation: none;
     width: 739px;
+    align-self: flex-start;
   }
 }
 @media (max-width: 1200px) {
@@ -3352,6 +3424,7 @@
   .p__gdIn1 {
     animation: none;
     width: 739px;
+    display: block;
   }
 }
 @media (max-width: 1200px) {
@@ -7086,6 +7159,8 @@
 @media (max-width: 1920px) {
   .foodSafety3 {
     animation: none;
+    padding-right: 0px;
+    padding-left: 0px;
   }
 }
 @media (max-width: 1512px) {
@@ -7178,6 +7253,12 @@
 .img__xg7Rd > picture > img {
   object-fit: cover;
 }
+@media (max-width: 1920px) {
+  .img__xg7Rd {
+    width: 575px;
+    flex-shrink: 0;
+  }
+}
 @media (max-width: 1512px) {
   .img__xg7Rd {
     animation: none;
@@ -7257,6 +7338,7 @@
 @media (max-width: 1920px) {
   .text3 {
     animation: none;
+    padding-right: 0px;
   }
 }
 @media (max-width: 1512px) {
@@ -7325,6 +7407,10 @@
 @media (max-width: 1920px) {
   .title8 {
     animation: none;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    row-gap: 0px;
   }
 }
 @media (max-width: 1280px) {
@@ -7374,6 +7460,11 @@
   text-decoration-line: none;
   text-overflow: clip;
   pointer-events: none;
+}
+@media (max-width: 1920px) {
+  .h4__nwgZ6 {
+    align-self: center;
+  }
 }
 @media (max-width: 1280px) {
   .h4__nwgZ6 {
@@ -7459,6 +7550,7 @@
   .p___37EN {
     animation: none;
     width: 739px;
+    align-self: flex-start;
   }
 }
 @media (max-width: 1200px) {
@@ -7520,6 +7612,8 @@
 @media (max-width: 1920px) {
   .foodSafety4 {
     animation: none;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 @media (max-width: 1512px) {
@@ -7687,6 +7781,11 @@
 @media (max-width: 1920px) {
   .title9 {
     animation: none;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    align-self: center;
+    row-gap: 0px;
   }
 }
 @media (max-width: 1280px) {
@@ -7735,6 +7834,11 @@
   text-decoration-line: none;
   text-overflow: clip;
   pointer-events: none;
+}
+@media (max-width: 1920px) {
+  .h4__jvoqm {
+    align-self: center;
+  }
 }
 @media (max-width: 1280px) {
   .h4__jvoqm {
@@ -7820,6 +7924,7 @@
   .p__jjt8 {
     animation: none;
     width: 739px;
+    align-self: flex-start;
   }
 }
 @media (max-width: 1200px) {
@@ -7880,6 +7985,7 @@
   .p___6TOet {
     animation: none;
     width: 739px;
+    align-self: flex-start;
   }
 }
 @media (max-width: 1200px) {
@@ -7933,6 +8039,12 @@
 }
 .img__cAa9O > picture > img {
   object-fit: cover;
+}
+@media (max-width: 1920px) {
+  .img__cAa9O {
+    width: 575px;
+    flex-shrink: 0;
+  }
 }
 @media (max-width: 1512px) {
   .img__cAa9O {

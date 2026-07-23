@@ -721,11 +721,7 @@ function PlasmicMarkets__RenderFunc(props: {
                   <PlasmicImg__
                     alt={""}
                     className={classNames(sty.img__kcvXq)}
-                    displayHeight={
-                      hasVariant(globalVariants, "screen", "tablet")
-                        ? "372px"
-                        : "auto"
-                    }
+                    displayHeight={"auto"}
                     displayMaxHeight={"none"}
                     displayMaxWidth={
                       hasVariant(globalVariants, "screen", "mediumDesktop")
@@ -741,15 +737,13 @@ function PlasmicMarkets__RenderFunc(props: {
                           ? "85.94%"
                           : hasVariant(globalVariants, "screen", "smallTablet")
                             ? "50%"
-                            : hasVariant(globalVariants, "screen", "tablet")
-                              ? "47.46%"
-                              : hasVariant(
-                                    globalVariants,
-                                    "screen",
-                                    "mediumDesktop"
-                                  )
-                                ? "auto"
-                                : "698px"
+                            : hasVariant(
+                                  globalVariants,
+                                  "screen",
+                                  "mediumDesktop"
+                                )
+                              ? "auto"
+                              : "698px"
                     }
                     loading={"lazy"}
                     src={{
@@ -853,7 +847,11 @@ function PlasmicMarkets__RenderFunc(props: {
                       : "627px"
                 }
                 displayMaxHeight={"none"}
-                displayMaxWidth={"100%"}
+                displayMaxWidth={
+                  hasVariant(globalVariants, "screen", "smallLaptop")
+                    ? "80%"
+                    : "100%"
+                }
                 displayMinHeight={"0"}
                 displayMinWidth={"0"}
                 displayWidth={"1020px"}
@@ -881,19 +879,21 @@ function PlasmicMarkets__RenderFunc(props: {
                   className={classNames(sty.img___3FxH)}
                   displayHeight={"auto"}
                   displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
+                  displayMaxWidth={
+                    hasVariant(globalVariants, "screen", "smallTablet")
+                      ? "70%"
+                      : hasVariant(globalVariants, "screen", "tablet")
+                        ? "90%"
+                        : "100%"
+                  }
                   displayMinHeight={"0"}
                   displayMinWidth={"0"}
                   displayWidth={
-                    hasVariant(globalVariants, "screen", "dualScreen")
-                      ? "100%"
-                      : hasVariant(globalVariants, "screen", "smallTablet")
-                        ? "100%"
-                        : hasVariant(globalVariants, "screen", "tablet")
-                          ? "auto"
-                          : hasVariant(globalVariants, "screen", "laptop")
-                            ? "45%"
-                            : "710px"
+                    hasVariant(globalVariants, "screen", "tablet")
+                      ? "auto"
+                      : hasVariant(globalVariants, "screen", "laptop")
+                        ? "45%"
+                        : "710px"
                   }
                   loading={"lazy"}
                   src={{
@@ -1089,21 +1089,23 @@ function PlasmicMarkets__RenderFunc(props: {
                       : "auto"
                   }
                   displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
+                  displayMaxWidth={
+                    hasVariant(globalVariants, "screen", "smallTablet")
+                      ? "70%"
+                      : hasVariant(globalVariants, "screen", "tablet")
+                        ? "90%"
+                        : "100%"
+                  }
                   displayMinHeight={"0"}
                   displayMinWidth={"0"}
                   displayWidth={
-                    hasVariant(globalVariants, "screen", "dualScreen")
-                      ? "100%"
-                      : hasVariant(globalVariants, "screen", "smallTablet")
-                        ? "auto"
-                        : hasVariant(globalVariants, "screen", "tablet")
-                          ? "auto"
-                          : hasVariant(globalVariants, "screen", "smallLaptop")
-                            ? "40%"
-                            : hasVariant(globalVariants, "screen", "laptop")
-                              ? "45%"
-                              : "698px"
+                    hasVariant(globalVariants, "screen", "tablet")
+                      ? "auto"
+                      : hasVariant(globalVariants, "screen", "smallLaptop")
+                        ? "40%"
+                        : hasVariant(globalVariants, "screen", "laptop")
+                          ? "45%"
+                          : "698px"
                   }
                   loading={"lazy"}
                   src={{

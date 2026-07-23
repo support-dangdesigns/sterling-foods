@@ -24,7 +24,7 @@ export interface MenuItemsLinksProps extends DefaultMenuItemsLinksProps {}
 
 function MenuItemsLinks_(
   props: MenuItemsLinksProps,
-  ref: HTMLElementRefOf<"div">
+  ref: HTMLElementRefOf<"a">
 ) {
   // Use PlasmicMenuItemsLinks to render this component as it was
   // designed in Plasmic, by activating the appropriate variants,
@@ -41,7 +41,7 @@ function MenuItemsLinks_(
   // By default, we are just piping all MenuItemsLinksProps here, but feel free
   // to do whatever works for you.
 
-  return <PlasmicMenuItemsLinks root={{ ref }} {...props} />;
+  return <PlasmicMenuItemsLinks quickLinks={{ ref }} {...props} />;
 }
 
 const MenuItemsLinks = React.forwardRef(MenuItemsLinks_);

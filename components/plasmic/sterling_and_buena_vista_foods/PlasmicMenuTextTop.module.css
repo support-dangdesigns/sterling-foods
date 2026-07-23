@@ -1,0 +1,22 @@
+.root {
+  animation: none;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  line-height: 45px;
+  font-family: "Georgia";
+  font-size: 45px;
+  color: var(--token-sP5FKk2rRQuW);
+  position: relative;
+  min-width: 0;
+}
+@media (max-width: 757px) {
+  .root {
+    font-size: 35px;
+    text-align: center;
+    line-height: 40px;
+  }
+}
+.root:hover:hover {
+  color: var(--token-Q67gH6ouJM2i);
+}

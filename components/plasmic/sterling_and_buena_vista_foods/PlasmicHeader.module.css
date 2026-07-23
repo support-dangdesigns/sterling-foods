@@ -365,6 +365,7 @@
 }
 .expandMenu {
   animation: none;
+  display: flex;
   flex-direction: column;
   position: relative;
   width: 100%;
@@ -386,7 +387,6 @@
   overflow: visible;
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.2);
   min-width: 0;
-  display: none;
   -webkit-transition-property: transform;
   -webkit-transition-timing-function: ease-in;
   -webkit-transition-duration: 1s;

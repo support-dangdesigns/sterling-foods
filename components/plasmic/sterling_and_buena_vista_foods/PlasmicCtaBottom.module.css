@@ -552,11 +552,7 @@
 .primaryBtn:global(.__wab_instance) {
   max-width: 100%;
   width: 353px;
-  transition-property: all;
-  transition-duration: 1s;
   flex-shrink: 0;
-  -webkit-transition-property: all;
-  -webkit-transition-duration: 1s;
 }
 @media (max-width: 1920px) {
   .primaryBtn:global(.__wab_instance) {

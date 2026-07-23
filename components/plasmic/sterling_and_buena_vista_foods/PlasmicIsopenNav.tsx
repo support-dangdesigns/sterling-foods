@@ -65,6 +65,7 @@ import {
   usePlasmicInvalidate
 } from "@plasmicapp/react-web/lib/data-sources";
 
+import TopMenuLinks from "../../TopMenuLinks"; // plasmic-import: VjQboKjcXrTl/component
 import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/styleTokensProvider
@@ -73,8 +74,6 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 
 import sty from "./PlasmicIsopenNav.module.css"; // plasmic-import: gGkWrZU4DY6g/css
 
-import FacebookSvgrepoCom1SvgIcon from "./icons/PlasmicIcon__FacebookSvgrepoCom1Svg"; // plasmic-import: tl3LiQrNP2Nf/icon
-import InstagramSvgrepoCom5SvgIcon from "./icons/PlasmicIcon__InstagramSvgrepoCom5Svg"; // plasmic-import: 4-9LDmZK4HPz/icon
 import Linkedin161SvgrepoCom2SvgIcon from "./icons/PlasmicIcon__Linkedin161SvgrepoCom2Svg"; // plasmic-import: AIRz8ScytNC6/icon
 
 createPlasmicElementProxy;
@@ -104,6 +103,8 @@ export type PlasmicIsopenNav__OverridesType = {
   _11?: Flex__<"a"> & Partial<LinkProps>;
   _12?: Flex__<"a"> & Partial<LinkProps>;
   _13?: Flex__<"a"> & Partial<LinkProps>;
+  link?: Flex__<"a"> & Partial<LinkProps>;
+  svg?: Flex__<"svg">;
 };
 
 export interface DefaultIsopenNavProps {
@@ -257,7 +258,13 @@ function PlasmicIsopenNav__RenderFunc(props: {
           data-plasmic-name={"img"}
           data-plasmic-override={overrides.img}
           alt={""}
-          className={classNames(sty.img)}
+          className={classNames(sty.img, {
+            [sty.imganimateImage]: hasVariant(
+              $state,
+              "animateImage",
+              "animateImage"
+            )
+          })}
           displayHeight={"auto"}
           displayMaxHeight={"none"}
           displayMaxWidth={"710px"}
@@ -290,7 +297,15 @@ function PlasmicIsopenNav__RenderFunc(props: {
         />
       </div>
       <div className={classNames("all", sty.freeBox__cek1N)}>
-        <div className={classNames("all", sty.freeBox__mc2Vk)}>
+        <div
+          className={classNames("all", sty.freeBox__mc2Vk, {
+            [sty.freeBoxanimateImage__mc2VkSrhyo]: hasVariant(
+              $state,
+              "animateImage",
+              "animateImage"
+            )
+          })}
+        >
           <PlasmicLink__
             data-plasmic-name={"_1"}
             data-plasmic-override={overrides._1}
@@ -400,54 +415,49 @@ function PlasmicIsopenNav__RenderFunc(props: {
             }}
             platform={"nextjs"}
           >
-            <h3
-              className={classNames(
-                "all",
-                "h3",
-                "h3__uyaK1",
-                "__wab_text",
-                sty.h3__ftqeH
-              )}
-              onMouseEnter={async event => {
-                const $steps = {};
-
-                $steps["updateVariant"] = true
-                  ? (() => {
-                      const actionArgs = {};
-                      return (({ vgroup, value }) => {
-                        if (typeof value === "string") {
-                          value = [value];
-                        }
-                        undefined;
-                      })?.apply(null, [actionArgs]);
-                    })()
-                  : undefined;
-                if (
-                  $steps["updateVariant"] != null &&
-                  typeof $steps["updateVariant"] === "object" &&
-                  typeof $steps["updateVariant"].then === "function"
-                ) {
-                  $steps["updateVariant"] = await $steps["updateVariant"];
-                }
-              }}
+            <TopMenuLinks
+              className={classNames("__wab_instance", sty.topMenuLinks___6LOgu)}
             >
-              <React.Fragment>
-                {(() => {
-                  try {
-                    return $queries.headerComponent.data.response.data.component
-                      .components.menu[0].menuitem;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return "";
-                    }
-                    throw e;
+              <div
+                className={classNames("all", "__wab_text", sty.text__qSUz)}
+                onMouseEnter={async event => {
+                  const $steps = {};
+
+                  $steps["updateStateVariable"] = true
+                    ? (() => {
+                        const actionArgs = {};
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+                          undefined;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateStateVariable"] != null &&
+                    typeof $steps["updateStateVariable"] === "object" &&
+                    typeof $steps["updateStateVariable"].then === "function"
+                  ) {
+                    $steps["updateStateVariable"] =
+                      await $steps["updateStateVariable"];
                   }
-                })()}
-              </React.Fragment>
-            </h3>
+                }}
+              >
+                <React.Fragment>
+                  {
+                    $queries.headerComponent.data.response.data.component
+                      .components.menu[0].menuitem
+                  }
+                </React.Fragment>
+              </div>
+            </TopMenuLinks>
           </PlasmicLink__>
           <PlasmicLink__
             data-plasmic-name={"_8"}
@@ -552,39 +562,49 @@ function PlasmicIsopenNav__RenderFunc(props: {
             }}
             platform={"nextjs"}
           >
-            <h3
-              className={classNames(
-                "all",
-                "h3",
-                "h3__uyaK1",
-                "__wab_text",
-                sty.h3__bb2I,
-                {
-                  [sty.h3animateImage__bb2Isrhyo]: hasVariant(
-                    $state,
-                    "animateImage",
-                    "animateImage"
-                  )
-                }
-              )}
+            <TopMenuLinks
+              className={classNames("__wab_instance", sty.topMenuLinks___6QpM)}
             >
-              <React.Fragment>
-                {(() => {
-                  try {
-                    return $queries.headerComponent.data.response.data.component
-                      .components.menu[1].menuitem;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return "Capabilities";
-                    }
-                    throw e;
+              <div
+                className={classNames("all", "__wab_text", sty.text__jFzyE)}
+                onMouseEnter={async event => {
+                  const $steps = {};
+
+                  $steps["updateStateVariable"] = true
+                    ? (() => {
+                        const actionArgs = {};
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+                          undefined;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateStateVariable"] != null &&
+                    typeof $steps["updateStateVariable"] === "object" &&
+                    typeof $steps["updateStateVariable"].then === "function"
+                  ) {
+                    $steps["updateStateVariable"] =
+                      await $steps["updateStateVariable"];
                   }
-                })()}
-              </React.Fragment>
-            </h3>
+                }}
+              >
+                <React.Fragment>
+                  {
+                    $queries.headerComponent.data.response.data.component
+                      .components.menu[1].menuitem
+                  }
+                </React.Fragment>
+              </div>
+            </TopMenuLinks>
           </PlasmicLink__>
           <PlasmicLink__
             data-plasmic-name={"_9"}
@@ -689,32 +709,49 @@ function PlasmicIsopenNav__RenderFunc(props: {
             }}
             platform={"nextjs"}
           >
-            <h3
-              className={classNames(
-                "all",
-                "h3",
-                "h3__uyaK1",
-                "__wab_text",
-                sty.h3___3WhdV
-              )}
+            <TopMenuLinks
+              className={classNames("__wab_instance", sty.topMenuLinks__gyBem)}
             >
-              <React.Fragment>
-                {(() => {
-                  try {
-                    return $queries.headerComponent.data.response.data.component
-                      .components.menu[2].menuitem;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return "Markets";
-                    }
-                    throw e;
+              <div
+                className={classNames("all", "__wab_text", sty.text__dDoV)}
+                onMouseEnter={async event => {
+                  const $steps = {};
+
+                  $steps["updateStateVariable"] = true
+                    ? (() => {
+                        const actionArgs = {};
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+                          undefined;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateStateVariable"] != null &&
+                    typeof $steps["updateStateVariable"] === "object" &&
+                    typeof $steps["updateStateVariable"].then === "function"
+                  ) {
+                    $steps["updateStateVariable"] =
+                      await $steps["updateStateVariable"];
                   }
-                })()}
-              </React.Fragment>
-            </h3>
+                }}
+              >
+                <React.Fragment>
+                  {
+                    $queries.headerComponent.data.response.data.component
+                      .components.menu[2].menuitem
+                  }
+                </React.Fragment>
+              </div>
+            </TopMenuLinks>
           </PlasmicLink__>
           <PlasmicLink__
             data-plasmic-name={"_10"}
@@ -819,37 +856,60 @@ function PlasmicIsopenNav__RenderFunc(props: {
             }}
             platform={"nextjs"}
           >
-            <h3
-              className={classNames(
-                "all",
-                "h3",
-                "h3__uyaK1",
-                "__wab_text",
-                sty.h3__nQoU3
-              )}
+            <TopMenuLinks
+              className={classNames("__wab_instance", sty.topMenuLinks__dtk3O)}
             >
-              <React.Fragment>
-                {(() => {
-                  try {
-                    return $queries.headerComponent.data.response.data.component
-                      .components.menu[3].menuitem;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return "Our Facilities";
-                    }
-                    throw e;
+              <div
+                className={classNames("all", "__wab_text", sty.text__ijm3M)}
+                onMouseEnter={async event => {
+                  const $steps = {};
+
+                  $steps["updateStateVariable"] = true
+                    ? (() => {
+                        const actionArgs = {};
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+                          undefined;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateStateVariable"] != null &&
+                    typeof $steps["updateStateVariable"] === "object" &&
+                    typeof $steps["updateStateVariable"].then === "function"
+                  ) {
+                    $steps["updateStateVariable"] =
+                      await $steps["updateStateVariable"];
                   }
-                })()}
-              </React.Fragment>
-            </h3>
+                }}
+              >
+                <React.Fragment>
+                  {
+                    $queries.headerComponent.data.response.data.component
+                      .components.menu[3].menuitem
+                  }
+                </React.Fragment>
+              </div>
+            </TopMenuLinks>
           </PlasmicLink__>
           <PlasmicLink__
             data-plasmic-name={"_11"}
             data-plasmic-override={overrides._11}
-            className={classNames("all", "a", "a__uyaK1", sty._11)}
+            className={classNames("all", "a", "a__uyaK1", sty._11, {
+              [sty._11animateImage]: hasVariant(
+                $state,
+                "animateImage",
+                "animateImage"
+              )
+            })}
             component={Link}
             href={`/quality-safety`}
             legacyBehavior={false}
@@ -949,32 +1009,49 @@ function PlasmicIsopenNav__RenderFunc(props: {
             }}
             platform={"nextjs"}
           >
-            <h3
-              className={classNames(
-                "all",
-                "h3",
-                "h3__uyaK1",
-                "__wab_text",
-                sty.h3__pa7Rv
-              )}
+            <TopMenuLinks
+              className={classNames("__wab_instance", sty.topMenuLinks__qr6Sb)}
             >
-              <React.Fragment>
-                {(() => {
-                  try {
-                    return $queries.headerComponent.data.response.data.component
-                      .components.menu[4].menuitem;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return "About us";
-                    }
-                    throw e;
+              <div
+                className={classNames("all", "__wab_text", sty.text__jGzCe)}
+                onMouseEnter={async event => {
+                  const $steps = {};
+
+                  $steps["updateStateVariable"] = true
+                    ? (() => {
+                        const actionArgs = {};
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+                          undefined;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateStateVariable"] != null &&
+                    typeof $steps["updateStateVariable"] === "object" &&
+                    typeof $steps["updateStateVariable"].then === "function"
+                  ) {
+                    $steps["updateStateVariable"] =
+                      await $steps["updateStateVariable"];
                   }
-                })()}
-              </React.Fragment>
-            </h3>
+                }}
+              >
+                <React.Fragment>
+                  {
+                    $queries.headerComponent.data.response.data.component
+                      .components.menu[4].menuitem
+                  }
+                </React.Fragment>
+              </div>
+            </TopMenuLinks>
           </PlasmicLink__>
           <PlasmicLink__
             data-plasmic-name={"_12"}
@@ -1079,32 +1156,49 @@ function PlasmicIsopenNav__RenderFunc(props: {
             }}
             platform={"nextjs"}
           >
-            <h3
-              className={classNames(
-                "all",
-                "h3",
-                "h3__uyaK1",
-                "__wab_text",
-                sty.h3___8F302
-              )}
+            <TopMenuLinks
+              className={classNames("__wab_instance", sty.topMenuLinks__pw0VN)}
             >
-              <React.Fragment>
-                {(() => {
-                  try {
-                    return $queries.headerComponent.data.response.data.component
-                      .components.menu[5].menuitem;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return "Careers";
-                    }
-                    throw e;
+              <div
+                className={classNames("all", "__wab_text", sty.text___9V80F)}
+                onMouseEnter={async event => {
+                  const $steps = {};
+
+                  $steps["updateStateVariable"] = true
+                    ? (() => {
+                        const actionArgs = {};
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+                          undefined;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateStateVariable"] != null &&
+                    typeof $steps["updateStateVariable"] === "object" &&
+                    typeof $steps["updateStateVariable"].then === "function"
+                  ) {
+                    $steps["updateStateVariable"] =
+                      await $steps["updateStateVariable"];
                   }
-                })()}
-              </React.Fragment>
-            </h3>
+                }}
+              >
+                <React.Fragment>
+                  {
+                    $queries.headerComponent.data.response.data.component
+                      .components.menu[5].menuitem
+                  }
+                </React.Fragment>
+              </div>
+            </TopMenuLinks>
           </PlasmicLink__>
           <PlasmicLink__
             data-plasmic-name={"_13"}
@@ -1209,67 +1303,56 @@ function PlasmicIsopenNav__RenderFunc(props: {
             }}
             platform={"nextjs"}
           >
-            <h3
-              className={classNames(
-                "all",
-                "h3",
-                "h3__uyaK1",
-                "__wab_text",
-                sty.h3__bDjXc
-              )}
+            <TopMenuLinks
+              className={classNames("__wab_instance", sty.topMenuLinks__yEuy4)}
             >
-              <React.Fragment>
-                {(() => {
-                  try {
-                    return $queries.headerComponent.data.response.data.component
-                      .components.menu[6].menuitem;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return "Contact";
-                    }
-                    throw e;
+              <div
+                className={classNames("all", "__wab_text", sty.text__n7Zkf)}
+                onMouseEnter={async event => {
+                  const $steps = {};
+
+                  $steps["updateStateVariable"] = true
+                    ? (() => {
+                        const actionArgs = {};
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+                          undefined;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateStateVariable"] != null &&
+                    typeof $steps["updateStateVariable"] === "object" &&
+                    typeof $steps["updateStateVariable"].then === "function"
+                  ) {
+                    $steps["updateStateVariable"] =
+                      await $steps["updateStateVariable"];
                   }
-                })()}
-              </React.Fragment>
-            </h3>
+                }}
+              >
+                <React.Fragment>
+                  {
+                    $queries.headerComponent.data.response.data.component
+                      .components.menu[6].menuitem
+                  }
+                </React.Fragment>
+              </div>
+            </TopMenuLinks>
           </PlasmicLink__>
         </div>
         <div className={classNames("all", sty.freeBox__wqMwo)}>
           <PlasmicLink__
-            className={classNames("all", "a", "a__uyaK1", sty.link___04GZ)}
-            component={Link}
-            href={
-              $queries.headerComponent.data.response.data.component.components
-                .socialMedia[0].urlSocial
-            }
-            legacyBehavior={false}
-            platform={"nextjs"}
-          >
-            <FacebookSvgrepoCom1SvgIcon
-              className={classNames("all", sty.svg___90NHv)}
-              role={"img"}
-            />
-          </PlasmicLink__>
-          <PlasmicLink__
-            className={classNames("all", "a", "a__uyaK1", sty.link__cjEy)}
-            component={Link}
-            href={
-              $queries.headerComponent.data.response.data.component.components
-                .socialMedia[1].urlSocial
-            }
-            legacyBehavior={false}
-            platform={"nextjs"}
-          >
-            <InstagramSvgrepoCom5SvgIcon
-              className={classNames("all", sty.svg___4UZcw)}
-              role={"img"}
-            />
-          </PlasmicLink__>
-          <PlasmicLink__
-            className={classNames("all", "a", "a__uyaK1", sty.link__pUfms)}
+            data-plasmic-name={"link"}
+            data-plasmic-override={overrides.link}
+            className={classNames("all", "a", "a__uyaK1", sty.link)}
             component={Link}
             href={
               $queries.headerComponent.data.response.data.component.components
@@ -1279,7 +1362,9 @@ function PlasmicIsopenNav__RenderFunc(props: {
             platform={"nextjs"}
           >
             <Linkedin161SvgrepoCom2SvgIcon
-              className={classNames("all", sty.svg__lufdY)}
+              data-plasmic-name={"svg"}
+              data-plasmic-override={overrides.svg}
+              className={classNames("all", sty.svg)}
               role={"img"}
             />
           </PlasmicLink__>
@@ -1290,7 +1375,19 @@ function PlasmicIsopenNav__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  isopenNav: ["isopenNav", "img", "_1", "_8", "_9", "_10", "_11", "_12", "_13"],
+  isopenNav: [
+    "isopenNav",
+    "img",
+    "_1",
+    "_8",
+    "_9",
+    "_10",
+    "_11",
+    "_12",
+    "_13",
+    "link",
+    "svg"
+  ],
   img: ["img"],
   _1: ["_1"],
   _8: ["_8"],
@@ -1298,7 +1395,9 @@ const PlasmicDescendants = {
   _10: ["_10"],
   _11: ["_11"],
   _12: ["_12"],
-  _13: ["_13"]
+  _13: ["_13"],
+  link: ["link", "svg"],
+  svg: ["svg"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -1313,6 +1412,8 @@ type NodeDefaultElementType = {
   _11: "a";
   _12: "a";
   _13: "a";
+  link: "a";
+  svg: "svg";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -1385,6 +1486,8 @@ export const PlasmicIsopenNav = Object.assign(
     _11: makeNodeComponent("_11"),
     _12: makeNodeComponent("_12"),
     _13: makeNodeComponent("_13"),
+    link: makeNodeComponent("link"),
+    svg: makeNodeComponent("svg"),
 
     // Metadata about props expected for PlasmicIsopenNav
     internalVariantProps: PlasmicIsopenNav__VariantProps,

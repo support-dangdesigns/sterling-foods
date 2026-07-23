@@ -365,7 +365,7 @@ function PlasmicHeader__RenderFunc(props: {
                   throw e;
                 }
               })()
-            : true
+            : $state.expanded
       ) ? (
         <div
           data-plasmic-name={"expandMenu"}

@@ -27902,6 +27902,32 @@
           "cssFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicQuickLinks.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "cD_1RMSQBY3m",
+          "name": "MenuTextTop",
+          "type": "managed",
+          "projectId": "uyaK17nhz8WhGjYZfKjMhX",
+          "renderModuleFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicMenuTextTop.tsx",
+          "importSpec": {
+            "modulePath": "MenuTextTop.tsx"
+          },
+          "cssFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicMenuTextTop.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "VjQboKjcXrTl",
+          "name": "TopMenuLinks",
+          "type": "managed",
+          "projectId": "uyaK17nhz8WhGjYZfKjMhX",
+          "renderModuleFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicTopMenuLinks.tsx",
+          "importSpec": {
+            "modulePath": "TopMenuLinks.tsx"
+          },
+          "cssFilePath": "plasmic/sterling_and_buena_vista_foods/PlasmicTopMenuLinks.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [

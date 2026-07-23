@@ -56,7 +56,7 @@
   justify-content: flex-start;
   align-items: center;
   overflow: visible;
-  justify-self: flex-start;
+  justify-self: center;
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
 }

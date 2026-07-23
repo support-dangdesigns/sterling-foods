@@ -81,6 +81,7 @@ import SecondaryBtn from "../../SecondaryBtn"; // plasmic-import: r3QPz6kMc0wE/c
 import Reviews from "../../Reviews"; // plasmic-import: QjfQfEfd1CGs/component
 import CtaBottom from "../../CtaBottom"; // plasmic-import: UmfSTsW6wMCz/component
 import Footer from "../../Footer"; // plasmic-import: RbMtVh1ii_PZ/component
+import FooterLinks from "../../FooterLinks"; // plasmic-import: oZjw7jibmivD/component
 import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: uyaK17nhz8WhGjYZfKjMhX/styleTokensProvider
@@ -161,6 +162,7 @@ export type PlasmicHome__OverridesType = {
   ctaBottom?: Flex__<typeof CtaBottom>;
   homeFooter?: Flex__<"div">;
   footer?: Flex__<typeof Footer>;
+  footerLinks?: Flex__<typeof FooterLinks>;
 };
 
 export interface DefaultHomeProps {}
@@ -190,7 +192,14 @@ export const serverQueryTree: QueryComponentNode = {
     }
   },
   propsContext: {},
-  stateSpecs: [],
+  stateSpecs: [
+    {
+      path: "footerLinks.linkPath",
+      type: "private",
+      variableType: "text",
+      initFunc: ({ $props, $state, $queries, $q, $ctx }) => ""
+    }
+  ],
   children: []
 };
 
@@ -231,13 +240,37 @@ function PlasmicHome__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const $q = usePlasmicQueries(serverQueryTree, { $ctx, $props, $state: null });
+  const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
+    () => [
+      {
+        path: "footerLinks.linkPath",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => ""
+      }
+    ],
+    [$props, $ctx, $refs]
+  );
+  const $stateRef = React.useRef<Record<string, unknown> | null>(null);
+  const $q = usePlasmicQueries(serverQueryTree, {
+    $ctx,
+    $props,
+    $state: $stateRef.current
+  });
 
   const globalVariants = _useGlobalVariants();
 
   let [$queries, setDollarQueries] = React.useState<
     Record<string, ReturnType<typeof usePlasmicDataOp>>
   >({});
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: $queries,
+    $q: $q,
+    $refs
+  });
+  $stateRef.current = $state;
 
   const new$Queries: Record<string, ReturnType<typeof usePlasmicDataOp>> = {
     test: usePlasmicDataOp(() => {
@@ -1767,6 +1800,29 @@ function PlasmicHome__RenderFunc(props: {
               />
             </div>
           </div>
+          <FooterLinks
+            data-plasmic-name={"footerLinks"}
+            data-plasmic-override={overrides.footerLinks}
+            className={classNames("__wab_instance", sty.footerLinks)}
+            linkPath={generateStateValueProp($state, [
+              "footerLinks",
+              "linkPath"
+            ])}
+            onLinkPathChange={async (...eventArgs: any) => {
+              generateStateOnChangeProp($state, [
+                "footerLinks",
+                "linkPath"
+              ]).apply(null, eventArgs);
+
+              if (
+                eventArgs.length > 1 &&
+                eventArgs[1] &&
+                eventArgs[1]._plasmic_state_init_
+              ) {
+                return;
+              }
+            }}
+          />
         </div>
       </div>
     </React.Fragment>
@@ -1801,7 +1857,8 @@ const PlasmicDescendants = {
     "reviews",
     "ctaBottom",
     "homeFooter",
-    "footer"
+    "footer",
+    "footerLinks"
   ],
   pageContainer: [
     "pageContainer",
@@ -1894,7 +1951,8 @@ const PlasmicDescendants = {
   reviews: ["reviews"],
   ctaBottom: ["ctaBottom"],
   homeFooter: ["homeFooter", "footer"],
-  footer: ["footer"]
+  footer: ["footer"],
+  footerLinks: ["footerLinks"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -1927,6 +1985,7 @@ type NodeDefaultElementType = {
   ctaBottom: typeof CtaBottom;
   homeFooter: "div";
   footer: typeof Footer;
+  footerLinks: typeof FooterLinks;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -2019,6 +2078,7 @@ export const PlasmicHome = Object.assign(
     ctaBottom: makeNodeComponent("ctaBottom"),
     homeFooter: makeNodeComponent("homeFooter"),
     footer: makeNodeComponent("footer"),
+    footerLinks: makeNodeComponent("footerLinks"),
 
     // Metadata about props expected for PlasmicHome
     internalVariantProps: PlasmicHome__VariantProps,

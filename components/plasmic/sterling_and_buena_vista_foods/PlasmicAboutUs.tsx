@@ -578,7 +578,12 @@ function PlasmicAboutUs__RenderFunc(props: {
                     )}
                   >
                     {hasVariant(globalVariants, "screen", "mediumDesktop") ? (
-                      <React.Fragment>{undefined}</React.Fragment>
+                      <React.Fragment>
+                        {
+                          $q.aboutUs.data.body.data.pageBy.pageContent
+                            .textArea[2].text
+                        }
+                      </React.Fragment>
                     ) : (
                       <React.Fragment>
                         {(() => {

@@ -41,6 +41,7 @@
   max-width: 100%;
   align-self: center;
   padding-top: 150px;
+  background: var(--token-RvPI6LyeIPmd);
   min-width: 0;
 }
 @media (max-width: 2000px) {
@@ -49,16 +50,14 @@
     justify-content: center;
     height: auto;
     padding-top: 150px;
-    background:
-      url("/plasmic/sterling_and_buena_vista_foods/images/hmpgheroAvif2.avif") top 100% left 50% / contain no-repeat,
-      var(--token-WxvvgatuPYoJ);
   }
 }
 @media (max-width: 1920px) {
   .homeHero {
+    text-align: center;
     background:
-      linear-gradient(var(--token-RvPI6LyeIPmd), var(--token-RvPI6LyeIPmd)),
-      url("/plasmic/sterling_and_buena_vista_foods/images/hmpgheroAvif2.avif") top 100% left 50% / contain no-repeat;
+      url("/plasmic/sterling_and_buena_vista_foods/images/hmpgheroAvif2.avif") bottom 0% right 0px / contain no-repeat,
+      var(--token-RvPI6LyeIPmd);
   }
 }
 @media (max-width: 1512px) {

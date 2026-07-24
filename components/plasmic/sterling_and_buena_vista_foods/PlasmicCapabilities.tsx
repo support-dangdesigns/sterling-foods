@@ -156,20 +156,6 @@ export type PlasmicCapabilities__OverridesType = {
   capabilitiesSection?: Flex__<"div">;
   tabs?: Flex__<"div">;
   tabs2?: Flex__<typeof AntdTabs>;
-  child?: Flex__<"div">;
-  title3?: Flex__<"div">;
-  p2?: Flex__<"div">;
-  ul?: Flex__<"div">;
-  bulletPoint8?: Flex__<"div">;
-  bulletPoint9?: Flex__<"div">;
-  bulletPoint10?: Flex__<"div">;
-  bulletPoint11?: Flex__<"div">;
-  bulletPoint12?: Flex__<"div">;
-  bulletPoint13?: Flex__<"div">;
-  bulletPoint14?: Flex__<"div">;
-  bulletPoint15?: Flex__<"div">;
-  child2?: Flex__<"div">;
-  sliderCarousel?: Flex__<typeof SliderWrapper>;
   child3?: Flex__<"div">;
   title4?: Flex__<"div">;
   p3?: Flex__<"div">;
@@ -196,34 +182,32 @@ export type PlasmicCapabilities__OverridesType = {
   bulletPoint29?: Flex__<"div">;
   bulletPoint30?: Flex__<"div">;
   bulletPoint31?: Flex__<"div">;
+  bulletPoint32?: Flex__<"div">;
+  bulletPoint33?: Flex__<"div">;
+  bulletPoint34?: Flex__<"div">;
+  bulletPoint35?: Flex__<"div">;
   child6?: Flex__<"div">;
   sliderCarousel3?: Flex__<typeof SliderWrapper>;
   child7?: Flex__<"div">;
   title6?: Flex__<"div">;
   p5?: Flex__<"div">;
   ul4?: Flex__<"div">;
-  bulletPoint32?: Flex__<"div">;
-  bulletPoint33?: Flex__<"div">;
-  bulletPoint34?: Flex__<"div">;
-  bulletPoint35?: Flex__<"div">;
   bulletPoint36?: Flex__<"div">;
   bulletPoint37?: Flex__<"div">;
   bulletPoint38?: Flex__<"div">;
   bulletPoint39?: Flex__<"div">;
+  bulletPoint40?: Flex__<"div">;
   child8?: Flex__<"div">;
   sliderCarousel4?: Flex__<typeof SliderWrapper>;
   child9?: Flex__<"div">;
   title7?: Flex__<"div">;
   p6?: Flex__<"div">;
   ul5?: Flex__<"div">;
-  bulletPoint40?: Flex__<"div">;
   bulletPoint41?: Flex__<"div">;
   bulletPoint42?: Flex__<"div">;
   bulletPoint43?: Flex__<"div">;
   bulletPoint44?: Flex__<"div">;
   bulletPoint45?: Flex__<"div">;
-  bulletPoint46?: Flex__<"div">;
-  bulletPoint47?: Flex__<"div">;
   child10?: Flex__<"div">;
   sliderCarousel5?: Flex__<typeof SliderWrapper>;
   capabilitiesSection2?: Flex__<"div">;
@@ -271,15 +255,7 @@ export const serverQueryTree: QueryComponentNode = {
       path: "tabs2.activeKey",
       type: "private",
       variableType: "text",
-      initFunc: ({ $props, $state, $queries, $q, $ctx }) => "2"
-    },
-    {
-      path: "sliderCarousel.currentSlide",
-      type: "private",
-      variableType: "number",
-      initFunc: ({ $props, $state, $queries, $q, $ctx }) => 0,
-
-      refName: "sliderCarousel"
+      initFunc: ({ $props, $state, $queries, $q, $ctx }) => "4"
     },
     {
       path: "sliderCarousel2.currentSlide",
@@ -360,16 +336,7 @@ function PlasmicCapabilities__RenderFunc(props: {
         path: "tabs2.activeKey",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $q, $ctx }) => "2"
-      },
-      {
-        path: "sliderCarousel.currentSlide",
-        type: "private",
-        variableType: "number",
-        initFunc: ({ $props, $state, $queries, $q, $ctx }) => 0,
-
-        refName: "sliderCarousel",
-        onMutate: generateOnMutateForSpec("currentSlide", SliderWrapper_Helpers)
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => "4"
       },
       {
         path: "sliderCarousel2.currentSlide",
@@ -1364,447 +1331,15 @@ function PlasmicCapabilities__RenderFunc(props: {
                   animated={true}
                   centered={true}
                   className={classNames("__wab_instance", sty.tabs2)}
-                  defaultActiveKey={"2"}
+                  defaultActiveKey={"4"}
                   items={
                     <React.Fragment>
                       <AntdTabItem
                         className={classNames(
                           "__wab_instance",
-                          sty.tabItem__vrpo0
-                        )}
-                        key={"1"}
-                        label={
-                          <div
-                            className={classNames(
-                              "all",
-                              "__wab_text",
-                              sty.text__gJuj8
-                            )}
-                          >
-                            {"Artisan Bakery Items"}
-                          </div>
-                        }
-                      >
-                        <div className={classNames("all", sty.freeBox__hgKKi)}>
-                          <div
-                            data-plasmic-name={"child"}
-                            data-plasmic-override={overrides.child}
-                            className={classNames("all", sty.child)}
-                          >
-                            <div
-                              data-plasmic-name={"title3"}
-                              data-plasmic-override={overrides.title3}
-                              className={classNames("all", sty.title3)}
-                            >
-                              <h4
-                                className={classNames(
-                                  "all",
-                                  "h4",
-                                  "h4__uyaK1",
-                                  "__wab_text",
-                                  sty.h4___4LIeu
-                                )}
-                              >
-                                {"Across Our Organization"}
-                              </h4>
-                              <h3
-                                className={classNames(
-                                  "all",
-                                  "h3",
-                                  "h3__uyaK1",
-                                  "__wab_text",
-                                  sty.h3__uBtAa,
-                                  "h3-script"
-                                )}
-                              >
-                                {"Oppoertunities"}
-                              </h3>
-                            </div>
-                            <div
-                              data-plasmic-name={"p2"}
-                              data-plasmic-override={overrides.p2}
-                              className={classNames("all", sty.p2)}
-                            >
-                              {false ? (
-                                <p
-                                  className={classNames(
-                                    "all",
-                                    "p",
-                                    "p__uyaK1",
-                                    "__wab_text",
-                                    sty.p___8XlBu
-                                  )}
-                                >
-                                  {
-                                    "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                  }
-                                </p>
-                              ) : null}
-                            </div>
-                            <div
-                              data-plasmic-name={"ul"}
-                              data-plasmic-override={overrides.ul}
-                              className={classNames("all", sty.ul)}
-                            >
-                              {false ? (
-                                <div
-                                  data-plasmic-name={"bulletPoint8"}
-                                  data-plasmic-override={overrides.bulletPoint8}
-                                  className={classNames(
-                                    "all",
-                                    sty.bulletPoint8
-                                  )}
-                                >
-                                  <VectorList01Icon
-                                    className={classNames(
-                                      "all",
-                                      sty.svg__ap2RE
-                                    )}
-                                    role={"img"}
-                                  />
-
-                                  {false ? (
-                                    <p
-                                      className={classNames(
-                                        "all",
-                                        "p",
-                                        "p__uyaK1",
-                                        "__wab_text",
-                                        sty.p__n6VtJ
-                                      )}
-                                    >
-                                      {
-                                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                      }
-                                    </p>
-                                  ) : null}
-                                </div>
-                              ) : null}
-                              <div
-                                data-plasmic-name={"bulletPoint9"}
-                                data-plasmic-override={overrides.bulletPoint9}
-                                className={classNames("all", sty.bulletPoint9)}
-                              >
-                                <VectorList01Icon
-                                  className={classNames("all", sty.svg__jcJvt)}
-                                  role={"img"}
-                                />
-
-                                {false ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p__aQvqB
-                                    )}
-                                  >
-                                    {
-                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                    }
-                                  </p>
-                                ) : null}
-                              </div>
-                              <div
-                                data-plasmic-name={"bulletPoint10"}
-                                data-plasmic-override={overrides.bulletPoint10}
-                                className={classNames("all", sty.bulletPoint10)}
-                              >
-                                <VectorList01Icon
-                                  className={classNames("all", sty.svg__w25Wb)}
-                                  role={"img"}
-                                />
-
-                                {false ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p__g7IDl
-                                    )}
-                                  >
-                                    {
-                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                    }
-                                  </p>
-                                ) : null}
-                              </div>
-                              <div
-                                data-plasmic-name={"bulletPoint11"}
-                                data-plasmic-override={overrides.bulletPoint11}
-                                className={classNames("all", sty.bulletPoint11)}
-                              >
-                                <VectorList01Icon
-                                  className={classNames("all", sty.svg__qxXzN)}
-                                  role={"img"}
-                                />
-
-                                {false ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p__k4VHk
-                                    )}
-                                  >
-                                    {
-                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                    }
-                                  </p>
-                                ) : null}
-                              </div>
-                              <div
-                                data-plasmic-name={"bulletPoint12"}
-                                data-plasmic-override={overrides.bulletPoint12}
-                                className={classNames("all", sty.bulletPoint12)}
-                              >
-                                <VectorList01Icon
-                                  className={classNames("all", sty.svg__z1T8Q)}
-                                  role={"img"}
-                                />
-
-                                {false ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p__fvP2D
-                                    )}
-                                  >
-                                    {
-                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                    }
-                                  </p>
-                                ) : null}
-                              </div>
-                              <div
-                                data-plasmic-name={"bulletPoint13"}
-                                data-plasmic-override={overrides.bulletPoint13}
-                                className={classNames("all", sty.bulletPoint13)}
-                              >
-                                <VectorList01Icon
-                                  className={classNames("all", sty.svg__ovhQx)}
-                                  role={"img"}
-                                />
-
-                                {false ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p__hfsEa
-                                    )}
-                                  >
-                                    {
-                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                    }
-                                  </p>
-                                ) : null}
-                              </div>
-                              <div
-                                data-plasmic-name={"bulletPoint14"}
-                                data-plasmic-override={overrides.bulletPoint14}
-                                className={classNames("all", sty.bulletPoint14)}
-                              >
-                                <VectorList01Icon
-                                  className={classNames("all", sty.svg__eaTbx)}
-                                  role={"img"}
-                                />
-
-                                {false ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p__mzFen
-                                    )}
-                                  >
-                                    {
-                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                    }
-                                  </p>
-                                ) : null}
-                              </div>
-                              <div
-                                data-plasmic-name={"bulletPoint15"}
-                                data-plasmic-override={overrides.bulletPoint15}
-                                className={classNames("all", sty.bulletPoint15)}
-                              >
-                                <VectorList01Icon
-                                  className={classNames("all", sty.svg__kc51D)}
-                                  role={"img"}
-                                />
-
-                                {false ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p__hPmXk
-                                    )}
-                                  >
-                                    {
-                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                    }
-                                  </p>
-                                ) : null}
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            data-plasmic-name={"child2"}
-                            data-plasmic-override={overrides.child2}
-                            className={classNames("all", sty.child2)}
-                          >
-                            {(() => {
-                              const child$Props = {
-                                arrowColor: true ? "#C37620" : undefined,
-                                arrows: false,
-                                autoplay: true,
-                                autoplaySpeed: 0,
-                                beforeChange: async (...eventArgs: any) => {
-                                  generateStateOnChangePropForCodeComponents(
-                                    $state,
-                                    "currentSlide",
-                                    ["sliderCarousel", "currentSlide"],
-                                    SliderWrapper_Helpers
-                                  ).apply(null, eventArgs);
-                                },
-                                centerMode: true,
-                                className: classNames(
-                                  "__wab_instance",
-                                  sty.sliderCarousel
-                                ),
-                                cssEase: "linear",
-                                dots: true,
-                                initialSlide: generateStateValueProp($state, [
-                                  "sliderCarousel",
-                                  "currentSlide"
-                                ]),
-                                ref: ref => {
-                                  $refs["sliderCarousel"] = ref;
-                                },
-                                sliderScopeClassName:
-                                  sty["sliderCarousel__slider"],
-                                speed: 5000,
-                                swipeToSlide: true
-                              };
-                              initializeCodeComponentStates(
-                                $state,
-                                [
-                                  {
-                                    name: "currentSlide",
-                                    plasmicStateName:
-                                      "sliderCarousel.currentSlide"
-                                  }
-                                ],
-                                [],
-                                SliderWrapper_Helpers ?? {},
-                                child$Props
-                              );
-
-                              return (
-                                <SliderWrapper
-                                  data-plasmic-name={"sliderCarousel"}
-                                  data-plasmic-override={
-                                    overrides.sliderCarousel
-                                  }
-                                  {...child$Props}
-                                >
-                                  <div
-                                    className={classNames(
-                                      "all",
-                                      sty.freeBox__i111W
-                                    )}
-                                  >
-                                    <PlasmicImg__
-                                      alt={""}
-                                      className={classNames(sty.img__o3Rf9)}
-                                      displayHeight={"auto"}
-                                      displayMaxHeight={"none"}
-                                      displayMaxWidth={"100%"}
-                                      displayMinHeight={"0"}
-                                      displayMinWidth={"0"}
-                                      displayWidth={"auto"}
-                                      src={{
-                                        src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodMuffinsPng.png",
-                                        fullWidth: 848,
-                                        fullHeight: 693,
-                                        aspectRatio: undefined
-                                      }}
-                                    />
-                                  </div>
-                                  <div
-                                    className={classNames(
-                                      "all",
-                                      sty.freeBox__nzUjy
-                                    )}
-                                  >
-                                    <PlasmicImg__
-                                      alt={""}
-                                      className={classNames(sty.img__j1KfS)}
-                                      displayHeight={"auto"}
-                                      displayMaxHeight={"none"}
-                                      displayMaxWidth={"100%"}
-                                      displayMinHeight={"0"}
-                                      displayMinWidth={"0"}
-                                      displayWidth={"auto"}
-                                      src={{
-                                        src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodMuffinsPng.png",
-                                        fullWidth: 848,
-                                        fullHeight: 693,
-                                        aspectRatio: undefined
-                                      }}
-                                    />
-                                  </div>
-                                  <div
-                                    className={classNames(
-                                      "all",
-                                      sty.freeBox___9Sk4P
-                                    )}
-                                  >
-                                    <PlasmicImg__
-                                      alt={""}
-                                      className={classNames(sty.img__znqp1)}
-                                      displayHeight={"auto"}
-                                      displayMaxHeight={"none"}
-                                      displayMaxWidth={"100%"}
-                                      displayMinHeight={"0"}
-                                      displayMinWidth={"0"}
-                                      displayWidth={"auto"}
-                                      src={{
-                                        src: "/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodMuffinsPng.png",
-                                        fullWidth: 848,
-                                        fullHeight: 693,
-                                        aspectRatio: undefined
-                                      }}
-                                    />
-                                  </div>
-                                </SliderWrapper>
-                              );
-                            })()}
-                          </div>
-                        </div>
-                      </AntdTabItem>
-                      <AntdTabItem
-                        className={classNames(
-                          "__wab_instance",
                           sty.tabItem__u8LWd
                         )}
-                        key={"2"}
+                        key={"1"}
                         label={
                           <div
                             className={classNames(
@@ -1813,7 +1348,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                               sty.text__fDrr
                             )}
                           >
-                            {"Handheld Treats"}
+                            {"Artisan Bakery Items"}
                           </div>
                         }
                       >
@@ -2194,22 +1729,22 @@ function PlasmicCapabilities__RenderFunc(props: {
                       <AntdTabItem
                         className={classNames(
                           "__wab_instance",
-                          sty.tabItem__xZ87
+                          sty.tabItem__jBoLb
                         )}
-                        key={"3"}
+                        key={"2"}
                         label={
                           <div
                             className={classNames(
                               "all",
                               "__wab_text",
-                              sty.text__jLeO
+                              sty.text___2YK8
                             )}
                           >
-                            {"Cakes"}
+                            {"Handhelds"}
                           </div>
                         }
                       >
-                        <div className={classNames("all", sty.freeBox__fxzYj)}>
+                        <div className={classNames("all", sty.freeBox__mbEbM)}>
                           <div
                             data-plasmic-name={"child5"}
                             data-plasmic-override={overrides.child5}
@@ -2226,10 +1761,10 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   "h4",
                                   "h4__uyaK1",
                                   "__wab_text",
-                                  sty.h4__tbLp
+                                  sty.h4__vt75R
                                 )}
                               >
-                                {"Across Our Organization"}
+                                {"Handhelds"}
                               </h4>
                               <h3
                                 className={classNames(
@@ -2237,11 +1772,11 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   "h3",
                                   "h3__uyaK1",
                                   "__wab_text",
-                                  sty.h3___6GvIl,
+                                  sty.h3__c8SFb,
                                   "h3-script"
                                 )}
                               >
-                                {"Oppoertunities"}
+                                {"Items"}
                               </h3>
                             </div>
                             <div
@@ -2249,88 +1784,70 @@ function PlasmicCapabilities__RenderFunc(props: {
                               data-plasmic-override={overrides.p4}
                               className={classNames("all", sty.p4)}
                             >
-                              {false ? (
-                                <p
-                                  className={classNames(
-                                    "all",
-                                    "p",
-                                    "p__uyaK1",
-                                    "__wab_text",
-                                    sty.p__m2Fcn
-                                  )}
-                                >
-                                  {
-                                    "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                  }
-                                </p>
-                              ) : null}
+                              <p
+                                className={classNames(
+                                  "all",
+                                  "p",
+                                  "p__uyaK1",
+                                  "__wab_text",
+                                  sty.p__nGBcR
+                                )}
+                              >
+                                {hasVariant(globalVariants, "screen", "desktop")
+                                  ? "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                                  : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
+                              </p>
                             </div>
                             <div
                               data-plasmic-name={"ul3"}
                               data-plasmic-override={overrides.ul3}
                               className={classNames("all", sty.ul3)}
                             >
-                              {false ? (
-                                <div
-                                  data-plasmic-name={"bulletPoint24"}
-                                  data-plasmic-override={
-                                    overrides.bulletPoint24
-                                  }
+                              <div
+                                data-plasmic-name={"bulletPoint24"}
+                                data-plasmic-override={overrides.bulletPoint24}
+                                className={classNames("all", sty.bulletPoint24)}
+                              >
+                                <VectorList01Icon
+                                  className={classNames("all", sty.svg__qdY5H)}
+                                  role={"img"}
+                                />
+
+                                <p
                                   className={classNames(
                                     "all",
-                                    sty.bulletPoint24
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__w0Bu
                                   )}
                                 >
-                                  <VectorList01Icon
-                                    className={classNames(
-                                      "all",
-                                      sty.svg__n3X35
-                                    )}
-                                    role={"img"}
-                                  />
-
-                                  {false ? (
-                                    <p
-                                      className={classNames(
-                                        "all",
-                                        "p",
-                                        "p__uyaK1",
-                                        "__wab_text",
-                                        sty.p__yk3G5
-                                      )}
-                                    >
-                                      {
-                                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                      }
-                                    </p>
-                                  ) : null}
-                                </div>
-                              ) : null}
+                                  {
+                                    "Stuffed with a variety of proteins, cheeses, or sweet fillings"
+                                  }
+                                </p>
+                              </div>
                               <div
                                 data-plasmic-name={"bulletPoint25"}
                                 data-plasmic-override={overrides.bulletPoint25}
                                 className={classNames("all", sty.bulletPoint25)}
                               >
                                 <VectorList01Icon
-                                  className={classNames("all", sty.svg__jwaTc)}
+                                  className={classNames("all", sty.svg__nJqwc)}
                                   role={"img"}
                                 />
 
-                                {false ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p__tKlWp
-                                    )}
-                                  >
-                                    {
-                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                    }
-                                  </p>
-                                ) : null}
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p___1UX2C
+                                  )}
+                                >
+                                  {"Croissants"}
+                                </p>
                               </div>
                               <div
                                 data-plasmic-name={"bulletPoint26"}
@@ -2338,25 +1855,21 @@ function PlasmicCapabilities__RenderFunc(props: {
                                 className={classNames("all", sty.bulletPoint26)}
                               >
                                 <VectorList01Icon
-                                  className={classNames("all", sty.svg__i8I82)}
+                                  className={classNames("all", sty.svg__wpqzC)}
                                   role={"img"}
                                 />
 
-                                {false ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p___3Bmt4
-                                    )}
-                                  >
-                                    {
-                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                    }
-                                  </p>
-                                ) : null}
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__uiiKz
+                                  )}
+                                >
+                                  {"Empanadas"}
+                                </p>
                               </div>
                               <div
                                 data-plasmic-name={"bulletPoint27"}
@@ -2364,25 +1877,21 @@ function PlasmicCapabilities__RenderFunc(props: {
                                 className={classNames("all", sty.bulletPoint27)}
                               >
                                 <VectorList01Icon
-                                  className={classNames("all", sty.svg__aaVS)}
+                                  className={classNames("all", sty.svg__l5Es3)}
                                   role={"img"}
                                 />
 
-                                {false ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p__vya3T
-                                    )}
-                                  >
-                                    {
-                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                    }
-                                  </p>
-                                ) : null}
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__fZbM5
+                                  )}
+                                >
+                                  {"Hand Pies"}
+                                </p>
                               </div>
                               <div
                                 data-plasmic-name={"bulletPoint28"}
@@ -2390,25 +1899,21 @@ function PlasmicCapabilities__RenderFunc(props: {
                                 className={classNames("all", sty.bulletPoint28)}
                               >
                                 <VectorList01Icon
-                                  className={classNames("all", sty.svg__hKo0S)}
+                                  className={classNames("all", sty.svg__gqoMc)}
                                   role={"img"}
                                 />
 
-                                {false ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p__kxPjn
-                                    )}
-                                  >
-                                    {
-                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                    }
-                                  </p>
-                                ) : null}
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__btjYq
+                                  )}
+                                >
+                                  {"Calzones"}
+                                </p>
                               </div>
                               <div
                                 data-plasmic-name={"bulletPoint29"}
@@ -2416,25 +1921,21 @@ function PlasmicCapabilities__RenderFunc(props: {
                                 className={classNames("all", sty.bulletPoint29)}
                               >
                                 <VectorList01Icon
-                                  className={classNames("all", sty.svg__yPyjR)}
+                                  className={classNames("all", sty.svg___4LyUs)}
                                   role={"img"}
                                 />
 
-                                {false ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p__rxWgl
-                                    )}
-                                  >
-                                    {
-                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                    }
-                                  </p>
-                                ) : null}
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__aKgLg
+                                  )}
+                                >
+                                  {"Turnovers"}
+                                </p>
                               </div>
                               <div
                                 data-plasmic-name={"bulletPoint30"}
@@ -2442,25 +1943,21 @@ function PlasmicCapabilities__RenderFunc(props: {
                                 className={classNames("all", sty.bulletPoint30)}
                               >
                                 <VectorList01Icon
-                                  className={classNames("all", sty.svg__sifI9)}
+                                  className={classNames("all", sty.svg__wfAly)}
                                   role={"img"}
                                 />
 
-                                {false ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p__ulBz2
-                                    )}
-                                  >
-                                    {
-                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                    }
-                                  </p>
-                                ) : null}
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__ccFJx
+                                  )}
+                                >
+                                  {"Pockets"}
+                                </p>
                               </div>
                               <div
                                 data-plasmic-name={"bulletPoint31"}
@@ -2468,25 +1965,109 @@ function PlasmicCapabilities__RenderFunc(props: {
                                 className={classNames("all", sty.bulletPoint31)}
                               >
                                 <VectorList01Icon
-                                  className={classNames("all", sty.svg__toc9J)}
+                                  className={classNames("all", sty.svg__imwYj)}
                                   role={"img"}
                                 />
 
-                                {false ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p__sIYws
-                                    )}
-                                  >
-                                    {
-                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                    }
-                                  </p>
-                                ) : null}
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__wuMx
+                                  )}
+                                >
+                                  {"Cakes"}
+                                </p>
+                              </div>
+                              <div
+                                data-plasmic-name={"bulletPoint32"}
+                                data-plasmic-override={overrides.bulletPoint32}
+                                className={classNames("all", sty.bulletPoint32)}
+                              >
+                                <VectorList01Icon
+                                  className={classNames("all", sty.svg__tTDbI)}
+                                  role={"img"}
+                                />
+
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p___2Efoc
+                                  )}
+                                >
+                                  {"Molten & Lava Cakes"}
+                                </p>
+                              </div>
+                              <div
+                                data-plasmic-name={"bulletPoint33"}
+                                data-plasmic-override={overrides.bulletPoint33}
+                                className={classNames("all", sty.bulletPoint33)}
+                              >
+                                <VectorList01Icon
+                                  className={classNames("all", sty.svg___1R88A)}
+                                  role={"img"}
+                                />
+
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__bgKs
+                                  )}
+                                >
+                                  {"Sheet and Round Cakes"}
+                                </p>
+                              </div>
+                              <div
+                                data-plasmic-name={"bulletPoint34"}
+                                data-plasmic-override={overrides.bulletPoint34}
+                                className={classNames("all", sty.bulletPoint34)}
+                              >
+                                <VectorList01Icon
+                                  className={classNames("all", sty.svg__tsViN)}
+                                  role={"img"}
+                                />
+
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__h5VcD
+                                  )}
+                                >
+                                  {"Pounds Cakes"}
+                                </p>
+                              </div>
+                              <div
+                                data-plasmic-name={"bulletPoint35"}
+                                data-plasmic-override={overrides.bulletPoint35}
+                                className={classNames("all", sty.bulletPoint35)}
+                              >
+                                <VectorList01Icon
+                                  className={classNames("all", sty.svg__tnYp)}
+                                  role={"img"}
+                                />
+
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__mb1Cf
+                                  )}
+                                >
+                                  {"Cupcakes"}
+                                </p>
                               </div>
                             </div>
                           </div>
@@ -2500,7 +2081,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                 arrowColor: true ? "#C37620" : undefined,
                                 arrows: false,
                                 autoplay: true,
-                                autoplaySpeed: 0,
+                                autoplaySpeed: 1500,
                                 beforeChange: async (...eventArgs: any) => {
                                   generateStateOnChangePropForCodeComponents(
                                     $state,
@@ -2516,16 +2097,18 @@ function PlasmicCapabilities__RenderFunc(props: {
                                 ),
                                 cssEase: "linear",
                                 dots: true,
+                                fade: false,
                                 initialSlide: generateStateValueProp($state, [
                                   "sliderCarousel3",
                                   "currentSlide"
                                 ]),
+                                pauseOnFocus: true,
                                 ref: ref => {
                                   $refs["sliderCarousel3"] = ref;
                                 },
                                 sliderScopeClassName:
                                   sty["sliderCarousel3__slider"],
-                                speed: 5000,
+                                speed: 1000,
                                 swipeToSlide: true
                               };
                               initializeCodeComponentStates(
@@ -2553,12 +2136,12 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   <div
                                     className={classNames(
                                       "all",
-                                      sty.freeBox__yqAA
+                                      sty.freeBox__xl3Mz
                                     )}
                                   >
                                     <PlasmicImg__
                                       alt={""}
-                                      className={classNames(sty.img__pz8UF)}
+                                      className={classNames(sty.img___8KW0I)}
                                       displayHeight={"auto"}
                                       displayMaxHeight={"none"}
                                       displayMaxWidth={"100%"}
@@ -2576,12 +2159,12 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   <div
                                     className={classNames(
                                       "all",
-                                      sty.freeBox___4Vm4Y
+                                      sty.freeBox__fKoag
                                     )}
                                   >
                                     <PlasmicImg__
                                       alt={""}
-                                      className={classNames(sty.img__svxxQ)}
+                                      className={classNames(sty.img__ziTpY)}
                                       displayHeight={"auto"}
                                       displayMaxHeight={"none"}
                                       displayMaxWidth={"100%"}
@@ -2599,12 +2182,12 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   <div
                                     className={classNames(
                                       "all",
-                                      sty.freeBox__i2Bot
+                                      sty.freeBox__tHh1I
                                     )}
                                   >
                                     <PlasmicImg__
                                       alt={""}
-                                      className={classNames(sty.img__lvrqq)}
+                                      className={classNames(sty.img__iK6HV)}
                                       displayHeight={"auto"}
                                       displayMaxHeight={"none"}
                                       displayMaxWidth={"100%"}
@@ -2628,22 +2211,22 @@ function PlasmicCapabilities__RenderFunc(props: {
                       <AntdTabItem
                         className={classNames(
                           "__wab_instance",
-                          sty.tabItem___5JKe
+                          sty.tabItem__yyH2Q
                         )}
-                        key={"4"}
+                        key={"3"}
                         label={
                           <div
                             className={classNames(
                               "all",
                               "__wab_text",
-                              sty.text__jIimb
+                              sty.text__miApD
                             )}
                           >
-                            {"Cookies, Brownies & Bars"}
+                            {"Cookies, Brownies, & Bars"}
                           </div>
                         }
                       >
-                        <div className={classNames("all", sty.freeBox__dvsqG)}>
+                        <div className={classNames("all", sty.freeBox__w72Z)}>
                           <div
                             data-plasmic-name={"child7"}
                             data-plasmic-override={overrides.child7}
@@ -2660,10 +2243,10 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   "h4",
                                   "h4__uyaK1",
                                   "__wab_text",
-                                  sty.h4__et9Oa
+                                  sty.h4__xRnFl
                                 )}
                               >
-                                {"Across Our Organization"}
+                                {"Cookies, Brownies,"}
                               </h4>
                               <h3
                                 className={classNames(
@@ -2671,11 +2254,11 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   "h3",
                                   "h3__uyaK1",
                                   "__wab_text",
-                                  sty.h3__bMjxs,
+                                  sty.h3__ztoOq,
                                   "h3-script"
                                 )}
                               >
-                                {"Oppoertunities"}
+                                {"& Bars"}
                               </h3>
                             </div>
                             <div
@@ -2683,166 +2266,46 @@ function PlasmicCapabilities__RenderFunc(props: {
                               data-plasmic-override={overrides.p5}
                               className={classNames("all", sty.p5)}
                             >
-                              {false ? (
-                                <p
-                                  className={classNames(
-                                    "all",
-                                    "p",
-                                    "p__uyaK1",
-                                    "__wab_text",
-                                    sty.p__hq17K
-                                  )}
-                                >
-                                  {
-                                    "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                  }
-                                </p>
-                              ) : null}
+                              <p
+                                className={classNames(
+                                  "all",
+                                  "p",
+                                  "p__uyaK1",
+                                  "__wab_text",
+                                  sty.p__lqnDi
+                                )}
+                              >
+                                {hasVariant(globalVariants, "screen", "desktop")
+                                  ? "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                                  : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
+                              </p>
                             </div>
                             <div
                               data-plasmic-name={"ul4"}
                               data-plasmic-override={overrides.ul4}
                               className={classNames("all", sty.ul4)}
                             >
-                              {false ? (
-                                <div
-                                  data-plasmic-name={"bulletPoint32"}
-                                  data-plasmic-override={
-                                    overrides.bulletPoint32
-                                  }
-                                  className={classNames(
-                                    "all",
-                                    sty.bulletPoint32
-                                  )}
-                                >
-                                  <VectorList01Icon
-                                    className={classNames(
-                                      "all",
-                                      sty.svg__sxpra
-                                    )}
-                                    role={"img"}
-                                  />
-
-                                  {false ? (
-                                    <p
-                                      className={classNames(
-                                        "all",
-                                        "p",
-                                        "p__uyaK1",
-                                        "__wab_text",
-                                        sty.p__hkRql
-                                      )}
-                                    >
-                                      {
-                                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                      }
-                                    </p>
-                                  ) : null}
-                                </div>
-                              ) : null}
-                              <div
-                                data-plasmic-name={"bulletPoint33"}
-                                data-plasmic-override={overrides.bulletPoint33}
-                                className={classNames("all", sty.bulletPoint33)}
-                              >
-                                <VectorList01Icon
-                                  className={classNames("all", sty.svg__kAqC)}
-                                  role={"img"}
-                                />
-
-                                {false ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p__q8WwU
-                                    )}
-                                  >
-                                    {
-                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                    }
-                                  </p>
-                                ) : null}
-                              </div>
-                              <div
-                                data-plasmic-name={"bulletPoint34"}
-                                data-plasmic-override={overrides.bulletPoint34}
-                                className={classNames("all", sty.bulletPoint34)}
-                              >
-                                <VectorList01Icon
-                                  className={classNames("all", sty.svg__rHqE)}
-                                  role={"img"}
-                                />
-
-                                {false ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p__mMe3J
-                                    )}
-                                  >
-                                    {
-                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                    }
-                                  </p>
-                                ) : null}
-                              </div>
-                              <div
-                                data-plasmic-name={"bulletPoint35"}
-                                data-plasmic-override={overrides.bulletPoint35}
-                                className={classNames("all", sty.bulletPoint35)}
-                              >
-                                <VectorList01Icon
-                                  className={classNames("all", sty.svg__u4Hd1)}
-                                  role={"img"}
-                                />
-
-                                {false ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p___7SZVe
-                                    )}
-                                  >
-                                    {
-                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                    }
-                                  </p>
-                                ) : null}
-                              </div>
                               <div
                                 data-plasmic-name={"bulletPoint36"}
                                 data-plasmic-override={overrides.bulletPoint36}
                                 className={classNames("all", sty.bulletPoint36)}
                               >
                                 <VectorList01Icon
-                                  className={classNames("all", sty.svg__ehing)}
+                                  className={classNames("all", sty.svg__rO5R)}
                                   role={"img"}
                                 />
 
-                                {false ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p__t37Hd
-                                    )}
-                                  >
-                                    {
-                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                    }
-                                  </p>
-                                ) : null}
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p___3ExEz
+                                  )}
+                                >
+                                  {"Skillet Cookies"}
+                                </p>
                               </div>
                               <div
                                 data-plasmic-name={"bulletPoint37"}
@@ -2850,25 +2313,21 @@ function PlasmicCapabilities__RenderFunc(props: {
                                 className={classNames("all", sty.bulletPoint37)}
                               >
                                 <VectorList01Icon
-                                  className={classNames("all", sty.svg__mAHyG)}
+                                  className={classNames("all", sty.svg__u2Bsq)}
                                   role={"img"}
                                 />
 
-                                {false ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p__rAscJ
-                                    )}
-                                  >
-                                    {
-                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                    }
-                                  </p>
-                                ) : null}
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__j4Y8X
+                                  )}
+                                >
+                                  {"Wire Cut & Pressed Cookies"}
+                                </p>
                               </div>
                               <div
                                 data-plasmic-name={"bulletPoint38"}
@@ -2876,25 +2335,21 @@ function PlasmicCapabilities__RenderFunc(props: {
                                 className={classNames("all", sty.bulletPoint38)}
                               >
                                 <VectorList01Icon
-                                  className={classNames("all", sty.svg__xsV33)}
+                                  className={classNames("all", sty.svg__vs6E3)}
                                   role={"img"}
                                 />
 
-                                {false ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p__kwMrl
-                                    )}
-                                  >
-                                    {
-                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                    }
-                                  </p>
-                                ) : null}
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__tdRXy
+                                  )}
+                                >
+                                  {"Dessert Bars"}
+                                </p>
                               </div>
                               <div
                                 data-plasmic-name={"bulletPoint39"}
@@ -2902,25 +2357,43 @@ function PlasmicCapabilities__RenderFunc(props: {
                                 className={classNames("all", sty.bulletPoint39)}
                               >
                                 <VectorList01Icon
-                                  className={classNames("all", sty.svg__ohp4Z)}
+                                  className={classNames("all", sty.svg__mqmOa)}
                                   role={"img"}
                                 />
 
-                                {false ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p___5El3C
-                                    )}
-                                  >
-                                    {
-                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                    }
-                                  </p>
-                                ) : null}
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__nvUt7
+                                  )}
+                                >
+                                  {"Brownies & Brookies"}
+                                </p>
+                              </div>
+                              <div
+                                data-plasmic-name={"bulletPoint40"}
+                                data-plasmic-override={overrides.bulletPoint40}
+                                className={classNames("all", sty.bulletPoint40)}
+                              >
+                                <VectorList01Icon
+                                  className={classNames("all", sty.svg__dlaqW)}
+                                  role={"img"}
+                                />
+
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__jp40U
+                                  )}
+                                >
+                                  {"Cookie Dough"}
+                                </p>
                               </div>
                             </div>
                           </div>
@@ -2934,7 +2407,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                 arrowColor: true ? "#C37620" : undefined,
                                 arrows: false,
                                 autoplay: true,
-                                autoplaySpeed: 0,
+                                autoplaySpeed: 1500,
                                 beforeChange: async (...eventArgs: any) => {
                                   generateStateOnChangePropForCodeComponents(
                                     $state,
@@ -2950,16 +2423,18 @@ function PlasmicCapabilities__RenderFunc(props: {
                                 ),
                                 cssEase: "linear",
                                 dots: true,
+                                fade: false,
                                 initialSlide: generateStateValueProp($state, [
                                   "sliderCarousel4",
                                   "currentSlide"
                                 ]),
+                                pauseOnFocus: true,
                                 ref: ref => {
                                   $refs["sliderCarousel4"] = ref;
                                 },
                                 sliderScopeClassName:
                                   sty["sliderCarousel4__slider"],
-                                speed: 5000,
+                                speed: 1000,
                                 swipeToSlide: true
                               };
                               initializeCodeComponentStates(
@@ -2987,12 +2462,12 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   <div
                                     className={classNames(
                                       "all",
-                                      sty.freeBox__npYIw
+                                      sty.freeBox__bf1Gn
                                     )}
                                   >
                                     <PlasmicImg__
                                       alt={""}
-                                      className={classNames(sty.img__urFc)}
+                                      className={classNames(sty.img__o64P1)}
                                       displayHeight={"auto"}
                                       displayMaxHeight={"none"}
                                       displayMaxWidth={"100%"}
@@ -3010,12 +2485,12 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   <div
                                     className={classNames(
                                       "all",
-                                      sty.freeBox__pf9Gs
+                                      sty.freeBox__tdVxp
                                     )}
                                   >
                                     <PlasmicImg__
                                       alt={""}
-                                      className={classNames(sty.img__i5BIc)}
+                                      className={classNames(sty.img__yL4Mf)}
                                       displayHeight={"auto"}
                                       displayMaxHeight={"none"}
                                       displayMaxWidth={"100%"}
@@ -3033,12 +2508,12 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   <div
                                     className={classNames(
                                       "all",
-                                      sty.freeBox__xnpWv
+                                      sty.freeBox__tbJc2
                                     )}
                                   >
                                     <PlasmicImg__
                                       alt={""}
-                                      className={classNames(sty.img__ubVqC)}
+                                      className={classNames(sty.img__eopWb)}
                                       displayHeight={"auto"}
                                       displayMaxHeight={"none"}
                                       displayMaxWidth={"100%"}
@@ -3062,22 +2537,22 @@ function PlasmicCapabilities__RenderFunc(props: {
                       <AntdTabItem
                         className={classNames(
                           "__wab_instance",
-                          sty.tabItem__zoJsH
+                          sty.tabItem__gmZn2
                         )}
-                        key={"5"}
+                        key={"4"}
                         label={
                           <div
                             className={classNames(
                               "all",
                               "__wab_text",
-                              sty.text__u0FOd
+                              sty.text__czaEt
                             )}
                           >
                             {"Snack Items"}
                           </div>
                         }
                       >
-                        <div className={classNames("all", sty.freeBox__k98Z)}>
+                        <div className={classNames("all", sty.freeBox__euTp6)}>
                           <div
                             data-plasmic-name={"child9"}
                             data-plasmic-override={overrides.child9}
@@ -3094,10 +2569,10 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   "h4",
                                   "h4__uyaK1",
                                   "__wab_text",
-                                  sty.h4___4Az96
+                                  sty.h4__jmAjk
                                 )}
                               >
-                                {"Across Our Organization"}
+                                {"Snack"}
                               </h4>
                               <h3
                                 className={classNames(
@@ -3105,11 +2580,11 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   "h3",
                                   "h3__uyaK1",
                                   "__wab_text",
-                                  sty.h3__eXqR,
+                                  sty.h3__r97G,
                                   "h3-script"
                                 )}
                               >
-                                {"Oppoertunities"}
+                                {"Items"}
                               </h3>
                             </div>
                             <div
@@ -3117,85 +2592,46 @@ function PlasmicCapabilities__RenderFunc(props: {
                               data-plasmic-override={overrides.p6}
                               className={classNames("all", sty.p6)}
                             >
-                              {false ? (
-                                <p
-                                  className={classNames(
-                                    "all",
-                                    "p",
-                                    "p__uyaK1",
-                                    "__wab_text",
-                                    sty.p___9Eke2
-                                  )}
-                                >
-                                  {
-                                    "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                  }
-                                </p>
-                              ) : null}
+                              <p
+                                className={classNames(
+                                  "all",
+                                  "p",
+                                  "p__uyaK1",
+                                  "__wab_text",
+                                  sty.p__i6Awm
+                                )}
+                              >
+                                {hasVariant(globalVariants, "screen", "desktop")
+                                  ? "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                                  : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
+                              </p>
                             </div>
                             <div
                               data-plasmic-name={"ul5"}
                               data-plasmic-override={overrides.ul5}
                               className={classNames("all", sty.ul5)}
                             >
-                              {false ? (
-                                <div
-                                  data-plasmic-name={"bulletPoint40"}
-                                  data-plasmic-override={
-                                    overrides.bulletPoint40
-                                  }
-                                  className={classNames(
-                                    "all",
-                                    sty.bulletPoint40
-                                  )}
-                                >
-                                  <VectorList01Icon
-                                    className={classNames("all", sty.svg__jThV)}
-                                    role={"img"}
-                                  />
-
-                                  {false ? (
-                                    <p
-                                      className={classNames(
-                                        "all",
-                                        "p",
-                                        "p__uyaK1",
-                                        "__wab_text",
-                                        sty.p__uQEmy
-                                      )}
-                                    >
-                                      {
-                                        "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                      }
-                                    </p>
-                                  ) : null}
-                                </div>
-                              ) : null}
                               <div
                                 data-plasmic-name={"bulletPoint41"}
                                 data-plasmic-override={overrides.bulletPoint41}
                                 className={classNames("all", sty.bulletPoint41)}
                               >
                                 <VectorList01Icon
-                                  className={classNames("all", sty.svg__grLt4)}
+                                  className={classNames("all", sty.svg__ozUt)}
                                   role={"img"}
                                 />
 
-                                {false ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p__oCTbp
-                                    )}
-                                  >
-                                    {
-                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                    }
-                                  </p>
-                                ) : null}
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__aKIvf
+                                  )}
+                                >
+                                  {"Performance Bars"}
+                                </p>
                               </div>
                               <div
                                 data-plasmic-name={"bulletPoint42"}
@@ -3203,25 +2639,21 @@ function PlasmicCapabilities__RenderFunc(props: {
                                 className={classNames("all", sty.bulletPoint42)}
                               >
                                 <VectorList01Icon
-                                  className={classNames("all", sty.svg__d3Gnk)}
+                                  className={classNames("all", sty.svg__m1R5U)}
                                   role={"img"}
                                 />
 
-                                {false ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p__yyIf5
-                                    )}
-                                  >
-                                    {
-                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                    }
-                                  </p>
-                                ) : null}
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__dRj1
+                                  )}
+                                >
+                                  {"Nutrition Bars"}
+                                </p>
                               </div>
                               <div
                                 data-plasmic-name={"bulletPoint43"}
@@ -3229,25 +2661,21 @@ function PlasmicCapabilities__RenderFunc(props: {
                                 className={classNames("all", sty.bulletPoint43)}
                               >
                                 <VectorList01Icon
-                                  className={classNames("all", sty.svg__mJhU)}
+                                  className={classNames("all", sty.svg__lnrtC)}
                                   role={"img"}
                                 />
 
-                                {false ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p__nb2MK
-                                    )}
-                                  >
-                                    {
-                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                    }
-                                  </p>
-                                ) : null}
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__t1Gnm
+                                  )}
+                                >
+                                  {"MREs"}
+                                </p>
                               </div>
                               <div
                                 data-plasmic-name={"bulletPoint44"}
@@ -3255,25 +2683,21 @@ function PlasmicCapabilities__RenderFunc(props: {
                                 className={classNames("all", sty.bulletPoint44)}
                               >
                                 <VectorList01Icon
-                                  className={classNames("all", sty.svg___4LPyB)}
+                                  className={classNames("all", sty.svg___9XU5C)}
                                   role={"img"}
                                 />
 
-                                {false ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p__ljQVo
-                                    )}
-                                  >
-                                    {
-                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                    }
-                                  </p>
-                                ) : null}
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p___8Fghh
+                                  )}
+                                >
+                                  {"Brownies & Brookies"}
+                                </p>
                               </div>
                               <div
                                 data-plasmic-name={"bulletPoint45"}
@@ -3281,77 +2705,21 @@ function PlasmicCapabilities__RenderFunc(props: {
                                 className={classNames("all", sty.bulletPoint45)}
                               >
                                 <VectorList01Icon
-                                  className={classNames("all", sty.svg__n9AaH)}
+                                  className={classNames("all", sty.svg__m73YP)}
                                   role={"img"}
                                 />
 
-                                {false ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p__pSvd2
-                                    )}
-                                  >
-                                    {
-                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                    }
-                                  </p>
-                                ) : null}
-                              </div>
-                              <div
-                                data-plasmic-name={"bulletPoint46"}
-                                data-plasmic-override={overrides.bulletPoint46}
-                                className={classNames("all", sty.bulletPoint46)}
-                              >
-                                <VectorList01Icon
-                                  className={classNames("all", sty.svg__okgq4)}
-                                  role={"img"}
-                                />
-
-                                {false ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p___735N
-                                    )}
-                                  >
-                                    {
-                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                    }
-                                  </p>
-                                ) : null}
-                              </div>
-                              <div
-                                data-plasmic-name={"bulletPoint47"}
-                                data-plasmic-override={overrides.bulletPoint47}
-                                className={classNames("all", sty.bulletPoint47)}
-                              >
-                                <VectorList01Icon
-                                  className={classNames("all", sty.svg___2Omp6)}
-                                  role={"img"}
-                                />
-
-                                {false ? (
-                                  <p
-                                    className={classNames(
-                                      "all",
-                                      "p",
-                                      "p__uyaK1",
-                                      "__wab_text",
-                                      sty.p__huMi6
-                                    )}
-                                  >
-                                    {
-                                      "Sterling Foods offers career opportunities across \na variety of disciplines, including:"
-                                    }
-                                  </p>
-                                ) : null}
+                                <p
+                                  className={classNames(
+                                    "all",
+                                    "p",
+                                    "p__uyaK1",
+                                    "__wab_text",
+                                    sty.p__x0Why
+                                  )}
+                                >
+                                  {"Individually Wrapped"}
+                                </p>
                               </div>
                             </div>
                           </div>
@@ -3365,7 +2733,7 @@ function PlasmicCapabilities__RenderFunc(props: {
                                 arrowColor: true ? "#C37620" : undefined,
                                 arrows: false,
                                 autoplay: true,
-                                autoplaySpeed: 0,
+                                autoplaySpeed: 1500,
                                 beforeChange: async (...eventArgs: any) => {
                                   generateStateOnChangePropForCodeComponents(
                                     $state,
@@ -3381,16 +2749,18 @@ function PlasmicCapabilities__RenderFunc(props: {
                                 ),
                                 cssEase: "linear",
                                 dots: true,
+                                fade: false,
                                 initialSlide: generateStateValueProp($state, [
                                   "sliderCarousel5",
                                   "currentSlide"
                                 ]),
+                                pauseOnFocus: true,
                                 ref: ref => {
                                   $refs["sliderCarousel5"] = ref;
                                 },
                                 sliderScopeClassName:
                                   sty["sliderCarousel5__slider"],
-                                speed: 5000,
+                                speed: 1000,
                                 swipeToSlide: true
                               };
                               initializeCodeComponentStates(
@@ -3418,12 +2788,12 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   <div
                                     className={classNames(
                                       "all",
-                                      sty.freeBox__nGh0K
+                                      sty.freeBox__wdoZu
                                     )}
                                   >
                                     <PlasmicImg__
                                       alt={""}
-                                      className={classNames(sty.img__c9LbZ)}
+                                      className={classNames(sty.img__vVRgl)}
                                       displayHeight={"auto"}
                                       displayMaxHeight={"none"}
                                       displayMaxWidth={"100%"}
@@ -3441,12 +2811,12 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   <div
                                     className={classNames(
                                       "all",
-                                      sty.freeBox__nm8Fa
+                                      sty.freeBox__u2Dz
                                     )}
                                   >
                                     <PlasmicImg__
                                       alt={""}
-                                      className={classNames(sty.img__aBmdH)}
+                                      className={classNames(sty.img___9Jy7)}
                                       displayHeight={"auto"}
                                       displayMaxHeight={"none"}
                                       displayMaxWidth={"100%"}
@@ -3464,12 +2834,12 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   <div
                                     className={classNames(
                                       "all",
-                                      sty.freeBox__hfjF
+                                      sty.freeBox___9Xspo
                                     )}
                                   >
                                     <PlasmicImg__
                                       alt={""}
-                                      className={classNames(sty.img__eeWd8)}
+                                      className={classNames(sty.img__cvvUr)}
                                       displayHeight={"auto"}
                                       displayMaxHeight={"none"}
                                       displayMaxWidth={"100%"}
@@ -4074,20 +3444,6 @@ const PlasmicDescendants = {
     "capabilitiesSection",
     "tabs",
     "tabs2",
-    "child",
-    "title3",
-    "p2",
-    "ul",
-    "bulletPoint8",
-    "bulletPoint9",
-    "bulletPoint10",
-    "bulletPoint11",
-    "bulletPoint12",
-    "bulletPoint13",
-    "bulletPoint14",
-    "bulletPoint15",
-    "child2",
-    "sliderCarousel",
     "child3",
     "title4",
     "p3",
@@ -4114,34 +3470,32 @@ const PlasmicDescendants = {
     "bulletPoint29",
     "bulletPoint30",
     "bulletPoint31",
+    "bulletPoint32",
+    "bulletPoint33",
+    "bulletPoint34",
+    "bulletPoint35",
     "child6",
     "sliderCarousel3",
     "child7",
     "title6",
     "p5",
     "ul4",
-    "bulletPoint32",
-    "bulletPoint33",
-    "bulletPoint34",
-    "bulletPoint35",
     "bulletPoint36",
     "bulletPoint37",
     "bulletPoint38",
     "bulletPoint39",
+    "bulletPoint40",
     "child8",
     "sliderCarousel4",
     "child9",
     "title7",
     "p6",
     "ul5",
-    "bulletPoint40",
     "bulletPoint41",
     "bulletPoint42",
     "bulletPoint43",
     "bulletPoint44",
     "bulletPoint45",
-    "bulletPoint46",
-    "bulletPoint47",
     "child10",
     "sliderCarousel5",
     "capabilitiesSection2",
@@ -4179,20 +3533,6 @@ const PlasmicDescendants = {
     "capabilitiesSection",
     "tabs",
     "tabs2",
-    "child",
-    "title3",
-    "p2",
-    "ul",
-    "bulletPoint8",
-    "bulletPoint9",
-    "bulletPoint10",
-    "bulletPoint11",
-    "bulletPoint12",
-    "bulletPoint13",
-    "bulletPoint14",
-    "bulletPoint15",
-    "child2",
-    "sliderCarousel",
     "child3",
     "title4",
     "p3",
@@ -4219,34 +3559,32 @@ const PlasmicDescendants = {
     "bulletPoint29",
     "bulletPoint30",
     "bulletPoint31",
+    "bulletPoint32",
+    "bulletPoint33",
+    "bulletPoint34",
+    "bulletPoint35",
     "child6",
     "sliderCarousel3",
     "child7",
     "title6",
     "p5",
     "ul4",
-    "bulletPoint32",
-    "bulletPoint33",
-    "bulletPoint34",
-    "bulletPoint35",
     "bulletPoint36",
     "bulletPoint37",
     "bulletPoint38",
     "bulletPoint39",
+    "bulletPoint40",
     "child8",
     "sliderCarousel4",
     "child9",
     "title7",
     "p6",
     "ul5",
-    "bulletPoint40",
     "bulletPoint41",
     "bulletPoint42",
     "bulletPoint43",
     "bulletPoint44",
     "bulletPoint45",
-    "bulletPoint46",
-    "bulletPoint47",
     "child10",
     "sliderCarousel5",
     "capabilitiesSection2",
@@ -4321,20 +3659,6 @@ const PlasmicDescendants = {
     "capabilitiesSection",
     "tabs",
     "tabs2",
-    "child",
-    "title3",
-    "p2",
-    "ul",
-    "bulletPoint8",
-    "bulletPoint9",
-    "bulletPoint10",
-    "bulletPoint11",
-    "bulletPoint12",
-    "bulletPoint13",
-    "bulletPoint14",
-    "bulletPoint15",
-    "child2",
-    "sliderCarousel",
     "child3",
     "title4",
     "p3",
@@ -4361,54 +3685,38 @@ const PlasmicDescendants = {
     "bulletPoint29",
     "bulletPoint30",
     "bulletPoint31",
+    "bulletPoint32",
+    "bulletPoint33",
+    "bulletPoint34",
+    "bulletPoint35",
     "child6",
     "sliderCarousel3",
     "child7",
     "title6",
     "p5",
     "ul4",
-    "bulletPoint32",
-    "bulletPoint33",
-    "bulletPoint34",
-    "bulletPoint35",
     "bulletPoint36",
     "bulletPoint37",
     "bulletPoint38",
     "bulletPoint39",
+    "bulletPoint40",
     "child8",
     "sliderCarousel4",
     "child9",
     "title7",
     "p6",
     "ul5",
-    "bulletPoint40",
     "bulletPoint41",
     "bulletPoint42",
     "bulletPoint43",
     "bulletPoint44",
     "bulletPoint45",
-    "bulletPoint46",
-    "bulletPoint47",
     "child10",
     "sliderCarousel5"
   ],
   tabs: [
     "tabs",
     "tabs2",
-    "child",
-    "title3",
-    "p2",
-    "ul",
-    "bulletPoint8",
-    "bulletPoint9",
-    "bulletPoint10",
-    "bulletPoint11",
-    "bulletPoint12",
-    "bulletPoint13",
-    "bulletPoint14",
-    "bulletPoint15",
-    "child2",
-    "sliderCarousel",
     "child3",
     "title4",
     "p3",
@@ -4435,53 +3743,37 @@ const PlasmicDescendants = {
     "bulletPoint29",
     "bulletPoint30",
     "bulletPoint31",
+    "bulletPoint32",
+    "bulletPoint33",
+    "bulletPoint34",
+    "bulletPoint35",
     "child6",
     "sliderCarousel3",
     "child7",
     "title6",
     "p5",
     "ul4",
-    "bulletPoint32",
-    "bulletPoint33",
-    "bulletPoint34",
-    "bulletPoint35",
     "bulletPoint36",
     "bulletPoint37",
     "bulletPoint38",
     "bulletPoint39",
+    "bulletPoint40",
     "child8",
     "sliderCarousel4",
     "child9",
     "title7",
     "p6",
     "ul5",
-    "bulletPoint40",
     "bulletPoint41",
     "bulletPoint42",
     "bulletPoint43",
     "bulletPoint44",
     "bulletPoint45",
-    "bulletPoint46",
-    "bulletPoint47",
     "child10",
     "sliderCarousel5"
   ],
   tabs2: [
     "tabs2",
-    "child",
-    "title3",
-    "p2",
-    "ul",
-    "bulletPoint8",
-    "bulletPoint9",
-    "bulletPoint10",
-    "bulletPoint11",
-    "bulletPoint12",
-    "bulletPoint13",
-    "bulletPoint14",
-    "bulletPoint15",
-    "child2",
-    "sliderCarousel",
     "child3",
     "title4",
     "p3",
@@ -4508,74 +3800,35 @@ const PlasmicDescendants = {
     "bulletPoint29",
     "bulletPoint30",
     "bulletPoint31",
+    "bulletPoint32",
+    "bulletPoint33",
+    "bulletPoint34",
+    "bulletPoint35",
     "child6",
     "sliderCarousel3",
     "child7",
     "title6",
     "p5",
     "ul4",
-    "bulletPoint32",
-    "bulletPoint33",
-    "bulletPoint34",
-    "bulletPoint35",
     "bulletPoint36",
     "bulletPoint37",
     "bulletPoint38",
     "bulletPoint39",
+    "bulletPoint40",
     "child8",
     "sliderCarousel4",
     "child9",
     "title7",
     "p6",
     "ul5",
-    "bulletPoint40",
     "bulletPoint41",
     "bulletPoint42",
     "bulletPoint43",
     "bulletPoint44",
     "bulletPoint45",
-    "bulletPoint46",
-    "bulletPoint47",
     "child10",
     "sliderCarousel5"
   ],
-  child: [
-    "child",
-    "title3",
-    "p2",
-    "ul",
-    "bulletPoint8",
-    "bulletPoint9",
-    "bulletPoint10",
-    "bulletPoint11",
-    "bulletPoint12",
-    "bulletPoint13",
-    "bulletPoint14",
-    "bulletPoint15"
-  ],
-  title3: ["title3"],
-  p2: ["p2"],
-  ul: [
-    "ul",
-    "bulletPoint8",
-    "bulletPoint9",
-    "bulletPoint10",
-    "bulletPoint11",
-    "bulletPoint12",
-    "bulletPoint13",
-    "bulletPoint14",
-    "bulletPoint15"
-  ],
-  bulletPoint8: ["bulletPoint8"],
-  bulletPoint9: ["bulletPoint9"],
-  bulletPoint10: ["bulletPoint10"],
-  bulletPoint11: ["bulletPoint11"],
-  bulletPoint12: ["bulletPoint12"],
-  bulletPoint13: ["bulletPoint13"],
-  bulletPoint14: ["bulletPoint14"],
-  bulletPoint15: ["bulletPoint15"],
-  child2: ["child2", "sliderCarousel"],
-  sliderCarousel: ["sliderCarousel"],
   child3: [
     "child3",
     "title4",
@@ -4625,7 +3878,11 @@ const PlasmicDescendants = {
     "bulletPoint28",
     "bulletPoint29",
     "bulletPoint30",
-    "bulletPoint31"
+    "bulletPoint31",
+    "bulletPoint32",
+    "bulletPoint33",
+    "bulletPoint34",
+    "bulletPoint35"
   ],
   title5: ["title5"],
   p4: ["p4"],
@@ -4638,7 +3895,11 @@ const PlasmicDescendants = {
     "bulletPoint28",
     "bulletPoint29",
     "bulletPoint30",
-    "bulletPoint31"
+    "bulletPoint31",
+    "bulletPoint32",
+    "bulletPoint33",
+    "bulletPoint34",
+    "bulletPoint35"
   ],
   bulletPoint24: ["bulletPoint24"],
   bulletPoint25: ["bulletPoint25"],
@@ -4648,6 +3909,10 @@ const PlasmicDescendants = {
   bulletPoint29: ["bulletPoint29"],
   bulletPoint30: ["bulletPoint30"],
   bulletPoint31: ["bulletPoint31"],
+  bulletPoint32: ["bulletPoint32"],
+  bulletPoint33: ["bulletPoint33"],
+  bulletPoint34: ["bulletPoint34"],
+  bulletPoint35: ["bulletPoint35"],
   child6: ["child6", "sliderCarousel3"],
   sliderCarousel3: ["sliderCarousel3"],
   child7: [
@@ -4655,36 +3920,27 @@ const PlasmicDescendants = {
     "title6",
     "p5",
     "ul4",
-    "bulletPoint32",
-    "bulletPoint33",
-    "bulletPoint34",
-    "bulletPoint35",
     "bulletPoint36",
     "bulletPoint37",
     "bulletPoint38",
-    "bulletPoint39"
+    "bulletPoint39",
+    "bulletPoint40"
   ],
   title6: ["title6"],
   p5: ["p5"],
   ul4: [
     "ul4",
-    "bulletPoint32",
-    "bulletPoint33",
-    "bulletPoint34",
-    "bulletPoint35",
     "bulletPoint36",
     "bulletPoint37",
     "bulletPoint38",
-    "bulletPoint39"
+    "bulletPoint39",
+    "bulletPoint40"
   ],
-  bulletPoint32: ["bulletPoint32"],
-  bulletPoint33: ["bulletPoint33"],
-  bulletPoint34: ["bulletPoint34"],
-  bulletPoint35: ["bulletPoint35"],
   bulletPoint36: ["bulletPoint36"],
   bulletPoint37: ["bulletPoint37"],
   bulletPoint38: ["bulletPoint38"],
   bulletPoint39: ["bulletPoint39"],
+  bulletPoint40: ["bulletPoint40"],
   child8: ["child8", "sliderCarousel4"],
   sliderCarousel4: ["sliderCarousel4"],
   child9: [
@@ -4692,36 +3948,27 @@ const PlasmicDescendants = {
     "title7",
     "p6",
     "ul5",
-    "bulletPoint40",
     "bulletPoint41",
     "bulletPoint42",
     "bulletPoint43",
     "bulletPoint44",
-    "bulletPoint45",
-    "bulletPoint46",
-    "bulletPoint47"
+    "bulletPoint45"
   ],
   title7: ["title7"],
   p6: ["p6"],
   ul5: [
     "ul5",
-    "bulletPoint40",
     "bulletPoint41",
     "bulletPoint42",
     "bulletPoint43",
     "bulletPoint44",
-    "bulletPoint45",
-    "bulletPoint46",
-    "bulletPoint47"
+    "bulletPoint45"
   ],
-  bulletPoint40: ["bulletPoint40"],
   bulletPoint41: ["bulletPoint41"],
   bulletPoint42: ["bulletPoint42"],
   bulletPoint43: ["bulletPoint43"],
   bulletPoint44: ["bulletPoint44"],
   bulletPoint45: ["bulletPoint45"],
-  bulletPoint46: ["bulletPoint46"],
-  bulletPoint47: ["bulletPoint47"],
   child10: ["child10", "sliderCarousel5"],
   sliderCarousel5: ["sliderCarousel5"],
   capabilitiesSection2: [
@@ -4773,20 +4020,6 @@ type NodeDefaultElementType = {
   capabilitiesSection: "div";
   tabs: "div";
   tabs2: typeof AntdTabs;
-  child: "div";
-  title3: "div";
-  p2: "div";
-  ul: "div";
-  bulletPoint8: "div";
-  bulletPoint9: "div";
-  bulletPoint10: "div";
-  bulletPoint11: "div";
-  bulletPoint12: "div";
-  bulletPoint13: "div";
-  bulletPoint14: "div";
-  bulletPoint15: "div";
-  child2: "div";
-  sliderCarousel: typeof SliderWrapper;
   child3: "div";
   title4: "div";
   p3: "div";
@@ -4813,34 +4046,32 @@ type NodeDefaultElementType = {
   bulletPoint29: "div";
   bulletPoint30: "div";
   bulletPoint31: "div";
+  bulletPoint32: "div";
+  bulletPoint33: "div";
+  bulletPoint34: "div";
+  bulletPoint35: "div";
   child6: "div";
   sliderCarousel3: typeof SliderWrapper;
   child7: "div";
   title6: "div";
   p5: "div";
   ul4: "div";
-  bulletPoint32: "div";
-  bulletPoint33: "div";
-  bulletPoint34: "div";
-  bulletPoint35: "div";
   bulletPoint36: "div";
   bulletPoint37: "div";
   bulletPoint38: "div";
   bulletPoint39: "div";
+  bulletPoint40: "div";
   child8: "div";
   sliderCarousel4: typeof SliderWrapper;
   child9: "div";
   title7: "div";
   p6: "div";
   ul5: "div";
-  bulletPoint40: "div";
   bulletPoint41: "div";
   bulletPoint42: "div";
   bulletPoint43: "div";
   bulletPoint44: "div";
   bulletPoint45: "div";
-  bulletPoint46: "div";
-  bulletPoint47: "div";
   child10: "div";
   sliderCarousel5: typeof SliderWrapper;
   capabilitiesSection2: "div";
@@ -4940,20 +4171,6 @@ export const PlasmicCapabilities = Object.assign(
     capabilitiesSection: makeNodeComponent("capabilitiesSection"),
     tabs: makeNodeComponent("tabs"),
     tabs2: makeNodeComponent("tabs2"),
-    child: makeNodeComponent("child"),
-    title3: makeNodeComponent("title3"),
-    p2: makeNodeComponent("p2"),
-    ul: makeNodeComponent("ul"),
-    bulletPoint8: makeNodeComponent("bulletPoint8"),
-    bulletPoint9: makeNodeComponent("bulletPoint9"),
-    bulletPoint10: makeNodeComponent("bulletPoint10"),
-    bulletPoint11: makeNodeComponent("bulletPoint11"),
-    bulletPoint12: makeNodeComponent("bulletPoint12"),
-    bulletPoint13: makeNodeComponent("bulletPoint13"),
-    bulletPoint14: makeNodeComponent("bulletPoint14"),
-    bulletPoint15: makeNodeComponent("bulletPoint15"),
-    child2: makeNodeComponent("child2"),
-    sliderCarousel: makeNodeComponent("sliderCarousel"),
     child3: makeNodeComponent("child3"),
     title4: makeNodeComponent("title4"),
     p3: makeNodeComponent("p3"),
@@ -4980,34 +4197,32 @@ export const PlasmicCapabilities = Object.assign(
     bulletPoint29: makeNodeComponent("bulletPoint29"),
     bulletPoint30: makeNodeComponent("bulletPoint30"),
     bulletPoint31: makeNodeComponent("bulletPoint31"),
+    bulletPoint32: makeNodeComponent("bulletPoint32"),
+    bulletPoint33: makeNodeComponent("bulletPoint33"),
+    bulletPoint34: makeNodeComponent("bulletPoint34"),
+    bulletPoint35: makeNodeComponent("bulletPoint35"),
     child6: makeNodeComponent("child6"),
     sliderCarousel3: makeNodeComponent("sliderCarousel3"),
     child7: makeNodeComponent("child7"),
     title6: makeNodeComponent("title6"),
     p5: makeNodeComponent("p5"),
     ul4: makeNodeComponent("ul4"),
-    bulletPoint32: makeNodeComponent("bulletPoint32"),
-    bulletPoint33: makeNodeComponent("bulletPoint33"),
-    bulletPoint34: makeNodeComponent("bulletPoint34"),
-    bulletPoint35: makeNodeComponent("bulletPoint35"),
     bulletPoint36: makeNodeComponent("bulletPoint36"),
     bulletPoint37: makeNodeComponent("bulletPoint37"),
     bulletPoint38: makeNodeComponent("bulletPoint38"),
     bulletPoint39: makeNodeComponent("bulletPoint39"),
+    bulletPoint40: makeNodeComponent("bulletPoint40"),
     child8: makeNodeComponent("child8"),
     sliderCarousel4: makeNodeComponent("sliderCarousel4"),
     child9: makeNodeComponent("child9"),
     title7: makeNodeComponent("title7"),
     p6: makeNodeComponent("p6"),
     ul5: makeNodeComponent("ul5"),
-    bulletPoint40: makeNodeComponent("bulletPoint40"),
     bulletPoint41: makeNodeComponent("bulletPoint41"),
     bulletPoint42: makeNodeComponent("bulletPoint42"),
     bulletPoint43: makeNodeComponent("bulletPoint43"),
     bulletPoint44: makeNodeComponent("bulletPoint44"),
     bulletPoint45: makeNodeComponent("bulletPoint45"),
-    bulletPoint46: makeNodeComponent("bulletPoint46"),
-    bulletPoint47: makeNodeComponent("bulletPoint47"),
     child10: makeNodeComponent("child10"),
     sliderCarousel5: makeNodeComponent("sliderCarousel5"),
     capabilitiesSection2: makeNodeComponent("capabilitiesSection2"),

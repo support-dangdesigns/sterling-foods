@@ -70,6 +70,32 @@
   animation: none;
   position: relative;
 }
+.link__elXtZ {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-VSsNRyw2VYkH);
+  text-align: left;
+  min-width: 0;
+  padding: 8px;
+}
+@media (max-width: 1920px) {
+  .link__elXtZ {
+    padding: 0px;
+  }
+}
+.menuItemsLinks__bt2P:global(.__wab_instance) {
+  max-width: 100%;
+}
+.text__mQhX4 {
+  animation: none;
+  position: relative;
+}
 .link__nl7P {
   display: flex;
   flex-direction: row;

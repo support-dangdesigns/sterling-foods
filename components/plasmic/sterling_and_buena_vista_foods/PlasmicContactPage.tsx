@@ -544,6 +544,7 @@ function PlasmicContactPage__RenderFunc(props: {
                 >
                   {(() => {
                     const child$Props = {
+                      autoDisableWhileSubmitting: false,
                       className: classNames("__wab_instance", sty.form),
                       extendedOnValuesChange: async (...eventArgs: any) => {
                         generateStateOnChangePropForCodeComponents(
@@ -564,6 +565,38 @@ function PlasmicContactPage__RenderFunc(props: {
                       labelCol: { span: 8, horizontalOnly: true },
                       layout: "vertical",
                       mode: "advanced",
+                      onFinish: async values => {
+                        const $steps = {};
+
+                        $steps["updateStateVariable"] = true
+                          ? (() => {
+                              const actionArgs = { operation: 0 };
+                              return (({
+                                variable,
+                                value,
+                                startIndex,
+                                deleteCount
+                              }) => {
+                                if (!variable) {
+                                  return;
+                                }
+                                const { objRoot, variablePath } = variable;
+
+                                $stateSet(objRoot, variablePath, value);
+                                return value;
+                              })?.apply(null, [actionArgs]);
+                            })()
+                          : undefined;
+                        if (
+                          $steps["updateStateVariable"] != null &&
+                          typeof $steps["updateStateVariable"] === "object" &&
+                          typeof $steps["updateStateVariable"].then ===
+                            "function"
+                        ) {
+                          $steps["updateStateVariable"] =
+                            await $steps["updateStateVariable"];
+                        }
+                      },
                       onIsSubmittingChange: async (...eventArgs: any) => {
                         generateStateOnChangePropForCodeComponents(
                           $state,
@@ -608,20 +641,7 @@ function PlasmicContactPage__RenderFunc(props: {
                               sty.formField__dS2Ax
                             )}
                             hidden={false}
-                            initialValue={(() => {
-                              try {
-                                return $q.form.data.body.data.gfForm.formFields
-                                  .nodes[0].databaseId;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return undefined;
-                                }
-                                throw e;
-                              }
-                            })()}
+                            initialValue={""}
                             label={
                               <div
                                 className={classNames(
@@ -636,7 +656,19 @@ function PlasmicContactPage__RenderFunc(props: {
                             name={"first_name_field"}
                             noLabel={true}
                             rules={[{ ruleType: "required" }]}
-                            valuePropName={undefined}
+                            valuePropName={(() => {
+                              try {
+                                return $state.form.value.first_name_field;
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return undefined;
+                                }
+                                throw e;
+                              }
+                            })()}
                           >
                             {(() => {
                               const child$Props = {
@@ -877,7 +909,19 @@ function PlasmicContactPage__RenderFunc(props: {
                             }
                             name={"phone_field"}
                             noLabel={true}
-                            valuePropName={""}
+                            valuePropName={(() => {
+                              try {
+                                return $state.form.value.phone_field;
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return undefined;
+                                }
+                                throw e;
+                              }
+                            })()}
                           >
                             {(() => {
                               const child$Props = {
@@ -949,7 +993,19 @@ function PlasmicContactPage__RenderFunc(props: {
                             name={"email_field"}
                             noLabel={true}
                             rules={[{ ruleType: "required" }]}
-                            valuePropName={""}
+                            valuePropName={(() => {
+                              try {
+                                return $state.form.value.email_field;
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return undefined;
+                                }
+                                throw e;
+                              }
+                            })()}
                           >
                             {(() => {
                               const child$Props = {
@@ -1022,7 +1078,19 @@ function PlasmicContactPage__RenderFunc(props: {
                           name={"message_field"}
                           noLabel={true}
                           rules={[{ ruleType: "required" }]}
-                          valuePropName={""}
+                          valuePropName={(() => {
+                            try {
+                              return $state.form.value.message_field;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return undefined;
+                              }
+                              throw e;
+                            }
+                          })()}
                         >
                           {(() => {
                             const child$Props = {

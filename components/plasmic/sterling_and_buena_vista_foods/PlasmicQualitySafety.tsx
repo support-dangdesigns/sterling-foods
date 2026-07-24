@@ -254,7 +254,7 @@ function PlasmicQualitySafety__RenderFunc(props: {
             "plasmic_mixins",
             styleTokensClassNames,
             sty.qualitySafety,
-            hasVariant(globalVariants, "screen", "desktop") ? "" : undefined
+            hasVariant(globalVariants, "screen", "desktop") ? "" : ""
           )}
         >
           <div
@@ -302,7 +302,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
                       }
                     </React.Fragment>
                   ) : (
-                    "Built on Accountability."
+                    <React.Fragment>
+                      {
+                        $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                          .headlineParent[0].headlinechild[0].headlinefav
+                      }
+                    </React.Fragment>
                   )}
                 </h3>
                 <h3
@@ -322,7 +327,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
                       }
                     </React.Fragment>
                   ) : (
-                    "Driven by Excellence."
+                    <React.Fragment>
+                      {
+                        $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                          .headlineParent[0].headlinechild[0].headlinenormal
+                      }
+                    </React.Fragment>
                   )}
                 </h3>
               </div>
@@ -343,7 +353,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
                     }
                   </React.Fragment>
                 ) : (
-                  "Sterling Foods serves a diverse range of foodservice and retail channels, delivering innovative bakery solutions tailored to the unique needs of each market. Our customer-first approach, flexible manufacturing capabilities, and commitment to quality help partners bring differentiated products to market with confidence."
+                  <React.Fragment>
+                    {
+                      $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                        .textArea[0].text
+                    }
+                  </React.Fragment>
                 )}
               </p>
             </div>
@@ -386,7 +401,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
                         }
                       </React.Fragment>
                     ) : (
-                      "Food Safety"
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .headlineParent[0].headlinechild[1].headlinefav
+                        }
+                      </React.Fragment>
                     )}
                   </h3>
                   <h3
@@ -406,7 +426,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
                         }
                       </React.Fragment>
                     ) : (
-                      "& Regulatory Compliance"
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .headlineParent[0].headlinechild[1].headlinenormal
+                        }
+                      </React.Fragment>
                     )}
                   </h3>
                 </div>
@@ -432,7 +457,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
                         }
                       </React.Fragment>
                     ) : (
-                      "Protecting the integrity of our products starts with rigorous food safety programs and strict regulatory oversight.  "
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .textArea[1].text
+                        }
+                      </React.Fragment>
                     )}
                   </p>
                   <p
@@ -452,7 +482,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
                         }
                       </React.Fragment>
                     ) : (
-                      "Our facilities operate under comprehensive food safety programs designed to meet the requirements of our customers, regulatory agencies, and globally recognized standards. Across our network, facilities operate under USDA and/or FDA oversight and maintain rigorous programs that support product safety, quality, and regulatory compliance."
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .textArea[2].text
+                        }
+                      </React.Fragment>
                     )}
                   </p>
                 </div>
@@ -478,7 +513,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
                         }
                       </React.Fragment>
                     ) : (
-                      "Highlights"
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .textArea[3].text
+                        }
+                      </React.Fragment>
                     )}
                   </h6>
                   <div
@@ -512,7 +552,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
                                 }
                               </React.Fragment>
                             ) : (
-                              "GFSI-certified food safety programs\r"
+                              <React.Fragment>
+                                {
+                                  $q.qualityAndSafety.data.body.data.pageBy
+                                    .pageContent.textArea[4].text
+                                }
+                              </React.Fragment>
                             )}
                           </li>
                           <li
@@ -532,7 +577,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
                                 }
                               </React.Fragment>
                             ) : (
-                              "High-performing SQF certification results\r"
+                              <React.Fragment>
+                                {
+                                  $q.qualityAndSafety.data.body.data.pageBy
+                                    .pageContent.textArea[5].text
+                                }
+                              </React.Fragment>
                             )}
                           </li>
                           <li
@@ -552,7 +602,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
                                 }
                               </React.Fragment>
                             ) : (
-                              "USDA-regulated facilities (FSIS and/or AMS, as applicable)\r"
+                              <React.Fragment>
+                                {
+                                  $q.qualityAndSafety.data.body.data.pageBy
+                                    .pageContent.textArea[6].text
+                                }
+                              </React.Fragment>
                             )}
                           </li>
                           <li
@@ -572,7 +627,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
                                 }
                               </React.Fragment>
                             ) : (
-                              "FDA-regulated facilities"
+                              <React.Fragment>
+                                {
+                                  $q.qualityAndSafety.data.body.data.pageBy
+                                    .pageContent.textArea[7].text
+                                }
+                              </React.Fragment>
                             )}
                           </li>
                           <li
@@ -592,7 +652,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
                                 }
                               </React.Fragment>
                             ) : (
-                              "Comprehensive preventive controls and quality systems"
+                              <React.Fragment>
+                                {
+                                  $q.qualityAndSafety.data.body.data.pageBy
+                                    .pageContent.textArea[8].text
+                                }
+                              </React.Fragment>
                             )}
                           </li>
                         </ul>
@@ -709,7 +774,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
                         }
                       </React.Fragment>
                     ) : (
-                      "Quality Assurance"
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .headlineParent[0].headlinechild[2].headlinefav
+                        }
+                      </React.Fragment>
                     )}
                   </h3>
                   <h3
@@ -729,7 +799,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
                         }
                       </React.Fragment>
                     ) : (
-                      "at Every Step"
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .headlineParent[0].headlinechild[2].headlinenormal
+                        }
+                      </React.Fragment>
                     )}
                   </h3>
                 </div>
@@ -750,7 +825,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
                       }
                     </React.Fragment>
                   ) : (
-                    "Quality is built into every stage of the manufacturing process."
+                    <React.Fragment>
+                      {
+                        $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                          .textArea[9].text
+                      }
+                    </React.Fragment>
                   )}
                 </p>
                 <p
@@ -770,7 +850,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
                       }
                     </React.Fragment>
                   ) : (
-                    "From ingredient receiving and production to finished product evaluation, our teams utilize proven quality control measures to monitor performance, maintain consistency, and verify product specifications."
+                    <React.Fragment>
+                      {
+                        $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                          .textArea[10].text
+                      }
+                    </React.Fragment>
                   )}
                 </p>
                 <div
@@ -795,7 +880,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
                         }
                       </React.Fragment>
                     ) : (
-                      "Our quality systems include:"
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .textArea[11].text
+                        }
+                      </React.Fragment>
                     )}
                   </p>
                   <p
@@ -835,7 +925,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
                                 }
                               </React.Fragment>
                             ) : (
-                              "Statistical Process Control (SPC) to monitor key production parameters"
+                              <React.Fragment>
+                                {
+                                  $q.qualityAndSafety.data.body.data.pageBy
+                                    .pageContent.textArea[12].text
+                                }
+                              </React.Fragment>
                             )}
                           </li>
                           <li
@@ -855,7 +950,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
                                 }
                               </React.Fragment>
                             ) : (
-                              "ANSI/ASQ Z1.4 sampling methodologies for finished product evaluation\r"
+                              <React.Fragment>
+                                {
+                                  $q.qualityAndSafety.data.body.data.pageBy
+                                    .pageContent.textArea[13].text
+                                }
+                              </React.Fragment>
                             )}
                           </li>
                           <li
@@ -875,7 +975,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
                                 }
                               </React.Fragment>
                             ) : (
-                              "Advanced laboratory testing and product analysis"
+                              <React.Fragment>
+                                {
+                                  $q.qualityAndSafety.data.body.data.pageBy
+                                    .pageContent.textArea[14].text
+                                }
+                              </React.Fragment>
                             )}
                           </li>
                           <li
@@ -895,7 +1000,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
                                 }
                               </React.Fragment>
                             ) : (
-                              "Comprehensive quality verification programs"
+                              <React.Fragment>
+                                {
+                                  $q.qualityAndSafety.data.body.data.pageBy
+                                    .pageContent.textArea[15].text
+                                }
+                              </React.Fragment>
                             )}
                           </li>
                         </ul>
@@ -921,7 +1031,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
                       }
                     </React.Fragment>
                   ) : (
-                    "These systems provide accurate, actionable insights that help ensure products consistently meet customer specifications."
+                    <React.Fragment>
+                      {
+                        $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                          .textArea[16].text
+                      }
+                    </React.Fragment>
                   )}
                 </p>
               </div>
@@ -965,7 +1080,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
                         }
                       </React.Fragment>
                     ) : (
-                      "A Culture of"
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .headlineParent[0].headlinechild[3].headlinefav
+                        }
+                      </React.Fragment>
                     )}
                   </h3>
                   <h3
@@ -985,7 +1105,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
                         }
                       </React.Fragment>
                     ) : (
-                      "Continuous Improvement"
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .headlineParent[0].headlinechild[3].headlinenormal
+                        }
+                      </React.Fragment>
                     )}
                   </h3>
                 </div>
@@ -1011,7 +1136,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
                         }
                       </React.Fragment>
                     ) : (
-                      "Excellence requires constant evaluation and innovation.\r"
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .textArea[17].text
+                        }
+                      </React.Fragment>
                     )}
                   </p>
                   <p
@@ -1031,7 +1161,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
                         }
                       </React.Fragment>
                     ) : (
-                      "Sterling Foods is committed to continuously strengthening our processes, technologies, and quality systems through a proactive approach to improvement."
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .textArea[18].text
+                        }
+                      </React.Fragment>
                     )}
                   </p>
                 </div>
@@ -1057,7 +1192,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
                         }
                       </React.Fragment>
                     ) : (
-                      "This commitment includes:"
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .textArea[19].text
+                        }
+                      </React.Fragment>
                     )}
                   </h6>
                   <div
@@ -1093,14 +1233,10 @@ function PlasmicQualitySafety__RenderFunc(props: {
                               </React.Fragment>
                             ) : (
                               <React.Fragment>
-                                <span
-                                  className={
-                                    "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
-                                  }
-                                  style={{ color: "var(--token-sP5FKk2rRQuW)" }}
-                                >
-                                  {"Risk assessment and mitigation programs\r"}
-                                </span>
+                                {
+                                  $q.qualityAndSafety.data.body.data.pageBy
+                                    .pageContent.textArea[20].text
+                                }
                               </React.Fragment>
                             )}
                           </li>
@@ -1122,16 +1258,10 @@ function PlasmicQualitySafety__RenderFunc(props: {
                               </React.Fragment>
                             ) : (
                               <React.Fragment>
-                                <span
-                                  className={
-                                    "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
-                                  }
-                                  style={{ color: "var(--token-sP5FKk2rRQuW)" }}
-                                >
-                                  {
-                                    "Root cause analysis and corrective action processes\r"
-                                  }
-                                </span>
+                                {
+                                  $q.qualityAndSafety.data.body.data.pageBy
+                                    .pageContent.textArea[21].text
+                                }
                               </React.Fragment>
                             )}
                           </li>
@@ -1153,16 +1283,10 @@ function PlasmicQualitySafety__RenderFunc(props: {
                               </React.Fragment>
                             ) : (
                               <React.Fragment>
-                                <span
-                                  className={
-                                    "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
-                                  }
-                                  style={{ color: "var(--token-sP5FKk2rRQuW)" }}
-                                >
-                                  {
-                                    "Ongoing investment in technologies and manufacturing capabilities\r"
-                                  }
-                                </span>
+                                {
+                                  $q.qualityAndSafety.data.body.data.pageBy
+                                    .pageContent.textArea[22].text
+                                }
                               </React.Fragment>
                             )}
                           </li>
@@ -1184,16 +1308,10 @@ function PlasmicQualitySafety__RenderFunc(props: {
                               </React.Fragment>
                             ) : (
                               <React.Fragment>
-                                <span
-                                  className={
-                                    "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
-                                  }
-                                  style={{ color: "var(--token-sP5FKk2rRQuW)" }}
-                                >
-                                  {
-                                    "Employee training and engagement at every level of the organization"
-                                  }
-                                </span>
+                                {
+                                  $q.qualityAndSafety.data.body.data.pageBy
+                                    .pageContent.textArea[23].text
+                                }
                               </React.Fragment>
                             )}
                           </li>
@@ -1219,7 +1337,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
                         }
                       </React.Fragment>
                     ) : (
-                      "By continuously improving how we operate, we help ensure long-term success for our customers, employees, and partners."
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .textArea[24].text
+                        }
+                      </React.Fragment>
                     )}
                   </p>
                 </div>
@@ -1287,7 +1410,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
                         }
                       </React.Fragment>
                     ) : (
-                      "Quality and Safety"
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .headlineParent[0].headlinechild[4].headlinefav
+                        }
+                      </React.Fragment>
                     )}
                   </h3>
                   <h3
@@ -1307,7 +1435,12 @@ function PlasmicQualitySafety__RenderFunc(props: {
                         }
                       </React.Fragment>
                     ) : (
-                      "You Can Trust"
+                      <React.Fragment>
+                        {
+                          $q.qualityAndSafety.data.body.data.pageBy.pageContent
+                            .headlineParent[0].headlinechild[4].headlinenormal
+                        }
+                      </React.Fragment>
                     )}
                   </h3>
                 </div>
@@ -1338,7 +1471,22 @@ function PlasmicQualitySafety__RenderFunc(props: {
                       })()}
                     </React.Fragment>
                   ) : (
-                    "Whether developing a new product or scaling an existing program, Sterling Foods is committed to delivering solutions supported by robust food safety systems, disciplined quality practices, and a culture focused on continuous improvement."
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $q.qualityAndSafety.data.body.data.pageBy
+                            .pageContent.textArea[25].text;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "Whether developing a new product or scaling an existing program, Sterling Foods is committed to delivering solutions supported by robust food safety systems, disciplined quality practices, and a culture focused on continuous improvement.";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
                   )}
                 </p>
               </div>

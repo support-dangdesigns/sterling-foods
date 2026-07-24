@@ -1317,6 +1317,8 @@
   .p__blb6 {
     animation: none;
     width: 739px;
+    text-align: center;
+    font-family: "Avenir LT Std";
   }
 }
 @media (max-width: 1200px) {

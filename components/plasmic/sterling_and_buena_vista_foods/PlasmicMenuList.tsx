@@ -351,6 +351,28 @@ function PlasmicMenuList__RenderFunc(props: {
         />
       </PlasmicLink__>
       <PlasmicLink__
+        className={classNames("all", "a", "a__uyaK1", sty.link__elXtZ, {
+          [sty.linkcurrent_markets__elXtZIcs7Q]: hasVariant(
+            $state,
+            "current",
+            "markets"
+          )
+        })}
+        component={Link}
+        href={`/innovation`}
+        legacyBehavior={false}
+        platform={"nextjs"}
+      >
+        <MenuItemsLinks
+          className={classNames("__wab_instance", sty.menuItemsLinks__bt2P)}
+          quickLinks2={
+            <div className={classNames("all", "__wab_text", sty.text__mQhX4)}>
+              {"Innovation"}
+            </div>
+          }
+        />
+      </PlasmicLink__>
+      <PlasmicLink__
         className={classNames("all", "a", "a__uyaK1", sty.link__nl7P, {
           [sty.linkcurrent_capabilities__nl7PnWrPh]: hasVariant(
             $state,
@@ -391,7 +413,7 @@ function PlasmicMenuList__RenderFunc(props: {
       <PlasmicLink__
         className={classNames("all", "a", "a__uyaK1", sty.link__mh953)}
         component={Link}
-        href={"/our-facilities"}
+        href={`/quality-safety`}
         legacyBehavior={false}
         platform={"nextjs"}
       >

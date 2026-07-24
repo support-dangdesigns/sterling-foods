@@ -191,21 +191,23 @@ function PlasmicMenuItemsLinks__RenderFunc(props: {
         "plasmic_mixins",
         styleTokensClassNames,
         sty.quickLinks,
-        "quick-link"
+        "quick-link",
+        { [sty.quickLinksisActive]: hasVariant($state, "isActive", "isActive") }
       )}
       component={Link}
       legacyBehavior={false}
       onClick={async event => {
         const $steps = {};
 
-        $steps["updateIsActive"] = true
+        $steps["updateActive"] = true
           ? (() => {
               const actionArgs = {
+                operation: 0,
                 variable: {
                   objRoot: $state,
-                  variablePath: ["isActive"]
+                  variablePath: ["active"]
                 },
-                operation: 0
+                value: true
               };
               return (({ variable, value, startIndex, deleteCount }) => {
                 if (!variable) {
@@ -219,11 +221,11 @@ function PlasmicMenuItemsLinks__RenderFunc(props: {
             })()
           : undefined;
         if (
-          $steps["updateIsActive"] != null &&
-          typeof $steps["updateIsActive"] === "object" &&
-          typeof $steps["updateIsActive"].then === "function"
+          $steps["updateActive"] != null &&
+          typeof $steps["updateActive"] === "object" &&
+          typeof $steps["updateActive"].then === "function"
         ) {
-          $steps["updateIsActive"] = await $steps["updateIsActive"];
+          $steps["updateActive"] = await $steps["updateActive"];
         }
       }}
       platform={"nextjs"}

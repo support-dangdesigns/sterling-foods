@@ -1355,81 +1355,9 @@ function PlasmicAboutUs__RenderFunc(props: {
                           {"Our Values\n\n\r"}
                         </h5>
                       }
-                      <React.Fragment>{"\u2022 "}</React.Fragment>
-                      <span
-                        className={
-                          "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
-                        }
-                        style={{ fontWeight: 700 }}
-                      >
-                        {" Safety First"}
-                      </span>
                       <React.Fragment>
                         {
-                          ": protecting our people and the food we create.\r\n\u2022"
-                        }
-                      </React.Fragment>
-                      <span
-                        className={
-                          "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
-                        }
-                        style={{ fontWeight: 700 }}
-                      >
-                        {"  Purpose-driven:"}
-                      </span>
-                      <React.Fragment>
-                        {
-                          " doing right by our people, our communities, and the environment \r\n\u2022"
-                        }
-                      </React.Fragment>
-                      <span
-                        className={
-                          "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
-                        }
-                        style={{ fontWeight: 700 }}
-                      >
-                        {"  Trustworthy and Ethical: "}
-                      </span>
-                      <React.Fragment>
-                        {
-                          "conducting ourselves with integrity, respect, transparency and accountability\r\n\u2022"
-                        }
-                      </React.Fragment>
-                      <span
-                        className={
-                          "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
-                        }
-                        style={{ fontWeight: 700 }}
-                      >
-                        {"  Collaborative:"}
-                      </span>
-                      <React.Fragment>
-                        {" fostering a teamwork-driven culture\r\n\u2022 "}
-                      </React.Fragment>
-                      <span
-                        className={
-                          "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
-                        }
-                        style={{ fontWeight: 700 }}
-                      >
-                        {" Exceptional Execution:"}
-                      </span>
-                      <React.Fragment>
-                        {
-                          " executing with excellence and embracing flexibility \r\n"
-                        }
-                      </React.Fragment>
-                      <span
-                        className={
-                          "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
-                        }
-                        style={{ fontWeight: 700 }}
-                      >
-                        {"\u2022  Customer-focused:"}
-                      </span>
-                      <React.Fragment>
-                        {
-                          " building trusted, long-term partnerships, and putting our customers at the center of everything we do."
+                          "\u2022  Safety First: protecting our people and the food we create.\r\n\r\n\u2022  Purpose-driven: doing right by our people, our communities, and the environment \r\n\r\n\u2022  Trustworthy and Ethical: conducting ourselves with integrity, respect, transparency and accountability\r\n\r\n\u2022  Collaborative: fostering a teamwork-driven culture\r\n\r\n\u2022  Exceptional Execution: executing with excellence and embracing flexibility \r\n\r\n\u2022  Customer-focused: building trusted, long-term partnerships, and putting our customers at the center of everything we do."
                         }
                       </React.Fragment>
                     </React.Fragment>

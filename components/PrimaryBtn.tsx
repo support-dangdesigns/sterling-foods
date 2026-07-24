@@ -22,7 +22,7 @@ import { HTMLElementRefOf } from "@plasmicapp/react-web";
 // total control over the props for your component.
 export interface PrimaryBtnProps extends DefaultPrimaryBtnProps {}
 
-function PrimaryBtn_(props: PrimaryBtnProps, ref: HTMLElementRefOf<"div">) {
+function PrimaryBtn_(props: PrimaryBtnProps, ref: HTMLElementRefOf<"a">) {
   // Use PlasmicPrimaryBtn to render this component as it was
   // designed in Plasmic, by activating the appropriate variants,
   // attaching the appropriate event handlers, etc.  You

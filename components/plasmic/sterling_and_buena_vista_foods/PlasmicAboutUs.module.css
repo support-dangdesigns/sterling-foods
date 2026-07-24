@@ -1305,6 +1305,35 @@
   font-weight: 200;
   min-width: 0;
 }
+.freeBox___59QbK {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 20px;
+  min-width: 0;
+  padding: 0px;
+}
+.text__glGv {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-GGYj13plNx6v);
+  font-family: "Georgia";
+  line-height: 1.2em;
+  padding-top: 0px;
+  font-size: 40px;
+  min-width: 0;
+}
+@media (max-width: 757px) {
+  .text__glGv {
+    font-size: var(--token-16_cC9w3e0Nk);
+  }
+}
 .text__pS7J4 {
   position: relative;
   width: 100%;

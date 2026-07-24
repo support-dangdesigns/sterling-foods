@@ -174,7 +174,6 @@ export type PlasmicAboutUs__OverridesType = {
   aboutUsSection3?: Flex__<"div">;
   wrapper2?: Flex__<"div">;
   texts?: Flex__<"div">;
-  h5?: Flex__<"h5">;
   images?: Flex__<"div">;
   item7?: Flex__<"div">;
   item8?: Flex__<"div">;
@@ -1335,32 +1334,27 @@ function PlasmicAboutUs__RenderFunc(props: {
                       })()}
                     </React.Fragment>
                   </div>
-                  <div
-                    className={classNames("all", "__wab_text", sty.text__pS7J4)}
-                  >
-                    <React.Fragment>
-                      <React.Fragment>{""}</React.Fragment>
+                  <div className={classNames("all", sty.freeBox___59QbK)}>
+                    <div
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text__glGv
+                      )}
+                    >
+                      {"Our Values"}
+                    </div>
+                    <div
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text__pS7J4
+                      )}
+                    >
                       {
-                        <h5
-                          data-plasmic-name={"h5"}
-                          data-plasmic-override={overrides.h5}
-                          className={classNames(
-                            "all",
-                            "h5",
-                            "h5__uyaK1",
-                            "__wab_text",
-                            sty.h5
-                          )}
-                        >
-                          {"Our Values\n\n\r"}
-                        </h5>
+                        "\u2022  Safety First: protecting our people and the food we create.\r\n\u2022  Purpose-driven: doing right by our people, our communities, and the environment \r\n\u2022  Trustworthy and Ethical: conducting ourselves with integrity, respect, transparency and accountability\r\n\u2022  Collaborative: fostering a teamwork-driven culture\r\n\u2022  Exceptional Execution: executing with excellence and embracing flexibility \r\n\u2022  Customer-focused: building trusted, long-term partnerships, and putting our customers at the center of everything we do."
                       }
-                      <React.Fragment>
-                        {
-                          "\u2022  Safety First: protecting our people and the food we create.\r\n\r\n\u2022  Purpose-driven: doing right by our people, our communities, and the environment \r\n\r\n\u2022  Trustworthy and Ethical: conducting ourselves with integrity, respect, transparency and accountability\r\n\r\n\u2022  Collaborative: fostering a teamwork-driven culture\r\n\r\n\u2022  Exceptional Execution: executing with excellence and embracing flexibility \r\n\r\n\u2022  Customer-focused: building trusted, long-term partnerships, and putting our customers at the center of everything we do."
-                        }
-                      </React.Fragment>
-                    </React.Fragment>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -3043,7 +3037,6 @@ const PlasmicDescendants = {
     "aboutUsSection3",
     "wrapper2",
     "texts",
-    "h5",
     "images",
     "item7",
     "item8",
@@ -3155,7 +3148,6 @@ const PlasmicDescendants = {
     "aboutUsSection3",
     "wrapper2",
     "texts",
-    "h5",
     "images",
     "item7",
     "item8",
@@ -3350,14 +3342,12 @@ const PlasmicDescendants = {
     "aboutUsSection3",
     "wrapper2",
     "texts",
-    "h5",
     "images",
     "item7",
     "item8"
   ],
-  wrapper2: ["wrapper2", "texts", "h5", "images", "item7", "item8"],
-  texts: ["texts", "h5"],
-  h5: ["h5"],
+  wrapper2: ["wrapper2", "texts", "images", "item7", "item8"],
+  texts: ["texts"],
   images: ["images", "item7", "item8"],
   item7: ["item7"],
   item8: ["item8"],
@@ -3634,7 +3624,6 @@ type NodeDefaultElementType = {
   aboutUsSection3: "div";
   wrapper2: "div";
   texts: "div";
-  h5: "h5";
   images: "div";
   item7: "div";
   item8: "div";
@@ -3808,7 +3797,6 @@ export const PlasmicAboutUs = Object.assign(
     aboutUsSection3: makeNodeComponent("aboutUsSection3"),
     wrapper2: makeNodeComponent("wrapper2"),
     texts: makeNodeComponent("texts"),
-    h5: makeNodeComponent("h5"),
     images: makeNodeComponent("images"),
     item7: makeNodeComponent("item7"),
     item8: makeNodeComponent("item8"),

@@ -626,14 +626,14 @@ function PlasmicCapabilities__RenderFunc(props: {
                                 )
                               ? "70%"
                               : hasVariant(globalVariants, "screen", "laptop")
-                                ? "35%"
+                                ? "auto"
                                 : hasVariant(
                                       globalVariants,
                                       "screen",
                                       "smallDesktop"
                                     )
                                   ? "472px"
-                                  : "640px"
+                                  : "100%"
                     }
                     loading={"lazy"}
                     src={
@@ -1199,15 +1199,21 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   "smallTablet"
                                 )
                               ? "70%"
-                              : hasVariant(globalVariants, "screen", "laptop")
-                                ? "35%"
-                                : hasVariant(
-                                      globalVariants,
-                                      "screen",
-                                      "smallDesktop"
-                                    )
-                                  ? "472px"
-                                  : "640px"
+                              : hasVariant(
+                                    globalVariants,
+                                    "screen",
+                                    "smallLaptop2"
+                                  )
+                                ? "auto"
+                                : hasVariant(globalVariants, "screen", "laptop")
+                                  ? "auto"
+                                  : hasVariant(
+                                        globalVariants,
+                                        "screen",
+                                        "smallDesktop"
+                                      )
+                                    ? "472px"
+                                    : "640px"
                     }
                     loading={"lazy"}
                     src={
@@ -3534,21 +3540,39 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   "smallTablet"
                                 )
                               ? "70%"
-                              : hasVariant(globalVariants, "screen", "laptop")
-                                ? "35%"
+                              : hasVariant(globalVariants, "screen", "tablet")
+                                ? "100%"
                                 : hasVariant(
                                       globalVariants,
                                       "screen",
-                                      "smallDesktop"
+                                      "smallLaptop2"
                                     )
-                                  ? "472px"
+                                  ? "100%"
                                   : hasVariant(
                                         globalVariants,
                                         "screen",
-                                        "desktop"
+                                        "smallLaptop"
                                       )
-                                    ? "575px"
-                                    : "575px"
+                                    ? "100%"
+                                    : hasVariant(
+                                          globalVariants,
+                                          "screen",
+                                          "laptop"
+                                        )
+                                      ? "100%"
+                                      : hasVariant(
+                                            globalVariants,
+                                            "screen",
+                                            "smallDesktop"
+                                          )
+                                        ? "472px"
+                                        : hasVariant(
+                                              globalVariants,
+                                              "screen",
+                                              "desktop"
+                                            )
+                                          ? "575px"
+                                          : "575px"
                     }
                     loading={"lazy"}
                     src={
@@ -3870,21 +3894,39 @@ function PlasmicCapabilities__RenderFunc(props: {
                                   "smallTablet"
                                 )
                               ? "70%"
-                              : hasVariant(globalVariants, "screen", "laptop")
-                                ? "35%"
+                              : hasVariant(globalVariants, "screen", "tablet")
+                                ? "100%"
                                 : hasVariant(
                                       globalVariants,
                                       "screen",
-                                      "smallDesktop"
+                                      "smallLaptop2"
                                     )
-                                  ? "472px"
+                                  ? "100%"
                                   : hasVariant(
                                         globalVariants,
                                         "screen",
-                                        "desktop"
+                                        "smallLaptop"
                                       )
-                                    ? "575px"
-                                    : "575px"
+                                    ? "100%"
+                                    : hasVariant(
+                                          globalVariants,
+                                          "screen",
+                                          "laptop"
+                                        )
+                                      ? "100%"
+                                      : hasVariant(
+                                            globalVariants,
+                                            "screen",
+                                            "smallDesktop"
+                                          )
+                                        ? "472px"
+                                        : hasVariant(
+                                              globalVariants,
+                                              "screen",
+                                              "desktop"
+                                            )
+                                          ? "575px"
+                                          : "575px"
                     }
                     loading={"lazy"}
                     src={

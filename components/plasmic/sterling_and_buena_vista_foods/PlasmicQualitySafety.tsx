@@ -1406,7 +1406,7 @@ function PlasmicQualitySafety__RenderFunc(props: {
                       <React.Fragment>
                         {
                           $q.qualityAndSafety.data.body.data.pageBy.pageContent
-                            .headlineParent[0].headlinechild[4].headlinefav
+                            .headlineParent[0].headlinechild[3].headlinefav
                         }
                       </React.Fragment>
                     ) : (
@@ -1431,7 +1431,7 @@ function PlasmicQualitySafety__RenderFunc(props: {
                       <React.Fragment>
                         {
                           $q.qualityAndSafety.data.body.data.pageBy.pageContent
-                            .headlineParent[0].headlinechild[4].headlinenormal
+                            .headlineParent[0].headlinechild[3].headlinenormal
                         }
                       </React.Fragment>
                     ) : (

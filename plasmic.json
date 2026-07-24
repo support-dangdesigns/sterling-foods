@@ -28987,6 +28987,16 @@
           "id": "wLhdMJ_UyBl2",
           "name": "[SterlingFood]Union-City-2.avif",
           "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/sterlingFoodUnionCity2Avif.avif"
+        },
+        {
+          "id": "5Imsy0BOslZG",
+          "name": "Arrow4.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/arrow4Png.png"
+        },
+        {
+          "id": "NECxD5zJQyd3",
+          "name": "Arrow.png",
+          "filePath": "../public/plasmic/sterling_and_buena_vista_foods/images/arrowPng.png"
         }
       ],
       "indirect": false,

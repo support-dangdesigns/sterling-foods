@@ -395,7 +395,7 @@
     animation: none;
     height: auto;
     padding-top: 250px;
-    width: 1425px;
+    width: 1475px;
     padding-bottom: 75px;
   }
 }
@@ -480,6 +480,12 @@
   min-width: 0;
   padding: 8px;
 }
+@media (max-width: 1920px) {
+  .text3 {
+    width: 100%;
+    min-width: 0;
+  }
+}
 @media (max-width: 1440px) {
   .text3 {
     align-items: center;
@@ -545,7 +551,8 @@
     align-items: stretch;
     justify-content: center;
     flex-wrap: wrap;
-    column-gap: 0px;
+    column-gap: 10px;
+    row-gap: 10px;
   }
 }
 @media (max-width: 757px) {
@@ -647,6 +654,7 @@
   .h3__wdfVl {
     line-height: 45px;
     font-size: var(--token-KiAZW0gIrhlw);
+    font-family: "Georgia";
   }
 }
 @media (max-width: 757px) {
@@ -672,6 +680,11 @@
   .h3___0Sw2Y {
     text-align: center;
     color: var(--token-Q67gH6ouJM2i);
+  }
+}
+@media (max-width: 1440px) {
+  .h3___0Sw2Y {
+    font-size: var(--token-KiAZW0gIrhlw);
   }
 }
 @media (max-width: 757px) {
@@ -942,6 +955,7 @@
 @media (max-width: 1920px) {
   .bakerysolutions {
     height: 500px;
+    width: 1420px;
     flex-shrink: 0;
   }
 }
@@ -1217,37 +1231,33 @@
     font-size: 18px;
   }
 }
-.embedHtml:global(.__wab_instance) {
-  max-width: 100%;
+.img__luhuh {
   object-fit: cover;
-  position: absolute;
-  left: 20px;
-  top: auto;
-  bottom: -100px;
+  max-width: 100%;
+  display: none;
+}
+.img__luhuh > picture > img {
+  object-fit: cover;
 }
 @media (max-width: 1920px) {
-  .embedHtml:global(.__wab_instance) {
+  .img__luhuh {
+    align-self: flex-start;
+    position: absolute;
+    left: 120px;
+    top: auto;
     bottom: -100px;
-    left: 20px;
+    object-fit: contain;
+    display: block;
+  }
+}
+@media (max-width: 1920px) {
+  .img__luhuh > picture > img {
+    object-fit: contain;
   }
 }
 @media (max-width: 1700px) {
-  .embedHtml:global(.__wab_instance) {
-    bottom: -150px;
-  }
-}
-@media (max-width: 1200px) {
-  .embedHtml:global(.__wab_instance) {
-    bottom: -110px;
-  }
-}
-@media (max-width: 1024px) {
-  .embedHtml:global(.__wab_instance) {
-    bottom: -110px;
-  }
-}
-@media (max-width: 757px) {
-  .embedHtml:global(.__wab_instance) {
+  .img__luhuh {
+    left: 70px;
     display: none;
   }
 }
@@ -1280,6 +1290,11 @@
   column-gap: 0px;
   padding-left: 0px;
   flex-shrink: 0;
+}
+@media (max-width: 1920px) {
+  .foodServiceAndRetailPartners {
+    width: 1420px;
+  }
 }
 @media (max-width: 1700px) {
   .foodServiceAndRetailPartners {

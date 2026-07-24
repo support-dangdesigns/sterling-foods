@@ -211,6 +211,12 @@
   line-height: 36px;
   min-width: 0;
 }
+@media (max-width: 430px) {
+  .text__o4JiD {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 .text__lyDF {
   width: 100%;
   height: auto;
@@ -219,6 +225,12 @@
   font-family: "Avenir LT Std";
   line-height: 36px;
   min-width: 0;
+}
+@media (max-width: 430px) {
+  .text__lyDF {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
 }
 .text2 {
   display: flex;
@@ -314,7 +326,7 @@
   justify-content: center;
   width: 100%;
   height: auto;
-  max-width: 100%;
+  max-width: 1070px;
   min-width: 0;
   padding: 0px;
 }
@@ -457,16 +469,30 @@
   line-height: 32px;
   min-width: 0;
 }
-.embedHtml:global(.__wab_instance) {
-  max-width: 100%;
+.img__fnyf {
   object-fit: cover;
-  text-align: center;
-  align-self: flex-end;
+  max-width: 100%;
   z-index: 2;
-  margin: 0px 50px -340px 0px;
+  margin-bottom: -340px;
+  margin-left: 0px;
+  align-self: flex-end;
+  margin-right: 400px;
 }
-@media (max-width: 1024px) {
-  .embedHtml:global(.__wab_instance) {
+.img__fnyf > picture > img {
+  object-fit: cover;
+}
+@media (max-width: 1700px) {
+  .img__fnyf {
+    margin-right: 350px;
+  }
+}
+@media (max-width: 1512px) {
+  .img__fnyf {
+    margin-right: 250px;
+  }
+}
+@media (max-width: 1440px) {
+  .img__fnyf {
     display: none;
   }
 }
@@ -1920,6 +1946,8 @@
     row-gap: 20px;
     padding-right: 25px;
     padding-left: 25px;
+    align-items: center;
+    justify-content: center;
     column-gap: 0px;
   }
 }
@@ -1928,6 +1956,8 @@
     display: flex;
     flex-direction: column;
     row-gap: 10px;
+    align-items: center;
+    justify-content: center;
     column-gap: 0px;
   }
 }
@@ -2007,6 +2037,30 @@
     padding: 0px 20px 20px;
   }
 }
+@media (max-width: 530px) {
+  .text__aLer5 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+@media (max-width: 430px) {
+  .text__aLer5 {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
+@media (max-width: 414px) {
+  .text__aLer5 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+@media (max-width: 375px) {
+  .text__aLer5 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
 .link {
   display: flex;
   flex-direction: column;
@@ -2033,8 +2087,15 @@
     flex-shrink: 0;
   }
 }
+@media (max-width: 1024px) {
+  .primaryBtn:global(.__wab_instance) {
+    align-self: center;
+    flex-shrink: 0;
+  }
+}
 @media (max-width: 757px) {
   .primaryBtn:global(.__wab_instance) {
+    align-self: center;
     flex-shrink: 0;
   }
 }

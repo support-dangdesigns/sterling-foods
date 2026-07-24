@@ -70,7 +70,6 @@ import type { QueryComponentNode } from "@plasmicapp/react-web/lib/data-sources"
 
 import Header from "../../Header"; // plasmic-import: qmNXHiKWCTTQ/component
 import TopHero from "../../TopHero"; // plasmic-import: 2xRY6WOypZh7/component
-import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 import { ParallaxWrapper } from "@plasmicpkgs/react-scroll-parallax";
 import PrimaryBtn from "../../PrimaryBtn"; // plasmic-import: TiffCyYLfuDQ/component
 import { SliderWrapper } from "@plasmicpkgs/react-slick";
@@ -143,7 +142,6 @@ export type PlasmicAboutUs__OverridesType = {
   box?: Flex__<"div">;
   box2?: Flex__<"div">;
   box3?: Flex__<"div">;
-  embedHtml?: Flex__<typeof Embed>;
   aboutUsSection2?: Flex__<"div">;
   wrapper?: Flex__<"div">;
   heading2?: Flex__<"div">;
@@ -643,13 +641,22 @@ function PlasmicAboutUs__RenderFunc(props: {
                   </div>
                 </div>
               </div>
-              <Embed
-                data-plasmic-name={"embedHtml"}
-                data-plasmic-override={overrides.embedHtml}
-                className={classNames("__wab_instance", sty.embedHtml)}
-                code={
-                  '<div\r\n  class="plasmic-traced-scroll-arrow"\r\n  data-traced-scroll-arrow\r\n  style="\r\n    --arrow-color: #c3761e;\r\n    --arrow-width: 162px;\r\n    --arrow-stroke-width: 7;\r\n  "\r\n>\r\n  <svg\r\n    class="plasmic-traced-scroll-arrow__svg"\r\n    viewBox="0 0 162 262"\r\n    xmlns="http://www.w3.org/2000/svg"\r\n    role="img"\r\n    aria-label="Animated curved arrow"\r\n  >\r\n    <!-- Main arrow shaft -->\r\n    <path\r\n      data-draw-path\r\n      data-draw-start="0"\r\n      data-draw-end="0.9"\r\n      d="\r\n        M 4 3\r\n        L 16 7\r\n        L 33 15\r\n        L 48 24\r\n        L 61 34\r\n        L 77 50\r\n        L 85 60\r\n        L 93 74\r\n        L 96 83\r\n        L 96 90\r\n        L 97 91\r\n        L 96 93\r\n        L 87 93\r\n        L 86 92\r\n        L 70 92\r\n        L 69 93\r\n        L 65 93\r\n        L 51 99\r\n        L 45 104\r\n        L 40 113\r\n        L 40 124\r\n        L 46 135\r\n        L 54 142\r\n        L 62 145\r\n        L 70 145\r\n        L 76 143\r\n        L 84 138\r\n        L 90 131\r\n        L 97 115\r\n        L 98 100\r\n        L 99 98\r\n        L 96 93\r\n        L 100 99\r\n        L 107 100\r\n        L 113 103\r\n        L 125 112\r\n        L 136 123\r\n        L 145 136\r\n        L 151 148\r\n        L 155 160\r\n        L 156 172\r\n        L 157 173\r\n        L 157 182\r\n        L 156 183\r\n        L 155 192\r\n        L 147 211\r\n        L 135 225\r\n        L 127 231\r\n        L 119 235\r\n        L 105 239\r\n        L 85 239\r\n        L 84 238\r\n        L 73 238\r\n        L 69 236\r\n      "\r\n    />\r\n\r\n    <!-- Upper arrowhead -->\r\n    <path\r\n      data-draw-path\r\n      data-draw-start="0.9"\r\n      data-draw-end="1"\r\n      d="\r\n        M 69 236\r\n        L 70 237\r\n        L 72 237\r\n        L 73 236\r\n        L 73 234\r\n        L 75 230\r\n        L 77 228\r\n        L 84 224\r\n        L 87 221\r\n        L 88 221\r\n      "\r\n    />\r\n\r\n    <!-- Lower arrowhead -->\r\n    <path\r\n      data-draw-path\r\n      data-draw-start="0.9"\r\n      data-draw-end="1"\r\n      d="\r\n        M 69 236\r\n        L 73 238\r\n        L 73 240\r\n        L 74 241\r\n        L 75 245\r\n        L 87 256\r\n      "\r\n    />\r\n  </svg>\r\n</div>\r\n\r\n<style>\r\n  .plasmic-traced-scroll-arrow {\r\n    position: relative;\r\n    width: var(--arrow-width, 162px);\r\n    max-width: 100%;\r\n  }\r\n\r\n  .plasmic-traced-scroll-arrow__svg {\r\n    display: block;\r\n    width: 100%;\r\n    height: auto;\r\n    overflow: visible;\r\n    visibility: hidden;\r\n  }\r\n\r\n  .plasmic-traced-scroll-arrow.is-ready\r\n    .plasmic-traced-scroll-arrow__svg {\r\n    visibility: visible;\r\n  }\r\n\r\n  .plasmic-traced-scroll-arrow [data-draw-path] {\r\n    fill: none;\r\n    stroke: var(--arrow-color, #c3761e);\r\n    stroke-width: var(--arrow-stroke-width, 7);\r\n    stroke-linecap: round;\r\n    stroke-linejoin: round;\r\n    vector-effect: non-scaling-stroke;\r\n    will-change: stroke-dashoffset;\r\n  }\r\n\r\n  @media (prefers-reduced-motion: reduce) {\r\n    .plasmic-traced-scroll-arrow [data-draw-path] {\r\n      stroke-dasharray: none !important;\r\n      stroke-dashoffset: 0 !important;\r\n    }\r\n  }\r\n</style>\r\n\r\n<script>\r\n  (() => {\r\n    const clamp = (value, minimum, maximum) =>\r\n      Math.min(Math.max(value, minimum), maximum);\r\n\r\n    function initializeArrow(root) {\r\n      if (root.dataset.arrowInitialized === "true") {\r\n        return;\r\n      }\r\n\r\n      root.dataset.arrowInitialized = "true";\r\n\r\n      const paths = Array.from(\r\n        root.querySelectorAll("[data-draw-path]")\r\n      );\r\n\r\n      if (!paths.length) {\r\n        return;\r\n      }\r\n\r\n      const reducedMotion = window.matchMedia(\r\n        "(prefers-reduced-motion: reduce)"\r\n      );\r\n\r\n      let animationFrame = null;\r\n\r\n      const pathData = paths.map((path) => {\r\n        const length = path.getTotalLength();\r\n\r\n        path.style.strokeDasharray = `${length} ${length}`;\r\n        path.style.strokeDashoffset = `${length}`;\r\n\r\n        return {\r\n          path,\r\n          length,\r\n          start: Number.parseFloat(\r\n            path.dataset.drawStart || "0"\r\n          ),\r\n          end: Number.parseFloat(\r\n            path.dataset.drawEnd || "1"\r\n          )\r\n        };\r\n      });\r\n\r\n      function getScrollProgress() {\r\n        const rect = root.getBoundingClientRect();\r\n\r\n        const viewportHeight =\r\n          window.innerHeight ||\r\n          document.documentElement.clientHeight;\r\n\r\n        /*\r\n         * The arrow begins drawing when its top reaches\r\n         * 90% of the viewport height.\r\n         */\r\n        const startPosition = viewportHeight * 0.9;\r\n\r\n        /*\r\n         * The arrow finishes drawing when its top reaches\r\n         * 18% of the viewport height.\r\n         */\r\n        const finishPosition = viewportHeight * 0.18;\r\n\r\n        return clamp(\r\n          (startPosition - rect.top) /\r\n            (startPosition - finishPosition),\r\n          0,\r\n          1\r\n        );\r\n      }\r\n\r\n      function render() {\r\n        animationFrame = null;\r\n\r\n        const overallProgress = reducedMotion.matches\r\n          ? 1\r\n          : getScrollProgress();\r\n\r\n        pathData.forEach(\r\n          ({ path, length, start, end }) => {\r\n            const duration = Math.max(\r\n              end - start,\r\n              0.0001\r\n            );\r\n\r\n            const localProgress = clamp(\r\n              (overallProgress - start) / duration,\r\n              0,\r\n              1\r\n            );\r\n\r\n            path.style.strokeDashoffset = `${\r\n              length * (1 - localProgress)\r\n            }`;\r\n          }\r\n        );\r\n      }\r\n\r\n      function requestRender() {\r\n        if (animationFrame !== null) {\r\n          return;\r\n        }\r\n\r\n        animationFrame =\r\n          window.requestAnimationFrame(render);\r\n      }\r\n\r\n      root.classList.add("is-ready");\r\n\r\n      window.addEventListener("scroll", requestRender, {\r\n        passive: true\r\n      });\r\n\r\n      window.addEventListener("resize", requestRender);\r\n\r\n      if (\r\n        typeof reducedMotion.addEventListener === "function"\r\n      ) {\r\n        reducedMotion.addEventListener(\r\n          "change",\r\n          requestRender\r\n        );\r\n      } else {\r\n        reducedMotion.addListener(requestRender);\r\n      }\r\n\r\n      requestRender();\r\n    }\r\n\r\n    document\r\n      .querySelectorAll(\r\n        "[data-traced-scroll-arrow]:not([data-arrow-initialized])"\r\n      )\r\n      .forEach(initializeArrow);\r\n  })();\r\n</script>'
-                }
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__fnyf)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"auto"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/sterling_and_buena_vista_foods/images/arrowPng.png",
+                  fullWidth: 162,
+                  fullHeight: 262,
+                  aspectRatio: undefined
+                }}
               />
             </div>
             <div
@@ -1351,9 +1358,85 @@ function PlasmicAboutUs__RenderFunc(props: {
                         sty.text__pS7J4
                       )}
                     >
-                      {
-                        "\u2022  Safety First: protecting our people and the food we create.\r\n\u2022  Purpose-driven: doing right by our people, our communities, and the environment \r\n\u2022  Trustworthy and Ethical: conducting ourselves with integrity, respect, transparency and accountability\r\n\u2022  Collaborative: fostering a teamwork-driven culture\r\n\u2022  Exceptional Execution: executing with excellence and embracing flexibility \r\n\u2022  Customer-focused: building trusted, long-term partnerships, and putting our customers at the center of everything we do."
-                      }
+                      <React.Fragment>
+                        <React.Fragment>{"\u2022  "}</React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
+                          }
+                          style={{ fontWeight: 700 }}
+                        >
+                          {"Safety First:"}
+                        </span>
+                        <React.Fragment>
+                          {
+                            " protecting our people and the food we create.\r\n\u2022  "
+                          }
+                        </React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
+                          }
+                          style={{ fontWeight: 700 }}
+                        >
+                          {"Purpose-driven: "}
+                        </span>
+                        <React.Fragment>
+                          {
+                            "doing right by our people, our communities, and the environment \r\n\u2022  "
+                          }
+                        </React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
+                          }
+                          style={{ fontWeight: 700 }}
+                        >
+                          {"Trustworthy and Ethical:"}
+                        </span>
+                        <React.Fragment>
+                          {
+                            " conducting ourselves with integrity, respect, transparency and accountability\r\n\u2022  "
+                          }
+                        </React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
+                          }
+                          style={{ fontWeight: 700 }}
+                        >
+                          {"Collaborative:"}
+                        </span>
+                        <React.Fragment>
+                          {" fostering a teamwork-driven culture\r\n\u2022  "}
+                        </React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
+                          }
+                          style={{ fontWeight: 700 }}
+                        >
+                          {"Exceptional Execution:"}
+                        </span>
+                        <React.Fragment>
+                          {
+                            " executing with excellence and embracing flexibility \r\n\u2022  "
+                          }
+                        </React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span plasmic_default__span__uyaK1"
+                          }
+                          style={{ fontWeight: 700 }}
+                        >
+                          {"Customer-focused:"}
+                        </span>
+                        <React.Fragment>
+                          {
+                            " building trusted, long-term partnerships, and putting our customers at the center of everything we do."
+                          }
+                        </React.Fragment>
+                      </React.Fragment>
                     </div>
                   </div>
                 </div>
@@ -3006,7 +3089,6 @@ const PlasmicDescendants = {
     "box",
     "box2",
     "box3",
-    "embedHtml",
     "aboutUsSection2",
     "wrapper",
     "heading2",
@@ -3117,7 +3199,6 @@ const PlasmicDescendants = {
     "box",
     "box2",
     "box3",
-    "embedHtml",
     "aboutUsSection2",
     "wrapper",
     "heading2",
@@ -3226,8 +3307,7 @@ const PlasmicDescendants = {
     "text3",
     "box",
     "box2",
-    "box3",
-    "embedHtml"
+    "box3"
   ],
   heading: ["heading"],
   text: ["text"],
@@ -3236,7 +3316,6 @@ const PlasmicDescendants = {
   box: ["box"],
   box2: ["box2"],
   box3: ["box3"],
-  embedHtml: ["embedHtml"],
   aboutUsSection2: [
     "aboutUsSection2",
     "wrapper",
@@ -3593,7 +3672,6 @@ type NodeDefaultElementType = {
   box: "div";
   box2: "div";
   box3: "div";
-  embedHtml: typeof Embed;
   aboutUsSection2: "div";
   wrapper: "div";
   heading2: "div";
@@ -3766,7 +3844,6 @@ export const PlasmicAboutUs = Object.assign(
     box: makeNodeComponent("box"),
     box2: makeNodeComponent("box2"),
     box3: makeNodeComponent("box3"),
-    embedHtml: makeNodeComponent("embedHtml"),
     aboutUsSection2: makeNodeComponent("aboutUsSection2"),
     wrapper: makeNodeComponent("wrapper"),
     heading2: makeNodeComponent("heading2"),

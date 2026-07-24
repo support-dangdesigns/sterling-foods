@@ -958,66 +958,121 @@ function PlasmicCareers__RenderFunc(props: {
                     )}
                   </p>
                 </div>
-                <PrimaryBtn
+                <PlasmicLink__
                   className={classNames(
-                    "__wab_instance",
-                    sty.primaryBtn__zsHqn
+                    "all",
+                    "a",
+                    "a__uyaK1",
+                    sty.link__xY0J0
                   )}
+                  component={Link}
+                  legacyBehavior={false}
+                  platform={"nextjs"}
                 >
-                  {hasVariant(globalVariants, "screen", "desktop") ? (
-                    <React.Fragment>
-                      {
-                        $q.careers.data.body.data.pageBy.pageContent.button[0]
-                          .text
-                      }
-                    </React.Fragment>
-                  ) : (
-                    "E-Verify Poster"
-                  )}
-                </PrimaryBtn>
-                <PrimaryBtn
-                  className={classNames(
-                    "__wab_instance",
-                    sty.primaryBtn__f7BuG
-                  )}
-                >
-                  <div
-                    className={classNames("all", "__wab_text", sty.text__v7ZNv)}
-                  >
-                    {hasVariant(globalVariants, "screen", "smallMobile") ? (
-                      "Right to Work Notice (English)"
-                    ) : hasVariant(globalVariants, "screen", "tablet") ? (
-                      "Right to Work Notice (English)"
-                    ) : hasVariant(globalVariants, "screen", "desktop") ? (
-                      <React.Fragment>
-                        {
-                          $q.careers.data.body.data.pageBy.pageContent.button[1]
-                            .text
-                        }
-                      </React.Fragment>
-                    ) : (
-                      "Right to Work Notice (English)"
+                  <PrimaryBtn
+                    className={classNames(
+                      "__wab_instance",
+                      sty.primaryBtn__zsHqn
                     )}
-                  </div>
-                </PrimaryBtn>
-                <PrimaryBtn
-                  className={classNames("__wab_instance", sty.primaryBtn__kxSz)}
-                >
-                  <div
-                    className={classNames("all", "__wab_text", sty.text__esSzJ)}
                   >
                     {hasVariant(globalVariants, "screen", "desktop") ? (
                       <React.Fragment>
                         {
-                          $q.careers.data.body.data.pageBy.pageContent.button[2]
+                          $q.careers.data.body.data.pageBy.pageContent.button[0]
                             .text
                         }
                       </React.Fragment>
                     ) : (
-                      "Right to Work Notice (Spanish)\r"
+                      "E-Verify Poster"
                     )}
-                  </div>
-                </PrimaryBtn>
+                  </PrimaryBtn>
+                </PlasmicLink__>
+                {(
+                  hasVariant(globalVariants, "screen", "desktop") ? true : false
+                ) ? (
+                  <PlasmicLink__
+                    className={classNames(
+                      "all",
+                      "a",
+                      "a__uyaK1",
+                      sty.link__bLjL4
+                    )}
+                    component={Link}
+                    legacyBehavior={false}
+                    platform={"nextjs"}
+                  >
+                    <PrimaryBtn
+                      className={classNames(
+                        "__wab_instance",
+                        sty.primaryBtn__f7BuG
+                      )}
+                    >
+                      <div
+                        className={classNames(
+                          "all",
+                          "__wab_text",
+                          sty.text__v7ZNv
+                        )}
+                      >
+                        {hasVariant(globalVariants, "screen", "smallMobile") ? (
+                          "Right to Work Notice (English)"
+                        ) : hasVariant(globalVariants, "screen", "tablet") ? (
+                          "Right to Work Notice (English)"
+                        ) : hasVariant(globalVariants, "screen", "desktop") ? (
+                          <React.Fragment>
+                            {
+                              $q.careers.data.body.data.pageBy.pageContent
+                                .button[1].text
+                            }
+                          </React.Fragment>
+                        ) : (
+                          "Right to Work Notice (English)"
+                        )}
+                      </div>
+                    </PrimaryBtn>
+                  </PlasmicLink__>
+                ) : null}
+                {(
+                  hasVariant(globalVariants, "screen", "desktop") ? true : false
+                ) ? (
+                  <PlasmicLink__
+                    className={classNames(
+                      "all",
+                      "a",
+                      "a__uyaK1",
+                      sty.link__fe8Nj
+                    )}
+                    component={Link}
+                    legacyBehavior={false}
+                    platform={"nextjs"}
+                  >
+                    <PrimaryBtn
+                      className={classNames(
+                        "__wab_instance",
+                        sty.primaryBtn__kxSz
+                      )}
+                    >
+                      <div
+                        className={classNames(
+                          "all",
+                          "__wab_text",
+                          sty.text__esSzJ
+                        )}
+                      >
+                        {hasVariant(globalVariants, "screen", "desktop") ? (
+                          <React.Fragment>
+                            {
+                              $q.careers.data.body.data.pageBy.pageContent
+                                .button[2].text
+                            }
+                          </React.Fragment>
+                        ) : (
+                          "Right to Work Notice (Spanish)\r"
+                        )}
+                      </div>
+                    </PrimaryBtn>
+                  </PlasmicLink__>
+                ) : null}
               </div>
               <PlasmicImg__
                 alt={""}
@@ -1174,27 +1229,43 @@ function PlasmicCareers__RenderFunc(props: {
                     )}
                   </p>
                 </div>
-                <PrimaryBtn
+                <PlasmicLink__
                   className={classNames(
-                    "__wab_instance",
-                    sty.primaryBtn__m20D4
+                    "all",
+                    "a",
+                    "a__uyaK1",
+                    sty.link__v1Px7
                   )}
+                  component={Link}
+                  legacyBehavior={false}
+                  platform={"nextjs"}
                 >
-                  <div
-                    className={classNames("all", "__wab_text", sty.text__honod)}
-                  >
-                    {hasVariant(globalVariants, "screen", "desktop") ? (
-                      <React.Fragment>
-                        {
-                          $q.careers.data.body.data.pageBy.pageContent.button[3]
-                            .text
-                        }
-                      </React.Fragment>
-                    ) : (
-                      "View Machine-Readable Files"
+                  <PrimaryBtn
+                    className={classNames(
+                      "__wab_instance",
+                      sty.primaryBtn__m20D4
                     )}
-                  </div>
-                </PrimaryBtn>
+                  >
+                    <div
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text__honod
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "desktop") ? (
+                        <React.Fragment>
+                          {
+                            $q.careers.data.body.data.pageBy.pageContent
+                              .button[3].text
+                          }
+                        </React.Fragment>
+                      ) : (
+                        "View Machine-Readable Files"
+                      )}
+                    </div>
+                  </PrimaryBtn>
+                </PlasmicLink__>
               </div>
             </div>
           </div>

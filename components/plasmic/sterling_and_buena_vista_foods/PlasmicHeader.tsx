@@ -203,6 +203,7 @@ function PlasmicHeader__RenderFunc(props: {
           data-plasmic-name={"header"}
           data-plasmic-override={overrides.header}
           className={classNames("all", sty.header)}
+          id={"header-top"}
         >
           <div
             data-plasmic-name={"menu"}

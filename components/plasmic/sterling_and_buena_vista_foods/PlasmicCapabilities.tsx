@@ -3689,36 +3689,79 @@ function PlasmicCapabilities__RenderFunc(props: {
                     className={classNames("__wab_instance", sty.reveal__y4Plr)}
                     triggerOnce={true}
                   >
-                    <PrimaryBtn
+                    <PlasmicLink__
                       className={classNames(
-                        "__wab_instance",
-                        sty.primaryBtn__lFn7
+                        "all",
+                        "a",
+                        "a__uyaK1",
+                        sty.link__w4F3P
                       )}
+                      component={Link}
+                      legacyBehavior={false}
+                      onClick={async event => {
+                        const $steps = {};
+
+                        $steps["goToQualitySafety"] = true
+                          ? (() => {
+                              const actionArgs = {
+                                destination: `/quality-safety`
+                              };
+                              return (({ destination }) => {
+                                if (
+                                  typeof destination === "string" &&
+                                  destination.startsWith("#")
+                                ) {
+                                  document
+                                    .getElementById(destination.substr(1))
+                                    .scrollIntoView({ behavior: "smooth" });
+                                } else {
+                                  __nextRouter?.push(destination);
+                                }
+                              })?.apply(null, [actionArgs]);
+                            })()
+                          : undefined;
+                        if (
+                          $steps["goToQualitySafety"] != null &&
+                          typeof $steps["goToQualitySafety"] === "object" &&
+                          typeof $steps["goToQualitySafety"].then === "function"
+                        ) {
+                          $steps["goToQualitySafety"] =
+                            await $steps["goToQualitySafety"];
+                        }
+                      }}
+                      platform={"nextjs"}
                     >
-                      <div
+                      <PrimaryBtn
                         className={classNames(
-                          "all",
-                          "__wab_text",
-                          sty.text__rner1
+                          "__wab_instance",
+                          sty.primaryBtn__lFn7
                         )}
                       >
-                        {hasVariant(globalVariants, "screen", "desktop") ? (
-                          <React.Fragment>
-                            {
-                              $q.capabilites.data.body.data.pageBy.pageContent
-                                .button[0].text
-                            }
-                          </React.Fragment>
-                        ) : (
-                          <React.Fragment>
-                            {
-                              $q.capabilites.data.body.data.pageBy.pageContent
-                                .button[0].text
-                            }
-                          </React.Fragment>
-                        )}
-                      </div>
-                    </PrimaryBtn>
+                        <div
+                          className={classNames(
+                            "all",
+                            "__wab_text",
+                            sty.text__rner1
+                          )}
+                        >
+                          {hasVariant(globalVariants, "screen", "desktop") ? (
+                            <React.Fragment>
+                              {
+                                $q.capabilites.data.body.data.pageBy.pageContent
+                                  .button[0].text
+                              }
+                            </React.Fragment>
+                          ) : (
+                            <React.Fragment>
+                              {
+                                $q.capabilites.data.body.data.pageBy.pageContent
+                                  .button[0].text
+                              }
+                            </React.Fragment>
+                          )}
+                        </div>
+                      </PrimaryBtn>
+                    </PlasmicLink__>
                   </Reveal>
                 </div>
               </div>
@@ -3849,24 +3892,64 @@ function PlasmicCapabilities__RenderFunc(props: {
                     className={classNames("__wab_instance", sty.reveal__eRmXh)}
                     triggerOnce={true}
                   >
-                    <PrimaryBtn
+                    <PlasmicLink__
                       className={classNames(
-                        "__wab_instance",
-                        sty.primaryBtn__kZmTc
+                        "all",
+                        "a",
+                        "a__uyaK1",
+                        sty.link__vFby
                       )}
+                      component={Link}
+                      legacyBehavior={false}
+                      onClick={async event => {
+                        const $steps = {};
+
+                        $steps["goToAboutUs"] = true
+                          ? (() => {
+                              const actionArgs = { destination: `/about-us` };
+                              return (({ destination }) => {
+                                if (
+                                  typeof destination === "string" &&
+                                  destination.startsWith("#")
+                                ) {
+                                  document
+                                    .getElementById(destination.substr(1))
+                                    .scrollIntoView({ behavior: "smooth" });
+                                } else {
+                                  __nextRouter?.push(destination);
+                                }
+                              })?.apply(null, [actionArgs]);
+                            })()
+                          : undefined;
+                        if (
+                          $steps["goToAboutUs"] != null &&
+                          typeof $steps["goToAboutUs"] === "object" &&
+                          typeof $steps["goToAboutUs"].then === "function"
+                        ) {
+                          $steps["goToAboutUs"] = await $steps["goToAboutUs"];
+                        }
+                      }}
+                      platform={"nextjs"}
                     >
-                      <div
+                      <PrimaryBtn
                         className={classNames(
-                          "all",
-                          "__wab_text",
-                          sty.text__vrQgY
+                          "__wab_instance",
+                          sty.primaryBtn__kZmTc
                         )}
                       >
-                        {hasVariant(globalVariants, "screen", "desktop")
-                          ? "Learn More About Us"
-                          : "Learn More About Us"}
-                      </div>
-                    </PrimaryBtn>
+                        <div
+                          className={classNames(
+                            "all",
+                            "__wab_text",
+                            sty.text__vrQgY
+                          )}
+                        >
+                          {hasVariant(globalVariants, "screen", "desktop")
+                            ? "Learn More About Us"
+                            : "Learn More About Us"}
+                        </div>
+                      </PrimaryBtn>
+                    </PlasmicLink__>
                   </Reveal>
                 </div>
                 <Reveal

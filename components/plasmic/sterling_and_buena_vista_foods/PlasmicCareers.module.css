@@ -2355,6 +2355,23 @@
     animation: none;
   }
 }
+.link__xY0J0 {
+  flex-direction: row;
+  position: relative;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  display: none;
+  padding: 0px;
+}
+@media (max-width: 1920px) {
+  .link__xY0J0 {
+    display: flex;
+  }
+}
 .primaryBtn__zsHqn:global(.__wab_instance) {
   max-width: 100%;
   align-self: flex-start;
@@ -2371,10 +2388,31 @@
     flex-shrink: 0;
   }
 }
+.link__bLjL4 {
+  flex-direction: row;
+  position: relative;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0px;
+}
+@media (max-width: 1920px) {
+  .link__bLjL4 {
+    display: flex;
+  }
+}
 .primaryBtn__f7BuG:global(.__wab_instance) {
   max-width: 100%;
   align-self: flex-start;
   flex-shrink: 0;
+}
+@media (max-width: 1920px) {
+  .primaryBtn__f7BuG:global(.__wab_instance) {
+    flex-shrink: 0;
+  }
 }
 @media (max-width: 1024px) {
   .primaryBtn__f7BuG:global(.__wab_instance) {
@@ -2395,10 +2433,31 @@
     text-align: center;
   }
 }
+.link__fe8Nj {
+  flex-direction: row;
+  position: relative;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0px;
+}
+@media (max-width: 1920px) {
+  .link__fe8Nj {
+    display: flex;
+  }
+}
 .primaryBtn__kxSz:global(.__wab_instance) {
   max-width: 100%;
   align-self: flex-start;
   flex-shrink: 0;
+}
+@media (max-width: 1920px) {
+  .primaryBtn__kxSz:global(.__wab_instance) {
+    flex-shrink: 0;
+  }
 }
 @media (max-width: 1024px) {
   .primaryBtn__kxSz:global(.__wab_instance) {
@@ -2947,10 +3006,32 @@
     animation: none;
   }
 }
+.link__v1Px7 {
+  flex-direction: row;
+  position: relative;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  display: none;
+  padding: 0px;
+}
+@media (max-width: 1920px) {
+  .link__v1Px7 {
+    display: flex;
+  }
+}
 .primaryBtn__m20D4:global(.__wab_instance) {
   max-width: 100%;
   align-self: flex-start;
   flex-shrink: 0;
+}
+@media (max-width: 1920px) {
+  .primaryBtn__m20D4:global(.__wab_instance) {
+    flex-shrink: 0;
+  }
 }
 @media (max-width: 1024px) {
   .primaryBtn__m20D4:global(.__wab_instance) {

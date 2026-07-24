@@ -810,9 +810,9 @@ function PlasmicFooter__RenderFunc(props: {
             onClick={async event => {
               const $steps = {};
 
-              $steps["goToTopHeader"] = true
+              $steps["goToHeaderTop"] = true
                 ? (() => {
-                    const actionArgs = { destination: "#top-header" };
+                    const actionArgs = { destination: "#header-top" };
                     return (({ destination }) => {
                       if (
                         typeof destination === "string" &&
@@ -828,11 +828,11 @@ function PlasmicFooter__RenderFunc(props: {
                   })()
                 : undefined;
               if (
-                $steps["goToTopHeader"] != null &&
-                typeof $steps["goToTopHeader"] === "object" &&
-                typeof $steps["goToTopHeader"].then === "function"
+                $steps["goToHeaderTop"] != null &&
+                typeof $steps["goToHeaderTop"] === "object" &&
+                typeof $steps["goToHeaderTop"].then === "function"
               ) {
-                $steps["goToTopHeader"] = await $steps["goToTopHeader"];
+                $steps["goToHeaderTop"] = await $steps["goToHeaderTop"];
               }
             }}
             platform={"nextjs"}

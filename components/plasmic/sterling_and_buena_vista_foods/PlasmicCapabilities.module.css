@@ -2210,12 +2210,16 @@
 @media (max-width: 1280px) {
   .h4___84MX {
     animation: none;
-    font-size: var(--token-KiAZW0gIrhlw);
   }
 }
 @media (max-width: 1024px) {
   .h4___84MX {
     animation: none;
+  }
+}
+@media (max-width: 757px) {
+  .h4___84MX {
+    font-size: var(--token-UXPBeNJ4rrVx);
   }
 }
 @media (max-width: 530px) {
@@ -7565,7 +7569,7 @@
   height: auto;
   max-width: 100%;
   color: var(--token-VSsNRyw2VYkH);
-  font-size: var(--token-16_cC9w3e0Nk);
+  font-size: var(--token-KiAZW0gIrhlw);
   font-weight: 400;
   font-style: normal;
   text-align: left;
@@ -7588,6 +7592,11 @@
   .h4__nwgZ6 {
     animation: none;
     align-self: flex-start;
+  }
+}
+@media (max-width: 757px) {
+  .h4__nwgZ6 {
+    font-size: var(--token-UXPBeNJ4rrVx);
   }
 }
 @media (max-width: 414px) {
@@ -7709,9 +7718,27 @@
   object-fit: cover;
   align-self: flex-start;
 }
+.link__w4F3P {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0px;
+}
 .primaryBtn__lFn7:global(.__wab_instance) {
   max-width: 100%;
   align-self: flex-start;
+  flex-shrink: 0;
+}
+@media (max-width: 1920px) {
+  .primaryBtn__lFn7:global(.__wab_instance) {
+    flex-shrink: 0;
+  }
 }
 .text__rner1 {
   color: var(--token-VSsNRyw2VYkH);
@@ -7794,6 +7821,7 @@
     padding-right: 0px;
     padding-left: 0px;
     row-gap: 36px;
+    padding-bottom: 0px;
   }
 }
 @media (max-width: 530px) {
@@ -8160,13 +8188,31 @@
   object-fit: cover;
   align-self: flex-start;
 }
+.link__vFby {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0px;
+}
 .primaryBtn__kZmTc:global(.__wab_instance) {
   max-width: 100%;
   align-self: flex-start;
+  flex-shrink: 0;
+}
+@media (max-width: 1920px) {
+  .primaryBtn__kZmTc:global(.__wab_instance) {
+    flex-shrink: 0;
+  }
 }
 @media (max-width: 757px) {
   .primaryBtn__kZmTc:global(.__wab_instance) {
     align-self: flex-start;
+    flex-shrink: 0;
   }
 }
 .text__vrQgY {

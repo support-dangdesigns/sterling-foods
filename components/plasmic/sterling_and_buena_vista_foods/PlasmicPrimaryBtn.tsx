@@ -78,7 +78,7 @@ type ArgPropType = keyof PlasmicPrimaryBtn__ArgsType;
 export const PlasmicPrimaryBtn__ArgProps = new Array<ArgPropType>("children");
 
 export type PlasmicPrimaryBtn__OverridesType = {
-  primaryBtn?: Flex__<"div">;
+  primaryBtn?: Flex__<"a"> & Partial<LinkProps>;
   freeBox?: Flex__<"div">;
 };
 
@@ -137,19 +137,24 @@ function PlasmicPrimaryBtn__RenderFunc(props: {
   const styleTokensClassNames = _useStyleTokens();
 
   return (
-    <div
+    <PlasmicLink__
       data-plasmic-name={"primaryBtn"}
       data-plasmic-override={overrides.primaryBtn}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       className={classNames(
         "all",
+        "a",
+        "a__uyaK1",
         "root_reset_uyaK17nhz8WhGjYZfKjMhX",
         "plasmic_default_styles",
         "plasmic_mixins",
         styleTokensClassNames,
         sty.primaryBtn
       )}
+      component={Link}
+      legacyBehavior={false}
+      platform={"nextjs"}
       data-plasmic-trigger-props={[triggerPrimaryBtnActiveProps]}
     >
       <div
@@ -163,7 +168,7 @@ function PlasmicPrimaryBtn__RenderFunc(props: {
           className: classNames(sty.slotTargetChildren)
         })}
       </div>
-    </div>
+    </PlasmicLink__>
   ) as React.ReactElement | null;
 }
 
@@ -175,7 +180,7 @@ type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
-  primaryBtn: "div";
+  primaryBtn: "a";
   freeBox: "div";
 };
 
